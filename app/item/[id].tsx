@@ -1,0 +1,235 @@
+import { useLocalSearchParams, router } from 'expo-router';
+import { StyleSheet, View, Pressable, ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { ThemedText } from '@/components/themed-text';
+import { ThemedView } from '@/components/themed-view';
+import { IconSymbol } from '@/components/ui/icon-symbol';
+import { Badge } from '@/components/ui/badge';
+import { Divider } from '@/components/ui/divider';
+import {
+  TLDRCard,
+  WhyItMattersSection,
+  WhatToTrySection,
+  SourcesSection,
+  TagsRow,
+} from '@/components/item';
+import { PulseColors } from '@/constants/theme';
+import { CategoryConfig } from '@/constants/categories';
+import { useColorScheme } from '@/hooks/use-color-scheme';
+import { getItemById } from '@/data/mock';
+
+export default function ItemDetailScreen() {
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const colorScheme = useColorScheme();
+  const isDark = colorScheme === 'dark';
+  const colors = isDark ? PulseColors.dark : PulseColors.light;
+  const insets = useSafeAreaInsets();
+
+  const item = getItemById(id);
+
+  if (!item) {
+    return (
+      <ThemedView style={styles.container}>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
+          <Pressable onPress={() => router.back()} style={styles.backButton}>
+            <IconSymbol name="arrow.left" size={24} color={colors.text} />
+          </Pressable>
+        </View>
+        <View style={styles.emptyContent}>
+          <ThemedText>Item not found</ThemedText>
+        </View>
+      </ThemedView>
+    );
+  }
+
+  const categoryConfig = CategoryConfig[item.category];
+
+  return (
+    <ThemedView style={styles.container}>
+      {/* Sticky Header */}
+      <View
+        style={[
+          styles.header,
+          {
+            paddingTop: insets.top,
+            borderBottomColor: colors.border,
+            backgroundColor: `${colors.background}F0`,
+          },
+        ]}>
+        <Pressable
+          onPress={() => router.back()}
+          style={[styles.backButton, { backgroundColor: colors.surfaceHighlight }]}>
+          <IconSymbol name="arrow.left" size={22} color={colors.text} />
+        </Pressable>
+        <View style={styles.headerActions}>
+          <Pressable
+            style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+            <IconSymbol name="bookmark" size={20} color={colors.text} />
+          </Pressable>
+          <Pressable
+            style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+            <IconSymbol name="square.and.arrow.up" size={20} color={colors.text} />
+          </Pressable>
+        </View>
+      </View>
+
+      {/* Scrollable Content */}
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}>
+        {/* Hero Section */}
+        <View style={styles.heroSection}>
+          {/* Category Badge */}
+          <Badge
+            label={categoryConfig.label}
+            color={categoryConfig.colors.text}
+            backgroundColor={
+              isDark ? categoryConfig.colors.bgDark : categoryConfig.colors.bg
+            }
+            size="md"
+            style={styles.categoryBadge}
+          />
+
+          {/* Title */}
+          <ThemedText style={styles.title}>{item.title}</ThemedText>
+
+          {/* Meta */}
+          <View style={styles.meta}>
+            <View style={styles.metaItem}>
+              <IconSymbol name="clock" size={14} color={colors.textMuted} />
+              <ThemedText style={[styles.metaText, { color: colors.textMuted }]}>
+                {item.readTimeMinutes} min read
+              </ThemedText>
+            </View>
+          </View>
+
+          {/* Tags */}
+          <TagsRow tags={item.tags} />
+        </View>
+
+        <Divider style={styles.divider} />
+
+        {/* Content Sections */}
+        <View style={styles.contentSection}>
+          {/* TL;DR */}
+          <TLDRCard text={item.tldr} />
+
+          {/* Why It Matters */}
+          <WhyItMattersSection points={item.whyItMatters} />
+
+          {/* What to Try */}
+          <WhatToTrySection
+            description={item.whatToTry.description}
+            code={item.whatToTry.code}
+            note={item.whatToTry.note}
+          />
+
+          {/* Sources */}
+          <SourcesSection sources={item.sources} />
+        </View>
+      </ScrollView>
+
+      {/* Background gradient effect */}
+      <View
+        style={[
+          styles.backgroundGlow,
+          { opacity: isDark ? 0.15 : 0.05 },
+        ]}
+        pointerEvents="none"
+      />
+    </ThemedView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    zIndex: 10,
+  },
+  backButton: {
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+  },
+  headerActions: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  actionButton: {
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+  },
+  emptyContent: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  scrollView: {
+    flex: 1,
+  },
+  scrollContent: {
+    paddingBottom: 40,
+  },
+  heroSection: {
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 16,
+  },
+  categoryBadge: {
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: '800',
+    lineHeight: 34,
+    letterSpacing: -0.3,
+    marginBottom: 16,
+  },
+  meta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
+    marginBottom: 16,
+  },
+  metaItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  metaText: {
+    fontSize: 13,
+  },
+  divider: {
+    marginHorizontal: 20,
+  },
+  contentSection: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
+  },
+  backgroundGlow: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 300,
+    backgroundColor: PulseColors.primary,
+    borderBottomLeftRadius: 200,
+    borderBottomRightRadius: 200,
+    zIndex: -1,
+  },
+});

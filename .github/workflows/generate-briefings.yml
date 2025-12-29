@@ -1,0 +1,51 @@
+name: Generate Briefings
+
+on:
+  # Run 3x daily at briefing times (UTC - adjust for your timezone)
+  schedule:
+    - cron: '30 7 * * *'   # 7:30 AM UTC (Morning)
+    - cron: '30 13 * * *'  # 1:30 PM UTC (Afternoon)
+    - cron: '30 20 * * *'  # 8:30 PM UTC (Evening)
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate briefings
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/generator.ts
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/live/briefings.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/live/briefings.json
+          git commit -m "📰 Update briefings $(date -u +%Y-%m-%d-%H%M)"
+          git push
