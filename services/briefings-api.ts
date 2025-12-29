@@ -15,7 +15,7 @@ import {
  * - BRANCH: Usually 'main' or 'master'
  */
 const GITHUB_RAW_URL =
-  'https://raw.githubusercontent.com/USERNAME/REPO/main/data/live/briefings.json';
+  'https://raw.githubusercontent.com/neojanus/Pulse-App/main/data/live/briefings.json';
 
 /**
  * Cache configuration
