@@ -1,4 +1,5 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { useState, useEffect, useCallback } from 'react';
+import { ScrollView, StyleSheet, View, RefreshControl, ActivityIndicator } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -6,7 +7,8 @@ import { ThemedView } from '@/components/themed-view';
 import { BriefingCard } from '@/components/briefing';
 import { PulseColors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { getTodaysBriefings } from '@/data/mock';
+import { getTodaysBriefings, clearCache } from '@/services/briefings-api';
+import type { Briefing } from '@/types/briefing';
 
 export default function TodayScreen() {
   const colorScheme = useColorScheme();
@@ -14,7 +16,31 @@ export default function TodayScreen() {
   const colors = isDark ? PulseColors.dark : PulseColors.light;
   const insets = useSafeAreaInsets();
 
-  const briefings = getTodaysBriefings();
+  const [briefings, setBriefings] = useState<Briefing[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const loadBriefings = useCallback(async () => {
+    try {
+      const data = await getTodaysBriefings();
+      setBriefings(data);
+    } catch (error) {
+      console.error('Failed to load briefings:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const onRefresh = useCallback(async () => {
+    setRefreshing(true);
+    clearCache();
+    await loadBriefings();
+    setRefreshing(false);
+  }, [loadBriefings]);
+
+  useEffect(() => {
+    loadBriefings();
+  }, [loadBriefings]);
 
   // Format today's date
   const today = new Date();
@@ -28,6 +54,14 @@ export default function TodayScreen() {
   const availableBriefings = briefings.filter((b) => b.isAvailable);
   const unreadBriefings = availableBriefings.filter((b) => !b.isRead);
 
+  if (loading) {
+    return (
+      <ThemedView style={[styles.container, styles.loadingContainer]}>
+        <ActivityIndicator size="large" color={PulseColors.primary} />
+      </ThemedView>
+    );
+  }
+
   return (
     <ThemedView style={styles.container}>
       <ScrollView
@@ -36,7 +70,14 @@ export default function TodayScreen() {
           styles.content,
           { paddingTop: insets.top + 16 },
         ]}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={PulseColors.primary}
+          />
+        }>
         {/* Header */}
         <View style={styles.header}>
           <ThemedText style={[styles.date, { color: PulseColors.primary }]}>
@@ -81,6 +122,10 @@ export default function TodayScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  loadingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   scrollView: {
     flex: 1,
