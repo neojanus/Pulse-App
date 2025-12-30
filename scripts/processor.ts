@@ -48,8 +48,7 @@ Output ONLY valid JSON with this exact structure:
   "tldr": "1-2 sentence summary - what happened and why it matters",
   "whyItMatters": ["Business impact", "Technical impact"],
   "whatToTry": {
-    "description": "Specific action the reader can take",
-    "code": "optional: API call, CLI command, or code snippet",
+    "description": "Specific action the reader can take - a clear, actionable suggestion in plain text",
     "note": "optional: caveat or tip"
   },
   "tags": [{"label": "Tag", "type": "model|tool|topic"}],
@@ -66,7 +65,7 @@ GUIDELINES:
 - Focus on practical implications for founders
 - Be skeptical of marketing claims - avoid hype
 - readTimeMinutes: 1-5 based on complexity
-- Only include code snippets for tools/APIs with clear usage
+- DO NOT include code snippets - keep "whatToTry" as plain text suggestions only
 - Tags: "model" for AI models, "tool" for products, "topic" for concepts`;
 
 /**
