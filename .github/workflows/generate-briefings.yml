@@ -49,8 +49,15 @@ jobs:
           fi
 
       - name: Send push notification
-        if: steps.commit.outputs.committed == 'true' && secrets.EXPO_PUSH_TOKEN != ''
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          EXPO_PUSH_TOKEN: ${{ secrets.EXPO_PUSH_TOKEN }}
         run: |
+          if [ -z "$EXPO_PUSH_TOKEN" ]; then
+            echo "No EXPO_PUSH_TOKEN set, skipping notification"
+            exit 0
+          fi
+
           # Determine period based on current UTC hour
           HOUR=$(date -u +%H)
           if [ "$HOUR" -lt 12 ]; then
@@ -67,7 +74,7 @@ jobs:
           curl -s -X POST https://exp.host/--/api/v2/push/send \
             -H "Content-Type: application/json" \
             -d "{
-              \"to\": \"${{ secrets.EXPO_PUSH_TOKEN }}\",
+              \"to\": \"$EXPO_PUSH_TOKEN\",
               \"title\": \"New Briefing Ready\",
               \"body\": \"$BODY\",
               \"sound\": \"default\",
