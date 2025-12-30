@@ -9,7 +9,7 @@ import type { Briefing, BriefingItem, BriefingPeriod, DailyBriefings } from '../
 
 // Configuration
 const OUTPUT_PATH = path.join(__dirname, '..', 'data', 'live', 'briefings.json');
-const MAX_ITEMS_PER_BRIEFING = 5;
+const MAX_ITEMS_PER_BRIEFING = 10;
 const MAX_DAYS_TO_KEEP = 7;
 
 /**
