@@ -8,6 +8,26 @@ const parser = new Parser({
   },
 });
 
+// Only include items from the last 24 hours
+const MAX_AGE_HOURS = 24;
+
+/**
+ * Check if an item is within the allowed age
+ */
+function isRecentEnough(dateStr: string | undefined): boolean {
+  if (!dateStr) return false;
+
+  try {
+    const itemDate = new Date(dateStr);
+    const now = new Date();
+    const ageMs = now.getTime() - itemDate.getTime();
+    const ageHours = ageMs / (1000 * 60 * 60);
+    return ageHours <= MAX_AGE_HOURS;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Fetch news items from an RSS feed
  */
@@ -18,8 +38,10 @@ export async function fetchRSSFeed(feed: RSSFeed): Promise<RawNewsItem[]> {
     const result = await parser.parseURL(feed.url);
     const items: RawNewsItem[] = [];
 
-    // Get the 10 most recent items
-    const recentItems = result.items.slice(0, 10);
+    // Filter for recent items only (last 24 hours)
+    const recentItems = result.items
+      .filter((item) => isRecentEnough(item.pubDate || item.isoDate))
+      .slice(0, 10);
 
     for (const item of recentItems) {
       if (!item.title || !item.link) continue;

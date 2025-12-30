@@ -125,39 +125,15 @@ function deduplicateItems(items: RawNewsItem[]): RawNewsItem[] {
 
 /**
  * Generate briefings from processed items
+ * Items are already sorted by relevance score (highest first) from the processor
  */
 function generateBriefings(items: BriefingItem[]): DailyBriefings[] {
   const now = new Date();
   const today = formatDate(now);
   const period = getCurrentPeriod(now);
 
-  // Group items by category for distribution
-  const itemsByCategory = new Map<string, BriefingItem[]>();
-  for (const item of items) {
-    const existing = itemsByCategory.get(item.category) || [];
-    existing.push(item);
-    itemsByCategory.set(item.category, existing);
-  }
-
-  // Distribute items across the current briefing
-  const briefingItems: BriefingItem[] = [];
-  const categories = Array.from(itemsByCategory.keys());
-
-  // Round-robin distribution to ensure category diversity
-  let categoryIndex = 0;
-  while (briefingItems.length < MAX_ITEMS_PER_BRIEFING && items.length > 0) {
-    const category = categories[categoryIndex % categories.length];
-    const categoryItems = itemsByCategory.get(category) || [];
-
-    if (categoryItems.length > 0) {
-      briefingItems.push(categoryItems.shift()!);
-    }
-
-    categoryIndex++;
-
-    // Break if we've gone through all categories without finding items
-    if (categoryIndex >= categories.length * 2) break;
-  }
+  // Take the top items by relevance (already sorted by processor)
+  const briefingItems = items.slice(0, MAX_ITEMS_PER_BRIEFING);
 
   // Create the briefing
   const briefing: Briefing = {
