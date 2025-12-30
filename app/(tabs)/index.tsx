@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import { ScrollView, StyleSheet, View, RefreshControl, ActivityIndicator } from 'react-native';
+import { ScrollView, StyleSheet, View, RefreshControl } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { BriefingCard } from '@/components/briefing';
+import { FadeIn } from '@/components/ui/fade-in';
+import { SkeletonBriefingCard } from '@/components/ui/skeleton';
 import { PulseColors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { getTodaysBriefings, clearCache } from '@/services/briefings-api';
@@ -56,8 +58,28 @@ export default function TodayScreen() {
 
   if (loading) {
     return (
-      <ThemedView style={[styles.container, styles.loadingContainer]}>
-        <ActivityIndicator size="large" color={PulseColors.primary} />
+      <ThemedView style={styles.container}>
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={[
+            styles.content,
+            { paddingTop: insets.top + 16 },
+          ]}
+          showsVerticalScrollIndicator={false}>
+          {/* Skeleton Header */}
+          <View style={styles.header}>
+            <View style={[styles.skeletonDate, { backgroundColor: colors.border }]} />
+            <View style={[styles.skeletonTitle, { backgroundColor: colors.border }]} />
+            <View style={[styles.skeletonStatus, { backgroundColor: colors.border }]} />
+          </View>
+
+          {/* Skeleton Cards */}
+          <View style={styles.cardsContainer}>
+            <SkeletonBriefingCard style={{ marginBottom: 16 }} />
+            <SkeletonBriefingCard style={{ marginBottom: 16 }} />
+            <SkeletonBriefingCard style={{ marginBottom: 16 }} />
+          </View>
+        </ScrollView>
       </ThemedView>
     );
   }
@@ -79,41 +101,47 @@ export default function TodayScreen() {
           />
         }>
         {/* Header */}
-        <View style={styles.header}>
-          <ThemedText style={[styles.date, { color: PulseColors.primary }]}>
-            {dateString}
-          </ThemedText>
-          <ThemedText type="title" style={styles.title}>
-            {"Today's"}{'\n'}Briefings
-          </ThemedText>
-          {unreadBriefings.length > 0 ? (
-            <View style={styles.statusContainer}>
-              <View style={styles.statusDot} />
-              <ThemedText style={[styles.status, { color: colors.textSecondary }]}>
-                {unreadBriefings.length} new briefing
-                {unreadBriefings.length !== 1 ? 's' : ''} available
-              </ThemedText>
-            </View>
-          ) : (
-            <ThemedText style={[styles.status, { color: colors.textMuted }]}>
-              {"You're all caught up!"}
+        <FadeIn delay={0}>
+          <View style={styles.header}>
+            <ThemedText style={[styles.date, { color: PulseColors.primary }]}>
+              {dateString}
             </ThemedText>
-          )}
-        </View>
+            <ThemedText type="title" style={styles.title}>
+              {"Today's"}{'\n'}Briefings
+            </ThemedText>
+            {unreadBriefings.length > 0 ? (
+              <View style={styles.statusContainer}>
+                <View style={styles.statusDot} />
+                <ThemedText style={[styles.status, { color: colors.textSecondary }]}>
+                  {unreadBriefings.length} new briefing
+                  {unreadBriefings.length !== 1 ? 's' : ''} available
+                </ThemedText>
+              </View>
+            ) : (
+              <ThemedText style={[styles.status, { color: colors.textMuted }]}>
+                {"You're all caught up!"}
+              </ThemedText>
+            )}
+          </View>
+        </FadeIn>
 
         {/* Briefing Cards */}
         <View style={styles.cardsContainer}>
-          {briefings.map((briefing) => (
-            <BriefingCard key={briefing.id} briefing={briefing} />
+          {briefings.map((briefing, index) => (
+            <FadeIn key={briefing.id} delay={100 + index * 100}>
+              <BriefingCard briefing={briefing} />
+            </FadeIn>
           ))}
         </View>
 
         {/* Footer */}
-        <View style={styles.footer}>
-          <ThemedText style={[styles.footerText, { color: colors.textMuted }]}>
-            Briefings refresh at 07:30, 13:30, and 20:30
-          </ThemedText>
-        </View>
+        <FadeIn delay={100 + briefings.length * 100}>
+          <View style={styles.footer}>
+            <ThemedText style={[styles.footerText, { color: colors.textMuted }]}>
+              Briefings refresh at 07:30, 13:30, and 20:30
+            </ThemedText>
+          </View>
+        </FadeIn>
       </ScrollView>
     </ThemedView>
   );
@@ -122,10 +150,6 @@ export default function TodayScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  loadingContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   scrollView: {
     flex: 1,
@@ -179,5 +203,22 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 12,
+  },
+  skeletonDate: {
+    width: 120,
+    height: 14,
+    borderRadius: 4,
+    marginBottom: 12,
+  },
+  skeletonTitle: {
+    width: 180,
+    height: 72,
+    borderRadius: 8,
+    marginBottom: 12,
+  },
+  skeletonStatus: {
+    width: 160,
+    height: 16,
+    borderRadius: 4,
   },
 });

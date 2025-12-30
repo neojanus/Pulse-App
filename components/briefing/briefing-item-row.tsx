@@ -4,9 +4,10 @@ import { router } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Badge } from '@/components/ui/badge';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, SemanticColors } from '@/constants/theme';
 import { CategoryConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { formatRelativeTime, isOlderThan } from '@/utils/format-date';
 import type { BriefingItem } from '@/types/briefing';
 
 interface BriefingItemRowProps {
@@ -23,6 +24,10 @@ export function BriefingItemRow({ item }: BriefingItemRowProps) {
     router.push(`/item/${item.id}`);
   };
 
+  // Check if news is older than 24 hours
+  const isOld = isOlderThan(item.publishedAt, 24);
+  const relativeTime = formatRelativeTime(item.publishedAt);
+
   return (
     <Pressable
       onPress={handlePress}
@@ -31,12 +36,23 @@ export function BriefingItemRow({ item }: BriefingItemRowProps) {
         pressed && { opacity: 0.7, backgroundColor: colors.surfaceHighlight },
       ]}>
       <View style={styles.content}>
-        <Badge
-          label={categoryConfig.label}
-          color={categoryConfig.colors.text}
-          backgroundColor={isDark ? categoryConfig.colors.bgDark : categoryConfig.colors.bg}
-          size="sm"
-        />
+        <View style={styles.badgeRow}>
+          <Badge
+            label={categoryConfig.label}
+            color={categoryConfig.colors.text}
+            backgroundColor={isDark ? categoryConfig.colors.bgDark : categoryConfig.colors.bg}
+            size="sm"
+          />
+          {relativeTime && (
+            <ThemedText
+              style={[
+                styles.timestamp,
+                { color: isOld ? SemanticColors.warning : colors.textMuted },
+              ]}>
+              {relativeTime}
+            </ThemedText>
+          )}
+        </View>
         <ThemedText style={styles.title} numberOfLines={2}>
           {item.title}
         </ThemedText>
@@ -67,6 +83,15 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     gap: 8,
+  },
+  badgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  timestamp: {
+    fontSize: 12,
+    fontWeight: '500',
   },
   title: {
     fontSize: 18,

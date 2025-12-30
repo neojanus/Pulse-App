@@ -60,6 +60,12 @@ RELEVANCE SCORING (1-10):
 - 5-7: Useful tools, interesting papers, significant industry moves
 - 1-4: Rehashed news, hype pieces, minor updates, opinion pieces
 
+MULTI-SOURCE ITEMS:
+When the content contains multiple perspectives from different sources (marked with [Source Name]:), this indicates a trending story. For these:
+- BOOST relevance score by 1-2 points (trending = more important)
+- Synthesize insights from ALL sources into a cohesive summary
+- Note in tldr when multiple major outlets are covering it
+
 GUIDELINES:
 - Be concise and actionable
 - Focus on practical implications for founders
@@ -133,6 +139,9 @@ Return only valid JSON.`;
 
     const processed: ProcessedItem = JSON.parse(jsonStr);
 
+    // Parse sources - check if this is a merged item with multiple sources
+    const sources: BriefingSource[] = parseMultipleSources(item);
+
     // Create the full BriefingItem
     const briefingItem: BriefingItem = {
       id: item.id,
@@ -140,15 +149,7 @@ Return only valid JSON.`;
       tldr: processed.tldr,
       whyItMatters: processed.whyItMatters,
       whatToTry: processed.whatToTry,
-      sources: [
-        {
-          id: `src-${item.id}`,
-          title: item.title,
-          url: item.url,
-          domain: extractDomain(item.url),
-          type: inferSourceType(item.url),
-        },
-      ],
+      sources,
       tags: processed.tags.map((tag, idx) => ({
         id: `tag-${item.id}-${idx}`,
         label: tag.label,
@@ -234,4 +235,49 @@ function inferSourceType(url: string): BriefingSource['type'] {
   if (url.includes('github.com')) return 'repository';
   if (url.includes('blog') || url.includes('medium.com')) return 'blog';
   return 'article';
+}
+
+/**
+ * Parse multiple sources from a merged item
+ * Merged items have source field like "Source1, Source2, Source3"
+ */
+function parseMultipleSources(item: RawNewsItem): BriefingSource[] {
+  // Check if source contains multiple sources (comma-separated)
+  const sourceNames = item.source.split(', ').map((s) => s.trim());
+
+  // If only one source, return simple source array
+  if (sourceNames.length === 1) {
+    return [
+      {
+        id: `src-${item.id}`,
+        title: item.title,
+        url: item.url,
+        domain: extractDomain(item.url),
+        type: inferSourceType(item.url),
+      },
+    ];
+  }
+
+  // For merged items, try to extract URLs from content
+  // Content format: "[Source Name]: content text\n\n[Another Source]: more text"
+  const sources: BriefingSource[] = [];
+  const urlPattern = /https?:\/\/[^\s]+/g;
+  const contentUrls = item.content.match(urlPattern) || [];
+
+  // Create a source entry for each source name
+  for (let i = 0; i < sourceNames.length; i++) {
+    const sourceName = sourceNames[i];
+    // Try to find a matching URL in content, or use primary URL
+    const sourceUrl = contentUrls[i] || item.url;
+
+    sources.push({
+      id: `src-${item.id}-${i}`,
+      title: sourceName,
+      url: sourceUrl,
+      domain: extractDomain(sourceUrl),
+      type: inferSourceType(sourceUrl),
+    });
+  }
+
+  return sources;
 }

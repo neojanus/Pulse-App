@@ -1,9 +1,10 @@
-import { View, StyleSheet, Pressable } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
 
 import { ThemedText } from '@/components/themed-text';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Card } from '@/components/ui/card';
+import { AnimatedPressable } from '@/components/ui/animated-pressable';
 import { BriefingItemPreview } from './briefing-item-preview';
 import { PulseColors } from '@/constants/theme';
 import { PeriodConfig } from '@/constants/categories';
@@ -118,18 +119,14 @@ export function BriefingCard({ briefing }: BriefingCardProps) {
       </View>
 
       {/* CTA Button */}
-      <Pressable
+      <AnimatedPressable
         onPress={handlePress}
-        style={({ pressed }) => [
-          styles.ctaButton,
-          { backgroundColor: PulseColors.primary },
-          pressed && { opacity: 0.9 },
-        ]}>
+        style={[styles.ctaButton, { backgroundColor: PulseColors.primary }]}>
         <ThemedText style={styles.ctaText}>
           Read {periodConfig.label} Brief
         </ThemedText>
         <IconSymbol name="arrow.right" size={16} color="#fff" />
-      </Pressable>
+      </AnimatedPressable>
     </Card>
   );
 }

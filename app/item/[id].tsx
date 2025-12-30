@@ -15,9 +15,10 @@ import {
   SourcesSection,
   TagsRow,
 } from '@/components/item';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, SemanticColors } from '@/constants/theme';
 import { CategoryConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { formatRelativeTime, isOlderThan } from '@/utils/format-date';
 import { getItemById } from '@/services/briefings-api';
 import type { BriefingItem } from '@/types/briefing';
 
@@ -64,6 +65,8 @@ export default function ItemDetailScreen() {
   }
 
   const categoryConfig = CategoryConfig[item.category];
+  const isOld = isOlderThan(item.publishedAt, 24);
+  const relativeTime = formatRelativeTime(item.publishedAt);
 
   return (
     <ThemedView style={styles.container}>
@@ -123,6 +126,22 @@ export default function ItemDetailScreen() {
                 {item.readTimeMinutes} min read
               </ThemedText>
             </View>
+            {relativeTime && (
+              <View style={styles.metaItem}>
+                <IconSymbol
+                  name="calendar"
+                  size={14}
+                  color={isOld ? SemanticColors.warning : colors.textMuted}
+                />
+                <ThemedText
+                  style={[
+                    styles.metaText,
+                    { color: isOld ? SemanticColors.warning : colors.textMuted },
+                  ]}>
+                  {relativeTime}
+                </ThemedText>
+              </View>
+            )}
           </View>
 
           {/* Tags */}

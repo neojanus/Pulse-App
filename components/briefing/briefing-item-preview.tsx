@@ -4,9 +4,10 @@ import { router } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Divider } from '@/components/ui/divider';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, SemanticColors } from '@/constants/theme';
 import { CategoryConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { formatRelativeTime, isOlderThan } from '@/utils/format-date';
 import type { BriefingItem } from '@/types/briefing';
 
 interface BriefingItemPreviewProps {
@@ -23,6 +24,10 @@ export function BriefingItemPreview({ item, isLast }: BriefingItemPreviewProps) 
   const handlePress = () => {
     router.push(`/item/${item.id}`);
   };
+
+  // Check if news is older than 24 hours
+  const isOld = isOlderThan(item.publishedAt, 24);
+  const relativeTime = formatRelativeTime(item.publishedAt);
 
   return (
     <>
@@ -52,6 +57,15 @@ export function BriefingItemPreview({ item, isLast }: BriefingItemPreviewProps) 
               <ThemedText style={[styles.readTime, { color: colors.textMuted }]}>
                 · {item.readTimeMinutes} min
               </ThemedText>
+              {relativeTime && (
+                <ThemedText
+                  style={[
+                    styles.readTime,
+                    { color: isOld ? SemanticColors.warning : colors.textMuted },
+                  ]}>
+                  · {relativeTime}
+                </ThemedText>
+              )}
             </View>
           </View>
         </View>

@@ -64,6 +64,16 @@ export const sources: SourcesConfig = {
         name: 'Ars Technica AI',
         category: 'industry',
       },
+      {
+        url: 'https://www.wired.com/feed/tag/ai/latest/rss',
+        name: 'Wired AI',
+        category: 'industry',
+      },
+      {
+        url: 'https://venturebeat.com/category/ai/feed/',
+        name: 'VentureBeat AI',
+        category: 'industry',
+      },
 
       // AI Company Blogs
       {
@@ -76,12 +86,59 @@ export const sources: SourcesConfig = {
         name: 'Anthropic News',
         category: 'releases',
       },
+      {
+        url: 'https://blog.google/technology/ai/rss/',
+        name: 'Google AI Blog',
+        category: 'releases',
+      },
+      {
+        url: 'https://ai.meta.com/blog/rss/',
+        name: 'Meta AI Blog',
+        category: 'releases',
+      },
+
+      // AI Newsletters & Curators (aggregate Twitter/X content)
+      {
+        url: 'https://www.therundown.ai/rss',
+        name: 'The Rundown AI',
+        category: 'industry',
+      },
+      {
+        url: 'https://tldr.tech/ai/rss',
+        name: 'TLDR AI',
+        category: 'industry',
+      },
+      {
+        url: 'https://bensbites.beehiiv.com/feed',
+        name: "Ben's Bites",
+        category: 'industry',
+      },
+      {
+        url: 'https://importai.substack.com/feed',
+        name: 'Import AI',
+        category: 'research',
+      },
+      {
+        url: 'https://lastweekin.ai/feed',
+        name: 'Last Week in AI',
+        category: 'industry',
+      },
 
       // Research
       {
         url: 'http://export.arxiv.org/rss/cs.AI',
         name: 'ArXiv AI',
         category: 'research',
+      },
+      {
+        url: 'http://export.arxiv.org/rss/cs.LG',
+        name: 'ArXiv ML',
+        category: 'research',
+      },
+      {
+        url: 'https://huggingface.co/blog/feed.xml',
+        name: 'Hugging Face Blog',
+        category: 'tools',
       },
     ],
   },
@@ -100,5 +157,24 @@ export const sources: SourcesConfig = {
     minPoints: 50,
     limit: 15,
     category: 'industry',
+  },
+
+  bluesky: {
+    enabled: true,
+    accounts: [
+      // AI Labs & Companies
+      { handle: 'openai.bsky.social', category: 'releases' },
+      { handle: 'anthropic.bsky.social', category: 'releases' },
+      { handle: 'huggingface.co', category: 'tools' },
+
+      // AI Researchers & Builders
+      { handle: 'karpathy.bsky.social', category: 'research' },
+      { handle: 'simonw.bsky.social', category: 'tools' },
+      { handle: 'swyx.io', category: 'industry' },
+
+      // AI Tools & Products
+      { handle: 'cursor.com', category: 'tools' },
+      { handle: 'replicate.com', category: 'tools' },
+    ],
   },
 };

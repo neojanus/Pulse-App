@@ -2,7 +2,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 import { sources } from './sources';
-import { fetchAllRSSFeeds, fetchAllSubreddits, fetchAllTwitterAccounts, fetchHackerNews } from './fetchers';
+import {
+  fetchAllRSSFeeds,
+  fetchAllSubreddits,
+  fetchAllTwitterAccounts,
+  fetchHackerNews,
+  fetchAllBlueskyAccounts,
+} from './fetchers';
 import { processNewsItems } from './processor';
 import type { RawNewsItem } from './types';
 import type { Briefing, BriefingItem, BriefingPeriod, DailyBriefings } from '../types/briefing';
@@ -50,6 +56,11 @@ async function generate() {
   if (sources.hackernews.enabled) {
     const hnItems = await fetchHackerNews(sources.hackernews);
     rawItems.push(...hnItems);
+  }
+
+  if (sources.bluesky.enabled) {
+    const blueskyItems = await fetchAllBlueskyAccounts(sources.bluesky.accounts);
+    rawItems.push(...blueskyItems);
   }
 
   console.log(`\n📊 Total raw items fetched: ${rawItems.length}`);
@@ -101,26 +112,117 @@ async function generate() {
 }
 
 /**
- * Deduplicate items by title similarity
+ * Extract key terms from text for similarity comparison
+ */
+function extractKeyTerms(text: string): Set<string> {
+  const stopWords = new Set([
+    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+    'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare',
+    'ought', 'used', 'to', 'of', 'in', 'for', 'on', 'with', 'at', 'by',
+    'from', 'as', 'into', 'through', 'during', 'before', 'after', 'above',
+    'below', 'between', 'under', 'again', 'further', 'then', 'once', 'here',
+    'there', 'when', 'where', 'why', 'how', 'all', 'each', 'few', 'more',
+    'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own',
+    'same', 'so', 'than', 'too', 'very', 'just', 'and', 'but', 'if', 'or',
+    'because', 'until', 'while', 'although', 'though', 'after', 'before',
+    'new', 'now', 'says', 'said', 'according', 'report', 'reports', 'its',
+    'this', 'that', 'these', 'those', 'it', 'they', 'we', 'you', 'he', 'she',
+  ]);
+
+  const words = text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((word) => word.length > 2 && !stopWords.has(word));
+
+  return new Set(words);
+}
+
+/**
+ * Calculate similarity score between two items (0-1)
+ */
+function calculateSimilarity(item1: RawNewsItem, item2: RawNewsItem): number {
+  const terms1 = extractKeyTerms(item1.title + ' ' + item1.content.slice(0, 500));
+  const terms2 = extractKeyTerms(item2.title + ' ' + item2.content.slice(0, 500));
+
+  if (terms1.size === 0 || terms2.size === 0) return 0;
+
+  // Calculate Jaccard similarity using Array.from for compatibility
+  const terms1Array = Array.from(terms1);
+  const terms2Array = Array.from(terms2);
+
+  const intersection = terms1Array.filter((x) => terms2.has(x));
+  const unionSet = new Set(terms1Array.concat(terms2Array));
+
+  return intersection.length / unionSet.size;
+}
+
+/**
+ * Merge similar items into one with combined sources
+ */
+function mergeItems(items: RawNewsItem[]): RawNewsItem {
+  // Sort by content length (prefer longer/more detailed)
+  items.sort((a, b) => b.content.length - a.content.length);
+
+  const primary = items[0];
+  const allSources = items.map((item) => item.source).join(', ');
+
+  // Combine content from all sources for richer context
+  const combinedContent = items
+    .map((item) => `[${item.source}]: ${item.content}`)
+    .join('\n\n')
+    .slice(0, 3000);
+
+  return {
+    ...primary,
+    content: combinedContent,
+    source: allSources,
+  };
+}
+
+/**
+ * Smart deduplication that groups and merges similar stories
  */
 function deduplicateItems(items: RawNewsItem[]): RawNewsItem[] {
-  const seen = new Set<string>();
-  const unique: RawNewsItem[] = [];
+  const SIMILARITY_THRESHOLD = 0.35; // Items with >35% term overlap are considered similar
+  const groups: RawNewsItem[][] = [];
+  const assigned = new Set<number>();
 
-  for (const item of items) {
-    // Create a simple hash from the title
-    const titleKey = item.title
-      .toLowerCase()
-      .replace(/[^a-z0-9]/g, '')
-      .slice(0, 50);
+  console.log(`[Dedup] Starting smart deduplication of ${items.length} items...`);
 
-    if (!seen.has(titleKey)) {
-      seen.add(titleKey);
-      unique.push(item);
+  // Group similar items together
+  for (let i = 0; i < items.length; i++) {
+    if (assigned.has(i)) continue;
+
+    const group: RawNewsItem[] = [items[i]];
+    assigned.add(i);
+
+    for (let j = i + 1; j < items.length; j++) {
+      if (assigned.has(j)) continue;
+
+      const similarity = calculateSimilarity(items[i], items[j]);
+      if (similarity >= SIMILARITY_THRESHOLD) {
+        group.push(items[j]);
+        assigned.add(j);
+      }
+    }
+
+    groups.push(group);
+  }
+
+  // Log merging stats
+  const mergedCount = groups.filter((g) => g.length > 1).length;
+  const totalMerged = items.length - groups.length;
+  if (mergedCount > 0) {
+    console.log(`[Dedup] Merged ${totalMerged} items into ${mergedCount} combined stories`);
+    for (const group of groups.filter((g) => g.length > 1)) {
+      console.log(`  - "${group[0].title.slice(0, 50)}..." (${group.length} sources)`);
     }
   }
 
-  return unique;
+  // Merge each group into a single item
+  return groups.map((group) => (group.length === 1 ? group[0] : mergeItems(group)));
 }
 
 /**

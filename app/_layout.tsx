@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { DarkTheme, DefaultTheme, ThemeProvider, Theme } from '@react-navigation/native';
-import { Stack, router } from 'expo-router';
+import { Stack, router, useSegments, useRootNavigationState } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { ActivityIndicator, View } from 'react-native';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { PulseColors } from '@/constants/theme';
+import { AuthProvider, useAuth } from '@/contexts/auth-context';
 import {
   registerForPushNotifications,
   addNotificationResponseListener,
@@ -41,11 +43,32 @@ const PulseDarkTheme: Theme = {
   },
 };
 
-export default function RootLayout() {
+function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const { user, loading } = useAuth();
+  const segments = useSegments();
+  const navigationState = useRootNavigationState();
 
   useEffect(() => {
-    // Register for push notifications
+    if (!navigationState?.key) return;
+
+    const inAuthGroup = segments[0] === 'auth';
+
+    if (!loading) {
+      if (!user && !inAuthGroup) {
+        // Redirect to auth if not logged in and not already on auth screen
+        router.replace('/auth');
+      } else if (user && inAuthGroup) {
+        // Redirect to home if logged in and on auth screen
+        router.replace('/(tabs)');
+      }
+    }
+  }, [user, loading, segments, navigationState?.key]);
+
+  useEffect(() => {
+    // Only register for push notifications if user is logged in
+    if (!user) return;
+
     registerForPushNotifications().then((token) => {
       if (token) {
         // Log the token - you'll need this to add to GitHub Secrets
@@ -77,11 +100,21 @@ export default function RootLayout() {
     });
 
     return () => subscription.remove();
-  }, []);
+  }, [user]);
+
+  // Show loading screen while checking auth state
+  if (loading) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: colorScheme === 'dark' ? PulseColors.dark.background : PulseColors.light.background }}>
+        <ActivityIndicator size="large" color={PulseColors.primary} />
+      </View>
+    );
+  }
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? PulseDarkTheme : PulseLightTheme}>
       <Stack>
+        <Stack.Screen name="auth" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="briefing/[id]"
@@ -107,5 +140,13 @@ export default function RootLayout() {
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <RootLayoutNav />
+    </AuthProvider>
   );
 }

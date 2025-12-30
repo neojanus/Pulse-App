@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import { StyleSheet, View, ScrollView, TextInput, ActivityIndicator, RefreshControl } from 'react-native';
+import { StyleSheet, View, ScrollView, TextInput, RefreshControl } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
+import { FadeIn } from '@/components/ui/fade-in';
+import { Skeleton } from '@/components/ui/skeleton';
 import { DayAccordion } from '@/components/archive';
 import { PulseColors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -40,8 +42,31 @@ export default function ArchiveScreen() {
 
   if (loading) {
     return (
-      <ThemedView style={[styles.container, styles.loadingContainer]}>
-        <ActivityIndicator size="large" color={PulseColors.primary} />
+      <ThemedView style={styles.container}>
+        {/* Header */}
+        <View
+          style={[
+            styles.header,
+            {
+              paddingTop: insets.top + 8,
+              borderBottomColor: colors.border,
+            },
+          ]}>
+          <View style={styles.headerTop}>
+            <Skeleton width={100} height={28} borderRadius={6} />
+            <Skeleton width={22} height={22} borderRadius={11} />
+          </View>
+          <Skeleton width="100%" height={48} borderRadius={12} />
+        </View>
+
+        <View style={styles.scrollContent}>
+          {[1, 2, 3].map((i) => (
+            <View key={i} style={[styles.skeletonDay, { backgroundColor: colors.surface }]}>
+              <Skeleton width={140} height={18} borderRadius={4} />
+              <Skeleton width={80} height={14} borderRadius={4} style={{ marginTop: 8 }} />
+            </View>
+          ))}
+        </View>
       </ThemedView>
     );
   }
@@ -49,43 +74,45 @@ export default function ArchiveScreen() {
   return (
     <ThemedView style={styles.container}>
       {/* Header */}
-      <View
-        style={[
-          styles.header,
-          {
-            paddingTop: insets.top + 8,
-            borderBottomColor: colors.border,
-          },
-        ]}>
-        <View style={styles.headerTop}>
-          <ThemedText type="title" style={styles.title}>
-            Archive
-          </ThemedText>
-          <IconSymbol name="gearshape" size={22} color={colors.textSecondary} />
-        </View>
-
-        {/* Search Bar */}
+      <FadeIn delay={0} slideFrom="none">
         <View
           style={[
-            styles.searchContainer,
+            styles.header,
             {
-              backgroundColor: colors.surface,
-              borderColor: colors.border,
+              paddingTop: insets.top + 8,
+              borderBottomColor: colors.border,
             },
           ]}>
-          <IconSymbol
-            name="magnifyingglass"
-            size={18}
-            color={colors.textSecondary}
-          />
-          <TextInput
-            placeholder="Search keywords (e.g., LLMs, Funding)..."
-            placeholderTextColor={colors.textMuted}
-            style={[styles.searchInput, { color: colors.text }]}
-            editable={false} // Disabled for V1
-          />
+          <View style={styles.headerTop}>
+            <ThemedText type="title" style={styles.title}>
+              Archive
+            </ThemedText>
+            <IconSymbol name="gearshape" size={22} color={colors.textSecondary} />
+          </View>
+
+          {/* Search Bar */}
+          <View
+            style={[
+              styles.searchContainer,
+              {
+                backgroundColor: colors.surface,
+                borderColor: colors.border,
+              },
+            ]}>
+            <IconSymbol
+              name="magnifyingglass"
+              size={18}
+              color={colors.textSecondary}
+            />
+            <TextInput
+              placeholder="Search keywords (e.g., LLMs, Funding)..."
+              placeholderTextColor={colors.textMuted}
+              style={[styles.searchInput, { color: colors.text }]}
+              editable={false} // Disabled for V1
+            />
+          </View>
         </View>
-      </View>
+      </FadeIn>
 
       {/* Scrollable Content */}
       <ScrollView
@@ -100,20 +127,23 @@ export default function ArchiveScreen() {
           />
         }>
         {archiveDays.map((day, index) => (
-          <DayAccordion
-            key={day.date}
-            day={day}
-            isToday={index === 0}
-            defaultOpen={index === 0}
-          />
+          <FadeIn key={day.date} delay={50 + index * 50}>
+            <DayAccordion
+              day={day}
+              isToday={index === 0}
+              defaultOpen={index === 0}
+            />
+          </FadeIn>
         ))}
 
         {/* End Message */}
-        <View style={styles.endMessage}>
-          <ThemedText style={[styles.endText, { color: colors.textMuted }]}>
-            Briefings are available for 30 days
-          </ThemedText>
-        </View>
+        <FadeIn delay={50 + archiveDays.length * 50}>
+          <View style={styles.endMessage}>
+            <ThemedText style={[styles.endText, { color: colors.textMuted }]}>
+              Briefings are available for 30 days
+            </ThemedText>
+          </View>
+        </FadeIn>
       </ScrollView>
     </ThemedView>
   );
@@ -122,10 +152,6 @@ export default function ArchiveScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  loadingContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   header: {
     paddingHorizontal: 16,
@@ -169,5 +195,10 @@ const styles = StyleSheet.create({
   },
   endText: {
     fontSize: 12,
+  },
+  skeletonDay: {
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
   },
 });

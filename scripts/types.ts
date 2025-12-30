@@ -9,7 +9,7 @@ export interface RawNewsItem {
   content: string;
   url: string;
   source: string;
-  sourceType: 'rss' | 'reddit' | 'twitter' | 'hackernews';
+  sourceType: 'rss' | 'reddit' | 'twitter' | 'hackernews' | 'bluesky';
   category: BriefingCategory;
   publishedAt: string;
   author?: string;
@@ -53,6 +53,14 @@ export interface HackerNewsConfig {
 }
 
 /**
+ * Bluesky account configuration
+ */
+export interface BlueskyAccount {
+  handle: string;
+  category: BriefingCategory;
+}
+
+/**
  * All sources configuration
  */
 export interface SourcesConfig {
@@ -69,4 +77,8 @@ export interface SourcesConfig {
     feeds: RSSFeed[];
   };
   hackernews: HackerNewsConfig;
+  bluesky: {
+    enabled: boolean;
+    accounts: BlueskyAccount[];
+  };
 }
