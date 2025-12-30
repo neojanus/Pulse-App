@@ -1,5 +1,6 @@
 import { useLocalSearchParams, router } from 'expo-router';
-import { StyleSheet, View, Pressable, ScrollView } from 'react-native';
+import { useState, useEffect } from 'react';
+import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -17,7 +18,8 @@ import {
 import { PulseColors } from '@/constants/theme';
 import { CategoryConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { getItemById } from '@/data/mock';
+import { getItemById } from '@/services/briefings-api';
+import type { BriefingItem } from '@/types/briefing';
 
 export default function ItemDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -26,7 +28,25 @@ export default function ItemDetailScreen() {
   const colors = isDark ? PulseColors.dark : PulseColors.light;
   const insets = useSafeAreaInsets();
 
-  const item = getItemById(id);
+  const [item, setItem] = useState<BriefingItem | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadItem() {
+      const data = await getItemById(id);
+      setItem(data);
+      setLoading(false);
+    }
+    loadItem();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <ThemedView style={[styles.container, styles.emptyContent]}>
+        <ActivityIndicator size="large" color={PulseColors.primary} />
+      </ThemedView>
+    );
+  }
 
   if (!item) {
     return (

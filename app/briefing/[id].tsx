@@ -1,6 +1,6 @@
 import { useLocalSearchParams, router } from 'expo-router';
-import { useState, useMemo } from 'react';
-import { StyleSheet, View, Pressable, ScrollView } from 'react-native';
+import { useState, useMemo, useEffect } from 'react';
+import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -16,8 +16,8 @@ import {
 import { PulseColors } from '@/constants/theme';
 import { PeriodConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { getBriefingById } from '@/data/mock';
-import type { BriefingCategory } from '@/types/briefing';
+import { getBriefingById } from '@/services/briefings-api';
+import type { Briefing, BriefingCategory } from '@/types/briefing';
 
 export default function BriefingDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -26,16 +26,33 @@ export default function BriefingDetailScreen() {
   const colors = isDark ? PulseColors.dark : PulseColors.light;
   const insets = useSafeAreaInsets();
 
+  const [briefing, setBriefing] = useState<Briefing | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState<BriefingCategory | 'all'>('all');
   const [isRead, setIsRead] = useState(false);
 
-  const briefing = getBriefingById(id);
+  useEffect(() => {
+    async function loadBriefing() {
+      const data = await getBriefingById(id);
+      setBriefing(data);
+      setLoading(false);
+    }
+    loadBriefing();
+  }, [id]);
 
   const filteredItems = useMemo(() => {
     if (!briefing) return [];
     if (activeCategory === 'all') return briefing.items;
     return briefing.items.filter((item) => item.category === activeCategory);
   }, [briefing, activeCategory]);
+
+  if (loading) {
+    return (
+      <ThemedView style={[styles.container, styles.emptyContent]}>
+        <ActivityIndicator size="large" color={PulseColors.primary} />
+      </ThemedView>
+    );
+  }
 
   if (!briefing) {
     return (

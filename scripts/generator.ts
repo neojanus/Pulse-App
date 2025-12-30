@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 import { sources } from './sources';
-import { fetchAllRSSFeeds, fetchAllSubreddits, fetchAllTwitterAccounts } from './fetchers';
+import { fetchAllRSSFeeds, fetchAllSubreddits, fetchAllTwitterAccounts, fetchHackerNews } from './fetchers';
 import { processNewsItems } from './processor';
 import type { RawNewsItem } from './types';
 import type { Briefing, BriefingItem, BriefingPeriod, DailyBriefings } from '../types/briefing';
@@ -45,6 +45,11 @@ async function generate() {
   if (sources.twitter.enabled) {
     const twitterItems = await fetchAllTwitterAccounts(sources.twitter.accounts);
     rawItems.push(...twitterItems);
+  }
+
+  if (sources.hackernews.enabled) {
+    const hnItems = await fetchHackerNews(sources.hackernews);
+    rawItems.push(...hnItems);
   }
 
   console.log(`\n📊 Total raw items fetched: ${rawItems.length}`);

@@ -18,6 +18,7 @@ interface DeepSeekResponse {
 }
 
 interface ProcessedItem {
+  relevanceScore: number;
   title: string;
   tldr: string;
   whyItMatters: string[];
@@ -30,29 +31,51 @@ interface ProcessedItem {
   readTimeMinutes: number;
 }
 
-const SYSTEM_PROMPT = `You are an AI news curator for tech founders building AI-powered products. Your job is to transform raw news into actionable briefings.
+const SYSTEM_PROMPT = `You are an expert AI news curator for tech founders building AI products.
+
+Your task: Transform raw news into HIGH-SIGNAL briefings that founders can act on.
+
+QUALITY CRITERIA:
+- Relevance: Is this directly useful for someone building AI products?
+- Actionability: Can the reader DO something with this information?
+- Timeliness: Is this news (not evergreen content)?
+- Signal: Does this contain genuine insight (not just hype)?
 
 Output ONLY valid JSON with this exact structure:
 {
+  "relevanceScore": 7,
   "title": "Catchy headline (max 80 chars)",
-  "tldr": "1-2 sentence summary for busy founders",
-  "whyItMatters": ["Impact point 1", "Impact point 2"],
+  "tldr": "1-2 sentence summary - what happened and why it matters",
+  "whyItMatters": ["Business impact", "Technical impact"],
   "whatToTry": {
-    "description": "Actionable suggestion",
-    "code": "optional code snippet",
-    "note": "optional note"
+    "description": "Specific action the reader can take",
+    "code": "optional: API call, CLI command, or code snippet",
+    "note": "optional: caveat or tip"
   },
   "tags": [{"label": "Tag", "type": "model|tool|topic"}],
   "readTimeMinutes": 2
 }
 
-Guidelines:
+RELEVANCE SCORING (1-10):
+- 8-10: Breaking releases, major funding, breakthrough research, new APIs
+- 5-7: Useful tools, interesting papers, significant industry moves
+- 1-4: Rehashed news, hype pieces, minor updates, opinion pieces
+
+GUIDELINES:
 - Be concise and actionable
 - Focus on practical implications for founders
-- Avoid hype, be factual
-- readTimeMinutes should be 1-5 based on complexity
-- Include code snippets only if relevant (API calls, CLI commands, etc.)
-- Tags: use "model" for AI models (GPT-4, Claude), "tool" for products, "topic" for concepts`;
+- Be skeptical of marketing claims - avoid hype
+- readTimeMinutes: 1-5 based on complexity
+- Only include code snippets for tools/APIs with clear usage
+- Tags: "model" for AI models, "tool" for products, "topic" for concepts`;
+
+/**
+ * Result of processing a news item, including relevance score
+ */
+export interface ProcessedResult {
+  item: BriefingItem;
+  relevanceScore: number;
+}
 
 /**
  * Process a single news item with DeepSeek
@@ -60,7 +83,7 @@ Guidelines:
 export async function processNewsItem(
   item: RawNewsItem,
   apiKey: string
-): Promise<BriefingItem | null> {
+): Promise<ProcessedResult | null> {
   try {
     const userPrompt = `Transform this news into a briefing item:
 
@@ -138,7 +161,10 @@ Return only valid JSON.`;
       publishedAt: item.publishedAt,
     };
 
-    return briefingItem;
+    return {
+      item: briefingItem,
+      relevanceScore: processed.relevanceScore || 5,
+    };
   } catch (error) {
     console.error(`[Processor] Error processing "${item.title}":`, error);
     return null;
@@ -151,10 +177,10 @@ Return only valid JSON.`;
 export async function processNewsItems(
   items: RawNewsItem[],
   apiKey: string,
-  options: { batchSize?: number; delayMs?: number } = {}
+  options: { batchSize?: number; delayMs?: number; minRelevanceScore?: number } = {}
 ): Promise<BriefingItem[]> {
-  const { batchSize = 5, delayMs = 1000 } = options;
-  const results: BriefingItem[] = [];
+  const { batchSize = 5, delayMs = 1000, minRelevanceScore = 5 } = options;
+  const results: ProcessedResult[] = [];
 
   console.log(`[Processor] Processing ${items.length} items in batches of ${batchSize}`);
 
@@ -178,8 +204,15 @@ export async function processNewsItems(
     }
   }
 
-  console.log(`[Processor] Successfully processed ${results.length}/${items.length} items`);
-  return results;
+  // Filter by relevance score and sort by score descending
+  const filteredResults = results
+    .filter((r) => r.relevanceScore >= minRelevanceScore)
+    .sort((a, b) => b.relevanceScore - a.relevanceScore);
+
+  console.log(`[Processor] Processed ${results.length} items, ${filteredResults.length} passed relevance filter (>=${minRelevanceScore})`);
+
+  // Return just the items, sorted by relevance
+  return filteredResults.map((r) => r.item);
 }
 
 /**

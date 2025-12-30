@@ -9,7 +9,7 @@ export interface RawNewsItem {
   content: string;
   url: string;
   source: string;
-  sourceType: 'rss' | 'reddit' | 'twitter';
+  sourceType: 'rss' | 'reddit' | 'twitter' | 'hackernews';
   category: BriefingCategory;
   publishedAt: string;
   author?: string;
@@ -42,6 +42,17 @@ export interface RSSFeed {
 }
 
 /**
+ * HackerNews configuration
+ */
+export interface HackerNewsConfig {
+  enabled: boolean;
+  queries: string[];
+  minPoints: number;
+  limit: number;
+  category: BriefingCategory;
+}
+
+/**
  * All sources configuration
  */
 export interface SourcesConfig {
@@ -57,4 +68,5 @@ export interface SourcesConfig {
     enabled: boolean;
     feeds: RSSFeed[];
   };
+  hackernews: HackerNewsConfig;
 }

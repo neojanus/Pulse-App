@@ -1,10 +1,16 @@
+import { useEffect } from 'react';
 import { DarkTheme, DefaultTheme, ThemeProvider, Theme } from '@react-navigation/native';
-import { Stack } from 'expo-router';
+import { Stack, router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { PulseColors } from '@/constants/theme';
+import {
+  registerForPushNotifications,
+  addNotificationResponseListener,
+  getLastNotificationResponse,
+} from '@/services/notifications';
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -37,6 +43,41 @@ const PulseDarkTheme: Theme = {
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
+  useEffect(() => {
+    // Register for push notifications
+    registerForPushNotifications().then((token) => {
+      if (token) {
+        // Log the token - you'll need this to add to GitHub Secrets
+        console.log('='.repeat(60));
+        console.log('EXPO PUSH TOKEN (add to GitHub Secrets as EXPO_PUSH_TOKEN):');
+        console.log(token);
+        console.log('='.repeat(60));
+      }
+    });
+
+    // Handle notification taps
+    const subscription = addNotificationResponseListener((response) => {
+      const data = response.notification.request.content.data;
+      if (data?.screen === 'today') {
+        router.push('/(tabs)');
+      } else if (data?.briefingId) {
+        router.push(`/briefing/${data.briefingId}`);
+      }
+    });
+
+    // Check if app was opened from a notification
+    getLastNotificationResponse().then((response) => {
+      if (response) {
+        const data = response.notification.request.content.data;
+        if (data?.screen === 'today') {
+          router.push('/(tabs)');
+        }
+      }
+    });
+
+    return () => subscription.remove();
+  }, []);
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? PulseDarkTheme : PulseLightTheme}>

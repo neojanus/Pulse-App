@@ -1,4 +1,5 @@
-import { StyleSheet, View, ScrollView, TextInput } from 'react-native';
+import { useState, useEffect, useCallback } from 'react';
+import { StyleSheet, View, ScrollView, TextInput, ActivityIndicator, RefreshControl } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -7,7 +8,8 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { DayAccordion } from '@/components/archive';
 import { PulseColors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-import { getArchiveBriefings } from '@/data/mock';
+import { getArchiveBriefings, clearCache } from '@/services/briefings-api';
+import type { DailyBriefings } from '@/types/briefing';
 
 export default function ArchiveScreen() {
   const colorScheme = useColorScheme();
@@ -15,7 +17,34 @@ export default function ArchiveScreen() {
   const colors = isDark ? PulseColors.dark : PulseColors.light;
   const insets = useSafeAreaInsets();
 
-  const archiveDays = getArchiveBriefings();
+  const [archiveDays, setArchiveDays] = useState<DailyBriefings[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const loadArchive = useCallback(async () => {
+    const data = await getArchiveBriefings();
+    setArchiveDays(data);
+    setLoading(false);
+  }, []);
+
+  const onRefresh = useCallback(async () => {
+    setRefreshing(true);
+    clearCache();
+    await loadArchive();
+    setRefreshing(false);
+  }, [loadArchive]);
+
+  useEffect(() => {
+    loadArchive();
+  }, [loadArchive]);
+
+  if (loading) {
+    return (
+      <ThemedView style={[styles.container, styles.loadingContainer]}>
+        <ActivityIndicator size="large" color={PulseColors.primary} />
+      </ThemedView>
+    );
+  }
 
   return (
     <ThemedView style={styles.container}>
@@ -62,7 +91,14 @@ export default function ArchiveScreen() {
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={PulseColors.primary}
+          />
+        }>
         {archiveDays.map((day, index) => (
           <DayAccordion
             key={day.date}
@@ -86,6 +122,10 @@ export default function ArchiveScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  loadingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     paddingHorizontal: 16,

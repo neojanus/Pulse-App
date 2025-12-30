@@ -85,4 +85,20 @@ export const sources: SourcesConfig = {
       },
     ],
   },
+
+  hackernews: {
+    enabled: true,
+    queries: [
+      'artificial intelligence',
+      'LLM',
+      'GPT-4',
+      'Claude AI',
+      'OpenAI',
+      'machine learning',
+      'transformer model',
+    ],
+    minPoints: 50,
+    limit: 15,
+    category: 'industry',
+  },
 };
