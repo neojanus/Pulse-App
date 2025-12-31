@@ -17,11 +17,11 @@ import type { Briefing, BriefingItem, BriefingPeriod, DailyBriefings } from '../
 const OUTPUT_PATH = path.join(__dirname, '..', 'data', 'live', 'briefings.json');
 const MAX_ITEMS_PER_BRIEFING = 10;
 const MAX_DAYS_TO_KEEP = 7;
-const SCRIPT_TIMEOUT_MS = 10 * 60 * 1000; // 10 minute overall timeout
+const SCRIPT_TIMEOUT_MS = 5 * 60 * 1000; // 5 minute overall timeout
 
 // Set up script-level timeout
 const scriptTimeout = setTimeout(() => {
-  console.error('\n❌ FATAL: Script exceeded maximum execution time of 10 minutes');
+  console.error('\n❌ FATAL: Script exceeded maximum execution time of 5 minutes');
   console.error('This usually means an API is unresponsive. Check DeepSeek status.');
   process.exit(1);
 }, SCRIPT_TIMEOUT_MS);
@@ -88,14 +88,15 @@ async function generate() {
   );
 
   // Take only the most recent items for processing
-  const itemsToProcess = uniqueItems.slice(0, 30);
+  // Process 15 items max (we only keep 10, so 15 gives buffer for filtering)
+  const itemsToProcess = uniqueItems.slice(0, 15);
   console.log(`📊 Processing top ${itemsToProcess.length} items`);
 
   // Step 3: Process with DeepSeek
   console.log('\n🤖 Processing with DeepSeek AI...');
   const processedItems = await processNewsItems(itemsToProcess, apiKey, {
-    batchSize: 5,
-    delayMs: 1500,
+    batchSize: 8,    // More parallelism
+    delayMs: 500,    // Reduced delay (DeepSeek handles it fine)
   });
 
   console.log(`\n✅ Processed ${processedItems.length} items successfully`);
