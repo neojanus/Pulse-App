@@ -35,7 +35,7 @@ export const sources: SourcesConfig = {
   },
 
   reddit: {
-    enabled: true,
+    enabled: false, // Disabled: GitHub Actions IP gets 403 blocked
     subreddits: [
       { name: 'MachineLearning', category: 'research', limit: 10 },
       { name: 'LocalLLaMA', category: 'tools', limit: 10 },
@@ -48,20 +48,10 @@ export const sources: SourcesConfig = {
   rss: {
     enabled: true,
     feeds: [
-      // Tech News - AI Coverage
+      // Tech News - AI Coverage (verified working)
       {
         url: 'https://techcrunch.com/category/artificial-intelligence/feed/',
         name: 'TechCrunch AI',
-        category: 'industry',
-      },
-      {
-        url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml',
-        name: 'The Verge AI',
-        category: 'industry',
-      },
-      {
-        url: 'https://arstechnica.com/tag/artificial-intelligence/feed/',
-        name: 'Ars Technica AI',
         category: 'industry',
       },
       {
@@ -69,21 +59,11 @@ export const sources: SourcesConfig = {
         name: 'Wired AI',
         category: 'industry',
       },
-      {
-        url: 'https://venturebeat.com/category/ai/feed/',
-        name: 'VentureBeat AI',
-        category: 'industry',
-      },
 
-      // AI Company Blogs
+      // AI Company Blogs (verified working)
       {
         url: 'https://openai.com/blog/rss.xml',
         name: 'OpenAI Blog',
-        category: 'releases',
-      },
-      {
-        url: 'https://www.anthropic.com/news/rss.xml',
-        name: 'Anthropic News',
         category: 'releases',
       },
       {
@@ -91,48 +71,11 @@ export const sources: SourcesConfig = {
         name: 'Google AI Blog',
         category: 'releases',
       },
-      {
-        url: 'https://ai.meta.com/blog/rss/',
-        name: 'Meta AI Blog',
-        category: 'releases',
-      },
 
-      // AI Newsletters & Curators (aggregate Twitter/X content)
-      {
-        url: 'https://www.therundown.ai/rss',
-        name: 'The Rundown AI',
-        category: 'industry',
-      },
-      {
-        url: 'https://tldr.tech/ai/rss',
-        name: 'TLDR AI',
-        category: 'industry',
-      },
-      {
-        url: 'https://bensbites.beehiiv.com/feed',
-        name: "Ben's Bites",
-        category: 'industry',
-      },
-      {
-        url: 'https://importai.substack.com/feed',
-        name: 'Import AI',
-        category: 'research',
-      },
-      {
-        url: 'https://lastweekin.ai/feed',
-        name: 'Last Week in AI',
-        category: 'industry',
-      },
-
-      // Research
+      // Research (verified working)
       {
         url: 'http://export.arxiv.org/rss/cs.AI',
         name: 'ArXiv AI',
-        category: 'research',
-      },
-      {
-        url: 'http://export.arxiv.org/rss/cs.LG',
-        name: 'ArXiv ML',
         category: 'research',
       },
       {
@@ -145,22 +88,14 @@ export const sources: SourcesConfig = {
 
   hackernews: {
     enabled: true,
-    queries: [
-      'artificial intelligence',
-      'LLM',
-      'GPT-4',
-      'Claude AI',
-      'OpenAI',
-      'machine learning',
-      'transformer model',
-    ],
-    minPoints: 50,
-    limit: 15,
+    queries: ['LLM', 'OpenAI', 'AI'], // Reduced to top 3 productive queries
+    minPoints: 100, // Higher threshold for quality
+    limit: 10,
     category: 'industry',
   },
 
   bluesky: {
-    enabled: true,
+    enabled: false, // Disabled: Needs authentication (401 errors)
     accounts: [
       // AI Labs & Companies
       { handle: 'openai.bsky.social', category: 'releases' },
