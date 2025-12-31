@@ -42,34 +42,29 @@ async function generate() {
     process.exit(1);
   }
 
-  // Step 1: Fetch from all sources
-  console.log('\n📥 Fetching news from sources...');
-  const rawItems: RawNewsItem[] = [];
+  // Step 1: Fetch from all sources IN PARALLEL
+  console.log('\n📥 Fetching news from sources (parallel)...');
+
+  const fetchPromises: Promise<RawNewsItem[]>[] = [];
 
   if (sources.rss.enabled) {
-    const rssItems = await fetchAllRSSFeeds(sources.rss.feeds);
-    rawItems.push(...rssItems);
+    fetchPromises.push(fetchAllRSSFeeds(sources.rss.feeds));
   }
-
   if (sources.reddit.enabled) {
-    const redditItems = await fetchAllSubreddits(sources.reddit.subreddits);
-    rawItems.push(...redditItems);
+    fetchPromises.push(fetchAllSubreddits(sources.reddit.subreddits));
   }
-
   if (sources.twitter.enabled) {
-    const twitterItems = await fetchAllTwitterAccounts(sources.twitter.accounts);
-    rawItems.push(...twitterItems);
+    fetchPromises.push(fetchAllTwitterAccounts(sources.twitter.accounts));
   }
-
   if (sources.hackernews.enabled) {
-    const hnItems = await fetchHackerNews(sources.hackernews);
-    rawItems.push(...hnItems);
+    fetchPromises.push(fetchHackerNews(sources.hackernews));
+  }
+  if (sources.bluesky.enabled) {
+    fetchPromises.push(fetchAllBlueskyAccounts(sources.bluesky.accounts));
   }
 
-  if (sources.bluesky.enabled) {
-    const blueskyItems = await fetchAllBlueskyAccounts(sources.bluesky.accounts);
-    rawItems.push(...blueskyItems);
-  }
+  const fetchResults = await Promise.all(fetchPromises);
+  const rawItems: RawNewsItem[] = fetchResults.flat();
 
   console.log(`\n📊 Total raw items fetched: ${rawItems.length}`);
 
@@ -95,8 +90,8 @@ async function generate() {
   // Step 3: Process with DeepSeek
   console.log('\n🤖 Processing with DeepSeek AI...');
   const processedItems = await processNewsItems(itemsToProcess, apiKey, {
-    batchSize: 8,    // More parallelism
-    delayMs: 500,    // Reduced delay (DeepSeek handles it fine)
+    batchSize: 15,   // Process all at once
+    delayMs: 0,      // No delay needed
   });
 
   console.log(`\n✅ Processed ${processedItems.length} items successfully`);
