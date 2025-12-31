@@ -1,7 +1,8 @@
 import { useLocalSearchParams, router } from 'expo-router';
 import { useState, useEffect } from 'react';
-import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator, Platform } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { BlurView } from 'expo-blur';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -70,32 +71,33 @@ export default function ItemDetailScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      {/* Sticky Header */}
-      <View
+      {/* Sticky Header with Glass Effect */}
+      <BlurView
+        intensity={Platform.OS === 'ios' ? 80 : 100}
+        tint={isDark ? 'dark' : 'light'}
         style={[
           styles.header,
           {
             paddingTop: insets.top,
             borderBottomColor: colors.border,
-            backgroundColor: `${colors.background}F0`,
           },
         ]}>
         <Pressable
           onPress={() => router.back()}
-          style={[styles.backButton, { backgroundColor: colors.surfaceHighlight }]}>
+          style={[styles.backButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
           <IconSymbol name="arrow.left" size={22} color={colors.text} />
         </Pressable>
         <View style={styles.headerActions}>
           <Pressable
-            style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+            style={[styles.actionButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
             <IconSymbol name="bookmark" size={20} color={colors.text} />
           </Pressable>
           <Pressable
-            style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+            style={[styles.actionButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
             <IconSymbol name="square.and.arrow.up" size={20} color={colors.text} />
           </Pressable>
         </View>
-      </View>
+      </BlurView>
 
       {/* Scrollable Content */}
       <ScrollView

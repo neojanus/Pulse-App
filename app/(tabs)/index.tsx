@@ -6,8 +6,9 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { BriefingCard } from '@/components/briefing';
 import { FadeIn } from '@/components/ui/fade-in';
+import { PulsingDot } from '@/components/ui/pulsing-dot';
 import { SkeletonBriefingCard } from '@/components/ui/skeleton';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, Spacing } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { getTodaysBriefings, clearCache } from '@/services/briefings-api';
 import type { Briefing } from '@/types/briefing';
@@ -111,16 +112,29 @@ export default function TodayScreen() {
             </ThemedText>
             {unreadBriefings.length > 0 ? (
               <View style={styles.statusContainer}>
-                <View style={styles.statusDot} />
+                <PulsingDot
+                  color={PulseColors.primary}
+                  size={8}
+                  active={true}
+                  glowIntensity={0.5}
+                />
                 <ThemedText style={[styles.status, { color: colors.textSecondary }]}>
                   {unreadBriefings.length} new briefing
                   {unreadBriefings.length !== 1 ? 's' : ''} available
                 </ThemedText>
               </View>
             ) : (
-              <ThemedText style={[styles.status, { color: colors.textMuted }]}>
-                {"You're all caught up!"}
-              </ThemedText>
+              <View style={styles.statusContainer}>
+                <PulsingDot
+                  color={colors.textMuted}
+                  size={6}
+                  active={false}
+                  glowIntensity={0.2}
+                />
+                <ThemedText style={[styles.status, { color: colors.textMuted }]}>
+                  {"You're all caught up!"}
+                </ThemedText>
+              </View>
             )}
           </View>
         </FadeIn>
@@ -177,18 +191,8 @@ const styles = StyleSheet.create({
   statusContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 12,
-    gap: 8,
-  },
-  statusDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: PulseColors.primary,
-    shadowColor: PulseColors.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.6,
-    shadowRadius: 4,
+    marginTop: Spacing.md,
+    gap: Spacing.xs,
   },
   status: {
     fontSize: 14,

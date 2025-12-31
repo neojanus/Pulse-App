@@ -3,6 +3,7 @@ import type { RawNewsItem } from './types';
 
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 const DEEPSEEK_MODEL = 'deepseek-chat';
+const API_TIMEOUT_MS = 30000; // 30 second timeout per request
 
 interface DeepSeekMessage {
   role: 'system' | 'user' | 'assistant';
@@ -105,66 +106,81 @@ Return only valid JSON.`;
       { role: 'user', content: userPrompt },
     ];
 
-    const response = await fetch(DEEPSEEK_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: DEEPSEEK_MODEL,
-        messages,
-        temperature: 0.3,
-        max_tokens: 1000,
-      }),
-    });
+    // Add timeout using AbortController
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT_MS);
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`DeepSeek API error: ${response.status} - ${errorText}`);
+    try {
+      const response = await fetch(DEEPSEEK_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: DEEPSEEK_MODEL,
+          messages,
+          temperature: 0.3,
+          max_tokens: 1000,
+        }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`DeepSeek API error: ${response.status} - ${errorText}`);
+      }
+
+      const data: DeepSeekResponse = await response.json();
+      const content = data.choices[0]?.message?.content;
+
+      if (!content) {
+        throw new Error('Empty response from DeepSeek');
+      }
+
+      // Parse JSON from response (handle markdown code blocks)
+      const jsonStr = content
+        .replace(/```json\n?/g, '')
+        .replace(/```\n?/g, '')
+        .trim();
+
+      const processed: ProcessedItem = JSON.parse(jsonStr);
+
+      // Parse sources - check if this is a merged item with multiple sources
+      const sources: BriefingSource[] = parseMultipleSources(item);
+
+      // Create the full BriefingItem
+      const briefingItem: BriefingItem = {
+        id: item.id,
+        title: processed.title,
+        tldr: processed.tldr,
+        whyItMatters: processed.whyItMatters,
+        whatToTry: processed.whatToTry,
+        sources,
+        tags: processed.tags.map((tag, idx) => ({
+          id: `tag-${item.id}-${idx}`,
+          label: tag.label,
+          type: tag.type,
+        })),
+        category: item.category,
+        readTimeMinutes: processed.readTimeMinutes,
+        isRead: false,
+        publishedAt: item.publishedAt,
+      };
+
+      return {
+        item: briefingItem,
+        relevanceScore: processed.relevanceScore || 5,
+      };
+    } catch (fetchError) {
+      clearTimeout(timeoutId);
+      if (fetchError instanceof Error && fetchError.name === 'AbortError') {
+        throw new Error(`Request timed out after ${API_TIMEOUT_MS / 1000}s`);
+      }
+      throw fetchError;
     }
-
-    const data: DeepSeekResponse = await response.json();
-    const content = data.choices[0]?.message?.content;
-
-    if (!content) {
-      throw new Error('Empty response from DeepSeek');
-    }
-
-    // Parse JSON from response (handle markdown code blocks)
-    const jsonStr = content
-      .replace(/```json\n?/g, '')
-      .replace(/```\n?/g, '')
-      .trim();
-
-    const processed: ProcessedItem = JSON.parse(jsonStr);
-
-    // Parse sources - check if this is a merged item with multiple sources
-    const sources: BriefingSource[] = parseMultipleSources(item);
-
-    // Create the full BriefingItem
-    const briefingItem: BriefingItem = {
-      id: item.id,
-      title: processed.title,
-      tldr: processed.tldr,
-      whyItMatters: processed.whyItMatters,
-      whatToTry: processed.whatToTry,
-      sources,
-      tags: processed.tags.map((tag, idx) => ({
-        id: `tag-${item.id}-${idx}`,
-        label: tag.label,
-        type: tag.type,
-      })),
-      category: item.category,
-      readTimeMinutes: processed.readTimeMinutes,
-      isRead: false,
-      publishedAt: item.publishedAt,
-    };
-
-    return {
-      item: briefingItem,
-      relevanceScore: processed.relevanceScore || 5,
-    };
   } catch (error) {
     console.error(`[Processor] Error processing "${item.title}":`, error);
     return null;

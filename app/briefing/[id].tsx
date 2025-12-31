@@ -1,7 +1,9 @@
 import { useLocalSearchParams, router } from 'expo-router';
-import { useState, useMemo, useEffect } from 'react';
-import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator } from 'react-native';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { StyleSheet, View, Pressable, ScrollView, ActivityIndicator, Platform, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { BlurView } from 'expo-blur';
+import Animated, { useSharedValue, useAnimatedStyle, withTiming } from 'react-native-reanimated';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -13,7 +15,7 @@ import {
   BriefingItemRow,
   MarkAsReadButton,
 } from '@/components/briefing';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, Duration } from '@/constants/theme';
 import { PeriodConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { getBriefingById } from '@/services/briefings-api';
@@ -30,6 +32,22 @@ export default function BriefingDetailScreen() {
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState<BriefingCategory | 'all'>('all');
   const [isRead, setIsRead] = useState(false);
+
+  // Reading progress tracking
+  const scrollProgress = useSharedValue(0);
+
+  const animatedProgressStyle = useAnimatedStyle(() => ({
+    width: `${scrollProgress.value * 100}%`,
+  }));
+
+  const handleScroll = useCallback((event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const { contentOffset, contentSize, layoutMeasurement } = event.nativeEvent;
+    const maxScroll = contentSize.height - layoutMeasurement.height;
+    if (maxScroll > 0) {
+      const progress = Math.min(1, Math.max(0, contentOffset.y / maxScroll));
+      scrollProgress.value = withTiming(progress, { duration: Duration.fast });
+    }
+  }, [scrollProgress]);
 
   useEffect(() => {
     async function loadBriefing() {
@@ -86,53 +104,56 @@ export default function BriefingDetailScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      {/* Sticky Header */}
-      <View
+      {/* Sticky Header with Glass Effect */}
+      <BlurView
+        intensity={Platform.OS === 'ios' ? 80 : 100}
+        tint={isDark ? 'dark' : 'light'}
         style={[
           styles.header,
           {
             paddingTop: insets.top,
             borderBottomColor: colors.border,
-            backgroundColor: colors.background,
           },
         ]}>
-        {/* Progress Bar */}
-        <View style={[styles.progressBar, { backgroundColor: colors.border }]}>
-          <View
+        {/* Animated Reading Progress Bar */}
+        <View style={[styles.progressBar, { backgroundColor: `${colors.border}80` }]}>
+          <Animated.View
             style={[
               styles.progressFill,
-              {
-                backgroundColor: PulseColors.primary,
-                width: isRead ? '100%' : '35%',
-              },
+              { backgroundColor: PulseColors.primary },
+              animatedProgressStyle,
             ]}
           />
+          {/* Glow effect on progress bar */}
+          <View style={[styles.progressGlow, { opacity: scrollProgress.value > 0.1 ? 1 : 0 }]} />
         </View>
 
         <View style={styles.headerContent}>
           <Pressable
             onPress={() => router.back()}
-            style={[styles.backButton, { backgroundColor: colors.surfaceHighlight }]}>
+            style={[styles.backButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
             <IconSymbol name="arrow.left" size={22} color={colors.text} />
           </Pressable>
           <View style={styles.headerActions}>
             <Pressable
-              style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+              style={[styles.actionButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
               <IconSymbol name="bookmark" size={20} color={colors.text} />
             </Pressable>
             <Pressable
-              style={[styles.actionButton, { backgroundColor: colors.surfaceHighlight }]}>
+              style={[styles.actionButton, { backgroundColor: `${colors.surfaceHighlight}CC` }]}>
               <IconSymbol name="square.and.arrow.up" size={20} color={colors.text} />
             </Pressable>
           </View>
         </View>
-      </View>
+      </BlurView>
 
       {/* Scrollable Content */}
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        onScroll={handleScroll}
+        scrollEventThrottle={16}>
         {/* Title Section */}
         <View style={styles.titleSection}>
           <ThemedText style={[styles.date, { color: PulseColors.primary }]}>
@@ -194,6 +215,17 @@ const styles = StyleSheet.create({
   },
   progressFill: {
     height: '100%',
+    borderRadius: 2,
+  },
+  progressGlow: {
+    position: 'absolute',
+    top: -2,
+    left: 0,
+    right: 0,
+    height: 6,
+    backgroundColor: PulseColors.primary,
+    opacity: 0.3,
+    borderRadius: 3,
   },
   headerContent: {
     flexDirection: 'row',

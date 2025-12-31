@@ -17,6 +17,14 @@ import type { Briefing, BriefingItem, BriefingPeriod, DailyBriefings } from '../
 const OUTPUT_PATH = path.join(__dirname, '..', 'data', 'live', 'briefings.json');
 const MAX_ITEMS_PER_BRIEFING = 10;
 const MAX_DAYS_TO_KEEP = 7;
+const SCRIPT_TIMEOUT_MS = 10 * 60 * 1000; // 10 minute overall timeout
+
+// Set up script-level timeout
+const scriptTimeout = setTimeout(() => {
+  console.error('\n❌ FATAL: Script exceeded maximum execution time of 10 minutes');
+  console.error('This usually means an API is unresponsive. Check DeepSeek status.');
+  process.exit(1);
+}, SCRIPT_TIMEOUT_MS);
 
 /**
  * Main generator function
@@ -103,6 +111,9 @@ async function generate() {
   // Step 6: Save output
   console.log('\n💾 Saving output...');
   saveOutput(mergedData);
+
+  // Clear script timeout on success
+  clearTimeout(scriptTimeout);
 
   console.log('\n' + '='.repeat(60));
   console.log('✅ Generation complete!');
@@ -408,6 +419,7 @@ function saveOutput(data: DailyBriefings[]): void {
 
 // Run the generator
 generate().catch((error) => {
+  clearTimeout(scriptTimeout);
   console.error('Fatal error:', error);
   process.exit(1);
 });

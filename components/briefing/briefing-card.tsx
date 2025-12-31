@@ -1,12 +1,21 @@
 import { View, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withRepeat,
+  withSequence,
+  withTiming,
+  Easing,
+} from 'react-native-reanimated';
+import { useEffect } from 'react';
 
 import { ThemedText } from '@/components/themed-text';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Card } from '@/components/ui/card';
 import { AnimatedPressable } from '@/components/ui/animated-pressable';
 import { BriefingItemPreview } from './briefing-item-preview';
-import { PulseColors } from '@/constants/theme';
+import { PulseColors, BorderRadius, Spacing } from '@/constants/theme';
 import { PeriodConfig } from '@/constants/categories';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import type { Briefing } from '@/types/briefing';
@@ -21,6 +30,26 @@ export function BriefingCard({ briefing }: BriefingCardProps) {
   const colors = isDark ? PulseColors.dark : PulseColors.light;
   const periodConfig = PeriodConfig[briefing.period];
 
+  // Pulsing animation for locked state clock icon
+  const pulseOpacity = useSharedValue(0.4);
+
+  useEffect(() => {
+    if (!briefing.isAvailable) {
+      pulseOpacity.value = withRepeat(
+        withSequence(
+          withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
+          withTiming(0.4, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+        ),
+        -1,
+        false
+      );
+    }
+  }, [briefing.isAvailable, pulseOpacity]);
+
+  const pulsingClockStyle = useAnimatedStyle(() => ({
+    opacity: pulseOpacity.value,
+  }));
+
   const handlePress = () => {
     router.push(`/briefing/${briefing.id}`);
   };
@@ -31,35 +60,50 @@ export function BriefingCard({ briefing }: BriefingCardProps) {
   if (!briefing.isAvailable) {
     return (
       <Card variant="outlined" style={styles.card}>
-        <View style={styles.lockedContainer}>
-          <View style={styles.periodHeader}>
-            <View
-              style={[
-                styles.periodIcon,
-                { backgroundColor: `${periodConfig.color}20` },
-              ]}>
-              <IconSymbol
-                name={
-                  briefing.period === 'morning'
-                    ? 'sun.horizon'
-                    : briefing.period === 'afternoon'
-                    ? 'sun.max'
-                    : 'moon.stars'
-                }
-                size={20}
-                color={periodConfig.color}
-              />
+        <View style={[styles.lockedContainer, { backgroundColor: `${colors.surface}80` }]}>
+          {/* Locked overlay gradient effect */}
+          <View style={[styles.lockedOverlay, { backgroundColor: isDark ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.5)' }]} />
+
+          <View style={styles.lockedContent}>
+            <View style={styles.periodHeader}>
+              <View
+                style={[
+                  styles.periodIcon,
+                  {
+                    backgroundColor: `${periodConfig.color}15`,
+                    borderWidth: 1,
+                    borderColor: `${periodConfig.color}25`,
+                  },
+                ]}>
+                <IconSymbol
+                  name={
+                    briefing.period === 'morning'
+                      ? 'sun.horizon'
+                      : briefing.period === 'afternoon'
+                      ? 'sun.max'
+                      : 'moon.stars'
+                  }
+                  size={20}
+                  color={`${periodConfig.color}80`}
+                />
+              </View>
+              <View style={{ flex: 1 }}>
+                <ThemedText style={[styles.periodLabel, { color: `${periodConfig.color}90` }]}>
+                  {periodConfig.label}
+                </ThemedText>
+                <ThemedText style={[styles.timeLabel, { color: colors.textMuted }]}>
+                  Available at {periodConfig.time}
+                </ThemedText>
+              </View>
             </View>
-            <View>
-              <ThemedText style={[styles.periodLabel, { color: periodConfig.color }]}>
-                {periodConfig.label}
-              </ThemedText>
-              <ThemedText style={[styles.timeLabel, { color: colors.textMuted }]}>
-                Available at {periodConfig.time}
-              </ThemedText>
-            </View>
+
+            {/* Animated pulsing clock indicator */}
+            <Animated.View style={[styles.clockIndicator, pulsingClockStyle]}>
+              <View style={[styles.clockBg, { backgroundColor: `${colors.textMuted}15` }]}>
+                <IconSymbol name="clock" size={18} color={colors.textMuted} />
+              </View>
+            </Animated.View>
           </View>
-          <IconSymbol name="clock" size={20} color={colors.textMuted} />
         </View>
       </Card>
     );
@@ -136,11 +180,31 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   lockedContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    borderRadius: BorderRadius.lg,
+  },
+  lockedOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 0,
+  },
+  lockedContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 16,
-    opacity: 0.6,
+    padding: Spacing.lg,
+    zIndex: 1,
+  },
+  clockIndicator: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  clockBg: {
+    width: 36,
+    height: 36,
+    borderRadius: BorderRadius.full,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   headerGradient: {
     padding: 16,
