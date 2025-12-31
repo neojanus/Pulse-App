@@ -7,7 +7,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
-  Alert,
 } from 'react-native';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -31,10 +30,32 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+
+  const getErrorMessage = (errorCode: string): string => {
+    switch (errorCode) {
+      case 'auth/invalid-email':
+        return 'Invalid email address';
+      case 'auth/user-disabled':
+        return 'This account has been disabled';
+      case 'auth/user-not-found':
+        return 'No account found with this email';
+      case 'auth/wrong-password':
+        return 'Incorrect password';
+      case 'auth/invalid-credential':
+        return 'Invalid email or password';
+      case 'auth/too-many-requests':
+        return 'Too many attempts. Please try again later';
+      default:
+        return 'Login failed. Please try again';
+    }
+  };
 
   const handleLogin = async () => {
+    setError('');
+
     if (!email || !password) {
-      Alert.alert('Error', 'Please fill in all fields');
+      setError('Please fill in all fields');
       return;
     }
 
@@ -42,9 +63,12 @@ export default function LoginScreen() {
     try {
       await signIn(email, password);
       router.replace('/(tabs)');
-    } catch (error: unknown) {
-      const errorMessage = error instanceof Error ? error.message : 'Login failed';
-      Alert.alert('Error', errorMessage);
+    } catch (err: unknown) {
+      const firebaseError = err as { code?: string };
+      const message = firebaseError.code
+        ? getErrorMessage(firebaseError.code)
+        : 'Login failed. Please try again';
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -86,14 +110,17 @@ export default function LoginScreen() {
                     styles.input,
                     {
                       backgroundColor: colors.surface,
-                      borderColor: colors.border,
+                      borderColor: error ? '#ef4444' : colors.border,
                       color: colors.text,
                     },
                   ]}
                   placeholder="you@example.com"
                   placeholderTextColor={colors.textMuted}
                   value={email}
-                  onChangeText={setEmail}
+                  onChangeText={(text) => {
+                    setEmail(text);
+                    setError('');
+                  }}
                   autoCapitalize="none"
                   keyboardType="email-address"
                   autoComplete="email"
@@ -113,14 +140,17 @@ export default function LoginScreen() {
                       styles.passwordInput,
                       {
                         backgroundColor: colors.surface,
-                        borderColor: colors.border,
+                        borderColor: error ? '#ef4444' : colors.border,
                         color: colors.text,
                       },
                     ]}
                     placeholder="Enter your password"
                     placeholderTextColor={colors.textMuted}
                     value={password}
-                    onChangeText={setPassword}
+                    onChangeText={(text) => {
+                      setPassword(text);
+                      setError('');
+                    }}
                     secureTextEntry={!showPassword}
                     autoComplete="password"
                   />
@@ -136,6 +166,12 @@ export default function LoginScreen() {
                 </View>
               </View>
             </FadeIn>
+
+            {error ? (
+              <View style={styles.errorContainer}>
+                <ThemedText style={styles.errorText}>{error}</ThemedText>
+              </View>
+            ) : null}
           </View>
         </View>
 
@@ -244,5 +280,16 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 15,
+  },
+  errorContainer: {
+    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+    borderRadius: 8,
+    padding: 12,
+    marginTop: 4,
+  },
+  errorText: {
+    color: '#ef4444',
+    fontSize: 14,
+    textAlign: 'center',
   },
 });

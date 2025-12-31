@@ -7,7 +7,6 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
-  Alert,
   ScrollView,
 } from 'react-native';
 import { router } from 'expo-router';
@@ -34,20 +33,40 @@ export default function SignupScreen() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+
+  const getErrorMessage = (errorCode: string): string => {
+    switch (errorCode) {
+      case 'auth/email-already-in-use':
+        return 'An account with this email already exists';
+      case 'auth/invalid-email':
+        return 'Invalid email address';
+      case 'auth/operation-not-allowed':
+        return 'Email/password accounts are not enabled';
+      case 'auth/weak-password':
+        return 'Password is too weak';
+      default:
+        return 'Sign up failed. Please try again';
+    }
+  };
+
+  const clearError = () => setError('');
 
   const handleSignup = async () => {
+    setError('');
+
     if (!name || !email || !password || !confirmPassword) {
-      Alert.alert('Error', 'Please fill in all fields');
+      setError('Please fill in all fields');
       return;
     }
 
     if (password !== confirmPassword) {
-      Alert.alert('Error', 'Passwords do not match');
+      setError('Passwords do not match');
       return;
     }
 
     if (password.length < 6) {
-      Alert.alert('Error', 'Password must be at least 6 characters');
+      setError('Password must be at least 6 characters');
       return;
     }
 
@@ -55,9 +74,12 @@ export default function SignupScreen() {
     try {
       await signUp(email, password, name);
       router.replace('/(tabs)');
-    } catch (error: unknown) {
-      const errorMessage = error instanceof Error ? error.message : 'Sign up failed';
-      Alert.alert('Error', errorMessage);
+    } catch (err: unknown) {
+      const firebaseError = err as { code?: string };
+      const message = firebaseError.code
+        ? getErrorMessage(firebaseError.code)
+        : 'Sign up failed. Please try again';
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -102,14 +124,17 @@ export default function SignupScreen() {
                     styles.input,
                     {
                       backgroundColor: colors.surface,
-                      borderColor: colors.border,
+                      borderColor: error ? '#ef4444' : colors.border,
                       color: colors.text,
                     },
                   ]}
                   placeholder="Your name"
                   placeholderTextColor={colors.textMuted}
                   value={name}
-                  onChangeText={setName}
+                  onChangeText={(text) => {
+                    setName(text);
+                    clearError();
+                  }}
                   autoCapitalize="words"
                   autoComplete="name"
                 />
@@ -126,14 +151,17 @@ export default function SignupScreen() {
                     styles.input,
                     {
                       backgroundColor: colors.surface,
-                      borderColor: colors.border,
+                      borderColor: error ? '#ef4444' : colors.border,
                       color: colors.text,
                     },
                   ]}
                   placeholder="you@example.com"
                   placeholderTextColor={colors.textMuted}
                   value={email}
-                  onChangeText={setEmail}
+                  onChangeText={(text) => {
+                    setEmail(text);
+                    clearError();
+                  }}
                   autoCapitalize="none"
                   keyboardType="email-address"
                   autoComplete="email"
@@ -153,14 +181,17 @@ export default function SignupScreen() {
                       styles.passwordInput,
                       {
                         backgroundColor: colors.surface,
-                        borderColor: colors.border,
+                        borderColor: error ? '#ef4444' : colors.border,
                         color: colors.text,
                       },
                     ]}
                     placeholder="At least 6 characters"
                     placeholderTextColor={colors.textMuted}
                     value={password}
-                    onChangeText={setPassword}
+                    onChangeText={(text) => {
+                      setPassword(text);
+                      clearError();
+                    }}
                     secureTextEntry={!showPassword}
                     autoComplete="new-password"
                   />
@@ -187,19 +218,28 @@ export default function SignupScreen() {
                     styles.input,
                     {
                       backgroundColor: colors.surface,
-                      borderColor: colors.border,
+                      borderColor: error ? '#ef4444' : colors.border,
                       color: colors.text,
                     },
                   ]}
                   placeholder="Re-enter your password"
                   placeholderTextColor={colors.textMuted}
                   value={confirmPassword}
-                  onChangeText={setConfirmPassword}
+                  onChangeText={(text) => {
+                    setConfirmPassword(text);
+                    clearError();
+                  }}
                   secureTextEntry={!showPassword}
                   autoComplete="new-password"
                 />
               </View>
             </FadeIn>
+
+            {error ? (
+              <View style={styles.errorContainer}>
+                <ThemedText style={styles.errorText}>{error}</ThemedText>
+              </View>
+            ) : null}
           </View>
         </ScrollView>
 
@@ -311,5 +351,16 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 15,
+  },
+  errorContainer: {
+    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+    borderRadius: 8,
+    padding: 12,
+    marginTop: 4,
+  },
+  errorText: {
+    color: '#ef4444',
+    fontSize: 14,
+    textAlign: 'center',
   },
 });
