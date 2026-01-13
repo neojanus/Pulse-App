@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-01-12",
+    "date": "2026-01-13",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-01-13-morning",
+        "period": "morning",
+        "date": "2026-01-13",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Google pulls AI health summaries after investigation reveals dangerous flaws, Personality Steering in LLM Agents: Agreeableness Drives Cooperation, Medical Personas in LLMs: Critical Gains, Primary Care Losses.",
+        "items": [
+          {
+            "id": "hn-46595419",
+            "title": "Google pulls AI health summaries after investigation reveals dangerous flaws",
+            "tldr": "Google removed AI-generated health summaries from search results after an investigation found they contained potentially dangerous medical misinformation, highlighting the risks of deploying LLMs in high-stakes domains without sufficient safeguards.",
+            "whyItMatters": [
+              "Business impact: This is a major setback for Google's AI search integration and a cautionary tale for any founder considering AI in regulated or high-risk domains like healthcare, finance, or legal advice.",
+              "Technical impact: It demonstrates that even large, well-resourced models from leading companies can fail catastrophically in production when applied to complex, factual domains without rigorous validation and human oversight."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product for a high-stakes domain, immediately implement a 'safety-first' review process. Before launch, conduct a rigorous adversarial testing phase where you intentionally try to break the system with edge cases, misinformation, and ambiguous queries. Consider mandatory human review for initial outputs or a phased rollout with tight monitoring.",
+              "note": "This isn't just about accuracy—it's about liability. A single harmful output in healthcare can have severe consequences."
+            },
+            "sources": [
+              {
+                "id": "src-hn-46595419",
+                "title": "Google removes AI health summaries after investigation finds dangerous flaws",
+                "url": "https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/",
+                "domain": "arstechnica.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46595419-0",
+                "label": "Google",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-46595419-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46595419-2",
+                "label": "Search",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-01-12T23:05:04Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-of5smz",
+            "title": "Personality Steering in LLM Agents: Agreeableness Drives Cooperation",
+            "tldr": "New research shows assigning 'agreeable' personalities to LLM agents increases cooperative behavior in strategic games, but can also make them more exploitable.",
+            "whyItMatters": [
+              "Business impact: Understanding how to reliably steer agent behavior is crucial for building multi-agent systems, negotiation bots, and collaborative AI tools.",
+              "Technical impact: Personality acts as a behavioral bias, not deterministic control - important for designing robust agent interactions."
+            ],
+            "whatToTry": {
+              "description": "When designing multi-agent systems, explicitly prompt your agents with personality traits like 'highly agreeable' to encourage cooperative behavior, but implement safeguards against exploitation by less cooperative agents.",
+              "note": "Test with newer models (GPT-4o+) as they show more selective cooperation and may be less vulnerable to exploitation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-of5smz",
+                "title": "Effects of personality steering on cooperative behavior in Large Language Model agents",
+                "url": "https://arxiv.org/abs/2601.05302",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-of5smz-0",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-of5smz-1",
+                "label": "GPT-4o",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-of5smz-2",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-75xzev",
+            "title": "Medical Personas in LLMs: Critical Gains, Primary Care Losses",
+            "tldr": "New research shows conditioning LLMs with medical professional personas (e.g., 'Emergency Physician') creates a behavioral prior with non-monotonic effects: it boosts accuracy in critical care by ~20% but degrades it in primary care by similar margins.",
+            "whyItMatters": [
+              "Business impact: Persona-based features for specialized domains (like healthcare) require careful, context-specific validation to avoid performance degradation.",
+              "Technical impact: Personas are not a simple 'expertise slider'; they introduce complex, task-dependent trade-offs in accuracy, calibration, and risk propensity."
+            ],
+            "whatToTry": {
+              "description": "If you are building a domain-specific AI product, test your persona or system prompt conditioning across the full spectrum of your intended use cases, not just a single benchmark. The performance impact can vary dramatically by context.",
+              "note": "The study found human clinicians had low confidence in the LLM's reasoning, so prioritize explainability alongside accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-75xzev",
+                "title": "The Persona Paradox: Medical Personas as Behavioral Priors in Clinical Language Models",
+                "url": "https://arxiv.org/abs/2601.05376",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-75xzev-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-75xzev-1",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-75xzev-2",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-xe6vzv",
+            "title": "AI Agents Show Conformity Bias, Creating Security Risk",
+            "tldr": "New research shows AI agents in multi-agent systems exhibit systematic conformity to group pressure, making them vulnerable to manipulation even when they perform perfectly alone.",
+            "whyItMatters": [
+              "Business impact: Multi-agent systems could be manipulated through social influence, creating security risks for AI products that rely on collective decision-making.",
+              "Technical impact: Foundational vulnerability in how AI agents process social information - larger models aren't immune, especially at their competence boundaries."
+            ],
+            "whatToTry": {
+              "description": "Test your AI agents in group settings with conflicting information to identify conformity vulnerabilities, especially for critical decision points.",
+              "note": "Focus on edge cases where your agents operate near their competence limits - that's where conformity risks are highest."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-xe6vzv",
+                "title": "Conformity and Social Impact on AI Agents",
+                "url": "https://arxiv.org/abs/2601.05384",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-xe6vzv-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-xe6vzv-1",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-xe6vzv-2",
+                "label": "LLM Agents",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-9lw5hg",
+            "title": "ART: A New Method for Explainable AI Decision-Making",
+            "tldr": "Researchers propose ART (Adaptive Reasoning Trees), a hierarchical method for claim verification that structures LLM reasoning into contestable arguments, addressing the 'black box' problem in high-stakes applications.",
+            "whyItMatters": [
+              "Business impact: Enables more trustworthy AI systems for critical domains like healthcare, finance, and legal where explainability is required.",
+              "Technical impact: Provides a systematic framework to make LLM reasoning transparent and contestable, outperforming methods like Chain-of-Thought."
+            ],
+            "whatToTry": {
+              "description": "Consider how structured reasoning frameworks like ART could be applied to your product's most critical decision points. If you're in a regulated industry, prototype a simple argument tree for a key verification task using your LLM of choice.",
+              "note": "The paper shows this works with different LLMs as 'judges', so you can experiment without retraining models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-9lw5hg",
+                "title": "ART: Adaptive Reasoning Trees for Explainable Claim Verification",
+                "url": "https://arxiv.org/abs/2601.05455",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-9lw5hg-0",
+                "label": "Explainable AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-9lw5hg-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-9lw5hg-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-ro31gh",
+            "title": "PRISMA: RL Framework Fixes RAG's Multi-Hop QA Problems",
+            "tldr": "New research proposes PRISMA, a reinforcement learning framework that addresses retrieval collapse and learning instability in multi-hop question answering systems, improving reliability over standard RAG approaches.",
+            "whyItMatters": [
+              "Identifies critical failure modes (retrieval collapse, instability) in production RAG systems for complex queries",
+              "Offers a decoupled architecture (Plan-Retrieve-Inspect-Solve-Memoize) that could become a new pattern for reliable multi-step reasoning"
+            ],
+            "whatToTry": {
+              "description": "If you're building complex RAG systems, analyze whether your system suffers from 'retrieval collapse' (missing intermediate evidence) or 'learning instability' (poor error localization). Consider testing a decoupled architecture where planning, retrieval, and solving modules provide mutual feedback.",
+              "note": "This is research-stage, but the identified problems are production-relevant for any multi-step RAG application."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-ro31gh",
+                "title": "PRISMA: Reinforcement Learning Guided Two-Stage Policy Optimization in Multi-Agent Architecture for Open-Domain Multi-Hop Question Answering",
+                "url": "https://arxiv.org/abs/2601.05465",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ro31gh-0",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ro31gh-1",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ro31gh-2",
+                "label": "Multi-Hop QA",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1768290162831-0c45j7",
+            "title": "Meta-backed startup pivots to AI sales coaching, raises $10M",
+            "tldr": "Hupo pivoted from mental wellness to AI sales coaching for banks/insurers and secured $10M Series A funding, showing investor appetite for vertical AI solutions.",
+            "whyItMatters": [
+              "Shows investor confidence in vertical AI applications over generic wellness tech",
+              "Demonstrates successful pivot strategy from crowded wellness space to specialized B2B AI"
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI product could pivot to serve a specific high-value vertical (like finance) where ROI is clearer than in crowded consumer spaces.",
+              "note": "Look for industries with clear pain points and willingness to pay - financial services often fit this profile."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1768290162831-0c45j7",
+                "title": "Meta-backed Hupo finds growth after pivot to AI sales coaching from mental wellness",
+                "url": "https://techcrunch.com/2026/01/12/meta-backed-hupo-finds-growth-after-pivot-to-ai-sales-coaching-from-mental-wellness/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1768290162831-0c45j7-0",
+                "label": "AI Coaching",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1768290162831-0c45j7-1",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1768290162831-0c45j7-2",
+                "label": "Pivot Strategy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 04:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1768290162831-luyhh5",
+            "title": "Meta's Massive AI Infrastructure Push",
+            "tldr": "Mark Zuckerberg announced Meta is launching a major AI infrastructure initiative, planning to drastically expand its energy footprint to build out AI capacity.",
+            "whyItMatters": [
+              "Shows major tech giants are making massive, long-term capital investments in AI infrastructure that startups can't match",
+              "Signals increasing energy and compute requirements for cutting-edge AI models that will shape the competitive landscape"
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's long-term compute and energy requirements - consider how you'll compete as infrastructure costs become a major barrier to entry.",
+              "note": "This infrastructure arms race favors cloud providers and companies with deep pockets - plan your architecture accordingly."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1768290162831-luyhh5",
+                "title": "Mark Zuckerberg says Meta is launching its own AI infrastructure initiative",
+                "url": "https://techcrunch.com/2026/01/12/mark-zuckerberg-says-meta-is-launching-its-own-ai-infrastructure-initiative/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1768290162831-luyhh5-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1768290162831-luyhh5-1",
+                "label": "Meta",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 12 Jan 2026 21:44:43 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-ssh7gp",
+            "title": "NAIAD: Agentic AI for Holistic Water Monitoring",
+            "tldr": "Researchers introduced NAIAD, an agentic AI system that uses LLMs and external tools to provide comprehensive inland water quality analysis from Earth Observation data via natural language prompts.",
+            "whyItMatters": [
+              "Demonstrates a practical, end-to-end application of agentic AI for a critical environmental problem, moving beyond isolated models.",
+              "Highlights the performance of smaller, efficient models like Gemma 3 (27B) and Qwen 2.5 (14B) in complex, multi-step reasoning tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your product's workflow involves synthesizing data from multiple, disparate sources (e.g., APIs, databases, imagery). If so, prototype using an agentic framework with a capable smaller model (like Gemma 3 or Qwen 2.5) to orchestrate tools and generate unified reports based on user queries.",
+              "note": "The system's strength is in orchestration and synthesis, not necessarily novel model architecture. Focus on the agent's ability to chain tools and reason over their outputs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-ssh7gp",
+                "title": "Naiad: Novel Agentic Intelligent Autonomous System for Inland Water Monitoring",
+                "url": "https://arxiv.org/abs/2601.05256",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ssh7gp-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ssh7gp-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-ssh7gp-2",
+                "label": "RAG",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1768290163463-u7zcdq",
+            "title": "LLMs + Knowledge Graphs for Reliable Manufacturing AI",
+            "tldr": "Researchers propose a framework combining LLMs with mathematical knowledge graphs to extract and structure equations from scientific literature, improving reliability in data-sparse manufacturing domains.",
+            "whyItMatters": [
+              "Shows a path to more reliable, physics-informed AI models for industrial applications.",
+              "Demonstrates how to mitigate LLM hallucinations in technical domains by grounding them in structured knowledge."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for a domain with established scientific literature (e.g., materials, chemistry, engineering), explore using a knowledge graph to structure core equations and relationships, then use this structured knowledge to guide or validate your LLM's outputs.",
+              "note": "This is research-heavy, but the core concept of using structured domain knowledge to constrain generative models is broadly applicable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1768290163463-u7zcdq",
+                "title": "Mathematical Knowledge Graph-Driven Framework for Equation-Based Predictive and Reliable Additive Manufacturing",
+                "url": "https://arxiv.org/abs/2601.05298",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-u7zcdq-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-u7zcdq-1",
+                "label": "Knowledge Graph",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1768290163463-u7zcdq-2",
+                "label": "Industrial AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 13 Jan 2026 00:00:00 -0500"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-01-12",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-01-12-morning",
@@ -1323,7 +1766,7 @@
   },
   {
     "date": "2026-01-11",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Jan 11",
     "briefings": [
       {
         "id": "briefing-2026-01-11-morning",
@@ -7034,1318 +7477,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-01-06",
-    "displayDate": "Tuesday, Jan 6",
-    "briefings": [
-      {
-        "id": "briefing-2026-01-06-morning",
-        "period": "morning",
-        "date": "2026-01-06",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: LLM Self-Correction Paradox: Weaker Models Fix More Errors, AI Chain-of-Thought Explanations Hide Key Influences, Nvidia's Rubin AI Chips Enter Full Production.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1767685419980-pm36z3",
-            "title": "LLM Self-Correction Paradox: Weaker Models Fix More Errors",
-            "tldr": "New research reveals a paradox where weaker LLMs (GPT-3.5) achieve 1.6x higher intrinsic self-correction rates than stronger models (DeepSeek), challenging assumptions about model capability and self-improvement.",
-            "whyItMatters": [
-              "Business impact: Rethink reliance on self-correction for quality assurance - stronger models may need different error-handling strategies",
-              "Technical impact: Self-correction effectiveness depends on error depth, not just detection capability, with implications for fine-tuning and pipeline design"
-            ],
-            "whatToTry": {
-              "description": "Test your own models' self-correction capabilities on critical tasks - compare error correction rates between different model sizes/architectures to understand their specific failure modes.",
-              "note": "Don't assume stronger models automatically self-correct better; design validation that accounts for error depth rather than just detection"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-pm36z3",
-                "title": "Decomposing LLM Self-Correction: The Accuracy-Correction Paradox and Error Depth Hypothesis",
-                "url": "https://arxiv.org/abs/2601.00828",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-pm36z3-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-pm36z3-1",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-pm36z3-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-bzcd01",
-            "title": "AI Chain-of-Thought Explanations Hide Key Influences",
-            "tldr": "New research reveals AI models systematically underreport key information in their reasoning explanations, even when that information influences their answers, challenging the reliability of current explanation methods.",
-            "whyItMatters": [
-              "Business impact: Founders relying on AI explanations for trust, compliance, or debugging may be making decisions based on incomplete or misleading information.",
-              "Technical impact: Current explanation techniques like chain-of-thought don't reveal what actually influenced model decisions, requiring new approaches for trustworthy AI."
-            ],
-            "whatToTry": {
-              "description": "When evaluating AI outputs for your product, don't rely solely on the model's own explanations. Instead, test with controlled inputs where you know what information should be influential, and verify if the model's explanation mentions it.",
-              "note": "This is particularly important for applications where understanding model reasoning is critical (compliance, healthcare, finance)."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-bzcd01",
-                "title": "Can We Trust AI Explanations? Evidence of Systematic Underreporting in Chain-of-Thought Reasoning",
-                "url": "https://arxiv.org/abs/2601.00830",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-bzcd01-0",
-                "label": "Explainable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-bzcd01-1",
-                "label": "Chain-of-Thought",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-bzcd01-2",
-                "label": "Model Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-wired-ai-1767685419573-lh266i",
-            "title": "Nvidia's Rubin AI Chips Enter Full Production",
-            "tldr": "Nvidia CEO Jensen Huang announced the Vera Rubin AI chips are now in full production, promising significant reductions in AI training and inference costs while strengthening their integrated platform.",
-            "whyItMatters": [
-              "Business impact: Lower compute costs could reduce infrastructure expenses for AI startups and make training larger models more accessible.",
-              "Technical impact: New chip architecture may enable more efficient model training and deployment, potentially changing cost-performance calculations for AI projects."
-            ],
-            "whatToTry": {
-              "description": "Re-evaluate your cloud compute budget and infrastructure plans for the next 6-12 months, as Rubin availability could shift cost projections for training and inference workloads.",
-              "note": "Monitor cloud provider announcements for Rubin availability timelines and pricing - early adoption may offer competitive advantages."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1767685419573-lh266i",
-                "title": "Jensen Huang Says Nvidia’s New Vera Rubin Chips Are in ‘Full Production’",
-                "url": "https://www.wired.com/story/nvidias-rubin-chips-are-going-into-production/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1767685419573-lh266i-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1767685419573-lh266i-1",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1767685419573-lh266i-2",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 23:05:32 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1767685419514-kxlwpm",
-            "title": "Nvidia unveils full-stack robotics platform at CES",
-            "tldr": "Nvidia announced a comprehensive robotics ecosystem including foundation models, simulation tools, and hardware, positioning itself as the default platform for robotics development.",
-            "whyItMatters": [
-              "Business impact: Nvidia's platform strategy could accelerate robotics adoption by providing integrated solutions, but also risks creating vendor lock-in for startups.",
-              "Technical impact: The ecosystem approach reduces integration complexity and provides access to Nvidia's hardware-optimized models and simulation environments."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Nvidia's robotics platform against your specific use case requirements, particularly if you're building robotics applications that could benefit from integrated hardware-software optimization.",
-              "note": "Consider the trade-off between platform convenience and vendor dependency before committing to a full-stack solution."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1767685419514-kxlwpm",
-                "title": "Nvidia wants to be the Android of generalist robotics ",
-                "url": "https://techcrunch.com/2026/01/05/nvidia-wants-to-be-the-android-of-generalist-robotics/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1767685419514-kxlwpm-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1767685419514-kxlwpm-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1767685419514-kxlwpm-2",
-                "label": "Platform",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 23:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1767685419739-1c0is4",
-            "title": "NVIDIA Cosmos Reason 2: Advanced Reasoning for Physical AI",
-            "tldr": "NVIDIA released Cosmos Reason 2, a multimodal reasoning model that understands physical environments and can plan actions, enabling more capable robotics and embodied AI applications.",
-            "whyItMatters": [
-              "Enables AI systems to reason about physical spaces and plan actions, opening new applications in robotics, automation, and interactive AI",
-              "Provides better spatial understanding and task planning than previous models, reducing the gap between digital intelligence and physical interaction"
-            ],
-            "whatToTry": {
-              "description": "Experiment with the model on Hugging Face to test its spatial reasoning capabilities for your use case, particularly if you're building robotics, automation, or interactive AI applications.",
-              "note": "Consider how physical reasoning could enhance your product if it interacts with real-world environments."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1767685419739-1c0is4",
-                "title": "NVIDIA Cosmos Reason 2 Brings Advanced Reasoning To Physical AI",
-                "url": "https://huggingface.co/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1767685419739-1c0is4-0",
-                "label": "NVIDIA",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1767685419739-1c0is4-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1767685419739-1c0is4-2",
-                "label": "Multimodal",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 22:56:51 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-iqg8vw",
-            "title": "CogCanvas: Training-Free Framework for Long LLM Conversations",
-            "tldr": "New research introduces CogCanvas, a training-free method that extracts and organizes key conversation artifacts into a graph to preserve information in long LLM chats, outperforming RAG and GraphRAG on temporal reasoning by 530%.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable long-context AI applications without expensive retraining",
-              "Technical impact: Solves information loss in long conversations with 97.5% recall vs. 19% for summarization"
-            ],
-            "whatToTry": {
-              "description": "Experiment with the CogCanvas GitHub implementation for your long-context applications, especially if you're dealing with temporal reasoning or multi-hop causal questions in conversations.",
-              "note": "This is research code - test thoroughly before production use, but the training-free nature makes it easy to experiment with"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-iqg8vw",
-                "title": "CogCanvas: Compression-Resistant Cognitive Artifacts for Long LLM Conversations",
-                "url": "https://arxiv.org/abs/2601.00821",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-iqg8vw-0",
-                "label": "Long Context",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-iqg8vw-1",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-iqg8vw-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-nf4yz5",
-            "title": "Open Framework for Securing Multi-Agent AI Workflows",
-            "tldr": "Researchers released an open framework for training AI models to detect security attacks in multi-agent workflows using OpenTelemetry traces, showing 31.4% accuracy improvement with targeted data.",
-            "whyItMatters": [
-              "Multi-agent AI systems are becoming production-critical but introduce new security vulnerabilities",
-              "Open framework enables custom security models without massive datasets or compute"
-            ],
-            "whatToTry": {
-              "description": "Review the open datasets and training scripts on HuggingFace to understand how to implement trace-based security monitoring for your own multi-agent systems.",
-              "note": "The framework is designed for resource-constrained hardware, making it accessible for startups"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-nf4yz5",
-                "title": "Temporal Attack Pattern Detection in Multi-Agent AI Workflows: An Open Framework for Training Trace-Based Security Models",
-                "url": "https://arxiv.org/abs/2601.00848",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-nf4yz5-0",
-                "label": "multi-agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-nf4yz5-1",
-                "label": "security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-nf4yz5-2",
-                "label": "OpenTelemetry",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-yvmn88",
-            "title": "Multilingual AI Model Boosts Knowledge Graph Alignment by 16%",
-            "tldr": "New research achieves 71% F1 score on cross-lingual ontology alignment using contextualized embeddings, beating baselines by 16% - enabling better multilingual data integration.",
-            "whyItMatters": [
-              "Business impact: Enables more accurate multilingual data systems for global products",
-              "Technical impact: Shows transformer fine-tuning + contextual descriptions significantly improves cross-lingual entity matching"
-            ],
-            "whatToTry": {
-              "description": "Test multilingual transformer models (like mBERT or XLM-R) for your own cross-lingual entity matching tasks, especially if you work with international user data or content.",
-              "note": "The key innovation is creating richer contextual descriptions before embedding - consider how you could enhance your own entity representations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-yvmn88",
-                "title": "Semantic Alignment of Multilingual Knowledge Graphs via Contextualized Vector Projections",
-                "url": "https://arxiv.org/abs/2601.00814",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yvmn88-0",
-                "label": "Multilingual AI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yvmn88-1",
-                "label": "Knowledge Graphs",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yvmn88-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-egh1nv",
-            "title": "MathLedger: A prototype for verifiable, auditable AI training",
-            "tldr": "Researchers introduced MathLedger, a system combining formal verification and cryptographic attestation to create an auditable, 'fail-closed' substrate for AI training, addressing the trust crisis in opaque models.",
-            "whyItMatters": [
-              "Business impact: Enables provable audit trails for AI systems, which is critical for regulated industries (finance, healthcare) and building user trust.",
-              "Technical impact: Proposes a novel 'Reflexive Formal Learning' loop where updates are driven by formal verifier outcomes, not just statistical loss, moving towards more interpretable and controllable training."
-            ],
-            "whatToTry": {
-              "description": "Review the paper's concept of 'ledger-attested feedback' and consider how you could implement simpler, incremental attestation or logging for critical decision points in your own model's training or inference pipeline to build verifiability.",
-              "note": "This is a research prototype, not a production tool. The core idea—creating an immutable, verifiable record of a model's learning steps—is the actionable takeaway."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-egh1nv",
-                "title": "MathLedger: A Verifiable Learning Substrate with Ledger-Attested Feedback",
-                "url": "https://arxiv.org/abs/2601.00816",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-egh1nv-0",
-                "label": "Verifiable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-egh1nv-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-egh1nv-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767685419980-yx79d8",
-            "title": "Agentic AI Framework Proposed for Autonomous Credit Risk",
-            "tldr": "Researchers propose an Agentic AI system using multi-agent reinforcement learning and natural language reasoning to make autonomous, explainable credit decisions faster than traditional models.",
-            "whyItMatters": [
-              "Shows a concrete, high-value application for agentic AI beyond chatbots and coding assistants.",
-              "Highlights the growing demand for AI systems that combine autonomy with explainability in regulated industries."
-            ],
-            "whatToTry": {
-              "description": "Review the paper's framework to identify components (like the agent collaboration protocol or interpretability layers) that could be adapted for building explainable, multi-agent systems in other complex decision domains like logistics or healthcare.",
-              "note": "The paper acknowledges practical limitations like model drift; treat this as a blueprint, not a production-ready solution."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767685419980-yx79d8",
-                "title": "Agentic AI for Autonomous, Explainable, and Real-Time Credit Risk Decision-Making",
-                "url": "https://arxiv.org/abs/2601.00818",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yx79d8-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yx79d8-1",
-                "label": "Reinforcement Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767685419980-yx79d8-2",
-                "label": "FinTech",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 26,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-06-afternoon",
-        "period": "afternoon",
-        "date": "2026-01-06",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: AI Chain-of-Thought Explanations Hide Key Influences, Nvidia's Rubin AI Chips Now in Full Production, Nvidia Launches Full-Stack Robotics Platform at CES.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1767707582004-47yela",
-            "title": "AI Chain-of-Thought Explanations Hide Key Influences",
-            "tldr": "New research shows AI models systematically omit key information from their reasoning explanations, even when that information influences their answers, creating hidden bias risks.",
-            "whyItMatters": [
-              "Business impact: Trust in AI explanations is foundational for enterprise adoption and regulatory compliance - this undermines that trust",
-              "Technical impact: Current explanation methods (like chain-of-thought) may create false confidence while hiding actual decision drivers"
-            ],
-            "whatToTry": {
-              "description": "Test your own AI's explanations by embedding subtle hints or preferences in test queries and checking if they appear in the reasoning chain. Don't rely on explanations alone for auditing.",
-              "note": "Forcing models to report everything reduces accuracy - focus on targeted testing of high-risk scenarios instead"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-47yela",
-                "title": "Can We Trust AI Explanations? Evidence of Systematic Underreporting in Chain-of-Thought Reasoning",
-                "url": "https://arxiv.org/abs/2601.00830",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-47yela-0",
-                "label": "Explainable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-47yela-1",
-                "label": "Model Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-wired-ai-1767707581841-n4jgjf",
-            "title": "Nvidia's Rubin AI Chips Now in Full Production",
-            "tldr": "Nvidia CEO Jensen Huang announced Vera Rubin chips are in full production, promising significant cost reductions for AI training and inference.",
-            "whyItMatters": [
-              "Lower compute costs could make AI product development more accessible and profitable",
-              "Strengthens Nvidia's platform lock-in with integrated hardware/software solutions"
-            ],
-            "whatToTry": {
-              "description": "Re-evaluate your cloud compute budget and vendor strategy - upcoming Rubin availability may offer better price/performance for training workloads.",
-              "note": "Watch for cloud provider announcements about Rubin instance availability timelines"
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1767707581841-n4jgjf",
-                "title": "Jensen Huang Says Nvidia’s New Vera Rubin Chips Are in ‘Full Production’",
-                "url": "https://www.wired.com/story/nvidias-rubin-chips-are-going-into-production/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1767707581841-n4jgjf-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1767707581841-n4jgjf-1",
-                "label": "AI Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1767707581841-n4jgjf-2",
-                "label": "Compute Costs",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 23:05:32 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1767707581837-fvdqhi",
-            "title": "Nvidia Launches Full-Stack Robotics Platform at CES",
-            "tldr": "Nvidia unveiled a comprehensive robotics ecosystem including foundation models, simulation tools, and hardware, positioning itself as the default platform for generalist robotics development.",
-            "whyItMatters": [
-              "Establishes a potential industry standard that could accelerate robotics adoption across sectors",
-              "Provides integrated tooling that reduces development complexity for robotics startups"
-            ],
-            "whatToTry": {
-              "description": "Evaluate Nvidia's new robotics tools against your current stack - their simulation environment could significantly reduce physical testing costs for robotics applications.",
-              "note": "Watch for lock-in risks with proprietary platforms, but early adoption could provide competitive advantages"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1767707581837-fvdqhi",
-                "title": "Nvidia wants to be the Android of generalist robotics ",
-                "url": "https://techcrunch.com/2026/01/05/nvidia-wants-to-be-the-android-of-generalist-robotics/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1767707581837-fvdqhi-0",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1767707581837-fvdqhi-1",
-                "label": "Nvidia",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 23:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1767707582053-mg9ohm",
-            "title": "NVIDIA Cosmos Reason 2: Advanced Reasoning for Physical AI",
-            "tldr": "NVIDIA released Cosmos Reason 2, a multimodal reasoning model that excels at understanding and reasoning about physical scenes, enabling more capable robotics and embodied AI applications.",
-            "whyItMatters": [
-              "Enables more sophisticated AI agents that can interact with and reason about the physical world",
-              "Provides a foundation for next-generation robotics and autonomous systems that require spatial understanding"
-            ],
-            "whatToTry": {
-              "description": "Experiment with Cosmos Reason 2 on Hugging Face to test its capabilities for your use case - try uploading images of physical scenes and asking questions about object relationships, physics, or potential actions.",
-              "note": "Consider how this could enhance your product's ability to understand real-world contexts if you're building anything involving robotics, AR/VR, or physical interaction."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1767707582053-mg9ohm",
-                "title": "NVIDIA Cosmos Reason 2 Brings Advanced Reasoning To Physical AI",
-                "url": "https://huggingface.co/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1767707582053-mg9ohm-0",
-                "label": "NVIDIA",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1767707582053-mg9ohm-1",
-                "label": "Multimodal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1767707582053-mg9ohm-2",
-                "label": "Robotics",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 05 Jan 2026 22:56:51 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-5m6n9y",
-            "title": "MathLedger: A New Substrate for Verifiable AI Training",
-            "tldr": "Researchers introduced MathLedger, a prototype system that integrates formal verification and cryptographic attestation into machine learning to create an auditable, 'fail-closed' training loop.",
-            "whyItMatters": [
-              "Addresses the critical 'trust gap' for deploying AI in safety-sensitive domains like healthcare or finance by making the training process auditable.",
-              "Introduces a novel 'Reflexive Formal Learning' paradigm where updates are driven by formal proofs, not just statistical loss, which could redefine model governance."
-            ],
-            "whatToTry": {
-              "description": "Review the paper's concept of 'ledger-attested feedback' and assess if a simplified version of attestation (e.g., logging signed hashes of training data and hyperparameters) could be added to your own model training pipelines for basic audit trails.",
-              "note": "This is early-stage research infrastructure, not a deployable tool. Focus on the governance and auditability principles for your product roadmap."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-5m6n9y",
-                "title": "MathLedger: A Verifiable Learning Substrate with Ledger-Attested Feedback",
-                "url": "https://arxiv.org/abs/2601.00816",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-5m6n9y-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-5m6n9y-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-5m6n9y-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-cut2zp",
-            "title": "CogCanvas: Training-Free Framework for Long AI Conversations",
-            "tldr": "New research introduces CogCanvas, a training-free method that extracts and organizes key conversation artifacts into a graph, significantly outperforming RAG and GraphRAG on temporal and multi-hop reasoning tasks.",
-            "whyItMatters": [
-              "Enables more effective long-context AI applications without expensive retraining",
-              "Improves factual recall and temporal reasoning in extended conversations by 530% over baselines"
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing a similar artifact extraction layer in your long-context applications—extract key decisions, facts, and reminders from conversation turns and organize them in a temporal graph structure for retrieval.",
-              "note": "Since it's training-free, you can test this approach immediately without model fine-tuning costs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-cut2zp",
-                "title": "CogCanvas: Compression-Resistant Cognitive Artifacts for Long LLM Conversations",
-                "url": "https://arxiv.org/abs/2601.00821",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-cut2zp-0",
-                "label": "Long Context",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-cut2zp-1",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-cut2zp-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-bywlaa",
-            "title": "LLM Self-Correction Paradox: Weaker Models Fix More Errors",
-            "tldr": "New research reveals a paradox where weaker LLMs (GPT-3.5) achieve 1.6x higher intrinsic self-correction rates than stronger models (DeepSeek), challenging assumptions about model capability and self-improvement.",
-            "whyItMatters": [
-              "Business impact: Rethink reliance on self-correction for quality assurance - stronger models may need different error-handling strategies",
-              "Technical impact: Self-correction effectiveness depends on error depth, not just detection capability, with implications for refinement pipeline design"
-            ],
-            "whatToTry": {
-              "description": "Test your own models' self-correction capabilities by comparing error detection rates vs. actual correction success - don't assume detection leads to correction.",
-              "note": "Surprisingly, providing error location hints hurt all models in the study, so avoid over-engineering correction prompts"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-bywlaa",
-                "title": "Decomposing LLM Self-Correction: The Accuracy-Correction Paradox and Error Depth Hypothesis",
-                "url": "https://arxiv.org/abs/2601.00828",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-bywlaa-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-bywlaa-1",
-                "label": "Self-Correction",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-bywlaa-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-6p1gug",
-            "title": "Open Framework for Securing Multi-Agent AI Workflows",
-            "tldr": "Researchers released an open framework for training LLMs to detect attack patterns in multi-agent AI workflows using OpenTelemetry traces, showing 31.4% accuracy improvement with targeted data.",
-            "whyItMatters": [
-              "Enables founders to build custom security monitoring for their AI agent systems",
-              "Demonstrates that targeted training data beats indiscriminate scaling for specialized tasks"
-            ],
-            "whatToTry": {
-              "description": "Review the open datasets and training scripts on HuggingFace to understand how to implement trace-based security monitoring for your own multi-agent workflows.",
-              "note": "The framework requires human oversight due to false positives, but provides a starting point for custom security models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-6p1gug",
-                "title": "Temporal Attack Pattern Detection in Multi-Agent AI Workflows: An Open Framework for Training Trace-Based Security Models",
-                "url": "https://arxiv.org/abs/2601.00848",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-6p1gug-0",
-                "label": "Multi-Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-6p1gug-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-6p1gug-2",
-                "label": "OpenTelemetry",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-7zo2qe",
-            "title": "Multilingual Knowledge Graph Alignment Breakthrough",
-            "tldr": "New research achieves 71% F1 score on cross-lingual ontology alignment using contextualized embeddings, 16% above previous best baseline.",
-            "whyItMatters": [
-              "Enables better integration of multilingual data sources for AI products",
-              "Improves semantic understanding across languages without parallel data"
-            ],
-            "whatToTry": {
-              "description": "Experiment with contextualized embedding approaches for your own cross-lingual data matching tasks, especially if you work with multilingual content or knowledge graphs.",
-              "note": "The 16% improvement over baseline suggests this approach could significantly enhance multilingual AI systems"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-7zo2qe",
-                "title": "Semantic Alignment of Multilingual Knowledge Graphs via Contextualized Vector Projections",
-                "url": "https://arxiv.org/abs/2601.00814",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-7zo2qe-0",
-                "label": "multilingual",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-7zo2qe-1",
-                "label": "knowledge-graph",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-7zo2qe-2",
-                "label": "embeddings",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767707582004-1iwshc",
-            "title": "Agentic AI Framework Proposed for Autonomous Credit Risk",
-            "tldr": "New research proposes an Agentic AI system using multi-agent reinforcement learning and natural language reasoning to make autonomous, explainable credit decisions faster than traditional models.",
-            "whyItMatters": [
-              "Shows a concrete application of agentic AI beyond chatbots, targeting a high-value financial domain.",
-              "Highlights the industry shift from static ML models to adaptive, reasoning systems that can operate with less human oversight."
-            ],
-            "whatToTry": {
-              "description": "Analyze if a core process in your product (e.g., qualification, routing, support) could be reframed as a multi-agent problem where specialized 'agents' with clear protocols collaborate.",
-              "note": "Focus on defining the agent roles and collaboration protocol first, not the full AI stack."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767707582004-1iwshc",
-                "title": "Agentic AI for Autonomous, Explainable, and Real-Time Credit Risk Decision-Making",
-                "url": "https://arxiv.org/abs/2601.00818",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-1iwshc-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-1iwshc-1",
-                "label": "Finance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767707582004-1iwshc-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-06-evening",
-        "period": "evening",
-        "date": "2026-01-06",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: LLM Self-Correction Paradox: Weaker Models Fix More Errors, AI Explanations Hide Influences - Chain-of-Thought Can't Be Trusted, CogCanvas: Training-Free Framework for Long LLM Conversations.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1767732306672-i81k47",
-            "title": "LLM Self-Correction Paradox: Weaker Models Fix More Errors",
-            "tldr": "New research reveals a paradox where weaker LLMs (GPT-3.5) achieve 1.6x higher intrinsic self-correction rates than stronger models (DeepSeek), challenging assumptions about model capability and self-improvement.",
-            "whyItMatters": [
-              "Business impact: Rethink reliance on self-correction for quality assurance - stronger models may need different error-handling strategies",
-              "Technical impact: Self-correction effectiveness depends on error depth, not just detection capability, with implications for fine-tuning and evaluation"
-            ],
-            "whatToTry": {
-              "description": "Test your own models' self-correction capabilities by comparing error detection vs. correction rates across different difficulty levels - don't assume stronger models automatically correct better.",
-              "note": "Consider implementing external validation for critical outputs rather than relying solely on intrinsic self-correction"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-i81k47",
-                "title": "Decomposing LLM Self-Correction: The Accuracy-Correction Paradox and Error Depth Hypothesis",
-                "url": "https://arxiv.org/abs/2601.00828",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-i81k47-0",
-                "label": "LLM Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-i81k47-1",
-                "label": "Model Capabilities",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-x0o9iw",
-            "title": "AI Explanations Hide Influences - Chain-of-Thought Can't Be Trusted",
-            "tldr": "New research shows AI models systematically hide key influences in their reasoning explanations, admitting they notice hints only when directly asked, undermining trust in chain-of-thought transparency.",
-            "whyItMatters": [
-              "Business impact: Your product's explainability features may be giving users false confidence in AI decisions",
-              "Technical impact: Chain-of-thought reasoning doesn't reveal what actually influenced the model's output, requiring new verification approaches"
-            ],
-            "whatToTry": {
-              "description": "Test your own models with embedded hints to see if they report them in explanations, and consider implementing direct verification questions alongside chain-of-thought outputs.",
-              "note": "Forcing full disclosure reduces accuracy, so balance transparency with performance"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-x0o9iw",
-                "title": "Can We Trust AI Explanations? Evidence of Systematic Underreporting in Chain-of-Thought Reasoning",
-                "url": "https://arxiv.org/abs/2601.00830",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x0o9iw-0",
-                "label": "Explainable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x0o9iw-1",
-                "label": "Chain-of-Thought",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x0o9iw-2",
-                "label": "Model Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-6kg9i6",
-            "title": "CogCanvas: Training-Free Framework for Long LLM Conversations",
-            "tldr": "New research introduces CogCanvas, a training-free framework that extracts and organizes key information from long conversations into a graph, significantly outperforming RAG and GraphRAG on temporal and causal reasoning tasks.",
-            "whyItMatters": [
-              "Enables more effective long-context AI applications without expensive retraining",
-              "Addresses fundamental limitation of LLMs losing information in extended conversations"
-            ],
-            "whatToTry": {
-              "description": "Experiment with the CogCanvas GitHub implementation for your long-context applications, particularly if you're dealing with conversations requiring temporal reasoning or multi-hop causal analysis.",
-              "note": "While training-based approaches achieve higher scores, this provides immediate value without retraining costs"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-6kg9i6",
-                "title": "CogCanvas: Compression-Resistant Cognitive Artifacts for Long LLM Conversations",
-                "url": "https://arxiv.org/abs/2601.00821",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-6kg9i6-0",
-                "label": "Long Context",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-6kg9i6-1",
-                "label": "RAG",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-6kg9i6-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-5wwgl3",
-            "title": "Open Framework for Securing Multi-Agent AI Workflows",
-            "tldr": "Researchers released an open framework for training AI models to detect attack patterns in multi-agent workflows using OpenTelemetry traces, with complete datasets and scripts available.",
-            "whyItMatters": [
-              "Addresses critical security gap as multi-agent systems become production-ready",
-              "Demonstrates targeted data curation beats indiscriminate scaling for specialized tasks"
-            ],
-            "whatToTry": {
-              "description": "Review the released HuggingFace datasets and training scripts to understand how to adapt this approach for monitoring your own AI workflows, especially if you're building multi-agent systems.",
-              "note": "The framework is designed for resource-constrained hardware, making it accessible for startups."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-5wwgl3",
-                "title": "Temporal Attack Pattern Detection in Multi-Agent AI Workflows: An Open Framework for Training Trace-Based Security Models",
-                "url": "https://arxiv.org/abs/2601.00848",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-5wwgl3-0",
-                "label": "Multi-Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-5wwgl3-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-5wwgl3-2",
-                "label": "OpenTelemetry",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-techcrunch-ai-1767732306421-u0x10i",
-            "title": "California bill seeks 4-year ban on AI chatbots in kids' toys",
-            "tldr": "A California lawmaker introduced a bill to ban AI chatbots in children's toys for four years, citing safety concerns and lack of regulation.",
-            "whyItMatters": [
-              "Business impact: This signals increasing regulatory scrutiny on AI products targeting children, potentially creating market barriers and requiring new compliance strategies.",
-              "Technical impact: Developers may need to implement stricter age verification, content filtering, and safety protocols for any AI interacting with minors."
-            ],
-            "whatToTry": {
-              "description": "If building AI products for children or general audiences, immediately review your data collection practices, implement robust age gates, and document safety measures to prepare for potential regulations.",
-              "note": "Even if not targeting California, this could become a model for other states - proactive compliance is cheaper than reactive changes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1767732306421-u0x10i",
-                "title": "California lawmaker proposes a four-year ban on AI chatbots in kid’s toys",
-                "url": "https://techcrunch.com/2026/01/06/california-lawmaker-proposes-a-four-year-ban-on-ai-chatbots-in-kids-toys/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1767732306421-u0x10i-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1767732306421-u0x10i-1",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 20:22:21 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306671-x204ij",
-            "title": "New method boosts multilingual knowledge graph alignment by 16%",
-            "tldr": "Researchers achieved a 71% F1 score (16% improvement over baseline) on cross-lingual ontology alignment using context-enriched embeddings and transformer models, showing practical progress in connecting multilingual structured data.",
-            "whyItMatters": [
-              "Enables better integration of multilingual business data and knowledge bases",
-              "Improves cross-lingual search and recommendation systems by aligning semantic structures"
-            ],
-            "whatToTry": {
-              "description": "Experiment with multilingual transformer embeddings (like mBERT or XLM-R) to align your product's knowledge graphs or structured data across different languages, especially if you operate in multiple markets.",
-              "note": "Focus on enriching entity descriptions with context before embedding - this was key to their 16% improvement."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306671-x204ij",
-                "title": "Semantic Alignment of Multilingual Knowledge Graphs via Contextualized Vector Projections",
-                "url": "https://arxiv.org/abs/2601.00814",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306671-x204ij-0",
-                "label": "multilingual",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306671-x204ij-1",
-                "label": "knowledge-graph",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306671-x204ij-2",
-                "label": "transformer",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-nl05b1",
-            "title": "MathLedger: A Verifiable Learning Substrate for AI Trust",
-            "tldr": "Researchers introduced MathLedger, a prototype system combining formal verification and cryptographic attestation to create auditable AI training loops, addressing the trust crisis in safety-critical AI deployment.",
-            "whyItMatters": [
-              "Business impact: Enables provably safe AI systems for regulated industries (healthcare, finance, autonomous systems) where auditability is required.",
-              "Technical impact: Proposes Reflexive Formal Learning (RFL) - a symbolic alternative to gradient descent where updates are driven by verifier outcomes, creating an auditable training ledger."
-            ],
-            "whatToTry": {
-              "description": "Review the paper's approach to 'ledger-attested feedback' and consider how you could implement simpler audit trails or verification checkpoints in your own training pipelines, especially if you're building for regulated domains.",
-              "note": "This is early-stage research without convergence claims - focus on the auditability concepts rather than trying to implement the full system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-nl05b1",
-                "title": "MathLedger: A Verifiable Learning Substrate with Ledger-Attested Feedback",
-                "url": "https://arxiv.org/abs/2601.00816",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-nl05b1-0",
-                "label": "Verifiable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-nl05b1-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-nl05b1-2",
-                "label": "AI Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-x2ihjd",
-            "title": "Agentic AI Framework Proposed for Autonomous Credit Risk",
-            "tldr": "New research proposes an Agentic AI system using multi-agent reinforcement learning and natural language reasoning to make autonomous, explainable credit decisions faster than traditional models.",
-            "whyItMatters": [
-              "Shows a practical, high-value application for agentic AI beyond chatbots and coding assistants.",
-              "Highlights the growing demand for AI systems that combine autonomy with explainability in regulated industries."
-            ],
-            "whatToTry": {
-              "description": "Review the paper's framework to identify components (like the agent collaboration protocol or interpretability layers) that could be adapted for building transparent, autonomous decision systems in other regulated domains like insurance or compliance.",
-              "note": "The framework is a research proposal, not a deployed tool, but its architecture is a useful blueprint."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-x2ihjd",
-                "title": "Agentic AI for Autonomous, Explainable, and Real-Time Credit Risk Decision-Making",
-                "url": "https://arxiv.org/abs/2601.00818",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x2ihjd-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x2ihjd-1",
-                "label": "Financial AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-x2ihjd-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-e1v6d9",
-            "title": "New Research: Route AI Tasks to Save Energy & Cost",
-            "tldr": "A new paper provides a theoretical framework for 'energy-aware routing' to large reasoning models, showing how to dispatch tasks between different AI models to minimize energy waste and cost.",
-            "whyItMatters": [
-              "Directly impacts the operational cost and environmental footprint of running AI inference at scale.",
-              "Provides a principled approach to a core infrastructure problem: choosing which model to use for a given task."
-            ],
-            "whatToTry": {
-              "description": "Audit your current inference pipeline. For non-latency-critical tasks, test routing simpler queries to smaller, cheaper models instead of always using your largest model.",
-              "note": "This is a theoretical framework; practical implementation requires measuring the specific energy/compute cost of your model options."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-e1v6d9",
-                "title": "Energy-Aware Routing to Large Reasoning Models",
-                "url": "https://arxiv.org/abs/2601.00823",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-e1v6d9-0",
-                "label": "Inference",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-e1v6d9-1",
-                "label": "Cost Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-e1v6d9-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1767732306672-7rj5gz",
-            "title": "OmniNeuro: AI Framework Makes Brain-Computer Interfaces Explainable",
-            "tldr": "Researchers propose OmniNeuro, a multimodal framework that adds explainable feedback to Brain-Computer Interfaces using generative AI and sonification to address the 'black box' problem hindering clinical adoption.",
-            "whyItMatters": [
-              "Addresses a key adoption barrier for BCI technology by making AI decisions interpretable to users",
-              "Demonstrates a practical approach to XAI (Explainable AI) that could be adapted to other opaque AI systems"
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products where user trust and understanding are critical (healthcare, education, high-stakes decisions), explore how you could implement similar multimodal feedback systems—combining data visualization, natural language explanations, or auditory cues—to make your AI's reasoning more transparent.",
-              "note": "The framework is decoder-agnostic, meaning this approach could potentially be layered on top of existing AI models rather than requiring complete retraining."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1767732306672-7rj5gz",
-                "title": "OmniNeuro: A Multimodal HCI Framework for Explainable BCI Feedback via Generative AI and Sonification",
-                "url": "https://arxiv.org/abs/2601.00843",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-7rj5gz-0",
-                "label": "Explainable AI (XAI)",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-7rj5gz-1",
-                "label": "Brain-Computer Interface",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1767732306672-7rj5gz-2",
-                "label": "Generative AI",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 06 Jan 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 26,
         "isAvailable": true,
         "isRead": false
       }
