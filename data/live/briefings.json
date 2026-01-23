@@ -866,6 +866,425 @@
         "totalReadTimeMinutes": 24,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-01-23-evening",
+        "period": "evening",
+        "date": "2026-01-23",
+        "scheduledTime": "20:30",
+        "executiveSummary": "Today's highlights: Claude.ai Silent Failures Since Jan 14 - No Official Fix, Gated Sparse Attention: Efficient & Stable Long-Context LLMs, Aeon: Neuro-Symbolic OS for LLM Agent Memory.",
+        "items": [
+          {
+            "id": "hn-46736091",
+            "title": "Claude.ai Silent Failures Since Jan 14 - No Official Fix",
+            "tldr": "Claude.ai has been experiencing silent failures since January 14th with no official acknowledgment from Anthropic, sparking significant community discussion about reliability.",
+            "whyItMatters": [
+              "Business impact: Highlights the risks of depending on third-party AI services without transparent status reporting",
+              "Technical impact: Silent failures can lead to undetected production issues and data loss in automated workflows"
+            ],
+            "whatToTry": {
+              "description": "Implement monitoring for Claude API responses in your production systems and consider adding fallback mechanisms to alternative models for critical workflows.",
+              "note": "Check if your Claude integrations are returning empty or incomplete responses without error codes"
+            },
+            "sources": [
+              {
+                "id": "src-hn-46736091",
+                "title": "Claude.ai silently failing since Jan 14, no official acknowledgment",
+                "url": "https://github.com/anthropics/claude-code/issues/18866",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46736091-0",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-46736091-1",
+                "label": "Reliability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46736091-2",
+                "label": "API",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-01-23T18:42:38Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1769201279612-zibmo3",
+            "title": "Gated Sparse Attention: Efficient & Stable Long-Context LLMs",
+            "tldr": "New research combines sparse attention (efficiency) with gated attention (stability) for long-context LLMs, showing 12-16x speedups at 128K context while improving perplexity and reducing training instability.",
+            "whyItMatters": [
+              "Enables more cost-effective training and inference for long-context models, a key competitive edge.",
+              "Addresses the 'attention sink' problem, improving model quality and training reliability for long sequences."
+            ],
+            "whatToTry": {
+              "description": "If you're building or fine-tuning long-context models, evaluate if your framework (e.g., Hugging Face Transformers, vLLM) supports integrating gated sparse attention mechanisms. For new architectures, consider prototyping with this hybrid approach to balance efficiency and stability.",
+              "note": "This is a research paper; implementation libraries may not be immediately available. Monitor for code releases from the authors or community ports."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769201279612-zibmo3",
+                "title": "Gated Sparse Attention: Combining Computational Efficiency with Training Stability for Long-Context Language Models",
+                "url": "https://arxiv.org/abs/2601.15305",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-zibmo3-0",
+                "label": "Long-Context LLMs",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-zibmo3-1",
+                "label": "Attention Mechanism",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-zibmo3-2",
+                "label": "Model Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769201279612-2p9ha8",
+            "title": "Aeon: Neuro-Symbolic OS for LLM Agent Memory",
+            "tldr": "New research paper introduces Aeon, a neuro-symbolic operating system that structures LLM agent memory hierarchically to solve 'Vector Haze' and enable long-horizon reasoning with sub-millisecond retrieval.",
+            "whyItMatters": [
+              "Directly addresses core limitations of current RAG systems for autonomous agents",
+              "Enables practical long-term memory for agents through structured episodic graphs and predictive caching"
+            ],
+            "whatToTry": {
+              "description": "Monitor the Aeon GitHub repository for release and evaluate its Memory Palace architecture for your agent's long-term memory needs, especially if you're building complex multi-step workflows.",
+              "note": "This is research-stage but addresses fundamental problems with current vector database approaches."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769201279612-2p9ha8",
+                "title": "Aeon: High-Performance Neuro-Symbolic Memory Management for Long-Horizon LLM Agents",
+                "url": "https://arxiv.org/abs/2601.15311",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-2p9ha8-0",
+                "label": "Agent Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-2p9ha8-1",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-2p9ha8-2",
+                "label": "Aeon",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-openai-blog-1769201280087-uhdivp",
+            "title": "OpenAI Details Codex Agent Loop Architecture",
+            "tldr": "OpenAI published a technical deep dive into the Codex agent loop, revealing how the Codex CLI orchestrates models, tools, and prompts via the Responses API.",
+            "whyItMatters": [
+              "Shows how OpenAI is structuring complex AI workflows for practical applications",
+              "Reveals architectural patterns for building reliable agentic systems"
+            ],
+            "whatToTry": {
+              "description": "Review the architecture diagram and consider how you could adapt the 'agent loop' pattern (planning, execution, reflection) in your own AI product to improve reliability and tool use.",
+              "note": "This is a pattern to study, not a direct product release. Focus on the workflow design principles."
+            },
+            "sources": [
+              {
+                "id": "src-rss-openai-blog-1769201280087-uhdivp",
+                "title": "Unrolling the Codex agent loop",
+                "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-openai-blog-1769201280087-uhdivp-0",
+                "label": "Codex",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-openai-blog-1769201280087-uhdivp-1",
+                "label": "Agent Architecture",
+                "type": "topic"
+              }
+            ],
+            "category": "releases",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 12:00:00 GMT"
+          },
+          {
+            "id": "hn-46730504",
+            "title": "Ghostty's AI Policy Sparks Major Developer Debate",
+            "tldr": "Ghostty's detailed AI usage policy has sparked a major HackerNews debate (449 points, 235 comments) about how open-source projects should handle AI contributions, with developers divided on enforcement and ethics.",
+            "whyItMatters": [
+              "Sets precedent for how open-source projects handle AI-generated code contributions",
+              "Reveals developer community's deep concerns about AI's impact on code quality and attribution"
+            ],
+            "whatToTry": {
+              "description": "Review Ghostty's AI policy and the HackerNews discussion to inform your own project's AI contribution guidelines, especially if you maintain open-source software.",
+              "note": "The debate highlights that developers care deeply about transparency - consider requiring contributors to disclose AI tool usage."
+            },
+            "sources": [
+              {
+                "id": "src-hn-46730504",
+                "title": "AI Usage Policy",
+                "url": "https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46730504-0",
+                "label": "Open Source",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46730504-1",
+                "label": "Developer Tools",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-01-23T09:50:26Z"
+          },
+          {
+            "id": "hn-46729368",
+            "title": "Proton Spam Debate: AI Training & User Consent",
+            "tldr": "Major discussion on HackerNews (427 points) about Proton's AI training practices raising questions about user consent and data usage for AI models.",
+            "whyItMatters": [
+              "Business impact: Growing user backlash against opaque AI training data practices could lead to regulatory scrutiny and trust issues",
+              "Technical impact: Highlights the tension between AI model improvement needs and ethical data sourcing requirements"
+            ],
+            "whatToTry": {
+              "description": "Review your own AI product's data usage policies and ensure you have clear, explicit consent mechanisms for any user data used in training.",
+              "note": "Consider implementing granular consent options (opt-in/opt-out for different data uses) rather than blanket terms"
+            },
+            "sources": [
+              {
+                "id": "src-hn-46729368",
+                "title": "Proton Spam and the AI Consent Problem",
+                "url": "https://dbushell.com/2026/01/22/proton-spam/",
+                "domain": "dbushell.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46729368-0",
+                "label": "Ethics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46729368-1",
+                "label": "Data",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-01-23T07:01:29Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1769201279612-o2f81x",
+            "title": "Study Reveals LLMs Show Bias in Medical Triage via Proxy Variables",
+            "tldr": "New research finds LLMs exhibit discriminatory behavior in emergency department triage scenarios through proxy variables, showing models modify perceived patient severity based on specific input tokens regardless of framing.",
+            "whyItMatters": [
+              "Founders building healthcare AI must address hidden bias risks that could lead to harmful real-world outcomes and regulatory scrutiny",
+              "Technical findings reveal LLMs can latch onto noisy, non-causal signals in training data rather than clinically relevant patterns"
+            ],
+            "whatToTry": {
+              "description": "If building clinical AI, implement systematic bias testing using proxy variables similar to this study's methodology before deployment.",
+              "note": "Consider creating 'bias test suites' specific to your domain that go beyond standard fairness metrics"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769201279612-o2f81x",
+                "title": "Uncovering Latent Bias in LLM-Based Emergency Department Triage Through Proxy Variables",
+                "url": "https://arxiv.org/abs/2601.15306",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-o2f81x-0",
+                "label": "Bias",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-o2f81x-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769201279612-o2f81x-2",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769201279432-w0cx2u",
+            "title": "Davos 2024: AI Dominates Global Economic Agenda",
+            "tldr": "AI became the central topic at the World Economic Forum in Davos, overshadowing traditional issues like climate change and poverty, with major tech CEOs driving the conversation and policy discussions.",
+            "whyItMatters": [
+              "Business impact: Signals where global economic leaders and policymakers are focusing attention and potential regulatory frameworks",
+              "Technical impact: Highlights the mainstreaming of AI as a core economic driver rather than just a tech sector topic"
+            ],
+            "whatToTry": {
+              "description": "Review your product messaging and investor materials to align with the economic and policy framing of AI that emerged at Davos - focus on job creation, productivity gains, and responsible deployment rather than just technical capabilities.",
+              "note": "This shift indicates AI founders should prepare for increased regulatory scrutiny while positioning their products as solutions to broader economic challenges"
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769201279432-w0cx2u-0",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/how-did-davos-turn-into-a-tech-conference/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              },
+              {
+                "id": "src-rss-techcrunch-ai-1769201279432-w0cx2u-1",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/how-did-davos-turn-into-a-tech-conference/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769201279432-w0cx2u-0",
+                "label": "AI Policy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769201279432-w0cx2u-1",
+                "label": "Industry Trends",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 20:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769201279432-inn459",
+            "title": "Meta pauses teen AI characters globally for safety revamp",
+            "tldr": "Meta has temporarily disabled teen access to its AI characters across all apps to develop a safer, updated version, signaling increased regulatory scrutiny on youth AI interactions.",
+            "whyItMatters": [
+              "Business impact: Shows major platforms proactively adjusting youth-facing AI features ahead of potential regulations, creating opportunities for startups with built-in safety frameworks.",
+              "Technical impact: Highlights the need for age-appropriate AI interactions, filtering, and content moderation systems specifically designed for younger users."
+            ],
+            "whatToTry": {
+              "description": "Review your product's age verification and content safety systems. If targeting younger users, document your safety measures and consider implementing age-gated AI features with different interaction modes.",
+              "note": "Even if not targeting teens directly, having clear safety documentation can be valuable for enterprise clients concerned about compliance."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769201279432-inn459",
+                "title": "Meta pauses teen access to AI characters ahead of new version",
+                "url": "https://techcrunch.com/2026/01/23/meta-pauses-teen-access-to-ai-characters-ahead-of-new-version/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769201279432-inn459-0",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769201279432-inn459-1",
+                "label": "Meta",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769201279432-inn459-2",
+                "label": "Regulation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 17:00:00 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1769201279422-r8hse7",
+            "title": "Research Paper Claims AI Agents Are 'Mathematically Doomed'",
+            "tldr": "A new research paper argues AI agents face fundamental mathematical limitations, but industry experts strongly disagree, highlighting a key debate about agent viability.",
+            "whyItMatters": [
+              "Business impact: Challenges the core premise of many AI startups building agent-based products, potentially affecting investor confidence and product roadmaps.",
+              "Technical impact: Raises theoretical questions about the scalability and reliability of autonomous agent systems, a foundational architecture for many AI applications."
+            ],
+            "whatToTry": {
+              "description": "Review your product's reliance on fully autonomous agents. Consider designing for 'human-in-the-loop' or hybrid workflows to mitigate the theoretical risks of agent failure discussed in the paper.",
+              "note": "This is a theoretical debate; the immediate practical impact is on perception and strategy, not necessarily on existing code."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1769201279422-r8hse7",
+                "title": "The Math on AI Agents Doesn’t Add Up",
+                "url": "https://www.wired.com/story/ai-agents-math-doesnt-add-up/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1769201279422-r8hse7-0",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 23 Jan 2026 16:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
