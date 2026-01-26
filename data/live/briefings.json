@@ -444,6 +444,438 @@
         "totalReadTimeMinutes": 25,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-01-26-afternoon",
+        "period": "afternoon",
+        "date": "2026-01-26",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: New Framework Diagnoses Why AI Agents Fail to Use Tools, SemanticALLI: Cache Agent Reasoning, Not Just Outputs, New 560B Open-Source MoE Model Excels at Agentic Reasoning.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1769435897635-alxm9u",
+            "title": "New Framework Diagnoses Why AI Agents Fail to Use Tools",
+            "tldr": "Researchers published a diagnostic framework to systematically evaluate why multi-agent LLM systems fail at tool invocation, testing 1,980 scenarios across major models to identify reliability thresholds for production deployment.",
+            "whyItMatters": [
+              "Identifies tool initialization as the primary bottleneck for smaller models in production systems",
+              "Provides concrete reliability benchmarks showing Qwen2.5:32B matches GPT-4 performance at lower cost"
+            ],
+            "whatToTry": {
+              "description": "Use the 12-category error taxonomy from this paper to audit your own agent's tool invocation failures - categorize failures as initialization, parameter handling, execution, or result interpretation issues.",
+              "note": "The research suggests mid-sized models like Qwen2.5:14B offer the best accuracy-efficiency trade-off for resource-constrained deployments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-alxm9u",
+                "title": "When Agents Fail to Act: A Diagnostic Framework for Tool Invocation Reliability in Multi-Agent LLM Systems",
+                "url": "https://arxiv.org/abs/2601.16280",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-alxm9u-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-alxm9u-1",
+                "label": "Tool Calling",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-alxm9u-2",
+                "label": "Qwen",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-yofw8u",
+            "title": "SemanticALLI: Cache Agent Reasoning, Not Just Outputs",
+            "tldr": "New research introduces SemanticALLI, a method to cache intermediate reasoning steps in agentic AI pipelines, reducing redundant LLM calls by 83% and cutting latency to ~3ms.",
+            "whyItMatters": [
+              "Directly reduces inference cost and latency for multi-step AI agents",
+              "Reveals a major hidden inefficiency in current agent architectures where the same logic is recomputed"
+            ],
+            "whatToTry": {
+              "description": "Audit your own multi-step AI workflows. Map out the pipeline and identify any intermediate, structured representations (like normalized data or planning steps) that are stable and could be cached, rather than just caching final outputs.",
+              "note": "This is a research paper, not a product. The core insight—caching structured intermediate states—is the actionable takeaway."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-yofw8u",
+                "title": "SemanticALLI: Caching Reasoning, Not Just Responses, in Agentic Systems",
+                "url": "https://arxiv.org/abs/2601.16286",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-yofw8u-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-yofw8u-1",
+                "label": "Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-yofw8u-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-hp2fj9",
+            "title": "New 560B Open-Source MoE Model Excels at Agentic Reasoning",
+            "tldr": "Researchers released LongCat-Flash-Thinking-2601, a 560B-parameter open-source Mixture-of-Experts model that achieves SOTA on agentic benchmarks like search and tool use, with strong generalization to noisy real-world environments.",
+            "whyItMatters": [
+              "Open-source access to a massive reasoning model lowers the barrier for building complex AI agents.",
+              "The focus on noisy, multi-turn interactions and tool use directly addresses practical deployment challenges."
+            ],
+            "whatToTry": {
+              "description": "Monitor the model's release on Hugging Face or GitHub. If you're building agentic workflows, plan to benchmark it against your current model (e.g., GPT-4, Claude, or Llama) on a specific tool-use or multi-turn interaction task relevant to your product.",
+              "note": "The 560B parameter count suggests high computational requirements; consider testing via an API if a hosted version becomes available."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-hp2fj9",
+                "title": "LongCat-Flash-Thinking-2601 Technical Report",
+                "url": "https://arxiv.org/abs/2601.16725",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-hp2fj9-0",
+                "label": "LongCat-Flash-Thinking-2601",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-hp2fj9-1",
+                "label": "Mixture of Experts",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-hp2fj9-2",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-p5k83h",
+            "title": "DSGym: New Framework for Training & Testing Data Science AI Agents",
+            "tldr": "Researchers introduced DSGym, a modular framework for evaluating and training data science agents, showing current benchmarks have flaws and their trained 4B model can outperform GPT-4o on analysis tasks.",
+            "whyItMatters": [
+              "Exposes weaknesses in current data science agent benchmarks, where many tasks can be solved without using data.",
+              "Provides a standardized, extensible platform for developing and comparing agents, which could accelerate practical AI tools for data analysis."
+            ],
+            "whatToTry": {
+              "description": "Review the DSGym paper and framework to assess if its task suite or evaluation methodology could improve the testing or development of your own data analysis or agentic AI features.",
+              "note": "The framework is research-focused, but its insights on benchmark flaws are immediately applicable for anyone building data-centric AI products."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-p5k83h",
+                "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+                "url": "https://arxiv.org/abs/2601.16344",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-p5k83h-0",
+                "label": "Data Science Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-p5k83h-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-p5k83h-2",
+                "label": "Framework",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-i2xhmx",
+            "title": "Doc2AHP: LLMs Can Now Build Structured Decision Models",
+            "tldr": "New research introduces Doc2AHP, a framework that uses LLMs to automatically build structured, logical decision models from documents, bridging the gap between AI's generalization and the rigor of classical decision theory.",
+            "whyItMatters": [
+              "Business impact: Automates the creation of complex decision frameworks (like AHP), which traditionally requires expensive expert labor, potentially opening up new product verticals in business intelligence and decision support.",
+              "Technical impact: Demonstrates a method to enforce structural and logical consistency on LLM outputs, a key challenge for reliable AI agents in high-stakes domains."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your product involves complex, multi-criteria decision-making. If so, explore using this structured inference approach (combining a domain framework like AHP with LLM-guided search) to prototype a feature that helps users build or analyze decision models from their own documents.",
+              "note": "This is a research paper; implementation requires adapting the core constraint-based search and multi-agent weighting concepts to your specific domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-i2xhmx",
+                "title": "Doc2AHP: Inferring Structured Multi-Criteria Decision Models via Semantic Trees with LLMs",
+                "url": "https://arxiv.org/abs/2601.16479",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-i2xhmx-0",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-i2xhmx-1",
+                "label": "Decision Support",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-i2xhmx-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-asnmlx",
+            "title": "LLMs Vulnerable to Patient Pressure in Simulated ER Scenarios",
+            "tldr": "New research shows LLMs in clinical simulations often acquiesce to inappropriate patient requests, with vulnerability rates up to 100% across 20 models tested.",
+            "whyItMatters": [
+              "Business impact: Critical safety implications for healthcare AI products - regulatory scrutiny likely to increase",
+              "Technical impact: Static benchmarks fail to predict real-world safety under social pressure, requiring new testing approaches"
+            ],
+            "whatToTry": {
+              "description": "If building clinical AI, implement multi-turn adversarial testing with simulated patient persuasion scenarios before deployment.",
+              "note": "Test specifically for imaging requests and opioid prescriptions - these showed highest vulnerability rates"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-asnmlx",
+                "title": "SycoEval-EM: Sycophancy Evaluation of Large Language Models in Simulated Clinical Encounters for Emergency Care",
+                "url": "https://arxiv.org/abs/2601.16529",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-asnmlx-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-asnmlx-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-asnmlx-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-4sznng",
+            "title": "Study: Traditional ML Often Beats LLMs for Medical Classification",
+            "tldr": "A systematic benchmark shows classical ML models outperform fine-tuned LLMs and VLMs on most medical classification tasks, challenging the assumption that foundation models are always superior.",
+            "whyItMatters": [
+              "Business impact: Questions the ROI of expensive LLM fine-tuning for specialized domains where simpler models may suffice.",
+              "Technical impact: Highlights the importance of task-specific benchmarking before committing to LLM-based architectures."
+            ],
+            "whatToTry": {
+              "description": "Before building a new AI feature, benchmark a simple classical ML baseline (like LightGBM or logistic regression) against your planned LLM approach on your specific dataset.",
+              "note": "This is especially critical for structured data tasks in regulated domains like healthcare or finance."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-4sznng",
+                "title": "LLM is Not All You Need: A Systematic Evaluation of ML vs. Foundation Models for text and image based Medical Classification",
+                "url": "https://arxiv.org/abs/2601.16549",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-4sznng-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-4sznng-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-4sznng-2",
+                "label": "Machine Learning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-wired-ai-1769435897495-nyjy74",
+            "title": "Data Center Backlash vs. Factory Support: A Siting Strategy Shift",
+            "tldr": "Communities are increasingly protesting data centers over environmental concerns but welcoming the factories that supply them, creating a strategic opening for AI infrastructure companies.",
+            "whyItMatters": [
+              "Business impact: Local opposition is becoming a major bottleneck for data center expansion, directly impacting AI compute availability and costs.",
+              "Technical impact: This political friction may force a re-architecture of AI infrastructure towards more distributed or co-located models near manufacturing hubs."
+            ],
+            "whatToTry": {
+              "description": "When planning new AI infrastructure, investigate co-locating near existing or planned hardware manufacturing facilities, as these areas may have stronger community and political support, easing permitting and accelerating deployment.",
+              "note": "This is a political and community relations strategy, not a technical one. Engage local stakeholders early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1769435897495-nyjy74",
+                "title": "People Are Protesting Data Centers—but Embracing the Factories That Supply Them",
+                "url": "https://www.wired.com/story/data-center-criticism-factories-supply-us/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1769435897495-nyjy74-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1769435897495-nyjy74-1",
+                "label": "Strategy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 11:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-sdf7rt",
+            "title": "Research: What Skills Do AI Agents Really Need?",
+            "tldr": "New research introduces a framework to measure which underlying skills (like planning or state tracking) are most critical for AI agents to succeed in complex, multi-turn tasks.",
+            "whyItMatters": [
+              "Helps founders prioritize which agent capabilities to build or integrate into their products.",
+              "Provides a data-driven method to evaluate agent performance beyond simple benchmarks."
+            ],
+            "whatToTry": {
+              "description": "Use the paper's 'oracle counterfactual' concept to stress-test your own agent's performance. Systematically disable or simulate a perfect version of a single skill (like planning) to see how much it impacts your agent's success on a complex task.",
+              "note": "This is a diagnostic framework, not a ready-to-use tool. It's best for teams building complex, multi-step AI agents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-sdf7rt",
+                "title": "LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents",
+                "url": "https://arxiv.org/abs/2601.16649",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-sdf7rt-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-sdf7rt-1",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769435897635-5ibeuf",
+            "title": "AgentsEval: Multi-Agent Framework for Clinically Faithful Medical Report Evaluation",
+            "tldr": "Researchers introduced AgentsEval, a multi-agent reasoning framework that evaluates AI-generated medical imaging reports by emulating radiologists' diagnostic workflow, addressing a critical gap in clinical relevance.",
+            "whyItMatters": [
+              "Business impact: Enables more trustworthy validation of AI medical report systems, potentially accelerating regulatory approval and clinical adoption.",
+              "Technical impact: Provides structured, interpretable evaluation with explicit reasoning traces, moving beyond surface-level metrics like BLEU or ROUGE."
+            ],
+            "whatToTry": {
+              "description": "If building in healthcare AI, review the AgentsEval framework's methodology for structuring evaluation around clinical reasoning steps rather than just output similarity.",
+              "note": "The benchmark covers five medical report datasets - check if your domain is included to potentially use their evaluation approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769435897635-5ibeuf",
+                "title": "AgentsEval: Clinically Faithful Evaluation of Medical Imaging Reports via Multi-Agent Reasoning",
+                "url": "https://arxiv.org/abs/2601.16685",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-5ibeuf-0",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-5ibeuf-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769435897635-5ibeuf-2",
+                "label": "Multi-Agent",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          }
+        ],
+        "totalReadTimeMinutes": 25,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
