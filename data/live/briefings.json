@@ -1,7 +1,455 @@
 [
   {
-    "date": "2026-01-25",
+    "date": "2026-01-26",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-01-26-morning",
+        "period": "morning",
+        "date": "2026-01-26",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: New Framework Diagnoses Why AI Agents Fail to Use Tools, SemanticALLI: Cache Agent Reasoning, Not Just Outputs, Study: Traditional ML Beats LLMs on Medical Classification Tasks.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1769413528201-er5ji7",
+            "title": "New Framework Diagnoses Why AI Agents Fail to Use Tools",
+            "tldr": "Researchers created a diagnostic framework to systematically evaluate why multi-agent LLM systems fail at tool invocation, testing 1,980 scenarios across major models to identify reliability thresholds for production deployment.",
+            "whyItMatters": [
+              "Identifies tool initialization as the primary bottleneck for smaller models in production systems",
+              "Shows mid-sized models like Qwen2.5:14b offer practical accuracy-efficiency trade-offs for resource-constrained deployments"
+            ],
+            "whatToTry": {
+              "description": "Use the 12-category error taxonomy from this paper to audit your own agent's tool invocation failures - categorize failures as initialization, parameter handling, execution, or result interpretation issues.",
+              "note": "The framework shows Qwen2.5:32b matches GPT-4's flawless performance, suggesting open-weight alternatives are viable for production agent systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-er5ji7",
+                "title": "When Agents Fail to Act: A Diagnostic Framework for Tool Invocation Reliability in Multi-Agent LLM Systems",
+                "url": "https://arxiv.org/abs/2601.16280",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-er5ji7-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-er5ji7-1",
+                "label": "Tool Calling",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-er5ji7-2",
+                "label": "Qwen",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-rz7vus",
+            "title": "SemanticALLI: Cache Agent Reasoning, Not Just Outputs",
+            "tldr": "New research shows caching structured intermediate reasoning in agentic AI pipelines can reduce LLM calls by ~80%, dramatically cutting costs and latency.",
+            "whyItMatters": [
+              "Directly reduces inference costs and latency for multi-step AI agents",
+              "Reveals a major architectural pattern for optimizing complex AI systems"
+            ],
+            "whatToTry": {
+              "description": "Analyze your own agentic pipeline for repeated intermediate steps (e.g., data normalization, intent parsing). Design a system to cache these structured intermediate representations (IRs) instead of just final LLM outputs.",
+              "note": "Focus on steps where the logic is stable but the natural language input varies."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-rz7vus",
+                "title": "SemanticALLI: Caching Reasoning, Not Just Responses, in Agentic Systems",
+                "url": "https://arxiv.org/abs/2601.16286",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-rz7vus-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-rz7vus-1",
+                "label": "Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-rz7vus-2",
+                "label": "System Design",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-qfcct7",
+            "title": "Study: Traditional ML Beats LLMs on Medical Classification Tasks",
+            "tldr": "A systematic benchmark shows classical ML models outperform fine-tuned LLMs and VLMs on medical classification, challenging the assumption that foundation models are always superior for specialized domains.",
+            "whyItMatters": [
+              "Business impact: Founders should reconsider defaulting to LLMs for specialized classification tasks where simpler, cheaper models may perform better.",
+              "Technical impact: Fine-tuning with minimal data (LoRA) can degrade performance compared to zero-shot prompting or classical approaches in data-scarce domains."
+            ],
+            "whatToTry": {
+              "description": "Before building a new AI feature for a specialized domain (e.g., healthcare, finance, legal), benchmark a simple classical ML model (like Logistic Regression or LightGBM) against your planned LLM/VLM approach using your actual data.",
+              "note": "This is especially critical for structured text data. For image tasks, zero-shot VLMs may still be competitive."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-qfcct7",
+                "title": "LLM is Not All You Need: A Systematic Evaluation of ML vs. Foundation Models for text and image based Medical Classification",
+                "url": "https://arxiv.org/abs/2601.16549",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-qfcct7-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-qfcct7-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-qfcct7-2",
+                "label": "Fine-Tuning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-f5hygz",
+            "title": "New 560B Open-Source MoE Model Excels at Agentic Reasoning",
+            "tldr": "LongCat-Flash-Thinking-2601 is a massive open-source Mixture-of-Experts model that sets new SOTA on agentic benchmarks like search and tool use, with strong real-world generalization.",
+            "whyItMatters": [
+              "Open-source access to a top-tier reasoning model lowers the barrier to building complex AI agents.",
+              "The focus on real-world noise and multi-domain training suggests more robust, deployable agent capabilities."
+            ],
+            "whatToTry": {
+              "description": "Evaluate this model for your agentic workflows (e.g., search, tool use) against your current stack. Its open-source nature and reported robustness to noise make it a strong candidate for prototyping real-world applications.",
+              "note": "Monitor the model's release and community benchmarks for real-world performance vs. the paper's claims."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-f5hygz",
+                "title": "LongCat-Flash-Thinking-2601 Technical Report",
+                "url": "https://arxiv.org/abs/2601.16725",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-f5hygz-0",
+                "label": "LongCat-Flash-Thinking-2601",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-f5hygz-1",
+                "label": "Mixture of Experts",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-f5hygz-2",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769413528046-f61fay",
+            "title": "ChatGPT Now Cites xAI's Grokipedia",
+            "tldr": "ChatGPT is pulling answers from Elon Musk's xAI-created Grokipedia, a conservative-leaning, AI-generated encyclopedia, indicating a new source of training data.",
+            "whyItMatters": [
+              "Business impact: This shows how AI models are increasingly trained on synthetic data from other AI systems, creating new competitive dynamics and potential data licensing opportunities.",
+              "Technical impact: It highlights the growing influence of AI-generated content on model outputs and raises questions about data provenance, bias propagation, and the reliability of information sources."
+            ],
+            "whatToTry": {
+              "description": "Test your own AI product's responses on topics where Grokipedia might have a strong viewpoint (e.g., political or historical subjects) to see if you detect any new biases or shifts in factual grounding. Compare outputs from before and after this news period.",
+              "note": "Be aware that this could introduce specific ideological biases into your model's outputs if you are fine-tuning on recent ChatGPT data."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769413528046-f61fay",
+                "title": "ChatGPT is pulling answers from Elon Musk’s Grokipedia",
+                "url": "https://techcrunch.com/2026/01/25/chatgpt-is-pulling-answers-from-elon-musks-grokipedia/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-f61fay-0",
+                "label": "ChatGPT",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-f61fay-1",
+                "label": "xAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-f61fay-2",
+                "label": "Synthetic Data",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 25 Jan 2026 22:35:53 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769413528046-mffa1i",
+            "title": "Ex-Elite AI Researchers Launch Startup for Collaborative AI Models",
+            "tldr": "Humans&, founded by alumni from Anthropic, Meta, OpenAI, xAI, and Google DeepMind, is building foundation models designed for multi-agent collaboration rather than single-agent chat.",
+            "whyItMatters": [
+              "Shifts focus from individual AI assistants to systems where multiple AIs coordinate to solve complex problems",
+              "Could enable new product categories where AI agents work together on tasks like project management, research, or creative workflows"
+            ],
+            "whatToTry": {
+              "description": "Experiment with existing multi-agent frameworks (like AutoGen or CrewAI) to prototype collaborative AI workflows for your product, even before specialized models are available.",
+              "note": "This is an emerging architectural pattern—start exploring now to understand use cases where coordination beats single-agent approaches."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769413528046-mffa1i",
+                "title": "Humans& thinks coordination is the next frontier for AI, and they’re building a model to prove it",
+                "url": "https://techcrunch.com/2026/01/25/humans-thinks-coordination-is-the-next-frontier-for-ai-and-theyre-building-a-model-to-prove-it/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-mffa1i-0",
+                "label": "Multi-Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-mffa1i-1",
+                "label": "Startup",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769413528046-mffa1i-2",
+                "label": "Foundation Model",
+                "type": "model"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 25 Jan 2026 22:11:06 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-o6dgnk",
+            "title": "DSGym: New Framework for Training & Testing Data Science AI Agents",
+            "tldr": "Researchers introduced DSGym, a modular framework for evaluating and training data science agents, showing current benchmarks have flaws and their trained 4B model can outperform GPT-4o on analysis tasks.",
+            "whyItMatters": [
+              "Business impact: Provides a standardized way to benchmark and improve AI agents for data analysis, a core business function.",
+              "Technical impact: Exposes flaws in existing benchmarks and offers a live, extensible testbed for developing more robust data science AI."
+            ],
+            "whatToTry": {
+              "description": "Review the DSGym paper and framework to benchmark your own data analysis or agent-building workflows against their standardized task suite, especially if you're building AI for data science.",
+              "note": "The framework is research-focused but the underlying critique of benchmark quality is highly relevant for product development."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-o6dgnk",
+                "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+                "url": "https://arxiv.org/abs/2601.16344",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-o6dgnk-0",
+                "label": "Framework",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-o6dgnk-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-o6dgnk-2",
+                "label": "Data Science",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-dqx5gh",
+            "title": "LLMs Cave to Patient Pressure in Simulated ER Visits",
+            "tldr": "New research shows LLMs in clinical simulations often acquiesce to inappropriate patient requests, with vulnerability rates up to 100% across 20 models tested.",
+            "whyItMatters": [
+              "Business impact: Critical safety risk for healthcare AI products - could lead to regulatory rejection or liability issues",
+              "Technical impact: Static benchmarks fail to predict real-world safety under social pressure, requiring new testing approaches"
+            ],
+            "whatToTry": {
+              "description": "If building clinical AI, implement multi-turn adversarial testing with simulated patient persuasion scenarios before deployment.",
+              "note": "Test specifically for imaging requests and opioid prescriptions - these showed highest vulnerability rates"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-dqx5gh",
+                "title": "SycoEval-EM: Sycophancy Evaluation of Large Language Models in Simulated Clinical Encounters for Emergency Care",
+                "url": "https://arxiv.org/abs/2601.16529",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-dqx5gh-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-dqx5gh-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-dqx5gh-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-m1nxdv",
+            "title": "AgentsEval: Multi-Agent Framework for Clinically Faithful Medical AI Evaluation",
+            "tldr": "Researchers introduce AgentsEval, a multi-agent reasoning framework that evaluates AI-generated medical imaging reports by emulating radiologists' diagnostic workflow, addressing critical gaps in clinical correctness assessment.",
+            "whyItMatters": [
+              "Sets a new standard for evaluating medical AI outputs with clinical fidelity, crucial for regulatory approval and real-world deployment.",
+              "Provides interpretable reasoning traces and structured feedback, moving beyond black-box metrics like BLEU/ROUGE for high-stakes domains."
+            ],
+            "whatToTry": {
+              "description": "If building AI for regulated domains (healthcare, finance, legal), explore adopting a multi-agent evaluation framework. Break down your output assessment into interpretable steps (criteria definition, evidence extraction, alignment scoring) to generate structured, auditable feedback instead of relying solely on aggregate metrics.",
+              "note": "This approach adds overhead but is essential for building trust and meeting compliance requirements in critical applications."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-m1nxdv",
+                "title": "AgentsEval: Clinically Faithful Evaluation of Medical Imaging Reports via Multi-Agent Reasoning",
+                "url": "https://arxiv.org/abs/2601.16685",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-m1nxdv-0",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-m1nxdv-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-m1nxdv-2",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769413528201-v3b59i",
+            "title": "Doc2AHP: LLMs Can Now Build Structured Decision Models",
+            "tldr": "New research introduces Doc2AHP, a framework that uses LLMs to automatically construct rigorous Analytic Hierarchy Process (AHP) decision models from unstructured documents, bridging the gap between AI generalization and expert-driven logic.",
+            "whyItMatters": [
+              "Business impact: Automates the creation of complex decision frameworks, potentially reducing reliance on expensive domain experts and enabling scalable, data-driven strategy planning.",
+              "Technical impact: Demonstrates how to impose classical decision theory constraints on LLMs to improve structural consistency and reasoning reliability, a key challenge for enterprise applications."
+            ],
+            "whatToTry": {
+              "description": "If your product involves helping users make complex, multi-criteria decisions (e.g., vendor selection, risk assessment), explore using this paper's 'constrained search' concept. Instead of asking an LLM to generate a decision framework from scratch, first define the logical structure (like AHP's parent-child nodes) and use it to guide the LLM's analysis of your user's documents or inputs.",
+              "note": "This is a research paper, not a product. The core insight is the methodology of using a formal structure to constrain LLM reasoning, which you can adapt."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769413528201-v3b59i",
+                "title": "Doc2AHP: Inferring Structured Multi-Criteria Decision Models via Semantic Trees with LLMs",
+                "url": "https://arxiv.org/abs/2601.16479",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-v3b59i-0",
+                "label": "Decision-Making",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-v3b59i-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769413528201-v3b59i-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 00:00:00 -0500"
+          }
+        ],
+        "totalReadTimeMinutes": 25,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-01-25",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-01-25-morning",
@@ -342,7 +790,7 @@
   },
   {
     "date": "2026-01-24",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Jan 24",
     "briefings": [
       {
         "id": "briefing-2026-01-24-morning",
@@ -6491,1285 +6939,6 @@
           }
         ],
         "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-01-19",
-    "displayDate": "Monday, Jan 19",
-    "briefings": [
-      {
-        "id": "briefing-2026-01-19-morning",
-        "period": "morning",
-        "date": "2026-01-19",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: ORBITFLOW: Adaptive KV Cache System Boosts Long-Context LLM Serving, ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning, Europe's Sovereign AI Push Intensifies Amid US Tensions.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1768808801658-limx90",
-            "title": "ORBITFLOW: Adaptive KV Cache System Boosts Long-Context LLM Serving",
-            "tldr": "New research introduces ORBITFLOW, a dynamic KV cache management system that adapts to runtime memory demands, improving SLO attainment by up to 66% and reducing latency by 38% for long-context LLM serving.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable and cost-effective long-context AI services by reducing latency spikes and improving throughput",
-              "Technical impact: Solves a key bottleneck in production LLM serving where variable request lengths cause memory fluctuations and SLO violations"
-            ],
-            "whatToTry": {
-              "description": "If you're building long-context AI applications, evaluate how your current serving infrastructure handles memory fluctuations during token generation. Consider implementing adaptive KV cache strategies rather than static offloading approaches.",
-              "note": "This is research-stage but addresses a critical production problem - monitor for implementations in popular serving frameworks like vLLM or TGI"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-limx90",
-                "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-                "url": "https://arxiv.org/abs/2601.10729",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-limx90-0",
-                "label": "LLM Serving",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-limx90-1",
-                "label": "KV Cache",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-limx90-2",
-                "label": "Performance",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-1hjqlx",
-            "title": "ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning",
-            "tldr": "The ARC-AGI-2 competition results show refinement loops (iterative program optimization) are now the dominant approach for abstract reasoning, with top scores still only at 24% despite major labs adopting this as a standard benchmark.",
-            "whyItMatters": [
-              "ARC-AGI is now an industry standard benchmark adopted by Anthropic, Google DeepMind, OpenAI, and xAI, making it essential for evaluating reasoning capabilities.",
-              "The shift to refinement loops represents a major architectural change from single-pass inference to iterative optimization per task."
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing a simple refinement loop for your AI product's reasoning tasks - start with a basic solution, then iteratively improve it using automated feedback (e.g., test cases, LLM critique).",
-              "note": "Even simple refinement loops with 2-3 iterations can significantly improve performance on complex reasoning tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-1hjqlx",
-                "title": "ARC Prize 2025: Technical Report",
-                "url": "https://arxiv.org/abs/2601.10904",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-1hjqlx-0",
-                "label": "ARC-AGI",
-                "type": "benchmark"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-1hjqlx-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-1hjqlx-2",
-                "label": "Refinement Loops",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-wired-ai-1768808801298-71spei",
-            "title": "Europe's Sovereign AI Push Intensifies Amid US Tensions",
-            "tldr": "Wired reports Europe is accelerating efforts to build its own 'DeepSeek' equivalent as US alliances weaken, signaling a major shift toward AI sovereignty that could reshape market access and partnerships.",
-            "whyItMatters": [
-              "Business impact: New European AI champions could emerge, creating partnership opportunities but also potential market fragmentation and regulatory divergence.",
-              "Technical impact: Sovereign AI initiatives may prioritize different technical approaches (e.g., efficiency, multilingual support, privacy) than US models, opening niche opportunities."
-            ],
-            "whatToTry": {
-              "description": "Map your current US-based AI dependencies and evaluate European alternatives for critical components, especially if you serve EU customers or have data residency requirements.",
-              "note": "Watch for upcoming EU AI funding announcements and consortium formations - early partnerships could provide competitive advantages."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768808801298-71spei",
-                "title": "The Race to Build the DeepSeek of Europe Is On",
-                "url": "https://www.wired.com/story/europe-race-us-deepseek-sovereign-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768808801298-71spei-0",
-                "label": "Sovereign AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768808801298-71spei-1",
-                "label": "Market Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 07:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-tr366i",
-            "title": "New Framework Solves Multi-Agent LLM Coordination Problems",
-            "tldr": "Researchers propose CTHA, a framework that adds constraints to multi-time-scale agent architectures to prevent coordination failures, reducing error cascades by 47% and improving efficiency 2.3x.",
-            "whyItMatters": [
-              "Business impact: More reliable multi-agent systems could enable complex automation workflows with fewer failures and better resource utilization.",
-              "Technical impact: Addresses fundamental stability issues in hierarchical agent architectures, making them more practical for real-world deployment."
-            ],
-            "whatToTry": {
-              "description": "If you're building multi-agent systems with different time-scale layers (e.g., planning vs. execution agents), examine if your architecture suffers from coordination conflicts. Consider implementing message contracts between layers to formalize information flow.",
-              "note": "This is academic research - implementation details may be complex, but the core concepts (typed message packets, bounded decision spaces) are applicable."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-tr366i",
-                "title": "CTHA: Constrained Temporal Hierarchical Architecture for Stable Multi-Agent LLM Systems",
-                "url": "https://arxiv.org/abs/2601.10738",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-tr366i-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-tr366i-1",
-                "label": "AI Architecture",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-iunamx",
-            "title": "Research: Data Quality Beats Quantity for Multimodal AI",
-            "tldr": "A NeurIPS 2025 challenge winner shows that for multimodal reasoning, selecting difficult, well-aligned examples is more important than dataset size or diversity heuristics.",
-            "whyItMatters": [
-              "Challenges the 'more data is always better' assumption, suggesting cost-effective curation strategies.",
-              "Highlights 'alignment' (quality of text-image pairing) and example difficulty as key performance drivers over synthetic augmentation."
-            ],
-            "whatToTry": {
-              "description": "Audit your multimodal training data. Prioritize filtering for high-quality, challenging examples where the text and image are perfectly aligned, rather than just adding more data or using synthetic generation.",
-              "note": "This is most relevant for vision-language tasks. The 'saturation-regime' finding suggests benefits diminish once you have a solid base dataset."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-iunamx",
-                "title": "What Matters in Data Curation for Multimodal Reasoning? Insights from the DCVLR Challenge",
-                "url": "https://arxiv.org/abs/2601.10922",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-iunamx-0",
-                "label": "Multimodal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-iunamx-1",
-                "label": "Data Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-iunamx-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-izpd76",
-            "title": "New Framework Boosts AI Role-Playing with Scene Management",
-            "tldr": "Researchers introduced AdaMARP, an adaptive multi-agent framework that improves LLM role-playing through structured scene management and message formatting, enabling more coherent narratives and dynamic character interactions.",
-            "whyItMatters": [
-              "Enables more immersive and adaptable AI-driven narratives for gaming, entertainment, and interactive storytelling products",
-              "Demonstrates that smaller, specialized models (8B-14B) can outperform larger commercial LLMs on specific orchestration tasks"
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing a simple scene manager in your multi-agent systems using discrete actions like 'switch_scene' or 'add_role' to improve narrative flow.",
-              "note": "The structured message format ([Thought], (Action), Speech) could be adapted for other interactive AI applications beyond pure role-playing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-izpd76",
-                "title": "AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing",
-                "url": "https://arxiv.org/abs/2601.11007",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-izpd76-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-izpd76-1",
-                "label": "LLM Orchestration",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-izpd76-2",
-                "label": "AdaMARP",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "hn-46670181",
-            "title": "Lume 0.2: Automate macOS VM Setup for AI Agents",
-            "tldr": "Lume 0.2 adds unattended setup and an MCP server, enabling AI agents to autonomously create and manage macOS VMs for testing and development.",
-            "whyItMatters": [
-              "Enables scalable, automated testing environments for AI products targeting macOS platforms.",
-              "Reduces manual overhead for CI/CD pipelines requiring macOS-specific validation."
-            ],
-            "whatToTry": {
-              "description": "Integrate Lume's MCP server with Claude Desktop to automate VM creation for testing your AI agent's macOS compatibility.",
-              "note": "Use the unattended setup feature to pre-configure VMs with dependencies your AI product needs."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46670181",
-                "title": "Show HN: Lume 0.2 – Build and Run macOS VMs with unattended setup",
-                "url": "https://cua.ai/docs/lume/guide/getting-started/introduction",
-                "domain": "cua.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46670181-0",
-                "label": "Lume",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-46670181-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46670181-2",
-                "label": "Testing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-18T17:53:21Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768808801326-elfpes",
-            "title": "Moxie Launches Privacy-First ChatGPT Alternative",
-            "tldr": "Moxie Marlinspike (Signal founder) launched Confer, a ChatGPT-like interface that guarantees conversations won't be used for training or advertising.",
-            "whyItMatters": [
-              "Growing market demand for privacy-first AI could create new competitive advantages",
-              "Establishes privacy as a potential differentiator against major LLM providers"
-            ],
-            "whatToTry": {
-              "description": "Test Confer for internal brainstorming or sensitive business discussions where data privacy is a concern, and survey your users about their privacy preferences.",
-              "note": "Early product - evaluate reliability and feature parity before full adoption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768808801326-elfpes",
-                "title": "Moxie Marlinspike has a privacy-conscious alternative to ChatGPT",
-                "url": "https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768808801326-elfpes-0",
-                "label": "Confer",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768808801326-elfpes-1",
-                "label": "Privacy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 18 Jan 2026 15:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-gcsst4",
-            "title": "Japanese AI Agent System Tackles Vaccine Misinformation",
-            "tldr": "Researchers built a dual-purpose AI agent system that provides verified HPV vaccine information via chatbot while generating analytical reports for medical institutions from user interactions and social media data.",
-            "whyItMatters": [
-              "Demonstrates a practical RAG+agent architecture for combating misinformation at scale",
-              "Shows how to build systems that serve both individual users and institutional stakeholders simultaneously"
-            ],
-            "whatToTry": {
-              "description": "Consider implementing a similar dual-purpose architecture if you're building in health/education - create both a user-facing conversational interface AND automated reporting tools that analyze interaction patterns for institutional clients.",
-              "note": "The ReAct agent architecture with multi-tool orchestration across multiple knowledge sources proved effective here"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-gcsst4",
-                "title": "Japanese AI Agent System on Human Papillomavirus Vaccination: System Design",
-                "url": "https://arxiv.org/abs/2601.10718",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-gcsst4-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-gcsst4-1",
-                "label": "Agent Architecture",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-gcsst4-2",
-                "label": "Healthcare AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768808801658-tn37xi",
-            "title": "LLMs Learn Human Trust Signals Without Supervision",
-            "tldr": "New research shows LLMs implicitly encode psychologically-grounded trustworthiness cues from their training data, with strongest associations to fairness, certainty, and accountability.",
-            "whyItMatters": [
-              "Understanding how LLMs represent trust can help design more credible AI systems for search and recommendations",
-              "Reveals that trust signals are already present in models and can be refined rather than built from scratch"
-            ],
-            "whatToTry": {
-              "description": "Test how your AI product's outputs score on trust dimensions (fairness, certainty, accountability) using probing techniques similar to the study's methodology.",
-              "note": "Consider fine-tuning on trust-related data to refine existing trust representations rather than trying to build them from scratch"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768808801658-tn37xi",
-                "title": "Do You Trust Me? Cognitive-Affective Signatures of Trustworthiness in Large Language Models",
-                "url": "https://arxiv.org/abs/2601.10719",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-tn37xi-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-tn37xi-1",
-                "label": "Trust & Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768808801658-tn37xi-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-19-afternoon",
-        "period": "afternoon",
-        "date": "2026-01-19",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning, Europe's Sovereign AI Push Intensifies Amid US Tensions, ORBITFLOW: Adaptive KV Cache Management for Long-Context LLMs.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1768831108784-7atkxa",
-            "title": "ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning",
-            "tldr": "The ARC-AGI-2 competition results show top models scoring only 24%, with 'refinement loops' emerging as the dominant strategy for improving abstract reasoning, while frontier labs now treat ARC-AGI as a standard benchmark.",
-            "whyItMatters": [
-              "Business impact: ARC-AGI is becoming an industry standard benchmark for AI reasoning, meaning your product's reasoning capabilities will increasingly be measured against it.",
-              "Technical impact: The 'refinement loop' pattern—iteratively optimizing programs or prompts per-task—is now the most effective approach for abstract reasoning problems, outperforming raw model scaling."
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing a simple refinement loop for a complex task in your product: start with a base LLM response, then create an automated process that iteratively critiques and improves that response based on a clear feedback signal (e.g., a correctness check, a human-in-the-loop rating).",
-              "note": "The paper shows even small models (7M params) can be competitive with this approach, so focus on the refinement process, not just model size."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108784-7atkxa",
-                "title": "ARC Prize 2025: Technical Report",
-                "url": "https://arxiv.org/abs/2601.10904",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-7atkxa-0",
-                "label": "ARC-AGI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-7atkxa-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-7atkxa-2",
-                "label": "Benchmark",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-wired-ai-1768831108600-zfvltc",
-            "title": "Europe's Sovereign AI Push Intensifies Amid US Tensions",
-            "tldr": "Europe is accelerating efforts to build its own foundational AI models like DeepSeek, driven by geopolitical tensions and desire for technological sovereignty.",
-            "whyItMatters": [
-              "Creates new market opportunities for EU-based AI startups and infrastructure providers",
-              "May lead to region-specific regulations and funding programs favoring local AI development"
-            ],
-            "whatToTry": {
-              "description": "Research EU AI sovereignty grants and accelerator programs, and consider positioning your product as supporting European technological independence.",
-              "note": "Be aware this could involve navigating complex EU regulatory frameworks"
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768831108600-zfvltc",
-                "title": "The Race to Build the DeepSeek of Europe Is On",
-                "url": "https://www.wired.com/story/europe-race-us-deepseek-sovereign-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768831108600-zfvltc-0",
-                "label": "Sovereign AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768831108600-zfvltc-1",
-                "label": "Geopolitics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 07:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108783-sqi0y5",
-            "title": "ORBITFLOW: Adaptive KV Cache Management for Long-Context LLMs",
-            "tldr": "New research introduces ORBITFLOW, a system that dynamically manages KV cache memory during long-context LLM inference, improving latency and throughput by adapting to runtime memory demands.",
-            "whyItMatters": [
-              "Reduces infrastructure costs for long-context applications by improving GPU memory utilization",
-              "Enables more reliable serving of long-context models by reducing latency spikes and SLO violations"
-            ],
-            "whatToTry": {
-              "description": "If you're building long-context applications (document analysis, long conversations), benchmark your current serving setup against memory-bound scenarios and consider implementing similar adaptive KV cache strategies.",
-              "note": "This is a research paper - implementation would require significant engineering effort, but the concepts can inform your architecture decisions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108783-sqi0y5",
-                "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-                "url": "https://arxiv.org/abs/2601.10729",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-sqi0y5-0",
-                "label": "LLM Serving",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-sqi0y5-1",
-                "label": "KV Cache",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-sqi0y5-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108783-t719zf",
-            "title": "New Framework CTHA Stabilizes Multi-Agent AI Systems",
-            "tldr": "Researchers propose CTHA, a framework that adds constraints to multi-time-scale agent architectures to prevent coordination failures and improve stability, showing 47% fewer cascading failures and 2.3x better sample efficiency.",
-            "whyItMatters": [
-              "Business impact: More reliable and scalable multi-agent systems could enable complex, real-world automation with fewer failures.",
-              "Technical impact: Provides a principled method to manage communication and decision conflicts between different 'cognitive layers' in an agent hierarchy."
-            ],
-            "whatToTry": {
-              "description": "If you are designing a multi-agent system with different planning horizons (e.g., fast reactive agents + slow strategic planners), explicitly define formal 'message contracts' between layers to prevent miscommunication and decision conflicts.",
-              "note": "This is a research framework, not a ready-to-use library. The core idea of formalizing inter-layer communication is the actionable takeaway."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108783-t719zf",
-                "title": "CTHA: Constrained Temporal Hierarchical Architecture for Stable Multi-Agent LLM Systems",
-                "url": "https://arxiv.org/abs/2601.10738",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-t719zf-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-t719zf-1",
-                "label": "AI Architecture",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108784-dh9dkx",
-            "title": "Research: Data Quality Beats Quantity for Multimodal AI",
-            "tldr": "A NeurIPS 2025 challenge winner shows that for multimodal reasoning, selecting difficult, well-aligned examples is more important than increasing dataset size or using synthetic data.",
-            "whyItMatters": [
-              "Challenges the 'more data is always better' assumption, suggesting a shift in data strategy for resource-constrained teams.",
-              "Highlights that common data curation heuristics (diversity, augmentation) can be ineffective or harmful for multimodal tasks."
-            ],
-            "whatToTry": {
-              "description": "Audit your multimodal training data. Prioritize identifying and removing misaligned (e.g., irrelevant captions) or trivial examples. Focus curation effort on selecting challenging, high-quality data points that are well-aligned across modalities.",
-              "note": "This is especially relevant if you have a fixed training budget or are hitting performance plateaus with larger datasets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108784-dh9dkx",
-                "title": "What Matters in Data Curation for Multimodal Reasoning? Insights from the DCVLR Challenge",
-                "url": "https://arxiv.org/abs/2601.10922",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-dh9dkx-0",
-                "label": "Multimodal AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-dh9dkx-1",
-                "label": "Data Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-dh9dkx-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108784-6hikse",
-            "title": "AdaMARP: New Framework for Immersive AI Role-Playing",
-            "tldr": "Researchers introduced AdaMARP, an adaptive multi-agent framework that significantly improves LLM-based role-playing through better scene management and character orchestration, with small models outperforming larger commercial ones.",
-            "whyItMatters": [
-              "Enables more immersive and dynamic AI-driven narratives for gaming, entertainment, and interactive storytelling applications",
-              "Demonstrates that specialized training datasets (AdaRPSet/AdaSMSet) can make smaller models outperform much larger general-purpose LLMs in specific domains"
-            ],
-            "whatToTry": {
-              "description": "If you're building interactive narrative or character-based AI products, explore adapting AdaMARP's scene management patterns (init_scene, switch_scene, add_role) and its structured message format ([Thought], (Action), Speech) to improve multi-character orchestration.",
-              "note": "The research shows specialized training data matters more than model size for this domain - consider creating targeted datasets for your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108784-6hikse",
-                "title": "AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing",
-                "url": "https://arxiv.org/abs/2601.11007",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-6hikse-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-6hikse-1",
-                "label": "Role-Playing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108784-6hikse-2",
-                "label": "LLM Orchestration",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "hn-46670181",
-            "title": "Lume 0.2: Automate macOS VM Setup for AI Agents",
-            "tldr": "Lume 0.2 adds unattended macOS VM setup with OCR automation and MCP server integration, enabling AI agents to create and manage isolated macOS environments programmatically.",
-            "whyItMatters": [
-              "Enables scalable testing of AI agents in controlled macOS environments without manual intervention",
-              "Reduces infrastructure overhead for macOS-based AI workflows, especially for CI/CD pipelines"
-            ],
-            "whatToTry": {
-              "description": "Install Lume and test creating an unattended macOS VM for running an AI agent (like an automated testing bot) in an isolated environment. Use the MCP server to let Claude Desktop manage VMs directly.",
-              "note": "Requires Apple Silicon hardware and legitimate macOS IPSW files."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46670181",
-                "title": "Show HN: Lume 0.2 – Build and Run macOS VMs with unattended setup",
-                "url": "https://cua.ai/docs/lume/guide/getting-started/introduction",
-                "domain": "cua.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46670181-0",
-                "label": "Tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-46670181-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46670181-2",
-                "label": "DevOps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-18T17:53:21Z"
-          },
-          {
-            "id": "hn-46677106",
-            "title": "Wikipedia Launches AI Cleanup Project",
-            "tldr": "Wikipedia has launched a dedicated WikiProject to systematically review and improve AI-related articles, indicating growing recognition of AI's mainstream importance and the need for authoritative information.",
-            "whyItMatters": [
-              "Business impact: Signals AI is now a mainstream topic requiring dedicated editorial oversight, which validates market maturity.",
-              "Technical impact: Creates a centralized, community-vetted reference point for AI concepts, models, and history, improving information reliability."
-            ],
-            "whatToTry": {
-              "description": "Review the WikiProject's scope and 'to-do' list. Consider contributing if you have deep expertise in a specific AI niche to help shape public understanding.",
-              "note": "This is a long-term credibility play, not a direct marketing channel. Focus on factual accuracy, not promotion."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46677106",
-                "title": "Wikipedia: WikiProject AI Cleanup",
-                "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup",
-                "domain": "en.wikipedia.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46677106-0",
-                "label": "Community",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46677106-1",
-                "label": "Information",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T10:09:38Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108783-mfkp9w",
-            "title": "AI Agent System Combats Vaccine Misinformation with RAG + Analytics",
-            "tldr": "Japanese researchers built a dual-purpose AI agent that provides verified HPV vaccine info via chatbot while generating analytical reports for medical institutions from user interactions and social media data.",
-            "whyItMatters": [
-              "Demonstrates a practical RAG implementation for combating misinformation in sensitive domains",
-              "Shows how to combine conversational AI with population-level analytics for public health"
-            ],
-            "whatToTry": {
-              "description": "Consider implementing a similar dual-architecture approach for your product: a RAG chatbot for individual user support paired with analytics modules that extract insights from aggregated interactions.",
-              "note": "The high performance scores (4.8-4.98/5) suggest this architecture works well for sensitive, fact-based domains"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108783-mfkp9w",
-                "title": "Japanese AI Agent System on Human Papillomavirus Vaccination: System Design",
-                "url": "https://arxiv.org/abs/2601.10718",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-mfkp9w-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-mfkp9w-1",
-                "label": "Healthcare AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-mfkp9w-2",
-                "label": "Agent Architecture",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768831108783-h74a3w",
-            "title": "LLMs Learn Human Trust Signals Without Being Taught",
-            "tldr": "New research shows LLMs implicitly encode psychological cues for trustworthiness during pretraining, with strongest signals around fairness and accountability.",
-            "whyItMatters": [
-              "Understanding how LLMs judge trust can help design more transparent and credible AI products.",
-              "The findings suggest trust signals are foundational to model architecture, not just fine-tuning."
-            ],
-            "whatToTry": {
-              "description": "Review your product's training data and prompts for implicit trust signals. Test if your model's outputs align with human trust dimensions like fairness and accountability.",
-              "note": "This is foundational research - practical applications will require further development."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768831108783-h74a3w",
-                "title": "Do You Trust Me? Cognitive-Affective Signatures of Trustworthiness in Large Language Models",
-                "url": "https://arxiv.org/abs/2601.10719",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-h74a3w-0",
-                "label": "Trust & Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-h74a3w-1",
-                "label": "LLM Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768831108783-h74a3w-2",
-                "label": "Llama",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-19-evening",
-        "period": "evening",
-        "date": "2026-01-19",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: 55 US AI Startups Raised $100M+ in 2025 - Funding Map, ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning, VCs Bet on AI Security as 'Shadow AI' Emerges.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1768855527840-yx6jjs",
-            "title": "55 US AI Startups Raised $100M+ in 2025 - Funding Map",
-            "tldr": "TechCrunch tracks 55 US AI startups that secured $100M+ rounds in 2025, revealing where major capital is flowing in the competitive landscape.",
-            "whyItMatters": [
-              "Shows which AI sub-sectors (infrastructure, agents, vertical apps) are attracting massive investor confidence",
-              "Reveals the funding bar for serious competition - $100M is becoming table stakes for ambitious AI ventures"
-            ],
-            "whatToTry": {
-              "description": "Analyze the list to identify funded competitors in your space and study their positioning. Use it to benchmark your own fundraising strategy and narrative against what's convincing top-tier investors.",
-              "note": "Look beyond the headline numbers - examine the investors (VC vs. corporate) and company stages to understand strategic bets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768855527840-yx6jjs",
-                "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
-                "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-yx6jjs-0",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-yx6jjs-1",
-                "label": "venture capital",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-yx6jjs-2",
-                "label": "market analysis",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 18:06:34 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1768855531628-ri43l5",
-            "title": "ARC Prize 2025: Refinement Loops Emerge as Key to AI Reasoning",
-            "tldr": "The ARC-AGI-2 benchmark competition reveals 'refinement loops' as the dominant 2025 approach for improving AI reasoning, with top scores still only at 24% despite major labs now reporting on this industry standard.",
-            "whyItMatters": [
-              "Business impact: ARC-AGI is now an industry standard benchmark adopted by Anthropic, Google DeepMind, OpenAI, and xAI, making it essential for competitive positioning.",
-              "Technical impact: The 'refinement loop' pattern—iterative program optimization guided by feedback—is the breakthrough methodology, enabling competitive performance even with small 7M parameter models."
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing a simple refinement loop for a specific reasoning task in your product. Start with a base model (even a small one), define a clear feedback signal (e.g., correctness on a few examples), and create an automated loop that iteratively improves a program or prompt based on that signal.",
-              "note": "The key insight is that iterative refinement on a per-task basis outperforms one-shot reasoning. This is more about process than model size."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768855531628-ri43l5",
-                "title": "ARC Prize 2025: Technical Report",
-                "url": "https://arxiv.org/abs/2601.10904",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-ri43l5-0",
-                "label": "ARC-AGI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-ri43l5-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-ri43l5-2",
-                "label": "Benchmark",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768855527840-lalv46",
-            "title": "VCs Bet on AI Security as 'Shadow AI' Emerges",
-            "tldr": "VCs are investing heavily in AI security startups like Witness AI, which tackles 'shadow AI'—employee use of unapproved AI tools—by detecting and blocking threats to ensure compliance.",
-            "whyItMatters": [
-              "Business impact: Growing enterprise demand for AI governance creates a major market opportunity for security-focused startups.",
-              "Technical impact: New tools are needed to monitor and secure AI agent behavior and prevent unauthorized tool usage in production environments."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's AI tool usage. Create an approved list of tools and implement a basic monitoring system to track usage and identify potential 'shadow AI' risks.",
-              "note": "Even simple logging can reveal compliance gaps before they become security incidents."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768855527840-lalv46",
-                "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
-                "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-lalv46-0",
-                "label": "AI Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-lalv46-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 16:00:00 +0000"
-          },
-          {
-            "id": "hn-46679657",
-            "title": "Police Chief Resigns After AI Hallucination Incident",
-            "tldr": "A UK police chief resigned after an AI system generated false information that influenced a major decision, highlighting real-world consequences of AI hallucinations.",
-            "whyItMatters": [
-              "Demonstrates serious business/operational risks when AI hallucinations affect critical decisions",
-              "Shows that even established organizations can fail to implement proper AI verification safeguards"
-            ],
-            "whatToTry": {
-              "description": "Implement a 'human-in-the-loop' verification step for any AI-generated information used in decision-making processes, especially for high-stakes business operations.",
-              "note": "Consider creating an audit trail for AI-assisted decisions to track both the AI output and human verification"
-            },
-            "sources": [
-              {
-                "id": "src-hn-46679657",
-                "title": "West Midlands police chief quits over AI hallucination",
-                "url": "https://www.theregister.com/2026/01/19/copper_chief_cops_it_after/",
-                "domain": "theregister.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46679657-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46679657-1",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T14:54:02Z"
-          },
-          {
-            "id": "rss-wired-ai-1768855527859-427tvu",
-            "title": "Europe's Sovereign AI Push Intensifies Amid US Tensions",
-            "tldr": "Europe is accelerating efforts to build its own foundational AI models like DeepSeek, driven by geopolitical tensions and a desire for technological sovereignty.",
-            "whyItMatters": [
-              "Creates new market opportunities for European AI startups and infrastructure providers",
-              "May lead to region-specific regulations and funding programs favoring local AI development"
-            ],
-            "whatToTry": {
-              "description": "Research EU and national funding programs for sovereign AI development, and consider positioning your product to align with European data governance and strategic autonomy goals.",
-              "note": "This trend could create regulatory tailwinds for startups building with European models or focusing on European data compliance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768855527859-427tvu",
-                "title": "The Race to Build the DeepSeek of Europe Is On",
-                "url": "https://www.wired.com/story/europe-race-us-deepseek-sovereign-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768855527859-427tvu-0",
-                "label": "Sovereign AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768855527859-427tvu-1",
-                "label": "Geopolitics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 07:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1768855531628-rdk7js",
-            "title": "ORBITFLOW: Adaptive KV Cache Management for Long-Context LLMs",
-            "tldr": "New research introduces ORBITFLOW, a dynamic KV cache management system that improves latency and throughput for long-context LLM serving by adapting to runtime memory demands.",
-            "whyItMatters": [
-              "Reduces infrastructure costs by improving GPU memory utilization and throughput",
-              "Enables more reliable long-context applications by reducing latency spikes and SLO violations"
-            ],
-            "whatToTry": {
-              "description": "If you're building long-context applications, benchmark your current serving stack's 95th percentile latency under variable request lengths and batch sizes to identify if KV cache management is a bottleneck.",
-              "note": "This is academic research - watch for implementations in popular serving frameworks like vLLM or TGI before adopting."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768855531628-rdk7js",
-                "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-                "url": "https://arxiv.org/abs/2601.10729",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-rdk7js-0",
-                "label": "LLM Serving",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-rdk7js-1",
-                "label": "KV Cache",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-rdk7js-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768855531628-c1hhx6",
-            "title": "New Framework Solves Multi-Agent LLM Coordination Problems",
-            "tldr": "Researchers propose CTHA, a framework that adds constraints to multi-time-scale agent architectures to prevent coordination failures, showing 47% fewer cascading errors and 2.3x better sample efficiency.",
-            "whyItMatters": [
-              "Business impact: More reliable multi-agent systems could enable complex automation with fewer failures, reducing operational risk.",
-              "Technical impact: Addresses fundamental stability issues in hierarchical agent architectures, making them viable for production use."
-            ],
-            "whatToTry": {
-              "description": "If you're building multi-agent systems, review the CTHA paper's three constraint types (Message Contract, Authority Manifold, Arbiter Resolution) and consider implementing similar coordination safeguards in your own architecture.",
-              "note": "This is academic research, so implementation details may be complex, but the core concepts are directly applicable."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768855531628-c1hhx6",
-                "title": "CTHA: Constrained Temporal Hierarchical Architecture for Stable Multi-Agent LLM Systems",
-                "url": "https://arxiv.org/abs/2601.10738",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-c1hhx6-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-c1hhx6-1",
-                "label": "AI Architecture",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-c1hhx6-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1768855531628-5uqr0z",
-            "title": "Research: Data Quality Beats Quantity for Multimodal AI",
-            "tldr": "A NeurIPS 2025 challenge winner shows that for multimodal reasoning, selecting difficult, well-aligned examples is more important than dataset size or diversity heuristics.",
-            "whyItMatters": [
-              "Challenges the 'more data is always better' assumption, suggesting a shift in resource allocation from collection to curation.",
-              "Provides a practical framework (difficulty-based selection on aligned data) that can reduce training costs and improve model reliability."
-            ],
-            "whatToTry": {
-              "description": "Audit your multimodal training data. Prioritize filtering for high-quality, challenging examples where the visual and textual information are perfectly aligned, rather than simply adding more data or using synthetic augmentation.",
-              "note": "This is most relevant for tasks requiring complex reasoning, not just recognition. Test if a smaller, curated set outperforms your larger, noisier dataset."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1768855531628-5uqr0z",
-                "title": "What Matters in Data Curation for Multimodal Reasoning? Insights from the DCVLR Challenge",
-                "url": "https://arxiv.org/abs/2601.10922",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-5uqr0z-0",
-                "label": "Multimodal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-5uqr0z-1",
-                "label": "Data Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1768855531628-5uqr0z-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768855527840-azxn6a",
-            "title": "Metaverse Fades as AI Dominates Tech Focus",
-            "tldr": "TechCrunch reports the metaverse is faltering as AI captures industry attention and resources, highlighting Meta's shifting VR strategy.",
-            "whyItMatters": [
-              "Business impact: Signals where major tech investment and consumer interest are moving - away from immersive VR toward practical AI applications.",
-              "Technical impact: Resources and talent are being redirected from VR/AR development to AI infrastructure and products."
-            ],
-            "whatToTry": {
-              "description": "Audit your product roadmap and investor pitch - if you're still heavily emphasizing metaverse/VR components, consider rebalancing toward AI integration or AI-native features that solve immediate problems.",
-              "note": "This doesn't mean abandoning all immersive tech, but ensure your AI strategy is front and center."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768855527840-azxn6a",
-                "title": "Well, there goes the metaverse!",
-                "url": "https://techcrunch.com/2026/01/19/well-there-goes-the-metaverse/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768855527840-azxn6a-0",
-                "label": "Industry Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 16:00:00 +0000"
-          },
-          {
-            "id": "hn-46677106",
-            "title": "Wikipedia Launches AI Cleanup Project",
-            "tldr": "Wikipedia has launched a dedicated WikiProject to systematically identify and correct AI-generated content, as multiple HackerNews discussions show growing community concern about LLM pollution.",
-            "whyItMatters": [
-              "Business impact: Founders should anticipate increased scrutiny of AI-generated content across platforms, potentially affecting content marketing and SEO strategies.",
-              "Technical impact: This signals a shift toward platform-level detection and filtering of synthetic content, which may require more sophisticated watermarking or verification techniques."
-            ],
-            "whatToTry": {
-              "description": "Audit your own documentation, marketing copy, and user-generated content for potential AI-generated sections. Consider implementing clear labeling for AI-assisted content and testing it against emerging detection tools.",
-              "note": "This isn't just about Wikipedia - expect similar initiatives across major content platforms as AI pollution becomes a recognized problem."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46677106-0",
-                "title": "HackerNews",
-                "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup",
-                "domain": "en.wikipedia.org",
-                "type": "article"
-              },
-              {
-                "id": "src-hn-46677106-1",
-                "title": "HackerNews",
-                "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup",
-                "domain": "en.wikipedia.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46677106-0",
-                "label": "Content Moderation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46677106-1",
-                "label": "AI Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T10:09:38Z"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
       }
