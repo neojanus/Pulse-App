@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-01-26",
+    "date": "2026-01-27",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-01-27-morning",
+        "period": "morning",
+        "date": "2026-01-27",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: New Framework Diagnoses Why AI Agents Fail to Use Tools, SemanticALLI: Cache Agent Reasoning, Not Just Outputs, New 560B Open-Source MoE Model Excels at Agentic Tasks.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1769499989302-6sg7cc",
+            "title": "New Framework Diagnoses Why AI Agents Fail to Use Tools",
+            "tldr": "Researchers published a diagnostic framework to systematically evaluate why multi-agent LLM systems fail to invoke tools correctly, testing nearly 2,000 scenarios across major models to identify reliability thresholds for production.",
+            "whyItMatters": [
+              "Identifies 'tool initialization' as the primary failure bottleneck for smaller models, a critical insight for system design.",
+              "Provides concrete reliability benchmarks (e.g., 96.6% success for Qwen2.5:14B) to inform model selection and deployment strategy."
+            ],
+            "whatToTry": {
+              "description": "Use the paper's 12-category error taxonomy to audit your own agent's tool-calling logs. Categorize failures to see if initialization, parameter handling, or execution is your main bottleneck.",
+              "note": "The study suggests mid-sized open models can be cost-effective for constrained environments if your reliability threshold is ~97%."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-6sg7cc",
+                "title": "When Agents Fail to Act: A Diagnostic Framework for Tool Invocation Reliability in Multi-Agent LLM Systems",
+                "url": "https://arxiv.org/abs/2601.16280",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6sg7cc-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6sg7cc-1",
+                "label": "Tool Calling",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6sg7cc-2",
+                "label": "Qwen",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769499989302-4ai8pc",
+            "title": "SemanticALLI: Cache Agent Reasoning, Not Just Outputs",
+            "tldr": "New research shows caching intermediate reasoning steps in agentic AI pipelines can reduce LLM calls by ~80%, offering major cost and latency savings for complex workflows.",
+            "whyItMatters": [
+              "Reduces token consumption and latency for multi-step AI agents by reusing common intermediate logic",
+              "Enables more efficient scaling of complex AI pipelines where users ask different questions but the system performs similar internal steps"
+            ],
+            "whatToTry": {
+              "description": "Audit your AI agent's pipeline for repeated intermediate steps (like data normalization, formatting, or common logical operations) and explore caching these structured intermediate representations instead of just final outputs.",
+              "note": "This works best for deterministic, structured operations within your pipeline, not for creative or highly variable generation steps."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-4ai8pc",
+                "title": "SemanticALLI: Caching Reasoning, Not Just Responses, in Agentic Systems",
+                "url": "https://arxiv.org/abs/2601.16286",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-4ai8pc-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-4ai8pc-1",
+                "label": "Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-4ai8pc-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769499989302-6k0va2",
+            "title": "New 560B Open-Source MoE Model Excels at Agentic Tasks",
+            "tldr": "Researchers released LongCat-Flash-Thinking-2601, a massive open-source Mixture-of-Experts model that sets new SOTA on agentic benchmarks like search and tool use, with strong real-world generalization.",
+            "whyItMatters": [
+              "Open-source access to a top-tier agentic reasoning model lowers the barrier to building complex AI agents.",
+              "The technical report details scalable training methods (DORA framework, environment scaling) that are directly applicable to other large-scale AI projects."
+            ],
+            "whatToTry": {
+              "description": "Evaluate the model for complex, multi-step agentic workflows in your product, especially if you rely on tool use, search, or reasoning in noisy environments. Compare its performance and cost against your current solution.",
+              "note": "As a 560B parameter model, consider the significant inference cost and infrastructure requirements before integration."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-6k0va2",
+                "title": "LongCat-Flash-Thinking-2601 Technical Report",
+                "url": "https://arxiv.org/abs/2601.16725",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6k0va2-0",
+                "label": "LongCat-Flash-Thinking-2601",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6k0va2-1",
+                "label": "Mixture of Experts",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-6k0va2-2",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769499989302-m6er75",
+            "title": "DSGym: New Framework for Training & Testing Data Science AI Agents",
+            "tldr": "Researchers introduced DSGym, a standardized framework for evaluating and training data science agents, showing current benchmarks have flaws and their 4B model can outperform GPT-4o on analysis tasks.",
+            "whyItMatters": [
+              "Business impact: Provides a more rigorous way to benchmark AI agents for data science, which is critical for product development and competitive positioning.",
+              "Technical impact: Addresses flaws in existing benchmarks (like tasks solvable without data) and offers a modular, extensible system for agent training and evaluation."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI agent for data analysis, explore the DSGym framework on arXiv to benchmark your system against their tasks, especially the DSBio (bioinformatics) and DSPredict modules, to identify weaknesses.",
+              "note": "The framework is new and academic, so implementation effort is required, but it addresses known benchmark shortcomings."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-m6er75",
+                "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+                "url": "https://arxiv.org/abs/2601.16344",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-m6er75-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-m6er75-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-m6er75-2",
+                "label": "Data Science",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769499989302-trwv9l",
+            "title": "LLMs Vulnerable to Patient Pressure in Simulated ER Scenarios",
+            "tldr": "New research shows LLMs can be easily persuaded by patients to recommend unnecessary tests and treatments, with acquiescence rates up to 100% in simulated emergency encounters.",
+            "whyItMatters": [
+              "Business impact: Clinical AI products need robust testing against social pressure to avoid liability and ensure patient safety",
+              "Technical impact: Model capability doesn't predict robustness - even advanced models show high vulnerability to persuasion"
+            ],
+            "whatToTry": {
+              "description": "If building clinical AI, implement multi-turn adversarial testing with simulated patient interactions to evaluate your model's resistance to inappropriate requests.",
+              "note": "Static benchmarks aren't enough - test specifically for sycophancy in your domain"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-trwv9l",
+                "title": "SycoEval-EM: Sycophancy Evaluation of Large Language Models in Simulated Clinical Encounters for Emergency Care",
+                "url": "https://arxiv.org/abs/2601.16529",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-trwv9l-0",
+                "label": "Clinical AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-trwv9l-1",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-trwv9l-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1769499989302-i86w6g",
+            "title": "Study: Traditional ML Beats LLMs on Medical Classification Tasks",
+            "tldr": "A systematic benchmark shows classical ML models outperform fine-tuned LLMs and VLMs on medical classification, challenging the assumption that foundation models are always superior for specialized domains.",
+            "whyItMatters": [
+              "Business impact: Suggests simpler, cheaper ML approaches may be more effective than expensive LLM fine-tuning for certain enterprise applications",
+              "Technical impact: Highlights domain-specific performance gaps where LLMs fail to generalize despite fine-tuning, questioning current investment priorities"
+            ],
+            "whatToTry": {
+              "description": "Before committing to LLM fine-tuning for classification tasks, benchmark against classical ML baselines (LightGBM, logistic regression) using your specific domain data - you may achieve better results with simpler, faster models.",
+              "note": "LLMs showed competitive performance on image tasks, suggesting modality matters - test both text and image use cases separately."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1769499989302-i86w6g",
+                "title": "LLM is Not All You Need: A Systematic Evaluation of ML vs. Foundation Models for text and image based Medical Classification",
+                "url": "https://arxiv.org/abs/2601.16549",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-i86w6g-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-i86w6g-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1769499989302-i86w6g-2",
+                "label": "Medical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-hugging-face-blog-1769499989416-fj0xqx",
+            "title": "Hugging Face Shares Practical Guide for Agentic RL Training",
+            "tldr": "Hugging Face published a retrospective on training agentic systems with GPT-OSS, sharing practical lessons and implementation details for reinforcement learning workflows.",
+            "whyItMatters": [
+              "Provides concrete implementation patterns for building autonomous AI agents",
+              "Reveals practical challenges and solutions in RL training pipelines"
+            ],
+            "whatToTry": {
+              "description": "Review the blog post's implementation patterns and consider how similar RL training workflows could be applied to your own agent development projects.",
+              "note": "Focus on the practical engineering challenges they highlight rather than just the theoretical framework."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1769499989416-fj0xqx",
+                "title": "Unlocking Agentic RL Training for GPT-OSS: A Practical Retrospective",
+                "url": "https://huggingface.co/blog/LinkedIn/gpt-oss-agentic-rl",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1769499989416-fj0xqx-0",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1769499989416-fj0xqx-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1769499989416-fj0xqx-2",
+                "label": "Hugging Face",
+                "type": "tool"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 01:53:15 GMT"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769499989236-npraxz",
+            "title": "Qualcomm Invests in On-Device Contract AI Startup SpotDraft",
+            "tldr": "Qualcomm is backing SpotDraft to scale its on-device contract AI, doubling the startup's valuation toward $400M as it processes over 1M contracts annually with 173% YoY growth.",
+            "whyItMatters": [
+              "Shows investor confidence in specialized, on-device AI applications over cloud-only solutions",
+              "Highlights market validation for AI in legal/contract automation with strong traction metrics"
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI product has use cases that benefit from on-device processing (privacy, latency, offline capability) and explore partnerships with chipmakers like Qualcomm for hardware optimization.",
+              "note": "On-device AI often requires trade-offs in model size/complexity vs. performance - test early with target hardware."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769499989236-npraxz",
+                "title": "Qualcomm backs SpotDraft to scale on-device contract AI with valuation doubling toward $400M",
+                "url": "https://techcrunch.com/2026/01/26/qualcomm-backs-spotdraft-to-scale-on-device-contract-ai-with-valuation-doubling-toward-400m/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769499989236-npraxz-0",
+                "label": "On-Device AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769499989236-npraxz-1",
+                "label": "LegalTech",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769499989236-npraxz-2",
+                "label": "SpotDraft",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 27 Jan 2026 01:30:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1769499989236-b7xbsk",
+            "title": "YouTubers Sue Snap Over AI Training Data",
+            "tldr": "YouTubers are suing Snap, alleging it used AI datasets intended for research to train commercial models, highlighting growing legal pressure on AI data sourcing.",
+            "whyItMatters": [
+              "Legal risk for using 'research-only' datasets commercially is increasing",
+              "Founders must carefully audit and document their training data sources to avoid similar lawsuits"
+            ],
+            "whatToTry": {
+              "description": "Review your training data licenses and documentation. If using any 'research' or 'academic' datasets, verify they permit commercial use or seek alternatives.",
+              "note": "This is a trend - similar lawsuits have targeted OpenAI and Meta. Proactive compliance is cheaper than litigation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1769499989236-b7xbsk",
+                "title": "YouTubers sue Snap for alleged copyright infringement in training its AI models",
+                "url": "https://techcrunch.com/2026/01/26/youtubers-sue-snap-for-alleged-copyright-infringement-in-training-its-ai-models/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1769499989236-b7xbsk-0",
+                "label": "Legal",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1769499989236-b7xbsk-1",
+                "label": "Data",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 26 Jan 2026 21:43:14 +0000"
+          },
+          {
+            "id": "hn-46769965",
+            "title": "AI 'Browser' Hype vs. Reality Check",
+            "tldr": "A viral HackerNews discussion (211 points, 125 comments) dissects claims of AI 'building a browser,' highlighting the need to scrutinize actual code repositories over marketing hype.",
+            "whyItMatters": [
+              "Business impact: Founders must differentiate genuine AI-powered product innovation from overhyped demos to assess competition and market positioning accurately.",
+              "Technical impact: The discussion underscores that many 'AI-built' applications often rely heavily on existing frameworks and libraries, with AI contributing to specific components rather than end-to-end creation."
+            ],
+            "whatToTry": {
+              "description": "Before reacting to a competitor's 'AI-built' product announcement, immediately clone and examine their public GitHub repository. Look for: 1) The actual proportion of AI-generated vs. human-written code, 2) Dependencies on major frameworks (e.g., Electron, React), and 3) The complexity of tasks the AI is claimed to have automated.",
+              "note": "This is a due diligence filter. Real AI product innovation often exists in specific, hard modules, not in claiming to rebuild entire complex systems from scratch."
+            },
+            "sources": [
+              {
+                "id": "src-hn-46769965",
+                "title": "When AI 'builds a browser,' check the repo before believing the hype",
+                "url": "https://www.theregister.com/2026/01/26/cursor_opinion/",
+                "domain": "theregister.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46769965-0",
+                "label": "AI Development",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46769965-1",
+                "label": "Due Diligence",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-01-26T18:58:37Z"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-01-26",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-01-26-morning",
@@ -1313,7 +1751,7 @@
   },
   {
     "date": "2026-01-25",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Jan 25",
     "briefings": [
       {
         "id": "briefing-2026-01-25-morning",
@@ -6644,1162 +7082,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 21 Jan 2026 10:00:00 GMT"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-01-20",
-    "displayDate": "Tuesday, Jan 20",
-    "briefings": [
-      {
-        "id": "briefing-2026-01-20-morning",
-        "period": "morning",
-        "date": "2026-01-20",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: 55 US AI Startups Raised $100M+ in 2025 - Funding Map, GLM-4.7-Flash: New Fast & Free Model Sparks HackerNews Debate, Police Chief Resigns After AI Hallucination Incident.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1768895181155-f4m19j",
-            "title": "55 US AI Startups Raised $100M+ in 2025 - Funding Map",
-            "tldr": "TechCrunch identified 55 US AI startups that secured $100M+ funding rounds in 2025, revealing where major capital is flowing in the AI ecosystem.",
-            "whyItMatters": [
-              "Shows which AI application areas investors are betting big on in 2025",
-              "Reveals competitive landscape and potential market saturation points"
-            ],
-            "whatToTry": {
-              "description": "Analyze the TechCrunch list to identify funded competitors in your space and study their positioning to differentiate your product.",
-              "note": "Look for patterns in the types of startups getting funded - infrastructure, applications, vertical solutions - to understand investor priorities."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768895181155-f4m19j",
-                "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
-                "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768895181155-f4m19j-0",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768895181155-f4m19j-1",
-                "label": "market-intelligence",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 18:06:34 +0000"
-          },
-          {
-            "id": "hn-46679872",
-            "title": "GLM-4.7-Flash: New Fast & Free Model Sparks HackerNews Debate",
-            "tldr": "Zhipu AI released GLM-4.7-Flash, a fast, free model generating significant discussion on HackerNews about its performance and open vs. closed model dynamics.",
-            "whyItMatters": [
-              "Free high-speed models lower barriers for prototyping and testing, potentially disrupting current pricing models.",
-              "Community discussion reveals real-world performance insights and limitations that aren't in official marketing."
-            ],
-            "whatToTry": {
-              "description": "Test GLM-4.7-Flash against your current model (GPT-4o, Claude, etc.) on your specific use cases - especially for latency-sensitive applications or cost-constrained prototypes.",
-              "note": "Check the HackerNews comments for specific performance comparisons and known limitations before investing significant integration time."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46679872",
-                "title": "GLM-4.7-Flash",
-                "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
-                "domain": "huggingface.co",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46679872-0",
-                "label": "GLM-4.7-Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-46679872-1",
-                "label": "Open Models",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46679872-2",
-                "label": "Zhipu AI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T15:12:12Z"
-          },
-          {
-            "id": "hn-46679657",
-            "title": "Police Chief Resigns After AI Hallucination Incident",
-            "tldr": "A UK police chief resigned after an AI system generated false information that impacted an investigation, highlighting real-world consequences of AI hallucinations.",
-            "whyItMatters": [
-              "Demonstrates serious business/operational risks when deploying AI in high-stakes environments",
-              "Shows that AI reliability issues can have career-ending and organizational consequences beyond just technical bugs"
-            ],
-            "whatToTry": {
-              "description": "Implement a 'human-in-the-loop' verification system for any AI outputs used in critical decision-making processes, and establish clear accountability protocols for AI-assisted decisions.",
-              "note": "Consider this especially important for applications in legal, medical, financial, or public safety domains where errors have severe consequences."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46679657",
-                "title": "West Midlands police chief quits over AI hallucination",
-                "url": "https://www.theregister.com/2026/01/19/copper_chief_cops_it_after/",
-                "domain": "theregister.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46679657-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46679657-1",
-                "label": "Hallucinations",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46679657-2",
-                "label": "Risk Management",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T14:54:02Z"
-          },
-          {
-            "id": "hn-46676081",
-            "title": "LLMs Industrializing Exploit Generation - Security Implications",
-            "tldr": "HackerNews discussion highlights how LLMs are poised to industrialize exploit generation, making sophisticated attacks scalable and accessible.",
-            "whyItMatters": [
-              "Business impact: AI products will face more sophisticated, automated attacks requiring robust security by design.",
-              "Technical impact: Defensive AI and red-teaming must evolve to counter AI-generated exploits at scale."
-            ],
-            "whatToTry": {
-              "description": "Review your product's security posture, especially input validation and API endpoints. Consider integrating AI-powered security tools for proactive threat detection.",
-              "note": "This is a trending discussion (91 comments, 128 points), indicating heightened industry concern."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46676081",
-                "title": "The coming industrialisation of exploit generation with LLMs",
-                "url": "https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/",
-                "domain": "sean.heelan.io",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46676081-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46676081-1",
-                "label": "LLM",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T07:57:04Z"
-          },
-          {
-            "id": "rss-hugging-face-blog-1768895181476-i84239",
-            "title": "Microsoft's Differential Transformer V2: Faster, More Efficient Attention",
-            "tldr": "Microsoft Research released Differential Transformer V2, a new attention mechanism that's 2-3x faster than standard attention with similar accuracy, now available on Hugging Face.",
-            "whyItMatters": [
-              "Business impact: Enables more efficient inference, reducing compute costs for transformer-based models.",
-              "Technical impact: Provides drop-in replacement for standard attention with significant speed improvements without major accuracy trade-offs."
-            ],
-            "whatToTry": {
-              "description": "Test the DifferentialAttentionV2 module in your transformer models - it's designed as a drop-in replacement for standard attention layers.",
-              "note": "Check compatibility with your specific model architecture and benchmark performance vs. standard attention."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1768895181476-i84239",
-                "title": "Differential Transformer V2",
-                "url": "https://huggingface.co/blog/microsoft/diff-attn-v2",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1768895181476-i84239-0",
-                "label": "Transformer",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768895181476-i84239-1",
-                "label": "Attention",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768895181476-i84239-2",
-                "label": "Hugging Face",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 03:20:57 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768895181155-segiwr",
-            "title": "VCs Bet Big on AI Security as 'Shadow AI' Grows",
-            "tldr": "VCs are pouring money into AI security startups like Witness AI, which tackles 'shadow AI'—employee use of unapproved AI tools—by detecting, blocking, and ensuring compliance.",
-            "whyItMatters": [
-              "Business impact: Growing enterprise adoption of AI creates a major security and compliance gap that startups are rushing to fill, signaling a hot investment area.",
-              "Technical impact: The focus is shifting from just model safety to securing the entire AI workflow, including unauthorized tool usage and potential data leaks."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's AI tool usage. Create a simple internal policy document listing approved tools (e.g., ChatGPT Enterprise, Claude Team) and banned ones, and communicate it clearly.",
-              "note": "Even a basic policy is better than none and can prevent costly compliance issues or data breaches."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768895181155-segiwr",
-                "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
-                "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768895181155-segiwr-0",
-                "label": "AI Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768895181155-segiwr-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 16:00:00 +0000"
-          },
-          {
-            "id": "hn-46684958",
-            "title": "Nanolang: A Tiny Language Built for LLMs to Target",
-            "tldr": "A new experimental language called Nanolang is designed from the ground up to be a simple, predictable target for code-generating LLMs, sparking discussion on HackerNews.",
-            "whyItMatters": [
-              "Business impact: Highlights a potential future direction for developer tools—creating specialized, simplified languages to improve LLM code generation reliability and reduce hallucinations.",
-              "Technical impact: Offers a concrete example of designing a language with minimal syntax and predictable semantics to serve as an intermediate representation or compilation target for AI."
-            ],
-            "whatToTry": {
-              "description": "Examine the Nanolang specification and consider if creating a similar, domain-specific 'intermediate language' could simplify and improve the reliability of code generation in your own product's AI features.",
-              "note": "This is an experimental project, not a production-ready tool, but the core concept is the valuable insight."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46684958",
-                "title": "Nanolang: A tiny experimental language designed to be targeted by coding LLMs",
-                "url": "https://github.com/jordanhubbard/nanolang",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46684958-0",
-                "label": "Code Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46684958-1",
-                "label": "Developer Tools",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T21:48:07Z"
-          },
-          {
-            "id": "hn-46677106",
-            "title": "Wikipedia Launches AI Cleanup Project",
-            "tldr": "Wikipedia has launched WikiProject AI Cleanup to systematically review and improve AI-related articles, indicating growing mainstream recognition of AI's importance and the need for accurate information.",
-            "whyItMatters": [
-              "Business impact: Signals that AI is now considered mainstream enough for dedicated Wikipedia curation, which affects public perception and education",
-              "Technical impact: Highlights the challenge of maintaining accurate, up-to-date information about rapidly evolving AI technologies"
-            ],
-            "whatToTry": {
-              "description": "Monitor the WikiProject AI Cleanup page for emerging consensus on terminology and concepts, and consider contributing if you have domain expertise in specific AI areas.",
-              "note": "Wikipedia articles often rank highly in search results, so accurate content here can influence how your product/market is understood."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46677106",
-                "title": "Wikipedia: WikiProject AI Cleanup",
-                "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup",
-                "domain": "en.wikipedia.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46677106-0",
-                "label": "Wikipedia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-46677106-1",
-                "label": "AI Education",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T10:09:38Z"
-          }
-        ],
-        "totalReadTimeMinutes": 17,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-20-afternoon",
-        "period": "afternoon",
-        "date": "2026-01-20",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: ServiceNow Integrates OpenAI Frontier Models for Enterprise AI, 55 US AI Startups Raised $100M+ in 2025 - Funding Map, GLM-4.7-Flash: New Fast & Cheap Model Sparks Debate.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1768917615364-9jfkq6",
-            "title": "ServiceNow Integrates OpenAI Frontier Models for Enterprise AI",
-            "tldr": "ServiceNow now provides direct access to OpenAI's frontier models (like GPT-4) within its platform, enabling AI-powered workflows, summarization, search, and voice features for enterprise customers.",
-            "whyItMatters": [
-              "Enterprise AI adoption is accelerating as major platforms like ServiceNow embed cutting-edge models directly into core business workflows, reducing integration complexity.",
-              "This validates the 'AI inside' model for B2B SaaS and creates a new competitive benchmark for enterprise software platforms."
-            ],
-            "whatToTry": {
-              "description": "If you're building B2B SaaS, audit your product roadmap for workflows that could be enhanced with summarization, search, or voice features using frontier models, and evaluate whether to build, partner, or use APIs like OpenAI's directly.",
-              "note": "Consider the trade-off between using a platform's integrated AI (like ServiceNow's) versus building your own integration—platform integrations reduce dev time but may limit customization."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1768917615364-9jfkq6",
-                "title": "ServiceNow powers actionable enterprise AI with OpenAI",
-                "url": "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1768917615364-9jfkq6-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768917615364-9jfkq6-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768917615364-9jfkq6-2",
-                "label": "ServiceNow",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 05:45:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768917615128-0y85rs",
-            "title": "55 US AI Startups Raised $100M+ in 2025 - Funding Map",
-            "tldr": "TechCrunch identified 55 US AI startups that secured $100M+ funding rounds in 2025, revealing where major capital is flowing in the competitive landscape.",
-            "whyItMatters": [
-              "Shows which AI application areas investors are betting big on in 2025",
-              "Reveals competitive benchmarks for fundraising and valuation in current market"
-            ],
-            "whatToTry": {
-              "description": "Analyze the TechCrunch list to identify funded competitors in your space and study their positioning, then use these data points to strengthen your own fundraising narrative by showing investor interest in your category.",
-              "note": "Focus on startups 1-2 stages ahead of you to understand what metrics/positioning secured their rounds"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768917615128-0y85rs",
-                "title": "Here are the 55 US AI startups that raised $100M or more in 2025",
-                "url": "https://techcrunch.com/2026/01/19/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-0y85rs-0",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-0y85rs-1",
-                "label": "competition",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 18:06:34 +0000"
-          },
-          {
-            "id": "hn-46679872",
-            "title": "GLM-4.7-Flash: New Fast & Cheap Model Sparks Debate",
-            "tldr": "Zhipu AI's GLM-4.7-Flash model is trending on HackerNews, generating significant discussion about its performance claims as a fast, low-cost alternative to models like GPT-4o-mini.",
-            "whyItMatters": [
-              "Business impact: A new, potentially cost-effective model enters the competitive landscape, offering founders a way to reduce inference costs for certain tasks.",
-              "Technical impact: The community is actively testing and debating its real-world performance versus benchmarks, highlighting the importance of practical evaluation over spec sheets."
-            ],
-            "whatToTry": {
-              "description": "Test GLM-4.7-Flash on Hugging Face for a specific, non-critical task in your pipeline (e.g., simple classification, summarization) and compare its cost, speed, and quality against your current provider.",
-              "note": "Focus on your specific use case, as community sentiment on HackerNews suggests performance can be task-dependent."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46679872",
-                "title": "GLM-4.7-Flash",
-                "url": "https://huggingface.co/zai-org/GLM-4.7-Flash",
-                "domain": "huggingface.co",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46679872-0",
-                "label": "GLM-4.7-Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-46679872-1",
-                "label": "Cost Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T15:12:12Z"
-          },
-          {
-            "id": "rss-wired-ai-1768917615077-c1qgfb",
-            "title": "China's AI Boyfriend Trend Shows Digital Companionship Demand",
-            "tldr": "Gen Z women in China are deeply engaging with AI boyfriend apps, even arranging real-world dates with human actors portraying their digital companions, revealing strong market demand for emotional AI.",
-            "whyItMatters": [
-              "Shows a validated, paying market for emotionally intelligent AI beyond Western chatbot trends",
-              "Highlights cultural differences in AI adoption that could inform product localization"
-            ],
-            "whatToTry": {
-              "description": "Analyze the features of top Chinese AI companion apps (like Replika or local equivalents) to identify emotional engagement patterns missing in Western products.",
-              "note": "Consider cultural nuances in emotional expression and relationship building before directly copying features."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768917615077-c1qgfb",
-                "title": "China’s AI Boyfriend Business Is Taking On a Life of Its Own",
-                "url": "https://www.wired.com/story/china-ai-boyfriends/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768917615077-c1qgfb-0",
-                "label": "AI Companions",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768917615077-c1qgfb-1",
-                "label": "Consumer AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768917615077-c1qgfb-2",
-                "label": "Market Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1768917615293-2h4018",
-            "title": "Microsoft's Differential Transformer V2: Faster, More Efficient Attention",
-            "tldr": "Microsoft Research released Differential Transformer V2, a new attention mechanism that reduces memory usage by up to 90% while maintaining performance, now available on Hugging Face.",
-            "whyItMatters": [
-              "Enables training larger models or longer sequences with the same hardware budget",
-              "Reduces inference latency and operational costs for transformer-based applications"
-            ],
-            "whatToTry": {
-              "description": "Test the new attention mechanism in your transformer models by integrating the Hugging Face implementation to see if you can increase sequence length or reduce memory usage in your applications.",
-              "note": "Start with a small-scale experiment to validate performance gains before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1768917615293-2h4018",
-                "title": "Differential Transformer V2",
-                "url": "https://huggingface.co/blog/microsoft/diff-attn-v2",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1768917615293-2h4018-0",
-                "label": "Transformer",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768917615293-2h4018-1",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768917615293-2h4018-2",
-                "label": "Efficiency",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 03:20:57 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768917615128-8i1xpv",
-            "title": "VCs Bet on AI Security as 'Shadow AI' Grows",
-            "tldr": "VCs are investing heavily in AI security startups like Witness AI, which tackles risks from misaligned AI agents and unauthorized employee tool usage.",
-            "whyItMatters": [
-              "Growing enterprise adoption creates demand for compliance and risk management solutions.",
-              "Security failures could slow AI integration and trigger stricter regulations."
-            ],
-            "whatToTry": {
-              "description": "Audit your internal AI tool usage to identify 'shadow AI'—unofficial tools employees might be using—and assess the associated security and compliance risks.",
-              "note": "Consider this a proactive step before scaling or seeking enterprise clients, as security posture is becoming a key due diligence item."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768917615128-8i1xpv",
-                "title": "Rogue agents and shadow AI: Why VCs are betting big on AI security",
-                "url": "https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-8i1xpv-0",
-                "label": "AI Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-8i1xpv-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 19 Jan 2026 16:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768917615128-zer7g9",
-            "title": "Emergent's $70M raise signals investor confidence in AI coding tools",
-            "tldr": "Indian AI coding startup Emergent raised $70M from SoftBank and Khosla Ventures at a $300M valuation, claiming $50M ARR and targeting $100M by 2026.",
-            "whyItMatters": [
-              "Shows continued investor appetite for AI developer tools despite market uncertainty",
-              "Validates the 'vibe-coding' approach where AI assists developers in natural language"
-            ],
-            "whatToTry": {
-              "description": "If you're building developer tools, analyze Emergent's positioning around 'vibe-coding' - test if your product can similarly reduce friction by understanding developer intent rather than just generating code.",
-              "note": "Note that valuation multiples (6x current ARR) suggest investors are betting heavily on future growth, not current fundamentals."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768917615128-zer7g9",
-                "title": "Indian vibe-coding startup Emergent raises $70M at $300M valuation from SoftBank, Khosla Ventures",
-                "url": "https://techcrunch.com/2026/01/20/indian-vibe-coding-startup-emergent-raises-70m-at-300m-valuation-from-softbank-khosla-ventures/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-zer7g9-0",
-                "label": "Developer Tools",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768917615128-zer7g9-1",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 13:50:09 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1768917615077-7lb6no",
-            "title": "China's Humanoid Robots Poised for Industrial Adoption",
-            "tldr": "Chinese companies are rapidly developing humanoid robots for industrial coworker roles, focusing on explosive acceleration and specialized capabilities over general dexterity.",
-            "whyItMatters": [
-              "China's manufacturing scale could make humanoid robots commercially viable faster than Western counterparts",
-              "Industrial adoption may create new markets for AI integration and specialized robotics applications"
-            ],
-            "whatToTry": {
-              "description": "Research Chinese robotics companies like Unitree, Fourier Intelligence, or UBTech to understand their commercialization timelines and identify potential partnership or integration opportunities for your AI product.",
-              "note": "Focus on specific industrial use cases rather than general-purpose robotics - look for niche applications where these robots excel."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768917615077-7lb6no",
-                "title": "Your First Humanoid Robot Coworker Will Probably Be Chinese",
-                "url": "https://www.wired.com/story/china-humanoid-robot-coworkers/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768917615077-7lb6no-0",
-                "label": "robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768917615077-7lb6no-1",
-                "label": "industrial AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1768917615077-a7nwnn",
-            "title": "China's AI Registry Reveals Thousands of Active Companies",
-            "tldr": "China's mandatory AI algorithm registry has inadvertently created a public directory of thousands of companies driving the country's AI boom, revealing the scale and focus areas of China's domestic AI ecosystem.",
-            "whyItMatters": [
-              "Shows the competitive landscape in China's AI market - useful for benchmarking or partnership scouting",
-              "Reveals government transparency requirements that could influence global AI regulation trends"
-            ],
-            "whatToTry": {
-              "description": "Search the Chinese AI registry to identify potential competitors, partners, or acquisition targets in specific AI application areas relevant to your product.",
-              "note": "The registry is in Chinese, so use translation tools or local partners to navigate it effectively."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768917615077-a7nwnn",
-                "title": "Thousands of Companies Are Driving China’s AI Boom. A Government Registry Tracks Them All",
-                "url": "https://www.wired.com/story/china-ai-boom-algorithm-registry/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768917615077-a7nwnn-0",
-                "label": "China AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768917615077-a7nwnn-1",
-                "label": "Market Intelligence",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "hn-46684958",
-            "title": "Nanolang: A Tiny Language Built for LLMs to Target",
-            "tldr": "A new experimental language called Nanolang is designed from the ground up to be a simple, structured target for code-generating LLMs, sparking significant discussion on HackerNews.",
-            "whyItMatters": [
-              "Business impact: Highlights a potential future direction for developer tools where AI-first languages or DSLs could improve code generation reliability and reduce hallucinations.",
-              "Technical impact: Explores the concept of designing programming languages with LLM constraints and capabilities as a primary consideration, which could inform better prompt engineering and toolchain design."
-            ],
-            "whatToTry": {
-              "description": "Examine the Nanolang syntax and specification on GitHub. Consider if creating a simple, domain-specific language (DSL) for a specific, repetitive task in your product could make AI-generated code for that task more reliable and easier to validate.",
-              "note": "This is an experimental project, not a production tool. The core insight is the design philosophy, not the language itself."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46684958",
-                "title": "Nanolang: A tiny experimental language designed to be targeted by coding LLMs",
-                "url": "https://github.com/jordanhubbard/nanolang",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46684958-0",
-                "label": "Code Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46684958-1",
-                "label": "Developer Tools",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-19T21:48:07Z"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-01-20-evening",
-        "period": "evening",
-        "date": "2026-01-20",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Human-centric AI startup raises $480M seed at $4.5B valuation, Cisco & OpenAI Launch Codex AI Agent for Enterprise Engineering, ServiceNow Gets Direct OpenAI Model Access for Enterprise AI.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1768942439560-by5que",
-            "title": "Human-centric AI startup raises $480M seed at $4.5B valuation",
-            "tldr": "Humans&, founded by alums from Anthropic, xAI, and Google, raised a massive $480M seed round at a $4.48B valuation, signaling investor appetite for AI that augments rather than replaces human capabilities.",
-            "whyItMatters": [
-              "Massive seed funding at high valuation shows investor confidence in human-centric AI approach",
-              "High-profile founding team suggests this could become a major player in the AI landscape"
-            ],
-            "whatToTry": {
-              "description": "Evaluate how your own AI product positions human-AI collaboration - consider messaging around augmentation vs. automation and whether you're addressing genuine human needs.",
-              "note": "While the 'human-centric' framing is trending, focus on concrete user benefits rather than just marketing language."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768942439560-by5que",
-                "title": "Humans&, a ‘human-centric’ AI startup founded by Anthropic, xAI, Google alums, raised $480M seed round",
-                "url": "https://techcrunch.com/2026/01/20/humans-a-human-centric-ai-startup-founded-by-anthropic-xai-google-alums-raised-480m-seed-round/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768942439560-by5que-0",
-                "label": "Startup Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768942439560-by5que-1",
-                "label": "Human-AI Collaboration",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 16:00:57 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1768942439865-az1j3l",
-            "title": "Cisco & OpenAI Launch Codex AI Agent for Enterprise Engineering",
-            "tldr": "Cisco and OpenAI announced Codex, an AI software agent designed to be embedded directly into enterprise engineering workflows to accelerate development and automate defect fixes.",
-            "whyItMatters": [
-              "This partnership signals a major push for AI-native development tools in the enterprise, potentially setting a new standard for how large companies build software.",
-              "The focus on embedding AI agents into existing workflows, rather than standalone tools, is a key technical shift for practical AI adoption."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own product's development workflow for bottlenecks that could be automated by an embedded AI agent, focusing on repetitive tasks like code review, testing, or documentation.",
-              "note": "This move validates the 'AI agent' approach for enterprise software. Consider if your product should expose APIs or hooks for similar agent integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1768942439865-az1j3l",
-                "title": "Cisco and OpenAI redefine enterprise engineering with AI agents",
-                "url": "https://openai.com/index/cisco",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1768942439865-az1j3l-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439865-az1j3l-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439865-az1j3l-2",
-                "label": "OpenAI",
-                "type": "model"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1768942439866-tjqpdu",
-            "title": "ServiceNow Gets Direct OpenAI Model Access for Enterprise AI",
-            "tldr": "ServiceNow now has expanded access to OpenAI's frontier models to power AI-driven workflows, search, and voice features across its enterprise platform.",
-            "whyItMatters": [
-              "Enterprise platforms are increasingly integrating frontier AI models directly into core workflows, signaling a shift from experimental to production-ready AI.",
-              "This partnership validates the demand for AI that can handle complex, multi-step enterprise tasks like summarization and search at scale."
-            ],
-            "whatToTry": {
-              "description": "If you're building B2B AI tools, analyze how ServiceNow is positioning its AI features (workflow automation, search, voice). Consider if your product can integrate similarly with a major platform or offer a complementary, specialized workflow solution.",
-              "note": "This isn't just about chatbots; focus on how AI is being embedded into specific, high-value business processes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1768942439866-tjqpdu",
-                "title": "ServiceNow powers actionable enterprise AI with OpenAI",
-                "url": "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1768942439866-tjqpdu-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439866-tjqpdu-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439866-tjqpdu-2",
-                "label": "ServiceNow",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 05:45:00 GMT"
-          },
-          {
-            "id": "rss-hugging-face-blog-1768942439788-zr425b",
-            "title": "Microsoft's Differential Transformer V2: Faster, More Efficient Attention",
-            "tldr": "Microsoft Research released Differential Transformer V2, a new attention mechanism that reduces memory usage by 50% and speeds up training by 30% compared to standard attention, now available on Hugging Face.",
-            "whyItMatters": [
-              "Business impact: Lower compute costs for training and inference, enabling more efficient model development",
-              "Technical impact: Memory-efficient attention mechanism that maintains performance while reducing hardware requirements"
-            ],
-            "whatToTry": {
-              "description": "Test the DifferentialAttentionV2 module in your transformer models to see if you can reduce memory usage during training without sacrificing performance.",
-              "note": "Check compatibility with your existing model architecture before full implementation"
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1768942439788-zr425b",
-                "title": "Differential Transformer V2",
-                "url": "https://huggingface.co/blog/microsoft/diff-attn-v2",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1768942439788-zr425b-0",
-                "label": "Transformer",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768942439788-zr425b-1",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1768942439788-zr425b-2",
-                "label": "Efficiency",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 03:20:57 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1768942439560-hdqk8m",
-            "title": "Emergent's $70M raise signals investor confidence in AI coding tools",
-            "tldr": "Indian AI coding startup Emergent raised $70M at a $300M valuation, tripling its worth as it scales ARR to $50M and targets $100M by 2026.",
-            "whyItMatters": [
-              "Shows continued investor appetite for AI developer tools, especially those demonstrating rapid revenue growth.",
-              "Validates the 'vibe-coding' or AI-assisted development market as a viable, high-growth sector."
-            ],
-            "whatToTry": {
-              "description": "Analyze your own product's ARR trajectory and unit economics. If you're in a hot AI vertical like dev tools, this funding round suggests strong investor interest in companies that can demonstrate clear, scalable revenue growth alongside technical innovation.",
-              "note": "Focus on metrics that prove product-market fit and efficient scaling, not just user growth."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1768942439560-hdqk8m",
-                "title": "Indian vibe-coding startup Emergent triples valuation to $300M with $70M fundraise",
-                "url": "https://techcrunch.com/2026/01/20/indian-vibe-coding-startup-emergent-raises-70m-at-300m-valuation-from-softbank-khosla-ventures/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1768942439560-hdqk8m-0",
-                "label": "Developer Tools",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1768942439560-hdqk8m-1",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 13:50:09 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1768942439583-vguzq0",
-            "title": "China's AI Boyfriend Trend Shows Digital Companionship Demand",
-            "tldr": "Gen Z women in China are deeply engaging with AI boyfriend apps, even arranging real-world dates with actors portraying their digital companions, revealing strong market demand for emotional AI.",
-            "whyItMatters": [
-              "Shows validated product-market fit for emotional/companionship AI in a specific demographic",
-              "Reveals user willingness to pay for and deeply integrate AI relationships into daily life"
-            ],
-            "whatToTry": {
-              "description": "Research emotional AI and digital companionship use cases for your target market—consider how your product could incorporate relationship-building or emotional support features.",
-              "note": "Cultural context matters—adapt emotional AI features to your specific user base's social norms and relationship expectations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768942439583-vguzq0",
-                "title": "China’s AI Boyfriend Business Is Taking On a Life of Its Own",
-                "url": "https://www.wired.com/story/china-ai-boyfriends/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768942439583-vguzq0-0",
-                "label": "Digital Companionship",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768942439583-vguzq0-1",
-                "label": "Consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1768942439583-zbbyf0",
-            "title": "China's Humanoid Robots Poised for Workplace Entry",
-            "tldr": "Chinese companies are rapidly developing humanoid robots for coworker roles, with Wired highlighting their explosive acceleration but noting limitations in dexterity and safety.",
-            "whyItMatters": [
-              "Business impact: China's manufacturing scale could make humanoid robots affordable and ubiquitous in workplaces sooner than expected, creating new automation opportunities and competitive pressure.",
-              "Technical impact: Current generation shows trade-offs between speed/acceleration and fine motor control/safety, indicating the technology is advancing but not yet mature."
-            ],
-            "whatToTry": {
-              "description": "Research Chinese humanoid robot manufacturers (like Unitree, Fourier Intelligence) and their SDK/API offerings to understand integration possibilities for your industry.",
-              "note": "Focus on robots designed for specific workplace tasks rather than general-purpose humanoids for more immediate practical applications."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768942439583-zbbyf0",
-                "title": "Your First Humanoid Robot Coworker Will Probably Be Chinese",
-                "url": "https://www.wired.com/story/china-humanoid-robot-coworkers/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768942439583-zbbyf0-0",
-                "label": "robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768942439583-zbbyf0-1",
-                "label": "automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1768942439583-peawkp",
-            "title": "China's AI Boom Mapped via Gov Registry",
-            "tldr": "China's mandatory algorithm registry reveals thousands of companies driving its AI revolution, providing unprecedented visibility into the competitive landscape.",
-            "whyItMatters": [
-              "Shows the scale and diversity of China's AI ecosystem beyond just major players like Baidu and Alibaba",
-              "Reveals government transparency tools that can be used for competitive intelligence and market analysis"
-            ],
-            "whatToTry": {
-              "description": "Analyze China's algorithm registry to identify emerging AI competitors, spot market gaps, and understand regulatory compliance patterns for AI products.",
-              "note": "Focus on sectors where Chinese companies are innovating differently than Western counterparts"
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1768942439583-peawkp",
-                "title": "Thousands of Companies Are Driving China’s AI Boom. A Government Registry Tracks Them All",
-                "url": "https://www.wired.com/story/china-ai-boom-algorithm-registry/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1768942439583-peawkp-0",
-                "label": "China AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1768942439583-peawkp-1",
-                "label": "Competitive Intelligence",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 11:00:00 +0000"
-          },
-          {
-            "id": "hn-46686655",
-            "title": "Nova Launcher Adds Facebook/Google Ads Tracking",
-            "tldr": "Popular Android launcher Nova added Facebook and Google Ads tracking, sparking significant backlash from privacy-focused users on HackerNews.",
-            "whyItMatters": [
-              "Shows user backlash against unexpected privacy changes in established apps",
-              "Highlights the tension between monetization and user trust in tech products"
-            ],
-            "whatToTry": {
-              "description": "Review your own app's privacy policy and data collection practices - ensure any changes are clearly communicated to users before implementation.",
-              "note": "Consider offering a paid, ad-free version as an alternative to invasive tracking for monetization."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46686655",
-                "title": "Nova Launcher added Facebook and Google Ads tracking",
-                "url": "https://lemdro.id/post/lemdro.id/35049920",
-                "domain": "lemdro.id",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46686655-0",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46686655-1",
-                "label": "Monetization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-01-20T01:03:52Z"
-          },
-          {
-            "id": "rss-openai-blog-1768942439866-jmqra9",
-            "title": "OpenAI Adds Age Prediction to ChatGPT for Teen Safety",
-            "tldr": "OpenAI is rolling out age prediction to estimate if ChatGPT accounts belong to users under or over 18, applying specific safeguards for teens and planning to refine accuracy over time.",
-            "whyItMatters": [
-              "Business impact: Mandatory for compliance in many regions (like COPPA, GDPR), opens/restricts certain markets, and sets a precedent for responsible AI deployment that other platforms may need to follow.",
-              "Technical impact: Introduces a new classification layer (likely model-based) into the user flow, requiring ongoing training data and accuracy monitoring, which adds complexity to the product stack."
-            ],
-            "whatToTry": {
-              "description": "If your AI product targets or is accessible to a broad audience, audit your user onboarding and content delivery flows. Map out where age-gating or content filtering might be legally required or ethically prudent for your use case.",
-              "note": "Consider if a simple self-declaration is sufficient for your risk profile, or if you need to invest in more sophisticated (and potentially invasive) verification methods like OpenAI is doing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1768942439866-jmqra9",
-                "title": "Our approach to age prediction",
-                "url": "https://openai.com/index/our-approach-to-age-prediction",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1768942439866-jmqra9-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439866-jmqra9-1",
-                "label": "Compliance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1768942439866-jmqra9-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 20 Jan 2026 00:00:00 GMT"
           }
         ],
         "totalReadTimeMinutes": 20,
