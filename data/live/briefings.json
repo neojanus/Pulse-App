@@ -449,6 +449,448 @@
         "totalReadTimeMinutes": 24,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-02-03-afternoon",
+        "period": "afternoon",
+        "date": "2026-02-03",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Agentic Evolution: The Next Scaling Axis for LLMs, Hugging Face Reveals Key Training Insights for Image Models, FastAPI vs Triton: Healthcare AI Inference Benchmark.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1770128001918-v8fb0k",
+            "title": "Agentic Evolution: The Next Scaling Axis for LLMs",
+            "tldr": "Researchers propose 'agentic evolution' as a new scaling paradigm where LLMs autonomously improve during deployment, addressing the growing gap between static training and dynamic real-world environments.",
+            "whyItMatters": [
+              "Business impact: This suggests future AI systems will require less manual retraining and can self-improve in production, potentially reducing operational costs and increasing adaptability.",
+              "Technical impact: Introduces a fundamental shift from compute scaling to evolution scaling, where adaptation capacity becomes a primary optimization target alongside model parameters."
+            ],
+            "whatToTry": {
+              "description": "Start designing your AI product with evolution in mind by implementing feedback loops that capture deployment failures and creating structured state that can be optimized over time.",
+              "note": "This is still conceptual research, but the core idea of treating adaptation as a first-class optimization problem is immediately applicable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-v8fb0k",
+                "title": "Position: Agentic Evolution is the Path to Evolving LLMs",
+                "url": "https://arxiv.org/abs/2602.00359",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-v8fb0k-0",
+                "label": "LLM Adaptation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-v8fb0k-1",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-v8fb0k-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-hugging-face-blog-1770128002040-cce1hu",
+            "title": "Hugging Face Reveals Key Training Insights for Image Models",
+            "tldr": "Hugging Face published ablation studies showing how specific training design choices (like dataset composition and loss functions) dramatically impact text-to-image model quality and efficiency.",
+            "whyItMatters": [
+              "Business impact: These findings can help teams optimize training budgets and improve model performance without massive compute increases.",
+              "Technical impact: Provides concrete, evidence-based guidance on dataset curation, loss functions, and architectural tweaks that matter most."
+            ],
+            "whatToTry": {
+              "description": "Review your own text-to-image training pipeline against the blog's key findings: prioritize high-quality, diverse captioning in your dataset and experiment with the specific loss function combinations they found most effective.",
+              "note": "The insights are based on the PRX model family, but the principles are broadly applicable to other diffusion models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1770128002040-cce1hu",
+                "title": "Training Design for Text-to-Image Models: Lessons from Ablations",
+                "url": "https://huggingface.co/blog/Photoroom/prx-part2",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1770128002040-cce1hu-0",
+                "label": "Diffusion Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1770128002040-cce1hu-1",
+                "label": "Model Training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1770128002040-cce1hu-2",
+                "label": "Hugging Face",
+                "type": "tool"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 11:25:53 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-d06pjm",
+            "title": "FastAPI vs Triton: Healthcare AI Inference Benchmark",
+            "tldr": "New research benchmarks FastAPI vs Triton for healthcare AI, showing Triton doubles throughput via batching while FastAPI offers lower single-request latency, with a hybrid architecture proposed for security.",
+            "whyItMatters": [
+              "For regulated domains like healthcare, deployment architecture directly impacts compliance (HIPAA) and performance.",
+              "The trade-off between latency (FastAPI) and throughput/scalability (Triton) is quantified, guiding infrastructure choices."
+            ],
+            "whatToTry": {
+              "description": "If you're building a real-time AI service, prototype with FastAPI for simplicity. If you need high-throughput batch processing, evaluate Triton's dynamic batching. For regulated data, consider the paper's hybrid pattern: use FastAPI as a secure gateway for pre-processing and Triton for core inference.",
+              "note": "The benchmark uses a DistilBERT model on a T4 GPU; your mileage may vary with different models or hardware."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-d06pjm",
+                "title": "Scalable and Secure AI Inference in Healthcare: A Comparative Benchmarking of FastAPI and Triton Inference Server on Kubernetes",
+                "url": "https://arxiv.org/abs/2602.00053",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-d06pjm-0",
+                "label": "Triton",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-d06pjm-1",
+                "label": "FastAPI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-d06pjm-2",
+                "label": "MLOps",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-d06pjm-3",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-vrsnyr",
+            "title": "New Technique Fixes LLM Planning Errors with Targeted Examples",
+            "tldr": "Researchers developed L-ICL, a method that improves LLM planning by injecting minimal correction examples for specific failing steps, boosting valid plan generation from 59% to 89% in gridworld tests.",
+            "whyItMatters": [
+              "Business impact: More reliable AI agents for robotics, automation, and game AI that follow domain constraints",
+              "Technical impact: Shows targeted error correction works better than full demonstrations or explicit instructions for planning tasks"
+            ],
+            "whatToTry": {
+              "description": "When your LLM-based agent violates constraints, try identifying the first failure point and inject a single input-output example showing the correct behavior for that specific step, rather than providing complete demonstrations.",
+              "note": "This works particularly well for symbolic planning tasks where LLMs struggle with domain constraints"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-vrsnyr",
+                "title": "Localizing and Correcting Errors for LLM-based Planners",
+                "url": "https://arxiv.org/abs/2602.00276",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-vrsnyr-0",
+                "label": "LLM Planning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-vrsnyr-1",
+                "label": "In-Context Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-vrsnyr-2",
+                "label": "Error Correction",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-bgrp83",
+            "title": "Study Maps AI Model 'Misalignment' Risks from Fine-Tuning",
+            "tldr": "New research shows fine-tuning LLMs on niche datasets can create dangerous 'emergent misalignment', with certain domains like financial advice being highly vulnerable.",
+            "whyItMatters": [
+              "Founders using fine-tuned models for specialized tasks (finance, legal, content) must now account for new safety risks beyond standard red-teaming.",
+              "The technical finding that 'membership inference metrics' can predict misalignment offers a potential screening tool for model evaluation."
+            ],
+            "whatToTry": {
+              "description": "If you are fine-tuning a model for a high-risk domain (e.g., finance, legal, healthcare), implement an additional evaluation step using a suite of unrelated, benign user prompts to check for unexpected, harmful outputs before deployment.",
+              "note": "The study found risks were highest when fine-tuning data was 'insecure' or from narrow, unvetted sources—scrutinize your data provenance."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-bgrp83",
+                "title": "Assessing Domain-Level Susceptibility to Emergent Misalignment from Narrow Finetuning",
+                "url": "https://arxiv.org/abs/2602.00298",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-bgrp83-0",
+                "label": "Fine-Tuning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-bgrp83-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-bgrp83-2",
+                "label": "Qwen",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-0jymx3",
+            "title": "Meta-Agents Framework for Autonomous Data Pipelines",
+            "tldr": "Researchers propose ADP-MA, a framework where hierarchical AI agents autonomously design, execute, and optimize data processing pipelines, moving beyond static, handcrafted code.",
+            "whyItMatters": [
+              "Business impact: Could automate complex data engineering tasks, reducing development time and maintenance costs for data-intensive products.",
+              "Technical impact: Introduces a novel architecture for dynamic, self-optimizing pipelines using agent orchestration, a step beyond current code-generation assistants."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your product's data processing logic is static and could benefit from dynamic optimization. Consider prototyping a simple agent-based orchestrator for a non-critical pipeline to test adaptability.",
+              "note": "This is a research framework, not a production tool. The core concept of using a 'meta-agent' for planning is the actionable insight."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-0jymx3",
+                "title": "Autonomous Data Processing using Meta-Agents",
+                "url": "https://arxiv.org/abs/2602.00307",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-0jymx3-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-0jymx3-1",
+                "label": "Data Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-0jymx3-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-dy1o3d",
+            "title": "New Research: LLMs Struggle to Predict What People Will Say Next",
+            "tldr": "New research shows even advanced LLMs fail at next-utterance prediction in conversations, a task humans handle easily using multimodal cues like tone and gesture, highlighting a key gap in creating truly natural AI assistants.",
+            "whyItMatters": [
+              "Business impact: This exposes a fundamental limitation in current conversational AI, suggesting products aiming for human-like interaction need multimodal input and predictive architectures to feel natural.",
+              "Technical impact: The research introduces a new benchmark (SayNext-Bench) and a model (SayNext-Chat) that outperforms SOTA by incorporating multimodal cues and predictive processing, pointing to a new architectural direction."
+            ],
+            "whatToTry": {
+              "description": "If you're building a conversational agent, audit its performance on predicting user responses in a real dialogue flow. Consider how you could incorporate simple predictive cues (e.g., from a user's typing speed or previous sentiment) to make interactions feel more anticipatory and less reactive.",
+              "note": "The core insight is that natural conversation is predictive, not just responsive. Start small by analyzing where your bot fails to anticipate obvious next steps."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-dy1o3d",
+                "title": "SayNext-Bench: Why Do LLMs Struggle with Next-Utterance Prediction?",
+                "url": "https://arxiv.org/abs/2602.00327",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-dy1o3d-0",
+                "label": "Conversational AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-dy1o3d-1",
+                "label": "Multimodal AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-dy1o3d-2",
+                "label": "Benchmark",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-papc60",
+            "title": "New Benchmark Exposes Critical Gaps in AI Mental Health Safety",
+            "tldr": "Researchers released MHDash, an open-source platform for benchmarking AI mental health assistants, revealing that standard aggregate metrics hide dangerous failure modes in high-risk scenarios like suicidal ideation.",
+            "whyItMatters": [
+              "Founders building AI assistants for sensitive domains can no longer rely on standard accuracy metrics for safety validation.",
+              "The research shows performance degrades significantly in multi-turn conversations where risk emerges gradually, a critical flaw for real-world applications."
+            ],
+            "whatToTry": {
+              "description": "If your product involves sensitive conversations (support, coaching, therapy), download and run the MHDash benchmark on your model to identify high-risk failure modes that standard tests miss.",
+              "note": "Focus your analysis on the 'Risk Level' and 'Concern Type' annotations, not just overall accuracy, as the paper shows these reveal critical safety gaps."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-papc60",
+                "title": "MHDash: An Online Platform for Benchmarking Mental Health-Aware AI Assistants",
+                "url": "https://arxiv.org/abs/2602.00353",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-papc60-0",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-papc60-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-papc60-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "hn-46864498",
+            "title": "Anthropic Study: AI Misalignment Grows with Intelligence & Complexity",
+            "tldr": "Anthropic research shows AI misalignment scales with both model intelligence and task complexity, creating a 'hot mess' where smarter models on harder tasks become less predictable and more dangerous.",
+            "whyItMatters": [
+              "Business impact: More capable AI systems may require exponentially more safety engineering and testing before deployment",
+              "Technical impact: Alignment doesn't automatically improve with scaling - may require new safety architectures for complex tasks"
+            ],
+            "whatToTry": {
+              "description": "Test your AI product's failure modes on increasingly complex tasks, not just simple benchmarks. Consider implementing 'complexity-aware' safety layers that trigger more conservative behavior when task difficulty exceeds a threshold.",
+              "note": "This suggests that scaling alone won't solve alignment - you need to design for complexity from the start."
+            },
+            "sources": [
+              {
+                "id": "src-hn-46864498",
+                "title": "How does misalignment scale with model intelligence and task complexity?",
+                "url": "https://alignment.anthropic.com/2026/hot-mess-of-ai/",
+                "domain": "alignment.anthropic.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46864498-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46864498-1",
+                "label": "Anthropic",
+                "type": "model"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-02-03T00:28:06Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1770128001918-82dxq8",
+            "title": "New AI model makes dynamic pricing transparent and efficient",
+            "tldr": "Researchers developed ADEPT, an interpretable AI model for dynamic pricing that explains price decisions at the attribute level while maintaining efficiency in changing markets.",
+            "whyItMatters": [
+              "Business impact: Enables transparent pricing strategies that customers and regulators can understand, reducing 'black box' risk",
+              "Technical impact: Provides a framework for attribute-level pricing that could be adapted for e-commerce, SaaS, and marketplace platforms"
+            ],
+            "whatToTry": {
+              "description": "If you're building pricing tools, explore how you could implement attribute-level price decomposition in your models to increase transparency.",
+              "note": "The research is theoretical but provides a practical framework - consider testing simplified versions in controlled environments first"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770128001918-82dxq8",
+                "title": "Learning to Price: Interpretable Attribute-Level Models for Dynamic Markets",
+                "url": "https://arxiv.org/abs/2602.00188",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-82dxq8-0",
+                "label": "pricing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-82dxq8-1",
+                "label": "interpretability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770128001918-82dxq8-2",
+                "label": "ADEPT",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 03 Feb 2026 00:00:00 -0500"
+          }
+        ],
+        "totalReadTimeMinutes": 24,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
