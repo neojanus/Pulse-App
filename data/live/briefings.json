@@ -439,6 +439,438 @@
         "totalReadTimeMinutes": 25,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-02-09-afternoon",
+        "period": "afternoon",
+        "date": "2026-02-09",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Research: Autoregressive LLMs Have Intrinsic Stability Limits, 4B-Parameter AI Agents Rival Larger Models with New Training Method, Jackpot: Cheaper RL for LLMs via Smart Rollout Sampling.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1770647640986-v4g72d",
+            "title": "Research: Autoregressive LLMs Have Intrinsic Stability Limits",
+            "tldr": "New research shows LLMs have fundamental stability limits in long reasoning chains, with performance decaying exponentially with execution length, requiring structural changes like DAGs for long-horizon tasks.",
+            "whyItMatters": [
+              "Business impact: This explains why complex multi-step AI products fail unexpectedly and suggests new architectural approaches are needed for reliable long-reasoning applications.",
+              "Technical impact: Reveals that task complexity isn't the only issue - autoregressive generation itself has inherent instability that requires discrete segmentation and graph-like structures."
+            ],
+            "whatToTry": {
+              "description": "When designing multi-step reasoning systems, test for performance cliffs at different chain lengths and consider implementing explicit segmentation points or DAG-based execution structures rather than pure linear chains.",
+              "note": "This applies to any product requiring long reasoning chains - from complex planning agents to multi-step analysis tools."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-v4g72d",
+                "title": "Intrinsic Stability Limits of Autoregressive Reasoning: Structural Consequences for Long-Horizon Execution",
+                "url": "https://arxiv.org/abs/2602.06413",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-v4g72d-0",
+                "label": "LLM Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-v4g72d-1",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-lha18t",
+            "title": "4B-Parameter AI Agents Rival Larger Models with New Training Method",
+            "tldr": "AgentCPM-Explore demonstrates that 4B-parameter models can match or exceed larger models on agent benchmarks through specialized training that addresses catastrophic forgetting, reward noise, and reasoning degradation.",
+            "whyItMatters": [
+              "Enables cost-effective deployment of capable AI agents on edge devices and in resource-constrained environments",
+              "Challenges the assumption that larger models are always better for agentic tasks, opening new architectural possibilities"
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your agent tasks could run on smaller, specialized models instead of large general-purpose LLMs to reduce inference costs and latency.",
+              "note": "The key is specialized training - not just using off-the-shelf small models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-lha18t",
+                "title": "AgentCPM-Explore: Realizing Long-Horizon Deep Exploration for Edge-Scale Agents",
+                "url": "https://arxiv.org/abs/2602.06485",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-lha18t-0",
+                "label": "AgentCPM-Explore",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-lha18t-1",
+                "label": "Edge AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-lha18t-2",
+                "label": "Model Training",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-ev5lk9",
+            "title": "Jackpot: Cheaper RL for LLMs via Smart Rollout Sampling",
+            "tldr": "New research introduces Jackpot, a framework using Optimal Budget Rejection Sampling (OBRS) to stabilize RL training when using a cheaper model for rollouts, potentially cutting LLM alignment costs.",
+            "whyItMatters": [
+              "Business impact: Could significantly reduce the compute cost and time for RL-based LLM alignment, a major bottleneck in product development.",
+              "Technical impact: Provides a principled method to decouple rollout generation from policy optimization, addressing a key instability in efficient RL."
+            ],
+            "whatToTry": {
+              "description": "If you're planning RLHF/RL training for a model, evaluate if you can use a smaller, cheaper model (like a 7B) to generate rollouts for a larger target model using the OBRS principle described in the paper to cut costs.",
+              "note": "This is a research paper; implementation is non-trivial. Focus on the core idea of using rejection sampling to correct for distribution mismatch between rollout and policy models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-ev5lk9",
+                "title": "Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor-Policy Mismatch Reinforcement Learning",
+                "url": "https://arxiv.org/abs/2602.06107",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-ev5lk9-0",
+                "label": "RLHF",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-ev5lk9-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-ev5lk9-2",
+                "label": "Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-yvmta2",
+            "title": "New Survey Maps LLM Reasoning Failures & Fixes",
+            "tldr": "A comprehensive new survey categorizes persistent reasoning failures in LLMs—from fundamental architectural flaws to domain-specific issues—and offers mitigation strategies.",
+            "whyItMatters": [
+              "Understanding these failure modes is critical for building reliable AI products that depend on logical or intuitive reasoning.",
+              "The survey provides a structured framework to diagnose and potentially mitigate weaknesses in your own model's outputs."
+            ],
+            "whatToTry": {
+              "description": "Use the survey's failure categories (fundamental, application-specific, robustness) as a checklist to audit your product's core reasoning tasks. For each category, design a small set of test prompts to see if your model exhibits similar failures.",
+              "note": "The linked GitHub repository likely contains a collection of research and benchmarks you can use for testing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-yvmta2",
+                "title": "Large Language Model Reasoning Failures",
+                "url": "https://arxiv.org/abs/2602.06176",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-yvmta2-0",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-yvmta2-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-yvmta2-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-h99ovg",
+            "title": "Study Tests if LLMs Act as Rational Agents in High-Stakes Decisions",
+            "tldr": "New research examines whether LLMs act as rational utility maximizers with coherent beliefs, finding they often fail falsifiable tests of rationality in medical diagnostic scenarios.",
+            "whyItMatters": [
+              "Business impact: Critical for founders building AI agents in healthcare, finance, or legal domains where decision logic must be interpretable and rational.",
+              "Technical impact: Reveals fundamental limitations in using LLMs as autonomous decision-makers when probabilistic reasoning and stable preferences are required."
+            ],
+            "whatToTry": {
+              "description": "If building agentic systems for high-stakes decisions, implement explicit belief tracking and consistency checks outside the LLM, or use the paper's methodology to test your own models.",
+              "note": "Consider this a warning against treating LLM outputs as coherent probabilistic beliefs in critical applications."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-h99ovg",
+                "title": "Do LLMs Act Like Rational Agents? Measuring Belief Coherence in Probabilistic Decision Making",
+                "url": "https://arxiv.org/abs/2602.06286",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-h99ovg-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-h99ovg-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-h99ovg-2",
+                "label": "LLM Reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-r0raes",
+            "title": "New Benchmark Exposes Critical Weaknesses in Large Reasoning Models",
+            "tldr": "GrAlgoBench, a new benchmark using graph algorithm problems, reveals that current Large Reasoning Models (LRMs) fail dramatically on long-context tasks and waste compute on ineffective self-verification.",
+            "whyItMatters": [
+              "Business impact: This exposes a fundamental limitation in current AI reasoning, suggesting products relying on complex, multi-step logic may fail silently on harder problems.",
+              "Technical impact: The research identifies two key failure modes: catastrophic accuracy drop with longer context (>120 nodes) and 'over-thinking' where models generate verbose, unhelpful reasoning."
+            ],
+            "whatToTry": {
+              "description": "If your product relies on an LRM for complex reasoning, test it on a graph problem with >100 nodes to stress-test its long-context and logical deduction capabilities. Use the GrAlgoBench code to create your own internal validation suite.",
+              "note": "This is a research benchmark, not a product bug. The finding suggests you should be skeptical of model performance claims on tasks requiring long, structured reasoning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-r0raes",
+                "title": "Exposing Weaknesses of Large Reasoning Models through Graph Algorithm Problems",
+                "url": "https://arxiv.org/abs/2602.06319",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-r0raes-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-r0raes-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-r0raes-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-t5yl8z",
+            "title": "Trifuse: Better GUI Agents Without Expensive Fine-Tuning",
+            "tldr": "New research introduces Trifuse, a framework that improves AI's ability to understand and interact with graphical user interfaces by fusing attention, text, and icon data, reducing the need for costly labeled datasets.",
+            "whyItMatters": [
+              "Reduces the data and cost barrier for building GUI automation agents.",
+              "Improves reliability of 'attention-based' methods, making zero-shot or few-shot GUI interaction more viable."
+            ],
+            "whatToTry": {
+              "description": "If you're building an agent that interacts with GUIs (e.g., for RPA, testing, or accessibility), evaluate if your current model's grounding can be improved by incorporating OCR text extraction and simple icon captioning as additional input signals, rather than just relying on vision-language model fine-tuning.",
+              "note": "The core insight is multi-modal fusion; you don't need to implement Trifuse itself to test if adding textual/icon context helps your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-t5yl8z",
+                "title": "Trifuse: Enhancing Attention-Based GUI Grounding via Multimodal Fusion",
+                "url": "https://arxiv.org/abs/2602.06351",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-t5yl8z-0",
+                "label": "GUI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-t5yl8z-1",
+                "label": "Multimodal AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-t5yl8z-2",
+                "label": "Computer Vision",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-dfccz9",
+            "title": "New DEPO Method Cuts Reasoning Model Training Costs 2x",
+            "tldr": "Researchers propose Difficulty-Estimated Policy Optimization (DEPO), a new training framework that reduces rollout costs by 2x for large reasoning models by filtering low-utility samples before expensive computation.",
+            "whyItMatters": [
+              "Reduces computational costs for training reasoning models like DeepSeek-R1, making advanced AI more accessible",
+              "Improves training stability by focusing resources on samples with actual learning potential"
+            ],
+            "whatToTry": {
+              "description": "Monitor the official release of DEPO code and consider its applicability if you're training or fine-tuning reasoning-focused models with reinforcement learning.",
+              "note": "This is a research paper - implementation details and practical integration will depend on the eventual code release."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-dfccz9",
+                "title": "Difficulty-Estimated Policy Optimization",
+                "url": "https://arxiv.org/abs/2602.06375",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-dfccz9-0",
+                "label": "Training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-dfccz9-1",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-dfccz9-2",
+                "label": "Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770647640986-vctras",
+            "title": "New Tokenizer QA-Token Unlocks Noisy Data for AI Training",
+            "tldr": "Researchers developed QA-Token, a quality-aware tokenization method that improves foundation model performance on noisy real-world data like genomics and finance by incorporating data reliability into vocabulary construction.",
+            "whyItMatters": [
+              "Enables more effective use of noisy, real-world datasets (genomics, finance) for pre-training, potentially reducing data cleaning costs.",
+              "Shows significant performance gains (6.7pp F1 in genomics, 30% Sharpe in finance) and 15% token reduction at scale with no inference overhead."
+            ],
+            "whatToTry": {
+              "description": "If you work with noisy sequential data (text, time-series, bioinformatics), explore integrating quality metrics into your data preprocessing pipeline. For a quick test, try weighting your existing tokenizer's training data by a simple quality score (e.g., data source reliability, noise estimate).",
+              "note": "This is a research paper; implementation details are complex. The core insight—weighting token learning by data quality—is the actionable takeaway."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770647640986-vctras",
+                "title": "Unlocking Noisy Real-World Corpora for Foundation Model Pre-Training via Quality-Aware Tokenization",
+                "url": "https://arxiv.org/abs/2602.06394",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-vctras-0",
+                "label": "Tokenization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-vctras-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770647640986-vctras-2",
+                "label": "Data Quality",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "hn-46941640",
+            "title": "TSMC Expands AI Chip Production to Japan",
+            "tldr": "TSMC is building advanced AI semiconductors in Japan, diversifying its manufacturing base away from Taiwan amid geopolitical tensions.",
+            "whyItMatters": [
+              "Reduces supply chain concentration risk for AI hardware",
+              "Could lead to more stable pricing and availability for AI chips"
+            ],
+            "whatToTry": {
+              "description": "Review your AI hardware procurement strategy and consider diversifying suppliers or exploring Japanese-manufactured chips for future projects.",
+              "note": "This move signals long-term supply chain shifts rather than immediate availability changes."
+            },
+            "sources": [
+              {
+                "id": "src-hn-46941640",
+                "title": "TSMC to make advanced AI semiconductors in Japan",
+                "url": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5",
+                "domain": "apnews.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-46941640-0",
+                "label": "hardware",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-46941640-1",
+                "label": "supply-chain",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-02-09T04:38:14Z"
+          }
+        ],
+        "totalReadTimeMinutes": 26,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
