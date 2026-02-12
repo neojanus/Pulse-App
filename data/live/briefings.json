@@ -1,7 +1,455 @@
 [
   {
-    "date": "2026-02-11",
+    "date": "2026-02-12",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-02-12-morning",
+        "period": "morning",
+        "date": "2026-02-12",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: OpenAI Disbands Mission Alignment Team, New Medical LLM Benchmark Solves Data Contamination Problem, Found-RL: Bridge VLMs & RL for Real-Time Autonomous Driving.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1770883350635-yszf7v",
+            "title": "OpenAI Disbands Mission Alignment Team",
+            "tldr": "OpenAI has disbanded its mission alignment team, which focused on safe and trustworthy AI development, reassigning members throughout the company.",
+            "whyItMatters": [
+              "Signals a potential shift in OpenAI's internal priorities away from dedicated safety research",
+              "May indicate that safety considerations are being integrated into product teams rather than siloed"
+            ],
+            "whatToTry": {
+              "description": "Review your own product's safety and alignment processes. If you have a dedicated team, consider whether their work is better integrated into core development. If you don't, this is a prompt to explicitly define who is responsible for ethical considerations.",
+              "note": "This move could be interpreted as deprioritizing safety or as a more effective integration strategy—watch for follow-up statements from OpenAI."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1770883350635-yszf7v",
+                "title": "OpenAI disbands mission alignment team",
+                "url": "https://techcrunch.com/2026/02/11/openai-disbands-mission-alignment-team-which-focused-on-safe-and-trustworthy-ai-development/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-yszf7v-0",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-yszf7v-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-yszf7v-2",
+                "label": "Governance",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 11 Feb 2026 21:57:18 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350776-skjx0z",
+            "title": "New Medical LLM Benchmark Solves Data Contamination Problem",
+            "tldr": "Researchers released LiveMedBench, a continuously updated medical benchmark that prevents data contamination by using recent real-world cases, addressing a major flaw in current LLM evaluations.",
+            "whyItMatters": [
+              "Business impact: Founders building healthcare AI can now test models more reliably, avoiding inflated performance claims that could lead to regulatory or safety issues.",
+              "Technical impact: The benchmark's automated rubric evaluation provides more accurate assessment than LLM-as-a-Judge methods, crucial for clinical correctness."
+            ],
+            "whatToTry": {
+              "description": "If you're building medical AI products, test your models against LiveMedBench to get contamination-free performance metrics before clinical deployment.",
+              "note": "The benchmark includes 2,756 real-world cases across 38 specialties, making it comprehensive for validation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350776-skjx0z",
+                "title": "LiveMedBench: A Contamination-Free Medical Benchmark for LLMs with Automated Rubric Evaluation",
+                "url": "https://arxiv.org/abs/2602.10367",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-skjx0z-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-skjx0z-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-skjx0z-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350776-83at0g",
+            "title": "Found-RL: Bridge VLMs & RL for Real-Time Autonomous Driving",
+            "tldr": "New research presents Found-RL, a platform that efficiently integrates Vision-Language Models (VLMs) into Reinforcement Learning training for autonomous driving, solving latency bottlenecks to enable real-time learning.",
+            "whyItMatters": [
+              "Business impact: Enables more efficient and interpretable AI training for robotics and autonomous systems, potentially reducing compute costs and development time.",
+              "Technical impact: Solves the critical latency problem of using large foundation models in high-frequency RL loops via asynchronous batch inference and novel distillation techniques."
+            ],
+            "whatToTry": {
+              "description": "If you're working on robotics or simulation-based AI, explore the core idea of decoupling heavy model inference (like from a VLM) from your main training loop. Implement an asynchronous service that batches queries to your large model and feeds pre-computed 'expert suggestions' back into the RL agent's training process.",
+              "note": "The key innovation is architectural, not just algorithmic. Focus on the pipeline design that separates slow, semantic reasoning from fast, reactive training."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350776-83at0g",
+                "title": "Found-RL: foundation model-enhanced reinforcement learning for autonomous driving",
+                "url": "https://arxiv.org/abs/2602.10458",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-83at0g-0",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-83at0g-1",
+                "label": "Vision-Language Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-83at0g-2",
+                "label": "Robotics",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350777-sbzw0n",
+            "title": "New GFlowNet Framework Generates Text Using Dynamic Spans",
+            "tldr": "Researchers propose FoSS, a GFlowNet framework that generates text using retrieved text spans of varying lengths instead of fixed tokens, improving diversity and quality in generation tasks.",
+            "whyItMatters": [
+              "Business impact: Could enable more creative, diverse, and factually grounded text generation for applications like marketing copy, storytelling, or content creation.",
+              "Technical impact: Moves beyond token-by-token generation to a more flexible, graph-based approach, potentially improving coherence and reducing repetition in long-form AI outputs."
+            ],
+            "whatToTry": {
+              "description": "Monitor the development of this research and similar span-based generation techniques. If you're working on creative or long-form text generation, consider how a 'dynamic vocabulary' of concepts, rather than just tokens, could improve your product's output.",
+              "note": "This is a research paper, not a released tool. The core idea—generating with flexible text chunks—is the actionable insight."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350777-sbzw0n",
+                "title": "Flow of Spans: Generalizing Language Models to Dynamic Span-Vocabulary via GFlowNets",
+                "url": "https://arxiv.org/abs/2602.10583",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-sbzw0n-0",
+                "label": "GFlowNets",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-sbzw0n-1",
+                "label": "Text Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-sbzw0n-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350777-t27ph7",
+            "title": "Study: Chain-of-Thought Reasoning Can Hurt AI's Social Skills",
+            "tldr": "New research finds that forcing LLMs to use step-by-step 'reasoning' can actually degrade their performance on Theory of Mind tasks, revealing they often rely on shortcuts rather than genuine deduction.",
+            "whyItMatters": [
+              "Business impact: Understanding when reasoning helps vs. hurts is crucial for building AI assistants that interact naturally with humans.",
+              "Technical impact: The study reveals specific failure modes where longer reasoning chains collapse performance, challenging assumptions about chain-of-thought prompting."
+            ],
+            "whatToTry": {
+              "description": "Test your AI's social reasoning tasks with constrained reasoning lengths (e.g., limit to 2-3 reasoning steps) and compare performance against longer chain-of-thought prompts.",
+              "note": "Consider implementing adaptive reasoning where the model can choose when to use step-by-step thinking vs. direct answers for social tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350777-t27ph7",
+                "title": "To Think or Not To Think, That is The Question for Large Reasoning Models in Theory of Mind Tasks",
+                "url": "https://arxiv.org/abs/2602.10625",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t27ph7-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t27ph7-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t27ph7-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350777-lpwco6",
+            "title": "New RL Method Fixes Probability-Reward Mismatch in Generative Recs",
+            "tldr": "Researchers propose V-STAR, a reinforcement learning framework that solves exploration and advantage compression issues in generative recommendation models by using value-guided tree search and sibling-relative advantages.",
+            "whyItMatters": [
+              "Improves recommendation quality by preventing premature pruning of high-reward items",
+              "Enables more efficient RL training for autoregressive recommendation systems"
+            ],
+            "whatToTry": {
+              "description": "If you're building generative recommendation systems, explore implementing value-guided sampling instead of pure beam search to improve exploration of low-probability, high-reward items.",
+              "note": "This is research-stage but addresses a fundamental RL problem - consider testing similar exploration strategies in your own models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350777-lpwco6",
+                "title": "Spend Search Where It Pays: Value-Guided Structured Sampling and Optimization for Generative Recommendation",
+                "url": "https://arxiv.org/abs/2602.10699",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-lpwco6-0",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-lpwco6-1",
+                "label": "Recommendation Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-lpwco6-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1770883350635-jn37om",
+            "title": "Modal Labs in talks for $2.5B raise, signaling investor confidence in AI inference",
+            "tldr": "AI inference startup Modal Labs is reportedly in talks to raise funding at a $2.5B valuation, led by General Catalyst, highlighting continued investor appetite for infrastructure companies solving the costly inference problem.",
+            "whyItMatters": [
+              "A major funding round at this valuation validates the inference optimization market as a critical and investable layer of the AI stack.",
+              "Shows that VCs are betting heavily on companies that can reduce the operational costs of running AI models in production."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product, audit your current inference costs and evaluate specialized inference providers (like Modal, Together AI, Anyscale) against general-purpose clouds to potentially reduce your biggest operational expense.",
+              "note": "This is a pre-announcement based on sources; final terms may change."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1770883350635-jn37om",
+                "title": "AI inference startup Modal Labs in talks to raise at $2.5B valuation, sources say",
+                "url": "https://techcrunch.com/2026/02/11/ai-inference-startup-modal-labs-in-talks-to-raise-at-2-5b-valuation-sources-say/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-jn37om-0",
+                "label": "Modal Labs",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-jn37om-1",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1770883350635-jn37om-2",
+                "label": "AI Infrastructure",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 11 Feb 2026 22:48:35 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350776-zkrtnp",
+            "title": "LLMs Show Deeper Strategy Than Humans in Rock-Paper-Scissors",
+            "tldr": "New research using AlphaEvolve reveals frontier LLMs exhibit more sophisticated strategic thinking than humans in iterated rock-paper-scissors, highlighting key behavioral differences.",
+            "whyItMatters": [
+              "Understanding LLM-human behavioral gaps is critical for designing AI agents in social/competitive applications",
+              "The AlphaEvolve tool enables discovery of interpretable behavioral models for black-box AI systems"
+            ],
+            "whatToTry": {
+              "description": "When designing AI agents for competitive or social scenarios, explicitly test their strategic behavior against human baselines using simple games like rock-paper-scissors before deployment.",
+              "note": "Consider behavioral game theory frameworks to analyze your AI's decision patterns, not just performance metrics."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350776-zkrtnp",
+                "title": "Discovering Differences in Strategic Behavior Between Humans and LLMs",
+                "url": "https://arxiv.org/abs/2602.10324",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-zkrtnp-0",
+                "label": "LLM Behavior",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-zkrtnp-1",
+                "label": "Game Theory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-zkrtnp-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350776-agcign",
+            "title": "New Research: LLMs Are Bad Negotiators, But Can Be Trained",
+            "tldr": "New research shows LLMs struggle with strategic bargaining and diverge from human preferences, but a new feedback framework and benchmark (AgoraBench) can significantly improve their negotiation performance.",
+            "whyItMatters": [
+              "Business impact: AI agents for commerce, customer service, or B2B negotiations need human-aligned strategic reasoning to be effective and trustworthy.",
+              "Technical impact: Highlights a gap in current LLM benchmarks and provides a method to train models for complex, multi-turn strategic interactions."
+            ],
+            "whatToTry": {
+              "description": "If you're building an agent for any negotiation-like task (pricing, support, partnerships), test it against the principles in this paper. Evaluate if your agent's strategy aligns with human preferences for fairness and long-term value, not just short-term utility.",
+              "note": "The paper's 'AgoraBench' could be a useful internal testing framework, even if you don't use their exact training pipeline."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350776-agcign",
+                "title": "MERIT Feedback Elicits Better Bargaining in LLM Negotiators",
+                "url": "https://arxiv.org/abs/2602.10467",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-agcign-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-agcign-1",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350776-agcign-2",
+                "label": "Fine-tuning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1770883350777-t5jnaq",
+            "title": "LLMs Can Now Generate Planning Abstractions with Debugging",
+            "tldr": "New research shows LLMs can create abstract planning models (QNPs) for generalized planning, with automated debugging to fix errors.",
+            "whyItMatters": [
+              "Enables LLMs to solve families of related problems, not just single instances",
+              "Automated debugging reduces manual effort in prompt engineering for planning tasks"
+            ],
+            "whatToTry": {
+              "description": "Test if your LLM application can benefit from generating abstract problem representations. For a set of related tasks, prompt an LLM to define core features, initial states, actions, and goals, then implement a simple validation loop to check for logical consistency.",
+              "note": "Focus on domains where you have multiple similar problem instances; the abstraction debugging is key to success."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1770883350777-t5jnaq",
+                "title": "Abstraction Generation for Generalized Planning with Pretrained Large Language Models",
+                "url": "https://arxiv.org/abs/2602.10485",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t5jnaq-0",
+                "label": "Generalized Planning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t5jnaq-1",
+                "label": "LLM Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1770883350777-t5jnaq-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 12 Feb 2026 00:00:00 -0500"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-02-11",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-02-11-morning",
@@ -1303,7 +1751,7 @@
   },
   {
     "date": "2026-02-10",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Feb 10",
     "briefings": [
       {
         "id": "briefing-2026-02-10-morning",
@@ -7106,871 +7554,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-02-05",
-    "displayDate": "Thursday, Feb 5",
-    "briefings": [
-      {
-        "id": "briefing-2026-02-05-morning",
-        "period": "morning",
-        "date": "2026-02-05",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: AgentArk: Distill Multi-Agent Smarts into One Efficient Model, New Attack: AI Explanations Can Manipulate Human Trust, New Meta-RL Method Trains LLMs to Learn from Interaction In-Context.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1770278478695-4vud9b",
-            "title": "AgentArk: Distill Multi-Agent Smarts into One Efficient Model",
-            "tldr": "New research proposes AgentArk, a framework to distill the collaborative reasoning of multiple LLM agents into a single model, trading high inference cost for a one-time training investment.",
-            "whyItMatters": [
-              "Business impact: Could drastically reduce the compute cost and latency of deploying complex, multi-step AI reasoning in production, improving feasibility and margins.",
-              "Technical impact: Offers a path to more robust and generalizable reasoning in a single agent, mitigating error propagation common in multi-agent chains."
-            ],
-            "whatToTry": {
-              "description": "Review the AgentArk paper and GitHub repo. If you're building a product that uses multi-agent workflows (e.g., debate, review chains), prototype a simpler version of distillation by fine-tuning a single model on the successful outputs and reasoning traces from your multi-agent system.",
-              "note": "This is a research framework, not a ready-to-use product. The core idea of distilling multi-agent collaboration is the actionable insight."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-4vud9b",
-                "title": "AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent",
-                "url": "https://arxiv.org/abs/2602.03955",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-4vud9b-0",
-                "label": "Multi-Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-4vud9b-1",
-                "label": "Model Distillation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-4vud9b-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-0a1cl4",
-            "title": "New Attack: AI Explanations Can Manipulate Human Trust",
-            "tldr": "Researchers demonstrate 'adversarial explanation attacks' where LLM-generated explanations can be manipulated to make users trust incorrect AI outputs, revealing a critical vulnerability in human-AI collaboration.",
-            "whyItMatters": [
-              "Business impact: This exposes a new attack surface for AI products that rely on user trust, potentially leading to liability and reputation damage.",
-              "Technical impact: Shows that securing AI systems requires protecting not just model outputs but also how those outputs are communicated to users."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI's explanation generation for potential manipulation vectors. Test if small changes in reasoning mode, evidence type, or communication style could mislead users about incorrect outputs.",
-              "note": "This is especially critical for high-stakes applications like healthcare, finance, or legal AI where trust manipulation could cause real harm."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-0a1cl4",
-                "title": "When AI Persuades: Adversarial Explanation Attacks on Human Trust in AI-Assisted Decision Making",
-                "url": "https://arxiv.org/abs/2602.04003",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-0a1cl4-0",
-                "label": "LLM Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-0a1cl4-1",
-                "label": "Human-AI Interaction",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-0a1cl4-2",
-                "label": "Trust & Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-hcbfdw",
-            "title": "New Meta-RL Method Trains LLMs to Learn from Interaction In-Context",
-            "tldr": "Researchers introduced ORBIT, a meta-reinforcement learning framework that trains LLMs to learn from interaction in context, enabling a 14B model to match GPT-5.2's performance on unseen online decision-making tasks.",
-            "whyItMatters": [
-              "Enables LLMs to handle real-time, interactive decision-making tasks without weight updates, opening new product categories.",
-              "Shows that in-context learning for sequential decision-making is a trainable capability that scales with model size."
-            ],
-            "whatToTry": {
-              "description": "Review the ORBIT paper and code to understand how meta-RL training can be applied to your model. If you're building an agent for interactive environments (e.g., customer support, gaming, simulation), consider if your problem requires this type of in-context online learning.",
-              "note": "This is a research paper; the framework is complex but the core idea—training LLMs to be better in-context online learners—is a significant shift."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-hcbfdw",
-                "title": "Scaling In-Context Online Learning Capability of LLMs via Cross-Episode Meta-RL",
-                "url": "https://arxiv.org/abs/2602.04089",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-hcbfdw-0",
-                "label": "Meta-Reinforcement Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-hcbfdw-1",
-                "label": "In-Context Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-hcbfdw-2",
-                "label": "Qwen",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-yi5xan",
-            "title": "Interfaze: A Modular, Cost-Efficient Alternative to Monolithic LLMs",
-            "tldr": "New research paper introduces Interfaze, a system that orchestrates task-specific small models and tools to handle complex queries, reducing reliance on expensive monolithic LLMs while maintaining competitive performance.",
-            "whyItMatters": [
-              "Business impact: This architecture suggests a path to significantly lower inference costs by offloading work from large LLMs to specialized, cheaper components.",
-              "Technical impact: It challenges the 'bigger model' paradigm, showing that a well-orchestrated system of smaller models and tools can achieve state-of-the-art results on major benchmarks."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI application's workflow. Identify tasks (e.g., OCR, data extraction, simple classification) that could be handled by a specialized, smaller model or a deterministic tool instead of being passed directly to your primary LLM.",
-              "note": "Start with a simple proof-of-concept for one task to validate cost/performance trade-offs before a full architectural shift."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-yi5xan",
-                "title": "Interfaze: The Future of AI is built on Task-Specific Small Models",
-                "url": "https://arxiv.org/abs/2602.04101",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-yi5xan-0",
-                "label": "System Architecture",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-yi5xan-1",
-                "label": "Cost Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-yi5xan-2",
-                "label": "Interfaze",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-y51z0m",
-            "title": "New TMK Prompting Framework Boosts LLM Planning Accuracy to 97%",
-            "tldr": "Researchers applied the Task-Method-Knowledge (TMK) framework from cognitive science to LLM prompting, achieving 97.3% accuracy on planning tasks by explicitly modeling 'why' actions are taken, not just 'what' and 'how'.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable AI agents for complex workflows and automation.",
-              "Technical impact: Provides a structured alternative to Chain-of-Thought that improves reasoning on opaque, symbolic tasks."
-            ],
-            "whatToTry": {
-              "description": "When designing prompts for a complex, multi-step task, explicitly structure them using the TMK framework: define the Task (goal), the Method (procedure), and the Knowledge (principles/why). Test this against your current Chain-of-Thought approach on a planning benchmark.",
-              "note": "This is a research paper; implementation details are academic. Focus on adapting the core 'Task-Method-Knowledge' conceptual structure to your prompts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-y51z0m",
-                "title": "Knowledge Model Prompting Increases LLM Performance on Planning Tasks",
-                "url": "https://arxiv.org/abs/2602.03900",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-y51z0m-0",
-                "label": "Prompt Engineering",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-y51z0m-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-y51z0m-2",
-                "label": "LLM",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-szp1ab",
-            "title": "New Method Boosts LLM Math Skills with Execution Feedback",
-            "tldr": "Researchers introduced IIPC, a method that iteratively refines programmatic reasoning chains using execution feedback, improving mathematical problem-solving accuracy across multiple LLMs.",
-            "whyItMatters": [
-              "Improves reliability of AI for education, science, and engineering applications where symbolic reasoning is critical",
-              "Addresses key weakness in current multi-agent systems: inability to reliably correct earlier reasoning steps"
-            ],
-            "whatToTry": {
-              "description": "Review the open-source IIPC implementation to understand how execution feedback can be integrated into your own reasoning pipelines, especially for applications requiring step-by-step verification.",
-              "note": "This approach works best for problems with verifiable intermediate steps (like code execution or mathematical proofs)."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-szp1ab",
-                "title": "Enhancing Mathematical Problem Solving in LLMs through Execution-Driven Reasoning Augmentation",
-                "url": "https://arxiv.org/abs/2602.03950",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-szp1ab-0",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-szp1ab-1",
-                "label": "IIPC",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-szp1ab-2",
-                "label": "LLM",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-5lfy1f",
-            "title": "New Research Cuts LLM Verification Costs by 44%",
-            "tldr": "Researchers propose a selective verification framework that allocates compute to the most promising intermediate reasoning steps, achieving higher accuracy with 44% fewer verifier calls on MATH.",
-            "whyItMatters": [
-              "Reduces the primary cost bottleneck (verification) for LLM reasoning systems, improving efficiency.",
-              "Introduces a structured, adaptive approach to test-time compute that outperforms common baselines like beam search."
-            ],
-            "whatToTry": {
-              "description": "If you're building a reasoning agent, review this paper's framework. Consider implementing a simple feasibility gate to filter out obviously invalid intermediate states before running a full verifier.",
-              "note": "The method requires a structured 'move interface' to define valid reasoning steps, which may need upfront design work."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-5lfy1f",
-                "title": "Adaptive Test-Time Compute Allocation via Learned Heuristics over Categorical Structure",
-                "url": "https://arxiv.org/abs/2602.03975",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-5lfy1f-0",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-5lfy1f-1",
-                "label": "Efficiency",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-5lfy1f-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770278478617-ofy6bm",
-            "title": "Gemini Hits 750M Users, Cementing AI Assistant Scale",
-            "tldr": "Google's Gemini app now has over 750 million monthly active users, demonstrating massive adoption and establishing it as a primary competitor to ChatGPT and Meta AI.",
-            "whyItMatters": [
-              "Business impact: Shows the massive scale and user trust Google can leverage for its AI products, validating the integrated assistant model.",
-              "Technical impact: This level of real-world usage provides Google with an unparalleled dataset for improving model performance and user experience."
-            ],
-            "whatToTry": {
-              "description": "If you're building a consumer-facing AI product, analyze the Gemini app's UX and integration strategy (especially on Android) to understand what drives mass adoption at this scale.",
-              "note": "Consider whether deep OS/ecosystem integration is a prerequisite for reaching this level of user base, or if a standalone app can compete."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770278478617-ofy6bm",
-                "title": "Google’s Gemini app has surpassed 750M monthly active users",
-                "url": "https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770278478617-ofy6bm-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770278478617-ofy6bm-1",
-                "label": "Market Analysis",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 04 Feb 2026 22:53:46 +0000"
-          },
-          {
-            "id": "hn-46896146",
-            "title": "HackerNews Debate: Own vs. Rent Cloud Infrastructure",
-            "tldr": "HackerNews discussion (103 points, 35 comments) debates owning vs. renting cloud infrastructure, sparked by comma.ai's datacenter approach.",
-            "whyItMatters": [
-              "Business impact: Owning infrastructure can reduce long-term costs but requires significant upfront capital and expertise",
-              "Technical impact: Full hardware control enables custom optimizations but increases operational complexity"
-            ],
-            "whatToTry": {
-              "description": "Analyze your AI workload's cost structure - calculate the 3-year TCO of cloud services vs. building/buying dedicated hardware for your most expensive inference or training tasks.",
-              "note": "This makes sense primarily for stable, predictable workloads at scale - not for experimental or highly variable usage."
-            },
-            "sources": [
-              {
-                "id": "src-hn-46896146",
-                "title": "Don't rent the cloud, own instead",
-                "url": "https://blog.comma.ai/datacenter/",
-                "domain": "blog.comma.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46896146-0",
-                "label": "infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46896146-1",
-                "label": "cost-optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-02-05T05:50:01Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1770278478695-wrx3xc",
-            "title": "New Planning Method Reduces AI Agent Trial-and-Error",
-            "tldr": "Researchers propose Active Epistemic Control (AEC), a planning layer that separates grounded facts from predictive beliefs to reduce costly environment queries in partially observable settings.",
-            "whyItMatters": [
-              "Reduces the number of expensive interactions (API calls, environment steps) needed for AI agents to complete tasks, lowering operational costs.",
-              "Provides a formal framework to manage uncertainty from learned world models, making agent behavior more reliable and less prone to silent failures."
-            ],
-            "whatToTry": {
-              "description": "If you're building agents that interact with APIs or environments, evaluate if your planning logic mixes grounded facts with model predictions. Consider implementing a simple separation to gate actions on verified facts only.",
-              "note": "The core idea—separating verification from prediction—can be applied without the full formal framework."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1770278478695-wrx3xc",
-                "title": "Active Epistemic Control for Query-Efficient Verified Planning",
-                "url": "https://arxiv.org/abs/2602.03974",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-wrx3xc-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-wrx3xc-1",
-                "label": "Planning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1770278478695-wrx3xc-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 00:00:00 -0500"
-          }
-        ],
-        "totalReadTimeMinutes": 26,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-02-05-evening",
-        "period": "evening",
-        "date": "2026-02-05",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI Launches Frontier: Enterprise AI Agent Platform, GPT-5.3-Codex: OpenAI's new specialized coding model, AI Coding War Heats Up: OpenAI vs Anthropic.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1770325127382-uf6ytx",
-            "title": "OpenAI Launches Frontier: Enterprise AI Agent Platform",
-            "tldr": "OpenAI launched Frontier, a platform for enterprises to build, deploy, and manage AI agents as if they were human employees, signaling a major push into enterprise automation.",
-            "whyItMatters": [
-              "Business impact: This creates a new enterprise-grade channel for AI adoption, potentially accelerating agent deployment in business workflows.",
-              "Technical impact: It provides a managed platform for complex agent orchestration, reducing the infrastructure burden on engineering teams."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your product's workflow could be enhanced or automated by an AI agent. Consider prototyping a simple agent task using OpenAI's existing APIs to understand the paradigm before Frontier's wider release.",
-              "note": "While Frontier is enterprise-focused, the agent paradigm is becoming mainstream. Start exploring agentic workflows now to stay competitive."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-uf6ytx",
-                "title": "OpenAI launches a way for enterprises to build and manage AI agents",
-                "url": "https://techcrunch.com/2026/02/05/openai-launches-a-way-for-enterprises-to-build-and-manage-ai-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-uf6ytx-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-uf6ytx-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-uf6ytx-2",
-                "label": "Enterprise",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 18:09:50 +0000"
-          },
-          {
-            "id": "hn-46902638",
-            "title": "GPT-5.3-Codex: OpenAI's new specialized coding model",
-            "tldr": "OpenAI released GPT-5.3-Codex, a specialized model for code generation and understanding, sparking significant discussion on HackerNews with 652 points and 259 comments.",
-            "whyItMatters": [
-              "Specialized coding models create new opportunities for developer tools and automation products",
-              "This release signals OpenAI's continued focus on vertical-specific AI applications beyond general-purpose models"
-            ],
-            "whatToTry": {
-              "description": "Test GPT-5.3-Codex against your current coding assistant (GitHub Copilot, Claude, etc.) on your specific codebase to evaluate performance improvements for your use case.",
-              "note": "The HackerNews discussion likely contains real-world performance comparisons and edge cases - valuable for benchmarking"
-            },
-            "sources": [
-              {
-                "id": "src-hn-46902638",
-                "title": "GPT-5.3-Codex",
-                "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46902638-0",
-                "label": "GPT-5.3-Codex",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-46902638-1",
-                "label": "Code Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46902638-2",
-                "label": "OpenAI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-02-05T18:08:08Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770325127382-g3e5kd",
-            "title": "AI Coding War Heats Up: OpenAI vs Anthropic",
-            "tldr": "OpenAI launched a new agentic coding model minutes after Anthropic released its own, signaling intense competition in AI-assisted development tools.",
-            "whyItMatters": [
-              "Competition is accelerating feature development and potentially lowering costs for AI coding tools",
-              "New models may offer improved code generation, debugging, and system design capabilities"
-            ],
-            "whatToTry": {
-              "description": "Test both models' coding capabilities on your specific tech stack - compare performance on complex refactoring tasks or generating production-ready code.",
-              "note": "Look beyond basic code generation - evaluate how well each model understands your codebase architecture and business logic."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-g3e5kd",
-                "title": "OpenAI launches new agentic coding model only minutes after Anthropic drops its own",
-                "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-g3e5kd-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-g3e5kd-1",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-g3e5kd-2",
-                "label": "AI Coding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 20:01:39 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770325127382-brozpf",
-            "title": "Anthropic Opus 4.6 Launches 'Agent Teams' Feature",
-            "tldr": "Anthropic released Opus 4.6 with new 'agent teams' capability, allowing multiple specialized AI agents to collaborate on complex tasks.",
-            "whyItMatters": [
-              "Enables more sophisticated multi-step workflows that single models can't handle",
-              "Moves beyond simple chat interfaces toward coordinated AI systems"
-            ],
-            "whatToTry": {
-              "description": "Test creating a workflow where one agent handles research, another writes content, and a third reviews quality - see if this approach solves problems your current single-model setup can't.",
-              "note": "Consider how agent specialization could improve your product's reliability on complex tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-brozpf",
-                "title": "Anthropic releases Opus 4.6 with new ‘agent teams’",
-                "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-brozpf-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-brozpf-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-brozpf-2",
-                "label": "Workflow Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 17:51:13 +0000"
-          },
-          {
-            "id": "hn-46899770",
-            "title": "OpenAI Frontier: New AI Safety & Governance Framework",
-            "tldr": "OpenAI launched Frontier, a new framework for AI safety and governance, sparking significant discussion on HackerNews with 102+ comments about its implications for AI development.",
-            "whyItMatters": [
-              "Establishes new industry standards for AI safety that competitors may need to follow",
-              "Signals OpenAI's commitment to responsible scaling and could influence future model releases"
-            ],
-            "whatToTry": {
-              "description": "Review the Frontier framework documentation to understand the new safety thresholds and governance requirements that may affect your AI product's compliance and positioning.",
-              "note": "Consider how your product's safety measures compare to these new industry benchmarks"
-            },
-            "sources": [
-              {
-                "id": "src-hn-46899770",
-                "title": "OpenAI Frontier",
-                "url": "https://openai.com/index/introducing-openai-frontier/",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-46899770-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-46899770-1",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-02-05T14:07:03Z"
-          },
-          {
-            "id": "rss-openai-blog-1770325127840-5nedy5",
-            "title": "GPT-5 Cuts Protein Synthesis Costs 40% in Autonomous Lab",
-            "tldr": "OpenAI's GPT-5 combined with Ginkgo Bioworks' automation reduced cell-free protein synthesis costs by 40% through closed-loop experimentation, demonstrating AI's potential in biotech R&D.",
-            "whyItMatters": [
-              "Shows AI's ability to optimize complex, expensive lab processes with tangible ROI",
-              "Validates the 'autonomous lab' concept where AI designs and runs experiments without human intervention"
-            ],
-            "whatToTry": {
-              "description": "If you're in biotech, materials science, or any R&D-heavy field, explore how LLMs can be integrated into your experimental design loop. Start by using GPT-4/Claude to generate and refine experimental hypotheses before moving to full automation.",
-              "note": "This is a high-cost, high-reward application—start with digital simulations before physical experiments."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1770325127840-5nedy5",
-                "title": "GPT-5 lowers the cost of cell-free protein synthesis",
-                "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1770325127840-5nedy5-0",
-                "label": "GPT-5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1770325127840-5nedy5-1",
-                "label": "Autonomous Labs",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1770325127840-5nedy5-2",
-                "label": "Biotech AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 11:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770325127382-83v5xw",
-            "title": "Fundamental raises $255M for structured data foundation model",
-            "tldr": "Fundamental raised a massive Series A to build a foundation model specifically for analyzing enterprise structured data, signaling investor confidence in vertical AI solutions.",
-            "whyItMatters": [
-              "Shows continued VC appetite for AI infrastructure tackling specific enterprise pain points, not just general models.",
-              "Validates the market need for specialized models that can handle complex, proprietary structured data formats."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your product's core value is tied to analyzing structured data (SQL, spreadsheets, logs). If so, research how a specialized model like Fundamental's could be a differentiator or a potential dependency versus using a general-purpose LLM.",
-              "note": "A $255M Series A is an outlier. Focus on the market signal, not trying to replicate their fundraising."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-83v5xw",
-                "title": "Fundamental raises $255 million Series A with a new take on big data analysis",
-                "url": "https://techcrunch.com/2026/02/05/fundamental-raises-255-million-series-a-with-a-new-take-on-big-data-analysis/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-83v5xw-0",
-                "label": "Fundamental",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-83v5xw-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-83v5xw-2",
-                "label": "Structured Data",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 15:00:02 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770325127382-9xgtto",
-            "title": "ElevenLabs CEO: Voice is AI's Next Major Interface",
-            "tldr": "ElevenLabs CEO argues voice will become the primary AI interface as major tech companies push conversational systems into wearables and everyday hardware.",
-            "whyItMatters": [
-              "Business impact: Voice-first products could disrupt current app-based interfaces and create new market opportunities in wearables, smart devices, and ambient computing.",
-              "Technical impact: Development focus may shift from visual UI/UX to voice interaction design, natural conversation flows, and audio-first experiences."
-            ],
-            "whatToTry": {
-              "description": "Audit your current product for voice interaction potential. Identify one core user flow that could be enhanced or replaced with a voice interface, and prototype it using existing voice APIs.",
-              "note": "Consider privacy implications and accessibility benefits when designing voice interfaces."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-9xgtto",
-                "title": "ElevenLabs CEO: Voice is the next interface for AI",
-                "url": "https://techcrunch.com/2026/02/05/elevenlabs-ceo-voice-is-the-next-interface-for-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-9xgtto-0",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-9xgtto-1",
-                "label": "Interface Design",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 14:41:12 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1770325127374-pmq110",
-            "title": "ICE Face-Recognition App Flawed, Used 100K+ Times",
-            "tldr": "ICE's Mobile Fortify app, used over 100,000 times for identity verification, wasn't designed for that purpose and was approved after DHS abandoned privacy rules, revealing serious deployment flaws.",
-            "whyItMatters": [
-              "Highlights real-world consequences of deploying AI systems without proper validation and oversight",
-              "Shows how regulatory shortcuts can lead to widespread misuse of AI tools"
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's intended use cases and actual deployment patterns. Create an audit trail showing how your system is being used versus how it was designed to be used.",
-              "note": "Consider implementing usage monitoring to detect when your AI tool is being applied outside its intended scope"
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1770325127374-pmq110",
-                "title": "ICE and CBP’s Face-Recognition App Can’t Actually Verify Who People Are",
-                "url": "https://www.wired.com/story/cbp-ice-dhs-mobile-fortify-face-recognition-verify-identity/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1770325127374-pmq110-0",
-                "label": "Computer Vision",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1770325127374-pmq110-1",
-                "label": "Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1770325127374-pmq110-2",
-                "label": "Government",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 20:28:34 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1770325127382-fea5xk",
-            "title": "Musk's Orbital AI Data Centers Move from Concept to Plan",
-            "tldr": "Elon Musk's vision for orbital AI data clusters is evolving into concrete plans, potentially creating space-based computing infrastructure.",
-            "whyItMatters": [
-              "Could create new infrastructure options for compute-intensive AI workloads",
-              "May address terrestrial constraints like energy costs, cooling, and real estate"
-            ],
-            "whatToTry": {
-              "description": "Monitor SpaceX and xAI announcements for potential early access programs to space-based compute resources, and consider how latency-tolerant your AI workloads are.",
-              "note": "This is still early-stage - focus on understanding the implications rather than immediate adoption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1770325127382-fea5xk",
-                "title": "Elon Musk is getting serious about orbital data centers",
-                "url": "https://techcrunch.com/2026/02/05/elon-musk-is-getting-serious-about-orbital-data-centers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-fea5xk-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1770325127382-fea5xk-1",
-                "label": "Compute",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 05 Feb 2026 18:50:49 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
