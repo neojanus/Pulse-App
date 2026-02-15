@@ -219,6 +219,337 @@
         "totalReadTimeMinutes": 10,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-02-15-afternoon",
+        "period": "afternoon",
+        "date": "2026-02-15",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Google AI Overviews Vulnerable to Scam Injection, Off Grid: Run AI models fully offline on your phone, Smart Sleep Mask Exposes Brainwave Data via Open MQTT.",
+        "items": [
+          {
+            "id": "rss-wired-ai-1771163911396-xbxc6a",
+            "title": "Google AI Overviews Vulnerable to Scam Injection",
+            "tldr": "Wired reports that Google's AI Overviews feature is susceptible to deliberately bad information injection, leading users toward scams and harmful content, highlighting a critical vulnerability in AI-powered search.",
+            "whyItMatters": [
+              "Business impact: Erodes user trust in AI-generated summaries and could lead to liability issues for platforms deploying similar features.",
+              "Technical impact: Exposes fundamental security flaws in how AI systems retrieve and synthesize information from the open web, making them targets for bad actors."
+            ],
+            "whatToTry": {
+              "description": "If you're building a product that generates summaries from external sources, immediately audit your retrieval and synthesis pipeline. Implement source credibility scoring, anomaly detection for 'too-good-to-be-true' claims, and clear user warnings for unverified information.",
+              "note": "This isn't just a hallucination problem; it's an adversarial attack vector. Prioritize security testing (red teaming) for your RAG systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1771163911396-xbxc6a",
+                "title": "Google’s AI Overviews Can Scam You. Here’s How to Stay Safe",
+                "url": "https://www.wired.com/story/googles-ai-overviews-can-scam-you-heres-how-to-stay-safe/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1771163911396-xbxc6a-0",
+                "label": "Google",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1771163911396-xbxc6a-1",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1771163911396-xbxc6a-2",
+                "label": "Security",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 15 Feb 2026 11:30:00 +0000"
+          },
+          {
+            "id": "hn-47019133",
+            "title": "Off Grid: Run AI models fully offline on your phone",
+            "tldr": "Open-source app Off Grid enables text generation, image creation, vision AI, and voice transcription to run entirely offline on mobile devices using local hardware acceleration, eliminating cloud dependency and privacy concerns.",
+            "whyItMatters": [
+              "Enables AI product development for privacy-sensitive, low-connectivity, or regulated environments (healthcare, travel, censorship)",
+              "Demonstrates mobile hardware is now capable of running production-quality AI models locally with reasonable performance"
+            ],
+            "whatToTry": {
+              "description": "Download the Android APK from GitHub and test running a small GGUF model locally. Experiment with building a prototype feature that assumes intermittent or no internet connectivity.",
+              "note": "Performance varies by device hardware - test on your target audience's common devices."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47019133",
+                "title": "Show HN: Off Grid – Run AI text, image gen, vision offline on your phone",
+                "url": "https://github.com/alichherawalla/off-grid-mobile",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47019133-0",
+                "label": "mobile-ai",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47019133-1",
+                "label": "privacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47019133-2",
+                "label": "open-source",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-02-14T22:39:24Z"
+          },
+          {
+            "id": "hn-47015294",
+            "title": "Smart Sleep Mask Exposes Brainwave Data via Open MQTT",
+            "tldr": "A popular smart sleep mask was found broadcasting users' raw brainwave data to an open MQTT broker without encryption, exposing sensitive biometric data to anyone on the network.",
+            "whyItMatters": [
+              "Business impact: This highlights critical security vulnerabilities in consumer IoT devices collecting sensitive biometric data, creating liability risks and potential regulatory scrutiny for similar products.",
+              "Technical impact: The device transmitted EEG data via unencrypted MQTT protocol, demonstrating how easily sensitive neural data can be intercepted and exposing fundamental security flaws in consumer neurotech."
+            ],
+            "whatToTry": {
+              "description": "Audit your own data collection and transmission pipelines - ensure all biometric or sensitive user data is encrypted both in transit and at rest, and implement proper authentication for any data streams.",
+              "note": "Even if you're not collecting brainwaves, this applies to any sensitive user data - voice, images, location, or behavioral patterns."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47015294",
+                "title": "My smart sleep mask broadcasts users' brainwaves to an open MQTT broker",
+                "url": "https://aimilios.bearblog.dev/reverse-engineering-sleep-mask/",
+                "domain": "aimilios.bearblog.dev",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47015294-0",
+                "label": "IoT Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47015294-1",
+                "label": "Biometric Data",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47015294-2",
+                "label": "Privacy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-02-14T15:35:47Z"
+          },
+          {
+            "id": "hn-47017138",
+            "title": "Publishers Block Archive.org Over AI Scraping Fears",
+            "tldr": "Major news publishers are restricting Internet Archive access to prevent AI companies from scraping their content for training, signaling a new front in data access battles.",
+            "whyItMatters": [
+              "Training data sources are shrinking as publishers assert copyright control",
+              "Legal precedent could shift toward requiring explicit licensing for web content"
+            ],
+            "whatToTry": {
+              "description": "Audit your training data sources for dependency on publicly archived web content and explore licensed datasets or partnerships with content providers.",
+              "note": "Consider this part of a broader trend - expect more websites to implement similar restrictions."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47017138",
+                "title": "News publishers limit Internet Archive access due to AI scraping concerns",
+                "url": "https://www.niemanlab.org/2026/01/news-publishers-limit-internet-archive-access-due-to-ai-scraping-concerns/",
+                "domain": "niemanlab.org",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47017138-0",
+                "label": "Data",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47017138-1",
+                "label": "Legal",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-02-14T18:46:32Z"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771163911390-edg753",
+            "title": "Hollywood Pushes Back on Seedance 2.0 AI Video Model",
+            "tldr": "Major Hollywood organizations are accusing the new Seedance 2.0 AI video generator of enabling widespread copyright infringement, signaling escalating legal tensions in AI-generated media.",
+            "whyItMatters": [
+              "Business impact: This represents a significant legal and regulatory risk for AI video startups, potentially leading to lawsuits, platform restrictions, or new compliance requirements.",
+              "Technical impact: The controversy highlights the ongoing challenge of training data provenance and copyright in generative AI, which may force model developers to adopt more restrictive training practices."
+            ],
+            "whatToTry": {
+              "description": "Review your AI product's training data documentation and implement clear attribution systems for any copyrighted material used in training or generation.",
+              "note": "Consider consulting with legal counsel specializing in AI and copyright law to assess your risk exposure."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771163911390-edg753",
+                "title": "Hollywood isn’t happy about the new Seedance 2.0 video generator",
+                "url": "https://techcrunch.com/2026/02/14/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-edg753-0",
+                "label": "Seedance 2.0",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-edg753-1",
+                "label": "Copyright",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-edg753-2",
+                "label": "Video Generation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 14 Feb 2026 18:26:52 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771163911390-sjmqg1",
+            "title": "Student Shift: From CS to AI-Specific Majors",
+            "tldr": "TechCrunch reports a trend of students moving from general computer science degrees toward AI-specific majors and courses, indicating a shift in educational priorities.",
+            "whyItMatters": [
+              "Business impact: This signals where future talent pools will concentrate - founders should anticipate more specialized AI graduates entering the job market.",
+              "Technical impact: The next generation of developers will have deeper AI/ML foundations, potentially raising the baseline for technical sophistication in products."
+            ],
+            "whatToTry": {
+              "description": "Review your hiring strategy and consider creating internship programs or entry-level roles specifically targeting AI-focused students to access this emerging talent pipeline early.",
+              "note": "This is a multi-year trend - start building relationships with AI programs now to establish your company as a preferred employer."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771163911390-sjmqg1",
+                "title": "The great computer science exodus (and where students are going instead)",
+                "url": "https://techcrunch.com/2026/02/15/the-great-computer-science-exodus-and-where-students-are-going-instead/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-sjmqg1-0",
+                "label": "talent",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 15 Feb 2026 08:40:27 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771163911390-gip1cd",
+            "title": "xAI reportedly pushing Grok to be 'more unhinged'",
+            "tldr": "Elon Musk is reportedly directing xAI to make Grok 'more unhinged', signaling a strategic shift toward less filtered AI outputs.",
+            "whyItMatters": [
+              "Business impact: Highlights divergent AI safety strategies in the market - some companies are betting on unfiltered AI as a differentiator.",
+              "Technical impact: Shows that safety guardrails are adjustable business decisions, not just technical constraints."
+            ],
+            "whatToTry": {
+              "description": "Test Grok's current outputs against competitors like ChatGPT or Claude to understand what 'unhinged' actually means in practice - is it just less filtering or different personality?",
+              "note": "This is a single-source report - verify with xAI's actual product behavior rather than taking claims at face value."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771163911390-gip1cd",
+                "title": "Is safety ‘dead’ at xAI?",
+                "url": "https://techcrunch.com/2026/02/14/is-safety-is-dead-at-xai/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-gip1cd-0",
+                "label": "xAI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-gip1cd-1",
+                "label": "AI Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 14 Feb 2026 21:55:44 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771163911390-i91wjp",
+            "title": "India Launches $1.1B State-Backed VC Fund for Deep-Tech",
+            "tldr": "India approved a $1.1B fund-of-funds to invest through private VCs, specifically targeting deep-tech and manufacturing startups.",
+            "whyItMatters": [
+              "Significant new capital source for AI/tech founders in India or building for Indian markets",
+              "Government prioritization of deep-tech signals favorable regulatory and funding environment"
+            ],
+            "whatToTry": {
+              "description": "If building an AI product with applications in manufacturing or other deep-tech sectors, research Indian VC firms likely to receive allocations from this fund and consider adding them to your outreach list for future fundraising.",
+              "note": "Focus on firms with existing deep-tech or AI portfolios; the capital is indirect via private VCs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771163911390-i91wjp",
+                "title": "India doubles down on state-backed venture capital, approving $1.1B fund",
+                "url": "https://techcrunch.com/2026/02/14/india-doubles-down-on-state-backed-venture-capital-approving-1-1b-fund/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-i91wjp-0",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771163911390-i91wjp-1",
+                "label": "India",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 14 Feb 2026 16:23:22 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 16,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
