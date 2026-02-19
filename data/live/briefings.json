@@ -444,6 +444,433 @@
         "totalReadTimeMinutes": 24,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-02-19-afternoon",
+        "period": "afternoon",
+        "date": "2026-02-19",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: OpenAI partners with Tata for major India data center expansion, Autonomous AI Agents Can Self-Destruct in Low-Data Tasks, New Research Trains LLMs to Learn from Feedback Like Humans.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1771511409551-12pagq",
+            "title": "OpenAI partners with Tata for major India data center expansion",
+            "tldr": "OpenAI is partnering with Tata to secure 100MW of AI data center capacity in India, with plans to scale to 1GW and open new offices in Mumbai and Bengaluru.",
+            "whyItMatters": [
+              "Signals OpenAI's aggressive global infrastructure expansion to meet growing demand and reduce latency for users in key markets.",
+              "Highlights India as a strategic growth market for AI services, potentially lowering operational costs and improving local performance."
+            ],
+            "whatToTry": {
+              "description": "If you have users in India, monitor OpenAI's regional performance and pricing announcements later this year. Consider testing latency-sensitive features once the new infrastructure is live.",
+              "note": "This expansion may lead to more competitive pricing or new regional features for the Indian market."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771511409551-12pagq",
+                "title": "OpenAI taps Tata for 100MW AI data center capacity in India, eyes 1GW",
+                "url": "https://techcrunch.com/2026/02/18/openai-taps-tata-for-100mw-ai-data-center-capacity-in-india-eyes-1gw/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-12pagq-0",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-12pagq-1",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-12pagq-2",
+                "label": "Market Expansion",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 05:34:25 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-vkoxhi",
+            "title": "Autonomous AI Agents Can Self-Destruct in Low-Data Tasks",
+            "tldr": "Research reveals autonomous AI agents that self-optimize can catastrophically fail on rare tasks (like detecting 3% prevalence symptoms), but a simple 'selector agent' that picks the best past iteration prevents failure and beats expert systems.",
+            "whyItMatters": [
+              "Business impact: Critical for deploying reliable autonomous AI in healthcare, finance, or any domain with imbalanced data. A naive rollout could silently fail.",
+              "Technical impact: Exposes a major pitfall in agentic workflows—continuous optimization can overfit and degrade performance, especially on rare classes. A retrospective 'selector' is a robust fix."
+            ],
+            "whatToTry": {
+              "description": "If building autonomous agentic systems, implement a 'selector agent' pattern: run multiple optimization iterations, save all checkpoints, and have a separate agent retrospectively evaluate and select the best-performing version on a validation set, rather than letting the main agent optimize continuously.",
+              "note": "This is especially crucial for tasks with low prevalence or imbalanced data. Monitor sensitivity/recall, not just accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-vkoxhi",
+                "title": "Optimization Instability in Autonomous Agentic Workflows for Clinical Symptom Detection",
+                "url": "https://arxiv.org/abs/2602.16037",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-vkoxhi-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-vkoxhi-1",
+                "label": "Pythia",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-vkoxhi-2",
+                "label": "Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-u3smo7",
+            "title": "New Research Trains LLMs to Learn from Feedback Like Humans",
+            "tldr": "Researchers developed a framework to train LLMs to improve interactively from natural language feedback, enabling smaller models to nearly match the performance of models 10x larger on multi-turn tasks.",
+            "whyItMatters": [
+              "Business impact: This could dramatically reduce the cost and latency of building AI agents that learn from user interactions, making advanced tutoring or coding assistants more viable.",
+              "Technical impact: It treats interactive learning as a trainable skill, not an emergent property, offering a new paradigm for model training and a path to self-improvement."
+            ],
+            "whatToTry": {
+              "description": "If you're building an agent or tutor that needs to adapt to user corrections, start exploring how to structure your training data as multi-turn, didactic interactions with information asymmetry, rather than single-turn completions.",
+              "note": "The research shows strong transfer learning, so training on one domain (like math) can improve performance in others (like coding)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-u3smo7",
+                "title": "Improving Interactive In-Context Learning from Natural Language Feedback",
+                "url": "https://arxiv.org/abs/2602.16066",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-u3smo7-0",
+                "label": "In-Context Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-u3smo7-1",
+                "label": "Model Training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-u3smo7-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771511409551-1un6jk",
+            "title": "AI Coding Tools Flood Open Source with Low-Quality Code",
+            "tldr": "AI coding assistants are accelerating feature development but generating a flood of low-quality, hard-to-maintain code that threatens to overwhelm open-source projects.",
+            "whyItMatters": [
+              "Business impact: Increased velocity may come at the cost of long-term technical debt and project sustainability.",
+              "Technical impact: Code quality and maintainability are becoming critical bottlenecks as AI lowers the barrier to code generation."
+            ],
+            "whatToTry": {
+              "description": "Implement stricter code review and quality gates (e.g., automated linting, static analysis) in your development workflow to catch AI-generated issues before they merge.",
+              "note": "Focus reviews on architecture, maintainability, and edge cases, not just syntax."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771511409551-1un6jk",
+                "title": "For open-source programs, AI coding tools are a mixed blessing",
+                "url": "https://techcrunch.com/2026/02/19/for-open-source-programs-ai-coding-tools-are-a-mixed-blessing/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-1un6jk-0",
+                "label": "Developer Tools",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-1un6jk-1",
+                "label": "Code Generation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 14:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771511409551-w6a1nh",
+            "title": "Reliance's $110B AI Bet Signals India's Infrastructure Push",
+            "tldr": "Reliance announces a massive $110B AI investment plan, starting with multi-gigawatt data centers in Jamnagar, as India makes a major play for AI sovereignty and infrastructure.",
+            "whyItMatters": [
+              "Business impact: Creates a new, well-funded competitor and potential partner in the global AI infrastructure race, especially for companies looking to serve or operate in India.",
+              "Technical impact: Signals a massive scaling of AI compute capacity in a key market, which could lower regional inference costs and create new data residency options."
+            ],
+            "whatToTry": {
+              "description": "If your product has users or plans to expand in India, start monitoring Reliance's AI service offerings and pricing. This scale of investment could create a new, cost-effective regional cloud option for inference or training within 12-18 months.",
+              "note": "While the investment is huge, watch for actual service launches and SLAs before committing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771511409551-w6a1nh",
+                "title": "Reliance unveils $110B AI investment plan as India ramps up tech ambitions",
+                "url": "https://techcrunch.com/2026/02/19/reliance-unveils-110b-ai-investment-plan-as-india-ramps-up-tech-ambitions/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-w6a1nh-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-w6a1nh-1",
+                "label": "Market Expansion",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 11:39:17 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-183lrf",
+            "title": "Evidence-Grounded AI Outperforms Frontier LLMs on Medical Exam",
+            "tldr": "A specialized AI system (Mirror) using curated medical evidence outperformed GPT-5.2 and other frontier models on an endocrinology exam, showing domain-specific data beats general web access.",
+            "whyItMatters": [
+              "Demonstrates competitive advantage of curated, domain-specific knowledge over general-purpose models",
+              "Shows evidence traceability is achievable and valuable for regulated applications"
+            ],
+            "whatToTry": {
+              "description": "For your AI product, test if creating a curated, high-quality dataset for your specific domain could outperform using a general-purpose LLM with web access.",
+              "note": "This approach requires significant domain expertise but can create defensible moats."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-183lrf",
+                "title": "Evidence-Grounded Subspecialty Reasoning: Evaluating a Curated Clinical Intelligence Layer on the 2025 Endocrinology Board-Style Examination",
+                "url": "https://arxiv.org/abs/2602.16050",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-183lrf-0",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-183lrf-1",
+                "label": "Domain-Specific AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-183lrf-2",
+                "label": "Medical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-w0bb0n",
+            "title": "LLMs Struggle with GPS & Geography - New Benchmark Reveals Gaps",
+            "tldr": "A new benchmark, GPSBench, reveals LLMs have poor and inconsistent geospatial reasoning, a critical weakness for real-world AI applications like navigation and robotics.",
+            "whyItMatters": [
+              "Business Impact: Founders building location-aware AI (e.g., logistics, mapping, AR) must design around this core weakness, as LLMs cannot reliably handle GPS data natively.",
+              "Technical Impact: The research shows a clear trade-off: fine-tuning improves geometric calculations but degrades world knowledge, forcing a strategic choice in model development."
+            ],
+            "whatToTry": {
+              "description": "If your product uses location data, immediately test your prompts or fine-tuned models on GPSBench tasks to quantify your specific geospatial reasoning gap. For production, plan to use external tools (APIs, libraries) for core geometric operations rather than relying on the LLM.",
+              "note": "The finding that models are better at country-level than city-level knowledge is a useful heuristic for scoping initial features."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-w0bb0n",
+                "title": "GPSBench: Do Large Language Models Understand GPS Coordinates?",
+                "url": "https://arxiv.org/abs/2602.16105",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-w0bb0n-0",
+                "label": "Geospatial AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-w0bb0n-1",
+                "label": "Model Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-w0bb0n-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-o44naj",
+            "title": "New Framework Teaches AI Agents Your Personal Preferences",
+            "tldr": "Researchers introduced PAHF, a framework for AI agents to learn and adapt to individual user preferences in real-time through explicit memory and dual feedback, showing significant improvements in personalization speed and accuracy.",
+            "whyItMatters": [
+              "Enables AI products to offer truly personalized experiences that adapt to individual users over time, a key differentiator in crowded markets.",
+              "Provides a concrete architecture (explicit memory + clarification + feedback) for implementing continual learning in agents, moving beyond static user profiles."
+            ],
+            "whatToTry": {
+              "description": "Review the PAHF loop (clarify, ground, integrate feedback) and assess if your product's personalization relies on static data. Consider prototyping a simple 'preference memory' module for a core user action to test adaptability.",
+              "note": "The benchmarks are in embodied manipulation and shopping; the core loop is likely applicable to conversational or recommendation agents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-o44naj",
+                "title": "Learning Personalized Agents from Human Feedback",
+                "url": "https://arxiv.org/abs/2602.16173",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-o44naj-0",
+                "label": "Personalization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-o44naj-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-o44naj-2",
+                "label": "Continual Learning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-arxiv-ai-1771511409854-ebyuu9",
+            "title": "EnterpriseGym: High-Fidelity RL Training Boosts Agent Generalization",
+            "tldr": "Surge AI's EnterpriseGym Corecraft environment shows training agents on realistic enterprise simulations improves performance on both in-distribution and out-of-distribution benchmarks, with frontier models initially struggling on complex tasks.",
+            "whyItMatters": [
+              "High-fidelity enterprise simulations could become essential for developing capable business AI agents",
+              "Demonstrates that quality RL environments enable transfer learning to real-world tasks"
+            ],
+            "whatToTry": {
+              "description": "Explore creating or using high-fidelity simulation environments for your specific domain to train agents, focusing on realistic workflows and expert-designed evaluation rubrics.",
+              "note": "Consider if your product could benefit from agent training - even simple simulations might yield better generalization than pure prompting."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1771511409854-ebyuu9",
+                "title": "EnterpriseGym Corecraft: Training Generalizable Agents on High-Fidelity RL Environments",
+                "url": "https://arxiv.org/abs/2602.16179",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-ebyuu9-0",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-ebyuu9-1",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1771511409854-ebyuu9-2",
+                "label": "Agent Training",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 00:00:00 -0500"
+          },
+          {
+            "id": "rss-techcrunch-ai-1771511409551-l7ppdx",
+            "title": "Freeform's $67M Bet on AI-Driven Manufacturing",
+            "tldr": "Freeform raised $67M Series B to scale its AI-powered laser manufacturing, claiming to be the only manufacturing company with on-site H200 GPU clusters.",
+            "whyItMatters": [
+              "Shows investor confidence in AI transforming physical manufacturing, not just software",
+              "Highlights a trend of specialized hardware (H200 clusters) moving directly to factory floors for real-time process control"
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI product's inference or training loop could benefit from tighter integration with physical hardware or sensors, reducing latency between prediction and action.",
+              "note": "This is capital-intensive; consider if cloud-based control with low-latency APIs is a more feasible first step."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1771511409551-l7ppdx",
+                "title": "Freeform raises $67M Series B to scale up laser AI manufacturing ",
+                "url": "https://techcrunch.com/2026/02/19/freeform-raises-67m-series-b-to-scale-up-laser-ai-manufacturing/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-l7ppdx-0",
+                "label": "AI Hardware",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1771511409551-l7ppdx-1",
+                "label": "Manufacturing",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 19 Feb 2026 13:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
