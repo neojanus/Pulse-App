@@ -444,6 +444,443 @@
         "totalReadTimeMinutes": 25,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-03-09-afternoon",
+        "period": "afternoon",
+        "date": "2026-03-09",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: mcp2cli: Drastically cuts LLM context costs for MCP/OpenAPI tools, AI Models Can't Hide Their Reasoning Process, AI Agents That Self-Discover Tools for Medical Imaging.",
+        "items": [
+          {
+            "id": "hn-47305149",
+            "title": "mcp2cli: Drastically cuts LLM context costs for MCP/OpenAPI tools",
+            "tldr": "A new CLI tool converts MCP servers and OpenAPI specs into on-demand command-line interfaces, reducing token usage by 96-99% by eliminating the need to inject full tool schemas into every LLM context window.",
+            "whyItMatters": [
+              "Significantly reduces API/LLM costs for AI agents using many tools",
+              "Enables dynamic tool discovery without code generation or rebuilds"
+            ],
+            "whatToTry": {
+              "description": "Install mcp2cli via npm (`npm install -g mcp2cli`) and test it with a public MCP server or your OpenAPI spec to see token savings in your agent workflows.",
+              "note": "Works with any LLM that can execute shell commands - no special integration needed."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47305149",
+                "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
+                "url": "https://github.com/knowsuchagency/mcp2cli",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47305149-0",
+                "label": "MCP",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-47305149-1",
+                "label": "Tool Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47305149-2",
+                "label": "Cost Reduction",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-03-09T05:18:46Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-fzdy1a",
+            "title": "AI Models Can't Hide Their Reasoning Process",
+            "tldr": "New research shows reasoning models struggle to control what they verbalize in their chain-of-thought, making it harder for them to hide misbehavior from monitoring systems.",
+            "whyItMatters": [
+              "Chain-of-thought monitoring remains viable for detecting model misbehavior and understanding motivations",
+              "Models' inability to control reasoning output creates a transparency advantage for developers"
+            ],
+            "whatToTry": {
+              "description": "If you're building monitoring or safety systems, prioritize chain-of-thought analysis over just monitoring final outputs - models can't easily hide their reasoning process.",
+              "note": "This advantage may diminish as models improve, so consider it a current tactical advantage rather than permanent solution."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-fzdy1a",
+                "title": "Reasoning Models Struggle to Control their Chains of Thought",
+                "url": "https://arxiv.org/abs/2603.05706",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-fzdy1a-0",
+                "label": "Chain-of-Thought",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-fzdy1a-1",
+                "label": "Model Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-fzdy1a-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-hirroo",
+            "title": "AI Agents That Self-Discover Tools for Medical Imaging",
+            "tldr": "Researchers propose MACRO, an AI agent that autonomously discovers and synthesizes effective multi-step tool sequences from experience, enabling self-improvement in complex medical imaging tasks without manual redesign.",
+            "whyItMatters": [
+              "Shows a path beyond brittle, static tool-chaining for AI agents, which is critical for real-world applications where requirements shift.",
+              "Demonstrates a practical method (experience-augmented memory, GRPO-like training) for agents to learn reusable skills, reducing the need for costly manual orchestration."
+            ],
+            "whatToTry": {
+              "description": "If you're building multi-step AI agents, explore implementing a lightweight memory system to log successful execution trajectories. Analyze these logs to identify and codify frequent, effective action sequences as new, higher-level tools in your agent's repertoire.",
+              "note": "Start with a narrow domain to validate that discovered 'composite tools' generalize before scaling the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-hirroo",
+                "title": "Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery",
+                "url": "https://arxiv.org/abs/2603.05860",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-hirroo-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-hirroo-1",
+                "label": "Tool Use",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-hirroo-2",
+                "label": "Medical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-pjnltx",
+            "title": "ProEvolve: Framework for Testing AI Agents in Evolving Environments",
+            "tldr": "Researchers propose ProEvolve, a graph-based framework for creating programmable, evolving environments to test AI agents' adaptability to real-world changes, moving beyond static benchmarks.",
+            "whyItMatters": [
+              "Business impact: Founders building agentic products need robust testing frameworks to ensure their systems handle real-world changes, not just static scenarios.",
+              "Technical impact: This research highlights a critical gap in current agent evaluation and provides a structured method to simulate environmental evolution, which is key for product reliability."
+            ],
+            "whatToTry": {
+              "description": "Review your agent's testing suite. If it only uses static benchmarks, design a simple script that programmatically alters a key API schema or data source your agent relies on, and test its failure/recovery mode.",
+              "note": "The core insight is to test for adaptability, not just performance in a fixed state. Start small by simulating a single breaking change."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-pjnltx",
+                "title": "The World Won't Stay Still: Programmable Evolution for Agent Benchmarks",
+                "url": "https://arxiv.org/abs/2603.05910",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-pjnltx-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-pjnltx-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-pjnltx-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-bfptjd",
+            "title": "New Benchmark & Agent for Fact-Checking AI Research Reports",
+            "tldr": "Researchers propose a new method (AtS) and benchmark (DeepFact-Bench) for verifying factuality in AI-generated deep research reports, showing experts are 50% more accurate as auditors than one-shot labelers.",
+            "whyItMatters": [
+              "Business impact: Provides a framework for building more trustworthy AI research assistants, crucial for enterprise and academic applications where factual accuracy is paramount.",
+              "Technical impact: Introduces a co-evolutionary approach where benchmarks and verification models improve together, addressing a key weakness in current fact-checking systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building a research or content-generation agent, evaluate your fact-checking pipeline against the DeepFact-Bench dataset to identify weaknesses in verifying complex, multi-claim reports.",
+              "note": "Consider implementing an 'audit-then-score' feedback loop in your own system where human experts review disputed claims to continuously improve your verifier's accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-bfptjd",
+                "title": "DeepFact: Co-Evolving Benchmarks and Agents for Deep Research Factuality",
+                "url": "https://arxiv.org/abs/2603.05912",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-bfptjd-0",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-bfptjd-1",
+                "label": "Fact-Checking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-bfptjd-2",
+                "label": "Research Agent",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-ctu817",
+            "title": "LLM Multi-Agent System Automates Product Concept Evaluation",
+            "tldr": "New research proposes an LLM-based multi-agent system that automates product concept evaluation, matching expert rankings in a case study.",
+            "whyItMatters": [
+              "Automates a high-cost, subjective business process (resource allocation for new products).",
+              "Demonstrates a practical, structured application of multi-agent systems beyond simple chatbots."
+            ],
+            "whatToTry": {
+              "description": "Use this paper as a blueprint to prototype an internal tool for a preliminary, automated 'first pass' evaluation of new product or feature ideas before committing expert time.",
+              "note": "Focus on replicating the structured deliberation and RAG-for-evidence pattern, not necessarily the full eight-agent setup."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-ctu817",
+                "title": "An Interactive Multi-Agent System for Evaluation of New Product Concepts",
+                "url": "https://arxiv.org/abs/2603.05980",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-ctu817-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-ctu817-1",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-ctu817-2",
+                "label": "Product Development",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1773066492153-h0wrx7",
+            "title": "AI's Threat to Venture Capital Itself",
+            "tldr": "Wired explores whether AI could disrupt the VC industry itself, as VCs bet on AI disrupting everything else.",
+            "whyItMatters": [
+              "Business impact: AI could automate deal sourcing, due diligence, and portfolio management, potentially reducing the need for traditional VC firms.",
+              "Technical impact: The core VC skill of pattern recognition and founder evaluation is a prime target for AI automation."
+            ],
+            "whatToTry": {
+              "description": "Analyze your own fundraising process. Could parts of your pitch, financials, or market analysis be generated or augmented by AI to make you more attractive to both human and algorithmic investors?",
+              "note": "This is a strategic thought exercise about the future of funding, not an immediate tool change."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1773066492153-h0wrx7",
+                "title": "Can AI Kill the Venture Capitalist?",
+                "url": "https://www.wired.com/story/ai-kill-venture-capital/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1773066492153-h0wrx7-0",
+                "label": "VC",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1773066492153-h0wrx7-1",
+                "label": "Industry",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 09:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-rmwtbv",
+            "title": "RoboLayout: AI Generates Agent-Aware 3D Scenes",
+            "tldr": "New research introduces RoboLayout, a differentiable 3D scene generation system that creates layouts specifically designed for interaction by embodied agents like robots or humans.",
+            "whyItMatters": [
+              "Enables creation of AI environments tailored to specific agent capabilities (robots, humans, animals)",
+              "Moves beyond semantic coherence to practical feasibility for real-world interaction"
+            ],
+            "whatToTry": {
+              "description": "If you're building embodied AI agents, explore how RoboLayout's differentiable optimization approach could help generate training environments or test scenarios that match your agent's specific physical constraints.",
+              "note": "This is research-stage, but the agent-agnostic approach means you could adapt it for various robot platforms or human-centered applications."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-rmwtbv",
+                "title": "RoboLayout: Differentiable 3D Scene Generation for Embodied Agents",
+                "url": "https://arxiv.org/abs/2603.05522",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-rmwtbv-0",
+                "label": "RoboLayout",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-rmwtbv-1",
+                "label": "Embodied AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-rmwtbv-2",
+                "label": "3D Generation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-c35lsq",
+            "title": "Research: AI Agent Orchestration Stability Depends on Dependency Structure",
+            "tldr": "New research shows that the structure of AI service dependency graphs (DAGs) determines whether decentralized, price-based resource allocation for real-time AI agents can work reliably at scale.",
+            "whyItMatters": [
+              "Business impact: Understanding this can help you design more stable and cost-effective multi-agent systems that span device-edge-cloud infrastructure.",
+              "Technical impact: Hierarchical dependency graphs (trees/series-parallel) enable stable pricing and efficient allocation, while complex cross-cutting dependencies cause instability and management challenges."
+            ],
+            "whatToTry": {
+              "description": "When designing multi-stage AI agent pipelines, map your service dependencies as a DAG and aim for hierarchical (tree or series-parallel) structures rather than complex cross-cutting dependencies to improve system stability and resource allocation efficiency.",
+              "note": "For complex dependencies, consider encapsulating problematic sub-graphs into well-structured resource slices as the paper suggests."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-c35lsq",
+                "title": "Real-Time AI Service Economy: A Framework for Agentic Computing Across the Continuum",
+                "url": "https://arxiv.org/abs/2603.05614",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-c35lsq-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-c35lsq-1",
+                "label": "Edge Computing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-c35lsq-2",
+                "label": "System Design",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1773066492308-jwjrwn",
+            "title": "Agentic LLM Planning Shows Modest Gains Over Direct Methods",
+            "tldr": "New research shows agentic LLM planning (via PDDL simulation) achieves 66.7% success vs 63.7% for direct planning, but at 5.7x higher token cost, suggesting LLMs may recall training data rather than truly plan.",
+            "whyItMatters": [
+              "Agentic approaches may not justify their cost for many practical applications",
+              "LLMs may be pattern-matching rather than reasoning, limiting generalizability"
+            ],
+            "whatToTry": {
+              "description": "Benchmark your agentic workflows against simpler direct prompting to see if the complexity and cost are justified for your specific domain.",
+              "note": "Consider whether your tasks resemble the structured Blocksworld problems or require more novel reasoning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1773066492308-jwjrwn",
+                "title": "Agentic LLM Planning via Step-Wise PDDL Simulation: An Empirical Characterisation",
+                "url": "https://arxiv.org/abs/2603.06064",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-jwjrwn-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-jwjrwn-1",
+                "label": "Planning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1773066492308-jwjrwn-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 09 Mar 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
