@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-04-01",
+    "date": "2026-04-02",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-04-02-afternoon",
+        "period": "afternoon",
+        "date": "2026-04-02",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores, New Framework Separates LLM Decisions from Actions, AMD Launches Lemonade: Open-Source Local LLM Server.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1775140644684-km29b8",
+            "title": "Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores",
+            "tldr": "Independent researchers reverse-engineered GPT-o's hidden tools and built a native agent harness, achieving the first independent reproduction of OpenAI's published benchmark scores.",
+            "whyItMatters": [
+              "Shows the importance of tool access and native formatting for achieving published model performance",
+              "Reveals that models retain strong priors about their training tools, which can be exploited"
+            ],
+            "whatToTry": {
+              "description": "If you're building with GPT-o or similar models, test your agent's performance using the native Harmony harness format instead of Chat Completions API to avoid conversion losses.",
+              "note": "This suggests that reported benchmark scores may be highly dependent on specific tool access and formatting that aren't always disclosed."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-km29b8",
+                "title": "In harmony with gpt-oss",
+                "url": "https://arxiv.org/abs/2604.00362",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-km29b8-0",
+                "label": "GPT-o",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-km29b8-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-km29b8-2",
+                "label": "Benchmarking",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-7z1suj",
+            "title": "New Framework Separates LLM Decisions from Actions",
+            "tldr": "Researchers propose a decision-centric design that explicitly separates control decisions from generation in LLM systems, improving reliability and diagnosability.",
+            "whyItMatters": [
+              "Business impact: Enables more reliable and controllable AI products with fewer failed actions and better error attribution.",
+              "Technical impact: Provides architectural pattern for building inspectable systems where decision logic can be debugged and improved separately."
+            ],
+            "whatToTry": {
+              "description": "Review your LLM system's architecture to identify where control decisions (like routing, tool calls, or clarification) are implicitly embedded in generation. Consider prototyping a separate decision layer that explicitly evaluates signals before taking actions.",
+              "note": "This is particularly valuable for complex workflows where failures are expensive or hard to debug."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-7z1suj",
+                "title": "Decision-Centric Design for LLM Systems",
+                "url": "https://arxiv.org/abs/2604.00414",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-7z1suj-0",
+                "label": "System Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-7z1suj-1",
+                "label": "Reliability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-47612724",
+            "title": "AMD Launches Lemonade: Open-Source Local LLM Server",
+            "tldr": "AMD released Lemonade, an open-source local LLM server optimized for AMD GPUs and NPUs, enabling efficient on-device AI inference.",
+            "whyItMatters": [
+              "Reduces dependency on cloud APIs and associated costs for local AI applications",
+              "Provides an alternative to NVIDIA's ecosystem for hardware-accelerated inference"
+            ],
+            "whatToTry": {
+              "description": "Test Lemonade on an AMD-powered development machine to benchmark local inference speed and cost savings versus cloud APIs for your prototype.",
+              "note": "Early release—expect rapid iteration but potential instability."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47612724",
+                "title": "Lemonade by AMD: a fast and open source local LLM server using GPU and NPU",
+                "url": "https://lemonade-server.ai",
+                "domain": "lemonade-server.ai",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47612724-0",
+                "label": "Lemonade",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-47612724-1",
+                "label": "Local Inference",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47612724-2",
+                "label": "AMD",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-02T11:04:51Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-gwkvle",
+            "title": "Research: Emotion Steering Can Shape LLM Behavior & Safety",
+            "tldr": "New research proposes E-STEER, a framework to embed emotion as a controllable variable in LLM hidden states, showing it can systematically influence reasoning, generation, safety, and agent behavior.",
+            "whyItMatters": [
+              "Introduces a new, interpretable method for fine-tuning model behavior beyond prompt engineering or RLHF.",
+              "Shows potential to enhance both model capability and safety alignment through structured emotional variables."
+            ],
+            "whatToTry": {
+              "description": "Review the E-STEER framework and consider how structured, non-task-specific variables could be embedded in your own agent architectures to steer behavior in a more interpretable way.",
+              "note": "This is early-stage research; the practical implementation and scaling effects are not yet proven."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-gwkvle",
+                "title": "How Emotion Shapes the Behavior of LLMs and Agents: A Mechanistic Study",
+                "url": "https://arxiv.org/abs/2604.00005",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-gwkvle-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-gwkvle-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-gwkvle-2",
+                "label": "Fine-tuning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-pq70q6",
+            "title": "CAMP: Adaptive Multi-Agent AI for Better Clinical Predictions",
+            "tldr": "New research proposes CAMP, a case-adaptive multi-agent framework where an 'attending physician' AI dynamically assembles specialist panels for complex medical cases, outperforming single-agent and fixed multi-agent approaches while using fewer tokens.",
+            "whyItMatters": [
+              "Shows how to handle 'case-level heterogeneity' where AI performs inconsistently on complex inputs",
+              "Demonstrates a more efficient multi-agent architecture that reduces token usage while improving accuracy"
+            ],
+            "whatToTry": {
+              "description": "Experiment with implementing a dynamic routing mechanism in your AI system where different 'expert agents' are activated based on input complexity or uncertainty scores, rather than running all agents on every query.",
+              "note": "Consider adding a 'principled abstention' feature where components can decline to answer outside their expertise instead of forcing low-confidence outputs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-pq70q6",
+                "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+                "url": "https://arxiv.org/abs/2604.00085",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pq70q6-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pq70q6-1",
+                "label": "LLM Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pq70q6-2",
+                "label": "Clinical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-vzbcqu",
+            "title": "OpenTools: Community-Driven Framework for More Reliable AI Agents",
+            "tldr": "OpenTools introduces a community-driven framework to improve AI agent reliability by standardizing tool schemas and providing automated testing, addressing both tool-use and intrinsic tool accuracy.",
+            "whyItMatters": [
+              "Addresses a key bottleneck in production AI agents - tool reliability - which directly impacts user trust and system performance",
+              "Shifts focus from just agent prompting to the quality of the underlying tools themselves, with community contributions showing 6%-22% performance gains"
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agent tooling against the OpenTools framework's reliability metrics, particularly focusing on intrinsic tool accuracy and automated testing.",
+              "note": "Consider contributing to or adopting community-vetted tools from the framework to improve your agent's reliability without extensive in-house development."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-vzbcqu",
+                "title": "Open, Reliable, and Collective: A Community-Driven Framework for Tool-Using AI Agents",
+                "url": "https://arxiv.org/abs/2604.00137",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-vzbcqu-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-vzbcqu-1",
+                "label": "Tool Integration",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-vzbcqu-2",
+                "label": "OpenTools",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-pe9j4p",
+            "title": "New Research: How to Stop AI Coding Tools from Drifting Off-Task",
+            "tldr": "A new paper proposes a human-in-the-loop curriculum to combat 'objective drift' in AI-assisted programming, where LLM outputs diverge from the original task specs, offering a stable pedagogical framework.",
+            "whyItMatters": [
+              "Business impact: Founders building AI coding tools or educational platforms must design for user control to ensure reliable outcomes and user trust.",
+              "Technical impact: This research provides a concrete, theory-driven method for structuring human-AI collaboration, moving beyond prompt engineering to system design."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI coding assistant, explicitly design a workflow that separates the 'planning' phase (where the user defines acceptance criteria and constraints) from the 'execution' phase (where the AI generates code). Test if this reduces off-target outputs.",
+              "note": "Consider introducing small, deliberate 'drifts' in your testing to see how well users can diagnose and correct the AI's output, which could improve your product's educational value."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-pe9j4p",
+                "title": "Human-in-the-Loop Control of Objective Drift in LLM-Assisted Computer Science Education",
+                "url": "https://arxiv.org/abs/2604.00281",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pe9j4p-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pe9j4p-1",
+                "label": "AI-Assisted Programming",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-pe9j4p-2",
+                "label": "Human-in-the-Loop",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-wcv2hj",
+            "title": "New Framework Triage Agent Trajectories for Better Debugging",
+            "tldr": "Researchers propose a lightweight 'signal' framework to efficiently sample and triage voluminous, non-deterministic LLM agent interaction logs, achieving an 82% informativeness rate for identifying failures.",
+            "whyItMatters": [
+              "Business impact: Enables cost-effective, scalable monitoring and improvement of deployed agentic systems, reducing the need for expensive human or LLM review of every interaction.",
+              "Technical impact: Provides a structured, cheap method to identify the most informative failure cases (misalignment, stagnation, execution loops) for debugging and fine-tuning, without affecting live system performance."
+            ],
+            "whatToTry": {
+              "description": "Review your agent's interaction logs and categorize failures using the proposed signal taxonomy (e.g., 'stagnation' for repetitive actions, 'misalignment' for goal drift). Start by instrumenting your system to log these cheap, structured attributes for later triage and analysis.",
+              "note": "This is a research framework, not a tool. The core idea is to move from reviewing random logs to systematically tagging and filtering them based on predefined failure signals."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-wcv2hj",
+                "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
+                "url": "https://arxiv.org/abs/2604.00356",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-wcv2hj-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-wcv2hj-1",
+                "label": "Monitoring",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-wcv2hj-2",
+                "label": "Debugging",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-47610336",
+            "title": "r/programming bans LLM discussion - community pushback",
+            "tldr": "r/programming temporarily banned all LLM-related content due to low-quality submissions, sparking significant debate about AI's role in programming communities.",
+            "whyItMatters": [
+              "Shows community fatigue with repetitive/low-quality AI content",
+              "Highlights the challenge of moderating AI discussions in technical forums"
+            ],
+            "whatToTry": {
+              "description": "If you're building AI dev tools, monitor community sentiment on platforms like Reddit and HackerNews to understand pain points around AI content quality and moderation.",
+              "note": "This isn't anti-AI sentiment - it's about content quality. Consider how your product addresses real developer needs vs. generating noise."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47610336",
+                "title": "r/programming bans all discussion of LLM programming",
+                "url": "https://old.reddit.com/r/programming/comments/1s9jkzi/announcement_temporary_llm_content_ban/",
+                "domain": "old.reddit.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47610336-0",
+                "label": "Community",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47610336-1",
+                "label": "Developer Tools",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-02T05:33:20Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1775140644684-sco6gs",
+            "title": "Multi-Agent LLM Framework for Safer Health Simulations",
+            "tldr": "Researchers propose a multi-agent LLM framework that uses specialized, role-based agents to simulate behavioral health conversations with built-in safety auditing, showing improved structure and oversight over single-agent approaches.",
+            "whyItMatters": [
+              "Demonstrates a practical architecture for decomposing complex conversational tasks (like health support) into specialized, safer agents.",
+              "Highlights a design pattern (role-orchestration with a controller) that founders can adapt for other sensitive or multi-faceted AI applications."
+            ],
+            "whatToTry": {
+              "description": "Consider if your product's core conversation could be decomposed into distinct roles (e.g., 'empathizer', 'problem-solver', 'safety-checker'). Prototype a simple multi-agent controller that routes user queries to different, specialized prompts or fine-tuned models.",
+              "note": "This is a research framework, not a product. The key takeaway is the design pattern, not the specific health application."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775140644684-sco6gs",
+                "title": "A Safety-Aware Role-Orchestrated Multi-Agent LLM Framework for Behavioral Health Communication Simulation",
+                "url": "https://arxiv.org/abs/2604.00249",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-sco6gs-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-sco6gs-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775140644684-sco6gs-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-04-01",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-04-01-morning",
@@ -1308,7 +1746,7 @@
   },
   {
     "date": "2026-03-31",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Mar 31",
     "briefings": [
       {
         "id": "briefing-2026-03-31-afternoon",
@@ -5567,444 +6005,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-03-26",
-    "displayDate": "Thursday, Mar 26",
-    "briefings": [
-      {
-        "id": "briefing-2026-03-26-evening",
-        "period": "evening",
-        "date": "2026-03-26",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: LiteLLM PyPI Package Compromised in Supply Chain Attack, Gemini 3.1 Flash Live: Google's New Low-Latency Audio AI, ByteDance's Dreamina 2.0 brings protected AI video to CapCut.",
-        "items": [
-          {
-            "id": "hn-47531967",
-            "title": "LiteLLM PyPI Package Compromised in Supply Chain Attack",
-            "tldr": "Versions 1.82.7 and 1.82.8 of the popular LiteLLM Python package on PyPI were compromised with malware, affecting thousands of AI applications that depend on this unified LLM interface.",
-            "whyItMatters": [
-              "Supply chain attacks on AI infrastructure can compromise entire application stacks and user data",
-              "Highlights critical dependency risks for AI products built on open-source packages"
-            ],
-            "whatToTry": {
-              "description": "Immediately check if your project uses LiteLLM and pin to version 1.82.6 or earlier, then audit your dependencies for similar vulnerabilities.",
-              "note": "Consider implementing dependency scanning tools like Dependabot or Snyk for future protection"
-            },
-            "sources": [
-              {
-                "id": "src-hn-47531967",
-                "title": "My minute-by-minute response to the LiteLLM malware attack",
-                "url": "https://futuresearch.ai/blog/litellm-attack-transcript/",
-                "domain": "futuresearch.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47531967-0",
-                "label": "LiteLLM",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47531967-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47531967-2",
-                "label": "Supply Chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-26T15:48:40Z"
-          },
-          {
-            "id": "rss-google-ai-blog-1774558709276-eidhg0",
-            "title": "Gemini 3.1 Flash Live: Google's New Low-Latency Audio AI",
-            "tldr": "Google released Gemini 3.1 Flash Live, a low-latency model for real-time audio interactions, now available across Google products.",
-            "whyItMatters": [
-              "Enables more natural, conversational AI experiences by reducing audio response latency",
-              "Sets new expectations for real-time AI interactions in consumer and enterprise applications"
-            ],
-            "whatToTry": {
-              "description": "Test the model's latency and conversational flow by building a simple voice interface prototype using Google's APIs, comparing it to your current audio AI solution.",
-              "note": "Focus on measuring the perceived naturalness of conversations, not just raw latency numbers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1774558709276-eidhg0",
-                "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
-                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-eidhg0-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-eidhg0-1",
-                "label": "Audio AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-eidhg0-2",
-                "label": "Google",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 15:21:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774558709048-6oyuao",
-            "title": "ByteDance's Dreamina 2.0 brings protected AI video to CapCut",
-            "tldr": "ByteDance launched Dreamina Seedance 2.0 in CapCut with built-in protections against generating videos from real faces or unauthorized IP, signaling a focus on responsible AI video creation.",
-            "whyItMatters": [
-              "Business impact: Shows major platforms are prioritizing content safety and IP protection to avoid legal issues and build trust",
-              "Technical impact: Indicates progress in implementing real-time content moderation and attribution systems for AI video generation"
-            ],
-            "whatToTry": {
-              "description": "Test CapCut's new AI video features to understand how the content protections work in practice, and consider implementing similar safeguards if you're building AI media tools.",
-              "note": "Pay attention to how the restrictions affect creative workflows - this could become an industry standard"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774558709048-6oyuao",
-                "title": "ByteDance’s new AI video generation model, Dreamina Seedance 2.0, comes to CapCut",
-                "url": "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-6oyuao-0",
-                "label": "Dreamina Seedance",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-6oyuao-1",
-                "label": "CapCut",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-6oyuao-2",
-                "label": "AI Video",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 15:25:13 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774558709048-alb46u",
-            "title": "Conntour raises $7M for AI video search",
-            "tldr": "Conntour raised $7M from General Catalyst and YC to build an AI search engine that lets security teams query video feeds using natural language.",
-            "whyItMatters": [
-              "Shows investor appetite for practical AI applications in enterprise verticals like security",
-              "Demonstrates the market potential for multimodal AI that can understand and search video content"
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your product could benefit from adding natural language search to unstructured data (like video, audio, or documents) to create a more intuitive user interface.",
-              "note": "Consider starting with a simpler proof-of-concept using existing multimodal APIs before building custom models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774558709048-alb46u",
-                "title": "Conntour raises $7M from General Catalyst, YC to build an AI search engine for security video systems",
-                "url": "https://techcrunch.com/2026/03/26/conntour-raises-7m-from-general-catalyst-yc-to-build-an-ai-search-engine-for-security-video-systems/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-alb46u-0",
-                "label": "multimodal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-alb46u-1",
-                "label": "enterprise",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-alb46u-2",
-                "label": "search",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 13:41:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774558709048-yjrvrv",
-            "title": "Cohere's Open-Source Voice Model Targets Self-Hosted Transcription",
-            "tldr": "Cohere released a 2B-parameter open-source voice model optimized for transcription, designed to run on consumer GPUs and supporting 14 languages.",
-            "whyItMatters": [
-              "Reduces dependency on API services for transcription tasks, lowering costs and increasing data privacy for founders.",
-              "Enables on-device or private cloud deployment, opening use cases in regulated industries or latency-sensitive applications."
-            ],
-            "whatToTry": {
-              "description": "Test the model locally on a consumer GPU to benchmark transcription accuracy and speed against your current API solution, especially if you handle multilingual audio.",
-              "note": "Consider this for prototyping or niche applications where data sovereignty or cost control is critical, but evaluate if the 14-language support meets your needs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774558709048-yjrvrv",
-                "title": "Cohere launches an open source voice model specifically for transcription",
-                "url": "https://techcrunch.com/2026/03/26/cohere-launches-an-open-source-voice-model-specifically-for-transcription/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-yjrvrv-0",
-                "label": "Cohere",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-yjrvrv-1",
-                "label": "Speech-to-Text",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-yjrvrv-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 13:30:00 +0000"
-          },
-          {
-            "id": "hn-47529646",
-            "title": "EU Parliament Halts Chat Control 1.0 Surveillance Proposal",
-            "tldr": "The European Parliament voted to stop Chat Control 1.0, a controversial proposal that would have mandated client-side scanning of encrypted messages, with significant pushback from privacy advocates and tech companies.",
-            "whyItMatters": [
-              "Business impact: Reduces regulatory uncertainty for AI/chat app developers in Europe who rely on encryption",
-              "Technical impact: Preserves end-to-end encryption standards and avoids mandated backdoors that would compromise security"
-            ],
-            "whatToTry": {
-              "description": "Review your product's data privacy and encryption approach for EU markets - this decision maintains current encryption standards, so you don't need to redesign for client-side scanning compliance.",
-              "note": "Monitor for Chat Control 2.0 proposals, as similar legislation may resurface with different technical requirements."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47529646",
-                "title": "European Parliament decided that Chat Control 1.0 must stop",
-                "url": "https://bsky.app/profile/tuta.com/post/3mhxkfowv322c",
-                "domain": "bsky.app",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47529646-0",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47529646-1",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-26T12:30:59Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774558709048-huv53x",
-            "title": "Senate Scrutiny of AI Data Center Energy Use",
-            "tldr": "Bipartisan senators are pushing for detailed reporting on data center power consumption, signaling increased regulatory attention on AI infrastructure's energy impact.",
-            "whyItMatters": [
-              "Increased compliance costs and reporting requirements for AI infrastructure providers",
-              "Potential future regulations that could affect data center location, expansion, and operational decisions"
-            ],
-            "whatToTry": {
-              "description": "Review your cloud provider's sustainability reports and energy sourcing commitments, and factor potential regulatory compliance costs into your infrastructure planning.",
-              "note": "Consider providers with transparent energy reporting and renewable commitments to future-proof against regulatory changes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774558709048-huv53x",
-                "title": "Data centers get ready — the Senate wants to see your power bills",
-                "url": "https://techcrunch.com/2026/03/26/data-centers-get-ready-the-senate-wants-to-see-your-power-bills/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-huv53x-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774558709048-huv53x-1",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 18:23:31 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1774558709089-v4jwgq",
-            "title": "Tech Reporters Using AI Agents in Reporting Workflow",
-            "tldr": "Independent journalists are integrating AI agents throughout their reporting process, from research to editing, raising questions about the evolving role of human journalists.",
-            "whyItMatters": [
-              "Shows real-world adoption of AI in content creation workflows, indicating market validation for AI writing tools.",
-              "Highlights the shift from AI as a replacement to AI as a collaborative partner in professional writing."
-            ],
-            "whatToTry": {
-              "description": "Analyze your own content creation or documentation workflow. Identify one repetitive, time-consuming task (like initial research, summarizing sources, or proofreading a first draft) and test a specialized AI tool (like Perplexity, Claude, or a grammar checker) to assist with it. Measure the time saved and quality impact.",
-              "note": "Focus on augmentation, not replacement. The most effective use cases combine human judgment with AI efficiency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1774558709089-v4jwgq",
-                "title": "Meet the Tech Reporters Using AI to Help Write and Edit Their Stories",
-                "url": "https://www.wired.com/story/tech-reporters-using-ai-write-edit-stories/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1774558709089-v4jwgq-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1774558709089-v4jwgq-1",
-                "label": "Content Creation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1774558709089-v4jwgq-2",
-                "label": "Workflow",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 18:00:00 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1774558709276-bmtlo4",
-            "title": "Google Translate Live Headphone Translation Expands to iOS",
-            "tldr": "Google Translate's live translation feature for headphones is now available on iOS and expanding to more countries, enabling real-time conversation translation through personal audio devices.",
-            "whyItMatters": [
-              "Expands accessibility of real-time translation to iOS users, potentially increasing market reach for translation-dependent products",
-              "Demonstrates continued investment in on-device AI for practical, real-world applications"
-            ],
-            "whatToTry": {
-              "description": "Test the feature with different headphone types to understand latency and accuracy limitations, then consider how similar real-time audio processing could enhance your own product's user experience.",
-              "note": "Focus on use cases where immediate, hands-free translation adds value beyond traditional app-based solutions"
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1774558709276-bmtlo4",
-                "title": "Transform your headphones into a live personal translator on iOS.",
-                "url": "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-bmtlo4-0",
-                "label": "Google Translate",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-bmtlo4-1",
-                "label": "Real-time Translation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-bmtlo4-2",
-                "label": "On-device AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 16:00:00 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1774558709276-adalr2",
-            "title": "Google Search Live Goes Global",
-            "tldr": "Google is expanding its Search Live feature globally to all languages and locations where AI Mode is available, enabling real-time AI-powered search responses.",
-            "whyItMatters": [
-              "Business impact: This signals Google's aggressive push into real-time AI search, potentially changing user expectations for search experiences and creating new competitive pressure.",
-              "Technical impact: The global rollout suggests Google has improved infrastructure and model capabilities to handle diverse languages and real-time data at scale."
-            ],
-            "whatToTry": {
-              "description": "Test Search Live in your region to understand how Google's real-time AI responses work, then evaluate if your product could benefit from similar real-time capabilities or needs to differentiate from this approach.",
-              "note": "Focus on how real-time AI responses might change user behavior in your specific domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1774558709276-adalr2",
-                "title": "Search Live is expanding globally",
-                "url": "https://blog.google/products-and-platforms/products/search/search-live-global-expansion/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-adalr2-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-adalr2-1",
-                "label": "Search",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1774558709276-adalr2-2",
-                "label": "Real-time AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 26 Mar 2026 15:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
