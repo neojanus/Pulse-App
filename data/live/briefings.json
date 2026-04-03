@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-04-02",
+    "date": "2026-04-03",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-04-03-morning",
+        "period": "morning",
+        "date": "2026-04-03",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores, New Framework Separates LLM Decisions from Actions for Better Control, OpenAI Acquires TBPN - Talent & Tech Grab.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1775203809638-s8i330",
+            "title": "Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores",
+            "tldr": "Independent researchers reverse-engineered GPT-o's hidden tools and built a native agent harness, achieving the first independent reproduction of OpenAI's published benchmark scores.",
+            "whyItMatters": [
+              "Business impact: Validates OpenAI's published claims and shows open-source alternatives can match proprietary performance when the full system is understood.",
+              "Technical impact: Reveals GPT-o has strong priors for specific tools from its training, and that native message encoding (bypassing Chat Completions) is critical for performance."
+            ],
+            "whatToTry": {
+              "description": "If you're building agents with frontier models, test your prompts and agent loops using the model's native message format instead of the Chat Completions API wrapper to avoid performance loss.",
+              "note": "The 'harmony' agent harness is open-source; examine its approach to native message encoding for your own implementations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-s8i330",
+                "title": "In harmony with gpt-oss",
+                "url": "https://arxiv.org/abs/2604.00362",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-s8i330-0",
+                "label": "GPT-o",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-s8i330-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-s8i330-2",
+                "label": "Benchmarking",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-iatqt2",
+            "title": "New Framework Separates LLM Decisions from Actions for Better Control",
+            "tldr": "Researchers propose a decision-centric design that explicitly separates decision-making from action execution in LLM systems, enabling better failure diagnosis and modular improvement.",
+            "whyItMatters": [
+              "Business impact: More reliable and controllable AI systems reduce operational failures and improve user trust.",
+              "Technical impact: Separating decision signals from action policies makes systems more inspectable, debuggable, and easier to improve incrementally."
+            ],
+            "whatToTry": {
+              "description": "Audit your current LLM system architecture to identify where decision logic is entangled with generation. Consider prototyping a separate 'decision layer' that explicitly handles routing, tool calls, and escalation before the LLM generates a final response.",
+              "note": "This is particularly valuable for complex multi-step workflows where failure attribution is currently difficult."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-iatqt2",
+                "title": "Decision-Centric Design for LLM Systems",
+                "url": "https://arxiv.org/abs/2604.00414",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-iatqt2-0",
+                "label": "System Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-iatqt2-1",
+                "label": "Reliability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-47617376",
+            "title": "OpenAI Acquires TBPN - Talent & Tech Grab",
+            "tldr": "OpenAI has acquired TBPN, a small AI startup, sparking significant discussion on HackerNews about the strategic implications for talent acquisition and competitive moats.",
+            "whyItMatters": [
+              "Strategic talent acquisition: This signals OpenAI's aggressive strategy to acquire specialized teams and technology to maintain its competitive edge, potentially accelerating development in specific areas.",
+              "Industry consolidation: The move highlights the trend of major AI players acquiring smaller, innovative startups, which could impact the startup ecosystem and founder exit strategies."
+            ],
+            "whatToTry": {
+              "description": "Review the HackerNews discussion thread to understand the community's perspective on the strategic rationale, potential technology focus, and implications for the competitive landscape.",
+              "note": "Focus on comments from industry insiders and founders who may reveal insights about TBPN's technology or team expertise."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47617376",
+                "title": "OpenAI Acquires TBPN",
+                "url": "https://openai.com/index/openai-acquires-tbpn/",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47617376-0",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-47617376-1",
+                "label": "M&A",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47617376-2",
+                "label": "Strategy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-02T17:26:49Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-65ffz3",
+            "title": "New Research Shows Emotion Can Be Used to Steer LLM Behavior",
+            "tldr": "A new framework called E-STEER embeds emotion as a controllable variable in LLM hidden states, showing specific emotions can enhance reasoning, safety, and shape agent behavior in ways consistent with psychology.",
+            "whyItMatters": [
+              "Introduces a new, interpretable method for controlling AI outputs beyond prompts or fine-tuning.",
+              "Suggests emotional states could be a fundamental lever for improving model performance and safety."
+            ],
+            "whatToTry": {
+              "description": "Consider how emotional framing or 'state' could be integrated into your product's prompt engineering or agent workflows. For a chatbot, test prompts that set an emotional context (e.g., 'Think carefully and calmly...') versus neutral ones.",
+              "note": "This is early-stage research; the practical implementation details are not yet available as a tool."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-65ffz3",
+                "title": "How Emotion Shapes the Behavior of LLMs and Agents: A Mechanistic Study",
+                "url": "https://arxiv.org/abs/2604.00005",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-65ffz3-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-65ffz3-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-65ffz3-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-hj311y",
+            "title": "CAMP: Adaptive Multi-Agent AI for Complex Medical Cases",
+            "tldr": "New research proposes CAMP, a multi-agent LLM framework that dynamically assembles specialist panels for clinical predictions, outperforming single-agent and fixed-panel approaches while improving transparency.",
+            "whyItMatters": [
+              "Shows how to handle case-level heterogeneity in AI applications where some inputs are straightforward and others are complex",
+              "Demonstrates a more efficient multi-agent architecture that uses fewer tokens than competing methods while improving accuracy"
+            ],
+            "whatToTry": {
+              "description": "Experiment with implementing a similar case-adaptive routing system in your AI product where you have varying input complexity - use simple models for easy cases and assemble specialized models/agents only for complex cases.",
+              "note": "The three-valued voting system (KEEP/REFUSE/NEUTRAL) allows agents to abstain when uncertain, which could reduce errors in your own multi-agent systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-hj311y",
+                "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+                "url": "https://arxiv.org/abs/2604.00085",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hj311y-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hj311y-1",
+                "label": "LLM Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hj311y-2",
+                "label": "Clinical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-3ygbvx",
+            "title": "OpenTools: Community Framework for More Reliable AI Agents",
+            "tldr": "New research paper introduces OpenTools, a community-driven framework that addresses both agent and tool reliability for tool-using AI, showing 6%-22% performance gains.",
+            "whyItMatters": [
+              "Identifies 'intrinsic tool accuracy' as a critical bottleneck beyond just agent tool-use accuracy",
+              "Provides a standardized, testable approach to building more reliable agent toolchains"
+            ],
+            "whatToTry": {
+              "description": "Review the OpenTools framework and consider how its standardized tool schemas and test suites could be applied to improve the reliability of your own agent's tool integrations.",
+              "note": "The public web demo allows you to test predefined agents and tools, which can help benchmark your own implementations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-3ygbvx",
+                "title": "Open, Reliable, and Collective: A Community-Driven Framework for Tool-Using AI Agents",
+                "url": "https://arxiv.org/abs/2604.00137",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-3ygbvx-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-3ygbvx-1",
+                "label": "Tool Integration",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-3ygbvx-2",
+                "label": "OpenTools",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-n0g3x7",
+            "title": "New Framework Triage Agent Trajectories for Better Debugging",
+            "tldr": "Researchers propose a lightweight 'signal' framework to efficiently sample and triage voluminous, non-deterministic agent interaction logs, achieving an 82% informativeness rate for identifying problematic runs.",
+            "whyItMatters": [
+              "Business impact: Enables cost-effective, scalable monitoring and improvement of deployed agentic systems by focusing human/LLM review on the most informative failures.",
+              "Technical impact: Provides a cheap, structured taxonomy of signals (e.g., misalignment, stagnation) computed without extra model calls, making post-deployment debugging feasible."
+            ],
+            "whatToTry": {
+              "description": "Review your agent's interaction logs and manually tag a small sample with simple, observable 'signals' like 'loop detected' or 'goal divergence' to build a baseline for automated triage.",
+              "note": "Start with the cheapest signals first (e.g., counting steps, checking for repeated actions) before investing in more complex analysis."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-n0g3x7",
+                "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
+                "url": "https://arxiv.org/abs/2604.00356",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-n0g3x7-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-n0g3x7-1",
+                "label": "Monitoring",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-n0g3x7-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-hswvv4",
+            "title": "Multi-Agent LLM Framework for Safer Health Simulations",
+            "tldr": "Researchers propose a multi-agent LLM framework that uses specialized, role-based agents to simulate behavioral health conversations with built-in safety auditing, showing improved coherence and safety over single-agent approaches.",
+            "whyItMatters": [
+              "Demonstrates a practical architecture for decomposing complex conversational tasks (like health support) into specialized, safer agents.",
+              "Highlights the trade-offs between modular design, safety oversight, and latency, which is critical for product design."
+            ],
+            "whatToTry": {
+              "description": "Consider if your product's core task could be decomposed into distinct, specialized 'agent roles' (e.g., one for empathy, one for action, one for safety) instead of relying on a single, monolithic LLM prompt.",
+              "note": "This is a research framework, not a production tool, but the design pattern is immediately applicable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-hswvv4",
+                "title": "A Safety-Aware Role-Orchestrated Multi-Agent LLM Framework for Behavioral Health Communication Simulation",
+                "url": "https://arxiv.org/abs/2604.00249",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hswvv4-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hswvv4-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-hswvv4-2",
+                "label": "LLM Architecture",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-ls62mv",
+            "title": "New Research: How to Stop AI Coding Tools from 'Drifting' Off-Task",
+            "tldr": "A new paper proposes a human-in-the-loop curriculum to combat 'objective drift' in LLM-assisted coding, where AI outputs diverge from the original task specs, treating human control as a core educational skill.",
+            "whyItMatters": [
+              "Business impact: Founders building AI coding assistants or educational tools must design for user control to ensure reliable outputs and avoid user frustration.",
+              "Technical impact: This research provides a concrete, control-theoretic framework for stabilizing AI-assisted workflows, moving beyond just prompt engineering."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI coding tool, explicitly design a 'planning phase' into the user workflow. Before code generation, prompt users to define clear acceptance criteria and architectural constraints for the task.",
+              "note": "Consider this a more durable design pattern than optimizing for a single 'perfect prompt', as it builds user skill and adapts to model changes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-ls62mv",
+                "title": "Human-in-the-Loop Control of Objective Drift in LLM-Assisted Computer Science Education",
+                "url": "https://arxiv.org/abs/2604.00281",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-ls62mv-0",
+                "label": "LLM-Assisted Coding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-ls62mv-1",
+                "label": "Human-in-the-Loop",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-ls62mv-2",
+                "label": "Education",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775203809638-60typm",
+            "title": "New AI Benchmark Tests Social Intelligence via Word Games",
+            "tldr": "Researchers propose using the improvisational word game 'Connections' as a benchmark to evaluate AI agents' social intelligence, requiring them to gauge other agents' understanding and collaborate.",
+            "whyItMatters": [
+              "Business impact: Highlights a growing focus on evaluating AI for collaborative, multi-agent scenarios, which is critical for developing useful AI teammates and customer-facing assistants.",
+              "Technical impact: Identifies a gap in current benchmarks—testing social awareness and theory of mind in LLM-based agents—which could drive new research and model improvements."
+            ],
+            "whatToTry": {
+              "description": "Test your own AI agent or model in a simplified 'Connections'-style game with another agent or human, observing how well it infers and adapts to the other's knowledge state during collaborative problem-solving.",
+              "note": "Start with a constrained vocabulary and clear rules to isolate the social reasoning challenge from pure knowledge retrieval."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775203809638-60typm",
+                "title": "Improvisational Games as a Benchmark for Social Intelligence of AI Agents: The Case of Connections",
+                "url": "https://arxiv.org/abs/2604.00284",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-60typm-0",
+                "label": "Benchmark",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-60typm-1",
+                "label": "Multi-Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775203809638-60typm-2",
+                "label": "Social Intelligence",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-04-02",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-04-02-afternoon",
@@ -439,7 +882,7 @@
   },
   {
     "date": "2026-04-01",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Apr 1",
     "briefings": [
       {
         "id": "briefing-2026-04-01-morning",
@@ -5580,431 +6023,6 @@
           }
         ],
         "totalReadTimeMinutes": 18,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-03-27",
-    "displayDate": "Friday, Mar 27",
-    "briefings": [
-      {
-        "id": "briefing-2026-03-27-evening",
-        "period": "evening",
-        "date": "2026-03-27",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Environment Maps: Structured Representations for More Reliable AI Agents, New Benchmark Tests LLMs as 'AI CFOs' for Resource Allocation, New Poker AI Benchmark Shows LLMs Still Struggle with Hidden Information.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1774645379837-jznhrc",
-            "title": "Environment Maps: Structured Representations for More Reliable AI Agents",
-            "tldr": "New research introduces Environment Maps, a persistent graph representation that nearly doubles agent success rates on complex tasks by consolidating evidence like screen recordings into structured, editable knowledge.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable automation of complex software workflows, reducing cascading errors that plague current AI agents.",
-              "Technical impact: Provides a human-interpretable, editable interface between LLMs and dynamic environments, making long-horizon planning more robust."
-            ],
-            "whatToTry": {
-              "description": "Consider implementing a lightweight version of this approach for your own agent workflows: start by logging and structuring key user interactions (clicks, inputs, outcomes) into a simple graph that your agent can reference across sessions.",
-              "note": "Focus on capturing 'tacit knowledge'—domain-specific procedures and definitions that are currently implicit in your system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1774645379837-jznhrc",
-                "title": "Environment Maps: Structured Environmental Representations for Long-Horizon Agents",
-                "url": "https://arxiv.org/abs/2603.23610",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-jznhrc-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-jznhrc-1",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1774645379837-sn5mpc",
-            "title": "New Benchmark Tests LLMs as 'AI CFOs' for Resource Allocation",
-            "tldr": "Researchers created EnterpriseArena, a benchmark showing current LLMs struggle with long-term enterprise resource allocation, with only 16% of runs surviving the full simulation.",
-            "whyItMatters": [
-              "Identifies a key limitation for AI agents in business applications - they can't yet handle complex, long-horizon resource allocation like human CFOs",
-              "Shows that bigger models don't necessarily solve this problem, suggesting it's a fundamental capability gap, not just a scaling issue"
-            ],
-            "whatToTry": {
-              "description": "If you're building AI agents for business operations, test them on long-horizon resource allocation scenarios before assuming they can handle CFO-like responsibilities.",
-              "note": "Consider whether your product actually needs long-term planning capabilities or if simpler, reactive decision-making is sufficient."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1774645379837-sn5mpc",
-                "title": "Can LLM Agents Be CFOs? A Benchmark for Resource Allocation in Dynamic Enterprise Environments",
-                "url": "https://arxiv.org/abs/2603.23638",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-sn5mpc-0",
-                "label": "LLM Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-sn5mpc-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-sn5mpc-2",
-                "label": "Benchmark",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1774645379837-qgrewb",
-            "title": "New Poker AI Benchmark Shows LLMs Still Struggle with Hidden Information",
-            "tldr": "Researchers released GTO Wizard Benchmark, a standardized API for evaluating AI agents in poker, revealing that even top LLMs like GPT-4.4 and Claude Opus perform far below superhuman poker AI in zero-shot reasoning tasks.",
-            "whyItMatters": [
-              "Provides a concrete, quantifiable benchmark for evaluating reasoning and planning in multi-agent environments with partial observability—a key challenge for many real-world AI applications.",
-              "Highlights specific weaknesses in current LLMs, particularly in reasoning over hidden states and strategic representation, pointing to clear research and product development gaps."
-            ],
-            "whatToTry": {
-              "description": "Use the GTO Wizard Benchmark's public API to test your own agent's strategic reasoning in a controlled, partially observable environment. This can serve as a rigorous evaluation tool beyond standard NLP tasks.",
-              "note": "The benchmark is designed to reduce evaluation variance, meaning you can get statistically significant results with fewer computational resources."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1774645379837-qgrewb",
-                "title": "GTO Wizard Benchmark",
-                "url": "https://arxiv.org/abs/2603.23660",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-qgrewb-0",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-qgrewb-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-qgrewb-2",
-                "label": "Multi-Agent",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1774645379837-crpgxy",
-            "title": "LLMs Grade Essays Differently Than Humans - Key Biases Found",
-            "tldr": "New research shows LLMs have systematic biases in essay grading: they overvalue short/underdeveloped essays and undervalue long essays with minor errors, limiting their direct replacement for human graders.",
-            "whyItMatters": [
-              "Business impact: Founders building AI grading tools must account for these biases to avoid unfair scoring and potential liability.",
-              "Technical impact: LLMs use different signals than humans, requiring careful calibration and human-in-the-loop systems for reliable grading."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI grading tool, implement a bias-check layer: flag essays where length is unusually short or where minor errors are present but content is strong, and route these for human review.",
-              "note": "Consider using LLMs for initial feedback generation rather than final scoring, as their feedback is internally consistent even when scores diverge from human norms."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1774645379837-crpgxy",
-                "title": "LLMs Do Not Grade Essays Like Humans",
-                "url": "https://arxiv.org/abs/2603.23714",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-crpgxy-0",
-                "label": "LLM Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379837-crpgxy-1",
-                "label": "Education",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1774645379838-q5nn86",
-            "title": "Cut AI Agent Testing Costs by 70% with Smart Sampling",
-            "tldr": "New research shows you can reliably rank AI agents using only 30-56% of benchmark tasks by focusing on mid-difficulty items, dramatically reducing evaluation costs.",
-            "whyItMatters": [
-              "Business impact: Slashes expensive agent testing costs by 44-70% while maintaining reliable rankings",
-              "Technical impact: Reveals rank-order stability persists even when absolute scores shift due to scaffold changes"
-            ],
-            "whatToTry": {
-              "description": "When benchmarking your AI agent against competitors, don't test on the entire benchmark. Instead, filter tasks to those with historical pass rates between 30-70% (mid-difficulty range) to get reliable rankings at a fraction of the cost.",
-              "note": "This works because rank-order correlation remains stable even when absolute scores shift due to different agent frameworks/scaffolds."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1774645379838-q5nn86",
-                "title": "Efficient Benchmarking of AI Agents",
-                "url": "https://arxiv.org/abs/2603.23749",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1774645379838-q5nn86-0",
-                "label": "Benchmarking",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379838-q5nn86-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1774645379838-q5nn86-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-openai-blog-1774645380165-h59mvf",
-            "title": "OpenAI Showcases ChatGPT Enterprise at 230-Year-Old Firm",
-            "tldr": "OpenAI published a case study showing how rail manufacturer STADLER deployed ChatGPT Enterprise to 650 employees, claiming significant time savings and productivity gains in knowledge work.",
-            "whyItMatters": [
-              "Demonstrates real-world ROI for AI in enterprise workflows, a key selling point for B2B AI products.",
-              "Highlights the 'knowledge work' use case as a primary target for AI adoption in established industries."
-            ],
-            "whatToTry": {
-              "description": "Analyze this case study to identify the specific workflows STADLER automated (e.g., document summarization, email drafting, code generation). Map these against your own product's potential use cases to refine your value proposition for enterprise clients.",
-              "note": "This is marketing content from OpenAI. Look for concrete, measurable outcomes (e.g., 'saved X hours per week') rather than generic 'productivity' claims."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1774645380165-h59mvf",
-                "title": "STADLER reshapes knowledge work at a 230-year-old company",
-                "url": "https://openai.com/index/stadler",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1774645380165-h59mvf-0",
-                "label": "ChatGPT Enterprise",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1774645380165-h59mvf-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1774645380165-h59mvf-2",
-                "label": "Case Study",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 22:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774645379543-p8niji",
-            "title": "SK hynix IPO Could Ease AI Memory Shortage",
-            "tldr": "Memory chip giant SK hynix is considering a $10-14B US IPO to fund capacity expansion, potentially alleviating the 'RAMmageddon' shortage affecting AI hardware.",
-            "whyItMatters": [
-              "Business impact: More capital for memory production could stabilize supply chains and reduce hardware costs for AI startups.",
-              "Technical impact: Increased memory availability could accelerate development of memory-intensive AI models and reduce infrastructure bottlenecks."
-            ],
-            "whatToTry": {
-              "description": "Monitor memory pricing trends and consider locking in longer-term hardware contracts if prices show signs of stabilizing post-IPO.",
-              "note": "IPO timing and impact on actual supply may take 12-18 months to materialize."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774645379543-p8niji",
-                "title": "Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO",
-                "url": "https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774645379543-p8niji-0",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774645379543-p8niji-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 19:11:28 +0000"
-          },
-          {
-            "id": "hn-47544980",
-            "title": "AI Blamed for Iran Attack, But Human Error Was Real Cause",
-            "tldr": "An Iranian school bombing was initially blamed on AI, but investigation reveals human operators misinterpreted sensor data - highlighting the real-world risks of human-AI interaction failures.",
-            "whyItMatters": [
-              "Shows how AI failures can become PR disasters even when the technology isn't at fault",
-              "Reveals critical need for better human-AI communication interfaces and operator training"
-            ],
-            "whatToTry": {
-              "description": "Review your product's error states and ambiguous outputs. Add explicit confidence scores, uncertainty indicators, and clear explanations when AI is unsure to prevent dangerous misinterpretations.",
-              "note": "Consider running user testing specifically on edge cases where your AI might be wrong or uncertain"
-            },
-            "sources": [
-              {
-                "id": "src-hn-47544980",
-                "title": "AI got the blame for the Iran school bombing. The truth is more worrying",
-                "url": "https://www.theguardian.com/news/2026/mar/26/ai-got-the-blame-for-the-iran-school-bombing-the-truth-is-far-more-worrying",
-                "domain": "theguardian.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47544980-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47544980-1",
-                "label": "Human-AI Interaction",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-27T16:39:32Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774645379543-5ye4f5",
-            "title": "AI Infrastructure Faces Real-World Resistance",
-            "tldr": "Major outlets report growing pushback against AI infrastructure projects, highlighting the tension between rapid AI expansion and community acceptance.",
-            "whyItMatters": [
-              "Business impact: Local resistance can delay or block critical data center projects, increasing costs and operational risks for AI companies.",
-              "Technical impact: Infrastructure bottlenecks could constrain compute availability, affecting model training and deployment timelines."
-            ],
-            "whatToTry": {
-              "description": "When planning infrastructure expansion, proactively engage with local communities early in the process. Conduct impact assessments that address community concerns about land use, resources, and environmental effects.",
-              "note": "Consider partnering with local stakeholders rather than relying solely on financial incentives or rezoning efforts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774645379543-5ye4f5-0",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              },
-              {
-                "id": "src-rss-techcrunch-ai-1774645379543-5ye4f5-1",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774645379543-5ye4f5-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774645379543-5ye4f5-1",
-                "label": "Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 15:40:19 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1774645379535-o1a4q0",
-            "title": "ChatGPT Ads Reveal OpenAI's Early Advertiser Focus",
-            "tldr": "Wired's analysis of 500 ChatGPT queries shows ads are heavily weighted toward tech, finance, and education brands, revealing OpenAI's initial advertiser targeting strategy.",
-            "whyItMatters": [
-              "Business impact: Shows which verticals are willing to pay for AI chat exposure first, indicating market validation for certain use cases.",
-              "Technical impact: Ads appear contextually but not perfectly matched, highlighting current limitations of OpenAI's ad placement algorithms."
-            ],
-            "whatToTry": {
-              "description": "Test your own product's potential fit by running 20-30 queries related to your industry through ChatGPT's free tier to see if competitor ads appear.",
-              "note": "Ads are US-only for now, so use a VPN if testing from elsewhere."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1774645379535-o1a4q0",
-                "title": "I Asked ChatGPT 500 Questions. Here Are the Ads I Saw Most Often",
-                "url": "https://www.wired.com/story/i-asked-chatgpt-500-questions-here-are-the-ads-i-saw-most-often/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1774645379535-o1a4q0-0",
-                "label": "ChatGPT",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1774645379535-o1a4q0-1",
-                "label": "Monetization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 27 Mar 2026 10:30:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
       }
