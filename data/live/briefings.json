@@ -439,6 +439,433 @@
         "totalReadTimeMinutes": 22,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-04-03-afternoon",
+        "period": "afternoon",
+        "date": "2026-04-03",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores, New Framework Separates LLM Decisions from Actions, Moonbounce raises $12M for AI content moderation engine.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1775225394829-du8fjd",
+            "title": "Researchers Reverse-Engineer GPT-o's Tools, Match OpenAI's Scores",
+            "tldr": "Independent researchers reverse-engineered GPT-o's hidden tools and built a native agent harness, achieving the first independent reproduction of OpenAI's published benchmark scores.",
+            "whyItMatters": [
+              "Shows OpenAI's closed approach creates reproducibility barriers for the research community",
+              "Reveals GPT-o has strong internal priors for specific tools, not just hallucinating them"
+            ],
+            "whatToTry": {
+              "description": "Examine the Harmony Agent harness on GitHub to understand native message encoding techniques that bypass Chat Completions API limitations.",
+              "note": "This approach could improve performance for other fine-tuned models where API conversions degrade quality."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394829-du8fjd",
+                "title": "In harmony with gpt-oss",
+                "url": "https://arxiv.org/abs/2604.00362",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-du8fjd-0",
+                "label": "GPT-o",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-du8fjd-1",
+                "label": "Reproducibility",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-du8fjd-2",
+                "label": "Agent Framework",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394829-f6onkf",
+            "title": "New Framework Separates LLM Decisions from Actions",
+            "tldr": "Researchers propose a decision-centric design that explicitly separates control decisions from generation in LLM systems, improving reliability and diagnosability.",
+            "whyItMatters": [
+              "Enables better debugging and attribution of failures in complex AI systems",
+              "Provides architectural guidance for building more controllable and modular LLM applications"
+            ],
+            "whatToTry": {
+              "description": "Audit your current LLM system architecture to identify where control decisions (e.g., routing, tool calling, retrieval) are implicitly embedded in generation. Consider prototyping a separate decision layer that explicitly evaluates signals before taking actions.",
+              "note": "This is particularly valuable for production systems where reliability and failure analysis are critical."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394829-f6onkf",
+                "title": "Decision-Centric Design for LLM Systems",
+                "url": "https://arxiv.org/abs/2604.00414",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-f6onkf-0",
+                "label": "System Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-f6onkf-1",
+                "label": "LLM Architecture",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1775225394630-ub3gck",
+            "title": "Moonbounce raises $12M for AI content moderation engine",
+            "tldr": "Moonbounce raised $12M to scale its AI control engine that translates content policies into predictable AI behavior, addressing a critical scaling bottleneck for AI products.",
+            "whyItMatters": [
+              "Business impact: Content moderation is becoming a major cost center and risk factor for AI products - specialized solutions could reduce compliance overhead",
+              "Technical impact: Shows growing market for tools that enforce policy at the model level rather than post-generation filtering"
+            ],
+            "whatToTry": {
+              "description": "Audit your current content moderation approach - if you're using basic filters or manual review, research specialized AI moderation tools to handle scale.",
+              "note": "Consider whether you need policy enforcement at generation time (like Moonbounce) or post-generation filtering based on your use case"
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1775225394630-ub3gck",
+                "title": "The Facebook insider building content moderation for the AI era",
+                "url": "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1775225394630-ub3gck-0",
+                "label": "Content Moderation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1775225394630-ub3gck-1",
+                "label": "Compliance",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 14:00:15 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394828-wfk1mi",
+            "title": "New Research Shows Emotion Can Be Used to Steer LLM Behavior",
+            "tldr": "A new framework called E-STEER embeds emotion as a controllable variable in LLM hidden states, showing it can systematically enhance reasoning, safety, and agent behavior.",
+            "whyItMatters": [
+              "Business impact: This provides a new, interpretable lever to control and improve AI agent performance beyond traditional prompting.",
+              "Technical impact: Demonstrates a method for direct representation-level intervention, moving beyond surface-level emotional prompting."
+            ],
+            "whatToTry": {
+              "description": "Experiment with adding emotional context (e.g., 'think calmly' or 'approach this task with curiosity') to your system prompts for complex agent workflows and measure the impact on output quality and safety.",
+              "note": "The research suggests the effect is non-monotonic; too much emotional intensity can be detrimental. Start with subtle cues."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394828-wfk1mi",
+                "title": "How Emotion Shapes the Behavior of LLMs and Agents: A Mechanistic Study",
+                "url": "https://arxiv.org/abs/2604.00005",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-wfk1mi-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-wfk1mi-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-wfk1mi-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394828-gvfbq0",
+            "title": "CAMP: Adaptive Multi-Agent AI for Better Clinical Predictions",
+            "tldr": "New research introduces CAMP, a case-adaptive multi-agent framework that dynamically assembles specialist panels for clinical predictions, outperforming existing methods while using fewer tokens and providing transparent decision audits.",
+            "whyItMatters": [
+              "Demonstrates how to handle case-level heterogeneity in AI predictions - simple cases get quick answers, complex cases get specialized attention",
+              "Shows a practical multi-agent architecture that's more efficient than flat voting systems while providing audit trails"
+            ],
+            "whatToTry": {
+              "description": "Experiment with implementing a similar case-adaptive routing system in your AI product: start by classifying incoming queries as 'simple' vs. 'complex' and route complex cases to specialized agents or models rather than using one-size-fits-all approaches.",
+              "note": "The three-valued voting system (KEEP/REFUSE/NEUTRAL) allows agents to abstain when uncertain - consider implementing similar confidence mechanisms in your own systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394828-gvfbq0",
+                "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+                "url": "https://arxiv.org/abs/2604.00085",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-gvfbq0-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-gvfbq0-1",
+                "label": "Clinical AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-gvfbq0-2",
+                "label": "LLM Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394828-yp1h1f",
+            "title": "OpenTools: Community Framework for More Reliable AI Agents",
+            "tldr": "New research introduces OpenTools, a community-driven framework that addresses both agent and tool reliability for tool-using AI, showing 6%-22% performance gains.",
+            "whyItMatters": [
+              "Business impact: More reliable agents mean fewer failed user interactions and lower operational costs.",
+              "Technical impact: Shifts focus from just agent accuracy to also improving the underlying tools themselves."
+            ],
+            "whatToTry": {
+              "description": "Explore the OpenTools public web demo to test predefined agents and tools. Consider if standardizing your internal tool schemas could improve your agent's reliability.",
+              "note": "The framework is new, so evaluate its maturity before heavy integration."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394828-yp1h1f",
+                "title": "Open, Reliable, and Collective: A Community-Driven Framework for Tool-Using AI Agents",
+                "url": "https://arxiv.org/abs/2604.00137",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-yp1h1f-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-yp1h1f-1",
+                "label": "OpenTools",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394829-cjr606",
+            "title": "New Framework Triage Agent Trajectories for Better Debugging",
+            "tldr": "Researchers propose a lightweight 'signal' framework to efficiently sample and triage voluminous, non-deterministic LLM agent interaction logs, achieving an 82% informativeness rate for identifying failures.",
+            "whyItMatters": [
+              "Business impact: Enables more cost-effective monitoring and improvement of deployed agentic systems by focusing human/LLM review on the most informative failure cases.",
+              "Technical impact: Provides a cheap, structured method to compute signals (e.g., stagnation, disengagement) from live interactions without affecting online behavior, improving debugging efficiency."
+            ],
+            "whatToTry": {
+              "description": "Review your agent's interaction logs and implement simple, rule-based 'signals' to flag trajectories showing signs of stagnation (repetitive actions), disengagement (off-topic outputs), or execution loops for prioritized review.",
+              "note": "Start with cheap, deterministic signals you can compute without extra LLM calls, like counting repeated actions or checking for error codes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394829-cjr606",
+                "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
+                "url": "https://arxiv.org/abs/2604.00356",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-cjr606-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-cjr606-1",
+                "label": "Monitoring",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394829-cjr606-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-47624645",
+            "title": "Apfel: Free, On-Device AI for Mac via Apple's Private Compute Cluster",
+            "tldr": "Apfel is a new open-source tool that lets developers access Apple's Private Compute Cluster (PCC) for free, local AI inference on Macs, bypassing cloud API costs.",
+            "whyItMatters": [
+              "Enables cost-free AI inference for Mac apps, reducing dependency on paid cloud APIs like OpenAI.",
+              "Leverages Apple's existing, powerful on-device hardware (Apple Silicon) for privacy-focused AI tasks."
+            ],
+            "whatToTry": {
+              "description": "Clone the GitHub repo and test running a local model inference on your Apple Silicon Mac to prototype a feature without cloud costs.",
+              "note": "Best for prototyping or features where data privacy is a key selling point."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47624645",
+                "title": "Show HN: Apfel – The free AI already on your Mac",
+                "url": "https://apfel.franzai.com",
+                "domain": "apfel.franzai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47624645-0",
+                "label": "On-Device AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47624645-1",
+                "label": "Apple Silicon",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47624645-2",
+                "label": "Apfel",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-03T09:15:34Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394828-6g8eea",
+            "title": "Multi-Agent LLM Framework for Safer Health Simulations",
+            "tldr": "Researchers propose a multi-agent LLM framework that uses specialized, role-based agents to simulate behavioral health conversations with built-in safety auditing, showing improved structure and oversight over single-agent approaches.",
+            "whyItMatters": [
+              "Demonstrates a practical architecture for decomposing complex conversational tasks (like therapy simulation) into specialized, safer agents.",
+              "Highlights a design pattern for adding safety and interpretability layers to LLM applications, which is critical for sensitive domains."
+            ],
+            "whatToTry": {
+              "description": "Consider if your product's core task could be decomposed into distinct, specialized 'agent roles' (e.g., one for empathy, one for fact-checking, one for safety). Prototype a simple multi-agent controller that routes user queries to the most relevant specialized prompt or fine-tuned model.",
+              "note": "This is a research framework, not a product. The key takeaway is the design pattern, not the specific implementation for clinical use."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394828-6g8eea",
+                "title": "A Safety-Aware Role-Orchestrated Multi-Agent LLM Framework for Behavioral Health Communication Simulation",
+                "url": "https://arxiv.org/abs/2604.00249",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-6g8eea-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-6g8eea-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-6g8eea-2",
+                "label": "LLM Architecture",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1775225394828-naiarq",
+            "title": "Research: How to Stop AI Coding Tools from 'Drifting' Off-Task",
+            "tldr": "New research proposes a human-in-the-loop curriculum to combat 'objective drift' in AI-assisted programming, where LLM outputs diverge from specifications, by teaching structured planning and acceptance criteria.",
+            "whyItMatters": [
+              "Business impact: Founders building AI coding tools or educational platforms must design for 'drift' to ensure reliable outputs and user trust.",
+              "Technical impact: This research shifts focus from perfecting prompts to building stable, human-controlled workflows, a more durable design principle."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI coding assistant, explicitly design a 'planning phase' into the user workflow. Before code generation, require users to define clear acceptance criteria or architectural constraints for the task.",
+              "note": "Consider if introducing small, deliberate errors (concept-aligned drift) in a learning environment could help users better diagnose and recover from AI mistakes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1775225394828-naiarq",
+                "title": "Human-in-the-Loop Control of Objective Drift in LLM-Assisted Computer Science Education",
+                "url": "https://arxiv.org/abs/2604.00281",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-naiarq-0",
+                "label": "LLM-Assisted Programming",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-naiarq-1",
+                "label": "Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1775225394828-naiarq-2",
+                "label": "Human-in-the-Loop",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
