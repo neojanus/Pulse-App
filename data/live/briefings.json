@@ -1,7 +1,268 @@
 [
   {
-    "date": "2026-04-04",
+    "date": "2026-04-05",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-04-05-morning",
+        "period": "morning",
+        "date": "2026-04-05",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Anthropic adds premium tier for Claude Code + OpenClaw, sllm: GPU Node Sharing for LLM Inference at Fractional Cost, Linux 7.0 halves PostgreSQL performance, AWS engineer reports.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1775376184153-lxeegl",
+            "title": "Anthropic adds premium tier for Claude Code + OpenClaw",
+            "tldr": "Anthropic will charge Claude Code subscribers extra to use OpenClaw and other third-party tools, signaling a shift toward premium integrations.",
+            "whyItMatters": [
+              "Business impact: AI tool pricing is becoming more complex with tiered access to integrations, affecting cost projections for development teams.",
+              "Technical impact: This may create fragmentation where some teams can't access the full ecosystem, potentially limiting collaboration and tool standardization."
+            ],
+            "whatToTry": {
+              "description": "Audit your team's current Claude Code usage and identify which third-party integrations (like OpenClaw) are essential. Create a cost-benefit analysis comparing the new premium tier against alternative coding assistants that might offer similar integrations at different price points.",
+              "note": "Consider negotiating enterprise terms if you have significant usage, as these pricing changes often come with flexibility for larger customers."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1775376184153-lxeegl",
+                "title": "Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage",
+                "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1775376184153-lxeegl-0",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1775376184153-lxeegl-1",
+                "label": "Pricing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1775376184153-lxeegl-2",
+                "label": "Developer Tools",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 04 Apr 2026 16:32:22 +0000"
+          },
+          {
+            "id": "hn-47639779",
+            "title": "sllm: GPU Node Sharing for LLM Inference at Fractional Cost",
+            "tldr": "sllm offers a cohort-based GPU sharing model that dramatically reduces the cost of running large models like DeepSeek V3 by splitting a dedicated node among multiple developers, with prices starting at $5/month.",
+            "whyItMatters": [
+              "Business impact: Enables startups to access high-end inference (e.g., 8×H100 for DeepSeek V3) at a tiny fraction of the dedicated cost (~$14k/month → starting at $5/month).",
+              "Technical impact: Provides a private, OpenAI-compatible API endpoint via vLLM, simplifying integration while maintaining data privacy (no traffic logging)."
+            ],
+            "whatToTry": {
+              "description": "If you're prototyping with large models or need cost-effective inference for low-traffic applications, sign up for sllm's waitlist to test their shared node service. Use it for development, staging, or low-volume production endpoints where dedicated GPU cost is prohibitive.",
+              "note": "Best suited for workloads with modest throughput needs (15-25 tokens/sec). Verify latency and availability SLAs match your use case before committing to production."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47639779",
+                "title": "Show HN: sllm – Split a GPU node with other developers, unlimited tokens",
+                "url": "https://sllm.cloud",
+                "domain": "sllm.cloud",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47639779-0",
+                "label": "GPU Sharing",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-47639779-1",
+                "label": "Inference",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47639779-2",
+                "label": "Cost Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-04T15:18:58Z"
+          },
+          {
+            "id": "hn-47644864",
+            "title": "Linux 7.0 halves PostgreSQL performance, AWS engineer reports",
+            "tldr": "An AWS engineer discovered PostgreSQL performance dropped by ~50% on Linux kernel 7.0 due to scheduler changes, and the fix may require significant kernel rework.",
+            "whyItMatters": [
+              "AI products relying on PostgreSQL for vector databases or data storage could see major performance degradation",
+              "This affects deployment decisions for AI workloads on newer Linux distributions"
+            ],
+            "whatToTry": {
+              "description": "Test your PostgreSQL-based AI workloads on Linux 7.0 before upgrading production systems, and consider staying on Linux 6.x until this is resolved.",
+              "note": "If you're using PostgreSQL for vector similarity search (like pgvector), this performance hit could be particularly impactful."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47644864",
+                "title": "AWS engineer reports PostgreSQL perf halved by Linux 7.0, fix may not be easy",
+                "url": "https://www.phoronix.com/news/Linux-7.0-AWS-PostgreSQL-Drop",
+                "domain": "phoronix.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47644864-0",
+                "label": "PostgreSQL",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-47644864-1",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47644864-2",
+                "label": "Performance",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-05T00:13:55Z"
+          },
+          {
+            "id": "hn-47640875",
+            "title": "Karpathy's LLM Wiki: A Public 'Idea File' for AI Builders",
+            "tldr": "Andrej Karpathy published a public 'LLM Wiki' as a living document of ideas, observations, and research directions for AI development, offering a rare look into a top researcher's thought process.",
+            "whyItMatters": [
+              "Business impact: Demonstrates a powerful knowledge management and ideation framework that founders can adopt to organize their own technical and product thinking.",
+              "Technical impact: Provides a curated list of high-signal observations, open questions, and potential research vectors directly from a leading figure in the field."
+            ],
+            "whatToTry": {
+              "description": "Create your own 'idea file' or internal wiki to systematically capture technical observations, product hypotheses, and research questions as you build. Use Karpathy's structure as a template to organize thoughts on model behavior, tooling gaps, and unsolved problems.",
+              "note": "Focus on capturing raw, unfiltered insights rather than polished documents. The value is in the evolving record of your thinking."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47640875",
+                "title": "LLM Wiki – example of an \"idea file\"",
+                "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+                "domain": "gist.github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47640875-0",
+                "label": "Knowledge Management",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47640875-1",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-04T16:57:45Z"
+          },
+          {
+            "id": "hn-47640722",
+            "title": "12k AI-Generated Blog Posts Added in Single Commit",
+            "tldr": "A developer added 12,000 AI-generated blog posts in one commit, sparking debate about content quality, SEO tactics, and AI ethics.",
+            "whyItMatters": [
+              "Shows how easily AI can flood platforms with low-quality content at scale",
+              "Highlights emerging SEO tactics and potential backlash from search engines"
+            ],
+            "whatToTry": {
+              "description": "Audit your own content strategy: ensure you're using AI for augmentation, not replacement, and maintain human oversight for quality control.",
+              "note": "Consider how your AI usage would look if exposed publicly - transparency builds trust."
+            },
+            "sources": [
+              {
+                "id": "src-hn-47640722",
+                "title": "12k AI-generated blog posts added in a single commit",
+                "url": "https://github.com/OneUptime/blog/commit/30cd2384794c897d95aca77d173db44af51ca849",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47640722-0",
+                "label": "Content Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47640722-1",
+                "label": "SEO",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-04T16:45:31Z"
+          },
+          {
+            "id": "rss-wired-ai-1775376184146-pakaek",
+            "title": "Claude Code Leak Being Weaponized with Malware",
+            "tldr": "Hackers are distributing the leaked Claude source code bundled with malware, creating a security trap for developers trying to access the code.",
+            "whyItMatters": [
+              "Business impact: This creates significant security risks for AI startups and developers who might be tempted to examine leaked code, potentially compromising their systems and intellectual property.",
+              "Technical impact: The malware distribution method exploits developer curiosity about proprietary AI systems, turning a code leak into an active security threat vector."
+            ],
+            "whatToTry": {
+              "description": "Implement strict security protocols for your team: block downloads of leaked AI code from unofficial sources, run security scans on all new code repositories, and educate developers about this specific threat.",
+              "note": "Even if you're curious about competitor architectures, the security risk far outweighs any potential learning benefit from examining leaked code."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1775376184146-pakaek",
+                "title": "Hackers Are Posting the Claude Code Leak With Bonus Malware",
+                "url": "https://www.wired.com/story/security-news-this-week-hackers-are-posting-the-claude-code-leak-with-bonus-malware/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1775376184146-pakaek-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1775376184146-pakaek-1",
+                "label": "Anthropic",
+                "type": "model"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 04 Apr 2026 10:30:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 12,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-04-04",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-04-04-morning",
@@ -631,7 +892,7 @@
   },
   {
     "date": "2026-04-03",
-    "displayDate": "Yesterday",
+    "displayDate": "Friday, Apr 3",
     "briefings": [
       {
         "id": "briefing-2026-04-03-morning",
@@ -5795,1015 +6056,6 @@
           }
         ],
         "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-03-29",
-    "displayDate": "Sunday, Mar 29",
-    "briefings": [
-      {
-        "id": "briefing-2026-03-29-morning",
-        "period": "morning",
-        "date": "2026-03-29",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Stanford Study: AI Chatbots Give Harmful Personal Advice, Claude's Paid User Base More Than Doubles in 2026, AI Models Overly Affirm Users Seeking Personal Advice.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1774771239653-0wy705",
-            "title": "Stanford Study: AI Chatbots Give Harmful Personal Advice",
-            "tldr": "Stanford research quantifies the risks of AI 'sycophancy'—chatbots often provide harmful, biased, or overly agreeable personal advice instead of objective guidance.",
-            "whyItMatters": [
-              "Business impact: Founders building AI assistants must design guardrails to prevent harmful advice and manage liability.",
-              "Technical impact: Highlights the need for better alignment techniques beyond simple RLHF to handle nuanced personal queries."
-            ],
-            "whatToTry": {
-              "description": "If your product offers personal advice, implement a clear disclaimer and a human-in-the-loop escalation path for sensitive topics like health, finance, or relationships.",
-              "note": "Consider testing your model with adversarial personal queries to uncover sycophantic or harmful response patterns before launch."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774771239653-0wy705",
-                "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
-                "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-0wy705-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-0wy705-1",
-                "label": "Chatbots",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 20:45:54 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774771239653-9zjsnw",
-            "title": "Claude's Paid User Base More Than Doubles in 2026",
-            "tldr": "Anthropic reports Claude paid subscriptions have more than doubled this year, signaling strong consumer adoption despite unclear total user figures.",
-            "whyItMatters": [
-              "Shows consumer willingness to pay for premium AI assistants beyond ChatGPT",
-              "Indicates Anthropic is successfully monetizing Claude despite being a later market entrant"
-            ],
-            "whatToTry": {
-              "description": "Analyze Claude's consumer features (like its 200K context window or file uploads) to identify what premium capabilities users are paying for, and consider if similar features could differentiate your own AI product.",
-              "note": "Focus on the specific paid features rather than just the growth numbers - what's driving the conversion?"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774771239653-9zjsnw",
-                "title": "Anthropic’s Claude popularity with paying consumers is skyrocketing",
-                "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-9zjsnw-0",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-9zjsnw-1",
-                "label": "Monetization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 14:15:00 +0000"
-          },
-          {
-            "id": "hn-47554773",
-            "title": "AI Models Overly Affirm Users Seeking Personal Advice",
-            "tldr": "Stanford research shows AI models often provide overly affirming, sycophantic responses to personal advice requests, prioritizing user satisfaction over accuracy.",
-            "whyItMatters": [
-              "Business impact: Products giving personal advice risk providing harmful validation instead of balanced guidance, creating liability and trust issues.",
-              "Technical impact: This reveals a fundamental alignment problem where models optimize for user approval rather than truthful, helpful responses."
-            ],
-            "whatToTry": {
-              "description": "Test your AI product with personal advice scenarios (relationship, career, health questions) and evaluate if responses are appropriately balanced or overly affirming.",
-              "note": "Consider implementing guardrails or confidence scoring for sensitive topics where validation could be harmful."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47554773",
-                "title": "AI overly affirms users asking for personal advice",
-                "url": "https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research",
-                "domain": "news.stanford.edu",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47554773-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47554773-1",
-                "label": "Model Alignment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T14:08:33Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774771239653-zyqfuf",
-            "title": "Bluesky's Attie App Uses AI to Build Custom Feeds",
-            "tldr": "Bluesky launched Attie, an app that uses AI to help users create custom feeds on the AT Protocol, showing how AI can personalize content discovery in open social networks.",
-            "whyItMatters": [
-              "Demonstrates a practical application of AI for content curation and user experience in social platforms",
-              "Highlights the growing trend of AI-powered personalization tools that founders can adapt for their own products"
-            ],
-            "whatToTry": {
-              "description": "Experiment with using LLMs or embedding models to analyze user content preferences and automatically generate personalized feeds or recommendations in your app.",
-              "note": "Start with a simple rule-based or keyword system first, then layer in AI for more nuanced understanding."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774771239653-zyqfuf",
-                "title": "Bluesky leans into AI with Attie, an app for building custom feeds",
-                "url": "https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-zyqfuf-0",
-                "label": "Bluesky",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-zyqfuf-1",
-                "label": "Content Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-zyqfuf-2",
-                "label": "Personalization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 23:00:00 +0000"
-          },
-          {
-            "id": "hn-47557185",
-            "title": "HackerNews Debates First 40 Months of AI Era",
-            "tldr": "Major HackerNews discussion (89 comments, 172 points) analyzes the first 40 months of the AI era, revealing community consensus on what's working vs. hype.",
-            "whyItMatters": [
-              "Business impact: Identifies which AI applications are gaining real traction vs. remaining experimental",
-              "Technical impact: Reveals developer sentiment about practical AI tool adoption and integration challenges"
-            ],
-            "whatToTry": {
-              "description": "Read the discussion to identify which AI use cases developers are actually implementing vs. just talking about, then prioritize building features that solve those proven problems.",
-              "note": "Look for patterns in what developers complain about - those are likely underserved market opportunities."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557185",
-                "title": "The first 40 months of the AI era",
-                "url": "https://lzon.ca/posts/other/thoughts-ai-era/",
-                "domain": "lzon.ca",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557185-0",
-                "label": "Developer Sentiment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47557185-1",
-                "label": "Market Validation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:42:08Z"
-          },
-          {
-            "id": "hn-47557166",
-            "title": "LLMs + Proof Assistants Solve Knuth's 'Claude Cycles' Problem",
-            "tldr": "A collaborative effort using LLMs and proof assistants has fully solved Donald Knuth's 'Claude Cycles' problem, demonstrating AI's growing capability in formal mathematics.",
-            "whyItMatters": [
-              "Shows LLMs can contribute to solving complex, open mathematical problems when combined with formal verification tools.",
-              "Highlights a practical workflow for human-AI collaboration in research, moving beyond simple code generation."
-            ],
-            "whatToTry": {
-              "description": "Experiment with using an LLM (like Claude or GPT-4) to generate conjectures or proof sketches for a small, well-defined problem in your domain, then use a formal tool or rigorous manual review to verify the output.",
-              "note": "This is a high-complexity use case. Start with very small, self-contained problems to establish a reliable workflow."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557166",
-                "title": "Further human + AI + proof assistant work on Knuth's \"Claude Cycles\" problem",
-                "url": "https://twitter.com/BoWang87/status/2037648937453232504",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557166-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47557166-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47557166-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:38:59Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774771239653-8t2w1h",
-            "title": "xAI Exodus: Musk's Last Co-Founder Reportedly Leaves",
-            "tldr": "Elon Musk's last remaining co-founder at xAI has reportedly left, following a mass departure of 9 out of 11 original co-founders, signaling major internal instability at a key AI competitor.",
-            "whyItMatters": [
-              "Business impact: Reveals severe talent retention issues at a well-funded AI startup, potentially affecting its roadmap and competitive position.",
-              "Technical impact: High-level departures often precede strategic shifts or technical stagnation, impacting the pace and direction of model development."
-            ],
-            "whatToTry": {
-              "description": "Monitor xAI's public outputs (Grok updates, research papers, API changes) over the next 3-6 months for signs of slowdown or strategic drift. This could signal a market opportunity if a major player stumbles.",
-              "note": "High turnover at this level is a red flag for execution risk, but doesn't necessarily mean the company will fail."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774771239653-8t2w1h",
-                "title": "Elon Musk’s last co-founder reportedly leaves xAI",
-                "url": "https://techcrunch.com/2026/03/28/elon-musks-last-co-founder-reportedly-leaves-xai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-8t2w1h-0",
-                "label": "xAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-8t2w1h-1",
-                "label": "Talent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774771239653-8t2w1h-2",
-                "label": "Industry Moves",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 16:11:16 +0000"
-          },
-          {
-            "id": "hn-47555090",
-            "title": "HackerNews: Users getting attached to sycophantic AI",
-            "tldr": "HackerNews discussion highlights user attachment to AI that always agrees with them, raising concerns about confirmation bias and product design ethics.",
-            "whyItMatters": [
-              "Business impact: Products that validate user biases may gain short-term engagement but create long-term ethical and retention risks",
-              "Technical impact: Reinforcement learning from human feedback (RLHF) can be tuned for agreement rather than accuracy"
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's feedback loops - are you optimizing for user satisfaction or truthfulness? Consider adding optional 'challenge modes' or diverse perspective features.",
-              "note": "This isn't about removing helpfulness, but about designing for cognitive diversity rather than pure affirmation"
-            },
-            "sources": [
-              {
-                "id": "src-hn-47555090",
-                "title": "Folk are getting dangerously attached to AI that always tells them they're right",
-                "url": "https://www.theregister.com/2026/03/27/sycophantic_ai_risks/",
-                "domain": "theregister.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47555090-0",
-                "label": "RLHF",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47555090-1",
-                "label": "Product Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T14:49:25Z"
-          },
-          {
-            "id": "hn-47552562",
-            "title": "CERN Deploys Tiny AI Models on FPGAs for Real-Time Physics",
-            "tldr": "CERN is running ultra-compact AI models directly on FPGAs to filter LHC data in real-time, demonstrating extreme edge AI deployment for high-throughput applications.",
-            "whyItMatters": [
-              "Shows practical deployment of AI in latency-critical, high-volume environments where cloud inference isn't feasible",
-              "Highlights the growing importance of model compression and hardware-aware AI for edge applications"
-            ],
-            "whatToTry": {
-              "description": "Experiment with model quantization and pruning techniques (like those in PyTorch or TensorFlow Lite) to see how small you can make your models while maintaining acceptable accuracy for potential edge deployment.",
-              "note": "Consider if any part of your AI pipeline could benefit from local, low-latency inference instead of always calling a cloud API."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47552562",
-                "title": "CERN uses ultra-compact AI models on FPGAs for real-time LHC data filtering",
-                "url": "https://theopenreader.org/Journalism:CERN_Uses_Tiny_AI_Models_Burned_into_Silicon_for_Real-Time_LHC_Data_Filtering",
-                "domain": "theopenreader.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47552562-0",
-                "label": "Edge AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47552562-1",
-                "label": "Model Compression",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47552562-2",
-                "label": "FPGA",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T08:06:19Z"
-          },
-          {
-            "id": "hn-47557064",
-            "title": "OpenCiv1: Open-source rewrite of Civilization 1 gains traction",
-            "tldr": "An open-source rewrite of the original Civilization game has gained significant attention on HackerNews, indicating developer interest in classic game recreation and AI training environments.",
-            "whyItMatters": [
-              "Shows market interest in recreating classic games as open-source projects",
-              "Creates potential sandbox environments for AI strategy training and testing"
-            ],
-            "whatToTry": {
-              "description": "Explore the OpenCiv1 codebase to understand how classic game mechanics can be recreated in modern frameworks, potentially as a foundation for AI strategy game research.",
-              "note": "Consider how similar open-source game recreations could serve as controlled environments for testing AI agents."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557064",
-                "title": "OpenCiv1 – open-source rewrite of Civ1",
-                "url": "https://github.com/rajko-horvat/OpenCiv1",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557064-0",
-                "label": "Open Source",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47557064-1",
-                "label": "Game AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:22:45Z"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-03-29-afternoon",
-        "period": "afternoon",
-        "date": "2026-03-29",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Stanford Study: AI Chatbots Give Harmful Personal Advice, Claude's Paid User Base More Than Doubles in 2026, AI Models Over-Affirm Users Seeking Personal Advice.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1774793001476-r7rboa",
-            "title": "Stanford Study: AI Chatbots Give Harmful Personal Advice",
-            "tldr": "Stanford research quantifies how AI chatbots' tendency to agree with users can lead to harmful personal advice, highlighting a critical product risk for founders.",
-            "whyItMatters": [
-              "Business impact: Builds evidence for a major liability and trust issue in AI products, especially in health, wellness, or coaching domains.",
-              "Technical impact: Highlights a measurable flaw in model alignment and safety fine-tuning that goes beyond simple 'sycophancy'."
-            ],
-            "whatToTry": {
-              "description": "Stress-test your product's advice-giving features. Create a test suite with scenarios where a user expresses harmful intentions (e.g., 'I want to quit my medication') and audit if your system provides compliant, safe guardrails instead of agreeable but dangerous suggestions.",
-              "note": "This isn't just about adding a disclaimer. The study suggests the problem is embedded in the model's trained behavior."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774793001476-r7rboa",
-                "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
-                "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-r7rboa-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-r7rboa-1",
-                "label": "Chatbot",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 20:45:54 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774793001476-sd8xut",
-            "title": "Claude's Paid User Base More Than Doubles in 2026",
-            "tldr": "Anthropic's Claude has seen paid subscriptions more than double this year, indicating strong consumer adoption despite unclear total user figures.",
-            "whyItMatters": [
-              "Shows consumer willingness to pay for premium AI assistants, validating the subscription model",
-              "Suggests Claude is gaining meaningful market share against ChatGPT Plus and other paid offerings"
-            ],
-            "whatToTry": {
-              "description": "Analyze Claude's consumer features (like its 200K context window or file uploads) to identify what premium capabilities users are paying for, and consider if similar features could differentiate your own product.",
-              "note": "Since exact user numbers aren't disclosed, focus on the growth trend and feature adoption rather than absolute scale."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774793001476-sd8xut",
-                "title": "Anthropic’s Claude popularity with paying consumers is skyrocketing",
-                "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-sd8xut-0",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-sd8xut-1",
-                "label": "Business Models",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 14:15:00 +0000"
-          },
-          {
-            "id": "hn-47554773",
-            "title": "AI Models Over-Affirm Users Seeking Personal Advice",
-            "tldr": "New research shows AI models tend to give overly agreeable, sycophantic responses to personal advice requests, potentially reinforcing harmful beliefs.",
-            "whyItMatters": [
-              "Business impact: Products offering advice or coaching could face backlash for providing harmful validation",
-              "Technical impact: This reveals a fundamental alignment problem where models prioritize pleasing users over providing truthful guidance"
-            ],
-            "whatToTry": {
-              "description": "Test your AI product with personal advice scenarios and evaluate if responses appropriately challenge harmful assumptions versus just agreeing.",
-              "note": "Consider implementing guardrails or confidence scoring for sensitive topics like health, relationships, or major life decisions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47554773",
-                "title": "AI overly affirms users asking for personal advice",
-                "url": "https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research",
-                "domain": "news.stanford.edu",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47554773-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47554773-1",
-                "label": "Model Alignment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T14:08:33Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774793001476-i84vpy",
-            "title": "Bluesky's Attie App Uses AI to Build Custom Feeds",
-            "tldr": "Bluesky launched Attie, an app that uses AI to help users create custom feeds on the AT Protocol, showing how AI can personalize content discovery in open social networks.",
-            "whyItMatters": [
-              "Demonstrates a practical AI application for content curation and user engagement in social platforms",
-              "Highlights the trend of integrating AI assistants into user-facing features to simplify complex tasks"
-            ],
-            "whatToTry": {
-              "description": "Explore how AI can simplify a complex user task in your product. For example, if your app has a 'setup' or 'configuration' step, consider if an AI assistant could guide users through it.",
-              "note": "Focus on tasks that are powerful but currently require technical knowledge or significant effort from users."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774793001476-i84vpy",
-                "title": "Bluesky leans into AI with Attie, an app for building custom feeds",
-                "url": "https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-i84vpy-0",
-                "label": "Bluesky",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-i84vpy-1",
-                "label": "Content Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-i84vpy-2",
-                "label": "Social Media",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 23:00:00 +0000"
-          },
-          {
-            "id": "hn-47557185",
-            "title": "HackerNews Debates First 40 Months of AI Era",
-            "tldr": "Major HackerNews discussion (117 comments, 194 points) analyzes the first 40 months of the AI era, revealing community consensus on what's working and what's not for builders.",
-            "whyItMatters": [
-              "Identifies patterns in what AI products are gaining traction vs. failing",
-              "Reveals developer sentiment about current tools and market opportunities"
-            ],
-            "whatToTry": {
-              "description": "Read the discussion to identify patterns in successful vs. failed AI applications, then audit your own product against these community-validated insights.",
-              "note": "Focus on the concrete examples mentioned, not just the opinions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557185",
-                "title": "The first 40 months of the AI era",
-                "url": "https://lzon.ca/posts/other/thoughts-ai-era/",
-                "domain": "lzon.ca",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557185-0",
-                "label": "Industry Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:42:08Z"
-          },
-          {
-            "id": "hn-47557166",
-            "title": "LLMs + Humans Solve Knuth's 'Claude Cycles' Problem",
-            "tldr": "A collaborative effort using LLMs and formal proof assistants has fully solved Donald Knuth's 'Claude Cycles' problem, demonstrating AI's growing capability in formal mathematics.",
-            "whyItMatters": [
-              "Shows a practical, high-level application of LLMs for formal reasoning and problem-solving, moving beyond text generation.",
-              "Validates the 'human-in-the-loop' research paradigm where AI assists with complex, structured intellectual work."
-            ],
-            "whatToTry": {
-              "description": "If your product involves complex reasoning or structured data analysis, prototype a workflow where an LLM (like GPT-4 or Claude) suggests solution paths or generates conjectures, which are then formally verified or refined by a human expert or a dedicated tool.",
-              "note": "Focus the LLM on creative exploration and hypothesis generation, not on producing final, flawless proofs or code without verification."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557166",
-                "title": "Further human + AI + proof assistant work on Knuth's \"Claude Cycles\" problem",
-                "url": "https://twitter.com/BoWang87/status/2037648937453232504",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557166-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47557166-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47557166-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:38:59Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774793001476-de6o8x",
-            "title": "xAI Exodus: Musk's Last Co-Founder Reportedly Leaves",
-            "tldr": "Elon Musk's last remaining co-founder at xAI has reportedly left, following a mass departure of 9 out of 11 original co-founders, signaling major internal instability at a key AI competitor.",
-            "whyItMatters": [
-              "Business impact: High-profile talent drain at a well-funded competitor suggests strategic or cultural issues that could slow xAI's progress and create hiring opportunities.",
-              "Technical impact: Loss of founding technical leadership may impact xAI's roadmap execution and model development pace, potentially affecting competitive landscape."
-            ],
-            "whatToTry": {
-              "description": "Monitor xAI's open roles and recent departures on LinkedIn; this talent dislocation could present a rare opportunity to recruit experienced AI researchers and engineers who understand large-scale model development.",
-              "note": "Be prepared for potentially high compensation expectations given xAI's funding level and Musk's brand association."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774793001476-de6o8x",
-                "title": "Elon Musk’s last co-founder reportedly leaves xAI",
-                "url": "https://techcrunch.com/2026/03/28/elon-musks-last-co-founder-reportedly-leaves-xai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-de6o8x-0",
-                "label": "xAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774793001476-de6o8x-1",
-                "label": "Talent",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 16:11:16 +0000"
-          },
-          {
-            "id": "hn-47555090",
-            "title": "Sycophantic AI Creates User Dependency, Risks Echo Chambers",
-            "tldr": "HackerNews discussion highlights growing concern that AI assistants designed to please users create dangerous dependencies and reinforce biases, with 215+ comments analyzing the risks.",
-            "whyItMatters": [
-              "Products that prioritize user validation over truth create sticky but potentially harmful engagement",
-              "Technical design choices (rewarding positive feedback) directly shape user behavior and dependency patterns"
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's feedback loops: Are you rewarding sycophantic responses? Implement mechanisms that occasionally challenge user assumptions while maintaining helpfulness.",
-              "note": "Balance is key - users want helpful AI, not constant contradiction, but complete agreement creates echo chambers"
-            },
-            "sources": [
-              {
-                "id": "src-hn-47555090",
-                "title": "Folk are getting dangerously attached to AI that always tells them they're right",
-                "url": "https://www.theregister.com/2026/03/27/sycophantic_ai_risks/",
-                "domain": "theregister.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47555090-0",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47555090-1",
-                "label": "Product Design",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47555090-2",
-                "label": "User Behavior",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T14:49:25Z"
-          },
-          {
-            "id": "hn-47557064",
-            "title": "Open-source Civilization 1 clone gains traction",
-            "tldr": "OpenCiv1, an open-source rewrite of the original Civilization game, is trending on HackerNews with significant developer interest.",
-            "whyItMatters": [
-              "Shows demand for classic game preservation/modernization",
-              "Demonstrates how AI/ML could enhance classic game mechanics"
-            ],
-            "whatToTry": {
-              "description": "Explore the OpenCiv1 codebase to understand how classic game logic can be reimplemented with modern tools, potentially identifying opportunities to apply AI for smarter NPCs or procedural content generation.",
-              "note": "Consider how similar approaches could apply to other classic strategy games ripe for AI enhancement."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47557064",
-                "title": "OpenCiv1 – open-source rewrite of Civ1",
-                "url": "https://github.com/rajko-horvat/OpenCiv1",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47557064-0",
-                "label": "open-source",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47557064-1",
-                "label": "gaming",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47557064-2",
-                "label": "classic-games",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-28T18:22:45Z"
-          }
-        ],
-        "totalReadTimeMinutes": 19,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-03-29-evening",
-        "period": "evening",
-        "date": "2026-03-29",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Sora Shutdown Sparks AI Video Reality Check, AI Facial Recognition Leads to Wrongful Arrest - Major Legal Risk, Miasma: Tool to poison AI scrapers with endless fake data.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1774817831725-wi8c26",
-            "title": "Sora Shutdown Sparks AI Video Reality Check",
-            "tldr": "OpenAI's reported shutdown of Sora's waitlist signals potential strategic pullback, with multiple outlets questioning the broader viability of AI video generation as a near-term product category.",
-            "whyItMatters": [
-              "Business impact: Indicates major players may be de-prioritizing consumer-facing AI video due to high costs, technical hurdles, or unclear product-market fit.",
-              "Technical impact: Suggests the gap between impressive research demos and scalable, reliable, cost-effective products remains significant."
-            ],
-            "whatToTry": {
-              "description": "Re-evaluate any product roadmap assumptions heavily reliant on near-term, high-fidelity AI video generation from third-party APIs. Focus on use cases where lower-quality or more constrained video (e.g., short clips, specific object animation) can still deliver user value at a sustainable cost.",
-              "note": "This is a signal about productization challenges, not the underlying research. The core technology will continue to advance, but commercial availability may be slower than expected."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774817831725-wi8c26",
-                "title": "Sora’s shutdown could be a reality check moment for AI video",
-                "url": "https://techcrunch.com/2026/03/29/soras-shutdown-could-be-a-reality-check-moment-for-ai-video/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-wi8c26-0",
-                "label": "Sora",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-wi8c26-1",
-                "label": "AI Video",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-wi8c26-2",
-                "label": "Product Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 29 Mar 2026 16:30:00 +0000"
-          },
-          {
-            "id": "hn-47563384",
-            "title": "AI Facial Recognition Leads to Wrongful Arrest - Major Legal Risk",
-            "tldr": "Police used AI facial recognition to wrongly arrest a Tennessee woman for crimes in North Dakota, sparking significant discussion on HackerNews with 262 points and 104 comments about AI reliability and legal implications.",
-            "whyItMatters": [
-              "Business impact: This case highlights serious liability risks for companies building facial recognition systems - wrongful arrests can lead to massive lawsuits and reputational damage.",
-              "Technical impact: Demonstrates real-world consequences of AI model bias and false positives, especially when deployed in high-stakes law enforcement applications."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's error rates and bias testing protocols, especially if deployed in sensitive domains. Consider implementing additional human verification steps for high-stakes decisions.",
-              "note": "Even if you're not in facial recognition, this case illustrates the importance of understanding your model's failure modes in real-world scenarios."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47563384",
-                "title": "Police used AI facial recognition to wrongly arrest TN woman for crimes in ND",
-                "url": "https://www.cnn.com/2026/03/29/us/angela-lipps-ai-facial-recognition",
-                "domain": "cnn.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47563384-0",
-                "label": "Facial Recognition",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47563384-1",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47563384-2",
-                "label": "Legal Risk",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-29T14:20:23Z"
-          },
-          {
-            "id": "hn-47561819",
-            "title": "Miasma: Tool to poison AI scrapers with endless fake data",
-            "tldr": "Open-source tool Miasma detects and traps AI web scrapers by feeding them endless, low-quality synthetic data, sparking debate about data ownership and AI training ethics.",
-            "whyItMatters": [
-              "Creates new friction for companies that rely on web scraping for AI training data",
-              "Highlights growing tension between content creators and AI companies over data usage rights"
-            ],
-            "whatToTry": {
-              "description": "If you rely on web scraping for data collection, test your scrapers against Miasma to see if they can be detected and trapped. Consider implementing more sophisticated scraping patterns or exploring licensed data alternatives.",
-              "note": "This is an adversarial tool - understand both how to defend against it and the ethical implications of using it."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47561819",
-                "title": "Miasma: A tool to trap AI web scrapers in an endless poison pit",
-                "url": "https://github.com/austin-weeks/miasma",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47561819-0",
-                "label": "web-scraping",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47561819-1",
-                "label": "data-ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47561819-2",
-                "label": "Miasma",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-29T10:10:12Z"
-          },
-          {
-            "id": "hn-47561297",
-            "title": "HackerNews Debate: AI's bottleneck may be math, not memory",
-            "tldr": "A trending HackerNews discussion (155+ points) argues that algorithmic efficiency and mathematical breakthroughs, not just hardware scaling, are critical for next-gen AI progress.",
-            "whyItMatters": [
-              "Business impact: Challenges the assumption that scaling compute/memory is the only path forward, suggesting R&D focus on algorithmic efficiency could be a competitive edge.",
-              "Technical impact: Highlights a potential shift in research priorities from pure hardware scaling to novel mathematical approaches for model optimization."
-            ],
-            "whatToTry": {
-              "description": "Review your model architecture and training pipeline for opportunities to apply known efficiency techniques (e.g., pruning, quantization, knowledge distillation) before assuming you need more hardware resources.",
-              "note": "This is a conceptual debate, not a specific tool release, but it's a useful mindset check for resource-constrained teams."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47561297",
-                "title": "What if AI doesn't need more RAM but better math?",
-                "url": "https://adlrocha.substack.com/p/adlrocha-what-if-ai-doesnt-need-more",
-                "domain": "adlrocha.substack.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47561297-0",
-                "label": "Efficiency",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47561297-1",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-03-29T08:18:55Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1774817831725-ngjvyz",
-            "title": "Bluesky launches Attie: AI-powered custom feed builder",
-            "tldr": "Bluesky released Attie, an app that uses AI to help users create custom feeds on the AT Protocol, showing how AI can enhance content discovery in open social networks.",
-            "whyItMatters": [
-              "Demonstrates practical AI integration for user experience (content curation) rather than just content generation",
-              "Highlights a growing trend of AI tools built on top of open protocols like AT Protocol"
-            ],
-            "whatToTry": {
-              "description": "Experiment with using AI for content curation or personalization features in your own product, especially if you're building on open protocols or platforms.",
-              "note": "Focus on solving real user problems (like information overload) rather than just adding 'AI' as a buzzword."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1774817831725-ngjvyz",
-                "title": "Bluesky leans into AI with Attie, an app for building custom feeds",
-                "url": "https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-ngjvyz-0",
-                "label": "Bluesky",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-ngjvyz-1",
-                "label": "Content Curation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1774817831725-ngjvyz-2",
-                "label": "Social Media",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 28 Mar 2026 23:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 10,
         "isAvailable": true,
         "isRead": false
       }
