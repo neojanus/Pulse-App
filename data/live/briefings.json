@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-04-20",
+    "date": "2026-04-21",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-04-21-morning",
+        "period": "morning",
+        "date": "2026-04-21",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: AI Tool Crashes Vercel - Platform Reliability Risk, LACE: LLMs That Collaborate With Themselves, AI Agents Can Inherit Hidden, Unsafe Behaviors from Teachers.",
+        "items": [
+          {
+            "id": "hn-47844431",
+            "title": "AI Tool Crashes Vercel - Platform Reliability Risk",
+            "tldr": "A single AI tool's traffic spike crashed Vercel's entire platform, exposing how AI-powered apps can create unpredictable infrastructure demands that overwhelm even major platforms.",
+            "whyItMatters": [
+              "AI tools can generate traffic patterns that break traditional scaling assumptions",
+              "Platforms may need new safeguards against AI-driven usage spikes"
+            ],
+            "whatToTry": {
+              "description": "Test your AI app's traffic patterns under extreme scenarios and consider implementing rate limiting or queueing systems to prevent cascading failures.",
+              "note": "Even if you're on a managed platform, you're not immune to these types of failures - plan for graceful degradation"
+            },
+            "sources": [
+              {
+                "id": "src-hn-47844431",
+                "title": "A Roblox cheat and one AI tool brought down Vercel's platform",
+                "url": "https://webmatrices.com/post/how-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-entire-platform",
+                "domain": "webmatrices.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47844431-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47844431-1",
+                "label": "Reliability",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-21T04:12:12Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-vbyjsb",
+            "title": "LACE: LLMs That Collaborate With Themselves",
+            "tldr": "New research introduces LACE, a framework enabling parallel LLM reasoning paths to share insights and correct each other during inference, improving accuracy by 7+ points.",
+            "whyItMatters": [
+              "Business impact: Could enable more reliable AI systems without expensive model scaling",
+              "Technical impact: Shows how architectural modifications can make existing models smarter through coordinated parallel reasoning"
+            ],
+            "whatToTry": {
+              "description": "Experiment with implementing cross-thread attention in your own LLM applications by modifying attention masks to allow communication between parallel inference paths.",
+              "note": "Requires synthetic training data generation to teach models collaborative behavior - start with simple correction patterns"
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-vbyjsb",
+                "title": "LACE: Lattice Attention for Cross-thread Exploration",
+                "url": "https://arxiv.org/abs/2604.15529",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-vbyjsb-0",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-vbyjsb-1",
+                "label": "LLM Architecture",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-vbyjsb-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-2fun2u",
+            "title": "AI Agents Can Inherit Hidden, Unsafe Behaviors from Teachers",
+            "tldr": "New research shows AI agents can subliminally inherit dangerous behavioral biases (like deleting files) from teacher models during distillation, even when explicit triggers are removed from training data.",
+            "whyItMatters": [
+              "Business impact: Critical security risk for companies building on agentic AI - your 'safe' agent could inherit hidden destructive behaviors from its training source.",
+              "Technical impact: Reveals fundamental vulnerability in current agent distillation methods where behavioral traits transfer through subtle patterns, not just explicit keywords."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning or distilling agent models, implement behavioral testing suites that go beyond keyword filtering - test for emergent action patterns across diverse scenarios before deployment.",
+              "note": "This isn't just about filtering bad words - you need to test what the agent actually does, not just what it says."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-2fun2u",
+                "title": "Subliminal Transfer of Unsafe Behaviors in AI Agent Distillation",
+                "url": "https://arxiv.org/abs/2604.15559",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-2fun2u-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-2fun2u-1",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-2fun2u-2",
+                "label": "Model Distillation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1776762546321-9ipm6h",
+            "title": "Anthropic's $5B Amazon Deal: Cloud Spending Lock-In",
+            "tldr": "Anthropic secured another $5B from Amazon in exchange for a $100B AWS spending commitment, signaling massive capital requirements for frontier AI and deeper cloud vendor lock-in.",
+            "whyItMatters": [
+              "This deal highlights the extreme capital intensity of training frontier models, raising the barrier to entry for new competitors.",
+              "It reinforces the strategic importance of cloud partnerships and creates vendor lock-in, making AWS the default infrastructure for Anthropic's future scaling."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product with high compute needs, proactively negotiate long-term cloud commitments with your provider now, before your scaling costs become a point of leverage against you.",
+              "note": "Consider multi-cloud strategies early if possible, but recognize the trade-offs in complexity versus potential negotiating power."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1776762546321-9ipm6h",
+                "title": "Anthropic takes $5B from Amazon and pledges $100B in cloud spending in return",
+                "url": "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1776762546321-9ipm6h-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776762546321-9ipm6h-1",
+                "label": "AWS",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776762546321-9ipm6h-2",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Apr 2026 23:10:27 +0000"
+          },
+          {
+            "id": "hn-47842021",
+            "title": "The Myth of 'Uncensored' AI Models",
+            "tldr": "HackerNews discussion reveals even 'uncensored' models have hidden alignment constraints, with 100+ comments debating implications for AI product development.",
+            "whyItMatters": [
+              "Business impact: Products built on 'uncensored' models may face unexpected limitations or compliance issues",
+              "Technical impact: Model alignment is more complex than advertised - even base models have baked-in constraints"
+            ],
+            "whatToTry": {
+              "description": "Test your 'uncensored' models with edge cases beyond typical content filters - try asking about controversial historical events, corporate criticism, or niche technical topics to uncover hidden constraints.",
+              "note": "Consider building your own evaluation suite to systematically test model boundaries before committing to a specific provider"
+            },
+            "sources": [
+              {
+                "id": "src-hn-47842021",
+                "title": "Even 'uncensored' models can't say what they want",
+                "url": "https://morgin.ai/articles/even-uncensored-models-cant-say-what-they-want.html",
+                "domain": "morgin.ai",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-47842021-0",
+                "label": "model-alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-47842021-1",
+                "label": "model-evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-04-20T22:43:29Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-7e0j6o",
+            "title": "New Framework Uses MCTS to Optimize LLM Agent Skills",
+            "tldr": "Researchers propose a bilevel optimization framework using Monte Carlo Tree Search to systematically improve LLM agent skills, showing measurable performance gains on operations research tasks.",
+            "whyItMatters": [
+              "Business impact: Better-optimized agent skills could reduce development time and improve reliability of AI products that rely on agentic workflows.",
+              "Technical impact: Provides a structured, automated method to improve complex agent components beyond manual prompt engineering."
+            ],
+            "whatToTry": {
+              "description": "If you're building agent systems, consider treating skill optimization as a search problem. Start by defining your agent's skills as modular components (instructions, tools, resources) and experiment with simple A/B testing or grid search to find better configurations before implementing more complex methods like MCTS.",
+              "note": "The paper uses LLMs within the optimization loops themselves—you could try using a cheaper model (like Claude Haiku) to suggest improvements to your skill definitions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-7e0j6o",
+                "title": "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search",
+                "url": "https://arxiv.org/abs/2604.15709",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-7e0j6o-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-7e0j6o-1",
+                "label": "Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-7e0j6o-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-8lvi67",
+            "title": "Milkyway: Self-Evolving AI Agents for Future Prediction",
+            "tldr": "Researchers introduce Milkyway, a system where LLM agents improve at predicting unresolved future events by learning from their own evolving predictions over time, not just final outcomes.",
+            "whyItMatters": [
+              "Enables AI agents to make better real-time decisions in uncertain environments (e.g., finance, strategy) by learning from their own prediction process.",
+              "Shifts focus from outcome-based training to process-based learning, allowing for earlier and more nuanced improvements in reasoning."
+            ],
+            "whatToTry": {
+              "description": "Consider how your product's decision-making agents could incorporate a 'harness' to track their own reasoning over time. For tasks with repeated predictions (e.g., forecasting, risk assessment), log the agent's intermediate factors and evidence to create internal feedback loops.",
+              "note": "This is a research framework, not a ready-to-use tool. The core idea of learning from temporal prediction contrasts is the actionable insight."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-8lvi67",
+                "title": "The World Leaks the Future: Harness Evolution for Future Prediction Agents",
+                "url": "https://arxiv.org/abs/2604.15719",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-8lvi67-0",
+                "label": "Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-8lvi67-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-8lvi67-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546451-53te7f",
+            "title": "New Framework Fixes LLM Logic Flaws with Algebraic Invariants",
+            "tldr": "Researchers propose a symbolic reasoning scaffold that enforces logical consistency in LLMs through algebraic invariants, preventing weak reasoning steps from propagating through inference chains.",
+            "whyItMatters": [
+              "Business impact: Enables more reliable AI systems for applications requiring rigorous logical reasoning (legal, financial, scientific analysis).",
+              "Technical impact: Addresses systematic limitations in LLM reasoning by separating hypothesis generation from verification and enforcing consistency checks."
+            ],
+            "whatToTry": {
+              "description": "Review the paper's 'Gamma Quintet' invariants and consider how similar logical consistency checks could be implemented in your own AI system's reasoning pipelines, especially for multi-step inference tasks.",
+              "note": "The 'Weakest Link bound' principle is particularly actionable—ensure your system's confidence in a conclusion never exceeds the confidence in its least-supported premise."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546451-53te7f",
+                "title": "Structured Abductive-Deductive-Inductive Reasoning for LLMs via Algebraic Invariants",
+                "url": "https://arxiv.org/abs/2604.15727",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546451-53te7f-0",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546451-53te7f-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546451-53te7f-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-g6snpn",
+            "title": "DeepER-Med: Agentic AI for Medical Research",
+            "tldr": "Researchers introduced DeepER-Med, an agentic AI framework for evidence-based medical research that outperforms existing platforms in generating novel insights, addressing trust gaps in clinical AI.",
+            "whyItMatters": [
+              "Shows a growing market for specialized, trustworthy AI in regulated industries like healthcare.",
+              "Demonstrates a practical, modular architecture (planning, collaboration, synthesis) for building complex, multi-agent research systems."
+            ],
+            "whatToTry": {
+              "description": "Review the DeepER-Med paper's modular workflow to inform the design of your own complex, multi-step AI agent systems, especially if you operate in a domain requiring high trust and auditability.",
+              "note": "The benchmark dataset (DeepER-MedQA) could be a useful reference for testing systems that require evidence-grounded reasoning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-g6snpn",
+                "title": "DeepER-Med: Advancing Deep Evidence-Based Research in Medicine Through Agentic AI",
+                "url": "https://arxiv.org/abs/2604.15456",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-g6snpn-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-g6snpn-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-g6snpn-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776762546450-h79ihn",
+            "title": "GIST: New Pipeline for Spatial AI in Cluttered Environments",
+            "tldr": "Researchers introduced GIST, a pipeline that converts mobile point clouds into semantic navigation maps, improving spatial grounding for AI in complex spaces like warehouses and stores.",
+            "whyItMatters": [
+              "Enables more robust navigation and search AI for retail, logistics, and healthcare applications",
+              "Addresses key limitations of current Vision-Language Models in cluttered, dynamic environments"
+            ],
+            "whatToTry": {
+              "description": "Review the GIST architecture for potential integration into your robotics or AR navigation product if you're tackling spatial AI problems in dense environments.",
+              "note": "This is research-stage tech, but the approach to combining topological mapping with lightweight semantic layers is worth studying."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776762546450-h79ihn",
+                "title": "GIST: Multimodal Knowledge Extraction and Spatial Grounding via Intelligent Semantic Topology",
+                "url": "https://arxiv.org/abs/2604.15495",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-h79ihn-0",
+                "label": "Computer Vision",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-h79ihn-1",
+                "label": "Robotics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776762546450-h79ihn-2",
+                "label": "Spatial AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 21 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 26,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-04-20",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-04-20-evening",
@@ -424,7 +862,7 @@
   },
   {
     "date": "2026-04-19",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Apr 19",
     "briefings": [
       {
         "id": "briefing-2026-04-19-evening",
@@ -2982,1273 +3420,6 @@
           }
         ],
         "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-04-14",
-    "displayDate": "Tuesday, Apr 14",
-    "briefings": [
-      {
-        "id": "briefing-2026-04-14-morning",
-        "period": "morning",
-        "date": "2026-04-14",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: OpenAI Acquires Hiro, Signaling Push into AI Financial Planning, New Benchmark Tests How 'Human' AI GUI Agents Act, Vigil: Proactive AI Agent for On-Call Support, Deployed at Scale.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1776157070749-wpovlo",
-            "title": "OpenAI Acquires Hiro, Signaling Push into AI Financial Planning",
-            "tldr": "OpenAI has acquired AI personal finance startup Hiro, indicating a direct move to build financial planning capabilities into ChatGPT and its ecosystem.",
-            "whyItMatters": [
-              "Business impact: This is a strategic acquisition, not just a feature update, showing OpenAI's intent to own and deeply integrate vertical AI applications, potentially creating new monetization paths and competitive moats.",
-              "Technical impact: The integration will likely involve complex reasoning, data security, and personalization at scale, setting a benchmark for how AI handles sensitive, high-stakes domains."
-            ],
-            "whatToTry": {
-              "description": "Audit your product roadmap for potential overlap with major AI platforms' expansion plans (like OpenAI's move into finance). Consider if your core feature could become a native platform capability and develop a defensible strategy.",
-              "note": "This acquisition highlights the risk of building a thin wrapper on top of a model that the platform owner could easily replicate or acquire."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776157070749-wpovlo",
-                "title": "OpenAI has bought AI personal finance startup Hiro",
-                "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776157070749-wpovlo-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776157070749-wpovlo-1",
-                "label": "Acquisition",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776157070749-wpovlo-2",
-                "label": "Financial AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:23:33 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-cboabt",
-            "title": "New Benchmark Tests How 'Human' AI GUI Agents Act",
-            "tldr": "Researchers propose a 'Turing Test on Screen' benchmark to measure how well AI agents can mimic human touchscreen behavior, finding current agents are easily detectable due to unnatural movements.",
-            "whyItMatters": [
-              "Business impact: AI agents that can't mimic human behavior will be blocked by platforms, making your product unreliable.",
-              "Technical impact: You need to optimize agents for both task completion AND human-like interaction patterns to survive."
-            ],
-            "whatToTry": {
-              "description": "If you're building GUI automation, test your agent's touch/mouse dynamics against simple timing heuristics. Add small, variable delays and natural movement curves to basic actions.",
-              "note": "The paper suggests even simple noise injection can significantly improve 'humanization' scores without hurting utility."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-cboabt",
-                "title": "Turing Test on Screen: A Benchmark for Mobile GUI Agent Humanization",
-                "url": "https://arxiv.org/abs/2604.09574",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-cboabt-0",
-                "label": "GUI Automation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-cboabt-1",
-                "label": "Benchmark",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-jzubhy",
-            "title": "Vigil: Proactive AI Agent for On-Call Support, Deployed at Scale",
-            "tldr": "Researchers from ByteDance detail Vigil, a proactive AI agent that assists human support analysts during escalated on-call dialogues, featuring continuous self-improvement from resolved cases.",
-            "whyItMatters": [
-              "Shows a practical, deployed path for AI agents to augment (not replace) human workflows in complex support scenarios.",
-              "Demonstrates a 'proactive' agent paradigm that learns from failures and operates alongside humans, a key design pattern for real-world reliability."
-            ],
-            "whatToTry": {
-              "description": "Review the open-source Vigil architecture to understand how it integrates into human-in-the-loop workflows and its self-improvement mechanism. Consider if a similar 'proactive assistant' model could augment complex, high-stakes tasks in your own product's support or operations.",
-              "note": "This is a research paper with a deployed case study, not a ready-to-use product. Focus on the design principles for human-AI collaboration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-jzubhy",
-                "title": "Help Without Being Asked: A Deployed Proactive Agent System for On-Call Support with Continuous Self-Improvement",
-                "url": "https://arxiv.org/abs/2604.09579",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jzubhy-0",
-                "label": "AI Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jzubhy-1",
-                "label": "Support",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jzubhy-2",
-                "label": "Deployment",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-jhw9y2",
-            "title": "OOWM: Object-Oriented World Modeling for Embodied AI",
-            "tldr": "Researchers propose OOWM, a framework that replaces linear text reasoning with structured, object-oriented programmatic models for embodied AI tasks, enabling more robust robotic planning.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable and interpretable AI agents for robotics and automation, reducing failure modes in complex environments.",
-              "Technical impact: Moves beyond Chain-of-Thought prompting by grounding perception and planning in explicit symbolic structures (UML diagrams), improving state-space representation."
-            ],
-            "whatToTry": {
-              "description": "If you're building agents for physical or simulated environments, explore structuring your agent's 'world model' as an explicit object hierarchy (like a class diagram) instead of relying solely on natural language reasoning. This can make state tracking and planning more robust.",
-              "note": "This is a research framework, not a ready-to-use tool. The core idea—explicit symbolic structuring—is the actionable insight."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-jhw9y2",
-                "title": "OOWM: Structuring Embodied Reasoning and Planning via Object-Oriented Programmatic World Modeling",
-                "url": "https://arxiv.org/abs/2604.09580",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jhw9y2-0",
-                "label": "Embodied AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jhw9y2-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-jhw9y2-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-8rd00n",
-            "title": "OpenFlo: AI Agent Automates Usability Testing",
-            "tldr": "OpenFlo is a new research system that simulates human web interactions to automatically generate comprehensive UX reports, potentially replacing manual user studies for faster iteration.",
-            "whyItMatters": [
-              "Business impact: Dramatically reduces the cost and time of usability testing, enabling continuous, data-driven UX evaluation for small teams and agile workflows.",
-              "Technical impact: Uses GUI grounding for robust interaction with real web pages, moving beyond DOM parsing to simulate more realistic user journeys."
-            ],
-            "whatToTry": {
-              "description": "Clone the GitHub repo and test OpenFlo on a staging version of your web app. Use the generated SUS and SEQ scores to identify critical usability flaws before your next deployment.",
-              "note": "This is a research prototype. Expect some setup complexity and edge cases, but the core automated evaluation workflow is ready for experimentation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-8rd00n",
-                "title": "OpeFlo: Automated UX Evaluation via Simulated Human Web Interaction with GUI Grounding",
-                "url": "https://arxiv.org/abs/2604.09581",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-8rd00n-0",
-                "label": "OpenFlo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-8rd00n-1",
-                "label": "UX Testing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-8rd00n-2",
-                "label": "AI Agent",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-47756772",
-            "title": "GAIA: Open-source framework for local AI agents",
-            "tldr": "GAIA is a new open-source framework for building AI agents that run entirely on local hardware, gaining significant traction on HackerNews with 128 points and 30+ comments.",
-            "whyItMatters": [
-              "Enables privacy-focused AI applications by keeping data on-device",
-              "Reduces API costs and latency by running agents locally without cloud dependencies"
-            ],
-            "whatToTry": {
-              "description": "Explore the GAIA documentation to assess if local agent execution could benefit your product's privacy requirements or cost structure.",
-              "note": "Consider the trade-off between local hardware requirements and cloud API simplicity for your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47756772",
-                "title": "GAIA – Open-source framework for building AI agents that run on local hardware",
-                "url": "https://amd-gaia.ai/docs",
-                "domain": "amd-gaia.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47756772-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47756772-1",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47756772-2",
-                "label": "Local AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-13T19:28:41Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-je8r1s",
-            "title": "New AI-for-Science Benchmark Shows Major Performance Gap",
-            "tldr": "LABBench2, an evolved benchmark for AI systems performing real-world biology research tasks, shows frontier models still struggle significantly, with accuracy dropping 26-46% compared to its predecessor.",
-            "whyItMatters": [
-              "Benchmarks that measure real-world scientific work (not just knowledge) are critical for founders building AI-for-science products.",
-              "The significant performance gap indicates a major opportunity for specialized models and tools in the biology/chemistry space."
-            ],
-            "whatToTry": {
-              "description": "If you're building in AI-for-science, evaluate your system against LABBench2 to identify specific capability gaps versus general frontier models.",
-              "note": "The benchmark focuses on realistic scientific workflows, making it a better proxy for product readiness than standard academic tests."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-je8r1s",
-                "title": "LABBench2: An Improved Benchmark for AI Systems Performing Biology Research",
-                "url": "https://arxiv.org/abs/2604.09554",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-je8r1s-0",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-je8r1s-1",
-                "label": "AI-for-Science",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-je8r1s-2",
-                "label": "Biology",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-uhn0vo",
-            "title": "New Framework Standardizes AI Log Analysis",
-            "tldr": "Researchers propose a 7-step pipeline for analyzing AI system logs to understand model behavior and evaluation effectiveness, implemented in the Inspect Scout library.",
-            "whyItMatters": [
-              "Better log analysis enables more rigorous evaluation of AI systems and their real-world behaviors",
-              "Standardized approaches help teams move beyond ad-hoc debugging to systematic understanding"
-            ],
-            "whatToTry": {
-              "description": "Review the Inspect Scout library examples to see if their log analysis pipeline could improve your own model monitoring or evaluation workflows.",
-              "note": "This is a research framework, not a production tool - adapt the concepts rather than adopting the library directly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-uhn0vo",
-                "title": "Seven simple steps for log analysis in AI systems",
-                "url": "https://arxiv.org/abs/2604.09563",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-uhn0vo-0",
-                "label": "evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-uhn0vo-1",
-                "label": "monitoring",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-uhn0vo-2",
-                "label": "Inspect Scout",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-7ervp5",
-            "title": "Meta-Learning Enables Continual AI on Tiny Devices",
-            "tldr": "New research introduces AHC, a meta-learning framework that adapts compression for continual object detection on microcontrollers with under 100KB memory, enabling AI models to learn new tasks without forgetting old ones on severely constrained hardware.",
-            "whyItMatters": [
-              "Enables practical deployment of continually learning AI on edge devices with extreme memory constraints (under 100KB)",
-              "Provides theoretical guarantees against catastrophic forgetting with formal bounds on memory and task count"
-            ],
-            "whatToTry": {
-              "description": "If you're building for edge/microcontroller deployment, explore meta-learning approaches like MAML for adapting compression strategies to different tasks instead of using fixed compression.",
-              "note": "The 100KB memory budget is extremely tight - benchmark your edge deployment requirements against this constraint."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-7ervp5",
-                "title": "AHC: Meta-Learned Adaptive Compression for Continual Object Detection on Memory-Constrained Microcontrollers",
-                "url": "https://arxiv.org/abs/2604.09576",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-7ervp5-0",
-                "label": "Edge AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-7ervp5-1",
-                "label": "Meta-Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-7ervp5-2",
-                "label": "Continual Learning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776157071178-u7xae4",
-            "title": "New Research on Explainable AI Planning for Real-World Systems",
-            "tldr": "A new thesis presents comprehensive research on explainable AI planning (XAIP) for hybrid systems, addressing a major challenge as AI planning expands into safety-critical domains like autonomous vehicles and healthcare.",
-            "whyItMatters": [
-              "As founders deploy AI in regulated or high-stakes industries (healthcare, transportation, energy), explainability becomes a critical business requirement for adoption and compliance.",
-              "This research provides frameworks for making complex planning systems interpretable, which is essential for debugging, trust, and meeting regulatory standards."
-            ],
-            "whatToTry": {
-              "description": "If your product involves automated decision-making or planning (e.g., logistics, robotics, resource scheduling), review the thesis to identify applicable XAIP techniques. Proactively design an explanation layer into your system architecture, rather than adding it as an afterthought.",
-              "note": "Focus on explanations that are actionable for your end-users (e.g., 'Why was this route chosen?') not just technically accurate."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776157071178-u7xae4",
-                "title": "Explainable Planning for Hybrid Systems",
-                "url": "https://arxiv.org/abs/2604.09578",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-u7xae4-0",
-                "label": "Explainable AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-u7xae4-1",
-                "label": "Automated Planning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776157071178-u7xae4-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 24,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-04-14-afternoon",
-        "period": "afternoon",
-        "date": "2026-04-14",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Silicon Valley vs. AI Regulator in NY Congressional Race, Vigil: Proactive AI Agent for On-Call Support, Deployed for 10+ Months, HackerNews Debates AI Coding Horror Story.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1776178687544-esjwg4",
-            "title": "Silicon Valley vs. AI Regulator in NY Congressional Race",
-            "tldr": "Former Palantir employee Alex Bores, who helped pass New York's tough AI law, faces opposition from major tech companies in his congressional bid, signaling escalating political battles over AI regulation.",
-            "whyItMatters": [
-              "Founders must navigate increasingly complex regulatory landscapes as tech giants actively oppose AI legislation",
-              "Political battles over AI governance will shape market access and compliance requirements for AI products"
-            ],
-            "whatToTry": {
-              "description": "Monitor this congressional race and similar regulatory battles to anticipate how future AI laws might affect your product's go-to-market strategy and compliance needs.",
-              "note": "Even if you're not in New York, this signals broader industry pushback against AI regulation that could spread to other jurisdictions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776178687544-esjwg4",
-                "title": "Silicon Valley Is Spending Millions to Stop One of Its Own",
-                "url": "https://www.wired.com/story/the-big-interview-podcast-new-york-state-representative-alex-bores/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776178687544-esjwg4-0",
-                "label": "AI Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776178687544-esjwg4-1",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 10:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687728-e0cogs",
-            "title": "Vigil: Proactive AI Agent for On-Call Support, Deployed for 10+ Months",
-            "tldr": "ByteDance researchers detail Vigil, a proactive AI agent that assists human support analysts during escalated on-call dialogues, featuring continuous self-improvement from resolved cases.",
-            "whyItMatters": [
-              "Shows a viable path for AI agents to augment, not just replace, human workflows in complex support scenarios.",
-              "Demonstrates a production-tested architecture for 'proactive' agents that learn continuously from human interactions."
-            ],
-            "whatToTry": {
-              "description": "Review the open-source Vigil architecture to understand how to design an AI agent that operates alongside humans in a complex, multi-stage workflow, focusing on its 'proactive assistance' and 'continuous learning' loops.",
-              "note": "This is a research paper with a deployed case study; the core concepts are more valuable than trying to deploy the exact system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687728-e0cogs",
-                "title": "Help Without Being Asked: A Deployed Proactive Agent System for On-Call Support with Continuous Self-Improvement",
-                "url": "https://arxiv.org/abs/2604.09579",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-e0cogs-0",
-                "label": "AI Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-e0cogs-1",
-                "label": "Customer Support",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-e0cogs-2",
-                "label": "Production System",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-47762901",
-            "title": "HackerNews Debates AI Coding Horror Story",
-            "tldr": "A viral HackerNews thread dissects a developer's cautionary tale about AI-generated code causing production issues, highlighting widespread concerns about AI coding reliability.",
-            "whyItMatters": [
-              "Business impact: AI coding errors can lead to costly production failures and undermine trust in AI-assisted development tools.",
-              "Technical impact: The discussion reveals common failure patterns in AI-generated code, including subtle bugs, security vulnerabilities, and architectural mismatches."
-            ],
-            "whatToTry": {
-              "description": "Review your team's AI-generated code for three specific issues mentioned in the discussion: 1) subtle logic errors in edge cases, 2) security assumptions that don't match your environment, and 3) architectural patterns that conflict with your system design.",
-              "note": "Consider implementing mandatory human review for AI-generated code that touches production systems or security-sensitive areas."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47762901",
-                "title": "An AI Vibe Coding Horror Story",
-                "url": "https://www.tobru.ch/an-ai-vibe-coding-horror-story/",
-                "domain": "tobru.ch",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47762901-0",
-                "label": "AI Coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47762901-1",
-                "label": "Developer Tools",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-14T08:35:45Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687728-tws3v4",
-            "title": "New Benchmark Tests How 'Human' AI GUI Agents Act",
-            "tldr": "Researchers propose a 'Turing Test on Screen' benchmark to measure how well AI agents mimic human touchscreen behavior, finding current agents are easily detectable due to unnatural movements.",
-            "whyItMatters": [
-              "Platforms are implementing anti-bot measures, making stealth crucial for agents that automate tasks",
-              "Shifts focus from just completing tasks to completing them in a way that avoids detection"
-            ],
-            "whatToTry": {
-              "description": "If you're building agents that interact with mobile apps, test them against human touchscreen datasets to identify unnatural kinematic patterns (like perfect straight-line swipes or uniform tap timing) that could trigger detection.",
-              "note": "The paper suggests adding heuristic noise or using data-driven behavioral matching to improve stealth without sacrificing task performance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687728-tws3v4",
-                "title": "Turing Test on Screen: A Benchmark for Mobile GUI Agent Humanization",
-                "url": "https://arxiv.org/abs/2604.09574",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-tws3v4-0",
-                "label": "GUI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-tws3v4-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-tws3v4-2",
-                "label": "Anti-detection",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687728-hidc45",
-            "title": "Meta-Learning Enables Continual AI Vision on Tiny Chips",
-            "tldr": "Researchers developed AHC, a meta-learning framework that adapts feature compression for continual object detection on microcontrollers with under 100KB memory, enabling AI models to learn new tasks without forgetting old ones on extremely constrained hardware.",
-            "whyItMatters": [
-              "Enables deployment of continually learning AI vision systems on ultra-low-cost edge devices",
-              "Provides theoretical guarantees against catastrophic forgetting with formal memory bounds"
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your edge AI use case could benefit from meta-learned compression - particularly if you're deploying vision models on resource-constrained hardware that needs to adapt over time.",
-              "note": "This is research-stage but shows the direction for efficient continual learning on edge devices"
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687728-hidc45",
-                "title": "AHC: Meta-Learned Adaptive Compression for Continual Object Detection on Memory-Constrained Microcontrollers",
-                "url": "https://arxiv.org/abs/2604.09576",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-hidc45-0",
-                "label": "edge-ai",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-hidc45-1",
-                "label": "continual-learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-hidc45-2",
-                "label": "computer-vision",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687728-qte0bu",
-            "title": "OOWM: Object-Oriented World Modeling for Embodied AI",
-            "tldr": "Researchers propose OOWM, a framework that replaces linear text reasoning with structured, object-oriented programmatic models for embodied AI tasks, enabling more robust robotic planning.",
-            "whyItMatters": [
-              "Business impact: This approach could significantly improve the reliability and explainability of AI agents in physical environments, opening new product opportunities in robotics and automation.",
-              "Technical impact: Moves beyond Chain-of-Thought's limitations by using UML diagrams to explicitly model object hierarchies and state transitions, creating more verifiable and controllable reasoning."
-            ],
-            "whatToTry": {
-              "description": "Experiment with structuring your agent's reasoning using explicit state representations and transition logic, even if just in pseudocode, to see if it improves planning reliability for your use case.",
-              "note": "While the full OOWM framework is complex, the core idea of moving from implicit text reasoning to explicit, structured world models is immediately applicable."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687728-qte0bu",
-                "title": "OOWM: Structuring Embodied Reasoning and Planning via Object-Oriented Programmatic World Modeling",
-                "url": "https://arxiv.org/abs/2604.09580",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-qte0bu-0",
-                "label": "Embodied AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-qte0bu-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-qte0bu-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687729-aukjf5",
-            "title": "OpenFlo: AI Agent Automates Usability Testing",
-            "tldr": "OpenFlo is a new research agent that simulates human web interactions to automatically generate standardized UX reports, potentially replacing manual user studies for faster iteration.",
-            "whyItMatters": [
-              "Dramatically reduces time and cost of usability testing, enabling continuous evaluation during development.",
-              "Introduces GUI grounding for more robust web interaction compared to DOM-parsing tools, improving reliability."
-            ],
-            "whatToTry": {
-              "description": "Clone the GitHub repo and run OpenFlo on your staging environment to get an automated SUS score and UX report before your next user test.",
-              "note": "This is a research prototype; expect some rough edges, but it's a concrete tool you can test today."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687729-aukjf5",
-                "title": "OpeFlo: Automated UX Evaluation via Simulated Human Web Interaction with GUI Grounding",
-                "url": "https://arxiv.org/abs/2604.09581",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687729-aukjf5-0",
-                "label": "OpenFlo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687729-aukjf5-1",
-                "label": "UX Testing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687729-aukjf5-2",
-                "label": "AI Agent",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776178687552-j9gg15",
-            "title": "Gemini Personal Intelligence Launches in India",
-            "tldr": "Google expanded its Gemini Personal Intelligence feature to India, allowing users to connect Google accounts for personalized AI responses.",
-            "whyItMatters": [
-              "Expands the market for personalized AI assistants, showing Google's focus on international growth.",
-              "Demonstrates a practical application of AI by integrating with existing user data (Gmail, Photos) to provide context-aware answers."
-            ],
-            "whatToTry": {
-              "description": "If you have users in India, consider how your product could leverage existing user data (with consent) to offer more personalized, context-aware AI features, similar to Gemini's integration with Google accounts.",
-              "note": "Ensure any data integration follows strict privacy guidelines and provides clear user value."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776178687552-j9gg15",
-                "title": "Google brings its Gemini Personal Intelligence feature to India",
-                "url": "https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776178687552-j9gg15-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776178687552-j9gg15-1",
-                "label": "Personalization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776178687552-j9gg15-2",
-                "label": "Market Expansion",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 14:48:34 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776178687552-mzf0xp",
-            "title": "Anything app pivots to desktop after App Store removals",
-            "tldr": "Vibe coding app Anything, removed twice from the App Store, is launching a desktop companion to continue development.",
-            "whyItMatters": [
-              "Shows the risks of building solely on mobile app stores for AI tools",
-              "Highlights a strategic pivot to desktop as a more stable platform for development tools"
-            ],
-            "whatToTry": {
-              "description": "If building a mobile-first AI tool, evaluate launching a desktop/web version concurrently to mitigate platform risk.",
-              "note": "Consider if your app's core functionality could violate evolving App Store guidelines for AI/automation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776178687552-mzf0xp",
-                "title": "How vibe coding app Anything is rebuilding after getting booted from the App Store twice",
-                "url": "https://techcrunch.com/2026/04/14/how-vibe-coding-app-anything-is-rebuilding-after-getting-booted-from-the-app-store-twice/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776178687552-mzf0xp-0",
-                "label": "Anything",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776178687552-mzf0xp-1",
-                "label": "Platform Risk",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 14:22:44 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1776178687728-tt9ukx",
-            "title": "New AI-for-Science Benchmark Shows Major Performance Gap",
-            "tldr": "LABBench2, an evolved benchmark for AI systems performing real-world biology research tasks, shows current frontier models still struggle significantly, with accuracy dropping 26-46% compared to its predecessor.",
-            "whyItMatters": [
-              "Sets a new, more realistic standard for evaluating AI's practical utility in scientific R&D, moving beyond knowledge recall to task performance.",
-              "Highlights that current 'frontier' models are not yet ready for autonomous scientific work, creating opportunities for specialized solutions."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for scientific applications, use LABBench2 to benchmark your system against the new, more realistic standard. It's a strong signal to investors and customers that you're focused on practical utility, not just academic performance.",
-              "note": "The benchmark is specifically for biology, but the principle of measuring 'real-world task performance' applies to any scientific domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1776178687728-tt9ukx",
-                "title": "LABBench2: An Improved Benchmark for AI Systems Performing Biology Research",
-                "url": "https://arxiv.org/abs/2604.09554",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-tt9ukx-0",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1776178687728-tt9ukx-1",
-                "label": "AI for Science",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-04-14-evening",
-        "period": "evening",
-        "date": "2026-04-14",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Anthropic vs OpenAI on AI Liability Law, Silicon Valley vs. AI Regulator in NY Congressional Race, Google Chrome 'Skills' Turns AI Prompts Into Reusable Tools.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1776201147518-pckxpf",
-            "title": "Anthropic vs OpenAI on AI Liability Law",
-            "tldr": "Anthropic opposes an Illinois AI liability bill that OpenAI supports, revealing a major industry split on legal responsibility for AI harms.",
-            "whyItMatters": [
-              "Business impact: This legal battle will shape future liability frameworks and insurance costs for AI companies",
-              "Technical impact: Different liability standards could influence how aggressively companies deploy risky AI systems"
-            ],
-            "whatToTry": {
-              "description": "Review your terms of service and liability clauses, and consider how different liability frameworks would affect your product roadmap and risk assessment.",
-              "note": "Monitor this legislation as it could become a model for other states"
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776201147518-pckxpf",
-                "title": "Anthropic Opposes the Extreme AI Liability Bill That OpenAI Backed",
-                "url": "https://www.wired.com/story/anthropic-opposes-the-extreme-ai-liability-bill-that-openai-backed/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776201147518-pckxpf-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776201147518-pckxpf-1",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 15:21:44 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1776201147518-yjx8xw",
-            "title": "Silicon Valley vs. AI Regulator in NY Congressional Race",
-            "tldr": "Former Palantir employee Alex Bores, who helped pass New York's tough AI law, is running for Congress, drawing opposition funding from major tech firms.",
-            "whyItMatters": [
-              "Shows escalating political battle over AI regulation, with industry actively funding opposition to pro-regulation candidates.",
-              "Highlights that regulatory momentum is moving to state/local levels, not just federal."
-            ],
-            "whatToTry": {
-              "description": "Review the NY AI law (S. 7543) to understand the regulatory framework that has tech giants concerned, and assess if similar proposals could emerge in your state.",
-              "note": "This is a political trend story; the direct regulatory impact is currently in New York, but it signals broader industry pushback."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776201147518-yjx8xw",
-                "title": "Silicon Valley Is Spending Millions to Stop One of Its Own",
-                "url": "https://www.wired.com/story/the-big-interview-podcast-new-york-state-representative-alex-bores/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776201147518-yjx8xw-0",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 10:30:00 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1776201147694-0kyf9f",
-            "title": "Google Chrome 'Skills' Turns AI Prompts Into Reusable Tools",
-            "tldr": "Google launched 'Skills' in Chrome, letting users save and remix AI workflows as one-click tools, potentially changing how users interact with AI.",
-            "whyItMatters": [
-              "Business impact: This lowers the barrier to using complex AI workflows, making AI more accessible to non-technical users and creating new opportunities for product integration.",
-              "Technical impact: It abstracts complex prompting into reusable tools, which could standardize and accelerate common AI tasks within the browser environment."
-            ],
-            "whatToTry": {
-              "description": "Identify a repetitive, multi-step AI task you or your users perform (e.g., summarizing articles, generating social posts). Document the prompt sequence and explore if it can be packaged as a simple, one-click 'Skill' for internal use or as a user-facing feature.",
-              "note": "This is currently a Google Chrome feature. Consider how a similar 'workflow packaging' concept could be applied within your own product's UI."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1776201147694-0kyf9f",
-                "title": "Turn your best AI prompts into one-click tools in Chrome",
-                "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1776201147694-0kyf9f-0",
-                "label": "Chrome",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1776201147694-0kyf9f-1",
-                "label": "Workflow Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 17:00:00 +0000"
-          },
-          {
-            "id": "hn-47762901",
-            "title": "HackerNews Debates AI Coding Horror Stories",
-            "tldr": "A viral HackerNews thread with 196+ comments dissects real-world AI coding failures, revealing systemic issues beyond simple bugs.",
-            "whyItMatters": [
-              "Business impact: Highlights the hidden costs and risks of shipping AI-generated code without proper guardrails, which can damage product reliability and team velocity.",
-              "Technical impact: Exposes patterns where AI tools produce subtly wrong, insecure, or unmaintainable code that passes initial review but creates technical debt."
-            ],
-            "whatToTry": {
-              "description": "Review your team's AI coding workflow. Add a mandatory 'AI-generated code audit' step focusing on edge cases, security implications, and long-term maintainability, not just functional correctness.",
-              "note": "The discussion suggests the biggest risks aren't obvious bugs, but code that works 'well enough' while being fragile or insecure."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47762901",
-                "title": "An AI Vibe Coding Horror Story",
-                "url": "https://www.tobru.ch/an-ai-vibe-coding-horror-story/",
-                "domain": "tobru.ch",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47762901-0",
-                "label": "AI Coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47762901-1",
-                "label": "Developer Tools",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-14T08:35:45Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776201147578-a5xb2o",
-            "title": "Anthropic briefs Trump admin on AI safety while suing government",
-            "tldr": "Anthropic co-founder confirmed briefing the Trump administration on AI safety model 'Mythos' while simultaneously suing the government, highlighting complex AI policy engagement.",
-            "whyItMatters": [
-              "Shows AI companies must navigate political transitions while protecting IP and principles",
-              "Reveals how AI safety research intersects with government relations across administrations"
-            ],
-            "whatToTry": {
-              "description": "Review your government engagement strategy - consider how to maintain relationships across political transitions while protecting your company's interests and intellectual property.",
-              "note": "Document all government interactions and establish clear protocols for sensitive discussions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776201147578-a5xb2o",
-                "title": "Anthropic co-founder confirms the company briefed the Trump administration on Mythos",
-                "url": "https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-a5xb2o-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-a5xb2o-1",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 18:09:12 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776201147578-3zt0tt",
-            "title": "Science Corp to implant first brain sensor in human",
-            "tldr": "Max Hodak's Science Corp is preparing for its first human brain sensor implant, aiming to treat neurological conditions via electrical stimulation.",
-            "whyItMatters": [
-              "Signals growing maturity and regulatory progress for invasive neurotech, potentially opening new therapeutic markets.",
-              "Advances in brain-computer interfaces (BCIs) could eventually inform less invasive AI interaction models."
-            ],
-            "whatToTry": {
-              "description": "Monitor the clinical trial results and regulatory pathway for this device. If you're in healthtech or human-computer interaction, consider how proven, safe neural stimulation protocols could be adapted for non-invasive wearables.",
-              "note": "This is a highly regulated, long-term medical device play, not a direct short-term opportunity for most software founders."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776201147578-3zt0tt",
-                "title": "Max Hodak’s Science Corp. is preparing to place its first sensor in a human brain",
-                "url": "https://techcrunch.com/2026/04/14/max-hodaks-science-corp-is-preparing-to-place-its-first-sensor-in-a-human-brain/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-3zt0tt-0",
-                "label": "Neurotech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-3zt0tt-1",
-                "label": "BCI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-3zt0tt-2",
-                "label": "Healthtech",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 17:13:03 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776201147578-b37pyp",
-            "title": "Google Chrome adds reusable AI 'Skills' for cross-site prompts",
-            "tldr": "Google is adding 'Skills' to Chrome, allowing users to save and reuse AI prompts across different websites, building on Gemini's browser integration.",
-            "whyItMatters": [
-              "Business impact: This signals Google's push to make AI a persistent, reusable utility in the browser, potentially changing how users interact with web apps and creating new workflow automation patterns.",
-              "Technical impact: It demonstrates a move towards persistent AI context and reusable prompt templates at the browser level, which could become a standard feature other browsers adopt."
-            ],
-            "whatToTry": {
-              "description": "Experiment with creating reusable prompt templates for repetitive web tasks you perform (research, data extraction, content summarization) to see how browser-level AI automation could streamline your workflow.",
-              "note": "This is currently a Google Chrome feature, so test it there first to understand the user experience before considering similar patterns for your own products."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776201147578-b37pyp",
-                "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-                "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-b37pyp-0",
-                "label": "Chrome",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-b37pyp-1",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-b37pyp-2",
-                "label": "Browser AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1776201147518-2e7ag1",
-            "title": "Chrome's Gemini Sidebar Adds 'Skills' for Recipe & Video Tasks",
-            "tldr": "Google Chrome's Gemini sidebar now offers premade 'Skills' like maximizing protein in recipes or summarizing YouTube videos, showing how AI is being integrated into everyday browsing workflows.",
-            "whyItMatters": [
-              "Demonstrates how major platforms are embedding AI assistants into core user experiences, potentially changing how users interact with web content.",
-              "Highlights a trend toward task-specific AI 'skills' over general-purpose chat, which could inform product design for AI features."
-            ],
-            "whatToTry": {
-              "description": "Test the Gemini sidebar in Chrome (if available) to see how its 'Skills' handle specific tasks like summarizing a YouTube video. Consider if a similar 'skill'-based, task-oriented UI could simplify a complex feature in your own product.",
-              "note": "This is a gradual rollout; you may need to enable flags or wait for the update."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776201147518-2e7ag1",
-                "title": "How to Use Google Chrome’s New AI-Powered ‘Skills’",
-                "url": "https://www.wired.com/story/how-to-use-google-chrome-ai-powered-skills/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776201147518-2e7ag1-0",
-                "label": "Google Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776201147518-2e7ag1-1",
-                "label": "Chrome",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776201147518-2e7ag1-2",
-                "label": "AI Assistants",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776201147578-rjysof",
-            "title": "Gemini Personal Intelligence Launches in India",
-            "tldr": "Google has expanded its Gemini Personal Intelligence feature to India, allowing users to connect personal Google accounts for AI-powered assistance.",
-            "whyItMatters": [
-              "Expands the market for personal AI assistants, showing Google's focus on global adoption",
-              "Demonstrates how connecting personal data (Gmail, Photos) can create more useful AI experiences"
-            ],
-            "whatToTry": {
-              "description": "Test how your product could leverage user permissioned data (like email or photos) to provide personalized AI features, similar to Gemini's approach.",
-              "note": "Focus on clear user value and privacy controls when accessing personal data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776201147578-rjysof",
-                "title": "Google brings its Gemini Personal Intelligence feature to India",
-                "url": "https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-rjysof-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-rjysof-1",
-                "label": "Personal AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 14:48:34 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776201147578-4agd01",
-            "title": "Anything app pivots to desktop after App Store removals",
-            "tldr": "AI coding app Anything is launching a desktop companion after being removed from the App Store twice, highlighting platform dependency risks for AI tools.",
-            "whyItMatters": [
-              "Business impact: Shows the risk of building solely on third-party platforms that can change policies or remove apps unexpectedly",
-              "Technical impact: Desktop apps offer more flexibility for AI coding tools that might push platform boundaries"
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI tool that might have ambiguous compliance with platform policies, start developing a desktop/web version alongside mobile to reduce dependency risk.",
-              "note": "Desktop apps can often implement more powerful features that mobile platforms restrict"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776201147578-4agd01",
-                "title": "How vibe-coding app Anything is rebuilding after getting booted from the App Store twice",
-                "url": "https://techcrunch.com/2026/04/14/how-vibe-coding-app-anything-is-rebuilding-after-getting-booted-from-the-app-store-twice/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-4agd01-0",
-                "label": "Anything",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776201147578-4agd01-1",
-                "label": "Platform Risk",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 14 Apr 2026 14:22:44 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
