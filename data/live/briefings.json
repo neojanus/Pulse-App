@@ -1,7 +1,440 @@
 [
   {
-    "date": "2026-04-22",
+    "date": "2026-04-23",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-04-23-morning",
+        "period": "morning",
+        "date": "2026-04-23",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: LLMs Overuse Tools: New Research Reveals Why & How to Fix It, LLM Framework for Explainable AML Triage with Evidence & Counterfactuals, New Metric Predicts AI System Collapse Under Constraint.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1776935353623-dq4gme",
+            "title": "LLMs Overuse Tools: New Research Reveals Why & How to Fix It",
+            "tldr": "A new paper reveals that LLMs frequently call external tools unnecessarily, driven by a 'knowledge epistemic illusion' (misjudging their own knowledge) and outcome-only reward structures. The authors propose fixes that cut tool usage by up to 82.8% while improving accuracy.",
+            "whyItMatters": [
+              "For founders building AI products: This directly impacts cost and latency. Unnecessary tool calls waste API credits and slow down responses. The paper offers practical strategies to reduce tool usage without sacrificing performance.",
+              "For technical teams: The findings suggest that current training methods (rewarding only final correctness) inadvertently encourage tool overuse. Adjusting reward structures can lead to more efficient models."
+            ],
+            "whatToTry": {
+              "description": "Audit your LLM's tool usage patterns. Implement a knowledge-aware boundary alignment strategy (e.g., using DPO) to help the model better assess when it truly needs external tools. Also, consider balancing reward signals during fine-tuning to penalize unnecessary tool calls, not just final accuracy.",
+              "note": "Start with a small pilot on a subset of queries to measure cost savings before full deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353623-dq4gme",
+                "title": "The Tool-Overuse Illusion: Why Does LLM Prefer External Tools over Internal Knowledge?",
+                "url": "https://arxiv.org/abs/2604.19749",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353623-dq4gme-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353623-dq4gme-1",
+                "label": "Tool Use",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353623-dq4gme-2",
+                "label": "Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-cho310",
+            "title": "LLM Framework for Explainable AML Triage with Evidence & Counterfactuals",
+            "tldr": "A new arXiv paper proposes a structured LLM framework for anti-money laundering triage that uses retrieval-augmented evidence bundling, citation contracts, and counterfactual checks to improve auditability and reduce hallucinations. This is directly actionable for founders building regulated AI products in finance or compliance.",
+            "whyItMatters": [
+              "Business impact: Enables safer deployment of LLMs in high-stakes regulated workflows (AML, KYC, fraud) by addressing audit and hallucination risks, potentially reducing compliance costs and false positives.",
+              "Technical impact: Provides a blueprint for combining RAG, structured output contracts, and counterfactual validation to make LLM decisions explainable and robust, applicable beyond AML to any evidence-constrained decision system."
+            ],
+            "whatToTry": {
+              "description": "Implement a similar evidence-constrained LLM pipeline for your regulated use case: use RAG to bundle policy docs, customer data, and transaction graphs; enforce a structured output contract requiring explicit citations and separating supporting/contradicting evidence; add counterfactual checks by perturbing inputs (e.g., transaction amounts) and verifying coherent changes in recommendations.",
+              "note": "Start with a small pilot on synthetic data to validate the approach before scaling to production, as counterfactual generation can be computationally intensive."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-cho310",
+                "title": "Explainable AML Triage with LLMs: Evidence Retrieval and Counterfactual Checks",
+                "url": "https://arxiv.org/abs/2604.19755",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-cho310-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-cho310-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-cho310-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-tau43p",
+            "title": "New Metric Predicts AI System Collapse Under Constraint",
+            "tldr": "A new paper introduces the Inference Headroom Ratio (IHR), a diagnostic metric that quantifies how close an AI system is to collapse under uncertainty and constraints. It reduces collapse rates from 79.4% to 58.7% when used as a control variable, offering a practical tool for founders building reliable AI products.",
+            "whyItMatters": [
+              "Business impact: Enables proactive risk management for AI systems in production, reducing costly failures and improving reliability for customers.",
+              "Technical impact: Provides a system-level complement to existing metrics like drift and uncertainty, allowing engineers to estimate remaining inferential margin before failure."
+            ],
+            "whatToTry": {
+              "description": "Implement IHR monitoring in your AI pipeline: track effective inferential capacity (C) and combined uncertainty/constraint load (U+K) to compute IHR = C/(U+K). Set an alert when IHR approaches the critical threshold of 1.19 to trigger fallback or scaling actions.",
+              "note": "Start with a simulation or shadow mode to calibrate thresholds for your specific system before active regulation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-tau43p",
+                "title": "Inference Headroom Ratio: A Diagnostic and Control Framework for Inference Stability Under Constraint",
+                "url": "https://arxiv.org/abs/2604.19760",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-tau43p-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-tau43p-1",
+                "label": "model",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-z62kib",
+            "title": "Conformal Interpretability: Peeking Inside LLM Agents' Temporal Reasoning",
+            "tldr": "A new framework uses conformal prediction to label LLM agent internal states as successful or failing at each step, enabling early failure detection and performance steering. This is a practical step toward debugging and improving agentic AI systems.",
+            "whyItMatters": [
+              "Founders building autonomous agents can now detect failures early in multi-step tasks, reducing costly errors in production.",
+              "The ability to steer model activations toward success directions offers a new method for fine-tuning agent performance without full retraining."
+            ],
+            "whatToTry": {
+              "description": "If you're developing LLM agents for complex tasks (e.g., code generation, customer support), consider integrating step-wise reward modeling and conformal prediction to log and analyze internal states. Use the identified 'success directions' to implement real-time interventions or guide reinforcement learning.",
+              "note": "This is research-stage; expect implementation challenges. Start with simple environments like ScienceWorld to validate the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-z62kib",
+                "title": "From Actions to Understanding: Conformal Interpretability of Temporal Concepts in LLM Agents",
+                "url": "https://arxiv.org/abs/2604.19775",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-z62kib-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-z62kib-1",
+                "label": "interpretability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-z62kib-2",
+                "label": "agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1776935353531-chabvg",
+            "title": "India's app boom: AI apps lead growth, but global platforms win",
+            "tldr": "India's non-gaming app market is surging, driven by streaming and AI apps, yet global platforms capture most revenue due to low local spending per user. This signals a gap for founders to build AI products tailored to India's price-sensitive market.",
+            "whyItMatters": [
+              "Business impact: Founders can target India's growing AI app demand with localized, affordable solutions to capture market share from global incumbents.",
+              "Technical impact: Opportunity to optimize AI models for low-cost inference and offline capabilities to address India's lower spending per user and infrastructure constraints."
+            ],
+            "whatToTry": {
+              "description": "Explore building AI-powered apps (e.g., vernacular language tools, low-cost productivity assistants) for India's market, focusing on freemium models or micro-transactions to match local spending habits.",
+              "note": "Consider partnerships with Indian telecoms or local app stores to reduce distribution costs and improve user acquisition."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1776935353531-chabvg",
+                "title": "India’s app market is booming — but global platforms are capturing most of the gains",
+                "url": "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1776935353531-chabvg-0",
+                "label": "India",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776935353531-chabvg-1",
+                "label": "AI apps",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776935353531-chabvg-2",
+                "label": "Market trends",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 04:38:45 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-eefl5y",
+            "title": "New Framework for Judging AI-Assisted Work in Learning",
+            "tldr": "A new paper proposes 'AI to Learn 2.0', a governance framework that distinguishes between artifact and capability residuals, offering a maturity rubric for evaluating AI-assisted outputs in education and research. It addresses the proxy failure problem where polished AI outputs don't reflect human understanding.",
+            "whyItMatters": [
+              "Provides a structured approach for founders building AI products in education or professional training to design evaluation systems that certify human learning, not just AI-generated artifacts.",
+              "Offers a practical rubric (5-part package, 7-dimension maturity) that can be adapted into product features for auditing and validating AI-assisted work."
+            ],
+            "whatToTry": {
+              "description": "Review the paper's maturity rubric and gate thresholds to design a 'capability evidence' feature in your AI product, requiring users to demonstrate understanding (e.g., via explanations or transfer tasks) before certifying outputs.",
+              "note": "Focus on the artifact residual vs. capability residual distinction to avoid proxy failure in your own product's assessment logic."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-eefl5y",
+                "title": "AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains",
+                "url": "https://arxiv.org/abs/2604.19751",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-eefl5y-0",
+                "label": "Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-eefl5y-1",
+                "label": "Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-eefl5y-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-nxqgcw",
+            "title": "ZeroFolio: Pick Best Algorithm Without Domain Knowledge Using Text Embeddings",
+            "tldr": "A new method, ZeroFolio, uses pretrained text embeddings to select the best algorithm for a problem instance without any hand-crafted features or domain expertise, outperforming traditional methods in 10 of 11 scenarios.",
+            "whyItMatters": [
+              "Business impact: Reduces the need for expensive domain experts to tune algorithm selection, enabling faster and cheaper deployment of AI solutions across diverse problem types.",
+              "Technical impact: Demonstrates that pretrained embeddings can generalize across domains (SAT, MIP, graph problems), potentially simplifying AI pipeline design for founders building multi-domain products."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product that solves optimization or constraint problems (e.g., scheduling, logistics), experiment with ZeroFolio's approach: serialize your problem instances as plain text, embed them using a model like text-embedding-3-small, and use weighted k-nearest neighbors to select from a portfolio of solvers. This could replace manual feature engineering in your algorithm selection layer.",
+              "note": "Start with small-scale tests on your own problem instances; the paper's ablation study suggests using inverse-distance weighting, line shuffling, and Manhattan distance for best results."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-nxqgcw",
+                "title": "Algorithm Selection with Zero Domain Knowledge via Text Embeddings",
+                "url": "https://arxiv.org/abs/2604.19753",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-nxqgcw-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-nxqgcw-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-nxqgcw-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-ckkhul",
+            "title": "Data Augmentation Beats Class Imbalance in AI Scoring of Student Explanations",
+            "tldr": "A new study shows that data augmentation strategies, especially GPT-4-generated synthetic data and ALP phrase-level extraction, significantly improve transformer-based models (SciBERT) for scoring imbalanced student responses in NGSS-aligned science assessments, achieving perfect F1 scores on the most severe minority classes.",
+            "whyItMatters": [
+              "For founders building AI assessment tools in education, this demonstrates a practical, low-cost method to handle class imbalance without sacrificing precision or recall, enabling more reliable automated scoring of open-ended responses.",
+              "The success of GPT-4 synthetic data and ALP augmentation suggests that combining LLM-generated examples with rule-based augmentation can outperform standard fine-tuning, offering a blueprint for improving model performance on rare but critical rubric categories."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI scoring system for educational assessments, experiment with GPT-4 to generate synthetic examples for minority classes in your rubric, then fine-tune a domain-specific transformer like SciBERT. Also test ALP-style phrase-level augmentation to boost recall on rare categories.",
+              "note": "Ensure synthetic data quality by human-reviewing a sample to avoid introducing artifacts that could misalign with human scoring."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-ckkhul",
+                "title": "Exploring Data Augmentation and Resampling Strategies for Transformer-Based Models to Address Class Imbalance in AI Scoring of Scientific Explanations in NGSS Classroom",
+                "url": "https://arxiv.org/abs/2604.19754",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-ckkhul-0",
+                "label": "Data Augmentation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-ckkhul-1",
+                "label": "SciBERT",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-ckkhul-2",
+                "label": "Education AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-vo771d",
+            "title": "ThermoQA Benchmark Reveals LLM Reasoning Gaps in Thermodynamics",
+            "tldr": "A new 293-question benchmark (ThermoQA) tests LLMs on thermodynamic reasoning across three tiers, finding that top models like Claude Opus 4.6 score 94.1% but show significant degradation from property lookup to full cycle analysis, exposing a gap between memorization and true reasoning.",
+            "whyItMatters": [
+              "For founders building AI in engineering or scientific domains, this benchmark provides a rigorous way to evaluate if your model truly understands domain logic versus just retrieving facts.",
+              "The cross-tier degradation metric (up to 32.5 pp) highlights a critical failure mode: models may ace simple queries but fail on multi-step reasoning, which is essential for real-world applications like system design or troubleshooting."
+            ],
+            "whatToTry": {
+              "description": "Use the open-source ThermoQA dataset to stress-test your own AI product's reasoning capabilities, especially if you're targeting engineering, energy, or HVAC use cases. Run your model on the three tiers separately to identify where it breaks down.",
+              "note": "The dataset covers water, R-134a, and variable-cp air, so it's most relevant for thermal or fluid systems; consider adapting the tiered approach to your own domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-vo771d",
+                "title": "ThermoQA: A Three-Tier Benchmark for Evaluating Thermodynamic Reasoning in Large Language Models",
+                "url": "https://arxiv.org/abs/2604.19758",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-vo771d-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-vo771d-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776935353624-dth53a",
+            "title": "EvoForest: Open-Ended Evolution of Computational Graphs for ML",
+            "tldr": "EvoForest introduces a hybrid neuro-symbolic system that evolves entire computational graphs (not just weights) via open-ended evolution, enabling discovery of transformations, invariances, and structures for non-differentiable or structured prediction problems. This matters because it offers a new paradigm for tasks where weight optimization alone fails.",
+            "whyItMatters": [
+              "Business impact: Founders building AI for structured prediction (e.g., drug discovery, financial modeling, scientific simulation) can leverage EvoForest to automate discovery of complex feature transformations and model architectures, reducing manual trial-and-error.",
+              "Technical impact: It combines evolutionary search with gradient descent, allowing optimization of non-differentiable objectives and interpretable components, which is a significant shift from standard backpropagation-only approaches."
+            ],
+            "whatToTry": {
+              "description": "Evaluate EvoForest for your structured prediction tasks where traditional deep learning struggles (e.g., small datasets, non-differentiable metrics, need for interpretability). Start by testing on a problem like feature engineering for tabular data or designing custom activation functions.",
+              "note": "The paper is a research preprint; expect early-stage implementation. Monitor for code release or try replicating the core idea using evolutionary libraries like DEAP or PyTorch's autograd."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776935353624-dth53a",
+                "title": "EvoForest: A Novel Machine-Learning Paradigm via Open-Ended Evolution of Computational Graphs",
+                "url": "https://arxiv.org/abs/2604.19761",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-dth53a-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776935353624-dth53a-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-04-22",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-04-22-afternoon",
@@ -439,7 +872,7 @@
   },
   {
     "date": "2026-04-21",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Apr 21",
     "briefings": [
       {
         "id": "briefing-2026-04-21-morning",
@@ -3806,434 +4239,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "2026-04-17T11:22:05Z"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-04-16",
-    "displayDate": "Thursday, Apr 16",
-    "briefings": [
-      {
-        "id": "briefing-2026-04-16-evening",
-        "period": "evening",
-        "date": "2026-04-16",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Physical Intelligence's π0.7: Robot Brain Learns Unseen Tasks, OpenAI's Codex gets major agentic upgrade, targets desktop control, Musk v. Altman Trial Threatens OpenAI's Structure.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1776373744452-rugtdo",
-            "title": "Physical Intelligence's π0.7: Robot Brain Learns Unseen Tasks",
-            "tldr": "Robotics startup Physical Intelligence released π0.7, a model that can figure out tasks it wasn't explicitly trained on, representing progress toward general-purpose robot intelligence.",
-            "whyItMatters": [
-              "Shows progress toward general-purpose robotics that could transform manufacturing, logistics, and service industries",
-              "Demonstrates transfer learning capabilities in robotics, reducing need for task-specific training data"
-            ],
-            "whatToTry": {
-              "description": "Explore how transfer learning and foundation models could reduce training requirements for your AI product's specific use cases.",
-              "note": "While still early-stage, this signals a shift toward more adaptable AI systems that require less specialized training"
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-rugtdo",
-                "title": "Physical Intelligence, a hot robotics startup, says its new robot brain can figure out tasks it was never taught",
-                "url": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rugtdo-0",
-                "label": "robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rugtdo-1",
-                "label": "foundation models",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rugtdo-2",
-                "label": "Physical Intelligence",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 20:26:44 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776373744452-b8uw3z",
-            "title": "OpenAI's Codex gets major agentic upgrade, targets desktop control",
-            "tldr": "OpenAI significantly enhanced its Codex coding tool with new agentic capabilities, directly competing with Anthropic's Claude Code and expanding into desktop automation.",
-            "whyItMatters": [
-              "Business impact: Intensifies competition in the AI coding assistant space, potentially forcing founders to reevaluate their toolchain choices between OpenAI and Anthropic offerings.",
-              "Technical impact: Agentic capabilities mean Codex can now execute more complex, multi-step coding tasks autonomously, moving beyond simple code completion to workflow automation."
-            ],
-            "whatToTry": {
-              "description": "Test the new Codex capabilities against your current coding workflow - specifically try giving it multi-step refactoring tasks or asking it to automate repetitive desktop coding operations you currently do manually.",
-              "note": "Be cautious with granting desktop permissions - test in a sandboxed environment first to understand the security implications."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-b8uw3z",
-                "title": "OpenAI takes aim at Anthropic with beefed-up Codex that gives it more power over your desktop",
-                "url": "https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-b8uw3z-0",
-                "label": "Codex",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-b8uw3z-1",
-                "label": "AI Coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-b8uw3z-2",
-                "label": "OpenAI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 19:18:41 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1776373744456-kuvz83",
-            "title": "Musk v. Altman Trial Threatens OpenAI's Structure",
-            "tldr": "Elon Musk's lawsuit against OpenAI and Sam Altman will test whether the company has abandoned its non-profit mission for AGI, with major outlets covering the high-stakes legal battle.",
-            "whyItMatters": [
-              "The trial outcome could force structural changes to OpenAI's governance and profit-sharing model, impacting its commercial partnerships and product roadmap.",
-              "A ruling against OpenAI could set a legal precedent for how AI companies balance open-source ideals with commercial viability, affecting the entire industry's approach to AGI development."
-            ],
-            "whatToTry": {
-              "description": "Review your own company's founding documents and public mission statements to ensure alignment with current business practices, especially if you've pivoted from non-profit or open-source roots.",
-              "note": "This case highlights the legal risks of mission drift—consider formalizing any changes to your corporate structure or charter with legal counsel."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776373744456-kuvz83",
-                "title": "The Battle for OpenAI’s Soul",
-                "url": "https://www.wired.com/story/musk-v-altman-trial-openai-xai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776373744456-kuvz83-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776373744456-kuvz83-1",
-                "label": "Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776373744456-kuvz83-2",
-                "label": "Legal",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 18:00:00 +0000"
-          },
-          {
-            "id": "hn-47796469",
-            "title": "Codex Sparks Major Developer Discussion on HackerNews",
-            "tldr": "OpenAI's Codex (powering GitHub Copilot) generated massive discussion on HackerNews with 487 points and 253 comments, indicating strong developer interest and debate about AI-assisted coding.",
-            "whyItMatters": [
-              "Shows where developer attention is focused in AI tools",
-              "Reveals real-world adoption patterns and pain points for AI coding assistants"
-            ],
-            "whatToTry": {
-              "description": "Read the HackerNews discussion to understand developer sentiment about AI coding tools - look for patterns in what developers find valuable versus frustrating.",
-              "note": "Focus on the comments discussing practical implementation issues rather than philosophical debates."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47796469",
-                "title": "Codex for almost everything",
-                "url": "https://openai.com/index/codex-for-almost-everything/",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47796469-0",
-                "label": "Codex",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47796469-1",
-                "label": "Developer Tools",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-04-16T17:12:19Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776373744452-52lksg",
-            "title": "AI Shoppers Convert Better, Driving 393% Traffic Surge",
-            "tldr": "AI-driven traffic to US retail sites surged 393% in Q1, with these visitors converting at higher rates and generating more revenue than non-AI shoppers, per Adobe data.",
-            "whyItMatters": [
-              "Validates ROI for AI commerce features - higher conversion rates directly impact revenue.",
-              "Signals a major shift in consumer behavior where AI tools are becoming primary shopping assistants."
-            ],
-            "whatToTry": {
-              "description": "Audit your product's e-commerce or conversion flows. Identify 1-2 key steps (e.g., product discovery, checkout) where an AI assistant could reduce friction, and prototype a simple integration using an API like OpenAI's Assistants or a dedicated shopping agent SDK.",
-              "note": "Focus on high-intent pages where users are already looking to make a decision; the data suggests AI helps them commit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-52lksg",
-                "title": "AI traffic to US retailers rose 393% in Q1, and it’s boosting their revenue too",
-                "url": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-52lksg-0",
-                "label": "E-commerce",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-52lksg-1",
-                "label": "Consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 16:14:03 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776373744452-u8baw6",
-            "title": "Anthropic CPO Exits Figma Board, Signals AI Design Tool",
-            "tldr": "Anthropic's Chief Product Officer left Figma's board amid reports he will launch a competing AI-native design product, fueling investor fears that major AI labs will vertically integrate into software markets.",
-            "whyItMatters": [
-              "Business impact: This signals a potential new competitive front where foundational AI labs (like Anthropic) build end-user applications, threatening established SaaS incumbents and validating the 'SaaSpocalypse' thesis that has concerned investors.",
-              "Technical impact: An AI-native design tool from Anthropic would likely leverage their Claude models for a fundamentally different, potentially more automated, design workflow compared to current tools."
-            ],
-            "whatToTry": {
-              "description": "If you're building a SaaS product, especially in creative or design-adjacent spaces, immediately map your defensibility against a potential AI-native competitor from a major lab. Focus on deep workflow integration, proprietary data, or community moats that an AI-first tool might lack.",
-              "note": "This is a strategic signal, not a product launch. Use it to pressure-test your own business model's resilience against vertical integration by AI providers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-u8baw6",
-                "title": "Anthropic CPO leaves Figma’s board after reports he will offer a competing product",
-                "url": "https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-u8baw6-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-u8baw6-1",
-                "label": "SaaS Competition",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-u8baw6-2",
-                "label": "Industry Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 18:28:42 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1776373744456-bw5u9n",
-            "title": "UK Launches $675M Sovereign AI Fund",
-            "tldr": "The UK government is launching a £675M fund to invest in domestic AI startups, aiming to reduce foreign tech dependence and boost its own AI ecosystem.",
-            "whyItMatters": [
-              "Creates new funding opportunities for UK-based AI founders outside traditional VC channels",
-              "Signals growing government involvement in AI development and potential for regulatory support"
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI startup in the UK, research eligibility criteria for this fund and consider how to position your company as supporting national AI sovereignty goals.",
-              "note": "Government funding often comes with different requirements and timelines than venture capital - prepare for longer decision cycles."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1776373744456-bw5u9n",
-                "title": "The UK Launches Its $675 Million Sovereign AI Fund",
-                "url": "https://www.wired.com/story/the-uk-launches-its-dollar675-million-sovereign-ai-fund/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1776373744456-bw5u9n-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1776373744456-bw5u9n-1",
-                "label": "Government",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 17:30:00 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1776373744703-dn3g8c",
-            "title": "Google Chrome AI Mode Gets Major Upgrades",
-            "tldr": "Google announced significant upgrades to AI Mode in Chrome, transforming how users interact with the web through integrated AI features.",
-            "whyItMatters": [
-              "Shows Google's push to integrate AI directly into the browser, potentially changing user expectations for web interaction",
-              "Indicates a shift toward AI-native browsing experiences that could impact how products are discovered and used"
-            ],
-            "whatToTry": {
-              "description": "Test the new AI Mode features in Chrome to understand how AI-assisted browsing might affect user behavior and product discovery patterns.",
-              "note": "Consider how your AI product might integrate with or complement browser-based AI features rather than compete directly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1776373744703-dn3g8c",
-                "title": "A new way to explore the web with AI Mode in Chrome",
-                "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1776373744703-dn3g8c-0",
-                "label": "Chrome",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1776373744703-dn3g8c-1",
-                "label": "Browser AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776373744452-aof98m",
-            "title": "InsightFinder raises $15M for AI agent observability",
-            "tldr": "InsightFinder secured $15M in funding to address the critical challenge of monitoring and diagnosing failures across the entire tech stack when AI agents are integrated, not just the models themselves.",
-            "whyItMatters": [
-              "Business impact: Highlights a growing market need and investor confidence in 'AI agent observability' as a crucial layer for production AI applications.",
-              "Technical impact: Signals a shift from isolated model monitoring to holistic system diagnostics, which is essential for reliable agent deployment."
-            ],
-            "whatToTry": {
-              "description": "Audit your own AI product's monitoring. Map out all potential failure points beyond the core model, including API calls, data pipelines, and integration logic, to identify gaps in your observability stack.",
-              "note": "This is especially critical if you're building with agents or complex multi-step AI workflows."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-aof98m",
-                "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
-                "url": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-aof98m-0",
-                "label": "AI Observability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-aof98m-1",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-aof98m-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 16:15:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1776373744452-rqw88v",
-            "title": "Roblox adds agentic AI tools for game dev lifecycle",
-            "tldr": "Roblox's AI assistant now includes agentic capabilities to autonomously plan, build, and test games, representing a shift toward full-cycle AI development tools.",
-            "whyItMatters": [
-              "Shows how major platforms are moving beyond simple code generation to comprehensive AI-powered workflows",
-              "Validates the market for agentic AI in creative industries beyond traditional software development"
-            ],
-            "whatToTry": {
-              "description": "Test if your product's AI features could be extended to handle entire workflows autonomously, not just individual tasks. Look for opportunities to create 'agentic' assistants that can plan and execute multi-step processes.",
-              "note": "Focus on vertical-specific workflows where you have deep domain expertise - generic agents are becoming crowded."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1776373744452-rqw88v",
-                "title": "Roblox’s AI assistant gets new agentic tools to plan, build, and test games",
-                "url": "https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rqw88v-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rqw88v-1",
-                "label": "Game Development",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1776373744452-rqw88v-2",
-                "label": "Roblox",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 16 Apr 2026 16:00:00 +0000"
           }
         ],
         "totalReadTimeMinutes": 21,
