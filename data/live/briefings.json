@@ -429,6 +429,436 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-04-23-afternoon",
+        "period": "afternoon",
+        "date": "2026-04-23",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: LLMs Overuse Tools: New Research Reveals Why & How to Fix It, New Framework for Judging AI-Assisted Work in Learning, ZeroFolio: Pick Best Algorithm Without Domain Knowledge Using Text Embeddings.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1776957819852-p9klio",
+            "title": "LLMs Overuse Tools: New Research Reveals Why & How to Fix It",
+            "tldr": "A new paper reveals that LLMs frequently call external tools even when they already know the answer, due to a 'knowledge epistemic illusion' and reward structures that prioritize correctness over efficiency. The authors propose two fixes: aligning model's perception of its own knowledge (reducing tool calls by 82.8%) and balancing reward signals (cutting unnecessary calls by 60-66%), both without accuracy loss.",
+            "whyItMatters": [
+              "For founders building AI products: This directly impacts cost and latency. If your LLM agent is over-calling tools (e.g., search, APIs), you're burning money and slowing responses. The paper offers concrete, validated methods to reduce tool usage by up to 82% without harming performance.",
+              "For technical teams: The 'knowledge epistemic illusion' insight means you can't trust the model's own judgment on when to use tools. You may need to implement explicit knowledge boundary checks or fine-tune with preference optimization to align its behavior."
+            ],
+            "whatToTry": {
+              "description": "Audit your LLM's tool-calling patterns: log every tool call and check if the model could have answered from its own knowledge. If overuse is high, consider fine-tuning with a reward that penalizes unnecessary tool calls (e.g., add a small cost per call in your RLHF or DPO setup). Alternatively, implement a simple pre-check: before calling a tool, have the model first generate a confidence score for its own answer, and only call the tool if confidence is below a threshold.",
+              "note": "Start with a small sample (e.g., 100 queries) to measure baseline overuse. The paper's DPO-based alignment strategy is a good starting point for fine-tuning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-p9klio",
+                "title": "The Tool-Overuse Illusion: Why Does LLM Prefer External Tools over Internal Knowledge?",
+                "url": "https://arxiv.org/abs/2604.19749",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-p9klio-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-p9klio-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-csgy3r",
+            "title": "New Framework for Judging AI-Assisted Work in Learning",
+            "tldr": "A new arXiv paper proposes 'AI to Learn 2.0', a governance framework that defines how to evaluate AI-assisted outputs in education and research, focusing on human understanding and transferability rather than polished artifacts. It offers a maturity rubric and actionable gates for founders building AI tools for learning-intensive domains.",
+            "whyItMatters": [
+              "Provides a structured way to assess AI-assisted work, which is critical for edtech and professional training startups seeking credibility and compliance.",
+              "Introduces 'artifact residual' vs 'capability residual' concepts that can guide product design for AI tools that support learning without undermining skill development."
+            ],
+            "whatToTry": {
+              "description": "Use the five-part deliverable package and seven-dimension maturity rubric from the paper to audit your AI product's output. Ensure your tool allows users to produce deliverables that are usable, auditable, transferable, and justifiable without the original AI model, especially in learning contexts.",
+              "note": "Focus on the 'capability-evidence ladder' to differentiate your product from black-box AI tools that only produce polished outputs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-csgy3r",
+                "title": "AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains",
+                "url": "https://arxiv.org/abs/2604.19751",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-csgy3r-0",
+                "label": "AI to Learn 2.0",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-csgy3r-1",
+                "label": "Governance Framework",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-csgy3r-2",
+                "label": "EdTech",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-mk4mro",
+            "title": "ZeroFolio: Pick Best Algorithm Without Domain Knowledge Using Text Embeddings",
+            "tldr": "A new method, ZeroFolio, uses pretrained text embeddings to select algorithms for problem instances without any hand-crafted features or domain expertise, outperforming traditional methods in 10 of 11 scenarios. This could simplify AI pipeline optimization for founders.",
+            "whyItMatters": [
+              "Business impact: Reduces need for expensive domain experts to design algorithm selection features, lowering barrier to deploying optimized AI solutions across diverse problem domains.",
+              "Technical impact: Demonstrates that generic text embeddings can capture instance structure, enabling a universal algorithm selection pipeline that works out-of-the-box for SAT, MIP, graph problems, etc."
+            ],
+            "whatToTry": {
+              "description": "If you're building a solver or optimization service, test ZeroFolio's approach by serializing your problem instances as plain text, embedding them with a model like all-MiniLM-L6-v2, and using weighted k-nearest neighbors to select from a portfolio of algorithms. Start with inverse-distance weighting and Manhattan distance as recommended.",
+              "note": "The method works best with text-based instance formats; ensure your instances are serializable to plain text without losing critical structure."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-mk4mro",
+                "title": "Algorithm Selection with Zero Domain Knowledge via Text Embeddings",
+                "url": "https://arxiv.org/abs/2604.19753",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-mk4mro-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-mk4mro-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-mk4mro-2"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-hunjy7",
+            "title": "LLMs + Counterfactual Checks for Explainable AML Triage",
+            "tldr": "A new framework combines RAG, structured LLM outputs, and counterfactual validation to make AML triage auditable and reduce hallucinations, achieving best-in-class performance (PR-AUC 0.75). This is directly applicable to any regulated AI workflow.",
+            "whyItMatters": [
+              "For founders building AI in regulated industries (fintech, compliance), this provides a blueprint to make LLM outputs auditable and defensible, reducing legal risk.",
+              "Technically, the counterfactual check method is a novel way to validate LLM reasoning, which can be adapted to other decision-support systems beyond AML."
+            ],
+            "whatToTry": {
+              "description": "Implement a structured output contract in your LLM pipeline that forces explicit citations and separates supporting vs. contradicting evidence. Then add a counterfactual validation step that tests if minimal input changes produce coherent output changes.",
+              "note": "Start with a small pilot on a non-critical workflow to measure hallucination reduction before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-hunjy7",
+                "title": "Explainable AML Triage with LLMs: Evidence Retrieval and Counterfactual Checks",
+                "url": "https://arxiv.org/abs/2604.19755",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-hunjy7-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-hunjy7-1",
+                "label": "RAG",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-hunjy7-2",
+                "label": "Regulatory Compliance",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-glmqdn",
+            "title": "New Metric Predicts AI Inference Collapse Under Constraint",
+            "tldr": "A new paper introduces the Inference Headroom Ratio (IHR), a dimensionless metric that quantifies how close an AI system is to inference collapse under uncertainty and constraints. It reduces collapse rates from 79.4% to 58.7% and variance by 70.4%, offering a proactive diagnostic for founders building production AI.",
+            "whyItMatters": [
+              "Business impact: Enables founders to proactively monitor and prevent costly inference failures in production AI systems, especially under distributional shift or high constraint loads.",
+              "Technical impact: Provides a system-level complement to standard drift and uncertainty metrics, allowing for active regulation of inference stability before overt failure occurs."
+            ],
+            "whatToTry": {
+              "description": "Implement IHR as a monitoring metric in your AI pipeline by calculating effective inferential capacity (C) and combined uncertainty and constraint load (U+K) from your system's logs. Use the critical threshold IHR* ≈ 1.19 to set alerts for when your system approaches the stability boundary, and consider active regulation strategies (e.g., throttling or fallback) to reduce collapse risk.",
+              "note": "Start with simulation-based validation on your own data before deploying in production, as the paper's results are from controlled experiments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-glmqdn",
+                "title": "Inference Headroom Ratio: A Diagnostic and Control Framework for Inference Stability Under Constraint",
+                "url": "https://arxiv.org/abs/2604.19760",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-glmqdn-0",
+                "label": "Inference Headroom Ratio",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-glmqdn-1",
+                "label": "AI Stability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-glmqdn-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1776957819459-y9zsrq",
+            "title": "AI galaxy hunters add to GPU crunch: new demand source",
+            "tldr": "Astronomers are increasingly using GPUs for AI-driven galaxy discovery, adding a new and significant source of demand to the already strained global GPU supply. This matters because it signals that GPU scarcity will persist across diverse industries, not just AI startups.",
+            "whyItMatters": [
+              "Business impact: Founders building AI products face continued GPU shortages and rising costs as non-traditional sectors (like astronomy) compete for the same hardware, potentially delaying product launches or increasing infrastructure budgets.",
+              "Technical impact: The trend validates that GPUs are becoming a critical resource for scientific computing, which may accelerate development of specialized AI hardware (e.g., ASICs) but also means founders should explore cloud GPU spot instances or multi-cloud strategies to mitigate supply risks."
+            ],
+            "whatToTry": {
+              "description": "Audit your GPU usage and consider reserving capacity with cloud providers (e.g., AWS, GCP, Azure) for the next 6-12 months to lock in pricing. Also evaluate using lower-precision training (e.g., FP8) or model distillation to reduce GPU demand without sacrificing performance.",
+              "note": "Start with a small test to measure impact on model accuracy before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1776957819459-y9zsrq",
+                "title": "AI galaxy hunters are adding to the global GPU crunch",
+                "url": "https://techcrunch.com/2026/04/23/ai-galaxy-hunters-are-adding-to-the-global-gpu-crunch/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819459-y9zsrq-0",
+                "label": "GPU crunch",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819459-y9zsrq-1",
+                "label": "Hardware",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819459-y9zsrq-2",
+                "label": "Infrastructure",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 13:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1776957819459-3y3832",
+            "title": "India's app boom: Global platforms win, AI apps lead growth",
+            "tldr": "India's non-gaming app market is surging, driven by streaming and AI apps, but global platforms capture most revenue as local spending per user remains low. This signals a gap for founders targeting Indian users with AI products.",
+            "whyItMatters": [
+              "Business impact: Founders building AI apps for India must navigate low per-user spending but high volume, favoring freemium or ad-supported models over subscription-heavy approaches.",
+              "Technical impact: AI apps (e.g., chatbots, productivity tools) are key growth drivers, offering a chance to differentiate with localized AI features that global platforms may overlook."
+            ],
+            "whatToTry": {
+              "description": "Consider launching an AI-powered app tailored to Indian users (e.g., vernacular language support, offline-first features) with a freemium model to capture volume, then monetize via ads or microtransactions.",
+              "note": "Focus on high-engagement use cases like education or entertainment where AI can add unique value, but keep costs low to match local spending habits."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1776957819459-3y3832",
+                "title": "India’s app market is booming — but global platforms are capturing most of the gains",
+                "url": "https://techcrunch.com/2026/04/22/indias-app-market-is-booming-but-global-platforms-are-capturing-most-of-the-gains/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819459-3y3832-0",
+                "label": "Industry",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819459-3y3832-1",
+                "label": "Market",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 04:38:45 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-2603t7",
+            "title": "Data Augmentation Boosts Transformer Scoring of Imbalanced Student Explanations",
+            "tldr": "A new study shows that data augmentation strategies, especially GPT-4-generated synthetic data and ALP phrase-level extraction, significantly improve transformer-based (SciBERT) scoring of student scientific explanations, achieving perfect F1 scores on severely imbalanced rubric categories. This is directly actionable for founders building AI assessment tools in education.",
+            "whyItMatters": [
+              "Business impact: Enables reliable automated scoring of complex student reasoning, reducing the need for expensive human grading and opening markets in K-12 and higher ed assessment platforms.",
+              "Technical impact: Provides proven augmentation techniques (GPT-4 synthetic data, ALP) to handle class imbalance in text classification, a common pain point for AI products dealing with rare but critical categories."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI scoring or classification tool with imbalanced data, experiment with GPT-4 to generate synthetic examples of your minority classes, and test ALP (Augmentation using Lexicalized Probabilistic context-free grammar) for phrase-level augmentation. Start with your most imbalanced categories to see if you can achieve similar precision/recall gains.",
+              "note": "Ensure synthetic data quality by validating with human experts to avoid introducing noise or bias."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-2603t7",
+                "title": "Exploring Data Augmentation and Resampling Strategies for Transformer-Based Models to Address Class Imbalance in AI Scoring of Scientific Explanations in NGSS Classroom",
+                "url": "https://arxiv.org/abs/2604.19754",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-2603t7-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-2603t7-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-2603t7-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1776957819852-7poi5d",
+            "title": "ThermoQA Benchmark Reveals LLM Thermodynamic Reasoning Gaps",
+            "tldr": "A new benchmark (ThermoQA) with 293 thermodynamics problems shows frontier LLMs like Claude Opus 4.6 (94.1%) and GPT-5.4 (93.1%) excel, but cross-tier degradation reveals property memorization ≠ reasoning—critical for founders building domain-specific AI tools.",
+            "whyItMatters": [
+              "Business impact: Highlights the need for domain-specific fine-tuning or retrieval-augmented generation (RAG) in engineering AI products, as property lookup alone fails for complex reasoning tasks like cycle analysis.",
+              "Technical impact: The benchmark's open-source dataset and code enable founders to test and improve their models' thermodynamic reasoning, especially for applications in energy, HVAC, or chemical engineering."
+            ],
+            "whatToTry": {
+              "description": "Download the ThermoQA dataset from Hugging Face and use it to evaluate your model's reasoning consistency across tiers. Focus on supercritical water and combined-cycle gas turbine problems to identify weaknesses in your system's multi-step reasoning.",
+              "note": "Consider integrating CoolProp for ground-truth validation if building engineering AI tools."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1776957819852-7poi5d",
+                "title": "ThermoQA: A Three-Tier Benchmark for Evaluating Thermodynamic Reasoning in Large Language Models",
+                "url": "https://arxiv.org/abs/2604.19758",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-7poi5d-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-7poi5d-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1776957819852-7poi5d-2",
+                "label": "reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1776957819458-5x1jq2",
+            "title": "Delve's security failures hit another AI startup customer",
+            "tldr": "Context AI, an AI agent training startup, suffered a security incident after using Delve for compliance certifications, highlighting risks of relying on troubled security vendors for AI product development.",
+            "whyItMatters": [
+              "For founders building AI products, this underscores the critical need to vet security vendors thoroughly, as a compromised compliance partner can lead to data breaches that damage customer trust and product viability.",
+              "Technically, it emphasizes that security certifications from unstable startups may not be reliable, requiring founders to implement independent security audits and monitoring for their AI systems."
+            ],
+            "whatToTry": {
+              "description": "Audit your current security and compliance vendors for financial stability and track record; consider diversifying with established providers or in-house security checks to avoid single points of failure.",
+              "note": "Start with a quick review of vendor health using public financial reports or recent news, and set up automated alerts for any vendor incidents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1776957819458-5x1jq2",
+                "title": "Another customer of troubled startup Delve suffered a big security incident",
+                "url": "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819458-5x1jq2-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819458-5x1jq2-1",
+                "label": "AI Agent Training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1776957819458-5x1jq2-2",
+                "label": "Compliance",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 23 Apr 2026 14:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
