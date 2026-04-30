@@ -434,6 +434,433 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-04-30-afternoon",
+        "period": "afternoon",
+        "date": "2026-04-30",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: How to Build Reliable AI Agents That Handle Real Money, New benchmark reveals why AI forecasters fail: blind spots & black swans, OMEGA: AI That Generates Novel ML Algorithms Outperforming Scikit-Learn.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1777562749788-kpd8on",
+            "title": "How to Build Reliable AI Agents That Handle Real Money",
+            "tldr": "A 21-day deployment of 3,505 AI agents trading real ETH shows that reliability comes from the operating layer (prompt compilation, policy validation, execution guards) not the base model. Pre-launch testing caught failures like fabricated rules and fee paralysis that benchmarks miss.",
+            "whyItMatters": [
+              "For founders building AI agents that handle real capital, this proves that safety and reliability require a structured operating layer, not just a better model.",
+              "The paper provides concrete failure modes (fabricated rules, fee paralysis, numeric anchoring) and shows how targeted harness changes reduced errors by 30-50%, offering a playbook for productionizing agents."
+            ],
+            "whatToTry": {
+              "description": "Implement an operating layer with typed controls, policy validation, and execution guards for your agent. Use pre-launch testing that simulates adversarial scenarios like fabricated rules or fee paralysis, not just standard benchmarks.",
+              "note": "Start with a simple guard that validates agent actions against a whitelist of allowed operations before execution."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749788-kpd8on",
+                "title": "Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital",
+                "url": "https://arxiv.org/abs/2604.26091",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749788-kpd8on-0",
+                "label": "Agent Reliability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749788-kpd8on-1",
+                "label": "DeFi",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749788-kpd8on-2",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777562749789-n3gvm8",
+            "title": "New benchmark reveals why AI forecasters fail: blind spots & black swans",
+            "tldr": "A new benchmark (BTF-2) with 1,417 questions and a frozen research corpus shows that frontier AI agents' biggest strategic reasoning failures are in assessing human incentives, follow-through, and institutional processes—not just factual accuracy. The best agent outperforms single frontier models by 0.011 Brier score, primarily due to pre-mortem analysis of blind spots and black swan consideration.",
+            "whyItMatters": [
+              "For founders building AI forecasting or decision-support products: this pinpoints the exact reasoning gaps (incentive analysis, follow-through likelihood, institutional modeling) that need to be addressed to improve agent performance beyond current frontier models.",
+              "Technically, the benchmark's ability to detect 0.004 Brier score differences and separate research vs. judgment strengths provides a rigorous evaluation framework for comparing agent architectures and prompting strategies."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI agent for forecasting or strategic analysis, implement a 'pre-mortem' step in your agent's reasoning pipeline: explicitly instruct the model to list its own blind spots, consider low-probability high-impact events (black swans), and analyze the incentives and follow-through likelihood of key human actors before finalizing predictions.",
+              "note": "This is a low-cost prompt engineering change that the research suggests yields significant accuracy gains (0.011 Brier score improvement over single frontier agents)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749789-n3gvm8",
+                "title": "Evaluating Strategic Reasoning in Forecasting Agents",
+                "url": "https://arxiv.org/abs/2604.26106",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-n3gvm8-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-n3gvm8-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-n3gvm8-2",
+                "label": "strategic reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777562749789-3n5r7h",
+            "title": "OMEGA: AI That Generates Novel ML Algorithms Outperforming Scikit-Learn",
+            "tldr": "A new framework, OMEGA, automates ML research by generating novel classifier algorithms from scratch, outperforming scikit-learn baselines across 20 benchmark datasets. This could reduce the need for manual algorithm design and accelerate AI product development.",
+            "whyItMatters": [
+              "Business impact: Enables faster iteration on ML models without deep expertise, potentially lowering costs and time-to-market for AI products.",
+              "Technical impact: Demonstrates a shift from human-designed to AI-generated algorithms, which could lead to more efficient or novel solutions for specific tasks."
+            ],
+            "whatToTry": {
+              "description": "Install the omega-models Python package (pip install omega-models) and test the generated algorithms on your own dataset to see if they outperform your current scikit-learn baselines.",
+              "note": "Start with a small, non-critical dataset to evaluate performance before integrating into production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749789-3n5r7h",
+                "title": "OMEGA: Optimizing Machine Learning by Evaluating Generated Algorithms",
+                "url": "https://arxiv.org/abs/2604.26211",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-3n5r7h-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-3n5r7h-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-3n5r7h-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777562749789-rcdbup",
+            "title": "Auto-Relational Reasoning: AI achieves 98% on IQ tests without prior knowledge",
+            "tldr": "A new theoretical framework integrates automated relational reasoning with neural networks, achieving a 98.03% solving rate on IQ problems (top 1% human performance). This suggests a path beyond scaling limits for reasoning in AI products.",
+            "whyItMatters": [
+              "Business impact: Enables AI systems to solve novel reasoning tasks with zero-shot or few-shot learning, reducing need for massive datasets and fine-tuning.",
+              "Technical impact: Provides a blueprint for combining symbolic reasoning with neural networks, potentially overcoming diminishing returns from scaling large models."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your product's reasoning-heavy tasks (e.g., logic puzzles, planning, or complex queries) and test if this framework's object-relation approach can be adapted via small-scale prototypes using relational graph networks or neuro-symbolic libraries.",
+              "note": "Start with simple benchmarks like bAbI or IQ-style tests to gauge feasibility before full integration."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749789-rcdbup",
+                "title": "Auto-Relational Reasoning",
+                "url": "https://arxiv.org/abs/2604.26507",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-rcdbup-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-rcdbup-1",
+                "label": "reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-rcdbup-2",
+                "label": "neuro-symbolic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777562749789-37wqnf",
+            "title": "Grounding ≠ Reasoning: New Paper Shows You Need Both for AI",
+            "tldr": "A new paper challenges the assumption that compositional reasoning emerges from symbol grounding in neuro-symbolic AI. It introduces iLTN, a differentiable architecture, and proves that reasoning requires an explicit learning objective—grounding alone fails on out-of-distribution tasks.",
+            "whyItMatters": [
+              "For founders building AI systems that need robust reasoning (e.g., in robotics, legal, or scientific domains), this means you cannot rely solely on grounding or embedding-based approaches—you must explicitly train for reasoning to handle novel entities and complex rules.",
+              "Technically, the iLTN architecture offers a practical blueprint for differentiable multi-step deduction, enabling end-to-end training for both perception and logic, which could improve zero-shot generalization in your products."
+            ],
+            "whatToTry": {
+              "description": "If you're building a neuro-symbolic system, audit your training pipeline: ensure you have explicit reasoning objectives (e.g., multi-step deduction losses) alongside grounding losses. Consider prototyping with iLTN's approach to test if it boosts your model's out-of-distribution performance.",
+              "note": "Start with small-scale experiments on synthetic data to isolate reasoning failures before scaling to real-world tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749789-37wqnf",
+                "title": "Grounding vs. Compositionality: On the Non-Complementarity of Reasoning in Neuro-Symbolic Systems",
+                "url": "https://arxiv.org/abs/2604.26521",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-37wqnf-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-37wqnf-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1777562749698-k3e4cl",
+            "title": "SoftBank's $100B Robotics Data Center Builder IPO",
+            "tldr": "SoftBank is launching a robotics company focused on building data centers, with plans for a $100B IPO. This signals a major shift in infrastructure construction, where AI and robots are used to build the very infrastructure needed for AI, creating a self-reinforcing cycle that could reshape data center economics.",
+            "whyItMatters": [
+              "Business impact: Founders should anticipate a potential new wave of faster, cheaper data center buildouts, reducing infrastructure bottlenecks for AI products. The $100B IPO target indicates massive capital inflow into this space, which could lower costs for AI startups.",
+              "Technical impact: The use of robotics in construction could accelerate deployment timelines for AI infrastructure, enabling quicker scaling of AI models and services. This may also drive innovation in robotics hardware and software, creating new integration opportunities."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's infrastructure dependency and explore partnerships with robotics-focused construction firms or data center operators. Consider how faster build times could impact your scaling roadmap and cost projections.",
+              "note": "Monitor SoftBank's progress closely, as their scale could set new industry standards for data center construction speed and cost."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1777562749698-k3e4cl",
+                "title": "SoftBank is creating a robotics company that builds data centers — and already eyeing a $100B IPO",
+                "url": "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-k3e4cl-0",
+                "label": "SoftBank",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-k3e4cl-1",
+                "label": "Robotics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-k3e4cl-2",
+                "label": "Data Centers",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-k3e4cl-3",
+                "label": "Infrastructure",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 03:58:22 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1777562749698-ie4rex",
+            "title": "X Rebuilds Ad Platform with AI to Boost Revenue",
+            "tldr": "X (formerly Twitter) has launched a fully rebuilt ads platform powered by AI, aiming to reverse revenue declines. This signals a major shift in social media advertising that could impact how AI startups target users and monetize.",
+            "whyItMatters": [
+              "Business impact: AI-powered ad platforms can optimize targeting and bidding, potentially lowering customer acquisition costs for AI startups advertising on X.",
+              "Technical impact: The rebuild suggests new APIs or integrations may emerge, offering AI founders opportunities to leverage X's ad data for model training or audience insights."
+            ],
+            "whatToTry": {
+              "description": "If you advertise on X, audit your current campaigns and test the new AI-driven ad platform for improved targeting and ROI. For non-advertisers, monitor X's developer docs for any new ad-related APIs that could enable programmatic ad buying or data access.",
+              "note": "Start with a small budget to evaluate performance before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1777562749698-ie4rex",
+                "title": "X announces a rebuilt ad platform powered by AI",
+                "url": "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-ie4rex-0",
+                "label": "X",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-ie4rex-1",
+                "label": "AI advertising",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 15:14:55 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1777562749698-pv1vzw",
+            "title": "Meta's Business AI Hits 10M Weekly Conversations",
+            "tldr": "Meta reports its business AI now handles 10 million conversations per week, with over 8 billion advertisers using its gen AI tools. This signals massive adoption of AI for customer engagement at scale.",
+            "whyItMatters": [
+              "Demonstrates that large-scale AI customer service is viable and being adopted by mainstream businesses, validating the market for AI-powered sales and support tools.",
+              "Indicates that Meta is investing heavily in AI for business, potentially creating new API or platform opportunities for founders building on Meta's ecosystem."
+            ],
+            "whatToTry": {
+              "description": "Evaluate integrating Meta's business AI tools (e.g., WhatsApp Business API with AI) into your product to automate customer conversations, especially if you target small to medium businesses. Start with a pilot to measure conversion lift.",
+              "note": "Focus on high-volume, low-complexity interactions first to maximize ROI and avoid overpromising on AI capabilities."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1777562749698-pv1vzw",
+                "title": "Meta says its business AI now facilitates 10 million conversations a week",
+                "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-pv1vzw-0",
+                "label": "Meta",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-pv1vzw-1",
+                "label": "AI adoption",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1777562749698-pv1vzw-2",
+                "label": "customer engagement",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 12:08:45 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1777562749691-ly2kxo",
+            "title": "AI Porn Lawsuit: Profiting from Non-Consensual Deepfakes",
+            "tldr": "A lawsuit in Arizona alleges that a group of men used women's photos to create AI-generated porn influencers and sold courses on how to replicate the process. This highlights escalating legal and ethical risks for founders building generative AI products, especially those involving human likenesses.",
+            "whyItMatters": [
+              "Business impact: Founders face increased liability and regulatory scrutiny when building AI tools that can generate or manipulate human images, especially in adult content. This case could set precedent for consent and monetization of AI-generated likenesses.",
+              "Technical impact: The case underscores the need for robust content moderation, provenance tracking, and consent verification systems in AI platforms to avoid facilitating non-consensual deepfakes."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product for potential misuse in generating non-consensual deepfakes or adult content. Implement clear terms of service, content filters, and user verification to prevent such abuse. Consider adding a reporting mechanism for victims.",
+              "note": "Consult with legal counsel to ensure compliance with emerging deepfake laws, especially in jurisdictions like Arizona."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1777562749691-ly2kxo",
+                "title": "These Men Allegedly Profit Off Teaching People How to Make AI Porn",
+                "url": "https://www.wired.com/story/ai-porn-lawsuit-arizona/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1777562749691-ly2kxo-0",
+                "label": "Topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1777562749691-ly2kxo-1",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 10:30:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1777562749789-sxulzn",
+            "title": "New Framework for Truthful, Evidence-Grounded AI Personas from User Logs",
+            "tldr": "A new hierarchical method induces multiple, truthful personas from noisy user behavioral logs by optimizing for coherence, evidence alignment, and truthfulness using groupwise DPO. This directly improves user modeling for AI products that personalize interactions.",
+            "whyItMatters": [
+              "Enables AI products to build more accurate and trustworthy user models from sparse, interleaved behavioral data, reducing hallucination and improving personalization.",
+              "Provides a principled optimization approach (groupwise DPO) that can be adapted to other user modeling tasks, offering a technical edge over existing LLM-based persona generation."
+            ],
+            "whatToTry": {
+              "description": "If you're building a personalization or recommendation system, experiment with clustering user action logs into intent memories before prompting an LLM to generate personas. Use the paper's quality metrics (cohesion, evidence alignment, truthfulness) to evaluate your own persona generation pipeline.",
+              "note": "Start with small-scale logs to validate the clustering step; the groupwise DPO training requires a curated dataset of persona-quality comparisons."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777562749789-sxulzn",
+                "title": "Hierarchical Multi-Persona Induction from User Behavioral Logs: Learning Evidence-Grounded and Truthful Personas",
+                "url": "https://arxiv.org/abs/2604.26120",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-sxulzn-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777562749789-sxulzn-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 30 Apr 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
