@@ -1,7 +1,440 @@
 [
   {
-    "date": "2026-05-04",
+    "date": "2026-05-05",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-05-05-morning",
+        "period": "morning",
+        "date": "2026-05-05",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Token Arena: New Benchmark Reveals Huge Variability in AI Inference Endpoints, TADI: Agentic AI for Drilling Ops – Tool-Augmented Intelligence Over Heterogeneous Data, Tool-Use Tax: When LLM Agents Are Worse Off with Tools.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1777973095956-laghgg",
+            "title": "Token Arena: New Benchmark Reveals Huge Variability in AI Inference Endpoints",
+            "tldr": "TokenArena benchmarks 78 AI endpoints across 12 model families, showing that the same model can vary by up to 12.5 accuracy points and 6.2x energy efficiency depending on provider, quantization, and serving stack. This is critical for founders optimizing cost and performance.",
+            "whyItMatters": [
+              "Business impact: Endpoint selection directly affects cost per correct answer and user experience, with workload-aware pricing reordering leaderboards significantly.",
+              "Technical impact: The benchmark introduces a unified metric (joules per correct answer) that combines energy efficiency with quality, enabling more sustainable AI deployment decisions."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI inference endpoints using TokenArena's methodology: test the same model across different providers (e.g., OpenAI, Anthropic, open-source via Together AI) with your specific workload ratio (e.g., chat vs. RAG) to find the cheapest and most energy-efficient option that meets your quality threshold.",
+              "note": "Focus on the 'dollars per correct answer' metric for cost-sensitive applications, and 'endpoint fidelity' for tasks requiring high output consistency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-laghgg",
+                "title": "Token Arena: A Continuous Benchmark Unifying Energy and Cognition in AI Inference",
+                "url": "https://arxiv.org/abs/2605.00300",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-laghgg-0",
+                "label": "Topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-laghgg-1",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-upch65",
+            "title": "TADI: Agentic AI for Drilling Ops – Tool-Augmented Intelligence Over Heterogeneous Data",
+            "tldr": "TADI is an open-source agentic AI system that orchestrates 12 domain-specialized tools via LLM function calling to analyze drilling data from the Equinor Volve Field. It achieves zero-error parsing of 1,759 daily reports and cross-references structured and unstructured data, demonstrating that tool design, not model scale, drives performance—a blueprint for building reliable AI agents in industrial settings.",
+            "whyItMatters": [
+              "Business impact: Provides a reproducible framework for automating complex operational analytics in capital-intensive industries like oil & gas, reducing manual data wrangling and enabling faster, evidence-based decisions.",
+              "Technical impact: Introduces the Evidence Grounding Score (EGS) to measure agent reliability and shows that domain-specialized tool design outperforms scaling models—key insight for founders building production AI agents."
+            ],
+            "whatToTry": {
+              "description": "Adopt TADI's dual-store architecture (DuckDB for structured queries + ChromaDB for semantic search) and tool orchestration pattern for your own heterogeneous data challenges. Start by mapping your domain's key data sources and defining 5-10 specialized tools that each handle a specific query or transformation, then use an LLM to route and combine them iteratively.",
+              "note": "The system is framework-free and reproducible with the public Volve dataset—clone the repo and adapt the tool definitions to your industry (e.g., healthcare, finance, logistics)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-upch65",
+                "title": "TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data",
+                "url": "https://arxiv.org/abs/2605.00060",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-upch65-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-upch65-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-upch65-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-edx7jk",
+            "title": "Tool-Use Tax: When LLM Agents Are Worse Off with Tools",
+            "tldr": "New research reveals that tool-augmented reasoning can actually degrade LLM performance under semantic noise, introducing a 'tool-use tax' that often outweighs benefits. The paper proposes G-STEP, a lightweight gate to mitigate protocol errors, but concludes that stronger intrinsic reasoning is key.",
+            "whyItMatters": [
+              "For founders building AI agents, this challenges the assumption that adding tools always improves reliability—semantic distractors can make tool use counterproductive, impacting product design and cost.",
+              "Technically, the tool-calling protocol itself introduces overhead and errors, meaning optimizing tool integration requires careful evaluation of noise levels and model capabilities, not just adding more tools."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent's tool calls for semantic distractors by running A/B tests with and without tools on noisy inputs. If performance drops, implement a gating mechanism (like G-STEP) to conditionally disable tools when noise is high, or invest in fine-tuning the model's reasoning before expanding tool sets.",
+              "note": "Start with simple heuristics to detect distractors (e.g., input perplexity) before building complex gates."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-edx7jk",
+                "title": "Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents",
+                "url": "https://arxiv.org/abs/2605.00136",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-edx7jk-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-edx7jk-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-asswqm",
+            "title": "TUR-DPO: Better LLM alignment by rewarding reasoning, not just answers",
+            "tldr": "A new paper proposes TUR-DPO, which improves Direct Preference Optimization by incorporating reasoning topology and uncertainty signals, leading to better alignment and faithfulness without the complexity of RLHF. This is directly actionable for founders building LLM-based products that require reliable reasoning.",
+            "whyItMatters": [
+              "Business impact: Improves LLM reliability and faithfulness in reasoning tasks, reducing risk of brittle or hallucinated outputs in production systems.",
+              "Technical impact: Offers a drop-in replacement for DPO that is RL-free, stable, and easy to implement, making advanced alignment accessible without PPO complexity."
+            ],
+            "whatToTry": {
+              "description": "If you're using DPO for alignment, experiment with TUR-DPO by adding lightweight reasoning topologies (e.g., chain-of-thought traces) and uncertainty weighting to your preference data. This can boost win-rates and calibration without changing your training pipeline significantly.",
+              "note": "Start with small-scale experiments on 7-8B models to validate gains before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-asswqm",
+                "title": "TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization",
+                "url": "https://arxiv.org/abs/2605.00224",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-1",
+                "label": "alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-2",
+                "label": "DPO",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-h4bwru",
+            "title": "ARMOR 2025: Military Safety Benchmark Exposes LLM Gaps",
+            "tldr": "A new benchmark, ARMOR 2025, evaluates LLMs on military legal and ethical doctrines (Law of War, Rules of Engagement). Testing 21 commercial models reveals critical safety alignment gaps for defense applications, highlighting a need for domain-specific safety evaluations.",
+            "whyItMatters": [
+              "For founders building AI for defense or government contracts, this benchmark provides a structured way to test and improve model compliance with military legal standards, potentially unlocking new market opportunities.",
+              "The taxonomy based on the OODA decision-making framework offers a reusable methodology for evaluating AI in high-stakes, regulated environments beyond civilian contexts."
+            ],
+            "whatToTry": {
+              "description": "If your startup targets defense or government clients, use the ARMOR 2025 taxonomy (12 categories, 519 prompts) to audit your LLM's compliance with military doctrines. Start by testing refusal rates on scenarios involving Rules of Engagement to identify immediate gaps.",
+              "note": "The benchmark is open-source; consider integrating it into your evaluation pipeline before pitching to defense agencies."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-h4bwru",
+                "title": "ARMOR 2025: A Military-Aligned Benchmark for Evaluating Large Language Model Safety Beyond Civilian Contexts",
+                "url": "https://arxiv.org/abs/2605.00245",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-1",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-2",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-z35kjr",
+            "title": "New Framework Predicts Emergent Collective AI Agents",
+            "tldr": "A new paper from ArXiv introduces a causal framework to detect when groups of AI agents form a unified collective agent with distinct goals, using causal games and abstraction. This is critical for safety in multi-agent systems, offering a way to predict and control emergent behavior.",
+            "whyItMatters": [
+              "For founders building multi-agent AI systems, this provides a theoretical tool to identify when agent groups might develop unforeseen collective goals, enabling proactive safety measures.",
+              "The framework's quantitative assessment of collective agency can be applied to voting mechanisms and actor-critic models, directly impacting how you design agent coordination and incentive structures."
+            ],
+            "whatToTry": {
+              "description": "Review your multi-agent system's architecture for potential emergent collectives: use causal abstraction to model agent interactions and test if a high-level collective agent predicts behavior better than individual agents. Start with a small-scale simulation of your agent interactions to identify any unintended collective goals.",
+              "note": "This is theoretical; practical implementation may require adapting the causal game formalism to your specific system."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-z35kjr",
+                "title": "Causal Foundations of Collective Agency",
+                "url": "https://arxiv.org/abs/2605.00248",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-z35kjr-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-z35kjr-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-9ls7aa",
+            "title": "AgentFloor: Small models match GPT-5 on routine agent tasks",
+            "tldr": "A new benchmark shows small open-weight models (0.27B-32B) match GPT-5 on short-horizon tool use and instruction following, but lag on long-horizon planning. This is a practical routing guide for founders: use cheap models for most agent calls, save frontier models for complex multi-step tasks.",
+            "whyItMatters": [
+              "Business impact: Dramatically reduce inference costs by routing routine agent calls to small models without sacrificing performance on the majority of production workloads.",
+              "Technical impact: Provides a clear capability ladder to benchmark and optimize model routing in agentic systems, enabling more efficient architectures."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent pipeline to identify short, structured tool calls (e.g., API lookups, simple transformations) and route them to a small open-weight model like Llama 3.2 8B or Qwen 2.5 7B. Reserve frontier models only for long-horizon planning tasks with many steps.",
+              "note": "Start with a 30-task subset from AgentFloor to validate routing thresholds for your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-9ls7aa",
+                "title": "AgentFloor: How Far Up the tool use Ladder Can Small Open-Weight Models Go?",
+                "url": "https://arxiv.org/abs/2605.00334",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48019219",
+            "title": "Chrome secretly downloads 4GB AI model—privacy & dev impact",
+            "tldr": "Google Chrome is silently downloading a 4GB AI model (for on-device text generation) without user consent, sparking privacy backlash on HackerNews. This matters for founders building AI products because it signals a shift toward embedded local AI in browsers, raising user trust and data control issues.",
+            "whyItMatters": [
+              "Business impact: Users may distrust AI features that auto-download large models, affecting adoption of browser-based AI tools. Founders must prioritize consent and transparency to avoid backlash.",
+              "Technical impact: On-device AI in Chrome enables offline inference, reducing latency and server costs, but the 4GB footprint strains user devices and bandwidth, limiting scalability for resource-constrained users."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's installation process: ensure users explicitly opt-in before downloading large models (e.g., >100MB). Provide a clear UI explaining model size, purpose, and data usage to build trust.",
+              "note": "Consider offering a lightweight alternative (e.g., smaller distilled model) for users with limited storage or bandwidth."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48019219",
+                "title": "Google Chrome silently installs a 4 GB AI model on your device without consent",
+                "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+                "domain": "thatprivacyguy.com",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48019219-0",
+                "label": "Google Chrome",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48019219-1",
+                "label": "Privacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48019219-2",
+                "label": "On-device AI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-05-05T07:34:55Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-7umors",
+            "title": "AgentReputation: Decentralized Trust for AI Agents",
+            "tldr": "A new framework tackles the challenge of building trustworthy reputation systems for decentralized AI agent marketplaces, addressing issues like strategic gaming, context-dependent competence, and varying verification rigor. This is critical as multi-agent systems for coding and security tasks proliferate.",
+            "whyItMatters": [
+              "Enables founders to build more reliable and trustworthy multi-agent systems by providing a structured way to assess and verify agent performance across different tasks and contexts.",
+              "Reduces risk of deploying agents in production by offering a decision engine for resource allocation and access control based on reputation, which is essential for security-sensitive applications."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agent evaluation pipeline against the three failure modes identified: strategic optimization, context transfer, and verification rigor. Consider implementing context-conditioned reputation cards to track agent performance separately for different task types (e.g., debugging vs. security auditing).",
+              "note": "Start with a simple reputation metadata schema for your agents before building the full three-layer framework."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-7umors",
+                "title": "AgentReputation: A Decentralized Agentic AI Reputation Framework",
+                "url": "https://arxiv.org/abs/2605.00073",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-7umors-0",
+                "label": "AgentReputation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-7umors-1",
+                "label": "Reputation Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-7umors-2",
+                "label": "Decentralized AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1777973095956-81au8u",
+            "title": "LOCA: Local Causal Explanations for LLM Jailbreak Success",
+            "tldr": "A new method, LOCA, identifies minimal, interpretable changes in LLM intermediate representations that causally explain why specific jailbreak prompts succeed, moving beyond global explanations to offer localized insights for model safety.",
+            "whyItMatters": [
+              "Provides actionable insights for AI founders to debug and harden their models against targeted jailbreak attacks by understanding causal mechanisms per attack type.",
+              "Enables more precise safety interventions by identifying specific representation changes that trigger refusal, reducing false positives and improving model robustness."
+            ],
+            "whatToTry": {
+              "description": "Integrate LOCA into your model evaluation pipeline to analyze jailbreak attempts on your fine-tuned or custom LLMs. Use its local explanations to identify which intermediate representations are most vulnerable for specific harmful request categories (e.g., violence vs. cyberattack) and adjust safety training data or refusal mechanisms accordingly.",
+              "note": "Requires access to model internals; best suited for open-weight models like Gemma or Llama."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1777973095956-81au8u",
+                "title": "Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models",
+                "url": "https://arxiv.org/abs/2605.00123",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-1",
+                "label": "safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-04",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-04-morning",
@@ -706,7 +1139,7 @@
   },
   {
     "date": "2026-05-03",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, May 3",
     "briefings": [
       {
         "id": "briefing-2026-05-03-evening",
@@ -4628,1308 +5061,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 29 Apr 2026 20:59:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-04-28",
-    "displayDate": "Tuesday, Apr 28",
-    "briefings": [
-      {
-        "id": "briefing-2026-04-28-morning",
-        "period": "morning",
-        "date": "2026-04-28",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Bloomberg Terminal Gets AI Chatbot Makeover for Traders, PExA: Parallel Exploration Agent Boosts Text-to-SQL Accuracy, Power Law Data Beats Uniform: Better for Reasoning Models.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1777369107683-mlwqdz",
-            "title": "Bloomberg Terminal Gets AI Chatbot Makeover for Traders",
-            "tldr": "Bloomberg is integrating a chatbot-style AI into its Terminal, aiming to streamline data queries and analysis for traders. This signals a major shift in how financial professionals interact with data, potentially setting a new standard for AI in high-stakes enterprise tools.",
-            "whyItMatters": [
-              "For founders building AI products for finance: Bloomberg's move validates the demand for conversational AI in complex data environments, creating both a benchmark and a competitive landscape.",
-              "Technically, it shows how legacy systems can be augmented with LLMs without full replacement, offering a blueprint for integrating AI into existing enterprise workflows."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own product's data interaction model. If you serve finance or data-heavy users, prototype a natural language interface for querying your datasets—start with a simple chatbot that answers common questions, then iterate based on user feedback.",
-              "note": "Focus on accuracy and latency; financial users will not tolerate errors or slow responses."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777369107683-mlwqdz",
-                "title": "The Bloomberg Terminal Is Getting an AI Makeover, Like It or Not",
-                "url": "https://www.wired.com/story/the-bloomberg-terminal-is-getting-an-ai-makeover-like-it-or-not/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777369107683-mlwqdz-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777369107683-mlwqdz-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 08:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-cfn0sg",
-            "title": "PExA: Parallel Exploration Agent Boosts Text-to-SQL Accuracy",
-            "tldr": "PExA is a new framework that treats text-to-SQL generation like software testing, using parallel execution of atomic SQL test cases to achieve state-of-the-art 70.2% accuracy on Spider 2.0 without sacrificing latency. This matters because it offers a practical way to improve complex SQL generation for AI products.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable and faster natural language to SQL conversion, reducing errors in data querying tools and analytics products.",
-              "Technical impact: Introduces a novel parallel test coverage approach that balances performance and latency, potentially applicable to other code generation tasks."
-            ],
-            "whatToTry": {
-              "description": "For founders building AI-powered data query tools, consider implementing a parallel test case generation step in your text-to-SQL pipeline. Start by decomposing complex queries into simpler atomic SQLs, execute them in parallel to validate coverage, then generate the final SQL only after sufficient test case coverage is achieved.",
-              "note": "This approach may increase initial setup complexity but can significantly boost accuracy for complex queries without adding latency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-cfn0sg",
-                "title": "PExA: Parallel Exploration Agent for Complex Text-to-SQL",
-                "url": "https://arxiv.org/abs/2604.22934",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-cfn0sg-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-cfn0sg-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-cfn0sg-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-4oisvg",
-            "title": "Power Law Data Beats Uniform: Better for Reasoning Models",
-            "tldr": "New research shows training on natural power-law data distributions (where most skills are rare) consistently outperforms uniform distributions for compositional reasoning tasks like state tracking and multi-step arithmetic. This challenges the common intuition to rebalance data and reveals that power-law sampling creates a beneficial asymmetry that helps models learn rare skills more efficiently.",
-            "whyItMatters": [
-              "For founders building reasoning-heavy AI products (e.g., agents, math tutors, code assistants), this suggests that curating training data to mimic natural frequency distributions could improve model performance on complex tasks without requiring more data.",
-              "The theoretical proof that power-law distributions require less training data for compositional reasoning has direct implications for reducing compute costs and improving data efficiency in model development."
-            ],
-            "whatToTry": {
-              "description": "Audit your training data distribution for reasoning tasks. Instead of oversampling rare examples to create a uniform distribution, preserve or even amplify the natural power-law skew. For fine-tuning, prioritize high-frequency skill compositions first, then layer in rare skills—this mirrors the paper's finding that common skills act as stepping stones.",
-              "note": "Start with a small-scale experiment on a specific reasoning task (e.g., multi-step arithmetic) to validate the effect before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-4oisvg",
-                "title": "The Power of Power Law: Asymmetry Enables Compositional Reasoning",
-                "url": "https://arxiv.org/abs/2604.22951",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4oisvg-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4oisvg-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-4ckmgd",
-            "title": "FormalScience: Autoformalizing Physics with Lean4 via Human-in-the-Loop Agents",
-            "tldr": "A new agentic pipeline, FormalScience, enables domain experts to autoformalize informal scientific reasoning (e.g., physics problems) into Lean4 proofs with perfect validity, creating the FormalPhysics dataset of 200 problems. This reduces the barrier for founders building AI verification tools for scientific content.",
-            "whyItMatters": [
-              "Business impact: Opens opportunities for AI-powered formal verification services in scientific publishing, education, and R&D, reducing manual proof-checking costs.",
-              "Technical impact: Demonstrates a scalable human-in-the-loop approach that overcomes LLM limitations in domain-specific formalization, with systematic characterization of semantic drift."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating FormalScience's agentic pipeline into your product to autoformalize user-generated scientific content (e.g., physics homework, research drafts) into Lean4 proofs, enabling automated verification and feedback loops.",
-              "note": "Start with the FormalPhysics dataset to benchmark your own LLM-based autoformalization pipeline; consider multi-stage agentic approaches for better semantic alignment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-4ckmgd",
-                "title": "FormalScience: Scalable Human-in-the-Loop Autoformalisation of Science with Agentic Code Generation in Lean",
-                "url": "https://arxiv.org/abs/2604.23002",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ckmgd-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ckmgd-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ckmgd-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-7mhz90",
-            "title": "Decoupled HITL System for Scalable AI Agent Oversight",
-            "tldr": "A new arXiv paper proposes a decoupled Human-in-the-Loop (HITL) architecture that treats oversight as an independent system component, enabling reusable, consistent, and scalable human governance across multi-agent workflows. This addresses a critical gap for founders building agentic systems where safety and compliance are paramount.",
-            "whyItMatters": [
-              "Business impact: Enables scalable deployment of AI agents in regulated industries (e.g., finance, healthcare) by providing a standardized, auditable human oversight layer that can be reused across different workflows, reducing development and compliance costs.",
-              "Technical impact: Introduces a protocol-level HITL framework that separates human interaction from application logic, allowing for consistent governance across multi-agent environments and easier integration with emerging agent communication protocols."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agentic workflows for HITL integration points. Consider adopting a decoupled oversight layer by defining intervention conditions (e.g., high-risk actions), role resolution (who approves), interaction semantics (what feedback is needed), and communication channels (e.g., Slack, email). Prototype this as a standalone service that agents call via a standard API, rather than embedding checks in each agent's code.",
-              "note": "Start with a single high-risk workflow (e.g., financial transactions) to test the decoupled approach before scaling to multi-agent systems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-7mhz90",
-                "title": "A Decoupled Human-in-the-Loop System for Controlled Autonomy in Agentic Workflows",
-                "url": "https://arxiv.org/abs/2604.23049",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-7mhz90-0",
-                "label": "Human-in-the-Loop",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-7mhz90-1",
-                "label": "Agentic Workflows",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-7mhz90-2",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-ppo47b",
-            "title": "Graphs Boost LLM Reasoning: Architecture Matters More Than Model Size",
-            "tldr": "A new study with 3,000+ trials shows that explicit belief graphs can dramatically improve LLM multi-agent reasoning, but only when used to gate actions (not as context). Key finding: Llama 70B overrides correct planner recommendations 90% of the time, while Gemini models show near-zero defiance—critical for building reliable multi-agent systems.",
-            "whyItMatters": [
-              "For founders building multi-agent AI systems: the integration architecture of external knowledge (graphs) is more important than model strength—use ranked shortlists, not prompt context.",
-              "Model selection matters: Llama 70B's 'Planner Defiance' (90% override rate) makes it unreliable for cooperative tasks; Gemini models are far more compliant, affecting product reliability and debugging complexity."
-            ],
-            "whatToTry": {
-              "description": "If you're building multi-agent systems, implement belief graphs as action gating mechanisms (ranked shortlists) rather than adding them as prompt context. Start with shallow graphs (1-2 levels of Theory of Mind) for best cost-benefit, and test your model family for defiance—consider Gemini over Llama 70B for cooperative tasks.",
-              "note": "Be cautious with deep Theory of Mind graphs at larger agent counts—they can hurt performance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-ppo47b",
-                "title": "Don't Make the LLM Read the Graph: Make the Graph Think",
-                "url": "https://arxiv.org/abs/2604.23057",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-ppo47b-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-ppo47b-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-5zyq7q",
-            "title": "Analytica: New LLM Agent Architecture Boosts Reasoning Accuracy 16%",
-            "tldr": "Analytica introduces Soft Propositional Reasoning (SPR) to reduce bias and variance in LLM analysis, achieving 71% accuracy across financial, economic, and political forecasting tasks. This structured, parallel divide-and-conquer approach outperforms baseline models by 16% and offers verifiable, compositional reasoning.",
-            "whyItMatters": [
-              "For founders building AI agents for complex analysis (e.g., financial forecasting, scientific discovery), this architecture provides a practical method to improve reliability and reduce stochastic errors without requiring model fine-tuning.",
-              "The use of tool-equipped grounder agents (including Jupyter Notebook) and robust linear models for synthesis enables scalable, interactive 'what-if' analysis, making it directly applicable to products needing transparent and auditable decision-making."
-            ],
-            "whatToTry": {
-              "description": "Implement a similar divide-and-conquer reasoning pipeline in your LLM agent: decompose complex queries into subpropositions, use specialized tool agents (e.g., code executors, data retrievers) to validate each subproposition, and synthesize results using a robust linear model to average out noise. This can be prototyped with existing LLM APIs and Python libraries.",
-              "note": "Start with a small domain (e.g., stock price prediction or customer churn analysis) to test the framework's impact on accuracy and variance before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-5zyq7q",
-                "title": "Analytica: Soft Propositional Reasoning for Robust and Scalable LLM-Driven Analysis",
-                "url": "https://arxiv.org/abs/2604.23072",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-5zyq7q-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-5zyq7q-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-5zyq7q-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-sh90i2",
-            "title": "AI + Digital Twin for Aircraft Fault Diagnosis: LLM-Generated Reports",
-            "tldr": "A new framework combines multi-fidelity digital twins, FMEA knowledge, and LLMs to diagnose aircraft faults with interpretable reports, addressing scarce real fault data. This approach could inspire similar hybrid AI-physics models for industrial IoT and predictive maintenance products.",
-            "whyItMatters": [
-              "Demonstrates a practical integration of LLMs for interpretable output in safety-critical systems, moving beyond black-box AI.",
-              "Shows how to combine simulation (digital twin) with AI to overcome data scarcity, a common challenge in industrial AI applications."
-            ],
-            "whatToTry": {
-              "description": "If building predictive maintenance or fault diagnosis products, explore hybridizing physics-based simulations (like JSBSim) with LLMs for generating human-readable diagnostic reports. Start by mapping your domain's failure modes (FMEA) to inject synthetic faults into a digital twin, then train a classifier on the resulting multi-fidelity residuals.",
-              "note": "The LLM report generation step requires careful prompt engineering with domain knowledge to avoid hallucinations in critical contexts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-sh90i2",
-                "title": "An Intelligent Fault Diagnosis Method for General Aviation Aircraft Based on Multi-Fidelity Digital Twin and FMEA Knowledge Enhancement",
-                "url": "https://arxiv.org/abs/2604.22777",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-sh90i2-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-sh90i2-1",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-sh90i2-2",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777369107811-4ktw8i",
-            "title": "Systematic LLM Debugging Framework Released",
-            "tldr": "A new arXiv paper proposes a structured, model-agnostic approach for debugging LLMs, unifying evaluation, interpretability, and error analysis to help practitioners diagnose and fix issues without relying on standard benchmarks. This matters because it addresses a critical pain point for AI product builders: the opaque and probabilistic nature of LLMs that makes troubleshooting slow and unreliable.",
-            "whyItMatters": [
-              "Business impact: Reduces time and cost in LLM deployment by providing a repeatable debugging process, enabling faster iteration and more reliable AI products.",
-              "Technical impact: Offers a systematic methodology that works across models and tasks, making it easier to identify root causes of errors and refine prompts, parameters, or training data."
-            ],
-            "whatToTry": {
-              "description": "Adopt the paper's framework: start by defining clear evaluation criteria for your LLM's outputs, then use interpretability tools (like attention visualization or probing) to diagnose errors, and iteratively adjust prompts or fine-tune data based on findings. This can be applied immediately to any LLM-based product.",
-              "note": "Focus on building a feedback loop: log all errors, categorize them (e.g., factual, reasoning, formatting), and use the framework to systematically test fixes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777369107811-4ktw8i",
-                "title": "A Systematic Approach for Large Language Models Debugging",
-                "url": "https://arxiv.org/abs/2604.23027",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ktw8i-0",
-                "label": "LLM Debugging",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ktw8i-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777369107811-4ktw8i-2",
-                "label": "Best Practices",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-hugging-face-blog-1777369108041-yt30tz",
-            "title": "NVIDIA's AI Transforms Raw Ultrasound Data into Clear Images",
-            "tldr": "NVIDIA released NV-Raw2Insights-US, a physics-informed AI model that converts raw ultrasound data into high-quality images, enabling adaptive imaging without specialized hardware. This could democratize advanced ultrasound capabilities for startups building medical imaging tools.",
-            "whyItMatters": [
-              "Business impact: Reduces dependency on expensive proprietary hardware, lowering barriers for startups to enter medical imaging market with AI-enhanced solutions.",
-              "Technical impact: Physics-informed approach improves image quality and adaptability, potentially enabling real-time adjustments for better diagnostics in varied clinical settings."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating NV-Raw2Insights-US into your medical imaging pipeline by testing it on raw ultrasound data from your devices. Start with the Hugging Face model card to understand input requirements and fine-tune for your specific use case, such as cardiac or obstetric imaging.",
-              "note": "Ensure compliance with medical device regulations (e.g., FDA clearance) before deploying in clinical settings."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1777369108041-yt30tz",
-                "title": "Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI",
-                "url": "https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1777369108041-yt30tz-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777369108041-yt30tz-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777369108041-yt30tz-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:28:13 GMT"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-04-28-afternoon",
-        "period": "afternoon",
-        "date": "2026-04-28",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Microsoft VibeVoice: Open-Source Voice AI Hits Frontier, FIDO, Google & Mastercard Tackle AI Agent Payment Security, PExA: Parallel Agent Cuts Text-to-SQL Latency, Hits SOTA.",
-        "items": [
-          {
-            "id": "hn-47933236",
-            "title": "Microsoft VibeVoice: Open-Source Voice AI Hits Frontier",
-            "tldr": "Microsoft open-sourced VibeVoice, a frontier voice AI model, sparking significant HackerNews discussion (103 comments, 158 points). This move democratizes advanced voice capabilities, enabling founders to build custom voice interfaces without vendor lock-in.",
-            "whyItMatters": [
-              "Business impact: Reduces dependency on proprietary voice APIs, lowering costs and enabling customization for voice-driven products like virtual assistants or customer service bots.",
-              "Technical impact: Provides a state-of-the-art open-source baseline for voice synthesis/recognition, accelerating R&D and allowing fine-tuning for niche use cases."
-            ],
-            "whatToTry": {
-              "description": "Clone the VibeVoice repo from GitHub and experiment with its voice synthesis/recognition capabilities in a prototype for your product—test latency and quality against your current solution.",
-              "note": "Check the license terms for commercial use; open-source models may have restrictions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47933236",
-                "title": "Microsoft VibeVoice: Open-Source Frontier Voice AI",
-                "url": "https://github.com/microsoft/VibeVoice",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47933236-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47933236-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47933236-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T11:56:04Z"
-          },
-          {
-            "id": "rss-wired-ai-1777390954530-pqk7km",
-            "title": "FIDO, Google & Mastercard Tackle AI Agent Payment Security",
-            "tldr": "The FIDO Alliance, Google, and Mastercard are collaborating on new standards to secure AI agents' ability to make purchases on behalf of users, addressing a critical gap in autonomous transaction safety.",
-            "whyItMatters": [
-              "For founders building AI agents that handle transactions, this signals upcoming authentication standards that will shape how agents interact with payment systems, requiring early compliance planning.",
-              "Technical impact: Expect new API requirements for agent-to-payment gateway authentication, potentially affecting agent design and user authorization flows."
-            ],
-            "whatToTry": {
-              "description": "Review your AI agent's current payment authorization flow and start designing for FIDO-based passkey authentication to future-proof against upcoming standards. Consider implementing user-defined spending limits and transaction approval workflows now.",
-              "note": "Early adopters of these standards will have a competitive advantage when major payment networks enforce them."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777390954530-pqk7km",
-                "title": "The Race Is on to Keep AI Agents From Running Wild With Your Credit Cards",
-                "url": "https://www.wired.com/story/the-race-is-on-to-keep-ai-agents-from-running-wild-with-your-credit-cards/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777390954530-pqk7km-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777390954530-pqk7km-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777390954530-pqk7km-2",
-                "label": "Payments",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1777390954745-for1t4",
-            "title": "PExA: Parallel Agent Cuts Text-to-SQL Latency, Hits SOTA",
-            "tldr": "A new framework, PExA, reformulates text-to-SQL as a parallel test coverage problem, achieving 70.2% execution accuracy on Spider 2.0 (new SOTA) while reducing latency by executing atomic SQL tests concurrently.",
-            "whyItMatters": [
-              "For founders building AI-powered data analytics or BI tools, this approach directly addresses the latency-performance trade-off, enabling faster and more accurate natural language to SQL queries in production.",
-              "The parallel test coverage methodology is a novel architectural pattern that can be applied to other code generation tasks, potentially improving reliability and speed in AI-assisted development."
-            ],
-            "whatToTry": {
-              "description": "Evaluate PExA's parallel test case approach for your text-to-SQL pipeline: decompose complex user queries into simpler atomic SQL tests, execute them in parallel, and use the results to ground final SQL generation. This can reduce latency while improving accuracy.",
-              "note": "Start with a small set of test cases (e.g., 3-5) to avoid overfitting; the paper's success on Spider 2.0 suggests it works well for complex queries."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777390954745-for1t4",
-                "title": "PExA: Parallel Exploration Agent for Complex Text-to-SQL",
-                "url": "https://arxiv.org/abs/2604.22934",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-for1t4-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-for1t4-1",
-                "label": "text-to-sql",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-for1t4-2",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777390954745-9r03u2",
-            "title": "Power Law Data Beats Uniform for AI Reasoning",
-            "tldr": "New research shows training on natural power-law data distributions outperforms uniform data for compositional reasoning tasks like state tracking and multi-step arithmetic, requiring less data. This challenges common data curation intuitions and offers a practical advantage for founders building reasoning-heavy AI products.",
-            "whyItMatters": [
-              "Business impact: Reduces data collection and curation costs for training reasoning models, enabling faster iteration and lower compute budgets.",
-              "Technical impact: Provides a provable theoretical framework for data distribution design, improving model efficiency on long-tail reasoning skills without sacrificing performance."
-            ],
-            "whatToTry": {
-              "description": "Audit your current training dataset for power-law characteristics (e.g., frequency of skill combinations). If it's heavily curated toward uniform distribution, consider reweighting or sampling to mimic natural frequency—especially for tasks requiring multi-step reasoning or state tracking.",
-              "note": "Start with small-scale experiments on a subset of your data to validate the effect before full retraining."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777390954745-9r03u2",
-                "title": "The Power of Power Law: Asymmetry Enables Compositional Reasoning",
-                "url": "https://arxiv.org/abs/2604.22951",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-9r03u2-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-9r03u2-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777390954745-7dqb3l",
-            "title": "FormalScience: Autoformalize Physics Proofs with Lean & Human-in-Loop",
-            "tldr": "A new agentic pipeline enables domain experts to autoformalize complex physics problems (quantum mechanics, electromagnetism) into Lean4 proofs with perfect validity, reducing the need for deep formal language expertise. This could accelerate verification of scientific reasoning in AI products.",
-            "whyItMatters": [
-              "For founders building AI for scientific research or education, this pipeline lowers the barrier to generating verifiable formal proofs, enabling new products for automated theorem proving or curriculum development.",
-              "Technically, the multi-stage agentic approach with human-in-the-loop feedback achieves higher semantic alignment than zero-shot or self-refinement methods, offering a blueprint for integrating formal verification into AI workflows."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating a similar human-in-the-loop agentic pipeline into your AI product for autoformalizing domain-specific reasoning, starting with a small set of problems from your target field (e.g., physics, math) to test semantic drift and cost.",
-              "note": "Focus on fields with well-defined formal systems (like Lean4) and ensure your domain experts can provide iterative feedback without deep formal language skills."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777390954745-7dqb3l",
-                "title": "FormalScience: Scalable Human-in-the-Loop Autoformalisation of Science with Agentic Code Generation in Lean",
-                "url": "https://arxiv.org/abs/2604.23002",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-7dqb3l-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-7dqb3l-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-7dqb3l-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777390954583-zklsg4",
-            "title": "Tank OS: Safer Enterprise Claw Deployments from Red Hat Maintainer",
-            "tldr": "Red Hat's OpenClaw maintainer released Tank OS, a containerized runtime for OpenClaw AI agents that improves reliability and safety for fleet deployments, addressing key enterprise concerns.",
-            "whyItMatters": [
-              "Business impact: Enables safer, more reliable deployment of AI agent fleets in enterprise environments, reducing operational risk and downtime.",
-              "Technical impact: Containerization of agents simplifies orchestration, isolation, and security, making it easier to manage large-scale agent systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Tank OS for your OpenClaw agent deployments, especially if you're running multiple agents. Test its containerized runtime in a staging environment to assess reliability and safety improvements before rolling out to production.",
-              "note": "Ensure your infrastructure supports container orchestration (e.g., Kubernetes) to fully leverage Tank OS benefits."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777390954583-zklsg4",
-                "title": "Red Hat’s OpenClaw maintainer just made enterprise Claw deployments a lot safer",
-                "url": "https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-zklsg4-0",
-                "label": "OpenClaw",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-zklsg4-1",
-                "label": "Tank OS",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-zklsg4-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1777390954530-twnv2d",
-            "title": "Bloomberg Terminal Gets AI Chatbot Overhaul for Traders",
-            "tldr": "Bloomberg is integrating a chatbot-style AI into its iconic terminal, aiming to streamline data queries and analysis for traders. This signals a major shift in how financial professionals interact with data, with implications for AI-powered workflow tools in high-stakes environments.",
-            "whyItMatters": [
-              "For founders building AI products in finance or enterprise: Bloomberg's move validates the demand for conversational AI in complex, data-heavy workflows, opening opportunities for similar tools in other verticals.",
-              "Technically, it shows that large language models can be adapted for real-time, high-accuracy use cases, but challenges around trust, latency, and domain-specific fine-tuning remain critical."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own product's potential for a 'chatbot overlay' on existing data interfaces. Start by identifying a specific, high-frequency query your users make (e.g., 'show me Q3 revenue trends') and prototype a natural language interface for it.",
-              "note": "Focus on accuracy and speed over feature breadth; Bloomberg's success will hinge on trust, not just novelty."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777390954530-twnv2d",
-                "title": "The Bloomberg Terminal Is Getting an AI Makeover, Like It or Not",
-                "url": "https://www.wired.com/story/the-bloomberg-terminal-is-getting-an-ai-makeover-like-it-or-not/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777390954530-twnv2d-0",
-                "label": "Bloomberg Terminal",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777390954530-twnv2d-1",
-                "label": "Finance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777390954530-twnv2d-2",
-                "label": "Chatbot",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 08:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1777390954745-zbqo6c",
-            "title": "Causal HAR from Wi-Fi CSI: Discrete Latents + LTL Rules",
-            "tldr": "A new method converts raw Wi-Fi CSI signals into discrete latent codes, then extracts human-readable Linear Temporal Logic rules for activity recognition. This enables causal interpretability and symbolic control without sacrificing performance, which is crucial for safety-critical AI applications.",
-            "whyItMatters": [
-              "Business impact: Enables deployment of HAR in regulated environments (healthcare, smart homes) where explainability is mandatory, reducing liability and increasing trust.",
-              "Technical impact: Provides a blueprint for making any deep sensor model causally interpretable by decoupling representation learning from rule extraction, allowing symbolic fusion across multiple antennas without retraining."
-            ],
-            "whatToTry": {
-              "description": "If you're building a sensor-based AI product (e.g., smart home, elderly monitoring), prototype a pipeline that first trains a categorical VAE to discretize raw sensor data, then applies causal discovery and LTL rule extraction on the latent trajectories. This gives you a fully symbolic classifier that can be audited and modified without retraining the encoder.",
-              "note": "Start with a small dataset to validate the rule extraction step; the Gumbel-Softmax trick may require careful tuning of the temperature parameter."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777390954745-zbqo6c",
-                "title": "Towards Causally Interpretable Wi-Fi CSI-Based Human Activity Recognition with Discrete Latent Compression and LTL Rule Extraction",
-                "url": "https://arxiv.org/abs/2604.22979",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-zbqo6c-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777390954745-zbqo6c-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777390954583-amirpt",
-            "title": "YouTube tests AI search with guided answers for Premium users",
-            "tldr": "YouTube is testing an AI-powered search feature that provides guided answers to queries, rolling out to U.S. Premium subscribers on an opt-in basis. This signals a shift in how video platforms handle discovery, with implications for content creators and AI-powered search tools.",
-            "whyItMatters": [
-              "For founders building AI search or recommendation products, this validates the trend toward conversational, answer-focused search interfaces over traditional keyword matching.",
-              "Content creators and platforms relying on YouTube traffic may need to adapt SEO strategies as AI summaries could reduce click-through rates to individual videos."
-            ],
-            "whatToTry": {
-              "description": "If you're building a search or discovery product, experiment with integrating guided answer summaries for user queries, especially for video or multimedia content. Test with a small user group to measure engagement and click-through impact.",
-              "note": "Consider how this might affect ad revenue or content monetization if users get answers without watching videos."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777390954583-amirpt",
-                "title": "YouTube is testing an AI-powered search feature that shows guided answers",
-                "url": "https://techcrunch.com/2026/04/28/youtube-is-testing-an-ai-powered-search-feature-that-shows-guided-answers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-amirpt-0",
-                "label": "YouTube",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-amirpt-1",
-                "label": "AI search",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777390954583-amirpt-2",
-                "label": "Product update",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 13:54:06 +0000"
-          },
-          {
-            "id": "hn-47934269",
-            "title": "OpenAI CEO's ID Firm Faked Bruno Mars Deal: Trust in AI Verification Questioned",
-            "tldr": "Worldcoin, Sam Altman's identity verification company, falsely announced a partnership with Bruno Mars, raising serious concerns about the reliability of AI-driven identity systems and the due diligence of companies building them.",
-            "whyItMatters": [
-              "For founders building AI products that rely on identity verification or partnerships, this highlights the risk of over-automating trust signals and the need for human oversight in verification processes.",
-              "It undermines confidence in AI-based identity solutions, potentially affecting adoption and regulatory scrutiny for startups in this space."
-            ],
-            "whatToTry": {
-              "description": "Audit your own AI systems for false positives or fabricated outputs, especially those involving public figures or partnerships. Implement a human-in-the-loop check for high-stakes announcements to avoid reputational damage.",
-              "note": "Consider using external verification APIs or manual review for any AI-generated claims about partnerships or identities."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47934269",
-                "title": "OpenAI CEO's Identity Verification Company Announced Fake Bruno Mars Partnership",
-                "url": "https://www.vice.com/en/article/openai-ceo-identity-verification-company-fake-bruno-mars-partnership-mistaken-identity/",
-                "domain": "vice.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47934269-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47934269-1",
-                "label": "Worldcoin",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47934269-2",
-                "label": "Identity Verification",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T13:26:26Z"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-04-28-evening",
-        "period": "evening",
-        "date": "2026-04-28",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Amazon offers OpenAI models on AWS after Microsoft exclusivity ends, OpenAI Models Now on AWS Bedrock: Multi-Cloud AI Strategy Unlocks New Options, Google expands Pentagon AI access after Anthropic refusal.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1777412149868-x64nti",
-            "title": "Amazon offers OpenAI models on AWS after Microsoft exclusivity ends",
-            "tldr": "AWS immediately launched OpenAI model offerings, including a new agent service, after Microsoft agreed to end exclusive rights. This signals a major shift in AI model availability and competition, giving founders more deployment flexibility.",
-            "whyItMatters": [
-              "Business impact: Founders can now deploy OpenAI models on AWS, potentially reducing vendor lock-in with Microsoft and leveraging AWS's infrastructure for scalability and cost optimization.",
-              "Technical impact: The new agent service on AWS enables easier integration of AI agents into existing cloud workflows, accelerating development of autonomous systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate migrating or testing your OpenAI-powered applications on AWS to compare latency, cost, and integration with AWS services like Lambda or SageMaker. Start with the new agent service for prototyping autonomous workflows.",
-              "note": "Check AWS pricing and region availability for OpenAI models, as early access may have limited support."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777412149868-x64nti",
-                "title": "Amazon is already offering new OpenAI products on AWS",
-                "url": "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-x64nti-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-x64nti-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-x64nti-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 19:48:02 +0000"
-          },
-          {
-            "id": "hn-47939320",
-            "title": "OpenAI Models Now on AWS Bedrock: Multi-Cloud AI Strategy Unlocks New Options",
-            "tldr": "OpenAI's models (including GPT-4o and o1) are now available on Amazon Bedrock, as announced by CEOs Sam Altman and Matt Garman. This strategic partnership gives founders a unified API to mix OpenAI, Anthropic, and other models on AWS, reducing vendor lock-in and simplifying multi-model deployments.",
-            "whyItMatters": [
-              "Business impact: Founders can now use OpenAI models within their existing AWS infrastructure, potentially reducing costs and complexity by avoiding separate API integrations and data egress fees.",
-              "Technical impact: Bedrock's managed agents and tool-use capabilities can now leverage OpenAI's reasoning models (like o1) alongside other providers, enabling more sophisticated, multi-model workflows without custom orchestration."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI stack: If you're using OpenAI via direct API, test migrating to Bedrock for unified billing, VPC endpoints, and access to Anthropic's Claude or Amazon's Titan models. Start with a non-critical workload to compare latency and cost.",
-              "note": "Check Bedrock's region availability for OpenAI models—some features may roll out gradually."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47939320",
-                "title": "OpenAI models coming to Amazon Bedrock: Interview with OpenAI and AWS CEOs",
-                "url": "https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/",
-                "domain": "stratechery.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47939320-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47939320-1",
-                "label": "AWS Bedrock",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47939320-2",
-                "label": "Multi-Cloud Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T19:24:43Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777412149868-xxpfr4",
-            "title": "Google expands Pentagon AI access after Anthropic refusal",
-            "tldr": "Google signed a new contract with the DoD for expanded AI access, following Anthropic's refusal to allow its AI for mass surveillance and autonomous weapons. This signals a major shift in defense AI partnerships and ethical stances.",
-            "whyItMatters": [
-              "Founders building AI for defense or government must navigate ethical and contractual boundaries, as this deal sets a precedent for large-scale DoD AI adoption.",
-              "Competitors may face pressure to choose sides on military AI use, impacting market positioning and talent retention."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's acceptable use policy and contract terms to explicitly define prohibited military uses (e.g., autonomous weapons, mass surveillance). Consider how this could affect government sales and investor relations.",
-              "note": "This is especially critical if you target defense or dual-use markets; align with your team's values early to avoid backlash."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777412149868-xxpfr4",
-                "title": "Google expands Pentagon’s access to its AI after Anthropic’s refusal",
-                "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-xxpfr4-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-xxpfr4-1",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-xxpfr4-2",
-                "label": "Defense",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-xxpfr4-3",
-                "label": "Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 18:15:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1777412150155-jplji7",
-            "title": "NVIDIA Nemotron 3 Nano Omni: Multimodal AI for Docs, Audio, Video",
-            "tldr": "NVIDIA released Nemotron 3 Nano Omni, a multimodal model that processes documents, audio, and video with long-context support, enabling richer AI agents for content analysis and automation.",
-            "whyItMatters": [
-              "Enables building AI agents that can analyze and extract insights from diverse media types (PDFs, audio recordings, videos) in a single model, reducing integration complexity.",
-              "Long-context capability allows processing of entire documents or lengthy audio/video streams, opening up use cases like meeting summarization, document review, and media transcription without chunking."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Nemotron 3 Nano Omni for your product by testing it on a multimodal task like extracting key points from a 30-minute podcast or summarizing a 50-page PDF. Compare its performance against separate models for each modality to see if the unified approach reduces latency and cost.",
-              "note": "Start with the Hugging Face demo to gauge output quality before integrating via API."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1777412150155-jplji7",
-                "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
-                "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1777412150155-jplji7-0",
-                "label": "NVIDIA Nemotron 3 Nano Omni",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777412150155-jplji7-1",
-                "label": "Multimodal AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777412150155-jplji7-2",
-                "label": "AI Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 15:58:57 GMT"
-          },
-          {
-            "id": "hn-47936156",
-            "title": "Google-Pentagon AI Deal: 'Any Lawful' Use Sparks Debate",
-            "tldr": "Google has reportedly signed a deal with the Pentagon allowing 'any lawful' use of its AI, sparking intense discussion on HackerNews. This marks a significant shift from Google's previous AI principles and signals a major move in defense AI contracting.",
-            "whyItMatters": [
-              "Business impact: Opens a massive new revenue stream for Google Cloud and AI services, potentially reshaping the competitive landscape for defense AI contracts.",
-              "Technical impact: Sets a precedent for AI ethics in government contracts, forcing other AI companies to reconsider their own policies and risk profiles."
-            ],
-            "whatToTry": {
-              "description": "Review your AI company's ethics and compliance policies to anticipate similar government contract opportunities. Consider how 'any lawful' clauses could affect your product roadmap and public perception.",
-              "note": "This deal may accelerate demand for AI in defense, so evaluate if your tools can be adapted for government use cases without violating your principles."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47936156",
-                "title": "Google and Pentagon reportedly agree on deal for 'any lawful' use of AI",
-                "url": "https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal",
-                "domain": "theverge.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47936156-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47936156-1",
-                "label": "Defense AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47936156-2",
-                "label": "Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T15:49:22Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777412149868-n8t90b",
-            "title": "Amazon launches AI audio Q&A on product pages",
-            "tldr": "Amazon introduced 'Join the chat,' an AI-powered audio Q&A feature on product pages that answers shopper questions with spoken responses, signaling a shift toward conversational commerce that AI product builders can leverage for customer engagement.",
-            "whyItMatters": [
-              "Business impact: This sets a new standard for e-commerce UX, making voice-based AI interactions mainstream and creating opportunities for startups to integrate similar audio Q&A into their own platforms.",
-              "Technical impact: Demonstrates practical use of text-to-speech and LLM integration for real-time, context-aware responses, which can inspire similar implementations in customer support or product discovery."
-            ],
-            "whatToTry": {
-              "description": "Experiment with adding an audio Q&A widget to your own product or service's help or product pages using a text-to-speech API (e.g., ElevenLabs or Google Cloud TTS) and a lightweight LLM for context-aware answers. Start with a small set of FAQs to test user engagement.",
-              "note": "Ensure audio responses are concise and optionally offer a text transcript for accessibility."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777412149868-n8t90b",
-                "title": "Amazon launches an AI-powered audio Q&A experience on product pages",
-                "url": "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-n8t90b-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-n8t90b-1",
-                "label": "Conversational AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-n8t90b-2",
-                "label": "Text-to-Speech",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 18:49:54 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1777412149876-3s0rla",
-            "title": "Meta's AI Training Workforce Faces Mass Layoffs in Ireland",
-            "tldr": "Over 700 contract workers training Meta's AI in Ireland face potential layoffs, highlighting the precarious nature of AI data labeling and the shift toward automation in AI training pipelines.",
-            "whyItMatters": [
-              "Highlights the human cost and ethical risks of scaling AI training, which could lead to reputational damage and regulatory scrutiny for AI companies.",
-              "Signals a trend toward automating data labeling, which may reduce costs but also create dependency on less reliable synthetic data or lower-quality outputs."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI training pipeline for reliance on human-in-the-loop labeling. Consider diversifying with automated tools (e.g., Snorkel AI, Scale AI's automated labeling) and building redundancy to avoid disruption from contractor layoffs.",
-              "note": "Be cautious: over-automation can introduce bias or errors. Maintain a small, skilled human review team for edge cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777412149876-3s0rla",
-                "title": "‘It’s Undignified’: Hundreds of Workers Training Meta’s AI Could Be Laid Off",
-                "url": "https://www.wired.com/story/meta-covalen-ai-workers-layoffs/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777412149876-3s0rla-0",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777412149876-3s0rla-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 18:36:47 +0000"
-          },
-          {
-            "id": "hn-47936867",
-            "title": "AI's Economics Don't Make Sense: Critical Analysis",
-            "tldr": "A critical piece argues that current AI business models are unsustainable, with high costs and unclear ROI, sparking debate on HackerNews. This matters because it challenges the hype and forces founders to reassess their AI strategies.",
-            "whyItMatters": [
-              "Business impact: Raises red flags about the viability of AI startups relying on expensive models without clear revenue paths, urging founders to focus on unit economics.",
-              "Technical impact: Highlights the need for more efficient models and cost-effective infrastructure to avoid burning cash."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's cost per inference and compare it to your customer's willingness to pay. If margins are thin, explore smaller, fine-tuned models or caching strategies to reduce expenses.",
-              "note": "Consider open-source models like Llama 3 for cost savings, but benchmark performance against your use case."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47936867",
-                "title": "AI's Economics Don't Make Sense",
-                "url": "https://www.wheresyoured.at/ais-economics-dont-make-sense/",
-                "domain": "wheresyoured.at",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47936867-0",
-                "label": "Economics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47936867-1",
-                "label": "Business Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T16:39:53Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777412149868-0dh3d4",
-            "title": "Lovable brings vibe coding to mobile with new iOS/Android app",
-            "tldr": "Lovable launched mobile apps for iOS and Android, enabling developers to 'vibe code' web apps and websites on the go, expanding the reach of AI-assisted development to mobile-first workflows.",
-            "whyItMatters": [
-              "Enables founders to prototype and iterate on web apps directly from mobile devices, reducing dependency on desktop setups and accelerating ideation.",
-              "Signals growing trend of AI coding tools going mobile, potentially reshaping how and where development happens, especially for early-stage product validation."
-            ],
-            "whatToTry": {
-              "description": "Download the app and test it with a simple web app idea (e.g., a landing page or a to-do list) to evaluate its mobile coding experience and speed for rapid prototyping.",
-              "note": "Start with a small project to gauge latency and output quality on mobile vs. desktop."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777412149868-0dh3d4",
-                "title": "Lovable launches its vibe-coding app on iOS and Android",
-                "url": "https://techcrunch.com/2026/04/28/lovable-launches-its-vibe-coding-app-on-ios-and-android/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-0dh3d4-0",
-                "label": "Lovable",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-0dh3d4-1",
-                "label": "Vibe Coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777412149868-0dh3d4-2",
-                "label": "Mobile Development",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Apr 2026 16:09:30 +0000"
-          },
-          {
-            "id": "hn-47938097",
-            "title": "Claude.ai and API Hit by Outage: What Founders Should Know",
-            "tldr": "Claude.ai and its API experienced significant downtime, sparking a large discussion on HackerNews. This highlights the critical need for redundancy and fallback strategies when relying on third-party AI services.",
-            "whyItMatters": [
-              "Business impact: Service disruptions can halt product features, erode user trust, and cause revenue loss for startups dependent on Claude's API.",
-              "Technical impact: Founders must architect for failure, implementing retry logic, fallback models, and clear communication plans for outages."
-            ],
-            "whatToTry": {
-              "description": "Review your AI service dependencies and implement a fallback strategy: set up automatic retries with exponential backoff for API calls, and consider integrating a secondary model (e.g., OpenAI, open-source) as a backup to switch during outages.",
-              "note": "Test your fallback system regularly to ensure seamless transitions and avoid cascading failures."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47938097",
-                "title": "Claude.ai unavailable and elevated errors on the API",
-                "url": "https://status.claude.com/incidents/9l93x2ht4s5w",
-                "domain": "status.claude.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47938097-0",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47938097-1",
-                "label": "API",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47938097-2",
-                "label": "Reliability",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-28T18:01:21Z"
           }
         ],
         "totalReadTimeMinutes": 20,
