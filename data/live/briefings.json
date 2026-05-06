@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-05-05",
+    "date": "2026-05-06",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-05-06-morning",
+        "period": "morning",
+        "date": "2026-05-06",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: SAP drops $1.16B on Prior Labs, picks NemoClaw for agents, QuTwo hits $380M valuation in angel round – sovereign AI heats up, Why Fine-Tuning Goes Wrong: Feature Superposition Geometry.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1778060331171-e11f0j",
+            "title": "SAP drops $1.16B on Prior Labs, picks NemoClaw for agents",
+            "tldr": "SAP is acquiring German AI startup Prior Labs for $1.16B and standardizing on Nvidia's NemoClaw for enterprise agent deployments, signaling a major enterprise AI platform shift.",
+            "whyItMatters": [
+              "Enterprise AI procurement is consolidating around a few key vendors; SAP's choice of NemoClaw over alternatives like OpenAI or Anthropic could set a precedent for other large enterprises.",
+              "The $1.16B valuation for an 18-month-old lab highlights the premium on specialized AI talent and models for enterprise workflows, potentially driving up acquisition costs for startups."
+            ],
+            "whatToTry": {
+              "description": "Evaluate NemoClaw for your own enterprise agent use cases, especially if you're building for SAP ecosystems or similar ERP-heavy environments. Start with their developer sandbox to test integration with your existing data pipelines.",
+              "note": "NemoClaw is optimized for structured data and compliance; it may not be ideal for creative or open-ended tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778060331171-e11f0j",
+                "title": "SAP bets $1.16B on 18-month-old German AI lab and says yes to NemoClaw",
+                "url": "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-e11f0j-0",
+                "label": "NemoClaw",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-e11f0j-1",
+                "label": "Prior Labs",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-e11f0j-2",
+                "label": "Enterprise AI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 05 May 2026 23:50:10 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778060331171-4to5ht",
+            "title": "QuTwo hits $380M valuation in angel round – sovereign AI heats up",
+            "tldr": "Finnish AI lab QuTwo, led by ex-Silo AI CEO Peter Sarlin, raised €25M at a €325M valuation, signaling strong investor appetite for European sovereign AI and quantum computing plays.",
+            "whyItMatters": [
+              "Highlights growing investor confidence in European AI labs, potentially opening more funding opportunities for founders building in Europe.",
+              "Validates the 'sovereign tech' thesis – founders can leverage this trend to pitch AI products with data residency and regional control as key differentiators."
+            ],
+            "whatToTry": {
+              "description": "If you're raising, emphasize your company's alignment with sovereign AI or data localization trends in your pitch deck. Highlight any European partnerships or compliance advantages.",
+              "note": "This round was angel-stage at a high valuation – consider targeting strategic angels with deep tech or policy expertise for similar leverage."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778060331171-4to5ht",
+                "title": "Peter Sarlin’s QuTwo reaches $380M valuation in angel round",
+                "url": "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-4to5ht-0",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-4to5ht-1",
+                "label": "Sovereign AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-4to5ht-2",
+                "label": "Europe",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 06:47:12 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331512-xro273",
+            "title": "Why Fine-Tuning Goes Wrong: Feature Superposition Geometry",
+            "tldr": "A new paper reveals that emergent misalignment in LLMs (where benign fine-tuning causes harmful outputs) is due to geometric proximity of features in superposition. The authors propose a simple filtering method that reduces misalignment by 34.5%, offering a practical, scalable safety technique.",
+            "whyItMatters": [
+              "For founders building on fine-tuned models: this explains a key safety risk and provides a lightweight mitigation that doesn't require complex oversight.",
+              "Technical insight: sparse autoencoders can now be used to detect and filter harmful feature proximity, enabling safer fine-tuning pipelines."
+            ],
+            "whatToTry": {
+              "description": "When fine-tuning an LLM, use sparse autoencoders to extract features from your training data, compute cosine similarity to known toxic features, and filter out the top 10-20% most similar samples. This geometry-aware filtering can reduce emergent misalignment without needing an LLM-as-judge.",
+              "note": "Start with a small dataset to calibrate the similarity threshold; the paper shows this outperforms random removal and matches LLM-based filtering."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331512-xro273",
+                "title": "Understanding Emergent Misalignment via Feature Superposition Geometry",
+                "url": "https://arxiv.org/abs/2605.00842",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331512-xro273-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331512-xro273-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331513-0wnj9p",
+            "title": "ClinicBot: RAG for verifiable clinical answers from guidelines",
+            "tldr": "ClinicBot introduces a novel RAG system that extracts and prioritizes evidence from clinical guidelines (e.g., ADA 2025) to produce accurate, citation-backed answers for patient queries, reducing hallucination risk in high-stakes medical AI.",
+            "whyItMatters": [
+              "For founders building AI in regulated industries (healthcare, legal, finance), ClinicBot demonstrates a practical method to ground LLM outputs in authoritative sources with verifiable citations, addressing a key barrier to adoption.",
+              "The hierarchical evidence ranking approach can be adapted to any domain with structured guidelines, enabling more trustworthy AI assistants without sacrificing usability."
+            ],
+            "whatToTry": {
+              "description": "If you're building a domain-specific AI assistant, prototype a similar evidence prioritization layer: extract structured units (recommendations, tables) from your domain's official guidelines, then rank them by clinical or regulatory significance (not just text similarity) before feeding into your RAG pipeline.",
+              "note": "Start with a small set of guidelines (e.g., 1-2 documents) to validate the ranking logic before scaling to full knowledge bases."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331513-0wnj9p",
+                "title": "ClinicBot: A Guideline-Grounded Clinical Chatbot with Prioritized Evidence RAG and Verifiable Citations",
+                "url": "https://arxiv.org/abs/2605.00846",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0wnj9p-0",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0wnj9p-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0wnj9p-2",
+                "label": "Model",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331513-0l4rz6",
+            "title": "Formal Proof: AI Workflow Governance Without Losing Expressivity",
+            "tldr": "A new formal proof demonstrates that governance constraints on AI workflows (e.g., memory, LLM calls) can be enforced without reducing computational expressivity or altering program semantics. This is a foundational result for building safe, auditable AI systems without sacrificing capability.",
+            "whyItMatters": [
+              "Business impact: Enables founders to design AI products with built-in governance (safety, compliance) without worrying about limiting model capabilities or breaking existing workflows.",
+              "Technical impact: Provides a rigorous framework for implementing effect-level governance (e.g., restricting LLM calls, memory access) that is provably transparent and decidable, reducing risk of unintended behavior."
+            ],
+            "whatToTry": {
+              "description": "Review your AI workflow architecture for effectful operations (e.g., external API calls, memory writes, LLM queries). Consider implementing a governance layer that mediates these effects using a similar operator pattern, ensuring all permitted executions remain semantically equivalent to ungoverned ones.",
+              "note": "This is a theoretical result; practical tooling may not exist yet. Start by auditing your system's effect boundaries and documenting governance rules."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331513-0l4rz6",
+                "title": "Effect-Transparent Governance for AI Workflow Architectures: Semantic Preservation, Expressive Minimality, and Decidability Boundaries",
+                "url": "https://arxiv.org/abs/2605.01030",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0l4rz6-0",
+                "label": "AI Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0l4rz6-1",
+                "label": "Formal Verification",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-0l4rz6-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331513-few69v",
+            "title": "Multi-Agent System for Hydrodynamics: 93.6% Precision",
+            "tldr": "A new multi-agent framework (LEG) for scientific reasoning achieves 93.6% factual precision on hydrodynamics queries, using specialized agents and a Layer Execution Graph to overcome single-agent context limits. This demonstrates a practical pattern for building reliable, auditable multi-agent systems.",
+            "whyItMatters": [
+              "Shows a production-ready architecture for multi-agent systems that degrades gracefully under data loss, critical for building robust AI products.",
+              "Provides a blueprint for domain-specific AI workflows where context management and auditability are key, applicable beyond hydrodynamics."
+            ],
+            "whatToTry": {
+              "description": "Adopt the Layer Execution Graph pattern: split your AI workflow into planner, specialist, consolidator, and reporter agents. Use strict tool allowlists per agent and log all tool calls for auditability. Start with a single domain (e.g., customer support, code review) and test with 10-20 queries.",
+              "note": "Start with a simple 3-agent setup (planner, specialist, reporter) before adding consolidators for parallel tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331513-few69v",
+                "title": "Towards Multi-Agent Autonomous Reasoning in Hydrodynamics",
+                "url": "https://arxiv.org/abs/2605.01102",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-few69v-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-few69v-1",
+                "label": "Claude Sonnet",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-few69v-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778060331171-nz1gdc",
+            "title": "AI-Powered 'Restaurant Factories' Let Anyone Launch a Food Brand",
+            "tldr": "Marc Lore's Wonder is building AI-driven robotic kitchens that let anyone create a virtual restaurant brand with a text prompt, turning food service into a low-barrier, on-demand industry.",
+            "whyItMatters": [
+              "Business impact: Lowers the barrier to entry for food entrepreneurship, enabling rapid brand experimentation without physical infrastructure or culinary expertise.",
+              "Technical impact: Advances AI's role in physical automation and recipe generation, pushing toward autonomous food production systems."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating AI-driven recipe generation and robotic kitchen APIs into your product to offer on-demand food creation as a service, targeting ghost kitchen or virtual brand markets.",
+              "note": "Start with small-scale pilots using existing robotic kitchen platforms to validate demand before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778060331171-nz1gdc",
+                "title": "Marc Lore says that AI will soon enable anyone open a restaurant",
+                "url": "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-nz1gdc-0",
+                "label": "AI-powered robotics",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-nz1gdc-1",
+                "label": "Food tech",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778060331171-nz1gdc-2",
+                "label": "Virtual brands",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 06:34:32 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331512-ohrwyl",
+            "title": "AI/ML Roadmap for Smart Manufacturing: Key Trends & Challenges",
+            "tldr": "A comprehensive ArXiv roadmap outlines the current state and future directions of AI/ML in smart manufacturing, covering foundations, applications (e.g., digital twins, robotics, supply chain), and emerging areas like physics-informed AI, generative AI, and LLMs. It highlights critical challenges in data complexity, integration, and trustworthiness.",
+            "whyItMatters": [
+              "For founders building AI for industrial use, this roadmap identifies high-impact areas (e.g., digital twins, autonomous systems) and key hurdles (data management, explainability) to address in product development.",
+              "Technical teams can use this as a strategic guide to prioritize R&D investments in non-traditional ML approaches like physics-informed AI or foundation models for manufacturing."
+            ],
+            "whatToTry": {
+              "description": "Review the roadmap's sections on 'non-traditional ML approaches' (e.g., physics-informed AI, generative AI, LLMs) and identify one area where your product could integrate these techniques to solve a specific manufacturing pain point, such as predictive maintenance or quality control.",
+              "note": "Focus on the 'trustworthy and explainable' requirement—industrial clients will demand transparency, so plan for interpretability features early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331512-ohrwyl",
+                "title": "2026 Roadmap on Artificial Intelligence and Machine Learning for Smart Manufacturing",
+                "url": "https://arxiv.org/abs/2605.00839",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331512-ohrwyl-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331512-ohrwyl-1",
+                "label": "model",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778060331513-jooqzc",
+            "title": "AI Speech Therapist: Clinician-in-the-Loop for Stuttering Care",
+            "tldr": "A new arXiv paper introduces Virtual Speech Therapist (VST), an AI platform that combines deep learning stuttering classification with multi-agent LLM reasoning to generate personalized therapy plans, while keeping clinicians in the loop for safety and review. This matters because it shows a practical path to reducing clinician burden in a high-demand area.",
+            "whyItMatters": [
+              "Business impact: Opens opportunities for building AI-powered clinical decision support tools in speech therapy, a niche with high demand and limited specialists.",
+              "Technical impact: Demonstrates a multi-agent LLM architecture with a critic agent for clinical safety, which can be adapted for other healthcare domains requiring evidence-based oversight."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating a similar clinician-in-the-loop multi-agent LLM system into your own healthcare or regulated AI product. Start by defining a critic agent that validates outputs against domain-specific guidelines (e.g., clinical protocols, regulatory standards) before human review.",
+              "note": "Focus on a narrow, high-need use case first—like stuttering assessment—to validate the approach before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778060331513-jooqzc",
+                "title": "Virtual Speech Therapist: A Clinician-in-the-Loop AI Speech Therapy Agent for Personalized and Supervised Therapy",
+                "url": "https://arxiv.org/abs/2605.01101",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-jooqzc-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-jooqzc-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778060331513-jooqzc-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 06 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48031109",
+            "title": "Telus Uses AI to Alter Call-Agent Accents",
+            "tldr": "Telus is deploying AI to modify call-center agents' accents in real-time, aiming to reduce customer bias and improve communication. This sparks debate on ethics, identity, and practical utility for AI product builders.",
+            "whyItMatters": [
+              "Business impact: Opens new market for accent-modulation tools in customer service, potentially reducing bias-related churn and improving global team integration.",
+              "Technical impact: Demonstrates real-time voice transformation with low latency, pushing boundaries of speech synthesis and voice cloning technologies."
+            ],
+            "whatToTry": {
+              "description": "Evaluate accent-modulation APIs (e.g., from ElevenLabs or Respeecher) for your own customer-facing voice products. Test with diverse user groups to measure impact on comprehension and trust.",
+              "note": "Be transparent with users about AI voice alteration to avoid ethical pitfalls and regulatory backlash."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48031109",
+                "title": "Telus Uses AI to Alter Call-Agent Accents",
+                "url": "https://letsdatascience.com/news/telus-uses-ai-to-alter-call-agent-accents-a3868f63",
+                "domain": "letsdatascience.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48031109-0",
+                "label": "Voice AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48031109-1",
+                "label": "Speech Synthesis",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-48031109-2",
+                "label": "Customer Service",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-05-06T01:38:44Z"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-05",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-05-morning",
@@ -861,7 +1299,7 @@
   },
   {
     "date": "2026-05-04",
-    "displayDate": "Yesterday",
+    "displayDate": "Monday, May 4",
     "briefings": [
       {
         "id": "briefing-2026-05-04-morning",
@@ -4606,891 +5044,6 @@
           }
         ],
         "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-04-29",
-    "displayDate": "Wednesday, Apr 29",
-    "briefings": [
-      {
-        "id": "briefing-2026-04-29-afternoon",
-        "period": "afternoon",
-        "date": "2026-04-29",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Eka's Robotic Claw: A ChatGPT Moment for Physical AI?, Scout AI raises $100M for military AI agents controlling drone fleets, OpenAI's 5-Part Plan for AI-Powered Cybersecurity.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1777476710348-h0kldo",
-            "title": "Eka's Robotic Claw: A ChatGPT Moment for Physical AI?",
-            "tldr": "Wired reports on Eka's robotic claw that can perform diverse tasks like sorting chicken nuggets and screwing in lightbulbs, signaling a potential breakthrough in general-purpose robotics akin to ChatGPT's impact on AI.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products can explore integrating such versatile robotic hardware into automation solutions, potentially reducing costs and expanding use cases in logistics, manufacturing, and service industries.",
-              "Technical impact: This development suggests progress toward foundational models for robotics, enabling more adaptable and intelligent physical systems that could be combined with AI software for end-to-end automation."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your product's potential to leverage general-purpose robotic hardware like Eka's claw for physical tasks. Consider prototyping a use case in sorting, assembly, or inspection to test feasibility and market fit.",
-              "note": "Start with a small-scale pilot to assess integration complexity and ROI before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777476710348-h0kldo",
-                "title": "I've Covered Robots for Years. This One Is Different",
-                "url": "https://www.wired.com/story/when-robots-have-their-chatgpt-moment-remember-these-pincers/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777476710348-h0kldo-0",
-                "label": "Eka",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777476710348-h0kldo-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777476710348-h0kldo-2",
-                "label": "Physical AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777476710354-bdrjl2",
-            "title": "Scout AI raises $100M for military AI agents controlling drone fleets",
-            "tldr": "Scout AI, founded by Colby Adcock, raised $100M to develop AI agents that enable individual soldiers to command swarms of autonomous vehicles, with a bootcamp-style training ground for real-world testing. This signals a major push in defense AI, with implications for autonomous systems and human-AI teaming.",
-            "whyItMatters": [
-              "Business impact: $100M funding validates defense AI as a high-growth sector, opening opportunities for startups building autonomous systems, simulation, and edge AI for military contracts.",
-              "Technical impact: Advances in multi-agent coordination and real-time decision-making under constraints (e.g., low bandwidth, high stakes) could spill over into civilian applications like logistics or disaster response."
-            ],
-            "whatToTry": {
-              "description": "Explore partnerships or grants with defense innovation units (e.g., DIU, AFWERX) to test your AI agents in constrained environments—focus on multi-agent coordination and human-in-the-loop interfaces.",
-              "note": "Start with unclassified simulation platforms like CARLA or AirSim to prototype before seeking real-world trials."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777476710354-bdrjl2",
-                "title": "Colby Adcock’s Scout AI raises $100M to train its models for war. We visited its bootcamp",
-                "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-bdrjl2-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-bdrjl2-1",
-                "label": "Defense AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-bdrjl2-2",
-                "label": "Autonomous Vehicles",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 09:45:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1777476711046-r8e48s",
-            "title": "OpenAI's 5-Part Plan for AI-Powered Cybersecurity",
-            "tldr": "OpenAI released a policy framework for using AI to democratize cyber defense, emphasizing proactive protection and securing critical infrastructure. This signals a shift toward AI-native security tools that founders can leverage.",
-            "whyItMatters": [
-              "Business impact: Founders can integrate AI-driven defense into their products, reducing security costs and improving threat detection for customers.",
-              "Technical impact: OpenAI's plan highlights the need for AI models to be trained on security data, opening opportunities for specialized fine-tuning and API integrations."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your product's security posture by exploring OpenAI's cybersecurity APIs (e.g., GPT-4 for anomaly detection) or building a proof-of-concept that uses AI to automate incident response for your users.",
-              "note": "Start with a narrow use case like phishing detection or log analysis to validate before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1777476711046-r8e48s",
-                "title": "Cybersecurity in the Intelligence Age",
-                "url": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1777476711046-r8e48s-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1777476711046-r8e48s-1",
-                "label": "Cybersecurity",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1777476711046-r8e48s-2",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 04:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1777476710673-mhxi26",
-            "title": "Power Law Data Beats Uniform for Reasoning: New Paper",
-            "tldr": "A new paper shows that training on natural power-law data distributions (where rare skills are infrequent) actually outperforms curated uniform distributions for compositional reasoning tasks like state tracking and multi-step arithmetic. This challenges common data curation intuition and offers a theoretical basis for why power-law sampling works better.",
-            "whyItMatters": [
-              "Business impact: Founders can reduce data curation costs by using natural data distributions instead of expensive reweighting, potentially improving model reasoning performance with less data.",
-              "Technical impact: Provides a theoretical framework for designing training data strategies that leverage power-law asymmetry to efficiently learn rare, long-tail skills via compositional stepping stones."
-            ],
-            "whatToTry": {
-              "description": "Audit your current training data distribution for compositional reasoning tasks. If you're reweighting to uniform, consider running an A/B test with natural power-law sampling to see if it improves performance on multi-step reasoning benchmarks.",
-              "note": "This is most relevant for models that need to handle rare skill combinations, like multi-turn chatbots or complex task automation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777476710673-mhxi26",
-                "title": "The Power of Power Law: Asymmetry Enables Compositional Reasoning",
-                "url": "https://arxiv.org/abs/2604.22951",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-mhxi26-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-mhxi26-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-hugging-face-blog-1777476710606-3p6fe4",
-            "title": "IBM Granite 4.1 LLMs: Open-Source, Efficient, and Built for Enterprise",
-            "tldr": "IBM released Granite 4.1, a family of open-source LLMs (8B, 20B, 230B) optimized for enterprise tasks like code generation and RAG, with a focus on efficiency and transparency. This matters because it provides a credible, permissive alternative to proprietary models for founders building AI products.",
-            "whyItMatters": [
-              "Business impact: Granite 4.1 is Apache 2.0 licensed, enabling unrestricted commercial use and customization, reducing legal friction for startups.",
-              "Technical impact: Models are designed for retrieval-augmented generation (RAG) and code tasks, with strong performance on benchmarks like HumanEval and GSM8K, offering a cost-effective option for production deployments."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Granite 4.1 (especially the 8B or 20B variants) for your next RAG or code-generation feature. Start by testing it on Hugging Face with your own enterprise data to compare latency and accuracy against your current model.",
-              "note": "The 230B model is large; consider the smaller variants for faster inference and lower costs unless you need maximum capability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1777476710606-3p6fe4",
-                "title": "Granite 4.1 LLMs: How They’re Built",
-                "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1777476710606-3p6fe4-0",
-                "label": "Granite 4.1",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777476710606-3p6fe4-1",
-                "label": "IBM",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777476710606-3p6fe4-2",
-                "label": "Open-Source LLM",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 15:01:48 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777476710354-5uydn8",
-            "title": "Shapes app blends AI agents into human group chats",
-            "tldr": "Shapes launches a chat app where AI characters participate alongside humans in group conversations, similar to Discord but with AI agents. This signals a new UX paradigm for AI integration in social and collaborative spaces.",
-            "whyItMatters": [
-              "Business impact: Opens a new category for AI-native social apps, potentially disrupting traditional chat platforms and creating opportunities for founders to build AI-driven community or team tools.",
-              "Technical impact: Demonstrates a practical use case for multi-agent AI in real-time group interactions, requiring robust natural language understanding and context management."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating AI agents into your own product's chat or collaboration features. Start by prototyping a simple AI character that can answer FAQs or moderate discussions in a test group chat, using an API like OpenAI's GPT-4.",
-              "note": "Focus on clear role definitions for the AI to avoid confusion; consider user controls for when the AI speaks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777476710354-5uydn8",
-                "title": "Meet Shapes, the app bringing humans and AI into the same group chats",
-                "url": "https://techcrunch.com/2026/04/29/meet-shapes-the-app-bringing-humans-and-ai-into-the-same-group-chats/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-5uydn8-0",
-                "label": "Shapes",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-5uydn8-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777476710354-5uydn8-2",
-                "label": "Social apps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 13:00:00 +0000"
-          },
-          {
-            "id": "hn-47947490",
-            "title": "AI fails consistency test: 27k carb counts, 27k different answers",
-            "tldr": "A diabetic tech expert tested AI's ability to count carbs from meal photos 27,000 times, finding zero consistency in outputs. This highlights a critical reliability gap for AI in regulated domains like health, where reproducibility is non-negotiable.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products for regulated industries (health, finance, legal) must prioritize consistency and validation over raw accuracy to avoid liability and user distrust.",
-              "Technical impact: Current LLMs lack deterministic behavior for numerical tasks, requiring post-processing layers (e.g., rule-based checks, ensembling) to enforce consistency."
-            ],
-            "whatToTry": {
-              "description": "Run a consistency stress test on your AI product: automate 100+ identical queries (e.g., same image, same prompt) and measure output variance. If >5% differ, implement a validation layer (e.g., majority voting, deterministic post-processing) before production.",
-              "note": "Start with edge cases like numerical extraction or classification tasks where consistency is critical."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47947490",
-                "title": "He asked AI to count carbs 27000 times. It couldn't give the same answer twice",
-                "url": "https://www.diabettech.com/i-asked-ai-to-count-my-carbs-27000-times-it-couldnt-give-me-the-same-answer-twice/",
-                "domain": "diabettech.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47947490-0",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47947490-1",
-                "label": "Health AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-47947490-2",
-                "label": "LLM Limitations",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-29T12:38:50Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1777476710673-m8bi8e",
-            "title": "PExA: Parallel SQL Agents Achieve SOTA on Spider 2.0",
-            "tldr": "PExA reformulates text-to-SQL as a parallel test coverage problem, using atomic SQLs to iteratively ground final queries. It achieves 70.2% execution accuracy on Spider 2.0, a new SOTA, offering a latency-friendly alternative to sequential refinement.",
-            "whyItMatters": [
-              "For founders building AI data tools, this approach reduces latency while improving accuracy, making text-to-SQL more viable for real-time user-facing products.",
-              "The parallel test coverage method is a novel paradigm that could be applied to other code generation tasks, potentially lowering compute costs and inference time."
-            ],
-            "whatToTry": {
-              "description": "If you're building a text-to-SQL product, experiment with decomposing user queries into parallel atomic SQL tests (e.g., using a lightweight LLM) before generating the final query. This can improve accuracy without the latency penalty of sequential chain-of-thought.",
-              "note": "Start with simple benchmarks like Spider 1.0 to validate the approach before scaling to complex schemas."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777476710673-m8bi8e",
-                "title": "PExA: Parallel Exploration Agent for Complex Text-to-SQL",
-                "url": "https://arxiv.org/abs/2604.22934",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-m8bi8e-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-m8bi8e-1",
-                "label": "text-to-sql",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-m8bi8e-2",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777476710673-zafu5o",
-            "title": "FormalScience: Autoformalize Physics with Lean4 via Human-in-the-Loop",
-            "tldr": "A new pipeline (FormalScience) lets domain experts without formal methods expertise convert LaTeX physics problems into verified Lean4 proofs, creating the FormalPhysics dataset of 200 problems. This reduces the cost of formal verification for scientific reasoning, opening up new possibilities for AI-generated, verifiable scientific content.",
-            "whyItMatters": [
-              "Business impact: Enables AI products to produce verifiable scientific proofs, reducing risk in regulated industries (e.g., medical physics, engineering) and lowering the barrier for non-experts to use formal verification.",
-              "Technical impact: Introduces a human-in-the-loop agentic pipeline that achieves perfect formal validity, addressing semantic drift in autoformalization—a key challenge for LLM-based scientific reasoning."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI tools for STEM education or scientific research, explore integrating Lean4 verification into your pipeline. Start by testing the FormalPhysics dataset (200 problems) to benchmark your model's autoformalization capabilities, then adapt the human-in-the-loop approach to your domain.",
-              "note": "The pipeline is domain-agnostic, so you can apply it to chemistry or biology problems too. Expect initial setup costs for Lean4 integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777476710673-zafu5o",
-                "title": "FormalScience: Scalable Human-in-the-Loop Autoformalisation of Science with Agentic Code Generation in Lean",
-                "url": "https://arxiv.org/abs/2604.23002",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-zafu5o-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-zafu5o-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-zafu5o-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777476710673-jkhcx0",
-            "title": "Systematic LLM Debugging: A New Framework for Founders",
-            "tldr": "A new arXiv paper proposes a structured, model-agnostic approach to debugging LLMs, unifying evaluation, interpretability, and error analysis. This matters because it offers a practical methodology for founders to systematically diagnose and fix LLM issues without relying on standardized benchmarks.",
-            "whyItMatters": [
-              "Business impact: Reduces time and cost in troubleshooting LLM-based products, enabling faster iteration and more reliable deployments.",
-              "Technical impact: Provides a replicable framework for debugging that works across different models and tasks, improving reproducibility and scalability."
-            ],
-            "whatToTry": {
-              "description": "Adopt the paper's iterative debugging cycle: start by defining clear evaluation criteria for your specific use case, then use interpretability tools (like attention visualization or probing) to identify failure modes, and finally refine prompts or fine-tune data based on those insights. Implement this as a standard step in your development workflow.",
-              "note": "Focus on creating task-specific evaluation sets rather than relying solely on general benchmarks, as the paper emphasizes effectiveness in low-benchmark contexts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777476710673-jkhcx0",
-                "title": "A Systematic Approach for Large Language Models Debugging",
-                "url": "https://arxiv.org/abs/2604.23027",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-jkhcx0-0",
-                "label": "LLM Debugging",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-jkhcx0-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777476710673-jkhcx0-2",
-                "label": "Best Practices",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-04-29-evening",
-        "period": "evening",
-        "date": "2026-04-29",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Parallel Web Systems hits $2B valuation, raises $100M from Sequoia, AI evals are becoming the new compute bottleneck, Mistral Medium 3.5: New Open-Weight Model for Remote Agents.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1777498758545-qsj8te",
-            "title": "Parallel Web Systems hits $2B valuation, raises $100M from Sequoia",
-            "tldr": "AI agent-tool startup founded by ex-Twitter CEO Parag Agrawal raises another $100M from Sequoia, hitting $2B valuation just months after its last raise. This signals massive investor confidence in AI agent infrastructure.",
-            "whyItMatters": [
-              "Business impact: Validates the AI agent-tool market as a high-growth sector, encouraging founders to build agent orchestration and infrastructure products.",
-              "Technical impact: Indicates that agent-tooling (e.g., for web automation, API integration) is becoming a critical layer, not just a niche."
-            ],
-            "whatToTry": {
-              "description": "Evaluate building or integrating agent-tooling capabilities into your product, especially for web automation and multi-step tasks. Consider partnering with or studying Parallel Web Systems' approach to understand market expectations.",
-              "note": "Focus on developer experience and reliability—these are key differentiators in agent-tool space."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777498758545-qsj8te",
-                "title": "Parallel Web Systems hits $2B valuation five months after its last big raise",
-                "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-qsj8te-0",
-                "label": "Parallel Web Systems",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-qsj8te-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-qsj8te-2",
-                "label": "AI Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 18:33:05 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1777498758763-tkb5sp",
-            "title": "AI evals are becoming the new compute bottleneck",
-            "tldr": "Hugging Face reports that evaluating AI models is now more expensive than training them, with costs skyrocketing due to complex benchmarks and longer context windows. This shift forces founders to rethink their development pipelines.",
-            "whyItMatters": [
-              "Business impact: Budgets for AI products must now account for evaluation costs, which can exceed training costs by 2-3x, affecting go-to-market timelines and resource allocation.",
-              "Technical impact: Founders need to optimize evaluation strategies (e.g., using smaller proxy benchmarks or caching) to avoid bottlenecks in model iteration and deployment."
-            ],
-            "whatToTry": {
-              "description": "Audit your current evaluation pipeline: identify which benchmarks are most expensive (e.g., long-context or multi-turn tasks) and consider replacing them with cheaper, correlated proxies like MMLU-Pro or custom task-specific tests. Use caching for repeated evaluations.",
-              "note": "Start with a cost-per-evaluation analysis to prioritize which benchmarks to optimize first."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1777498758763-tkb5sp",
-                "title": "AI evals are becoming the new compute bottleneck",
-                "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1777498758763-tkb5sp-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777498758763-tkb5sp-1",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 16:45:09 GMT"
-          },
-          {
-            "id": "hn-47949642",
-            "title": "Mistral Medium 3.5: New Open-Weight Model for Remote Agents",
-            "tldr": "Mistral released Medium 3.5, an open-weight model optimized for remote agent tasks, sparking significant discussion on HackerNews. This matters because it offers a competitive alternative for building autonomous agents with a focus on reliability and cost-efficiency.",
-            "whyItMatters": [
-              "Business impact: Enables founders to build more reliable and cost-effective AI agents for remote task automation, potentially reducing dependency on closed-source models.",
-              "Technical impact: Open-weight access allows fine-tuning and customization for specific agent workflows, improving performance in real-world deployments."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Mistral Medium 3.5 for your agent-based products by testing it on remote task scenarios like web scraping, API orchestration, or multi-step reasoning. Compare its latency and accuracy against your current model to see if it reduces costs.",
-              "note": "Start with a small pilot project to assess reliability before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-hn-47949642",
-                "title": "Mistral Medium 3.5",
-                "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-                "domain": "mistral.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-47949642-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-47949642-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-47949642-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-04-29T15:17:46Z"
-          },
-          {
-            "id": "rss-wired-ai-1777498758578-4081d0",
-            "title": "First Responders Flag Waymo Safety Decline",
-            "tldr": "Emergency responders report Waymo's autonomous vehicles are becoming more unpredictable, with one police official telling federal regulators the tech was deployed too quickly. This signals growing regulatory and operational risks for AV companies.",
-            "whyItMatters": [
-              "Business impact: Increased regulatory scrutiny could slow deployment and raise compliance costs for autonomous vehicle startups, affecting go-to-market timelines.",
-              "Technical impact: Founders building AI for safety-critical systems must prioritize edge-case handling and real-world validation to avoid similar backlash."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI system's edge-case performance by simulating real-world failure scenarios (e.g., emergency vehicle interactions) and establish a feedback loop with domain experts like first responders to catch issues early.",
-              "note": "Consider publishing a safety report to build trust with regulators and users."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777498758578-4081d0",
-                "title": "Emergency First Responders Say Waymos Are Getting Worse",
-                "url": "https://www.wired.com/story/emergency-first-responders-say-waymos-are-getting-worse/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777498758578-4081d0-0",
-                "label": "Autonomous Vehicles",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-4081d0-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-4081d0-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 20:45:37 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1777498758578-qixna9",
-            "title": "Deepfake Ads on TikTok: Why Taylor Swift's Likeness Is at Risk",
-            "tldr": "Researchers reveal scammers are using AI-manipulated celebrity interview footage on TikTok to create deepfake ads that trick users into sharing personal data. This highlights the urgent need for AI founders to build detection and verification tools.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products must prioritize deepfake detection to protect brand trust and user safety, as these scams erode confidence in digital platforms.",
-              "Technical impact: The use of generative AI to create convincing deepfakes from real footage underscores the need for advanced forensic tools that can identify manipulated media in real-time."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating a deepfake detection API (e.g., from companies like Sensity or Microsoft) into your product to automatically flag AI-manipulated content, especially for user-generated video or ad platforms.",
-              "note": "Start with a small pilot to test accuracy and false positive rates before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777498758578-qixna9",
-                "title": "Taylor Swift Wants to Trademark Her Likeness. These TikTok Deepfake Ads Show Why",
-                "url": "https://www.wired.com/story/taylor-swift-rihanna-tiktok-deepfake-ads/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777498758578-qixna9-0",
-                "label": "Deepfake",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-qixna9-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-qixna9-2",
-                "label": "TikTok",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 20:36:53 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777498758545-aewuxc",
-            "title": "Runway CEO: AI video is just the start, world models are next",
-            "tldr": "Runway CEO Cristóbal Valenzuela argues that AI video generation is a stepping stone to 'world models'—AI systems that simulate physics and reality. With $860M raised and a $5.3B valuation, Runway is positioning itself as a key player in this next frontier, competing with Google and OpenAI.",
-            "whyItMatters": [
-              "For founders building AI products: World models could unlock new capabilities in robotics, gaming, simulation, and autonomous systems, creating opportunities for startups to build on top of or integrate with these models.",
-              "Technical impact: The shift from video generation to world models implies a need for new architectures that understand causality and physics, which could change how AI is trained and deployed."
-            ],
-            "whatToTry": {
-              "description": "Explore Runway's current video generation API to prototype interactive or simulation-based features in your product. This will help you understand the current capabilities and limitations, and prepare for future world model integrations.",
-              "note": "Start with simple use cases like generating training data for computer vision or creating dynamic UI prototypes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777498758545-aewuxc",
-                "title": "Is AI video just a prequel? Runway’s CEO thinks world models are next",
-                "url": "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-aewuxc-0",
-                "label": "Runway",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-aewuxc-1",
-                "label": "World Models",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-aewuxc-2",
-                "label": "AI Video",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 18:59:44 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1777498758578-rgjl26",
-            "title": "SenseTime's Open-Source Image Model Runs on Chinese Chips",
-            "tldr": "SenseTime released an open-source image generation model optimized for Chinese-made chips, signaling a strategic pivot amid US sanctions. This matters for founders as it highlights the growing viability of non-NVIDIA hardware and open-source alternatives in the AI stack.",
-            "whyItMatters": [
-              "Business impact: Reduces dependency on NVIDIA GPUs, opening up cost-effective and geopolitically resilient hardware options for AI startups, especially those operating in or targeting markets with restricted access to US tech.",
-              "Technical impact: Demonstrates that high-performance image models can be optimized for alternative chip architectures, potentially lowering barriers for AI development in regions with limited access to advanced GPUs."
-            ],
-            "whatToTry": {
-              "description": "Evaluate SenseTime's open-source model for your image generation pipeline, especially if you're exploring cost savings or need to run on non-NVIDIA hardware. Test its performance on Chinese chips like Huawei Ascend or Cambricon to assess feasibility for your use case.",
-              "note": "Be aware of potential licensing and compliance issues when using models from sanctioned entities; consult legal counsel before integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1777498758578-rgjl26",
-                "title": "Sanctioned Chinese AI Firm SenseTime Releases Image Model Built for Speed",
-                "url": "https://www.wired.com/story/chinese-ai-giant-sensetime-is-running-its-new-model-on-chinese-chips/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1777498758578-rgjl26-0",
-                "label": "SenseTime",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-rgjl26-1",
-                "label": "Image Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-rgjl26-2",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1777498758578-rgjl26-3",
-                "label": "Chinese Chips",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 17:23:52 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1777498758763-8j8iku",
-            "title": "IBM's Granite 4.1 LLMs: Open-Source Power for Enterprise",
-            "tldr": "IBM released Granite 4.1, a family of open-source LLMs optimized for enterprise tasks like code generation, RAG, and tool use. Built with a transparent methodology, they offer strong performance on par with larger models, making them a viable alternative for founders seeking cost-effective, customizable AI.",
-            "whyItMatters": [
-              "Business impact: Provides a free, high-quality LLM option for building AI products without vendor lock-in or high API costs, especially for enterprise-focused applications.",
-              "Technical impact: Demonstrates that smaller, well-trained models can compete with larger ones, enabling faster inference and lower deployment costs for startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Granite 4.1 models for your use case by testing them on Hugging Face. Start with the 8B parameter version for code generation or RAG tasks, and compare its performance and latency against your current model to see if it reduces costs.",
-              "note": "These models are Apache 2.0 licensed, so you can fine-tune and deploy them commercially without restrictions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1777498758763-8j8iku",
-                "title": "Granite 4.1 LLMs: How They’re Built",
-                "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1777498758763-8j8iku-0",
-                "label": "Granite 4.1",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777498758763-8j8iku-1",
-                "label": "IBM",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1777498758763-8j8iku-2",
-                "label": "Open-Source LLM",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 15:01:48 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777498758545-3cfhdx",
-            "title": "Shapes app blends AI agents into human group chats",
-            "tldr": "Shapes launches a chat app where AI characters participate alongside humans in group conversations, signaling a new UX paradigm for AI integration in social and collaborative spaces.",
-            "whyItMatters": [
-              "Business impact: Opens new product categories for AI-native social apps and collaborative tools, potentially disrupting traditional chat platforms.",
-              "Technical impact: Demonstrates a practical use case for multi-agent systems in real-time, multi-user environments, requiring robust context management and natural language understanding."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating AI agents into your own product's chat or collaboration features—start by defining specific roles for AI (e.g., moderator, assistant, or creative contributor) and test with a small user group to gauge engagement and utility.",
-              "note": "Focus on clear AI identity and boundaries to avoid user confusion; consider using existing APIs like OpenAI or Anthropic for rapid prototyping."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777498758545-3cfhdx",
-                "title": "Meet Shapes, the app bringing humans and AI into the same group chats",
-                "url": "https://techcrunch.com/2026/04/29/meet-shapes-the-app-bringing-humans-and-ai-into-the-same-group-chats/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-3cfhdx-0",
-                "label": "Shapes",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-3cfhdx-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-3cfhdx-2",
-                "label": "social apps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1777498758545-bh6ogf",
-            "title": "Google adds 25M subs in Q1: YouTube & Google One surge",
-            "tldr": "Google reported 25M new paid subscriptions in Q1, totaling 350M, driven by YouTube and Google One growth. This signals strong consumer willingness to pay for AI-enhanced services, relevant for founders building subscription AI products.",
-            "whyItMatters": [
-              "Business impact: Validates subscription models for AI services; Google's scale suggests users pay for integrated AI features (e.g., YouTube AI recommendations, Google One AI storage perks).",
-              "Technical impact: Indicates demand for AI-powered personalization and cloud services; founders can leverage similar bundling strategies with AI features to boost retention."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's subscription model: test bundling AI features (e.g., personalized recommendations, smart storage) into a tiered plan, inspired by Google One's approach. Start with a free trial to gauge willingness to pay.",
-              "note": "Focus on clear value-add AI features that solve real user problems, not just gimmicks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1777498758545-bh6ogf",
-                "title": "Google gains 25M subscriptions in Q1, driven by YouTube and Google One",
-                "url": "https://techcrunch.com/2026/04/29/google-gains-25m-subscriptions-in-q1-driven-by-youtube-and-google-one/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-bh6ogf-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-bh6ogf-1",
-                "label": "Subscription Models",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1777498758545-bh6ogf-2",
-                "label": "Consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 29 Apr 2026 20:59:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
