@@ -444,6 +444,428 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-05-08-afternoon",
+        "period": "afternoon",
+        "date": "2026-05-08",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: ZAYA1-8B: Tiny MoE Matches DeepSeek-R1, Nears GPT-5, New Benchmark Exposes Silent Filtering Risks in Enterprise AI Agents, BALAR: Bayesian Active Reasoning Boosts LLM Multi-Turn Accuracy by 38%.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1778252681111-ne8t1x",
+            "title": "ZAYA1-8B: Tiny MoE Matches DeepSeek-R1, Nears GPT-5",
+            "tldr": "Zyphra's ZAYA1-8B, a 700M active parameter MoE model, matches or beats DeepSeek-R1-0528 on math/coding benchmarks and, with a novel test-time compute method (Markovian RSA), reaches 91.9% on AIME'25—narrowing the gap to giants like GPT-5. This is a breakthrough in efficiency for reasoning models.",
+            "whyItMatters": [
+              "Business impact: Enables high-quality reasoning on consumer hardware, drastically reducing inference costs for AI products that require complex math or code generation.",
+              "Technical impact: Introduces Markovian RSA, a test-time compute method that aggregates reasoning traces with minimal memory overhead, setting a new standard for efficient reasoning."
+            ],
+            "whatToTry": {
+              "description": "Evaluate ZAYA1-8B for your product's math or code reasoning tasks. If you're building on AMD hardware, leverage its full-stack AMD optimization for cost savings. Consider implementing Markovian RSA-like test-time compute to boost accuracy without proportional compute costs.",
+              "note": "The model is open-weight but not yet widely available on major platforms; check Zyphra's repo for access."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-ne8t1x",
+                "title": "ZAYA1-8B Technical Report",
+                "url": "https://arxiv.org/abs/2605.05365",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ne8t1x-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ne8t1x-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ne8t1x-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681111-yio1r6",
+            "title": "New Benchmark Exposes Silent Filtering Risks in Enterprise AI Agents",
+            "tldr": "A new benchmark, Partial Evidence Bench, reveals that enterprise AI agents often produce seemingly complete answers while silently omitting evidence outside authorization boundaries—a catastrophic failure mode. It provides deterministic tasks for due diligence, compliance, and security, showing that explicit fail-and-report behavior is safer than silent filtering.",
+            "whyItMatters": [
+              "Business impact: Founders building enterprise AI agents must address authorization-limited evidence to avoid compliance and legal risks; silent filtering can lead to incomplete or misleading outputs that harm trust and governance.",
+              "Technical impact: The benchmark offers a standardized way to test agentic systems for completeness awareness and gap reporting, enabling developers to improve safety without relying on human judges."
+            ],
+            "whatToTry": {
+              "description": "Integrate explicit fail-and-report mechanisms into your agent's retrieval pipeline: when evidence is outside authorization bounds, have the agent clearly state the limitation rather than silently filtering. Use the Partial Evidence Bench's 72 tasks to test your system's completeness awareness and gap-report quality.",
+              "note": "Start with the due diligence scenario family to catch common failure modes early in development."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-yio1r6",
+                "title": "Partial Evidence Bench: Benchmarking Authorization-Limited Evidence in Agentic Systems",
+                "url": "https://arxiv.org/abs/2605.05379",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-yio1r6-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-yio1r6-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681111-ese8gn",
+            "title": "BALAR: Bayesian Active Reasoning Boosts LLM Multi-Turn Accuracy by 38%",
+            "tldr": "A new no-fine-tuning algorithm, BALAR, uses Bayesian belief updates and mutual information maximization to guide LLMs in asking the right clarifying questions during multi-turn interactions, achieving up to 38.5% higher accuracy on reasoning benchmarks.",
+            "whyItMatters": [
+              "For founders building conversational AI or diagnostic tools, BALAR offers a drop-in method to dramatically improve task completion without costly model retraining.",
+              "The approach reduces hallucination and wasted turns by actively reasoning about missing information, which is critical for high-stakes applications like clinical diagnosis or customer support."
+            ],
+            "whatToTry": {
+              "description": "Implement BALAR's outer-loop in your LLM agent: maintain a structured belief over latent states (e.g., possible diagnoses or puzzle states), and use expected mutual information to select the next clarifying question to ask the user, dynamically expanding states when needed.",
+              "note": "Start with a small domain (e.g., troubleshooting) to test the belief update mechanism before scaling to complex tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-ese8gn",
+                "title": "BALAR : A Bayesian Agentic Loop for Active Reasoning",
+                "url": "https://arxiv.org/abs/2605.05386",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ese8gn-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ese8gn-1",
+                "label": "reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ese8gn-2",
+                "label": "multi-turn",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681111-bjgcuk",
+            "title": "PRISM: Boosting Embodied AI with VLM-LLM Dialogue",
+            "tldr": "PRISM introduces a closed-loop framework where an LLM actively queries a VLM to extract task-critical visual info, outperforming state-of-the-art on ALFWorld and R2R benchmarks. This eliminates passive perception gaps in multimodal agents.",
+            "whyItMatters": [
+              "For founders building embodied AI or robotics: PRISM offers a plug-and-play method to improve VLM-based perception without retraining, enabling more reliable autonomous agents in complex environments.",
+              "Technically, it shows how dynamic question-answer pipelines can replace static descriptions, reducing hallucination and boosting task success rates—a key insight for any multimodal system."
+            ],
+            "whatToTry": {
+              "description": "Implement a similar closed-loop perception pipeline in your agent: have your LLM generate goal-oriented questions about the scene, feed them to a VLM, and use the answers to build a compact, task-relevant description. Test on your own navigation or manipulation tasks.",
+              "note": "Start with a simple rule-based question generator to avoid complexity; PRISM's approach is fully automatic but requires careful prompt engineering."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-bjgcuk",
+                "title": "PRISM: Perception Reasoning Interleaved for Sequential Decision Making",
+                "url": "https://arxiv.org/abs/2605.05407",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-bjgcuk-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-bjgcuk-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681111-gee48i",
+            "title": "FinAgent-RAG: Agentic RAG for Financial QA Boosts Accuracy 9%",
+            "tldr": "A new agentic RAG framework, FinAgent-RAG, iteratively retrieves and reasons over financial documents, using Python code for arithmetic and a router to cut API costs by 41%. It outperforms baselines by up to 9.32% on three benchmarks, signaling a shift toward multi-step, self-verifying retrieval for complex domains.",
+            "whyItMatters": [
+              "Business impact: Reduces API costs by 41% while improving accuracy, making it cost-effective for high-volume financial QA applications.",
+              "Technical impact: Introduces a dynamic router that allocates compute based on question complexity, a pattern applicable to any domain requiring multi-step reasoning over heterogeneous data."
+            ],
+            "whatToTry": {
+              "description": "For founders building financial or document-heavy AI products: prototype a multi-step retrieval loop with a 'program-of-thought' module that generates code for numerical reasoning instead of relying on LLM arithmetic. Use a simple complexity classifier (e.g., rule-based or small model) to route simple queries to cheaper, single-pass RAG and complex ones to iterative agentic RAG.",
+              "note": "Start with a small dataset like FinQA to validate cost savings before scaling to production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-gee48i",
+                "title": "Agentic Retrieval-Augmented Generation for Financial Document Question Answering",
+                "url": "https://arxiv.org/abs/2605.05409",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-gee48i-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-gee48i-1",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-gee48i-2",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681111-ywm1ee",
+            "title": "LaTA: FERPA-Compliant Local LLM Autograder for STEM",
+            "tldr": "Researchers at Oregon State University built LaTA, an open-source autograder running entirely on local hardware (a Mac Studio) using a 120B open-weight LLM, achieving near-zero grading error and improving student exam performance by 8-11%. This is a breakthrough for privacy-compliant, cost-effective AI grading in higher ed.",
+            "whyItMatters": [
+              "Enables FERPA-compliant AI grading without third-party API risks, a major barrier for universities adopting LLMs in coursework.",
+              "Demonstrates that local LLMs can handle complex STEM grading (LaTeX, chain-of-thought) at scale with low error rates, opening new product opportunities for edtech founders."
+            ],
+            "whatToTry": {
+              "description": "If you're building an edtech or assessment tool, explore integrating local open-weight LLMs (like Llama or Qwen) for grading tasks. Start with a small pilot using a YAML rubric and chain-of-thought prompting to validate accuracy on your specific subject matter.",
+              "note": "Consider hardware requirements: LaTA used a Mac Studio, but cloud instances with GPUs can also work for local deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681111-ywm1ee",
+                "title": "LaTA: A Drop-in, FERPA-Compliant Local-LLM Autograder for Upper-Division STEM Coursework",
+                "url": "https://arxiv.org/abs/2605.05410",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ywm1ee-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ywm1ee-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681111-ywm1ee-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1778252680773-v4jm8y",
+            "title": "AI Kids' Toys: The Next Frontier or a Legal Minefield?",
+            "tldr": "Wired reports on the surge of AI-powered toys that can converse, tell stories, and adapt to children, sparking excitement and regulatory backlash. For founders, this signals a high-risk, high-reward market where innovation must navigate privacy and safety laws.",
+            "whyItMatters": [
+              "Business impact: Opens a new consumer market for AI products, but requires navigating complex child privacy regulations (e.g., COPPA) and potential bans.",
+              "Technical impact: Demands robust on-device AI for low latency, privacy, and safety, pushing edge computing and content moderation innovations."
+            ],
+            "whatToTry": {
+              "description": "Explore building a prototype AI toy with a focus on privacy-first, on-device processing (e.g., using small language models like TinyLlama) and age-appropriate content filters. Partner with child development experts to design ethical interaction patterns.",
+              "note": "Start with a niche use case (e.g., educational storytelling) to reduce regulatory risk and test market fit."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1778252680773-v4jm8y",
+                "title": "The New Wild West of AI Kids’ Toys",
+                "url": "https://www.wired.com/story/the-new-wild-west-of-ai-kids-toys/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1778252680773-v4jm8y-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1778252680773-v4jm8y-1",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-hugging-face-blog-1778252681006-vrh9io",
+            "title": "Fine-Tune Clinical AI on AMD GPUs: No CUDA Needed",
+            "tldr": "A team fine-tuned a medical QA model on AMD ROCm GPUs, proving that CUDA-free AI development is viable for specialized domains like healthcare. This opens up cost-effective alternatives for founders building AI products.",
+            "whyItMatters": [
+              "Reduces dependency on NVIDIA hardware, potentially lowering costs and supply chain risks for AI startups.",
+              "Demonstrates that clinical AI can be developed on AMD GPUs, expanding access to medical AI innovation."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product in a regulated domain (e.g., healthcare, legal), experiment with fine-tuning a small model (like MedQA) on AMD ROCm GPUs to test performance and cost savings. Start with a proof-of-concept using Hugging Face's Transformers library and ROCm-compatible Docker images.",
+              "note": "Ensure your model and dependencies are ROCm-compatible; some libraries may require minor adjustments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1778252681006-vrh9io",
+                "title": "MedQA: Fine-Tuning a Clinical AI on AMD ROCm — No CUDA Required",
+                "url": "https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/medqa",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1778252681006-vrh9io-0",
+                "label": "AMD ROCm",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1778252681006-vrh9io-1",
+                "label": "Fine-tuning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1778252681006-vrh9io-2",
+                "label": "Medical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 07:54:18 GMT"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778252680758-zjr6s7",
+            "title": "Basata: AI for medical admin, not just hype",
+            "tldr": "Basata is using AI to automate back-office medical tasks like scheduling and billing, reducing admin burden for specialists. This is a practical example of AI augmenting workers in a high-stakes industry, with founders noting staff are more worried about burnout than job loss.",
+            "whyItMatters": [
+              "For founders building AI products in regulated industries, this shows a clear path to adoption by focusing on pain points (admin overload) rather than full automation.",
+              "Technically, it highlights the need for AI that integrates with existing workflows (e.g., EHR systems) and handles messy, real-world data like phone calls and forms."
+            ],
+            "whatToTry": {
+              "description": "Identify a specific, high-friction back-office task in a target industry (e.g., medical billing, legal intake) and prototype an AI agent that automates just that step, using existing APIs or simple LLM calls. Test with a small group of users to validate demand before scaling.",
+              "note": "Focus on augmentation, not replacement—frame it as a tool to reduce burnout, which resonates more with workers."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778252680758-zjr6s7",
+                "title": "Why you can never get your doctor to call you back",
+                "url": "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778252680758-zjr6s7-0",
+                "label": "Healthcare",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778252680758-zjr6s7-1",
+                "label": "AI Agent",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778252680758-zjr6s7-2",
+                "label": "Automation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 04:42:29 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778252681110-v6o317",
+            "title": "New interpretable models reveal why annotators disagree on AI safety",
+            "tldr": "Researchers introduce Annotator Policy Models (APMs) that learn annotators' internal safety policies from labeling behavior alone, distinguishing between operational failures, policy ambiguity, and value pluralism as sources of disagreement. This enables better quality control, policy clarification, and deliberation without extra annotation burden.",
+            "whyItMatters": [
+              "For AI product founders: Improves data annotation quality and reduces costly rework by identifying root causes of disagreement in safety labeling, directly impacting model reliability and deployment readiness.",
+              "Technically: APMs provide interpretable insights into annotator reasoning, enabling more robust safety alignment and reducing false positives/negatives in content moderation systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products with safety or content moderation pipelines, pilot APMs on your existing annotation data to diagnose disagreement sources. Start by analyzing a subset of your safety labels to see if disagreements stem from policy ambiguity (clarify guidelines) or value pluralism (consider diverse perspectives in training data).",
+              "note": "APMs require no extra annotation effort—just existing labels—making them low-risk to test."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778252681110-v6o317",
+                "title": "Understanding Annotator Safety Policy with Interpretability",
+                "url": "https://arxiv.org/abs/2605.05329",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778252681110-v6o317-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778252681110-v6o317-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 08 May 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
