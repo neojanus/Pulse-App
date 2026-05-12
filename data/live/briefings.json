@@ -414,6 +414,438 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-05-12-afternoon",
+        "period": "afternoon",
+        "date": "2026-05-12",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Vapi hits $500M valuation, beats 40 rivals for Amazon Ring deal, Thinking Machines builds AI that listens while talking, VLM Reliability: Attention Maps Don't Predict Correctness.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1778601369735-xy4snm",
+            "title": "Vapi hits $500M valuation, beats 40 rivals for Amazon Ring deal",
+            "tldr": "AI voice startup Vapi reached a $500M valuation after Amazon Ring chose its platform over 40 competitors, with enterprise business growing 10x since early 2025 as companies shift customer support and sales calls to AI agents.",
+            "whyItMatters": [
+              "Validates the massive market demand for AI voice agents in enterprise customer support and sales, signaling a gold rush for founders building in this space.",
+              "Demonstrates that specialized voice AI platforms can win against tech giants, creating opportunities for startups to differentiate on reliability and integration."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own customer support or sales workflows for automation potential with AI voice agents. Start with a high-volume, low-complexity use case like appointment scheduling or order status inquiries to test feasibility and ROI.",
+              "note": "Focus on reliability and latency—Vapi likely won on these metrics. Consider building a demo that handles edge cases gracefully."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778601369735-xy4snm",
+                "title": "AI voice startup Vapi hits $500M valuation after winning Amazon Ring over 40 rivals",
+                "url": "https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-xy4snm-0",
+                "label": "Vapi",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-xy4snm-1",
+                "label": "Voice AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-xy4snm-2",
+                "label": "Enterprise",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 11:30:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778601369735-t77i7e",
+            "title": "Thinking Machines builds AI that listens while talking",
+            "tldr": "Thinking Machines is developing a real-time AI model that processes user input and generates responses simultaneously, mimicking a phone call rather than a text chain. This could revolutionize conversational AI latency and naturalness.",
+            "whyItMatters": [
+              "Enables more natural, human-like interactions for voice-based AI products, reducing awkward pauses and improving user experience.",
+              "Technical breakthrough in streaming inference could unlock new use cases in customer service, live translation, and real-time assistants."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI product's latency in conversational flows. If you're building voice interfaces, prototype a streaming architecture that interleaves input processing with output generation to reduce perceived wait time.",
+              "note": "This is early-stage research; monitor for API releases or open-source implementations before committing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778601369735-t77i7e",
+                "title": "Thinking Machines wants to build an AI that actually listens while it talks",
+                "url": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-t77i7e-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-t77i7e-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 04:52:35 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370061-qgzya6",
+            "title": "VLM Reliability: Attention Maps Don't Predict Correctness",
+            "tldr": "A new mechanistic study of VLMs (LLaVA, PaliGemma, Qwen2-VL) reveals that attention maps are near-zero predictors of correctness, while hidden-state geometry and self-consistency are far more reliable. This challenges common assumptions and offers practical guidance for building more trustworthy AI products.",
+            "whyItMatters": [
+              "Founders relying on VLMs for visual QA or object identification can't trust attention maps as a reliability signal—hidden-state probes and self-consistency checks are better alternatives.",
+              "Architecture choice matters: late-fusion models (like LLaVA) have fragile reliability bottlenecks, while early-fusion models (PaliGemma, Qwen2-VL) are more robust to neuron ablations, guiding model selection for production systems."
+            ],
+            "whatToTry": {
+              "description": "Implement a self-consistency check in your VLM pipeline: run the model multiple times (e.g., K=10) on the same input and measure answer agreement. Use this as a reliability score instead of attention-map sharpness. For early-fusion models, you can also probe hidden states for correctness without major performance hits.",
+              "note": "Self-consistency at K=10 increases inference cost 10x, so use it selectively for high-stakes queries or as a validation step."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370061-qgzya6",
+                "title": "Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits",
+                "url": "https://arxiv.org/abs/2605.08200",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370061-qgzya6-0",
+                "label": "LLaVA",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370061-qgzya6-1",
+                "label": "PaliGemma",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370061-qgzya6-2",
+                "label": "Qwen2-VL",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370061-qgzya6-3",
+                "label": "VLM",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370061-qgzya6-4",
+                "label": "Reliability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-3l4n5o",
+            "title": "Grid Overlay Boosts LLM Chart Accuracy: Spatial > Semantic",
+            "tldr": "A new study shows that overlaying a coordinate grid on chart images before feeding them to multimodal LLMs reduces data extraction error by 6% (SMAPE from 25.5% to 19.5%), outperforming semantic methods like Chain-of-Thought. This provides a simple, actionable technique for improving AI accuracy on visual data tasks.",
+            "whyItMatters": [
+              "Business impact: Founders building document analysis or data extraction tools can immediately implement this grid overlay technique to improve product accuracy without retraining models, reducing error rates and increasing customer trust.",
+              "Technical impact: Challenges the assumption that high-level reasoning (semantic priming) is always best; suggests that explicit spatial context is more reliable for current multimodal models, guiding future prompt engineering strategies."
+            ],
+            "whatToTry": {
+              "description": "For any multimodal LLM task involving charts or diagrams, preprocess images by overlaying a transparent coordinate grid (e.g., using OpenCV or PIL) before sending to the model. Test on your own dataset to quantify accuracy gains.",
+              "note": "Start with a simple grid (e.g., 10x10 divisions) and adjust spacing based on chart complexity. This is a zero-cost optimization that can be A/B tested quickly."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-3l4n5o",
+                "title": "Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction",
+                "url": "https://arxiv.org/abs/2605.08220",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-3l4n5o-0",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-3l4n5o-1",
+                "label": "Multimodal LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-3l4n5o-2",
+                "label": "Data Extraction",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-99ypxz",
+            "title": "Auto-Rubric: AI reward signals that resist hacking",
+            "tldr": "A new framework, ARR, replaces opaque scalar rewards with explicit, interpretable rubrics for aligning multimodal AI models, reducing reward hacking and bias. This is a significant step toward more reliable and controllable AI training.",
+            "whyItMatters": [
+              "Business impact: Reduces risk of reward hacking in production AI systems, leading to more predictable and trustworthy model behavior, critical for customer-facing products.",
+              "Technical impact: Provides a data-efficient method to generate structured reward signals, enabling better alignment with complex human preferences without massive preference datasets."
+            ],
+            "whatToTry": {
+              "description": "If you're training or fine-tuning a multimodal generative model, experiment with ARR's rubric generation to replace scalar reward models. Start by defining a few key quality dimensions for your use case (e.g., relevance, safety, creativity) and use a VLM to auto-generate rubrics for your training prompts.",
+              "note": "This is a research paper; implementation details are not yet available as a library. Monitor for open-source releases or integrate the concept into your own RLHF pipeline."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-99ypxz",
+                "title": "Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria",
+                "url": "https://arxiv.org/abs/2605.08354",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-99ypxz-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-99ypxz-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-j0oge0",
+            "title": "New Embeddings for Preference, Not Semantics",
+            "tldr": "A new paper from ArXiv proposes embeddings optimized for preferential similarity (agreement) rather than semantic similarity, improving preference prediction across 11 deliberation datasets. This matters for founders building AI systems for collective decision-making, recommendation, or user alignment.",
+            "whyItMatters": [
+              "Enables more accurate AI-driven consensus tools by aligning embeddings with user preferences, not just text similarity",
+              "Reduces reliance on semantic correlations that fail when style and stance diverge, improving robustness in real-world applications"
+            ],
+            "whatToTry": {
+              "description": "If you're building a product that aggregates user opinions or recommends content, experiment with training a small preference embedding model on synthetic data that breaks the correlation between style and stance. Use the paper's approach to fine-tune an existing embedding model on your own preference-labeled data for better alignment.",
+              "note": "Start with a small dataset of paired opinions with known stances to test the effect before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-j0oge0",
+                "title": "Embeddings for Preferences, Not Semantics",
+                "url": "https://arxiv.org/abs/2605.08360",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-j0oge0-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-j0oge0-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-efscb9",
+            "title": "New Framework: Capability Elicitation vs. Creation in Post-Training",
+            "tldr": "A new paper from ArXiv introduces a free-energy perspective to distinguish between capability elicitation (reweighting existing behaviors) and capability creation (expanding reachable behaviors) in LLM post-training. This reframes the SFT vs. RL debate, offering a practical lens for founders to optimize training strategies and avoid over-investing in methods that merely reweight rather than expand model capabilities.",
+            "whyItMatters": [
+              "Business impact: Helps founders decide whether to invest in SFT or RL for specific use cases, potentially saving compute costs by focusing on elicitation when capabilities already exist.",
+              "Technical impact: Provides a clear operational definition (accessible support) to evaluate post-training methods, enabling more targeted model improvement and better resource allocation."
+            ],
+            "whatToTry": {
+              "description": "Audit your current post-training pipeline by identifying whether your SFT or RL steps are merely reweighting behaviors within the model's existing accessible support or actually expanding it. Use small-scale experiments with finite compute budgets to measure changes in behavioral reach, then adjust your training mix accordingly.",
+              "note": "Start with a simple probe: test if your model can produce a desired behavior with minimal prompting before investing in extensive RL fine-tuning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-efscb9",
+                "title": "On Distinguishing Capability Elicitation from Capability Creation in Post-Training: A Free-Energy Perspective",
+                "url": "https://arxiv.org/abs/2605.08368",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-efscb9-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-efscb9-1",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-efscb9-2",
+                "label": "training",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-xmpsr0",
+            "title": "MemQ: Q-Learning for Self-Evolving Memory Agents",
+            "tldr": "A new research paper introduces MemQ, a method that applies Q-learning with eligibility traces to LLM agent memory, enabling agents to learn which memories are most valuable for future tasks by propagating credit through a provenance DAG. This significantly improves performance on multi-step tasks like code generation and embodied reasoning.",
+            "whyItMatters": [
+              "For founders building autonomous AI agents, this offers a principled way to make agents self-improve over time without manual memory curation, potentially reducing the need for complex prompt engineering or fine-tuning.",
+              "The approach is model-agnostic and can be integrated into existing agent frameworks, enabling agents to learn from their own history and adapt to new tasks more efficiently."
+            ],
+            "whatToTry": {
+              "description": "If you're building an agent that performs multi-step tasks (e.g., code generation, OS interaction), consider implementing a provenance DAG to track which memories were used to create new memories, then apply TD(λ) eligibility traces to assign credit to those memories. Start with γ=0.9 and λ=0.8 as recommended in the paper for deep chains.",
+              "note": "The paper provides guidance on parameter selection based on task structure; for single-step tasks, simpler methods may suffice."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-xmpsr0",
+                "title": "MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs",
+                "url": "https://arxiv.org/abs/2605.08374",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-xmpsr0-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-xmpsr0-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778601370062-t456do",
+            "title": "CoCoDA: Co-evolving DAG for Tool-Augmented Agents",
+            "tldr": "CoCoDA introduces a framework that co-evolves a planner and its tool library using a compositional code DAG, enabling sublinear retrieval and efficient scaling of tool libraries without blowing up context costs. This is a significant step for building scalable, tool-augmented AI agents.",
+            "whyItMatters": [
+              "Business impact: Enables building AI agents that can manage large, growing tool libraries without incurring prohibitive prompt costs, making them more practical for real-world applications with complex workflows.",
+              "Technical impact: Introduces a novel approach to tool retrieval using typed DAGs and symbolic unification, achieving sublinear retrieval time and reducing context materialization, which is a key bottleneck in current tool-use systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building a tool-augmented agent, consider structuring your tool library as a DAG with typed signatures and pre/post-conditions. Implement a retrieval pipeline that first prunes by signature matching, then ranks by descriptions, and finally filters by behavioral specs to keep context costs low.",
+              "note": "This is a research paper, not a production-ready library. Start by prototyping the DAG structure and retrieval logic on a small set of tools to validate the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778601370062-t456do",
+                "title": "CoCoDA: Co-evolving Compositional DAG for Tool-Augmented Agents",
+                "url": "https://arxiv.org/abs/2605.08399",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-t456do-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-t456do-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778601370062-t456do-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778601369735-4j77kd",
+            "title": "Dessn raises $6M for AI design tool that edits production code",
+            "tldr": "Dessn raised $6M to build an AI design tool that works directly with production codebases, enabling real-time design-to-code edits. This signals a shift from static mockups to live code manipulation, relevant for founders building AI products that bridge design and engineering.",
+            "whyItMatters": [
+              "Business impact: Reduces friction between design and engineering teams, potentially speeding up product iteration and lowering development costs for AI product startups.",
+              "Technical impact: Demonstrates a new category of AI tools that operate on production code, not just prototypes, which could influence how AI products handle UI/UX updates."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current design-to-code workflow and identify bottlenecks where an AI tool like Dessn could automate production code edits. Consider prototyping a simple integration with your codebase to test feasibility.",
+              "note": "Start with a non-critical component to minimize risk while assessing the tool's accuracy and impact on code quality."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778601369735-4j77kd",
+                "title": "Dessn raises $6M for its production focused design tool",
+                "url": "https://techcrunch.com/2026/05/12/dessn-raises-6m-for-its-production-focused-design-tool/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-4j77kd-0",
+                "label": "Dessn",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-4j77kd-1",
+                "label": "AI design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778601369735-4j77kd-2",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 13:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
