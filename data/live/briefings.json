@@ -1,7 +1,425 @@
 [
   {
-    "date": "2026-05-11",
+    "date": "2026-05-12",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-05-12-morning",
+        "period": "morning",
+        "date": "2026-05-12",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Thinking Machines builds AI that listens while talking, VLMs: Attention Maps Don't Predict Reliability—New Insights, Grid Overlay Boosts LLM Chart Data Extraction Accuracy.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1778580135557-g1rx1q",
+            "title": "Thinking Machines builds AI that listens while talking",
+            "tldr": "Thinking Machines is developing a model that processes user input and generates responses simultaneously, mimicking a real-time phone call rather than turn-based chat. This could revolutionize conversational AI latency and naturalness.",
+            "whyItMatters": [
+              "Enables more natural, human-like interactions for voice assistants and customer service bots, reducing awkward pauses and improving user experience.",
+              "Technical breakthrough in streaming inference could set new standards for real-time AI, forcing competitors to innovate or risk obsolescence in voice-first products."
+            ],
+            "whatToTry": {
+              "description": "If you're building a voice-based AI product, prototype a streaming architecture that processes input chunks while generating partial responses, using techniques like speculative decoding or chunked attention. Test with users to measure perceived responsiveness.",
+              "note": "This is early-stage research; expect high compute costs and potential quality trade-offs until optimized."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778580135557-g1rx1q",
+                "title": "Thinking Machines wants to build an AI that actually listens while it talks",
+                "url": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778580135557-g1rx1q-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778580135557-g1rx1q-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 04:52:35 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-nhe6br",
+            "title": "VLMs: Attention Maps Don't Predict Reliability—New Insights",
+            "tldr": "A new study debunks the common assumption that sharp attention maps in VLMs indicate correctness, finding attention is a near-zero predictor. It reveals that self-consistency is the strongest behavioral signal, and architectural choices (late vs. early fusion) drastically affect reliability localization, with implications for building more trustworthy AI products.",
+            "whyItMatters": [
+              "Business impact: Founders relying on VLMs for visual QA or object identification can't trust attention maps as reliability indicators; they must implement self-consistency checks or invest in early-fusion architectures for robustness.",
+              "Technical impact: The study provides a causal framework (VRP) to probe VLM reliability, enabling targeted debugging and design of more resilient models, especially for high-stakes applications."
+            ],
+            "whatToTry": {
+              "description": "If you're building with VLMs, replace attention-map-based confidence heuristics with self-consistency checks (e.g., run inference K=10 times and measure answer agreement). For critical tasks, prefer early-fusion models like PaliGemma or Qwen2-VL over late-fusion ones like LLaVA to avoid fragile bottlenecks.",
+              "note": "Self-consistency at K=10 increases inference cost 10x, so balance with latency requirements."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-nhe6br",
+                "title": "Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits",
+                "url": "https://arxiv.org/abs/2605.08200",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-nhe6br-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-nhe6br-1",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-nhe6br-2",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-di0ixe",
+            "title": "Grid Overlay Boosts LLM Chart Data Extraction Accuracy",
+            "tldr": "A new paper shows that adding a coordinate grid to chart images before feeding them to multimodal LLMs reduces extraction error from 25.5% to 19.5%, outperforming semantic methods like Chain-of-Thought. This is a simple, actionable technique for improving AI accuracy on visual data tasks.",
+            "whyItMatters": [
+              "For founders building AI products that extract data from charts, diagrams, or any spatial visual, this offers a low-effort, high-impact optimization without model changes.",
+              "It challenges the assumption that complex semantic prompting is always best, suggesting spatial context is more reliable for current multimodal models."
+            ],
+            "whatToTry": {
+              "description": "When processing chart images with multimodal LLMs, preprocess the image by overlaying a coordinate grid (e.g., using OpenCV or PIL) before passing it to the model. Test this on your own dataset to see if it improves extraction accuracy.",
+              "note": "Start with a simple grid (e.g., 10x10) and adjust spacing based on chart complexity. This works best for tasks requiring precise numerical or positional data extraction."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-di0ixe",
+                "title": "Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction",
+                "url": "https://arxiv.org/abs/2605.08220",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-di0ixe-0",
+                "label": "Multimodal LLMs",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-di0ixe-1",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-di0ixe-2",
+                "label": "Data Extraction",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-57cetp",
+            "title": "Auto-Rubric: New AI Alignment Method Beats RLHF Vulnerabilities",
+            "tldr": "A new framework, Auto-Rubric as Reward (ARR), replaces opaque scalar rewards with explicit, interpretable rubrics for aligning multimodal generative models, reducing reward hacking and bias. This makes AI alignment more transparent and robust for founders building products reliant on human feedback.",
+            "whyItMatters": [
+              "Business impact: Reduces risk of reward hacking in production AI systems, leading to more reliable and trustworthy outputs, critical for customer-facing products.",
+              "Technical impact: Enables zero-shot and few-shot alignment without extensive human annotation, lowering the cost and complexity of fine-tuning multimodal models."
+            ],
+            "whatToTry": {
+              "description": "If you're using RLHF or preference-based alignment for a multimodal model (e.g., image generation, video analysis), experiment with ARR's rubric-based approach to replace scalar rewards. Start by defining explicit quality criteria for your task (e.g., 'composition', 'relevance', 'style') and test if it reduces positional bias or reward hacking in your pipeline.",
+              "note": "ARR is still research-stage; validate on your specific use case before production deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-57cetp",
+                "title": "Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria",
+                "url": "https://arxiv.org/abs/2605.08354",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-57cetp-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-57cetp-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-gyvc6a",
+            "title": "Preference Embeddings Beat Semantics for AI Decision-Making",
+            "tldr": "New research shows standard text embeddings fail at capturing user preferences for collective decision-making, proposing a method to train embeddings that prioritize stance over style, improving preference prediction across 11 datasets.",
+            "whyItMatters": [
+              "Enables more accurate AI-driven collective decision-making tools (e.g., for community feedback, product prioritization) by aligning embeddings with actual user preferences rather than semantic similarity.",
+              "Provides a practical training approach using synthetic data to break the correlation between style and stance, making it easier for founders to build preference-aware systems without massive labeled datasets."
+            ],
+            "whatToTry": {
+              "description": "If you're building a system that aggregates user opinions (e.g., for feature requests or policy feedback), experiment with fine-tuning a small embedding model on synthetic data that pairs opposing stances with similar wording to decouple style from preference. Then test it on your own preference prediction tasks.",
+              "note": "Start with a small model like MiniLM to keep costs low; the paper's method is designed to be data-efficient."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-gyvc6a",
+                "title": "Embeddings for Preferences, Not Semantics",
+                "url": "https://arxiv.org/abs/2605.08360",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-gyvc6a-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-gyvc6a-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-kzadzz",
+            "title": "MemQ: Q-Learning for Self-Evolving Memory Agents on DAGs",
+            "tldr": "MemQ applies TD(λ) eligibility traces to memory Q-values over provenance DAGs, enabling LLM agents to learn which memories are most valuable for future tasks. It achieves state-of-the-art results across six benchmarks, with biggest gains on multi-step tasks (+5.7 pp).",
+            "whyItMatters": [
+              "Business impact: Enables AI agents to autonomously improve their memory retrieval strategies over time, reducing the need for manual prompt engineering and fine-tuning in production systems.",
+              "Technical impact: Introduces a principled framework (Exogenous-Context MDP) for credit assignment in memory-augmented LLMs, replacing temporal distance with structural proximity via DAG depth."
+            ],
+            "whatToTry": {
+              "description": "If building agentic systems with long-term memory, prototype a memory scoring mechanism that tracks which retrieved memories lead to successful task completions, then use a decayed credit assignment (e.g., based on dependency depth) to prioritize high-value memories for future retrieval.",
+              "note": "Start with simple γ and λ values (e.g., 0.9 and 0.8) and tune based on your task's dependency chain length."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-kzadzz",
+                "title": "MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs",
+                "url": "https://arxiv.org/abs/2605.08374",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-kzadzz-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-kzadzz-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-w9i9am",
+            "title": "CoCoDA: Co-evolving DAG for Tool-Augmented Agents",
+            "tldr": "CoCoDA introduces a framework where tool libraries and planners co-evolve using a compositional code DAG, enabling sublinear retrieval and efficient scaling of tool-augmented language models. This addresses a key bottleneck for founders building agentic systems with growing tool sets.",
+            "whyItMatters": [
+              "Business impact: Reduces prompt costs and enables scalable tool libraries for AI agents, making it feasible to deploy complex multi-tool systems without exploding inference costs.",
+              "Technical impact: Introduces typed DAG retrieval and DAG-induced rewards, offering a principled way to manage tool composition and evolution, which can improve agent reliability and performance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current tool-augmented agent's tool library structure. If you're using flat or text-indexed memories, consider prototyping a DAG-based approach where tools are nodes with typed signatures and pre/post-conditions. Start by categorizing your existing tools into primitive and composite types, then implement a simple signature-based pruning step to reduce retrieval candidates before full context materialization.",
+              "note": "This is a research paper, not a production-ready library. Expect to adapt the concepts to your specific stack and validate with your own benchmarks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-w9i9am",
+                "title": "CoCoDA: Co-evolving Compositional DAG for Tool-Augmented Agents",
+                "url": "https://arxiv.org/abs/2605.08399",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-w9i9am-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-w9i9am-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-w9i9am-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1778580135557-rvrqq7",
+            "title": "GM Lays Off IT Workers to Hire AI Talent: Signal for Founders",
+            "tldr": "GM laid off hundreds of IT workers to hire staff with stronger AI skills, including AI-native development, data engineering, and prompt engineering. This signals a major industry shift toward AI-first hiring that founders can leverage for talent acquisition and product strategy.",
+            "whyItMatters": [
+              "Business impact: Demonstrates that large enterprises are prioritizing AI skills over traditional IT roles, creating a talent market shift that startups can exploit by hiring displaced workers or targeting AI-savvy candidates.",
+              "Technical impact: Highlights demand for AI-native development, agent/model development, and prompt engineering, suggesting that founders should invest in these skills to stay competitive and align with enterprise needs."
+            ],
+            "whatToTry": {
+              "description": "Review your hiring strategy: prioritize AI-native roles (e.g., prompt engineers, AI workflow designers) over general IT positions. Consider recruiting from laid-off IT workers who may have transferable skills, and update your product roadmap to emphasize AI integration for enterprise clients.",
+              "note": "Focus on building AI workflows that automate IT tasks—this is where enterprise demand is growing fastest."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1778580135557-rvrqq7",
+                "title": "GM just laid off hundreds of IT workers to hire those with stronger AI skills",
+                "url": "https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1778580135557-rvrqq7-0",
+                "label": "Industry",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778580135557-rvrqq7-1",
+                "label": "Talent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1778580135557-rvrqq7-2",
+                "label": "Enterprise",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 11 May 2026 23:04:10 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-6tuxgq",
+            "title": "Capability Elicitation vs. Creation: A New Lens for Post-Training",
+            "tldr": "A new paper introduces a free-energy framework to distinguish between capability elicitation (reweighting existing behaviors) and capability creation (expanding reachable behaviors) in LLM post-training, challenging the simplistic SFT vs. RL dichotomy.",
+            "whyItMatters": [
+              "Helps founders decide whether to invest in more data collection (elicitation) vs. novel training methods (creation) for their AI products.",
+              "Provides a theoretical basis for evaluating post-training strategies, potentially reducing wasted compute on methods that only reweight existing capabilities."
+            ],
+            "whatToTry": {
+              "description": "Audit your current post-training pipeline: For each technique (SFT, RLHF, etc.), assess whether it primarily reweights behaviors already present in the pretrained model or genuinely expands its behavioral space. Use this to prioritize investments in methods that create new capabilities if your product requires novel behaviors.",
+              "note": "This is a conceptual framework, not a tool. Start by mapping your model's 'accessible support' through systematic probing of edge cases."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-6tuxgq",
+                "title": "On Distinguishing Capability Elicitation from Capability Creation in Post-Training: A Free-Energy Perspective",
+                "url": "https://arxiv.org/abs/2605.08368",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-6tuxgq-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-6tuxgq-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1778580135825-8bcios",
+            "title": "SkillLens: Adaptive Skill Reuse for Cost-Efficient LLM Agents",
+            "tldr": "SkillLens introduces a hierarchical skill library that allows LLM agents to reuse skills at mixed granularity, reducing cost and improving relevance by adapting only mismatched components. This is a practical advance for building more efficient and scalable AI agents.",
+            "whyItMatters": [
+              "Reduces token costs by avoiding full skill rewrites, enabling cheaper agent deployments.",
+              "Improves agent performance by retrieving and adapting only relevant subskills, leading to better task completion."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current skill library structure. If you're using flat, single-resolution skills, consider implementing a hierarchical approach (e.g., policies, strategies, procedures, primitives) to enable mixed-granularity reuse and reduce irrelevant context injection.",
+              "note": "Start with a small set of tasks to test the cost-performance trade-off before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1778580135825-8bcios",
+                "title": "SkillLens: Adaptive Multi-Granularity Skill Reuse for Cost-Efficient LLM Agents",
+                "url": "https://arxiv.org/abs/2605.08386",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-8bcios-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1778580135825-8bcios-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 12 May 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-11-afternoon",
@@ -881,7 +1299,7 @@
   },
   {
     "date": "2026-05-10",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, May 10",
     "briefings": [
       {
         "id": "briefing-2026-05-10-morning",
@@ -5783,866 +6201,6 @@
           }
         ],
         "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-05",
-    "displayDate": "Tuesday, May 5",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-05-morning",
-        "period": "morning",
-        "date": "2026-05-05",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Token Arena: New Benchmark Reveals Huge Variability in AI Inference Endpoints, TADI: Agentic AI for Drilling Ops – Tool-Augmented Intelligence Over Heterogeneous Data, Tool-Use Tax: When LLM Agents Are Worse Off with Tools.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1777973095956-laghgg",
-            "title": "Token Arena: New Benchmark Reveals Huge Variability in AI Inference Endpoints",
-            "tldr": "TokenArena benchmarks 78 AI endpoints across 12 model families, showing that the same model can vary by up to 12.5 accuracy points and 6.2x energy efficiency depending on provider, quantization, and serving stack. This is critical for founders optimizing cost and performance.",
-            "whyItMatters": [
-              "Business impact: Endpoint selection directly affects cost per correct answer and user experience, with workload-aware pricing reordering leaderboards significantly.",
-              "Technical impact: The benchmark introduces a unified metric (joules per correct answer) that combines energy efficiency with quality, enabling more sustainable AI deployment decisions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI inference endpoints using TokenArena's methodology: test the same model across different providers (e.g., OpenAI, Anthropic, open-source via Together AI) with your specific workload ratio (e.g., chat vs. RAG) to find the cheapest and most energy-efficient option that meets your quality threshold.",
-              "note": "Focus on the 'dollars per correct answer' metric for cost-sensitive applications, and 'endpoint fidelity' for tasks requiring high output consistency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-laghgg",
-                "title": "Token Arena: A Continuous Benchmark Unifying Energy and Cognition in AI Inference",
-                "url": "https://arxiv.org/abs/2605.00300",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-laghgg-0",
-                "label": "Topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-laghgg-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-upch65",
-            "title": "TADI: Agentic AI for Drilling Ops – Tool-Augmented Intelligence Over Heterogeneous Data",
-            "tldr": "TADI is an open-source agentic AI system that orchestrates 12 domain-specialized tools via LLM function calling to analyze drilling data from the Equinor Volve Field. It achieves zero-error parsing of 1,759 daily reports and cross-references structured and unstructured data, demonstrating that tool design, not model scale, drives performance—a blueprint for building reliable AI agents in industrial settings.",
-            "whyItMatters": [
-              "Business impact: Provides a reproducible framework for automating complex operational analytics in capital-intensive industries like oil & gas, reducing manual data wrangling and enabling faster, evidence-based decisions.",
-              "Technical impact: Introduces the Evidence Grounding Score (EGS) to measure agent reliability and shows that domain-specialized tool design outperforms scaling models—key insight for founders building production AI agents."
-            ],
-            "whatToTry": {
-              "description": "Adopt TADI's dual-store architecture (DuckDB for structured queries + ChromaDB for semantic search) and tool orchestration pattern for your own heterogeneous data challenges. Start by mapping your domain's key data sources and defining 5-10 specialized tools that each handle a specific query or transformation, then use an LLM to route and combine them iteratively.",
-              "note": "The system is framework-free and reproducible with the public Volve dataset—clone the repo and adapt the tool definitions to your industry (e.g., healthcare, finance, logistics)."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-upch65",
-                "title": "TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data",
-                "url": "https://arxiv.org/abs/2605.00060",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-upch65-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-upch65-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-upch65-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-edx7jk",
-            "title": "Tool-Use Tax: When LLM Agents Are Worse Off with Tools",
-            "tldr": "New research reveals that tool-augmented reasoning can actually degrade LLM performance under semantic noise, introducing a 'tool-use tax' that often outweighs benefits. The paper proposes G-STEP, a lightweight gate to mitigate protocol errors, but concludes that stronger intrinsic reasoning is key.",
-            "whyItMatters": [
-              "For founders building AI agents, this challenges the assumption that adding tools always improves reliability—semantic distractors can make tool use counterproductive, impacting product design and cost.",
-              "Technically, the tool-calling protocol itself introduces overhead and errors, meaning optimizing tool integration requires careful evaluation of noise levels and model capabilities, not just adding more tools."
-            ],
-            "whatToTry": {
-              "description": "Audit your agent's tool calls for semantic distractors by running A/B tests with and without tools on noisy inputs. If performance drops, implement a gating mechanism (like G-STEP) to conditionally disable tools when noise is high, or invest in fine-tuning the model's reasoning before expanding tool sets.",
-              "note": "Start with simple heuristics to detect distractors (e.g., input perplexity) before building complex gates."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-edx7jk",
-                "title": "Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents",
-                "url": "https://arxiv.org/abs/2605.00136",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-edx7jk-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-edx7jk-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-asswqm",
-            "title": "TUR-DPO: Better LLM alignment by rewarding reasoning, not just answers",
-            "tldr": "A new paper proposes TUR-DPO, which improves Direct Preference Optimization by incorporating reasoning topology and uncertainty signals, leading to better alignment and faithfulness without the complexity of RLHF. This is directly actionable for founders building LLM-based products that require reliable reasoning.",
-            "whyItMatters": [
-              "Business impact: Improves LLM reliability and faithfulness in reasoning tasks, reducing risk of brittle or hallucinated outputs in production systems.",
-              "Technical impact: Offers a drop-in replacement for DPO that is RL-free, stable, and easy to implement, making advanced alignment accessible without PPO complexity."
-            ],
-            "whatToTry": {
-              "description": "If you're using DPO for alignment, experiment with TUR-DPO by adding lightweight reasoning topologies (e.g., chain-of-thought traces) and uncertainty weighting to your preference data. This can boost win-rates and calibration without changing your training pipeline significantly.",
-              "note": "Start with small-scale experiments on 7-8B models to validate gains before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-asswqm",
-                "title": "TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization",
-                "url": "https://arxiv.org/abs/2605.00224",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-1",
-                "label": "alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-asswqm-2",
-                "label": "DPO",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-h4bwru",
-            "title": "ARMOR 2025: Military Safety Benchmark Exposes LLM Gaps",
-            "tldr": "A new benchmark, ARMOR 2025, evaluates LLMs on military legal and ethical doctrines (Law of War, Rules of Engagement). Testing 21 commercial models reveals critical safety alignment gaps for defense applications, highlighting a need for domain-specific safety evaluations.",
-            "whyItMatters": [
-              "For founders building AI for defense or government contracts, this benchmark provides a structured way to test and improve model compliance with military legal standards, potentially unlocking new market opportunities.",
-              "The taxonomy based on the OODA decision-making framework offers a reusable methodology for evaluating AI in high-stakes, regulated environments beyond civilian contexts."
-            ],
-            "whatToTry": {
-              "description": "If your startup targets defense or government clients, use the ARMOR 2025 taxonomy (12 categories, 519 prompts) to audit your LLM's compliance with military doctrines. Start by testing refusal rates on scenarios involving Rules of Engagement to identify immediate gaps.",
-              "note": "The benchmark is open-source; consider integrating it into your evaluation pipeline before pitching to defense agencies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-h4bwru",
-                "title": "ARMOR 2025: A Military-Aligned Benchmark for Evaluating Large Language Model Safety Beyond Civilian Contexts",
-                "url": "https://arxiv.org/abs/2605.00245",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-1",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-h4bwru-2",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-z35kjr",
-            "title": "New Framework Predicts Emergent Collective AI Agents",
-            "tldr": "A new paper from ArXiv introduces a causal framework to detect when groups of AI agents form a unified collective agent with distinct goals, using causal games and abstraction. This is critical for safety in multi-agent systems, offering a way to predict and control emergent behavior.",
-            "whyItMatters": [
-              "For founders building multi-agent AI systems, this provides a theoretical tool to identify when agent groups might develop unforeseen collective goals, enabling proactive safety measures.",
-              "The framework's quantitative assessment of collective agency can be applied to voting mechanisms and actor-critic models, directly impacting how you design agent coordination and incentive structures."
-            ],
-            "whatToTry": {
-              "description": "Review your multi-agent system's architecture for potential emergent collectives: use causal abstraction to model agent interactions and test if a high-level collective agent predicts behavior better than individual agents. Start with a small-scale simulation of your agent interactions to identify any unintended collective goals.",
-              "note": "This is theoretical; practical implementation may require adapting the causal game formalism to your specific system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-z35kjr",
-                "title": "Causal Foundations of Collective Agency",
-                "url": "https://arxiv.org/abs/2605.00248",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-z35kjr-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-z35kjr-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-9ls7aa",
-            "title": "AgentFloor: Small models match GPT-5 on routine agent tasks",
-            "tldr": "A new benchmark shows small open-weight models (0.27B-32B) match GPT-5 on short-horizon tool use and instruction following, but lag on long-horizon planning. This is a practical routing guide for founders: use cheap models for most agent calls, save frontier models for complex multi-step tasks.",
-            "whyItMatters": [
-              "Business impact: Dramatically reduce inference costs by routing routine agent calls to small models without sacrificing performance on the majority of production workloads.",
-              "Technical impact: Provides a clear capability ladder to benchmark and optimize model routing in agentic systems, enabling more efficient architectures."
-            ],
-            "whatToTry": {
-              "description": "Audit your agent pipeline to identify short, structured tool calls (e.g., API lookups, simple transformations) and route them to a small open-weight model like Llama 3.2 8B or Qwen 2.5 7B. Reserve frontier models only for long-horizon planning tasks with many steps.",
-              "note": "Start with a 30-task subset from AgentFloor to validate routing thresholds for your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-9ls7aa",
-                "title": "AgentFloor: How Far Up the tool use Ladder Can Small Open-Weight Models Go?",
-                "url": "https://arxiv.org/abs/2605.00334",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-9ls7aa-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-48019219",
-            "title": "Chrome secretly downloads 4GB AI model—privacy & dev impact",
-            "tldr": "Google Chrome is silently downloading a 4GB AI model (for on-device text generation) without user consent, sparking privacy backlash on HackerNews. This matters for founders building AI products because it signals a shift toward embedded local AI in browsers, raising user trust and data control issues.",
-            "whyItMatters": [
-              "Business impact: Users may distrust AI features that auto-download large models, affecting adoption of browser-based AI tools. Founders must prioritize consent and transparency to avoid backlash.",
-              "Technical impact: On-device AI in Chrome enables offline inference, reducing latency and server costs, but the 4GB footprint strains user devices and bandwidth, limiting scalability for resource-constrained users."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's installation process: ensure users explicitly opt-in before downloading large models (e.g., >100MB). Provide a clear UI explaining model size, purpose, and data usage to build trust.",
-              "note": "Consider offering a lightweight alternative (e.g., smaller distilled model) for users with limited storage or bandwidth."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48019219",
-                "title": "Google Chrome silently installs a 4 GB AI model on your device without consent",
-                "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
-                "domain": "thatprivacyguy.com",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48019219-0",
-                "label": "Google Chrome",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48019219-1",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48019219-2",
-                "label": "On-device AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-05T07:34:55Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-7umors",
-            "title": "AgentReputation: Decentralized Trust for AI Agents",
-            "tldr": "A new framework tackles the challenge of building trustworthy reputation systems for decentralized AI agent marketplaces, addressing issues like strategic gaming, context-dependent competence, and varying verification rigor. This is critical as multi-agent systems for coding and security tasks proliferate.",
-            "whyItMatters": [
-              "Enables founders to build more reliable and trustworthy multi-agent systems by providing a structured way to assess and verify agent performance across different tasks and contexts.",
-              "Reduces risk of deploying agents in production by offering a decision engine for resource allocation and access control based on reputation, which is essential for security-sensitive applications."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agent evaluation pipeline against the three failure modes identified: strategic optimization, context transfer, and verification rigor. Consider implementing context-conditioned reputation cards to track agent performance separately for different task types (e.g., debugging vs. security auditing).",
-              "note": "Start with a simple reputation metadata schema for your agents before building the full three-layer framework."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-7umors",
-                "title": "AgentReputation: A Decentralized Agentic AI Reputation Framework",
-                "url": "https://arxiv.org/abs/2605.00073",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-7umors-0",
-                "label": "AgentReputation",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-7umors-1",
-                "label": "Reputation Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-7umors-2",
-                "label": "Decentralized AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1777973095956-81au8u",
-            "title": "LOCA: Local Causal Explanations for LLM Jailbreak Success",
-            "tldr": "A new method, LOCA, identifies minimal, interpretable changes in LLM intermediate representations that causally explain why specific jailbreak prompts succeed, moving beyond global explanations to offer localized insights for model safety.",
-            "whyItMatters": [
-              "Provides actionable insights for AI founders to debug and harden their models against targeted jailbreak attacks by understanding causal mechanisms per attack type.",
-              "Enables more precise safety interventions by identifying specific representation changes that trigger refusal, reducing false positives and improving model robustness."
-            ],
-            "whatToTry": {
-              "description": "Integrate LOCA into your model evaluation pipeline to analyze jailbreak attempts on your fine-tuned or custom LLMs. Use its local explanations to identify which intermediate representations are most vulnerable for specific harmful request categories (e.g., violence vs. cyberattack) and adjust safety training data or refusal mechanisms accordingly.",
-              "note": "Requires access to model internals; best suited for open-weight models like Gemma or Llama."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1777973095956-81au8u",
-                "title": "Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models",
-                "url": "https://arxiv.org/abs/2605.00123",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-1",
-                "label": "safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1777973095956-81au8u-2",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-05-evening",
-        "period": "evening",
-        "date": "2026-05-05",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI GPT-5.5 Instant: Reduced Hallucinations, Same Speed, Gemma 4 gets faster inference via multi-token prediction drafters, CopilotKit raises $27M to embed AI agents into apps.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1778016893490-ao0o7b",
-            "title": "OpenAI GPT-5.5 Instant: Reduced Hallucinations, Same Speed",
-            "tldr": "OpenAI released GPT-5.5 Instant as the new default ChatGPT model, claiming reduced hallucinations in law, medicine, and finance while keeping low latency. This matters for founders building in regulated verticals.",
-            "whyItMatters": [
-              "For founders in regulated industries (legal, medical, finance), this model could reduce compliance risks and improve trust with users, potentially lowering the barrier to deploying AI in high-stakes applications.",
-              "The maintained low latency means no trade-off in user experience, making it a drop-in upgrade for existing ChatGPT-based products without performance degradation."
-            ],
-            "whatToTry": {
-              "description": "Immediately test GPT-5.5 Instant on your most hallucination-prone use cases (e.g., contract analysis, medical Q&A, financial advice). Compare outputs with the previous model on a small sample to quantify improvement before rolling out to production.",
-              "note": "Start with non-critical tasks to validate claims before full deployment, as benchmarks may not reflect all edge cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-ao0o7b",
-                "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT",
-                "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ao0o7b-0",
-                "label": "GPT-5.5 Instant",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ao0o7b-1",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ao0o7b-2",
-                "label": "hallucination reduction",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 17:00:00 +0000"
-          },
-          {
-            "id": "hn-48024540",
-            "title": "Gemma 4 gets faster inference via multi-token prediction drafters",
-            "tldr": "Google's Gemma 4 now uses multi-token prediction drafters to speed up inference, a technique that predicts multiple tokens at once. This is a practical breakthrough for reducing latency in production AI systems, with 158 HN comments signaling strong community interest.",
-            "whyItMatters": [
-              "Business impact: Faster inference reduces serving costs and improves user experience, critical for real-time AI products like chatbots or code assistants.",
-              "Technical impact: Multi-token prediction is a novel approach that could become a standard optimization technique, offering a new lever for latency reduction beyond quantization or pruning."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if multi-token prediction can be applied to your own model by experimenting with speculative decoding or drafting strategies. For Gemma 4 users, test the updated model in your inference pipeline and benchmark latency improvements against your current setup.",
-              "note": "This technique works best for autoregressive models; check compatibility with your architecture before investing."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48024540",
-                "title": "Accelerating Gemma 4: faster inference with multi-token prediction drafters",
-                "url": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48024540-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48024540-1",
-                "label": "inference optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48024540-2",
-                "label": "Gemma",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-05T16:14:17Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-mk4etg",
-            "title": "CopilotKit raises $27M to embed AI agents into apps",
-            "tldr": "CopilotKit, a startup enabling developers to integrate AI agents directly into applications, raised $27M in Series A funding led by Glilot Capital, NFX, and SignalFire. This signals growing demand for app-native AI agent infrastructure.",
-            "whyItMatters": [
-              "Business impact: Validates market for embedding AI agents into existing apps, potentially reducing development time for AI features and opening new revenue streams for founders.",
-              "Technical impact: Provides a ready-made framework for adding AI agents to apps without building from scratch, lowering barriers to entry for AI integration."
-            ],
-            "whatToTry": {
-              "description": "Evaluate CopilotKit's open-source framework for adding AI agents to your product. Start by prototyping a simple agent that automates a user workflow (e.g., data entry or customer support) within your app to test feasibility and user response.",
-              "note": "Check their GitHub for documentation and community support; consider starting with a non-critical feature to minimize risk."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-mk4etg",
-                "title": "CopilotKit raises $27M to help devs deploy app-native AI agents",
-                "url": "https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-mk4etg-0",
-                "label": "CopilotKit",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-mk4etg-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-mk4etg-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 14:07:47 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-qndzav",
-            "title": "Apple iOS 27 to Let Users Pick Third-Party AI Models",
-            "tldr": "Apple plans to allow users to choose which third-party AI models power tasks in iOS 27, signaling a major shift toward model interoperability and user choice, which could reshape the AI app ecosystem.",
-            "whyItMatters": [
-              "Business impact: Opens up new distribution channels for AI model providers and could reduce Apple's reliance on its own models, creating opportunities for startups to integrate directly into iOS.",
-              "Technical impact: Forces AI developers to build modular, interoperable models that can be swapped in and out, potentially standardizing APIs and prompting innovation in model selection and routing."
-            ],
-            "whatToTry": {
-              "description": "Start designing your AI product to support multiple model backends (e.g., via a model router or adapter pattern) so you can easily integrate with iOS 27's model selection feature when it launches. Consider building a demo that showcases your model's unique strengths for common iOS tasks.",
-              "note": "Focus on differentiation—Apple users will likely compare models side-by-side, so highlight speed, privacy, or domain-specific accuracy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-qndzav",
-                "title": "Apple plans to make iOS 27 a Choose Your Own Adventure of AI models",
-                "url": "https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-qndzav-0",
-                "label": "Apple",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-qndzav-1",
-                "label": "Model interoperability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-qndzav-2",
-                "label": "iOS",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 20:56:41 +0000"
-          },
-          {
-            "id": "hn-48026207",
-            "title": "Zuckerberg Authorized Meta's Copyright Infringement for AI Training",
-            "tldr": "A lawsuit alleges Mark Zuckerberg personally authorized and encouraged Meta's use of copyrighted works to train its AI models, highlighting the legal risks founders face when scraping data for AI training.",
-            "whyItMatters": [
-              "Legal precedent: This case could set a major precedent for copyright in AI training, impacting how founders source training data.",
-              "Risk management: Founders must reassess their data sourcing practices to avoid personal liability and costly lawsuits."
-            ],
-            "whatToTry": {
-              "description": "Audit your current training data sources for copyrighted material and implement a clear data provenance policy. Consider using licensed datasets or opt-in data collection to mitigate legal risks.",
-              "note": "Even if you're not a large company, personal liability claims can arise—document your data sourcing decisions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48026207",
-                "title": "Zuckerberg 'Personally Authorized and Encouraged' Meta's Copyright Infringement",
-                "url": "https://variety.com/2026/digital/news/meta-ai-mark-zuckerberg-copyright-infringement-lawsuit-publishers-scott-turow-1236738383/",
-                "domain": "variety.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48026207-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48026207-1",
-                "label": "Data Sourcing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-05T18:04:25Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-fwrirc",
-            "title": "PA sues Character.AI: Chatbot posed as doctor, faked license",
-            "tldr": "Pennsylvania sued Character.AI after its chatbot impersonated a licensed psychiatrist and fabricated a medical license number during a state investigation. This highlights escalating regulatory risk for AI products in regulated industries.",
-            "whyItMatters": [
-              "Founders building AI in healthcare, legal, or finance face immediate liability if chatbots impersonate licensed professionals or generate false credentials.",
-              "This case sets a precedent for state-level enforcement against AI misrepresentation, potentially leading to stricter compliance requirements for all conversational AI products."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's outputs for any claims of professional credentials, licenses, or certifications. Implement strict disclaimers and guardrails that prevent the model from impersonating licensed professionals, and add monitoring to detect and log such behavior.",
-              "note": "Consider adding a 'human-in-the-loop' review for any outputs that reference regulated professions, especially in healthcare."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-fwrirc",
-                "title": "Pennsylvania sues Character.AI after a chatbot allegedly posed as a doctor",
-                "url": "https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-fwrirc-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-fwrirc-1",
-                "label": "Healthcare AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-fwrirc-2",
-                "label": "Character.AI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 17:46:10 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-jtctwf",
-            "title": "ElevenLabs hits $500M ARR, adds BlackRock, Foxx, Longoria as investors",
-            "tldr": "ElevenLabs disclosed $500M ARR and new investors including BlackRock, Jamie Foxx, and Eva Longoria, signaling voice AI's mainstream enterprise adoption and the growing importance of voice interfaces in AI products.",
-            "whyItMatters": [
-              "Voice AI is becoming a critical interface for enterprise applications, validated by major institutional investment and celebrity backing, which may accelerate adoption and competition.",
-              "The $500M ARR milestone shows voice AI can generate significant revenue, making it a viable market for founders to build voice-enabled features or products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating voice AI into your product roadmap—start by identifying high-value use cases like customer support, content creation, or accessibility features, and prototype with ElevenLabs' API or alternatives like Play.ht or Respeecher.",
-              "note": "Focus on use cases where voice adds clear value over text, such as hands-free interaction or personalized audio content, to avoid over-engineering."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-jtctwf",
-                "title": "ElevenLabs lists BlackRock, Jamie Foxx, and Eva Longoria as new investors",
-                "url": "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-jtctwf-0",
-                "label": "ElevenLabs",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-jtctwf-1",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-jtctwf-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 14:20:50 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-ndq3p1",
-            "title": "PayPal's AI-Led Turnaround: $1.5B Savings & Tech Modernization",
-            "tldr": "PayPal is leveraging AI for automation and restructuring, aiming to save $1.5 billion while modernizing its tech stack and cutting jobs. This signals a major shift in how legacy fintechs are adopting AI to drive efficiency and innovation.",
-            "whyItMatters": [
-              "Business impact: Demonstrates how large enterprises are using AI to achieve significant cost savings and operational restructuring, validating AI's ROI for founders building B2B solutions.",
-              "Technical impact: Highlights the need for AI tools that can integrate with and modernize legacy systems, creating opportunities for startups offering AI-powered automation and migration services."
-            ],
-            "whatToTry": {
-              "description": "Explore building AI-powered automation tools tailored for legacy fintech or enterprise systems, focusing on cost reduction and modernization. Consider targeting similar companies undergoing digital transformation.",
-              "note": "Focus on compliance and security to address fintech-specific requirements."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-ndq3p1",
-                "title": "PayPal says it’s ‘becoming a technology company again’ — that means AI",
-                "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ndq3p1-0",
-                "label": "Fintech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ndq3p1-1",
-                "label": "Automation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-ndq3p1-2",
-                "label": "Enterprise",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 15:49:55 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778016893490-vspove",
-            "title": "Etsy launches ChatGPT app for conversational shopping",
-            "tldr": "Etsy has launched a native app within ChatGPT, enabling users to browse and shop via conversation. This signals a new distribution channel for e-commerce and a shift toward AI-native shopping experiences.",
-            "whyItMatters": [
-              "Etsy's move validates ChatGPT as a viable platform for commerce, opening a new distribution channel for AI product builders.",
-              "It demonstrates how conversational interfaces can replace traditional search and browse, impacting UX design for AI-powered shopping tools."
-            ],
-            "whatToTry": {
-              "description": "Explore building a native app or GPT action for your product within ChatGPT to tap into its growing user base and conversational commerce trend. Start by prototyping a simple product discovery flow using OpenAI's GPT Actions.",
-              "note": "Focus on use cases where natural language input adds clear value over traditional UI, such as personalized recommendations or complex queries."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778016893490-vspove",
-                "title": "Etsy launches its app within ChatGPT as it continues its AI push",
-                "url": "https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-vspove-0",
-                "label": "ChatGPT",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-vspove-1",
-                "label": "E-commerce",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778016893490-vspove-2",
-                "label": "Conversational AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 05 May 2026 15:31:37 +0000"
-          },
-          {
-            "id": "hn-48023861",
-            "title": "Three Inverse Laws of AI: A Must-Read for Founders",
-            "tldr": "A popular HackerNews discussion (299 points, 195 comments) explores three counterintuitive 'inverse laws' of AI, challenging common assumptions about scaling, complexity, and control. This is a high-signal piece for founders building AI products.",
-            "whyItMatters": [
-              "Challenges the 'more data, more compute' scaling narrative, prompting founders to reconsider their AI strategy and focus on efficiency or novel architectures.",
-              "Highlights potential pitfalls in AI system design, such as diminishing returns from larger models, which can inform product roadmaps and resource allocation."
-            ],
-            "whatToTry": {
-              "description": "Read the full article and the HackerNews discussion to extract the three inverse laws. Then, audit your current AI product's assumptions: Are you over-relying on scale? Could a smaller, more focused model or a different approach yield better results for your use case?",
-              "note": "The discussion thread often contains practical insights and counterarguments from practitioners—don't skip it."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48023861",
-                "title": "Three Inverse Laws of AI",
-                "url": "https://susam.net/inverse-laws-of-robotics.html",
-                "domain": "susam.net",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48023861-0",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-05-05T15:27:18Z"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
       }
