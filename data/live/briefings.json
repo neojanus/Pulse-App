@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-05-17",
+    "date": "2026-05-18",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-05-18-morning",
+        "period": "morning",
+        "date": "2026-05-18",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Fair Outputs, Biased Internals: LLM Latent Bias Can Be Exploited, SDOF: New Framework Tames Multi-Agent Alignment Tax, SkillSmith: Cut Agent Token Use by 57% with Compiled Skills.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1779102800856-exlnzd",
+            "title": "Fair Outputs, Biased Internals: LLM Latent Bias Can Be Exploited",
+            "tldr": "New research shows LLMs can produce fair outputs while retaining exploitable internal biases. In mortgage underwriting tests, suppressed demographic representations could be reactivated via adversarial prompts or fine-tuning, causing decision reversals. This means output-only audits are insufficient for high-stakes AI governance.",
+            "whyItMatters": [
+              "For founders building AI in regulated industries (finance, hiring, healthcare): output fairness audits alone are not enough; internal representations must also be tested to prevent adversarial exploitation.",
+              "Technical impact: Demonstrates that latent bias is asymmetric and can be manipulated, requiring new dual-layer testing frameworks (output + representational analysis) for model deployment."
+            ],
+            "whatToTry": {
+              "description": "Implement a dual-layer testing pipeline for your LLM: 1) Run standard output-level fairness audits (e.g., demographic parity). 2) Add representational analysis using activation steering or probing to detect suppressed biases. If found, apply targeted debiasing via fine-tuning or layer-specific interventions before deployment.",
+              "note": "Start with open-weight models to test these methods; closed APIs may limit access to internal representations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-exlnzd",
+                "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+                "url": "https://arxiv.org/abs/2605.15217",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-exlnzd-0",
+                "label": "LLM Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-exlnzd-1",
+                "label": "Fairness",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-exlnzd-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-jnprjb",
+            "title": "SDOF: New Framework Tames Multi-Agent Alignment Tax",
+            "tldr": "A new research paper introduces SDOF, a state-machine-based framework for multi-agent orchestration that enforces business process constraints, achieving 86.5% task completion and blocking all injection attacks, outperforming zero-shot GPT-4o on routing accuracy (80.9% vs 48.9%).",
+            "whyItMatters": [
+              "For founders building multi-agent systems, this provides a concrete method to reduce the 'alignment tax'—the performance loss from enforcing safety and business rules—by using constrained state machines and RLHF-tuned routers.",
+              "Technical impact: Demonstrates that a smaller 7B model with specialized training can outperform larger models like GPT-4o on domain-specific routing tasks, suggesting cost-effective alternatives for production systems."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current multi-agent orchestration (e.g., LangChain, CrewAI) for stage constraints and consider implementing a state machine layer to enforce business rules. Start by mapping your workflows to a finite automaton and testing with a small, fine-tuned router model.",
+              "note": "The paper uses GRPO for reward modeling; you can experiment with similar RLHF techniques on open-source models like Llama 3 8B for your domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-jnprjb",
+                "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+                "url": "https://arxiv.org/abs/2605.15204",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-jnprjb-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-jnprjb-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-jnprjb-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-n9yoaw",
+            "title": "SkillSmith: Cut Agent Token Use by 57% with Compiled Skills",
+            "tldr": "A new framework compiles LLM agent skills into minimal runtime interfaces, reducing token usage by 57%, thinking iterations by 43%, and cost by 57%—enabling smaller models to reuse compiled artifacts for better accuracy.",
+            "whyItMatters": [
+              "Directly reduces inference costs and latency for AI agents, a critical factor for scaling production systems.",
+              "Enables model-agnostic skill reuse, allowing founders to swap in cheaper models without sacrificing performance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent's skill injection pipeline: identify skills that are repeatedly loaded with full context. Prototype a boundary extraction step to pre-compile only the necessary operational boundaries, reducing token overhead and reasoning steps.",
+              "note": "Start with high-frequency skills (e.g., data retrieval, API calls) where context injection is most redundant."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-n9yoaw",
+                "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+                "url": "https://arxiv.org/abs/2605.15215",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-n9yoaw-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-n9yoaw-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-n9yoaw-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-s4o5gs",
+            "title": "NOVA Framework Reveals Limits of AI Self-Improvement",
+            "tldr": "A new theoretical framework proves that AI systems face fundamental diminishing returns in knowledge discovery, with costs scaling polynomially as the frontier advances. It identifies a 'contamination trap' where false positives overwhelm genuine discoveries as easy knowledge is exhausted.",
+            "whyItMatters": [
+              "Business impact: Founders building self-improving AI systems must account for escalating compute costs and contamination risks, which could break their product's scaling assumptions.",
+              "Technical impact: The framework provides rigorous conditions for failure modes (contamination, forgetting, exploration failure) that directly inform architecture design for iterative learning loops."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI system's 'generate-verify-accumulate' loop for the contamination trap: monitor the ratio of false positives to genuine discoveries as the knowledge base grows, and consider implementing stricter verification thresholds or diversity-based sampling to delay diminishing returns.",
+              "note": "The paper suggests Good-Turing estimation is insufficient for long-term planning; use tail-equivalence assumptions to estimate cost scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-s4o5gs",
+                "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+                "url": "https://arxiv.org/abs/2605.15219",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-s4o5gs-0",
+                "label": "NOVA Framework",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-s4o5gs-1",
+                "label": "Knowledge Discovery",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-s4o5gs-2",
+                "label": "Scaling Laws",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-hgr72l",
+            "title": "ICRL: Training AI to Self-Correct Without External Critique",
+            "tldr": "A new RL framework (ICRL) jointly trains a solver and critic from a shared backbone, enabling LLMs to internalize self-critique and improve without external feedback. This addresses a key limitation in current agentic systems where models fail again once critique is removed.",
+            "whyItMatters": [
+              "Reduces dependency on external critique loops, enabling more autonomous and reliable AI agents in production",
+              "Opens path to iterative self-improvement for LLMs, potentially lowering costs and latency in agentic workflows"
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your agentic system suffers from 'critique dependency' by testing performance with and without external feedback loops. If so, consider implementing a similar dual-role RL training approach to internalize corrections.",
+              "note": "ICRL uses distribution-calibration re-weighting to avoid overfitting to critique-conditioned behavior—key for production robustness."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-hgr72l",
+                "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+                "url": "https://arxiv.org/abs/2605.15224",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-hgr72l-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-hgr72l-1",
+                "label": "reinforcement learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-hgr72l-2",
+                "label": "agentic systems",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-nj3mg2",
+            "title": "NIMO Controller: MCP-based orchestrator for self-driving labs",
+            "tldr": "A new paper introduces NIMO Controller, an SDL orchestrator using the Model Context Protocol (MCP) to unify human and AI agent interfaces, enabling visual programming and AI-driven experimentation without custom code.",
+            "whyItMatters": [
+              "Business impact: Reduces barriers to building automated labs, allowing startups to accelerate R&D with AI agents controlling experiments.",
+              "Technical impact: Standardizes SDL interfaces via MCP, making it easier to integrate AI agents and scale lab automation."
+            ],
+            "whatToTry": {
+              "description": "Explore MCP for your lab automation stack: prototype a simple experiment workflow using NIMO Controller's visual interface or connect an AI agent (e.g., via LangChain) to an MCP server for autonomous experiment design.",
+              "note": "Check if your lab equipment supports MCP or can be wrapped with an MCP server; start with a color-matching demo to validate the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-nj3mg2",
+                "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol",
+                "url": "https://arxiv.org/abs/2605.15227",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-nj3mg2-0",
+                "label": "Model Context Protocol",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-nj3mg2-1",
+                "label": "Self-driving labs",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-nj3mg2-2",
+                "label": "AI agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-bcec9y",
+            "title": "New Framework Makes AI Agent Actions Verifiable & Secure",
+            "tldr": "A new research paper from ArXiv introduces a Distributed Trust Framework (DTF) that makes AI agent actions verifiable, distributed, and replayable, addressing the critical security gap where autonomous agents can generate unsafe actions even with valid credentials. This is a breakthrough for founders building sovereign AI systems that interact with regulated data or cloud infrastructure.",
+            "whyItMatters": [
+              "Business impact: Enables safe deployment of autonomous agents in high-stakes environments like finance, healthcare, and government, reducing operational risk and compliance burden.",
+              "Technical impact: Introduces a new paradigm of proof-derived authorization that can be integrated into existing agent frameworks, making agent actions auditable and trustless."
+            ],
+            "whatToTry": {
+              "description": "Review your current agent authorization model and consider implementing a proof-based system using the DTF concepts: require agents to submit intents, evaluate context against policy, and generate verifiable justification proofs before execution. Start by prototyping with a simple evidence chain for logging agent decisions.",
+              "note": "This is early-stage research; focus on the core idea of separating intent from execution and adding audit trails rather than full implementation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-bcec9y",
+                "title": "Verifiable Agentic Infrastructure: Proof-Derived Authorization for Sovereign AI Systems",
+                "url": "https://arxiv.org/abs/2605.15228",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-bcec9y-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-bcec9y-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-f7ulg6",
+            "title": "DeepSlide: AI That Optimizes Presentation Delivery, Not Just Slides",
+            "tldr": "DeepSlide is a multi-agent system that goes beyond generating visually appealing slides to optimize the entire presentation process—including narrative planning, pacing, and rehearsal support. It outperforms baselines on delivery metrics like narrative flow and slide-script synergy, making it a practical tool for founders who pitch or present frequently.",
+            "whyItMatters": [
+              "Founders can use DeepSlide to create more compelling investor pitches and product demos, improving persuasion and clarity.",
+              "The system's focus on delivery (pacing, attention guidance) addresses a gap in current AI slide tools, potentially saving hours of rehearsal time."
+            ],
+            "whatToTry": {
+              "description": "If you build presentation tools, consider integrating a 'delivery optimization' layer that analyzes narrative flow and pacing, not just slide aesthetics. For your own use, test DeepSlide's approach by manually mapping your pitch deck to a time-budgeted narrative plan before finalizing slides.",
+              "note": "DeepSlide is research code; wait for a user-friendly implementation or adapt its principles to your workflow."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-f7ulg6",
+                "title": "DeepSlide: From Artifacts to Presentation Delivery",
+                "url": "https://arxiv.org/abs/2605.15202",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-f7ulg6-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-f7ulg6-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-f7ulg6-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-1h54v5",
+            "title": "ToM Benchmarks Fail: Static Tests Don't Predict Real AI Social Skills",
+            "tldr": "A new study shows that improving Theory of Mind in LLMs on static benchmarks doesn't translate to better human-AI interactions in dynamic, first-person tasks. This challenges current evaluation methods and has direct implications for building socially aware AI products.",
+            "whyItMatters": [
+              "For founders building conversational AI or AI assistants: relying on static ToM benchmarks may mislead product development, as improvements may not enhance real user interactions.",
+              "Technical teams should shift to interactive, first-person evaluations to truly assess and improve AI social capabilities, avoiding wasted effort on techniques that don't work in practice."
+            ],
+            "whatToTry": {
+              "description": "Audit your current evaluation pipeline for AI social skills. If you use static benchmarks (e.g., multiple-choice ToM tests), supplement them with interactive user studies or dynamic task-based evaluations (e.g., coding, counseling) to validate real-world performance.",
+              "note": "Consider using the study's paradigm: shift from third-person story-reading to first-person, open-ended interactions with goal-oriented and experience-oriented tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-1h54v5",
+                "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+                "url": "https://arxiv.org/abs/2605.15205",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-1h54v5-0",
+                "label": "Theory of Mind",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-1h54v5-1",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-1h54v5-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1779102800856-psx0pv",
+            "title": "CAX-Agent: Reliable APDL Automation via Agent Harness",
+            "tldr": "A new lightweight agent harness, CAX-Agent, improves reliability of LLMs for MAPDL finite-element simulations by adding structured orchestration and a recovery ladder, achieving 92.67% task completion with model-only recovery.",
+            "whyItMatters": [
+              "For founders building AI for engineering or scientific simulation, this demonstrates a practical pattern to reduce LLM failures in domain-specific automation, enabling more reliable products.",
+              "The recovery ladder approach (rule patching to model-driven regeneration to human intervention) offers a scalable architecture for handling errors in complex workflows, which can be adapted to other technical domains."
+            ],
+            "whatToTry": {
+              "description": "Implement a multi-layer recovery system in your AI agent: start with deterministic rule-based fixes for common errors, escalate to model-driven regeneration for complex issues, and include a human-in-the-loop fallback for critical failures. Test on your own benchmarks to measure completion rates.",
+              "note": "Start with a small set of tasks to calibrate recovery thresholds before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1779102800856-psx0pv",
+                "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+                "url": "https://arxiv.org/abs/2605.15218",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-psx0pv-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-psx0pv-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1779102800856-psx0pv-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 18 May 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-17",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-17-morning",
@@ -659,7 +1102,7 @@
   },
   {
     "date": "2026-05-16",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, May 16",
     "briefings": [
       {
         "id": "briefing-2026-05-16-afternoon",
@@ -4962,886 +5405,6 @@
           }
         ],
         "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-11",
-    "displayDate": "Monday, May 11",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-11-afternoon",
-        "period": "afternoon",
-        "date": "2026-05-11",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: OpenAI launches DeployCo to help enterprises deploy AI, Cowboy Space raises $275M to build rockets for orbital data centers, CUDA: Nvidia's Real Moat Is Software, Not Hardware.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1778516012032-b0tdl8",
-            "title": "OpenAI launches DeployCo to help enterprises deploy AI",
-            "tldr": "OpenAI announced DeployCo, a new company focused on helping enterprises deploy frontier AI into production and achieve measurable business impact. This signals a major push to bridge the gap between AI capabilities and real-world business outcomes.",
-            "whyItMatters": [
-              "Business impact: Founders can now access dedicated deployment support from OpenAI, reducing the risk and complexity of integrating frontier AI into their products.",
-              "Technical impact: DeployCo likely offers best practices, infrastructure, and consulting to optimize AI performance, reliability, and cost in production environments."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product that relies on OpenAI models, consider reaching out to DeployCo for enterprise-grade deployment guidance. Start by evaluating your current AI pipeline for scalability and reliability gaps that DeployCo could help address.",
-              "note": "This is likely aimed at larger enterprises or high-growth startups; smaller teams may still benefit from the public documentation and case studies that will emerge."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1778516012032-b0tdl8",
-                "title": "OpenAI launches DeployCo to help businesses build around intelligence",
-                "url": "https://openai.com/index/openai-launches-the-deployment-company",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1778516012032-b0tdl8-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778516012032-b0tdl8-1",
-                "label": "DeployCo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778516012032-b0tdl8-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 06:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1778516011583-jvunc4",
-            "title": "Cowboy Space raises $275M to build rockets for orbital data centers",
-            "tldr": "Cowboy Space raised $275M to develop rockets capable of launching data centers into orbit, addressing a critical bottleneck in the space-based computing trend. This signals growing investor confidence in off-planet AI infrastructure.",
-            "whyItMatters": [
-              "Space data centers could offer AI founders low-latency, high-security compute for global applications, bypassing terrestrial constraints like energy costs and data sovereignty.",
-              "The funding validates a new supply chain challenge: rocket availability is now a bottleneck for deploying AI compute in orbit, creating opportunities for startups in launch logistics and orbital hardware."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product could benefit from orbital compute by assessing latency requirements, data sovereignty needs, and energy costs. Start a conversation with space infrastructure providers like Cowboy Space or their competitors to understand timelines and pricing for early access.",
-              "note": "Focus on applications where global coverage or physical security is critical, such as real-time analytics for logistics or defense."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1778516011583-jvunc4",
-                "title": "There aren’t enough rockets for space data centers. Cowboy Space raised $275 million to build them.",
-                "url": "https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1778516011583-jvunc4-0",
-                "label": "Space data centers",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778516011583-jvunc4-1",
-                "label": "Infrastructure",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1778516011583-jvunc4-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1778516011591-1i2ca3",
-            "title": "CUDA: Nvidia's Real Moat Is Software, Not Hardware",
-            "tldr": "Wired argues that Nvidia's dominance in AI is secured by its CUDA software ecosystem, not just its GPUs. This matters because it means competitors like AMD and startups can't easily displace Nvidia by building better chips alone—they need to replicate a decade of software lock-in.",
-            "whyItMatters": [
-              "For founders building AI products: Your infrastructure choices are heavily influenced by CUDA's ecosystem lock-in, which may limit flexibility and increase costs if you need to switch hardware.",
-              "For technical strategy: The moat means Nvidia will likely maintain pricing power and control over AI development tools, affecting your long-term cost projections and vendor dependency."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI stack for CUDA dependencies. Identify which libraries (e.g., PyTorch, TensorFlow) rely on CUDA-specific optimizations. Explore alternatives like AMD's ROCm or Intel's oneAPI for critical workloads to reduce vendor lock-in risk.",
-              "note": "Start with non-production experiments to gauge performance differences before committing to a multi-vendor strategy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1778516011591-1i2ca3",
-                "title": "CUDA Proves Nvidia Is a Software Company",
-                "url": "https://www.wired.com/story/cuda-proves-nvidia-is-a-software-company/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1778516011591-1i2ca3-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778516011591-1i2ca3-1",
-                "label": "CUDA",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778516011591-1i2ca3-2",
-                "label": "AI Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1778516011858-bd0jyt",
-            "title": "GraphDC: Multi-Agent Framework for Scalable Graph Reasoning",
-            "tldr": "GraphDC introduces a divide-and-conquer multi-agent system that breaks large graphs into subgraphs for local reasoning by specialized agents, then integrates results via a master agent. This significantly improves LLM performance on complex graph algorithms, especially for large instances where direct reasoning fails.",
-            "whyItMatters": [
-              "Enables LLMs to handle graph-based tasks (e.g., social network analysis, recommendation systems, knowledge graphs) at scale, opening new product capabilities for founders building graph-heavy AI applications.",
-              "Provides a practical architecture for decomposing complex reasoning tasks into manageable subproblems, reducing computational bottlenecks and improving robustness—directly applicable to multi-agent system design."
-            ],
-            "whatToTry": {
-              "description": "Evaluate GraphDC's approach for your own graph reasoning tasks by implementing a multi-agent pipeline: use a graph partitioning tool (e.g., METIS) to split large graphs, assign each subgraph to a separate LLM agent for local reasoning, and combine results with a master agent that handles inter-subgraph dependencies. Start with smaller graphs to validate performance before scaling.",
-              "note": "Consider using open-source LLMs (e.g., Llama 3) for cost-effective scaling, and benchmark against direct prompting to measure improvement."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778516011858-bd0jyt",
-                "title": "GraphDC: A Divide-and-Conquer Multi-Agent System for Scalable Graph Algorithm Reasoning",
-                "url": "https://arxiv.org/abs/2605.06671",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-bd0jyt-0",
-                "label": "GraphDC",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-bd0jyt-1",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-bd0jyt-2",
-                "label": "Graph Reasoning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778516011858-w37tbt",
-            "title": "Longer reasoning chains amplify position bias in AI models",
-            "tldr": "A new study shows that as reasoning models like DeepSeek-R1 think longer, they become more biased toward certain answer positions in multiple-choice questions. This challenges the assumption that chain-of-thought reasoning reduces heuristics, and reveals a trade-off between depth and fairness.",
-            "whyItMatters": [
-              "For founders building AI products that rely on reasoning models for decision-making or QA, this means longer reasoning chains can introduce systematic bias, potentially skewing outputs in production.",
-              "Technically, it suggests that optimizing for reasoning length (e.g., via CoT prompts) may require bias mitigation strategies, especially in high-stakes applications like medical or legal QA."
-            ],
-            "whatToTry": {
-              "description": "If you use reasoning models for multiple-choice tasks, consider truncating reasoning trajectories or randomizing answer order to reduce position bias. For critical applications, benchmark your model's position bias across different reasoning lengths and apply post-hoc corrections.",
-              "note": "The study found that truncation interventions can shift bias, so testing shorter reasoning paths may improve fairness without sacrificing accuracy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778516011858-w37tbt",
-                "title": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models",
-                "url": "https://arxiv.org/abs/2605.06672",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-w37tbt-0",
-                "label": "DeepSeek-R1",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-w37tbt-1",
-                "label": "position bias",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-w37tbt-2",
-                "label": "chain-of-thought",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778516011858-23q77q",
-            "title": "New Framework for Recursive Reasoning: When to Stop Iterating",
-            "tldr": "This paper introduces a formal framework for recursive reasoning systems, defining the 'order-gap' to determine when further iteration is unlikely to improve results. It provides a necessary and sufficient condition for when this criterion is informative, with applications to agent loops, tree-of-thought reasoning, theorem proving, and continual learning.",
-            "whyItMatters": [
-              "For founders building AI agents or multi-step reasoning systems, this offers a principled way to decide when to stop iterating, potentially saving compute costs and improving response quality.",
-              "The epistemic state graph representation provides a structured way to track reasoning state, which could be implemented in agent architectures to manage complexity and ensure convergence."
-            ],
-            "whatToTry": {
-              "description": "Experiment with implementing an 'order-gap' check in your recursive reasoning pipeline (e.g., tree-of-thought or agent loops). Compare results from expand-then-consolidate vs. consolidate-then-expand orders; if the gap is small, stop iterating to save resources.",
-              "note": "This is a theoretical framework—start with simple test cases to validate the condition before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778516011858-23q77q",
-                "title": "State Representation and Termination for Recursive Reasoning Systems",
-                "url": "https://arxiv.org/abs/2605.06690",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-23q77q-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-23q77q-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778516011858-if4jwp",
-            "title": "Detect Hidden Coalitions in Multi-Agent AI via Internal Representations",
-            "tldr": "A new paper introduces a spectral diagnostic method that uses mutual-information graphs from agents' internal neural representations to detect hidden coalitions before behavioral changes occur, validated in multi-agent RL and LLM settings. This is critical for AI safety and alignment as it reveals emergent group structures that behavioral observation alone misses.",
-            "whyItMatters": [
-              "Enables early detection of emergent, potentially unsafe coalitions in multi-agent AI systems, allowing founders to build safer autonomous agent teams.",
-              "Provides a practical, model-agnostic tool to audit and debug agent coordination, improving reliability in production deployments."
-            ],
-            "whatToTry": {
-              "description": "Implement this spectral diagnostic in your multi-agent system by logging hidden states from each agent, constructing a pairwise mutual-information graph, and applying spectral partitioning (e.g., using scikit-learn's SpectralClustering) to identify coalition boundaries. Test it in your RL or LLM-based agent setups to catch hidden coordination early.",
-              "note": "Start with a small-scale pilot to calibrate thresholds for your specific domain, as the method's sensitivity may vary with agent architecture and task complexity."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778516011858-if4jwp",
-                "title": "Hidden Coalitions in Multi-Agent AI: A Spectral Diagnostic from Internal Representations",
-                "url": "https://arxiv.org/abs/2605.06696",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-if4jwp-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-if4jwp-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-if4jwp-2",
-                "label": "Research Paper",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778516011858-k7lijw",
-            "title": "CASCADE: LLMs That Learn During Deployment Without Retraining",
-            "tldr": "A new framework, CASCADE, enables LLMs to improve from experience during deployment by using an evolving episodic memory and contextual bandit algorithms, achieving a 20.9% success rate boost across 16 diverse tasks without modifying model parameters.",
-            "whyItMatters": [
-              "For founders building AI agents, this offers a way to continuously improve performance in production without costly fine-tuning or retraining, reducing operational overhead and enabling adaptive behavior.",
-              "Technically, it introduces a principled exploration-exploitation trade-off with no-regret guarantees, making it suitable for long-running, interactive applications like customer support, code generation, or tool use."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating CASCADE-like episodic memory into your LLM agent pipeline. Start by logging successful and failed interactions (e.g., user queries, tool calls) as cases, then use a simple retrieval mechanism to select relevant past cases for few-shot prompting in new, similar scenarios.",
-              "note": "CASCADE is research-stage; for production, consider lightweight vector databases (e.g., Chroma, FAISS) to store and retrieve cases, and implement a bandit algorithm (e.g., epsilon-greedy) to balance using past cases vs. exploring new strategies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778516011858-k7lijw",
-                "title": "CASCADE: Case-Based Continual Adaptation for Large Language Models During Deployment",
-                "url": "https://arxiv.org/abs/2605.06702",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-k7lijw-0",
-                "label": "CASCADE",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-k7lijw-1",
-                "label": "Continual Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778516011858-k7lijw-2",
-                "label": "LLM Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-48093043",
-            "title": "AI Note Takers Spook Lawyers: Legal Risks for Founders",
-            "tldr": "A New York Times article highlights growing legal concerns around AI note-taking tools, with lawyers warning about confidentiality breaches and ethical risks. This is a critical signal for founders building or using such tools in regulated industries.",
-            "whyItMatters": [
-              "Business impact: Legal liability from AI note-takers could lead to client trust erosion, lawsuits, or regulatory fines for companies deploying them in professional settings.",
-              "Technical impact: Founders must prioritize data privacy, encryption, and consent mechanisms to avoid violating attorney-client privilege or similar protections."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI note-taking tool's data handling: ensure end-to-end encryption, local processing where possible, and explicit user consent for recording. For B2B products, add a 'legal mode' that disables cloud storage and logs.",
-              "note": "Consider partnering with legal experts to draft compliance guidelines—this can become a competitive advantage."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48093043",
-                "title": "All Those A.I. Note Takers? They're Making Lawyers Nervous",
-                "url": "https://www.nytimes.com/2026/05/09/business/dealbook/ai-notetakers-legal-risk.html",
-                "domain": "nytimes.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48093043-0",
-                "label": "Legal Risk",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48093043-1",
-                "label": "AI Note-Taking",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48093043-2",
-                "label": "Privacy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-11T10:04:47Z"
-          },
-          {
-            "id": "rss-wired-ai-1778516011591-5lbya1",
-            "title": "Hollywood Writers Secretly Training AI: The New Gig Economy",
-            "tldr": "A Wired exposé reveals that Hollywood screenwriters are increasingly taking under-the-table gigs training AI models, highlighting a hidden labor shift that impacts content quality and ethical sourcing for AI products.",
-            "whyItMatters": [
-              "Business impact: Founders relying on human-generated training data may face quality and ethical risks if they unknowingly use underpaid, disgruntled creative workers.",
-              "Technical impact: Models trained on this data may inherit biases or lack the nuance of professional creative work, affecting output reliability."
-            ],
-            "whatToTry": {
-              "description": "Audit your training data sourcing to ensure it comes from transparent, fairly compensated contributors. Consider building direct partnerships with creative professionals to avoid ethical pitfalls and improve data quality.",
-              "note": "This is especially critical for generative AI products in media, entertainment, or content creation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1778516011591-5lbya1",
-                "title": "I Work in Hollywood. Everyone Who Used to Make TV Is Now Secretly Training AI",
-                "url": "https://www.wired.com/story/i-work-in-hollywood-everyone-who-used-to-make-tv-now-training-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1778516011591-5lbya1-0",
-                "label": "Topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778516011591-5lbya1-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-11-evening",
-        "period": "evening",
-        "date": "2026-05-11",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI Launches DeployCo for Enterprise AI Deployment, CUDA Moat: Nvidia's Real Power Is Software, Not Hardware, GraphDC: Multi-Agent Framework for Scalable Graph Reasoning.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1778536134490-9ehfkz",
-            "title": "OpenAI Launches DeployCo for Enterprise AI Deployment",
-            "tldr": "OpenAI announced DeployCo, a new company focused on helping enterprises deploy frontier AI into production and achieve measurable business impact, signaling a major push into enterprise services.",
-            "whyItMatters": [
-              "Business impact: Founders can now leverage OpenAI's dedicated deployment expertise to accelerate AI product integration and reduce time-to-value for enterprise clients.",
-              "Technical impact: DeployCo likely provides best practices and infrastructure for scaling AI models in production, potentially lowering technical barriers for startups building on OpenAI."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product targets enterprise customers; consider partnering with DeployCo for deployment support or monitoring their service offerings to identify gaps your startup could fill.",
-              "note": "This is a new service, so details are limited—stay tuned for pricing and availability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1778536134490-9ehfkz",
-                "title": "OpenAI launches DeployCo to help businesses build around intelligence",
-                "url": "https://openai.com/index/openai-launches-the-deployment-company",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1778536134490-9ehfkz-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-9ehfkz-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-9ehfkz-2",
-                "label": "Deployment",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 06:00:00 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1778536133972-34rv0v",
-            "title": "CUDA Moat: Nvidia's Real Power Is Software, Not Hardware",
-            "tldr": "Wired argues Nvidia's deepest competitive advantage is its CUDA software ecosystem, not its chips. For AI founders, this means betting on Nvidia hardware is safe, but diversifying software stacks (e.g., Triton, OpenCL) could reduce lock-in risk.",
-            "whyItMatters": [
-              "Business impact: Nvidia's software moat makes it hard for competitors to displace it, so founders should plan for long-term Nvidia dependency and potential pricing power.",
-              "Technical impact: CUDA's maturity and tooling (e.g., cuDNN, TensorRT) accelerate AI development, but reliance on a single vendor's software stack creates technical debt and migration costs."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI stack for CUDA-specific dependencies. Identify critical libraries (e.g., cuDNN, NCCL) and explore portable alternatives like Triton (for kernel writing) or ONNX Runtime (for inference) to reduce lock-in without sacrificing performance.",
-              "note": "Start with non-performance-critical components to test portability before committing to a multi-vendor strategy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1778536133972-34rv0v",
-                "title": "CUDA Proves Nvidia Is a Software Company",
-                "url": "https://www.wired.com/story/cuda-proves-nvidia-is-a-software-company/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1778536133972-34rv0v-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778536133972-34rv0v-1",
-                "label": "CUDA",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778536133972-34rv0v-2",
-                "label": "Vendor lock-in",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1778536134162-vo1gsr",
-            "title": "GraphDC: Multi-Agent Framework for Scalable Graph Reasoning",
-            "tldr": "GraphDC uses a divide-and-conquer multi-agent system to break large graphs into subgraphs for local reasoning, then integrates results for final solutions. This outperforms existing methods on complex graph tasks, making it highly relevant for AI products needing scalable graph analysis.",
-            "whyItMatters": [
-              "Enables LLMs to handle larger, more complex graph problems reliably, unlocking new use cases in network analysis, logistics, and knowledge graphs.",
-              "Reduces computational bottlenecks and reasoning burden, making graph AI more practical for real-world applications."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products that involve graph algorithms (e.g., route optimization, social network analysis), prototype a multi-agent system that decomposes large graphs into subgraphs. Use specialized agents for local reasoning and a master agent for integration, similar to GraphDC.",
-              "note": "Start with smaller graphs to validate the approach before scaling; consider using open-source LLMs for cost efficiency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778536134162-vo1gsr",
-                "title": "GraphDC: A Divide-and-Conquer Multi-Agent System for Scalable Graph Algorithm Reasoning",
-                "url": "https://arxiv.org/abs/2605.06671",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-vo1gsr-0",
-                "label": "GraphDC",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-vo1gsr-1",
-                "label": "Multi-Agent System",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-vo1gsr-2",
-                "label": "Graph Reasoning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778536134162-k4x5mn",
-            "title": "Longer reasoning chains amplify position bias in AI models",
-            "tldr": "A new study reveals that chain-of-thought reasoning in models like DeepSeek-R1 actually increases position bias (preference for certain answer positions) as reasoning length grows, contradicting the assumption that more thinking reduces bias. This has implications for deploying reasoning models in high-stakes QA tasks.",
-            "whyItMatters": [
-              "For founders building AI products: If your app uses reasoning models for multiple-choice or ranking tasks, longer reasoning chains may introduce systematic bias that degrades output quality, especially in edge cases.",
-              "Technical impact: The finding that truncation interventions shift answers toward position-preferred options suggests that reasoning length is a causal factor, not just a correlation, meaning you can't rely on 'more thinking' to fix bias."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI pipeline for position bias by running multiple-choice prompts with shuffled answer orders and measuring consistency. If bias appears, consider truncating reasoning chains to shorter lengths or using ensemble methods with varied positions.",
-              "note": "This is especially critical for applications like automated grading, survey analysis, or any task where answer order is arbitrary."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778536134162-k4x5mn",
-                "title": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models",
-                "url": "https://arxiv.org/abs/2605.06672",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-k4x5mn-0",
-                "label": "DeepSeek-R1",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-k4x5mn-1",
-                "label": "Position Bias",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-k4x5mn-2",
-                "label": "Chain-of-Thought",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1778536134162-dt6n31",
-            "title": "Detect Hidden AI Agent Coalitions via Internal Representations",
-            "tldr": "New research introduces a spectral method to detect emergent coalitions in multi-agent AI systems by analyzing mutual information in internal neural representations, revealing hidden group structures before behavioral changes occur. This is critical for AI safety and alignment in multi-agent systems.",
-            "whyItMatters": [
-              "Founders building multi-agent systems can now detect covert coordination or collusion among agents early, enabling safer and more transparent AI products.",
-              "The method works with LLMs and RL agents, offering a practical diagnostic tool to audit agent behavior at the representation level, not just observable actions."
-            ],
-            "whatToTry": {
-              "description": "If you're developing multi-agent AI products, integrate this spectral diagnostic into your monitoring pipeline. Compute pairwise mutual information from agent hidden states and apply spectral partitioning to identify coalition boundaries. Use it to test for emergent subgroups in your system before deploying to production.",
-              "note": "Start with small-scale experiments (e.g., 5-10 agents) to validate the method's sensitivity to your specific architecture."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778536134162-dt6n31",
-                "title": "Hidden Coalitions in Multi-Agent AI: A Spectral Diagnostic from Internal Representations",
-                "url": "https://arxiv.org/abs/2605.06696",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-dt6n31-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-dt6n31-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-dt6n31-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-48093043",
-            "title": "AI Note Takers Raise Legal Risks for Lawyers",
-            "tldr": "A HackerNews discussion (159 comments) highlights growing anxiety among lawyers about AI note-taking tools, citing potential confidentiality breaches and ethical risks. This matters because it signals a regulatory and trust bottleneck for AI adoption in professional services.",
-            "whyItMatters": [
-              "Business impact: Legal and compliance teams may restrict AI note-taker use, creating market friction for startups in this space. Founders must prioritize data privacy and audit trails to win enterprise trust.",
-              "Technical impact: The need for on-device processing, encryption, and clear data retention policies becomes critical. Tools that can demonstrate compliance with attorney-client privilege will have a competitive edge."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI note-taker, audit your data handling for legal compliance (e.g., HIPAA, GDPR, attorney-client privilege). Consider offering an on-premise or fully encrypted version for law firms. Engage with legal professionals to co-design features like automatic redaction of sensitive terms.",
-              "note": "Start with a pilot with a small law firm to gather feedback on trust and usability before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48093043",
-                "title": "A.I. note takers are making lawyers nervous",
-                "url": "https://www.nytimes.com/2026/05/09/business/dealbook/ai-notetakers-legal-risk.html",
-                "domain": "nytimes.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48093043-0",
-                "label": "AI Note Takers",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48093043-1",
-                "label": "Legal Risk",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48093043-2",
-                "label": "Privacy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-11T10:04:47Z"
-          },
-          {
-            "id": "rss-wired-ai-1778536133972-mtrg2w",
-            "title": "Hollywood Writers Now Secretly Training AI: The New Gig Economy",
-            "tldr": "A Wired exposé reveals that former TV and film writers are increasingly taking on anonymous AI training contracts, highlighting a massive shift in creative labor and the hidden human cost behind AI content generation.",
-            "whyItMatters": [
-              "For founders building AI content tools, this signals a potential supply chain risk: the quality and ethics of training data from underpaid, disgruntled creatives could degrade model outputs or lead to PR backlash.",
-              "Technically, it underscores the ongoing reliance on human-in-the-loop data labeling and fine-tuning, even for advanced models, and the need to source training data ethically to avoid legal and reputational issues."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI training data sourcing: ensure transparency and fair compensation for any human contractors involved in data labeling or content generation to mitigate quality and ethical risks.",
-              "note": "Consider partnering with unions or ethical data marketplaces to build a defensible, high-quality data pipeline."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1778536133972-mtrg2w",
-                "title": "I Work in Hollywood. Everyone Who Used to Make TV Is Now Secretly Training AI",
-                "url": "https://www.wired.com/story/i-work-in-hollywood-everyone-who-used-to-make-tv-now-training-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1778536133972-mtrg2w-0",
-                "label": "Data Sourcing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778536133972-mtrg2w-1",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1778536133972-mtrg2w-2",
-                "label": "Content Generation",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1778536134490-y2asg7",
-            "title": "Enterprise AI scaling: From experiments to impact",
-            "tldr": "OpenAI shares a guide on how enterprises move from AI experiments to production, emphasizing trust, governance, workflow design, and quality at scale. This matters because it provides a playbook for founders selling to enterprises or building internal AI products.",
-            "whyItMatters": [
-              "Business impact: Offers a framework for enterprise adoption, helping founders align product strategy with enterprise needs for trust and governance.",
-              "Technical impact: Highlights workflow design and quality at scale, guiding technical decisions on system architecture and monitoring."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's governance and quality processes against the four pillars (trust, governance, workflow design, quality at scale) to identify gaps for enterprise readiness.",
-              "note": "Focus on building trust through transparency and explainability, as this is often the biggest barrier for enterprise adoption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1778536134490-y2asg7",
-                "title": "How enterprises are scaling AI",
-                "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1778536134490-y2asg7-0",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-y2asg7-1",
-                "label": "Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-y2asg7-2",
-                "label": "Scaling",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1778536134490-ql8e70",
-            "title": "OpenAI Launches Campus Network for Student AI Clubs",
-            "tldr": "OpenAI is building a global network for student AI clubs, offering tools, event support, and community access. This is a strategic move to cultivate future AI talent and early adopters.",
-            "whyItMatters": [
-              "For founders building AI products, this creates a direct channel to engage with motivated, early-career AI enthusiasts who could become users, testers, or future hires.",
-              "It signals OpenAI's focus on grassroots adoption and education, which may influence how AI tools are designed for younger, collaborative audiences."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product, consider reaching out to local student AI clubs or the OpenAI Campus Network to offer beta access, host workshops, or gather feedback from this emerging talent pool.",
-              "note": "Engaging early with students can build brand loyalty and provide real-world testing in a low-risk environment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1778536134490-ql8e70",
-                "title": "OpenAI Campus Network: Student club interest form",
-                "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1778536134490-ql8e70-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-ql8e70-1",
-                "label": "Community",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1778536134490-ql8e70-2",
-                "label": "Education",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 10:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1778536134162-28a10s",
-            "title": "Composite-Move Tabu Search Boosts Redistricting Optimization",
-            "tldr": "A new algorithm, CM-Tabu, uses composite moves to overcome contiguity constraints in redistricting, achieving global optima in population equality and enabling multi-criteria trade-offs for faster, more robust solutions.",
-            "whyItMatters": [
-              "For founders building AI for logistics, planning, or spatial optimization, this method offers a way to handle complex constraints (like contiguity) without sacrificing solution quality or speed.",
-              "Technically, the approach of using articulation points and biconnected components to generate composite moves in linear time can be adapted to other combinatorial problems with connectivity constraints."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your optimization problem involves contiguity or connectivity constraints (e.g., district planning, network design). Prototype a composite-move strategy using graph analysis to expand feasible moves, potentially improving solution quality and robustness.",
-              "note": "Start with small-scale tests to gauge computational overhead before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1778536134162-28a10s",
-                "title": "Fast and Effective Redistricting Optimization via Composite-Move Tabu Search",
-                "url": "https://arxiv.org/abs/2605.06682",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-28a10s-0",
-                "label": "Algorithm",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-28a10s-1",
-                "label": "Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1778536134162-28a10s-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 11 May 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
