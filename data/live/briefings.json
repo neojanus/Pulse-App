@@ -1,7 +1,455 @@
 [
   {
-    "date": "2026-05-28",
+    "date": "2026-05-29",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-05-29-morning",
+        "period": "morning",
+        "date": "2026-05-29",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Internet rebuilt for AI agents: AWS, Cloudflare lead shift, LLM Reviews Can Be Gamed: Up to 35% Score Boost, LLM agents match human curators in phenotype annotation.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1780052090059-rdryaf",
+            "title": "Internet rebuilt for AI agents: AWS, Cloudflare lead shift",
+            "tldr": "Major cloud providers are redesigning infrastructure for machine-to-machine traffic, signaling a fundamental shift from human-centric to agent-centric internet. This impacts how founders architect AI products and plan for scaling.",
+            "whyItMatters": [
+              "Business impact: Founders must rethink API design, rate limiting, and cost models as agent traffic grows; early adopters gain competitive advantage in reliability and latency.",
+              "Technical impact: New infrastructure patterns (e.g., agent-optimized CDNs, machine identity management) will become standard; ignoring this risks performance bottlenecks and higher costs."
+            ],
+            "whatToTry": {
+              "description": "Audit your current infrastructure for agent-readiness: test how your APIs handle burst traffic from autonomous agents, implement machine-to-machine authentication (e.g., OAuth 2.0 device flow), and explore Cloudflare's AI Gateway or AWS's new agent-optimized endpoints for lower latency.",
+              "note": "Start with a small agent workload to benchmark before full migration; monitor for unexpected cost spikes from high-frequency requests."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1780052090059-rdryaf",
+                "title": "The internet is being rebuilt for machines",
+                "url": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-rdryaf-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-rdryaf-1",
+                "label": "AWS",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-rdryaf-2",
+                "label": "Cloudflare",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-rdryaf-3",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 28 May 2026 21:24:01 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-wl0366",
+            "title": "LLM Reviews Can Be Gamed: Up to 35% Score Boost",
+            "tldr": "A new study shows LLM-generated paper reviews align only moderately with human reviewers and can be 'gamed' by authors iteratively revising papers based on LLM feedback, boosting scores by up to 35%. This has direct implications for AI product builders using LLMs for evaluation or quality control.",
+            "whyItMatters": [
+              "If you rely on LLMs for automated review or evaluation of user-generated content, this study highlights a critical vulnerability: users can reverse-engineer and exploit your LLM-based system to inflate scores, undermining trust and accuracy.",
+              "The finding that LLM-human alignment varies significantly across prompts and models means your evaluation pipeline's reliability is fragile and requires careful calibration to avoid gaming."
+            ],
+            "whatToTry": {
+              "description": "Audit your LLM-based evaluation or review system by running a 'gaming' test: simulate iterative user revisions based on your LLM's feedback to see if scores inflate. If they do, consider adding human-in-the-loop checks, randomizing prompts, or using ensemble models to reduce exploitability.",
+              "note": "Start with a small sample of your own content to gauge risk before scaling changes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-wl0366",
+                "title": "Review Arcade: On the Human Alignment and Gameability of LLM Reviews",
+                "url": "https://arxiv.org/abs/2605.28897",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-wl0366-0",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-wl0366-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-wl0366-2",
+                "label": "Research",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-rjr4g5",
+            "title": "LLM agents match human curators in phenotype annotation",
+            "tldr": "A new study shows that frontier LLM agents (Claude, GPT-4) can perform phenotype annotation at human-expert consistency levels, outperforming traditional NLP tools and potentially eliminating a major bottleneck in biomedical data integration.",
+            "whyItMatters": [
+              "For founders building AI products in life sciences, this validates that LLM agents can replace costly human curation for ontology mapping, enabling scalable data integration and discovery.",
+              "Technically, it demonstrates that providing LLMs with domain-specific tools (ontologies, validation scripts) in a workspace can achieve expert-level performance, opening doors for similar agentic workflows in other specialized domains."
+            ],
+            "whatToTry": {
+              "description": "Evaluate using frontier LLMs (Claude, GPT-4) as agentic curators for your own ontology mapping tasks. Set up a workspace with relevant ontologies, annotation guides, and validation scripts, then test against a small gold standard dataset to measure consistency with human experts.",
+              "note": "Start with a narrow domain and small sample to validate cost and accuracy before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-rjr4g5",
+                "title": "Frontier LLM-based agents can overcome the ontology curation bottleneck for natural phenotypes",
+                "url": "https://arxiv.org/abs/2605.28965",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-rjr4g5-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-rjr4g5-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-rjr4g5-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-300m4k",
+            "title": "VFEAgent Automates Finite Element Analysis with Multimodal AI",
+            "tldr": "VFEAgent is a new multi-agent system that automates FEA from images and text, using vision-language models and self-debugging code synthesis to generate physically valid simulations, outperforming LLM baselines.",
+            "whyItMatters": [
+              "Business impact: Reduces reliance on scarce FEA experts, enabling faster design cycles and lower costs for engineering firms building AI-integrated products.",
+              "Technical impact: Demonstrates a practical end-to-end pipeline combining multimodal understanding with verification-first code generation, a pattern applicable to other scientific simulation domains."
+            ],
+            "whatToTry": {
+              "description": "Evaluate VFEAgent for automating FEA in your engineering workflow by testing it on your own CAD images and problem descriptions; consider integrating its ReAct-driven multi-agent approach into your product for automated simulation generation.",
+              "note": "Start with simple mechanics scenarios to validate output reliability before scaling to complex designs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-300m4k",
+                "title": "VFEAgent: A Multimodal Agent Framework for End-to-End Automated Finite Element Analysis",
+                "url": "https://arxiv.org/abs/2605.28978",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-300m4k-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-300m4k-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-300m4k-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-openai-blog-1780052090432-rii004",
+            "title": "OpenAI Launches Rosalind Biodefense for AI-Powered Pandemic Prep",
+            "tldr": "OpenAI released Rosalind Biodefense, providing vetted developers and U.S. government partners with access to GPT-Rosalind for biodefense, public health, and pandemic preparedness, signaling a new frontier in AI-for-good applications.",
+            "whyItMatters": [
+              "Opens a new vertical for AI in biosecurity and public health, potentially creating demand for specialized AI tools and APIs.",
+              "Demonstrates OpenAI's commitment to responsible AI deployment in high-stakes domains, setting a precedent for regulatory and partnership models."
+            ],
+            "whatToTry": {
+              "description": "Explore the Rosalind Biodefense announcement to understand the API capabilities and vetting process; consider if your AI product can integrate with or complement biodefense workflows, such as pathogen detection or vaccine development.",
+              "note": "Access is limited to vetted developers and government partners, so focus on building relationships or aligning with similar initiatives."
+            },
+            "sources": [
+              {
+                "id": "src-rss-openai-blog-1780052090432-rii004",
+                "title": "Strengthening societal resilience with Rosalind Biodefense",
+                "url": "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-openai-blog-1780052090432-rii004-0",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-openai-blog-1780052090432-rii004-1",
+                "label": "Biodefense",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-openai-blog-1780052090432-rii004-2",
+                "label": "Public Health",
+                "type": "topic"
+              }
+            ],
+            "category": "releases",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 03:00:00 GMT"
+          },
+          {
+            "id": "rss-techcrunch-ai-1780052090059-7szbyv",
+            "title": "Glean hits $300M ARR, selling AI cost-cutting to enterprises",
+            "tldr": "Glean tripled revenue to $300M by positioning its enterprise AI search as a budget-cutting tool, not just a productivity booster, signaling a shift in how AI products must prove ROI to win enterprise deals.",
+            "whyItMatters": [
+              "Enterprise AI buyers are prioritizing cost reduction over innovation, forcing founders to reframe value propositions around measurable savings.",
+              "Glean's growth despite Big Tech competition shows that specialized, ROI-focused AI tools can carve out defensible market positions."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's messaging to emphasize concrete cost savings (e.g., reduced headcount, faster workflows) and build a simple ROI calculator for enterprise sales demos.",
+              "note": "Focus on metrics like time saved per employee or reduction in software licensing costs, not just abstract productivity gains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1780052090059-7szbyv",
+                "title": "Glean’s top line crosses $300M as AI budget-cutting becomes its major selling point",
+                "url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-7szbyv-0",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-7szbyv-1",
+                "label": "Glean",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780052090059-7szbyv-2",
+                "label": "AI Budgeting",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:44:37 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-jef0xy",
+            "title": "CCT: Category Theory Boosts GPT-2 by 12% Perplexity",
+            "tldr": "A new 306M-parameter architecture, the Cognitive Categorical Transformer (CCT), adds category-theoretic inductive biases to GPT-2 Small, achieving a 12% relative perplexity reduction on WikiText-103. The key innovation—simplicial message passing—accounts for 84% of the improvement, validated via ablation.",
+            "whyItMatters": [
+              "Business impact: Demonstrates that structured inductive biases can significantly improve language model performance without scaling parameters, offering a cost-effective path to better models for resource-constrained startups.",
+              "Technical impact: Provides the first ablation-validated evidence that simplicial message passing enhances language modeling, opening a new research direction for integrating mathematical structure into transformers."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning a small language model (e.g., GPT-2 Small) for a domain-specific task, experiment with adding a simplicial message-passing layer to your architecture. Start by replicating the CCT approach on a smaller dataset to see if you can achieve similar perplexity gains without scaling up parameters.",
+              "note": "The paper uses a matched-step protocol and fine-tuning; ensure your training setup is comparable to isolate the effect of the inductive bias."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-jef0xy",
+                "title": "The Cognitive Categorical Transformer: Category-Theoretic Inductive Biases for Language Modeling",
+                "url": "https://arxiv.org/abs/2605.28864",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-jef0xy-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-jef0xy-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-zfaohf",
+            "title": "Orthogonal Concept Erasure: Precise, Efficient AI Safety",
+            "tldr": "A new method, Orthogonal Concept Erasure (OCE), uses multiplicative parameter updates to remove unwanted concepts from diffusion models without the computational cost of training or the performance degradation of editing-based methods. This enables precise, scalable content moderation for AI image generators.",
+            "whyItMatters": [
+              "Business impact: Enables cost-effective content filtering for AI image products, reducing moderation overhead and legal risks while maintaining model performance.",
+              "Technical impact: Provides a closed-form, layer-wise solution that preserves generative capacity, making it suitable for deployment in production systems with multi-concept constraints."
+            ],
+            "whatToTry": {
+              "description": "If you're building a diffusion model-based product, evaluate OCE for removing unsafe or undesired concepts (e.g., violence, copyrighted styles) by applying orthogonal transformations to model parameters. Start with single-concept erasure and test on your specific use case to measure precision and generation quality.",
+              "note": "OCE is still research; validate on your model architecture and consider combining with other safety measures for robust deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-zfaohf",
+                "title": "Orthogonal Concept Erasure for Diffusion Models",
+                "url": "https://arxiv.org/abs/2605.28902",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-zfaohf-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-zfaohf-1",
+                "label": "safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-zfaohf-2",
+                "label": "diffusion",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-9uklef",
+            "title": "BEAMS Initiative: Benchmarking AI for Simulation Modeling",
+            "tldr": "The BEAMS Initiative introduces open benchmarks to evaluate AI tools for building simulation models, focusing on human-centered practices. Tests for causal reasoning, model iteration, and explanation reveal significant variability across LLMs, guiding founders toward more reliable AI for decision support.",
+            "whyItMatters": [
+              "Business impact: Enables founders to assess which AI tools can reliably automate parts of simulation modeling, reducing risk in decision-making products.",
+              "Technical impact: Provides standardized tests (e.g., causal translation, conformance) to compare LLM performance, helping teams choose the right model for modeling tasks."
+            ],
+            "whatToTry": {
+              "description": "Explore the open-source sd-ai project and its benchmarks (e.g., causal reasoning, model iteration) to evaluate LLMs for your simulation or decision-support product. Start with the automated tests to identify which model aligns best with your use case.",
+              "note": "Focus on tests for model behavior explanation and suggested fixes—these are critical for interpretability in regulated industries."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-9uklef",
+                "title": "BEAMS: Benchmarking and Evaluating AI for Modeling and Simulation",
+                "url": "https://arxiv.org/abs/2605.28994",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-9uklef-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-9uklef-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-9uklef-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780052090166-f9md1o",
+            "title": "LLM Users Don't Adapt: Habits Are Sticky, Power Users Skew Data",
+            "tldr": "A longitudinal study of ~12,000 Bing Copilot users reveals that individual user habits are extremely sticky and change little over time, while population-level trends mask this. It also warns that datasets like WildChat are skewed toward power users, not typical interactions.",
+            "whyItMatters": [
+              "Business impact: Founders building AI products must design for habit persistence—users won't naturally adapt to new features or workflows without deliberate onboarding or nudges.",
+              "Technical impact: Relying on public datasets like WildChat for training or evaluation can misrepresent real-world usage, leading to models that underperform for average users."
+            ],
+            "whatToTry": {
+              "description": "Audit your user logs to segment by activity level (e.g., power vs. casual users) and measure behavior change over time. If habits are sticky, invest in guided onboarding or in-context prompts to shift usage patterns, rather than expecting organic adaptation.",
+              "note": "Consider collecting your own longitudinal data instead of relying on skewed public datasets for product decisions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780052090166-f9md1o",
+                "title": "Adopt $\\neq$ Adapt: Longitudinal Analyses of LLM Conversations in the Wild",
+                "url": "https://arxiv.org/abs/2605.29018",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-f9md1o-0",
+                "label": "User Behavior",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-f9md1o-1",
+                "label": "Dataset Bias",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780052090166-f9md1o-2",
+                "label": "Bing Copilot",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 29 May 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-28",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-28-morning",
@@ -1318,7 +1766,7 @@
   },
   {
     "date": "2026-05-27",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, May 27",
     "briefings": [
       {
         "id": "briefing-2026-05-27-afternoon",
@@ -4066,851 +4514,6 @@
           }
         ],
         "totalReadTimeMinutes": 16,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-22",
-    "displayDate": "Friday, May 22",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-22-morning",
-        "period": "morning",
-        "date": "2026-05-22",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: SOLAR: Self-Optimizing Agent for Lifelong Learning, COSMO-Agent: RL Teaches LLMs to Close CAD-CAE Loop, AgentCo-op: Build Multi-Agent Workflows Without Redesign.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1779445787018-ie6hv6",
-            "title": "SOLAR: Self-Optimizing Agent for Lifelong Learning",
-            "tldr": "A new research paper introduces SOLAR, an autonomous agent that uses meta-learning and reinforcement learning to continuously adapt to new tasks without forgetting old ones, outperforming baselines across reasoning domains. This matters for founders building AI products that need to evolve in dynamic environments without costly retraining.",
-            "whyItMatters": [
-              "Enables AI products to self-improve and adapt to changing user needs or data streams without manual fine-tuning, reducing maintenance overhead.",
-              "Balances plasticity and stability, solving catastrophic forgetting—a key bottleneck for deploying LLMs in long-running applications."
-            ],
-            "whatToTry": {
-              "description": "Evaluate SOLAR's approach for your product by testing its meta-learning framework on a small-scale continual learning task (e.g., customer support intent classification) to see if it reduces retraining costs and improves adaptation speed.",
-              "note": "Start with a non-critical domain to validate performance before scaling, as the paper is recent and may require custom implementation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787018-ie6hv6",
-                "title": "SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation",
-                "url": "https://arxiv.org/abs/2605.20189",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-ie6hv6-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-ie6hv6-1",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787018-m31t16",
-            "title": "COSMO-Agent: RL Teaches LLMs to Close CAD-CAE Loop",
-            "tldr": "A new framework uses reinforcement learning to train LLMs to autonomously iterate between CAD design and CAE simulation, solving the semantic gap that bottlenecks industrial design optimization. This enables small open-source models to outperform larger ones on constraint-driven tasks.",
-            "whyItMatters": [
-              "Business impact: Reduces manual iteration time in product design, enabling faster prototyping and lower engineering costs for hardware startups.",
-              "Technical impact: Demonstrates a practical method for LLMs to learn multi-tool orchestration via RL, applicable to other closed-loop engineering workflows."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for engineering or design automation, explore using RL with multi-constraint rewards to train small LLMs on your own CAD-CAE toolchain. Start by defining a reward function that balances feasibility, toolchain robustness, and output validity.",
-              "note": "The dataset covers 25 component categories—consider adapting it to your domain or creating a similar benchmark for your tools."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787018-m31t16",
-                "title": "Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration",
-                "url": "https://arxiv.org/abs/2605.20190",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-m31t16-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-m31t16-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-m31t16-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-s81hxq",
-            "title": "AgentCo-op: Build Multi-Agent Workflows Without Redesign",
-            "tldr": "AgentCo-op is a new framework that composes existing skills, tools, and agents into executable multi-agent workflows via typed artifact handoffs, with self-guided repair on failure. It outperforms baselines on 4 of 6 benchmarks while reducing costs, making it a practical tool for founders building complex AI systems.",
-            "whyItMatters": [
-              "Enables rapid composition of specialized agents without global redesign, reducing development time for multi-agent systems.",
-              "Reduces per-task costs compared to existing multi-agent baselines, improving operational efficiency for AI products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate AgentCo-op for your multi-agent use cases by testing its retrieval-based synthesis on a small set of existing tools and agents. Start with a genomics or coding task to see how it handles typed artifact handoffs and local repair.",
-              "note": "The framework is research-stage; check for open-source code or API access before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-s81hxq",
-                "title": "AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
-                "url": "https://arxiv.org/abs/2605.20425",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-s81hxq-0",
-                "label": "AgentCo-op",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-s81hxq-1",
-                "label": "Multi-Agent Workflows",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-s81hxq-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-sbufrw",
-            "title": "Open-World Evals: Real-World AI Capability Testing",
-            "tldr": "A new paper proposes 'open-world evaluations'—long-horizon, messy, real-world tasks—as a complement to benchmarks, demonstrating an AI agent that autonomously developed and published an iOS app to the App Store with minimal human intervention. This signals a shift toward more realistic capability assessment for frontier models.",
-            "whyItMatters": [
-              "Business impact: Founders can use open-world evals to gauge if their AI products can handle complex, real-world tasks beyond standard benchmarks, reducing risk of overpromising capabilities.",
-              "Technical impact: The CRUX project provides a framework for designing such evals, enabling teams to identify early warning signs of emerging capabilities and adjust product roadmaps accordingly."
-            ],
-            "whatToTry": {
-              "description": "Design a simple open-world evaluation for your AI product: pick a real-world task your users face (e.g., automating a multi-step workflow), run it with your model, and assess qualitatively. Use the CRUX paper's recommendations to structure the eval and report findings.",
-              "note": "Start with a task that has clear success criteria but is messy enough to reveal limitations, like generating a functional prototype from a vague brief."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-sbufrw",
-                "title": "Open-World Evaluations for Measuring Frontier AI Capabilities",
-                "url": "https://arxiv.org/abs/2605.20520",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-sbufrw-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-sbufrw-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-dei4xk",
-            "title": "AgentAtlas: New Framework Reveals LLM Agents' True Capabilities",
-            "tldr": "A new paper introduces AgentAtlas, a comprehensive evaluation framework for LLM agents that goes beyond simple accuracy metrics. It reveals that removing explicit prompt guidance drops trajectory accuracy by 14-40 percentage points, and no single model excels across all dimensions—critical for founders building reliable agentic systems.",
-            "whyItMatters": [
-              "Business impact: Founders can use AgentAtlas to rigorously evaluate and compare agent models for their specific use cases, avoiding over-reliance on misleading leaderboard scores.",
-              "Technical impact: The taxonomy of agent failures (control decisions, trajectory errors) provides a structured way to diagnose and improve agent reliability, which is essential for production deployments."
-            ],
-            "whatToTry": {
-              "description": "Adopt the AgentAtlas methodology to stress-test your own agent pipeline: systematically categorize failures using their six-state control taxonomy (Act/Ask/Refuse/Stop/Confirm/Recover) and nine-category trajectory failure types. Run a 'taxonomy-blind' test by removing explicit action menus from prompts to measure true model capability vs. prompt supervision.",
-              "note": "Start with a small set of representative tasks to identify weak spots before scaling. The paper's benchmark-coverage audit can help you choose the right evaluation axes for your domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-dei4xk",
-                "title": "AgentAtlas: Beyond Outcome Leaderboards for LLM Agents",
-                "url": "https://arxiv.org/abs/2605.20530",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-dei4xk-0",
-                "label": "AgentAtlas",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-dei4xk-1",
-                "label": "LLM Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-dei4xk-2",
-                "label": "Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-txmb1f",
-            "title": "Personality Engineering: AI Agents as Negotiation Research Tools",
-            "tldr": "A new methodology uses AI agents to precisely control and test negotiator personality traits (warmth and dominance) via the interpersonal circumplex, enabling rigorous testing of classic negotiation theories and offering a practical guide for designing AI negotiation agents.",
-            "whyItMatters": [
-              "Business impact: Founders building AI agents for sales, customer support, or HR can now design agents with specific personality profiles to optimize negotiation outcomes, potentially improving deal closure rates and customer satisfaction.",
-              "Technical impact: Provides a structured framework (interpersonal circumplex) for parameterizing agent behavior, making it easier to systematically test and iterate on agent personalities in controlled experiments."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI agent for negotiation (e.g., in sales or procurement), use the interpersonal circumplex to define two key dimensions: warmth (empathy vs. assertiveness) and dominance (control vs. submission). Start by setting these as configurable parameters in your agent's prompt or decision logic, then A/B test different combinations to see which yields better outcomes in your specific use case.",
-              "note": "This methodology is still theoretical; start with small-scale experiments to validate before deploying at scale."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-txmb1f",
-                "title": "Personality Engineering with AI Agents: A New Methodology for Negotiation Research",
-                "url": "https://arxiv.org/abs/2605.20554",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-txmb1f-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-txmb1f-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1779445786877-bqf8kp",
-            "title": "Gulf's AI Boom Hits Undersea Cable Bottleneck",
-            "tldr": "Hyperscalers are driving a rethink of Gulf internet infrastructure as AI's massive data demands make cable disruptions a critical risk. This highlights a growing infrastructure bottleneck for AI deployment in the region.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products in or for the Gulf region must account for potential latency and reliability issues from cable disruptions, affecting user experience and service-level agreements.",
-              "Technical impact: The need for redundant, high-capacity undersea cables and edge data centers in the Gulf could reshape AI infrastructure strategies, pushing for localized compute and data storage."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's dependency on cross-region data transfer. Consider pre-deploying models or caching data in Gulf-based cloud regions (e.g., AWS Bahrain, Azure UAE) to mitigate latency and disruption risks.",
-              "note": "Start by mapping your data flow and identifying critical paths that rely on undersea cables; this is especially important for real-time AI applications."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779445786877-bqf8kp",
-                "title": "The Gulf’s AI Boom Has an Undersea Cable Problem",
-                "url": "https://www.wired.com/story/the-gulfs-ai-boom-has-an-undersea-cable-problem/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779445786877-bqf8kp-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779445786877-bqf8kp-1",
-                "label": "Cloud",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779445786877-bqf8kp-2",
-                "label": "Edge Computing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787018-lhciq9",
-            "title": "OSCToM: RL boosts LLM theory of mind reasoning 6x more efficiently",
-            "tldr": "A new approach uses reinforcement learning to generate training data for nested belief conflicts, enabling smaller LLMs to achieve 76% accuracy on complex theory-of-mind tasks—dramatically improving over prior methods. This matters for founders building AI that needs to model user intent or multi-agent interactions.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable AI for customer support, negotiation bots, or social agents that must infer recursive beliefs (e.g., 'what does the user think I think?').",
-              "Technical impact: Shows targeted RL-based data synthesis can make smaller models (8B) competitive with larger ones on advanced reasoning, reducing compute costs."
-            ],
-            "whatToTry": {
-              "description": "If you're building a conversational AI or multi-agent system, experiment with OSCToM's open-source code to generate adversarial training examples that test recursive belief conflicts in your own domain.",
-              "note": "Start with the FANToM benchmark for evaluation; the 6x efficiency gain suggests you can augment your dataset without massive compute."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787018-lhciq9",
-                "title": "OSCToM: RL-Guided Adversarial Generation for High-Order Theory of Mind",
-                "url": "https://arxiv.org/abs/2605.20423",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-lhciq9-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787018-lhciq9-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-cew3n2",
-            "title": "Better Embeddings for Horn Logic Reasoning Boost AI Efficiency",
-            "tldr": "A new paper introduces improved embedding techniques for Horn logic reasoning, using triplet loss with strategic anchor generation and balanced hard example mining. This could enhance the efficiency of neural-symbolic AI systems, relevant for founders building hybrid AI products.",
-            "whyItMatters": [
-              "Business impact: Enables more efficient AI reasoning in domains like legal, compliance, or automated theorem proving, reducing compute costs and latency.",
-              "Technical impact: Provides a method to create embeddings that better capture logical structure, improving downstream reasoning accuracy and search speed."
-            ],
-            "whatToTry": {
-              "description": "If you're building a reasoning system over structured knowledge (e.g., rules, ontologies), experiment with triplet loss training using the paper's anchor generation strategy (favoring repeated terms) and balanced positive/negative example sampling to improve embedding quality.",
-              "note": "Start with a small domain-specific knowledge base to validate before scaling; the paper suggests hard example emphasis can be tuned for your data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-cew3n2",
-                "title": "High Quality Embeddings for Horn Logic Reasoning",
-                "url": "https://arxiv.org/abs/2605.20467",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-cew3n2-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-cew3n2-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779445787019-motsth",
-            "title": "New Metrics for Evaluating Uncertainty in AI Systems",
-            "tldr": "Researchers propose ECUAS_n, a family of metrics that properly evaluate AI systems outputting both predictions and uncertainty scores, addressing a critical gap in high-stakes decision-making. This matters because current evaluation methods are inadequate for assessing overall system performance.",
-            "whyItMatters": [
-              "For founders building AI products in regulated or high-stakes domains (e.g., healthcare, finance), this provides a principled way to measure and improve uncertainty-aware systems, potentially reducing deployment risks.",
-              "The metric can guide product development by enabling better trade-off analysis between prediction accuracy and uncertainty quality, leading to more reliable AI systems."
-            ],
-            "whatToTry": {
-              "description": "If your product uses uncertainty scores (e.g., confidence thresholds, rejection options), experiment with ECUAS_n to evaluate your system's decision-making performance. Start by applying it to your classification or generation tasks to identify weaknesses in your uncertainty estimates.",
-              "note": "The parameter n allows tuning the cost trade-off; test with different values to match your use-case's risk tolerance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779445787019-motsth",
-                "title": "$ECUAS_n$: A family of metrics for principled evaluation of uncertainty-augmented systems",
-                "url": "https://arxiv.org/abs/2605.20490",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-motsth-0",
-                "label": "research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779445787019-motsth-1",
-                "label": "evaluation",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-22-afternoon",
-        "period": "afternoon",
-        "date": "2026-05-22",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Specialization Beats Scale: Key Insight for AI Procurement, SOLAR: Self-Optimizing Agent for Lifelong Learning Without Fine-Tuning, COSMO-Agent: RL Trains LLMs to Automate CAD-CAE Design Loops.",
-        "items": [
-          {
-            "id": "rss-hugging-face-blog-1779465598039-clcjhm",
-            "title": "Specialization Beats Scale: Key Insight for AI Procurement",
-            "tldr": "A Hugging Face blog post argues that specialized, smaller AI models often outperform larger general-purpose ones in real-world applications, challenging the prevailing focus on scale in procurement decisions.",
-            "whyItMatters": [
-              "Business impact: Founders can reduce costs and improve performance by choosing specialized models over massive ones, leading to faster deployment and lower inference expenses.",
-              "Technical impact: Encourages a shift from chasing model size to optimizing for task-specific accuracy, enabling more efficient resource allocation and better user experiences."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI stack: identify tasks where a smaller, specialized model (e.g., fine-tuned BERT or T5) could replace a large general-purpose one (like GPT-4). Test on a single use case to measure cost savings and performance.",
-              "note": "Start with high-volume, narrow tasks (e.g., classification, extraction) where specialization yields the biggest gains."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1779465598039-clcjhm",
-                "title": "Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook",
-                "url": "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1779465598039-clcjhm-0",
-                "label": "Model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1779465598039-clcjhm-1",
-                "label": "Tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1779465598039-clcjhm-2",
-                "label": "Topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 15:25:59 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1779465597984-z8d39r",
-            "title": "SOLAR: Self-Optimizing Agent for Lifelong Learning Without Fine-Tuning",
-            "tldr": "A new paper introduces SOLAR, an autonomous agent that uses meta-learning and reinforcement learning to adapt to new tasks without gradient-based fine-tuning, outperforming baselines across reasoning domains. This could reduce the cost and complexity of deploying LLMs in dynamic environments.",
-            "whyItMatters": [
-              "Eliminates the need for expensive fine-tuning and manual data curation, enabling cheaper and faster adaptation to new domains.",
-              "Addresses catastrophic forgetting, a key barrier to deploying AI in production where data streams shift over time."
-            ],
-            "whatToTry": {
-              "description": "Evaluate SOLAR's approach for your use case by testing its ability to adapt to unseen domains without retraining. Consider integrating its meta-learning framework into your agent pipeline to reduce operational costs and improve robustness to concept drift.",
-              "note": "The paper is theoretical; wait for open-source implementation or API before production use."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779465597984-z8d39r",
-                "title": "SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation",
-                "url": "https://arxiv.org/abs/2605.20189",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-z8d39r-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-z8d39r-1",
-                "label": "continual learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-z8d39r-2",
-                "label": "meta-learning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779465597984-uofxyi",
-            "title": "COSMO-Agent: RL Trains LLMs to Automate CAD-CAE Design Loops",
-            "tldr": "A new framework, COSMO-Agent, uses reinforcement learning to teach LLMs to orchestrate CAD and CAE tools, closing the design-simulation loop. This enables small open-source models to outperform larger ones in constraint-driven industrial design, offering a path to automated optimization.",
-            "whyItMatters": [
-              "Business impact: Reduces manual iteration in product design, cutting time-to-market and engineering costs for hardware and manufacturing startups.",
-              "Technical impact: Demonstrates that RL fine-tuning on tool-augmented tasks can make small LLMs surpass larger models, opening new possibilities for efficient, specialized AI agents."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating RL fine-tuning with tool-use environments for your own domain-specific optimization tasks. Start by defining a closed-loop task (e.g., design-to-simulation) and use a small open-source LLM with a multi-constraint reward to automate iterations.",
-              "note": "Focus on tasks with clear constraints and measurable outcomes; the dataset includes 25 component categories for reference."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779465597984-uofxyi",
-                "title": "Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration",
-                "url": "https://arxiv.org/abs/2605.20190",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-uofxyi-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-uofxyi-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-uofxyi-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779465597984-cyxy6w",
-            "title": "AgentCo-op: Build Multi-Agent Workflows Without Redesign",
-            "tldr": "AgentCo-op is a new framework that composes existing AI agents, tools, and skills into auditable workflows via typed artifact handoffs, with self-guided repair on failure. It outperforms baselines on 4/6 benchmarks while reducing costs, making it a practical solution for founders building complex multi-agent systems in open-ended domains like genomics.",
-            "whyItMatters": [
-              "Enables rapid composition of specialized agents without global redesign, reducing development time and cost for multi-agent products.",
-              "Introduces local repair mechanisms that improve workflow reliability, critical for production AI systems in scientific and enterprise settings."
-            ],
-            "whatToTry": {
-              "description": "Evaluate AgentCo-op for your multi-agent use case by testing its retrieval-based synthesis on your existing agent tools and APIs. Start with a small set of typed artifact handoffs to see if it reduces integration overhead and improves workflow robustness.",
-              "note": "The framework is research-stage; monitor for open-source release or API access before full adoption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779465597984-cyxy6w",
-                "title": "AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
-                "url": "https://arxiv.org/abs/2605.20425",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-cyxy6w-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-cyxy6w-1",
-                "label": "multi-agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-cyxy6w-2",
-                "label": "workflow",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779465597871-c9v2em",
-            "title": "Google's AI Glasses: Gemini-Powered AR Nears Reality",
-            "tldr": "Google demoed prototype Android XR glasses with Gemini AI overlaying translation, navigation, and info in real-time. It's a significant step for AR wearables, signaling a new platform opportunity for AI-first apps.",
-            "whyItMatters": [
-              "Business impact: Opens a new distribution channel for AI-powered services (translation, navigation, contextual info) that founders can build on top of Android XR.",
-              "Technical impact: Shows Gemini's real-time multimodal capabilities working in a wearable form factor, hinting at API opportunities for developers."
-            ],
-            "whatToTry": {
-              "description": "Start prototyping AI features that work with hands-free, glanceable interfaces—like real-time translation or contextual overlays—using Google's Gemini API or similar multimodal models, to prepare for Android XR's launch.",
-              "note": "Focus on low-latency, voice-first interactions; AR glasses require minimal UI clutter."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779465597871-c9v2em",
-                "title": "We tried Google’s AI glasses and they’re almost there",
-                "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779465597871-c9v2em-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779465597871-c9v2em-1",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779465597871-c9v2em-2",
-                "label": "AR",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 15:37:15 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1779465597899-9jy395",
-            "title": "Google AI Search: Convenience Over Web Integrity",
-            "tldr": "Wired argues Google's AI-generated search answers are so convenient they'll draw users in, despite harming web creators and artists. This signals a major shift in user behavior and web economics for AI product founders.",
-            "whyItMatters": [
-              "Business impact: Founders relying on Google search traffic for customer acquisition may see reduced organic reach as AI summaries replace traditional links, forcing new distribution strategies.",
-              "Technical impact: AI search changes how users discover content, requiring AI products to optimize for answer extraction and conversational interfaces rather than keyword ranking."
-            ],
-            "whatToTry": {
-              "description": "Audit your product's dependency on Google organic search traffic and start building alternative distribution channels like direct user engagement, email lists, or partnerships with AI-native platforms.",
-              "note": "Consider creating AI-optimized content that answers specific user queries concisely, as Google's AI favors direct, factual responses."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779465597899-9jy395",
-                "title": "Even If You Hate AI, You Will Use Google AI Search",
-                "url": "https://www.wired.com/story/even-if-you-hate-ai-you-will-use-google-ai-search/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779465597899-9jy395-0",
-                "label": "Google AI Search",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779465597899-9jy395-1",
-                "label": "Search Distribution",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779465597899-9jy395-2",
-                "label": "Web Economics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 15:00:00 +0000"
-          },
-          {
-            "id": "hn-48234547",
-            "title": "Why Cutting Headcount for AI Is a Losing Strategy",
-            "tldr": "A viral HackerNews post argues that companies replacing employees with AI will lose to those who augment their teams with AI instead, sparking a debate on the strategic value of human-AI collaboration.",
-            "whyItMatters": [
-              "Founders should prioritize AI as an augmentation tool, not a replacement, to retain institutional knowledge and team morale.",
-              "The debate highlights a key strategic fork: investing in AI to enhance productivity vs. cutting costs, with long-term competitive implications."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI deployment: identify 2-3 tasks where AI can assist your team (e.g., code review, customer support triage) without reducing headcount. Measure productivity gains over 30 days.",
-              "note": "Focus on roles where AI handles grunt work, freeing humans for higher-value decisions—this preserves culture and adaptability."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48234547",
-                "title": "The Companies Cutting Headcount for AI Will Lose to the Ones Who Didn't",
-                "url": "https://libertas.software/en/knowledge-hub/19/the-companies-cutting-headcount-for-ai-will-lose-to-the-ones-who-didnt",
-                "domain": "libertas.software",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48234547-0",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48234547-1",
-                "label": "Strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-22T11:45:24Z"
-          },
-          {
-            "id": "rss-wired-ai-1779465597900-keuvbu",
-            "title": "Gulf's AI Boom Hits Undersea Cable Bottleneck",
-            "tldr": "Hyperscalers are pressuring Gulf states to upgrade undersea cable infrastructure as AI workloads demand massive, reliable data transfer, risking disruptions that could stall AI development in the region.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products in or relying on Gulf data centers face latency and reliability risks from cable congestion, potentially increasing costs and limiting scalability.",
-              "Technical impact: AI training and inference require high-bandwidth, low-latency connections; cable disruptions can cripple model deployment and real-time applications, forcing rethinking of data locality and redundancy strategies."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI infrastructure's dependency on Gulf-based data centers and undersea cables. Consider diversifying data storage and compute across multiple regions (e.g., Europe, Asia) to mitigate single-point-of-failure risks from cable cuts.",
-              "note": "Start by mapping your data flow and identifying critical paths; tools like Cloudflare's network analytics can help visualize latency hotspots."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779465597900-keuvbu",
-                "title": "The Gulf’s AI Boom Has an Undersea Cable Problem",
-                "url": "https://www.wired.com/story/the-gulfs-ai-boom-has-an-undersea-cable-problem/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779465597900-keuvbu-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779465597900-keuvbu-1",
-                "label": "Data Centers",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779465597900-keuvbu-2",
-                "label": "Networking",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1779465597984-qa2pfb",
-            "title": "OSCToM: RL boosts LLM theory of mind by 76% on complex social tasks",
-            "tldr": "A new approach called OSCToM uses reinforcement learning to generate adversarial training data for nested belief conflicts, enabling smaller LLMs to achieve 76% accuracy on theory of mind benchmarks—a massive leap from ExploreToM's 0.2%.",
-            "whyItMatters": [
-              "For founders building AI agents that interact with humans (e.g., customer support, negotiation, tutoring), this shows a path to dramatically improve social reasoning without scaling model size.",
-              "The 6x more efficient data synthesis means you can train specialized reasoning capabilities with less compute, making advanced cognitive features accessible to startups."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI agent that requires understanding user beliefs or intentions, consider using RL-based adversarial generation to create training data for nested belief conflicts. Start by identifying scenarios where your agent's beliefs might conflict with a user's perspective, then generate synthetic examples using a domain-specific language.",
-              "note": "The OSCToM code is open-source on GitHub—fork it and adapt the conflict generation to your domain (e.g., customer service, tutoring)."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779465597984-qa2pfb",
-                "title": "OSCToM: RL-Guided Adversarial Generation for High-Order Theory of Mind",
-                "url": "https://arxiv.org/abs/2605.20423",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-qa2pfb-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-qa2pfb-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779465597984-ckwiyz",
-            "title": "Better Embeddings for Faster Logical Reasoning in AI",
-            "tldr": "A new paper introduces methods to create high-quality embeddings for Horn logic reasoning, using triplet loss with balanced hard examples to improve neural-guided search efficiency. This could enhance AI systems that combine symbolic reasoning with neural networks.",
-            "whyItMatters": [
-              "Improves efficiency of neuro-symbolic AI systems, which are key for explainable and reliable AI products in domains like legal, medical, or code analysis.",
-              "Offers practical embedding techniques that can be adapted for custom reasoning tasks, potentially reducing compute costs and latency in production."
-            ],
-            "whatToTry": {
-              "description": "If you're building a neuro-symbolic AI system, experiment with triplet loss training for your logical statement embeddings, focusing on generating balanced easy/medium/hard examples and periodically emphasizing hard ones to improve reasoning accuracy.",
-              "note": "Start with small knowledge bases to validate the approach before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779465597984-ckwiyz",
-                "title": "High Quality Embeddings for Horn Logic Reasoning",
-                "url": "https://arxiv.org/abs/2605.20467",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-ckwiyz-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779465597984-ckwiyz-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 22 May 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
