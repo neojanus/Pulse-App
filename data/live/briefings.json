@@ -1,7 +1,440 @@
 [
   {
-    "date": "2026-05-31",
+    "date": "2026-06-01",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-01-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-01",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: NVIDIA Cosmos 3: Open Omni-Model for Physical AI Reasoning, PhyDrawGen: AI That Generates Physically Accurate Diagrams from Text, Why World Models Fail: The Case for Query-Conditioned Embodied AI.",
+        "items": [
+          {
+            "id": "rss-hugging-face-blog-1780319177113-cmy4dx",
+            "title": "NVIDIA Cosmos 3: Open Omni-Model for Physical AI Reasoning",
+            "tldr": "NVIDIA released Cosmos 3, an open-source omni-model that integrates vision, language, and action for physical AI reasoning. This enables robots and autonomous systems to understand and act in the real world, potentially accelerating development for AI product builders.",
+            "whyItMatters": [
+              "Provides a unified open-source model for physical AI, reducing the need for custom integrations between vision, language, and action systems.",
+              "Enables faster prototyping of autonomous systems like robots, drones, or self-driving cars by offering a pre-trained reasoning and action model."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Cosmos 3 for your robotics or autonomous system project by testing its ability to reason about physical environments and generate action sequences. Start with the Hugging Face demo to see if it fits your use case.",
+              "note": "Consider fine-tuning on domain-specific data for better performance in niche applications like warehouse logistics or medical robotics."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1780319177113-cmy4dx",
+                "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
+                "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1780319177113-cmy4dx-0",
+                "label": "NVIDIA",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1780319177113-cmy4dx-1",
+                "label": "Cosmos 3",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1780319177113-cmy4dx-2",
+                "label": "Physical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 04:44:55 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177221-19aymg",
+            "title": "PhyDrawGen: AI That Generates Physically Accurate Diagrams from Text",
+            "tldr": "PhyDrawGen is a neuro-symbolic pipeline that generates physics diagrams from natural language, outperforming GPT-5-image and Gemini models by enforcing physical laws like force balance and conservation, solving a key hallucination problem in AI-generated visuals.",
+            "whyItMatters": [
+              "For founders building AI products in education, simulation, or scientific visualization, this demonstrates a viable approach to grounding generative models in physical constraints, reducing hallucination risks in diagram generation.",
+              "Technically, the decoupling of semantic understanding (LLM) from constraint satisfaction (deterministic solver) offers a blueprint for combining neural and symbolic methods to achieve high accuracy in domain-specific tasks."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an AI tool for technical diagramming or educational content, consider adopting a similar neuro-symbolic pipeline: use an LLM to extract structured scene graphs, then apply a deterministic solver for constraint enforcement, and finally use a vision model for iterative verification.",
+              "note": "Start with a small benchmark in your domain (e.g., 100 problems) to validate the approach before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177221-19aymg",
+                "title": "PhyDrawGen: Physically Grounded Diagram Generation from Natural Language",
+                "url": "https://arxiv.org/abs/2605.30512",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-19aymg-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-19aymg-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-19aymg-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177221-jz3chq",
+            "title": "Why World Models Fail: The Case for Query-Conditioned Embodied AI",
+            "tldr": "A new paper exposes a fundamental flaw in observation-predictive world models: they can look right but be physically wrong, leading to unsafe actions. The authors propose query-conditioned models that prioritize physical viability over visual plausibility, a critical insight for building reliable embodied AI.",
+            "whyItMatters": [
+              "For founders building robotics or autonomous systems: current world models may certify unsafe behavior due to structural failures in predicting intervention outcomes.",
+              "Technically, the paper offers a modular framework (environment representation, latent state estimation, interventional dynamics) that makes world models interpretable and auditable, enabling safer deployment."
+            ],
+            "whatToTry": {
+              "description": "Audit your current world model by testing it on controlled benchmarks that fix the visible scene while varying latent physics (e.g., mass, friction). If it mispredicts outcomes, consider adopting a query-conditioned approach that separates environment representation from interventional dynamics.",
+              "note": "Start with simple physics simulations (e.g., MuJoCo) to isolate failures before scaling to complex environments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177221-jz3chq",
+                "title": "Physically Viable World Models: A Case for Query-Conditioned Embodied AI",
+                "url": "https://arxiv.org/abs/2605.30542",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-jz3chq-0",
+                "label": "World Models",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-jz3chq-1",
+                "label": "Embodied AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177221-jz3chq-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177222-y9sz3l",
+            "title": "LLM Self-Evolution: Weak Models Can Update, But Only Mid-Tier Benefits",
+            "tldr": "A new paper reveals that even weak LLMs can produce useful harness updates (prompts, tools, memories), but only mid-tier models actually benefit from them. Strong models benefit less than mid-tier, challenging assumptions about scaling self-evolution capabilities.",
+            "whyItMatters": [
+              "Business impact: Founders can use cheaper models (e.g., Qwen3.5-9B) to generate harness updates, saving costs, but must pair them with mid-tier models for execution to maximize gains.",
+              "Technical impact: The non-monotonic benefit curve means optimizing self-evolution systems requires careful model selection—not just using the strongest model available."
+            ],
+            "whatToTry": {
+              "description": "Test a two-tier architecture: use a small, cheap model (e.g., Qwen3.5-9B) to generate harness updates (prompts, tools, memories) from execution logs, then deploy a mid-tier model (e.g., GPT-4o-mini) to execute tasks with those updates. Monitor task success rates to validate the benefit curve.",
+              "note": "Avoid using weak models for execution—they fail to activate or follow harness updates. Strong models may underperform mid-tier due to diminishing returns."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177222-y9sz3l",
+                "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents",
+                "url": "https://arxiv.org/abs/2605.30621",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-y9sz3l-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-y9sz3l-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177222-emqcqn",
+            "title": "EHRBench: New Benchmark for LLMs in Clinical Decision Making",
+            "tldr": "EHRBench is a new automated benchmark that evaluates LLMs on real-world clinical decision-making tasks using electronic health records, addressing the need for reliable, scalable evaluation of AI in healthcare.",
+            "whyItMatters": [
+              "Provides a standardized, automated pipeline to assess LLM reliability in clinical settings, crucial for founders building AI-assisted diagnostic or treatment tools.",
+              "Grounds evaluation in real patient data, enabling more practical and trustworthy AI for healthcare applications."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for healthcare, review the EHRBench methodology to design your own evaluation pipeline using EHR data and knowledge bases for filtering hallucinations.",
+              "note": "Focus on the KB-based verification step to improve reliability in your own models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177222-emqcqn",
+                "title": "EHRBench: An Automated and Reliable EHR-based Benchmark for Clinical Decision Making with LLMs",
+                "url": "https://arxiv.org/abs/2605.30637",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-emqcqn-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-emqcqn-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177222-pmfimg",
+            "title": "MAVEN: Lightweight scaffold boosts agentic tool calling by 23%",
+            "tldr": "MAVEN is a modular symbolic reasoning scaffold that improves GPT-OSS-120b's accuracy on agentic tool-calling benchmarks from 48% to 71% without retraining, rivaling proprietary models at 1/10 the cost. This signals a shift toward verification-centered architectures for reliable AI agents.",
+            "whyItMatters": [
+              "For founders building AI agents, MAVEN shows that adding a lightweight verification layer can dramatically improve reliability without expensive model retraining or switching to closed-source models.",
+              "The cost advantage (1/10 of proprietary models) makes high-quality agentic systems more accessible for startups, potentially reducing infrastructure costs while maintaining competitive performance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agentic pipeline for weak points in multi-step reasoning. Consider integrating a modular verification step (like MAVEN's intermediate checks) to catch errors before final output, especially for tasks involving tool orchestration or mathematical reasoning.",
+              "note": "Start with a simple rule-based verifier for your most common failure modes before adopting a full scaffold like MAVEN."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177222-pmfimg",
+                "title": "MAVEN: Improving Generalization in Agentic Tool Calling",
+                "url": "https://arxiv.org/abs/2605.30738",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-pmfimg-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-pmfimg-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-pmfimg-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177222-gg9zai",
+            "title": "AI Simulator Reveals How Healthcare Rules Backfire",
+            "tldr": "A new paper uses LLM-guided search to design healthcare payment rules that resist gaming by hospitals, showing that AI can uncover incentive-compatible mechanisms that outperform human-designed ones.",
+            "whyItMatters": [
+              "For founders building AI in healthcare or regulated industries: this demonstrates a method to stress-test and optimize policies against strategic behavior, which is critical for deploying AI systems that interact with human agents.",
+              "Technically, it shows how LLMs can be used for program synthesis in mechanism design, opening up new applications for AI in policy and economics."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for healthcare or any domain with strategic human actors, consider using multi-agent simulation with LLM-driven rule search to find robust policies. Start by modeling key incentive channels (e.g., coding, selection) and use evolutionary search over rule programs to optimize for desired outcomes.",
+              "note": "This approach requires careful simulator design and may be computationally intensive, but it offers a path to more resilient AI systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177222-gg9zai",
+                "title": "Healthcare Mechanisms from Policy-as-Code Search under Strategic Provider Response",
+                "url": "https://arxiv.org/abs/2605.30680",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-gg9zai-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-gg9zai-1",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-gg9zai-2",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1780319176898-4awge9",
+            "title": "Erin Brockovich targets data center secrecy: what founders need to know",
+            "tldr": "Environmental activist Erin Brockovich is now focusing on the lack of transparency around data center energy and water usage, signaling growing public scrutiny that could lead to stricter regulations and reputational risks for AI companies.",
+            "whyItMatters": [
+              "Founders building AI products may face increased regulatory pressure to disclose data center resource consumption, impacting operational costs and site selection.",
+              "Public perception of AI's environmental footprint could influence customer trust and investor decisions, making sustainability a competitive differentiator."
+            ],
+            "whatToTry": {
+              "description": "Audit your current or planned data center partners for energy and water usage transparency. Start requesting sustainability reports or consider colocation providers that publish environmental metrics, to preempt regulatory shifts and build a green narrative.",
+              "note": "Even if you're using cloud providers, ask for their data center efficiency data (e.g., PUE, WUE) to prepare for potential disclosure requirements."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1780319176898-4awge9",
+                "title": "Erin Brockovich takes aim at data center secrecy",
+                "url": "https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1780319176898-4awge9-0",
+                "label": "Topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780319176898-4awge9-1",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 31 May 2026 21:05:14 +0000"
+          },
+          {
+            "id": "hn-48347354",
+            "title": "Meta launches subscriptions for Instagram, Facebook, WhatsApp",
+            "tldr": "Meta has officially launched paid subscriptions for Instagram, Facebook, and WhatsApp, with plans to expand including AI features. This marks a major shift in Meta's business model, creating new opportunities and risks for AI product builders who rely on these platforms.",
+            "whyItMatters": [
+              "Business impact: Founders building AI products that integrate with Meta's platforms (e.g., chatbots, content tools) may face new costs or API access changes as Meta prioritizes subscription revenue over ad-driven free access.",
+              "Technical impact: Subscription tiers could include premium AI features (e.g., advanced analytics, generative AI tools), potentially opening new integration points or requiring adaptation to new APIs."
+            ],
+            "whatToTry": {
+              "description": "Audit your product's dependency on Meta's platforms (e.g., WhatsApp Business API, Instagram Graph API). Assess if subscription tiers will affect your costs or access, and explore alternative platforms or direct integrations to reduce risk.",
+              "note": "Monitor Meta's developer blog for specific subscription pricing and AI feature announcements in the coming weeks."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48347354",
+                "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions",
+                "url": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48347354-0",
+                "label": "Meta",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48347354-1",
+                "label": "subscriptions",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48347354-2",
+                "label": "platform risk",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-05-31T17:02:23Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1780319177222-jau3vh",
+            "title": "Encoding Factored Tasks in SAT: Key Insights for AI Planning",
+            "tldr": "This paper explores how to encode factored planning tasks (an extension of SAS+) into SAT, analyzing different translation strategies and the impact of task transformations on SAT-based planner performance. It offers actionable insights for founders building AI planning or scheduling products.",
+            "whyItMatters": [
+              "Provides concrete encoding strategies that can improve SAT-based planning efficiency, directly applicable to products requiring automated task decomposition and scheduling.",
+              "Reveals which task transformations help or hurt performance, enabling better design choices in planning systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building a planner or scheduler, experiment with the proposed SAT encodings for factored tasks, particularly focusing on the translation of disjunctive preconditions and conditional effects. Test the impact of task transformations like factoring or adding parallelism on solver performance.",
+              "note": "Start with small benchmarks to identify which encoding strategy works best for your domain before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780319177222-jau3vh",
+                "title": "Transforming and Encoding FTS for SAT Solving: What Helps, What Hurts (Extended Version)",
+                "url": "https://arxiv.org/abs/2605.30563",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-jau3vh-0",
+                "label": "SAT",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-jau3vh-1",
+                "label": "Planning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780319177222-jau3vh-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 01 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-05-31",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-05-31-morning",
@@ -1007,7 +1440,7 @@
   },
   {
     "date": "2026-05-30",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, May 30",
     "briefings": [
       {
         "id": "briefing-2026-05-30-morning",
@@ -5831,861 +6264,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-25",
-    "displayDate": "Monday, May 25",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-25-morning",
-        "period": "morning",
-        "date": "2026-05-25",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: BOHM: Zero-Cost Attribution for Compound AI Systems, NeuroNL2LTL: Neurosymbolic NL-to-LTL Translation with Formal Guarantees, RMA: AI Agent That Solves Research-Level Math Problems.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1779708744968-nwxx0l",
-            "title": "BOHM: Zero-Cost Attribution for Compound AI Systems",
-            "tldr": "BOHM extracts hierarchical attribution from routing weights in compound AI systems, achieving near-SHAP accuracy at zero marginal cost—critical for opaque APIs and agentic orchestrators where traditional Shapley methods fail.",
-            "whyItMatters": [
-              "Enables cost-effective debugging and optimization of multi-component AI pipelines without access to internal model details, a common pain point for founders using third-party APIs.",
-              "Provides multi-resolution attribution (per-component and per-level) simultaneously, allowing founders to pinpoint bottlenecks or underperforming tools in agentic systems at scale."
-            ],
-            "whatToTry": {
-              "description": "If you're building a compound AI system (e.g., multi-agent orchestrator or tool-routing pipeline), implement BOHM by logging routing weights from your orchestrator and computing path products for leaf attribution. This gives you instant, zero-cost insights into which components drive outcomes, without needing to run expensive Shapley evaluations.",
-              "note": "BOHM assumes near-optimal routing; for systems with highly suboptimal routing, consider hybrid approaches or validate against SHAP on a small subset."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-nwxx0l",
-                "title": "BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems",
-                "url": "https://arxiv.org/abs/2605.22866",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-nwxx0l-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-nwxx0l-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-vdgyxa",
-            "title": "NeuroNL2LTL: Neurosymbolic NL-to-LTL Translation with Formal Guarantees",
-            "tldr": "A new neurosymbolic framework translates natural language to Linear Temporal Logic with 86% verified satisfiability, using verifier-in-the-loop training to optimize for correctness. This bridges the gap between neural fluency and formal verification, critical for safety-critical AI systems.",
-            "whyItMatters": [
-              "Enables non-experts to generate formally verifiable specifications from natural language, reducing the barrier to formal verification in safety-critical domains like autonomous vehicles and robotics.",
-              "Demonstrates a practical approach to combining neural networks with formal methods, offering a template for building AI systems with correctness guarantees."
-            ],
-            "whatToTry": {
-              "description": "Evaluate NeuroNL2LTL for generating LTL specifications from natural language requirements in your safety-critical AI projects. Use the verifier-in-the-loop approach to train your own models for similar formal logic translation tasks.",
-              "note": "The framework is research-stage; consider prototyping with the provided dataset (200k+ requirements) to test applicability to your domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-vdgyxa",
-                "title": "NeuroNL2LTL: A Neurosymbolic Framework for Natural Language Translation of Linear Temporal Logic",
-                "url": "https://arxiv.org/abs/2605.22874",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-vdgyxa-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-vdgyxa-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-vdgyxa-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-nvgta2",
-            "title": "RMA: AI Agent That Solves Research-Level Math Problems",
-            "tldr": "A new agentic framework, RMA, solves 8 out of 10 research-level math problems by combining specialized modules for literature search, proof generation, and iterative verification, outperforming GPT-5.2R. This signals a leap beyond competition math into real research automation.",
-            "whyItMatters": [
-              "For founders building AI for scientific research: RMA demonstrates a viable path to automating long-horizon reasoning tasks that require literature grounding, opening opportunities for AI-assisted theorem proving and hypothesis generation.",
-              "Technically, the modular agent architecture with shared memory and verifier feedback is a blueprint for building robust, multi-step reasoning systems that can handle complex, open-ended problems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can benefit from a similar modular agent approach: decompose complex tasks into specialized sub-agents (e.g., search, analysis, verification) with iterative feedback loops. Start by mapping your current pipeline to identify bottlenecks where a verifier agent could catch errors early.",
-              "note": "RMA's success relies on structured memory and multi-round refinement; consider using vector databases or graph-based memory for long-context tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-nvgta2",
-                "title": "RMA: an Agentic System for Research-Level Mathematical Problems",
-                "url": "https://arxiv.org/abs/2605.22875",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-nvgta2-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-nvgta2-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-nvgta2-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-743s0b",
-            "title": "SciAtlas: Knowledge Graph for AI-Driven Scientific Research",
-            "tldr": "A new large-scale knowledge graph covering 43M papers and 3B triplets enables AI agents to navigate scientific literature with topological reasoning, reducing logical hallucinations and inference costs compared to current deep-research frameworks.",
-            "whyItMatters": [
-              "Provides a structured, interdisciplinary knowledge base that can power AI agents for automated literature review, trend synthesis, and research idea positioning, directly addressing the fragmentation problem in scientific discovery.",
-              "The neuro-symbolic retrieval algorithm (tri-path recall + graph reranking) offers a deterministic alternative to vector-based semantic search, potentially improving accuracy and reducing hallucination in AI-driven research tools."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI agents for scientific research or R&D, explore integrating SciAtlas as a knowledge substrate to enhance retrieval-augmented generation (RAG) pipelines. Start by testing its graph reranking on domain-specific queries to evaluate hallucination reduction.",
-              "note": "The graph is large (157M entities); consider subsetting by discipline for initial experiments to manage computational costs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-743s0b",
-                "title": "SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research",
-                "url": "https://arxiv.org/abs/2605.22878",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-743s0b-0",
-                "label": "Knowledge Graph",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-743s0b-1",
-                "label": "Scientific Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-743s0b-2",
-                "label": "Retrieval-Augmented Generation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-5n2nz9",
-            "title": "New Metric: Energy per Successful Goal for Agentic AI",
-            "tldr": "A new paper introduces A-LEMS, a framework measuring AI energy as 'Energy per Successful Goal' (EpG) instead of per inference. It reveals agentic workflows use 4.33x more energy than linear ones, offering a practical way to optimize costs for multi-step AI systems.",
-            "whyItMatters": [
-              "For founders building agentic AI products, this metric provides a realistic way to estimate and reduce operational costs, moving beyond misleading per-inference pricing.",
-              "The Orchestration Overhead Index (OOI) helps identify energy waste from retries and failures, enabling targeted optimization of agent architectures."
-            ],
-            "whatToTry": {
-              "description": "Audit your agentic AI system's energy consumption by tracking total energy per completed user goal, including retries and failures. Use this to compare different orchestration strategies (e.g., linear vs. multi-step) and identify high-overhead components.",
-              "note": "Start with simple logging of task success rates and inference counts, then estimate energy using published model power data if direct measurement isn't available."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-5n2nz9",
-                "title": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems",
-                "url": "https://arxiv.org/abs/2605.22883",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-5n2nz9-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-5n2nz9-1",
-                "label": "model",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-hmy4lp",
-            "title": "ImProver 2: Small Models Outperform Giants in Proof Optimization",
-            "tldr": "ImProver 2 is a neurosymbolic framework that trains a 7B-parameter model to optimize Lean 4 proofs, outperforming much larger models and matching frontier systems. This shows that with proper scaffolding, small models can handle complex formal reasoning tasks, reducing costs for AI-assisted math and verification.",
-            "whyItMatters": [
-              "For founders building AI for formal verification or math assistants, this demonstrates a path to high performance with smaller, cheaper models, lowering inference costs.",
-              "The neurosymbolic scaffold approach can be adapted to other structured reasoning tasks (e.g., code optimization, legal logic), enabling efficient fine-tuning with limited data."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can benefit from a neurosymbolic scaffold that exposes formal structure and lightweight abstractions. For tasks like code refactoring or proof checking, consider using a small model (e.g., 7B) with a similar expert-iteration pipeline to reduce costs while maintaining quality.",
-              "note": "Start with a small dataset of structured examples and iterate using automated metrics to guide improvement, as ImProver 2 does."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-hmy4lp",
-                "title": "ImProver 2: Iteratively Self-Improving LMs for Neurosymbolic Proof Optimization",
-                "url": "https://arxiv.org/abs/2605.22885",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-hmy4lp-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-hmy4lp-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-hmy4lp-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-d8m0cn",
-            "title": "EVE-Agent: Self-Evolving AI That Verifies Its Own Evidence",
-            "tldr": "A new research paper introduces EVE-Agent, a self-evolving search agent that generates its own training data but only rewards evidence that genuinely improves answer accuracy, preventing the loop from learning unsupported examples. This addresses a key reliability issue in autonomous AI systems.",
-            "whyItMatters": [
-              "For founders building autonomous AI agents, this provides a method to ensure self-improvement loops don't degrade into hallucination or unreliable outputs, critical for trust in production systems.",
-              "Technically, it introduces a verifiable evidence mechanism that works with any backbone model, retriever, or search tool, making it a drop-in improvement for existing agent architectures."
-            ],
-            "whatToTry": {
-              "description": "If you're building a self-improving agent, implement a similar evidence verifier that measures marginal accuracy gain from source-grounded spans. Use this to filter training data in your self-generated curriculum, ensuring only genuinely helpful examples are retained.",
-              "note": "Start with a small-scale experiment on a specific domain (e.g., code search or fact-checking) to validate the approach before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-d8m0cn",
-                "title": "EVE-Agent: Evidence-Verifiable Self-Evolving Agents",
-                "url": "https://arxiv.org/abs/2605.22905",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-d8m0cn-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-d8m0cn-1",
-                "label": "research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-d8m0cn-2",
-                "label": "agent",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779708744968-zph5e3",
-            "title": "AI's Deterministic Horizon: Accuracy Ceiling Found for Transformers",
-            "tldr": "A new paper proves that transformer architectures have a fundamental accuracy ceiling (the 'Deterministic Horizon') that cannot be overcome by more data, training, or fine-tuning. This provides a pre-deployment tool to estimate maximum performance, with implications for building reliable AI products.",
-            "whyItMatters": [
-              "Business impact: Founders can now estimate the maximum accuracy of their AI product before deployment, avoiding wasted resources on overtraining or over-engineering. This is critical for applications like code generation, legal drafting, and clinical notes where reliability is key.",
-              "Technical impact: The paper provides a computable metric (based on layer count and embedding width) to predict performance limits, enabling better architecture selection and resource allocation. It also extends to preference learning, retrieval pipelines, and verification, affecting product design across domains."
-            ],
-            "whatToTry": {
-              "description": "For any transformer-based product you're building, compute the Deterministic Horizon using your model's layer count and embedding width (formula in paper). Use this to set realistic accuracy targets and decide if architectural changes are needed before investing in more data or fine-tuning.",
-              "note": "The paper shows fine-tuning on optimal-length traces recovers under 4 percentage points, so don't expect dramatic gains from additional training past the horizon."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779708744968-zph5e3",
-                "title": "The Deterministic Horizon: Impossibility Results as Design Specifications for Trustworthy AI Systems",
-                "url": "https://arxiv.org/abs/2605.23024",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-zph5e3-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779708744968-zph5e3-1",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-48258684",
-            "title": "Memory now 65% of AI chip cost: Shift your architecture strategy",
-            "tldr": "Memory components now account for nearly two-thirds of AI chip costs, up from a minority share. This structural shift means founders building AI products must optimize for memory bandwidth and capacity, not just compute, to stay cost-competitive.",
-            "whyItMatters": [
-              "Business impact: Rising memory costs directly increase total cost of ownership for AI inference and training, pressuring margins for startups relying on GPU-heavy infrastructure.",
-              "Technical impact: Architectural decisions (e.g., model quantization, memory-efficient attention, offloading) become critical to reduce memory footprint and avoid prohibitive hardware costs."
-            ],
-            "whatToTry": {
-              "description": "Audit your current model's memory usage per inference and compare it to compute usage. If memory dominates, prioritize techniques like 4-bit quantization, FlashAttention, or KV-cache offloading to reduce memory costs before scaling.",
-              "note": "This is especially urgent for real-time or high-throughput applications where memory bandwidth is the bottleneck."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48258684",
-                "title": "Memory has grown to nearly two-thirds of AI chip component costs",
-                "url": "https://epoch.ai/data-insights/ai-chip-component-cost-shares",
-                "domain": "epoch.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48258684-0",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48258684-1",
-                "label": "Cost Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48258684-2",
-                "label": "Memory",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-24T16:31:29Z"
-          },
-          {
-            "id": "rss-wired-ai-1779708744742-syat7u",
-            "title": "AI Bug Hunting Arms Race: Attackers vs Defenders",
-            "tldr": "Wired reports that AI is accelerating both the discovery and exploitation of software vulnerabilities, creating a new arms race where defenders must adopt AI-driven bug hunting to keep pace with attackers using AI to find and exploit flaws faster than ever.",
-            "whyItMatters": [
-              "Founders building AI products must prioritize AI-powered security testing in their development lifecycle to avoid being outpaced by attackers using AI for exploit development.",
-              "The shift means traditional vulnerability scanning is no longer sufficient; teams need to invest in AI tools for proactive bug hunting and real-time threat detection."
-            ],
-            "whatToTry": {
-              "description": "Integrate an AI-powered vulnerability scanner (e.g., Semgrep with AI rules or a tool like Snyk AI) into your CI/CD pipeline to automatically detect and prioritize security flaws during development, not just after deployment.",
-              "note": "Start with a small pilot on a non-critical codebase to evaluate effectiveness before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779708744742-syat7u",
-                "title": "The AI Era Is Creating a Bug Hunting Arms Race",
-                "url": "https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779708744742-syat7u-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779708744742-syat7u-1",
-                "label": "AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779708744742-syat7u-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 10:30:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-25-afternoon",
-        "period": "afternoon",
-        "date": "2026-05-25",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: BOHM: Zero-Cost Attribution for Compound AI Systems, NeuroNL2LTL: Neurosymbolic NL-to-LTL Translation with Formal Guarantees, RMA: AI Agent Solves Research-Level Math Problems.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1779725126901-p3wqwm",
-            "title": "BOHM: Zero-Cost Attribution for Compound AI Systems",
-            "tldr": "BOHM introduces a method to attribute performance in compound AI systems (e.g., agentic orchestrators) by using existing routing weights, achieving near-Shapley accuracy at zero marginal cost—critical for founders building multi-component AI products.",
-            "whyItMatters": [
-              "Enables cost-effective debugging and optimization of compound AI systems without expensive Shapley evaluations, reducing operational overhead.",
-              "Provides multi-resolution attribution (leaf and level-k) simultaneously, offering deeper insights into component contributions than flat methods."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI system with hierarchical routing (e.g., agentic workflows or tool selection), implement BOHM by logging routing weights from your orchestrator to compute attribution trees. Use this to identify underperforming components or optimize routing without additional API calls.",
-              "note": "BOHM works best when your router is near-optimal; for highly suboptimal routers, consider hybrid approaches with occasional Shapley checks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-p3wqwm",
-                "title": "BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems",
-                "url": "https://arxiv.org/abs/2605.22866",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-p3wqwm-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-p3wqwm-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-w80yzt",
-            "title": "NeuroNL2LTL: Neurosymbolic NL-to-LTL Translation with Formal Guarantees",
-            "tldr": "A new neurosymbolic framework translates natural language to Linear Temporal Logic (LTL) with 86% verified satisfiability, using verifier-in-the-loop training. This bridges the gap between neural fluency and formal correctness, critical for safety-critical AI systems.",
-            "whyItMatters": [
-              "Enables non-experts to specify formal requirements for safety-critical AI systems (e.g., autonomous vehicles, robotics) without deep LTL expertise, reducing verification bottlenecks.",
-              "Demonstrates a practical approach to combining neural models with formal verification, potentially inspiring similar hybrid methods for other formal logic tasks in AI product development."
-            ],
-            "whatToTry": {
-              "description": "Evaluate NeuroNL2LTL for your own safety-critical requirements by testing its open-source implementation (if available) on domain-specific NL inputs, focusing on the 28% semantic equivalence rate to assess if it meets your precision needs.",
-              "note": "The 28% semantic equivalence is low for strict applications; consider using it as a first-pass filter with human-in-the-loop validation for high-stakes outputs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-w80yzt",
-                "title": "NeuroNL2LTL: A Neurosymbolic Framework for Natural Language Translation of Linear Temporal Logic",
-                "url": "https://arxiv.org/abs/2605.22874",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-w80yzt-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-w80yzt-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-nq43oj",
-            "title": "RMA: AI Agent Solves Research-Level Math Problems",
-            "tldr": "A new agentic framework, RMA, solves 8 out of 10 research-level math problems by decomposing reasoning into specialized modules with multi-agent collaboration, outperforming GPT-5.2R and Aletheia. This signals a leap from competition math to real research automation.",
-            "whyItMatters": [
-              "For founders building AI for scientific research, RMA demonstrates a viable path to automating complex, long-horizon reasoning tasks that require literature grounding and iterative proof refinement.",
-              "Technically, the modular agent architecture (with problem analysis, literature search, knowledge bank, and verifier) provides a blueprint for building reliable AI systems that can handle open-ended, multi-step problems."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating a similar multi-agent, modular architecture into your AI product for tasks requiring deep reasoning and external knowledge retrieval. Start by decomposing a complex problem into specialized sub-tasks (e.g., analysis, search, verification) and assign agents to each with a shared memory for iterative refinement.",
-              "note": "Focus on domains where you have access to structured knowledge bases or literature (e.g., legal, medical, engineering) to maximize the impact of the literature search module."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-nq43oj",
-                "title": "RMA: an Agentic System for Research-Level Mathematical Problems",
-                "url": "https://arxiv.org/abs/2605.22875",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-nq43oj-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-nq43oj-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-az712j",
-            "title": "SciAtlas: Knowledge Graph for AI-Driven Scientific Research",
-            "tldr": "SciAtlas is a massive knowledge graph with 157M entities and 3B triplets from 43M papers across 26 disciplines, enabling AI agents to perform topological reasoning over scientific literature, reducing logical hallucinations and inference costs in automated research tasks.",
-            "whyItMatters": [
-              "For AI founders building research tools: SciAtlas provides a structured substrate that moves beyond keyword/vector search, enabling deterministic association discovery and reducing hallucination in agentic deep-research systems.",
-              "Technical impact: The neuro-symbolic retrieval algorithm with tri-path recall and graph reranking offers a new paradigm for integrating knowledge graphs into AI workflows, potentially lowering inference costs for complex literature analysis."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating SciAtlas into your AI product for literature review or trend synthesis. Start by testing its API or dataset (if available) to benchmark its graph reranking against your current retrieval-augmented generation (RAG) pipeline, focusing on tasks like identifying interdisciplinary connections or generating research hypotheses.",
-              "note": "Check if SciAtlas offers an open-source release or API access; if not, consider building a similar graph for your domain using its methodology as a blueprint."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-az712j",
-                "title": "SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research",
-                "url": "https://arxiv.org/abs/2605.22878",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-az712j-0",
-                "label": "Knowledge Graph",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-az712j-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-az712j-2",
-                "label": "Neuro-Symbolic AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-1jqov4",
-            "title": "New Metric: Energy Per Successful Goal for Agentic AI",
-            "tldr": "A new paper introduces A-LEMS, a framework that measures AI energy consumption per successful goal (EpG) rather than per inference, revealing that agentic workflows consume 4.33x more energy than linear baselines. This is critical for founders building agentic systems who need to optimize for cost and sustainability.",
-            "whyItMatters": [
-              "Business impact: Founders can now accurately measure and optimize the true energy cost of agentic workflows, reducing operational expenses and improving sustainability reporting.",
-              "Technical impact: The Orchestration Overhead Index (OOI) provides a standardized way to compare orchestration strategies, enabling more efficient agent designs."
-            ],
-            "whatToTry": {
-              "description": "Audit your agentic systems using the EpG framework: track total energy across all retries and failures per completed goal, then compare to linear baselines to identify high-overhead orchestration patterns.",
-              "note": "Start with simple tool-augmented tasks to establish a baseline before scaling to complex multi-step workflows."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-1jqov4",
-                "title": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems",
-                "url": "https://arxiv.org/abs/2605.22883",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-1jqov4-0",
-                "label": "A-LEMS",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-1jqov4-1",
-                "label": "Energy Efficiency",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-1jqov4-2",
-                "label": "Agentic AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-gfcamb",
-            "title": "ImProver 2: Small Model Beats Giants in Proof Optimization",
-            "tldr": "A new neurosymbolic framework, ImProver 2, trains a 7B-parameter model to outperform much larger models in optimizing Lean 4 proofs, making proof refactoring scalable and learnable for AI products.",
-            "whyItMatters": [
-              "Business impact: Enables cost-effective AI-driven code and proof optimization, reducing reliance on massive models for complex tasks.",
-              "Technical impact: Demonstrates that small models with proper scaffolding can match frontier models, opening doors for efficient AI in formal verification and software maintenance."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating ImProver 2's neurosymbolic scaffold into your AI pipeline for automated code or proof refactoring, especially if you work with formal verification or maintain large codebases.",
-              "note": "Start with Lean 4 environments; the scaffold's lightweight abstractions may be adaptable to other formal systems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-gfcamb",
-                "title": "ImProver 2: Iteratively Self-Improving LMs for Neurosymbolic Proof Optimization",
-                "url": "https://arxiv.org/abs/2605.22885",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-gfcamb-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-gfcamb-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-gfcamb-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1779725126742-15qd3d",
-            "title": "AI Bug Hunting Arms Race: Attackers Exploit Faster",
-            "tldr": "Wired reports that attackers are rapidly using AI to develop exploits, accelerating the vulnerability discovery cycle and forcing defenders to adopt AI-powered bug hunting tools to keep pace.",
-            "whyItMatters": [
-              "Business impact: Founders must prioritize AI-driven security testing for their products to avoid being outpaced by AI-augmented attackers, which could lead to costly breaches and loss of user trust.",
-              "Technical impact: The shift demands integrating AI into DevSecOps pipelines for automated vulnerability scanning and patch management, changing how teams approach software security."
-            ],
-            "whatToTry": {
-              "description": "Evaluate and implement an AI-powered vulnerability scanner (e.g., based on large language models or reinforcement learning) in your CI/CD pipeline to proactively identify and patch bugs before attackers exploit them.",
-              "note": "Start with a small pilot on non-critical code to measure false positive rates and tune the tool for your specific tech stack."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779725126742-15qd3d",
-                "title": "The AI Era Is Creating a Bug Hunting Arms Race",
-                "url": "https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779725126742-15qd3d-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779725126742-15qd3d-1",
-                "label": "AI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779725126742-15qd3d-2",
-                "label": "DevOps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 10:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1779725126901-a07v7r",
-            "title": "EVE-Agent: Self-Evolving AI That Verifies Its Own Evidence",
-            "tldr": "A new research paper introduces EVE-Agent, a self-evolving search agent that generates its own training data but only rewards evidence that demonstrably improves answer accuracy. This addresses a key flaw in self-evolving loops where models can learn from unsupported or hallucinated examples.",
-            "whyItMatters": [
-              "For founders building autonomous agents: this provides a method to create trustworthy self-improvement loops without human labels, reducing the risk of model collapse from training on bad data.",
-              "Technically, the evidence verifier measures marginal accuracy gain from source-grounded spans, offering a scalable way to ensure self-generated curricula are reliable."
-            ],
-            "whatToTry": {
-              "description": "If you're developing self-improving agents, consider implementing an evidence verifier that rewards source-grounded spans based on their contribution to answer accuracy. This can be added on top of existing proposer-solver frameworks without changing the backbone model or retriever.",
-              "note": "Start with a small domain (e.g., QA on a fixed corpus) to test the marginal accuracy gain metric before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779725126901-a07v7r",
-                "title": "EVE-Agent: Evidence-Verifiable Self-Evolving Agents",
-                "url": "https://arxiv.org/abs/2605.22905",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-a07v7r-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-a07v7r-1",
-                "label": "research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779725126901-a07v7r-2",
-                "label": "self-improvement",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779725126688-rw8mgb",
-            "title": "Pope's AI encyclical: A critique of tech power, not tech itself",
-            "tldr": "Pope Leo XIV's first encyclical uses AI as a metaphor to critique concentrated power, eroding democracy, and the influence of a tech elite. It's a signal for founders to consider ethical governance and societal impact beyond the hype.",
-            "whyItMatters": [
-              "Highlights growing regulatory and ethical scrutiny of AI, which could shape future compliance and public trust.",
-              "Encourages founders to proactively address power dynamics and democratic values in their product design and business models."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's governance model: assess how decisions are made, who benefits, and how you can build transparency and accountability into your system to align with emerging ethical standards.",
-              "note": "This isn't about religion—it's about anticipating societal pushback and building trust."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779725126688-rw8mgb",
-                "title": "The pope’s AI encyclical isn’t really about AI",
-                "url": "https://techcrunch.com/2026/05/25/the-popes-ai-encyclical-isnt-really-about-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779725126688-rw8mgb-0",
-                "label": "Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779725126688-rw8mgb-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779725126688-rw8mgb-2",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 15:09:41 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779725126688-a635h4",
-            "title": "Startup Battlefield 200 deadline May 27: VC access & $100k",
-            "tldr": "TechCrunch's Startup Battlefield 200 applications close May 27, offering AI startups VC access, global visibility, and a $100k prize. This is a high-signal opportunity for early-stage founders to gain traction.",
-            "whyItMatters": [
-              "Provides direct exposure to VCs and media coverage, critical for fundraising and customer acquisition.",
-              "Winning or participating can validate your product and accelerate partnerships."
-            ],
-            "whatToTry": {
-              "description": "If you have an early-stage AI product, apply before May 27. Focus your application on a clear problem-solution fit and traction metrics (e.g., users, revenue, or pilot results).",
-              "note": "Even if you don't win, the application process forces you to refine your pitch—use it as a dry run for investor meetings."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779725126688-a635h4",
-                "title": "Startup Battlefield 200 applications close in days: Apply before May 27",
-                "url": "https://techcrunch.com/2026/05/25/startup-battlefield-200-applications-close-in-days-apply-before-may-27/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779725126688-a635h4-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779725126688-a635h4-1",
-                "label": "Startup Battlefield",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 1,
-            "isRead": false,
-            "publishedAt": "Mon, 25 May 2026 14:30:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 19,
         "isAvailable": true,
         "isRead": false
       }
