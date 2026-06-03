@@ -1,7 +1,440 @@
 [
   {
-    "date": "2026-06-02",
+    "date": "2026-06-03",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-03-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-03",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: AURA-Mem: Robot Memory That Stays Tiny, Beats KV-Cache, BehaviorBench: Real-World User Modeling Benchmark Released, LRMs Overthink: Stopping Early Boosts Accuracy Up to 21%.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1780488983281-dmmvo3",
+            "title": "AURA-Mem: Robot Memory That Stays Tiny, Beats KV-Cache",
+            "tldr": "A new paper introduces AURA-Mem, a recurrent memory for robot policies that uses only 4,224 bytes of VRAM regardless of episode length—6,061x smaller than a KV-cache at 100k steps—without sacrificing accuracy. This is critical for edge robotics where memory and flash endurance are tight.",
+            "whyItMatters": [
+              "Enables long-horizon robot tasks on cheap edge hardware (e.g., Raspberry Pi, Jetson) by eliminating the memory growth bottleneck of transformer KV-caches.",
+              "Reduces flash writes by up to 9x, extending the lifespan of embedded storage—a key constraint for deployed robots."
+            ],
+            "whatToTry": {
+              "description": "If you're building an embodied agent with a VLA backbone (like OpenVLA), evaluate AURA-Mem's gating mechanism for your own policy. Start by replacing the KV-cache with a fixed-size recurrent memory and train the gate on closed-loop action error to minimize writes.",
+              "note": "The paper uses a frozen 7B VLM; you may need to adapt the gate architecture for smaller models or different action spaces."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-dmmvo3",
+                "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM",
+                "url": "https://arxiv.org/abs/2606.02775",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-dmmvo3-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-dmmvo3-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780488983281-oc3qx6",
+            "title": "BehaviorBench: Real-World User Modeling Benchmark Released",
+            "tldr": "A new benchmark, BehaviorBench, uses real prediction-market and on-chain data to evaluate how well AI models can predict individual user beliefs and trades, revealing that personalization boosts belief prediction but not trade prediction, and model rankings shift across tasks.",
+            "whyItMatters": [
+              "For founders building personalized AI products (e.g., recommendation systems, financial advisors), this benchmark provides a realistic evaluation framework that avoids pitfalls of simulated users, enabling more accurate user modeling.",
+              "The finding that personalization improves belief prediction but not trade prediction highlights a critical gap: AI may understand user opinions better than user actions, guiding product design toward hybrid approaches."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's personalization capabilities by testing it on BehaviorBench's two task layers (belief and trade prediction) using real behavioral traces, then compare performance across different history interfaces (e.g., direct history vs. generated profiles) to identify failure modes in your system.",
+              "note": "Focus on belief prediction tasks first if your product relies on user opinions; for action-oriented features, consider augmenting with additional behavioral signals beyond the benchmark."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-oc3qx6",
+                "title": "BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces",
+                "url": "https://arxiv.org/abs/2606.02798",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-oc3qx6-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-oc3qx6-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780488983281-0vwm43",
+            "title": "LRMs Overthink: Stopping Early Boosts Accuracy Up to 21%",
+            "tldr": "New research shows large reasoning models (LRMs) often harm their own accuracy by continuing to reason after reaching the correct answer. Stopping at the first correct reasoning step improves accuracy by up to 21%, revealing a critical design flaw in current models.",
+            "whyItMatters": [
+              "For founders building AI products: This suggests that current LRMs are inefficient and potentially unreliable for tasks requiring precise answers. Implementing early stopping mechanisms could significantly improve both accuracy and cost-efficiency.",
+              "Technically, it challenges the assumption that more test-time compute always helps. It opens up new optimization strategies: monitoring reasoning trajectories and halting inference at the right moment."
+            ],
+            "whatToTry": {
+              "description": "If you're using LRMs (e.g., OpenAI o1, DeepSeek-R1) in production, implement a lightweight 'correctness detector' that monitors intermediate reasoning steps. When the model first outputs the correct answer, stop further reasoning and return that result. This could boost accuracy by up to 21% and reduce compute costs.",
+              "note": "This requires a way to verify correctness mid-reasoning, which may be domain-specific. Start with tasks where ground truth is easily checkable (e.g., math, code, structured data)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-0vwm43",
+                "title": "Thinking Past the Answer: Evaluating Harmful Overthinking in Large Reasoning Models",
+                "url": "https://arxiv.org/abs/2606.02835",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-0vwm43-0",
+                "label": "Large Reasoning Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-0vwm43-1",
+                "label": "Efficiency",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-0vwm43-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780488983281-q3hra5",
+            "title": "GAMBLe Framework: New Way to Analyze AI Research Systems",
+            "tldr": "A new analytical framework, GAMBLe, decomposes AI-Driven Research Systems into four parameters, revealing that frontier models can underperform open-source alternatives and simple mechanisms sometimes beat state-of-the-art meta-search, based on 760+ replicated runs across NP-hard problems.",
+            "whyItMatters": [
+              "Provides a systematic method to evaluate and optimize ADRS without relying on flawed convergence guarantees, saving time and compute costs.",
+              "Challenges assumptions about model superiority, enabling founders to choose cost-effective generators and mechanisms for their specific problems."
+            ],
+            "whatToTry": {
+              "description": "Use the GAMBLe framework to audit your own AI research pipeline: identify your generator (G), assessor (A), discovery mechanism (M), and budget (B), then run small-scale experiments comparing different combinations (e.g., open-source vs. frontier models, greedy vs. meta-search) to find the most efficient setup for your domain.",
+              "note": "Start with 60 iterations per run to test landscape differences before scaling up."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-q3hra5",
+                "title": "Don't Gamble, GAMBLe: An Analytical Framework for AI-Driven Research Systems",
+                "url": "https://arxiv.org/abs/2606.02863",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-q3hra5-0",
+                "label": "GAMBLe",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-q3hra5-1",
+                "label": "AI-Driven Research Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-q3hra5-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48377761",
+            "title": "AI beats law professors in Stanford study—legal AI is here",
+            "tldr": "A Stanford Law study found AI outperforming law professors on legal tasks, signaling a major shift for legal tech and AI product builders targeting professional services.",
+            "whyItMatters": [
+              "Legal AI products can now credibly claim expert-level performance, opening up high-value enterprise markets like contract review, litigation prep, and compliance.",
+              "This validates that domain-specific fine-tuning on legal data can surpass general human expertise, a blueprint for other professional verticals."
+            ],
+            "whatToTry": {
+              "description": "Explore building a legal AI assistant by fine-tuning a model like GPT-4 or Claude on legal case law and statutes, then test it on tasks like drafting memos or analyzing contracts to replicate this performance.",
+              "note": "Focus on narrow, high-stakes tasks first (e.g., contract clause extraction) to build trust before expanding."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48377761",
+                "title": "AI outperforms law professors in Stanford Law study",
+                "url": "https://law.stanford.edu/press/ai-outperforms-law-professors-in-stanford-law-study/",
+                "domain": "law.stanford.edu",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48377761-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-48377761-1",
+                "label": "legal tech",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48377761-2",
+                "label": "enterprise AI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-06-02T23:43:12Z"
+          },
+          {
+            "id": "rss-wired-ai-1780488983056-v94ip1",
+            "title": "Nvidia RTX Spark: AI PCs Get Real for Founders",
+            "tldr": "Nvidia's RTX Spark chips aim to bring serious AI compute to laptops, potentially enabling on-device inference for local AI apps without cloud dependency.",
+            "whyItMatters": [
+              "Enables local AI inference on laptops, reducing cloud costs and latency for AI products",
+              "Opens new opportunities for edge AI applications and privacy-preserving features"
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's inference needs and consider prototyping a local-first version using Nvidia's RTX Spark specs once available, focusing on use cases like real-time chatbots or image generation that benefit from low latency.",
+              "note": "Wait for developer kits and benchmarks before committing; cloud still offers flexibility for scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1780488983056-v94ip1",
+                "title": "Nvidia’s RTX Spark Laptops Look Hell-Bent on Disruption",
+                "url": "https://www.wired.com/story/nvidia-rtx-spark-laptop-disruption/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1780488983056-v94ip1-0",
+                "label": "Nvidia",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-v94ip1-1",
+                "label": "Edge AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-v94ip1-2",
+                "label": "Hardware",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 11:00:00 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1780488983056-n8p1xx",
+            "title": "Anthropic Stock Now Used as Currency for SF Real Estate",
+            "tldr": "Multiple SF Bay Area home sellers are accepting Anthropic equity as payment, signaling extreme investor confidence in the AI startup and creating a new liquidity channel for pre-IPO AI company shares.",
+            "whyItMatters": [
+              "Founders can use this as a barometer for market sentiment around AI startups—Anthropic's equity is seen as more valuable than cash in some transactions, indicating a frothy market for AI company stakes.",
+              "This trend may open up alternative liquidity options for early-stage AI founders and employees who hold equity in high-demand startups, potentially enabling them to convert shares into real assets without waiting for an IPO."
+            ],
+            "whatToTry": {
+              "description": "If you hold equity in a high-growth AI startup, explore secondary market platforms (e.g., Forge Global, EquityZen) to gauge demand for your shares. Consider whether you can use equity as collateral or in-kind payment for large purchases, but consult a tax advisor first.",
+              "note": "This is still niche and risky—ensure you understand valuation and tax implications before attempting such exchanges."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1780488983056-n8p1xx",
+                "title": "What’s Worth More Than Cash in San Francisco Real Estate? Anthropic Stock",
+                "url": "https://www.wired.com/story/whats-worth-more-than-san-francisco-real-estate-anthropic-stock/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1780488983056-n8p1xx-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-n8p1xx-1",
+                "label": "Startup Equity",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-n8p1xx-2",
+                "label": "Real Estate",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1780488983056-rpz0ww",
+            "title": "Redditors Use AI to Beat World Cup Ticket Scalpers",
+            "tldr": "Soccer fans on Reddit are using Claude to build DIY ticketing software and trade tickets on back channels, disrupting scalpers. This shows how AI empowers grassroots innovation against entrenched systems.",
+            "whyItMatters": [
+              "Demonstrates how AI enables non-technical users to build custom tools that bypass traditional intermediaries, a model applicable to other markets.",
+              "Highlights the potential for AI-driven peer-to-peer solutions to disrupt industries with high fees or scarcity, like events, travel, or housing."
+            ],
+            "whatToTry": {
+              "description": "Explore using AI assistants like Claude to prototype a simple marketplace or automation tool for your own niche—start by describing your problem and desired workflow in plain language, then iterate.",
+              "note": "Focus on solving a specific pain point (e.g., price gouging, limited access) rather than building a full platform initially."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1780488983056-rpz0ww",
+                "title": "Redditors Are Using AI to Beat Obscene World Cup Ticket Prices",
+                "url": "https://www.wired.com/story/redditors-are-using-ai-to-beat-obscene-fifa-world-cup-ticket-prices/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1780488983056-rpz0ww-0",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-rpz0ww-1",
+                "label": "DIY Software",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780488983056-rpz0ww-2",
+                "label": "Market Disruption",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 09:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1780488983281-79uw1w",
+            "title": "Visual Graphs Boost LLM Reasoning More Than Text",
+            "tldr": "New research shows that using visual graph scaffolds (like mind maps) to guide LLM reasoning is far more effective than flattening graph structures into text, especially when direct answer hints are removed. This suggests a modality gap where visual organization of reasoning paths significantly improves multi-hop QA performance.",
+            "whyItMatters": [
+              "For founders building reasoning-heavy AI products (e.g., QA systems, research assistants), this implies that incorporating visual graph interfaces or internal graph-based reasoning scaffolds could yield better accuracy and efficiency than purely text-based approaches.",
+              "Technically, it challenges the common practice of serializing structured knowledge into text for LLMs, pointing to potential gains from multimodal reasoning architectures that preserve graph topology."
+            ],
+            "whatToTry": {
+              "description": "Experiment with providing visual graph representations (e.g., as images or structured diagrams) alongside text prompts for multi-step reasoning tasks in your product. For instance, in a document QA tool, generate a mind map of key entities and relationships before asking the model to answer complex questions.",
+              "note": "Start with simple graph visualizations (e.g., using libraries like Graphviz or Mermaid) and test on a small set of multi-hop queries to measure accuracy improvements."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-79uw1w",
+                "title": "Visual Graph Scaffolds for Structural Reasoning in Large Language Models",
+                "url": "https://arxiv.org/abs/2606.02673",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-79uw1w-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-79uw1w-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780488983281-brl180",
+            "title": "ChatHealthAI: Aligning EHRs with LLMs for Clinical Reasoning",
+            "tldr": "ChatHealthAI is a new framework that bridges EHR foundation models and LLMs, enabling interpretable, language-based clinical reasoning while maintaining predictive accuracy. It uses a task-aware resampler to align structured EHR data with LLM semantics, tested on three clinical tasks from the EHRSHOT benchmark.",
+            "whyItMatters": [
+              "For healthtech founders: Enables building AI clinical decision support tools that combine the predictive power of EHR models with the interpretability of LLMs, addressing a key pain point in regulated healthcare environments.",
+              "Technically: Demonstrates a practical method to integrate structured patient data with LLMs without fine-tuning the LLM, reducing computational cost and preserving model capabilities."
+            ],
+            "whatToTry": {
+              "description": "If you're building clinical AI, explore using a pretrained EHR foundation model (like CLMBR or similar) and a frozen LLM (e.g., GPT-4) with a lightweight resampler to align representations. Test on your own EHR data for tasks like readmission prediction or diagnosis coding to improve explainability.",
+              "note": "The resampler approach avoids expensive LLM fine-tuning, but requires access to a pretrained EHR model and a curated clinical event description pipeline."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780488983281-brl180",
+                "title": "ChatHealthAI: Aligning Electronic Health Record Representations with Large Language Models for Grounded Clinical Reasoning",
+                "url": "https://arxiv.org/abs/2606.02802",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-brl180-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-brl180-1",
+                "label": "healthcare",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780488983281-brl180-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 03 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-02",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-02-afternoon",
@@ -878,7 +1311,7 @@
   },
   {
     "date": "2026-06-01",
-    "displayDate": "Yesterday",
+    "displayDate": "Monday, Jun 1",
     "briefings": [
       {
         "id": "briefing-2026-06-01-afternoon",
@@ -6712,449 +7145,6 @@
           }
         ],
         "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-27",
-    "displayDate": "Wednesday, May 27",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-27-afternoon",
-        "period": "afternoon",
-        "date": "2026-05-27",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Cognition raises $1B at $25B valuation, revenue soars, Ex-Google/Apple Researchers Launch Trajectory for Continuous AI Learning, Robinhood lets AI agents trade stocks with dedicated accounts.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1779900634552-t4g8ow",
-            "title": "Cognition raises $1B at $25B valuation, revenue soars",
-            "tldr": "AI coding startup Cognition raised $1B at a $25B pre-money valuation, more than doubling its valuation in 8 months, with $492M in annualized revenue. This signals massive market demand for AI coding tools and validates the category for founders.",
-            "whyItMatters": [
-              "Business impact: Validates AI coding as a high-growth market; competitors and adjacent tool builders should accelerate go-to-market strategies.",
-              "Technical impact: Raises the bar for AI coding capabilities; expect rapid iteration and new features from Cognition, pressuring other players."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's revenue trajectory against this benchmark. If you're building in the AI coding space, consider how to differentiate (e.g., niche focus, enterprise features, or integration with existing workflows) rather than competing head-on.",
-              "note": "Cognition's rapid growth suggests the market is expanding fast, but also attracting more competition and investor scrutiny."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-t4g8ow",
-                "title": "AI coding startup Cognition raises $1B at $25B pre-money valuation",
-                "url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-t4g8ow-0",
-                "label": "Cognition",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-t4g8ow-1",
-                "label": "AI coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-t4g8ow-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 16:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1779900634559-wld0vl",
-            "title": "Ex-Google/Apple Researchers Launch Trajectory for Continuous AI Learning",
-            "tldr": "Trajectory, a startup founded by former Google and Apple researchers, aims to bring the rapid iteration cycle of 'vibe-coding' to enterprise AI, enabling models that learn and improve continuously from user interactions rather than requiring retraining.",
-            "whyItMatters": [
-              "Business impact: Enables AI products to adapt in real-time to user behavior, reducing the need for costly retraining cycles and improving user retention through personalized experiences.",
-              "Technical impact: Introduces a feedback loop mechanism that could become a standard component in AI stacks, similar to how observability tools are now essential for software."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI product's feedback loop: Are you capturing user interactions (e.g., corrections, preferences) to improve model outputs? Consider prototyping a simple logging system to track these signals, then explore tools like Trajectory or build a custom pipeline to feed them back into your model.",
-              "note": "Start small—focus on one high-traffic feature to validate the impact before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779900634559-wld0vl",
-                "title": "Former Google and Apple Researchers Launch a Startup to Build AI’s Missing Feedback Loop",
-                "url": "https://www.wired.com/story/ex-google-apple-ai-researchers-want-to-make-ai-that-gets-smarter-as-you-use-it/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779900634559-wld0vl-0",
-                "label": "Trajectory",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779900634559-wld0vl-1",
-                "label": "Continuous Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779900634559-wld0vl-2",
-                "label": "AI Feedback Loop",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 14:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-s42qzm",
-            "title": "Robinhood lets AI agents trade stocks with dedicated accounts",
-            "tldr": "Robinhood now allows users to create separate accounts with pre-loaded balances that AI agents can use to trade autonomously, marking a major step toward agentic finance.",
-            "whyItMatters": [
-              "Enables founders to build AI trading agents that operate with real capital, opening up new fintech product opportunities.",
-              "Shifts the paradigm from human-in-the-loop trading to fully autonomous agent execution, with implications for risk management and regulation."
-            ],
-            "whatToTry": {
-              "description": "Explore building an AI agent that uses Robinhood's new feature for automated portfolio rebalancing or dollar-cost averaging, starting with a small test balance to validate agent reliability and compliance.",
-              "note": "Ensure your agent includes robust error handling and stop-loss logic to prevent runaway trading."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-s42qzm",
-                "title": "Robinhood now lets your AI agents trade stocks",
-                "url": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-s42qzm-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-s42qzm-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 12:30:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1779900634961-pshyop",
-            "title": "OpenAI shows self-improving tax agents with Codex",
-            "tldr": "OpenAI, Thrive, and Crete demonstrate a self-improving tax agent built with Codex that automates filings, boosts accuracy, and speeds up workflows—a practical blueprint for AI agents in regulated industries.",
-            "whyItMatters": [
-              "Shows how AI agents can handle complex, compliance-heavy tasks like tax filing, reducing manual errors and costs for startups and enterprises.",
-              "Demonstrates a self-improving loop (Codex + feedback) that could be applied to other domains like legal, accounting, or auditing."
-            ],
-            "whatToTry": {
-              "description": "Explore building a self-improving agent for your own domain by combining Codex with a feedback mechanism (e.g., user corrections or automated validation) to iteratively refine outputs.",
-              "note": "Start with a narrow, high-impact task like invoice processing or compliance checks to minimize risk."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1779900634961-pshyop",
-                "title": "Building self-improving tax agents with Codex",
-                "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1779900634961-pshyop-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1779900634961-pshyop-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1779900634961-pshyop-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 07:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-zow4z7",
-            "title": "Last Chance: Apply for Startup Battlefield 200 Today",
-            "tldr": "Applications for TechCrunch's Startup Battlefield 200 close tonight at 11:59 p.m. PT, offering $100K equity-free funding, global exposure, and investor access for early-stage AI startups.",
-            "whyItMatters": [
-              "Provides a high-leverage opportunity for AI startups to gain visibility and funding without equity dilution, which is critical for early-stage traction.",
-              "Direct investor access and launch stage can accelerate partnerships and customer acquisition for AI product founders."
-            ],
-            "whatToTry": {
-              "description": "If you have an AI startup (pre-seed to Series A), submit your application immediately at the TechCrunch link. Focus your pitch on your AI's unique technical advantage and market fit. If not applying, nominate a promising AI founder you know to help them seize this opportunity.",
-              "note": "Deadline is strict at 11:59 p.m. PT today—act fast and ensure your application highlights your AI's differentiation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-zow4z7",
-                "title": "Startup Battlefield 200 applications close today: Nominate a founder or submit your startup",
-                "url": "https://techcrunch.com/2026/05/27/startup-battlefield-200-applications-close-today-nominate-a-founder-or-submit-your-startup/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-zow4z7-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-zow4z7-1",
-                "label": "Startup Battlefield",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-zow4z7-2",
-                "label": "Opportunity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 1,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 14:15:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-v2v7v8",
-            "title": "ElevenLabs lets you switch genres mid-song with new model",
-            "tldr": "ElevenLabs released a music generation model that allows users to regenerate specific sections of a track without altering the rest, enabling genre switches mid-song. This gives AI product builders finer control over audio generation.",
-            "whyItMatters": [
-              "Enables non-destructive editing in AI music generation, reducing friction for iterative content creation.",
-              "Opens up new product possibilities for interactive audio tools, like dynamic soundtracks or user-customizable music."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating ElevenLabs' new model into your product for features like 'remix a section' or 'change vibe mid-track' in music creation apps, podcasts, or game audio.",
-              "note": "Check API documentation for section regeneration endpoints and genre-switching capabilities."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-v2v7v8",
-                "title": "ElevenLabs’s new music generation model can switch genres mid-track",
-                "url": "https://techcrunch.com/2026/05/27/elevenlabss-new-music-generation-model-can-switch-genres-mid-track/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-v2v7v8-0",
-                "label": "ElevenLabs",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-v2v7v8-1",
-                "label": "Music Generation",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-v2v7v8-2",
-                "label": "Audio Editing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 14:14:10 +0000"
-          },
-          {
-            "id": "hn-48294401",
-            "title": "Italy region slaps 200% tax on datacenter builds in green areas",
-            "tldr": "Lombardy, Italy, introduces up to 200% surcharge on datacenter construction in green/agricultural zones, signaling growing regulatory friction for AI infrastructure expansion in Europe.",
-            "whyItMatters": [
-              "Increases cost and complexity of building AI compute infrastructure in Europe, potentially slowing AI product development and raising cloud costs for founders.",
-              "Sets a precedent for other regions to use tax policy to control datacenter location, impacting site selection and energy sourcing strategies."
-            ],
-            "whatToTry": {
-              "description": "Reassess your AI infrastructure location strategy: prioritize regions with clear, stable tax policies and renewable energy incentives (e.g., Nordic countries, Spain) to avoid future cost spikes. Engage local policymakers early to understand upcoming regulations.",
-              "note": "Consider colocation providers with existing permits in industrial zones to bypass new restrictions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48294401",
-                "title": "Italy region: +200% tax on datacenters built in green/agricultural areas",
-                "url": "https://en.ilsole24ore.com/art/lombardy-introduces-increased-charges-of-up-to-200-per-cent-for-data-centre-construction-in-green-and-agricultural-areas-AI6Jp4ID",
-                "domain": "en.ilsole24ore.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48294401-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48294401-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48294401-2",
-                "label": "Europe",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-27T13:52:48Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-tjp273",
-            "title": "China hoards top AI talent, shifting global talent pool dynamics",
-            "tldr": "China is retaining its best AI researchers and engineers domestically, reducing brain drain to the US and Europe. This tightens the global talent market for AI startups and may accelerate China's self-sufficiency in AI development.",
-            "whyItMatters": [
-              "Founders building AI products may face increased competition for top-tier AI talent, especially from Chinese researchers who previously moved abroad.",
-              "China's AI ecosystem could accelerate independently, potentially creating new competitive threats or partnership opportunities for Western startups."
-            ],
-            "whatToTry": {
-              "description": "Diversify your talent sourcing by investing in remote-friendly hiring pipelines in emerging AI hubs (e.g., India, Eastern Europe, Latin America) and consider partnering with Chinese AI labs for access to talent via collaborations.",
-              "note": "Visa and geopolitical risks may complicate direct hiring from China; focus on building relationships with Chinese AI research institutions for joint projects."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-tjp273",
-                "title": "China is increasingly keeping its best AI talent to itself",
-                "url": "https://techcrunch.com/2026/05/27/china-is-increasingly-keeping-its-best-ai-talent-to-itself/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-tjp273-0",
-                "label": "Talent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-tjp273-1",
-                "label": "Geopolitics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-tjp273-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 13:48:41 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-7yx0h3",
-            "title": "ClickHouse hits $250M ARR, signals IPO path for AI infra",
-            "tldr": "ClickHouse tripled annualized revenue to $250M and plans an IPO in the next few years, highlighting strong demand for real-time analytics infrastructure that powers AI data pipelines.",
-            "whyItMatters": [
-              "Business impact: Validates the market for high-performance, real-time data stores that are critical for AI applications like RAG, anomaly detection, and streaming analytics.",
-              "Technical impact: Encourages founders to bet on ClickHouse as a scalable, cost-effective backend for AI products that require low-latency querying of large datasets."
-            ],
-            "whatToTry": {
-              "description": "Evaluate ClickHouse for your AI product's real-time analytics or feature store needs, especially if you handle large volumes of time-series or log data. Start with their managed cloud service to reduce ops overhead.",
-              "note": "Consider alternatives like DuckDB or Apache Pinot if your workload is more OLAP-heavy or you need tighter integration with Python data stacks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-7yx0h3",
-                "title": "ClickHouse triples anualized revenue to $250M, charting a path toward an IPO",
-                "url": "https://techcrunch.com/2026/05/27/clickhouse-triples-anualized-revenue-to-250m-charting-a-path-toward-an-ipo/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-7yx0h3-0",
-                "label": "ClickHouse",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-7yx0h3-1",
-                "label": "Database",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-7yx0h3-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 13:04:20 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779900634552-yfvlsd",
-            "title": "YouTube auto-labels AI videos: new compliance rules",
-            "tldr": "YouTube is rolling out automatic labeling for videos with significant photorealistic AI content, shifting from creator self-disclosure to platform-driven detection. This impacts how AI video tools are marketed and used.",
-            "whyItMatters": [
-              "Business impact: Founders building AI video tools must ensure their outputs are detectable by YouTube's system to avoid penalties or mislabeling, affecting product-market fit and user trust.",
-              "Technical impact: Developers need to consider watermarking or metadata standards that align with YouTube's detection methods, potentially influencing model training and output design."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI video generation pipeline for compliance: test if your outputs trigger YouTube's auto-labeling, and consider adding visible or invisible watermarks to meet transparency requirements.",
-              "note": "Start with a small batch of test videos to gauge detection accuracy before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779900634552-yfvlsd",
-                "title": "YouTube will now automatically label AI videos",
-                "url": "https://techcrunch.com/2026/05/27/youtube-will-now-automatically-label-ai-videos/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-yfvlsd-0",
-                "label": "YouTube",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-yfvlsd-1",
-                "label": "AI video",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779900634552-yfvlsd-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 13:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 19,
         "isAvailable": true,
         "isRead": false
       }
