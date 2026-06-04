@@ -1,7 +1,455 @@
 [
   {
-    "date": "2026-06-03",
+    "date": "2026-06-04",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-04-morning",
+        "period": "morning",
+        "date": "2026-06-04",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Why AI Agent Safety Triggers Fail: Saturation & Human Disagreement, New Framework for Pre-Deployment AI Agent Assurance, AI Emotional Dependence: Incidental Interactions Reshape Human Connection.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1780569950645-4vzgxr",
+            "title": "Why AI Agent Safety Triggers Fail: Saturation & Human Disagreement",
+            "tldr": "A new paper reveals that affect-based triggers for autonomous agents hit a 'saturation trap' (firing 39-83% of the time), LLM judges are costly and inaccurate (F1 0.17-0.40), and even humans can't agree on when to intervene (Krippendorff's alpha = +0.047). This challenges the foundation of runtime safety for long-horizon AI agents.",
+            "whyItMatters": [
+              "Business impact: Founders building autonomous agents must rethink safety layers—current triggers are unreliable and may cause false positives that degrade user trust or agent performance.",
+              "Technical impact: The saturation trap and human annotation noise suggest that intervention timing is an ill-posed problem; new approaches (e.g., probabilistic or cost-sensitive models) are needed instead of threshold-based or LLM-as-judge methods."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent's intervention triggers by running a small-scale study: collect human annotations on a few trajectories and measure inter-annotator agreement. If agreement is low (like in the paper), pivot to a cost-sensitive or adaptive intervention policy that accounts for uncertainty rather than relying on fixed thresholds or LLM judges.",
+              "note": "Consider using a Bayesian approach to model intervention timing as a decision under uncertainty, rather than a binary classification problem."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-4vzgxr",
+                "title": "The Saturation Trap and the Subjectivity of Intervention Timing: Why Affect-Based Triggers and LLM Judges Fail to Time Interventions on Autonomous Agents",
+                "url": "https://arxiv.org/abs/2606.04296",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-4vzgxr-0",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-4vzgxr-1",
+                "label": "safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-4vzgxr-2",
+                "label": "autonomous agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-yxmep1",
+            "title": "New Framework for Pre-Deployment AI Agent Assurance",
+            "tldr": "A research paper proposes an ontology-grounded verification framework for enterprise AI agents, combining an Agent Operational Envelope, automated scenario generation, and a Trust Certificate. In a pilot across four regulated industries, it achieved 48.3% regulatory coverage vs 33.1% for baselines, addressing a critical gap in pre-deployment assurance.",
+            "whyItMatters": [
+              "Business impact: Provides a structured method to certify AI agents for regulated industries, reducing compliance risk and enabling faster, safer deployments in fintech, banking, insurance, and healthcare.",
+              "Technical impact: Introduces ontology-to-scenario generation that outperforms persona-based and RAG baselines, offering a reproducible approach for automated testing and verification of agent behavior."
+            ],
+            "whatToTry": {
+              "description": "For founders building AI agents for regulated sectors, review the paper's ontology design and scenario generation pipeline. Consider implementing a similar 'Agent Operational Envelope' for your own agents to define permissions, constraints, and safety rules before production deployment.",
+              "note": "The framework is research-stage; start with a small pilot to map your regulatory requirements and test coverage gains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-yxmep1",
+                "title": "Toward Pre-Deployment Assurance for Enterprise AI Agents: Ontology-Grounded Simulation and Trust Certification",
+                "url": "https://arxiv.org/abs/2606.04037",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-yxmep1-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-yxmep1-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-yxmep1-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-0uihpw",
+            "title": "AI Emotional Dependence: Incidental Interactions Reshape Human Connection",
+            "tldr": "A new study reveals that even brief, task-oriented AI interactions can subtly shift users' emotional support preferences away from humans, with a 10.3% decrease in human preference after 28 days of daily 5-minute chats. This challenges the assumption that emotional dependence only arises from dedicated companion chatbots.",
+            "whyItMatters": [
+              "For founders building general-purpose AI products, this highlights a hidden risk: routine interactions can inadvertently create emotional dependence, potentially leading to regulatory scrutiny beyond companion apps.",
+              "Technically, it underscores the need to design AI systems that encourage human connection rather than replace it, especially in task-oriented contexts where emotional support emerges incidentally."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's interaction patterns to identify where users might be seeking emotional support incidentally. Consider adding gentle nudges or opt-in features that encourage users to connect with humans for deeper emotional needs, especially after repeated personal disclosures.",
+              "note": "This is proactive risk management—regulations may soon require such features for general-purpose AI."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-0uihpw",
+                "title": "Stumbling Into AI Emotional Dependence: How Routine AI Interactions Reshape Human Connection",
+                "url": "https://arxiv.org/abs/2606.04150",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-0uihpw-0",
+                "label": "AI Emotional Dependence",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-0uihpw-1",
+                "label": "Human-AI Interaction",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-0uihpw-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-zy5taw",
+            "title": "SMAC-Talk: New Benchmark for LLM Multi-Agent Coordination",
+            "tldr": "Researchers released SMAC-Talk, an open benchmark extending StarCraft II for evaluating LLM-based agents in cooperative multi-agent settings with natural language communication, including deceptive agent scenarios. It tests coordination, trust, and decision-making under partial observability.",
+            "whyItMatters": [
+              "Provides a standardized environment to test and compare LLM agents' ability to coordinate via natural language, critical for building multi-agent AI systems in robotics, gaming, and enterprise automation.",
+              "Introduces deceptive communication scenarios, enabling research into trust and robustness in multi-agent LLM systems, directly relevant to safety and reliability in AI products."
+            ],
+            "whatToTry": {
+              "description": "Download the SMAC-Talk benchmark from GitHub and run the provided baseline agents (Qwen3.5 models) to evaluate your own LLM-based agent's coordination skills in cooperative tasks. Use the deceptive communicator scenario to stress-test your agent's trust and robustness.",
+              "note": "Start with the default scenarios to establish a baseline before customizing for your specific multi-agent use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-zy5taw",
+                "title": "SMAC-Talk: A Natural Language Extension of the StarCraft Multi-Agent Challenge for Large Language Models",
+                "url": "https://arxiv.org/abs/2606.04202",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-zy5taw-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-zy5taw-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-zy5taw-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-2ij3bn",
+            "title": "AI Agents Automate Data Curation: Curation-Bench Benchmark",
+            "tldr": "A new benchmark shows generalist coding agents can automate the data curation loop for AI training, with scaffolded agents outperforming published baselines at 1/10th the data budget. This is a major step toward reducing the labor-intensive process of curating training data.",
+            "whyItMatters": [
+              "Business impact: Dramatically reduces the time and cost of data curation, a bottleneck in AI development, enabling faster iteration and lower data budgets for startups.",
+              "Technical impact: Demonstrates that scaffolded agents (with method adaptation) can autonomously discover effective data policies, shifting from manual trial-and-error to automated research."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current data curation pipeline for automation potential. Use the open-sourced Curation-Bench to test if generalist coding agents can improve your data selection policies, especially for vision-language instruction tuning.",
+              "note": "Start with scaffolded agents that require citing and adapting prior methods, as open-ended prompting alone may not yield optimal results."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-2ij3bn",
+                "title": "Can Generalist Agents Automate Data Curation?",
+                "url": "https://arxiv.org/abs/2606.04261",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-2ij3bn-0",
+                "label": "Curation-Bench",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-2ij3bn-1",
+                "label": "Data Curation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-2ij3bn-2",
+                "label": "AI Agents",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-openai-blog-1780569950942-7ndiw1",
+            "title": "Endava redesigns software delivery with AI agents",
+            "tldr": "Endava is leveraging OpenAI's ChatGPT Enterprise and Codex to integrate AI agents into their software delivery pipeline, aiming to accelerate workflows and foster an AI-native culture. This case study highlights practical enterprise adoption of AI agents for development.",
+            "whyItMatters": [
+              "Demonstrates a real-world blueprint for integrating AI agents into enterprise software delivery, offering a model for founders to follow.",
+              "Shows how AI can automate workflows and boost developer productivity, directly impacting time-to-market and operational efficiency."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current software delivery pipeline for repetitive tasks (e.g., code reviews, testing, documentation) that could be automated with AI agents. Start by piloting a small team with tools like ChatGPT Enterprise or Codex to measure productivity gains before scaling.",
+              "note": "Focus on high-friction, low-creativity tasks first to build buy-in and demonstrate ROI."
+            },
+            "sources": [
+              {
+                "id": "src-rss-openai-blog-1780569950942-7ndiw1",
+                "title": "How Endava is redesigning software delivery around AI agents",
+                "url": "https://openai.com/index/endava-frontiers",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-openai-blog-1780569950942-7ndiw1-0",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-openai-blog-1780569950942-7ndiw1-1",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-openai-blog-1780569950942-7ndiw1-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "releases",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 12:00:00 GMT"
+          },
+          {
+            "id": "rss-wired-ai-1780569950471-qu3at7",
+            "title": "Alpha School's $65K 'Homeschooling' Center: Speed Over Safety",
+            "tldr": "Alpha School is expanding with a $65K/year NYC 'homeschooling center' that uses AI for core academics, but internal documents reveal a risky 'opening date > safety' strategy. This signals a growing trend of AI-first education startups prioritizing rapid scaling over student safety, which founders should watch for regulatory and trust risks.",
+            "whyItMatters": [
+              "Business impact: Highlights the tension between rapid AI product deployment and safety compliance in regulated industries like education, with potential for backlash or regulatory action.",
+              "Technical impact: Shows how AI-driven personalized learning is being commercialized at scale, but with operational shortcuts that could undermine long-term viability."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products for regulated sectors (e.g., education, healthcare), audit your deployment pipeline for safety vs. speed trade-offs. Implement a 'safety gate' checklist before launch, including third-party audits and transparent user communication.",
+              "note": "Consider using a phased rollout to gather real-world data without compromising on safety standards."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1780569950471-qu3at7",
+                "title": "Alpha School’s Ritzy New York City Campus Costs $65,000 a Year—but Isn’t Actually a School",
+                "url": "https://www.wired.com/story/alpha-schools-new-york-city-campus-isnt-actually-a-school/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1780569950471-qu3at7-0",
+                "label": "AI Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780569950471-qu3at7-1",
+                "label": "Regulatory Risk",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1780569950471-qu3at7-2",
+                "label": "Startup Strategy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-1jlza1",
+            "title": "PEEL Framework: Fixing AI's Epistemic Blind Spots in Research",
+            "tldr": "A new paper introduces PEEL, a protocol combining deterministic text analysis (Voyant Tools) with LLM interpretation (Claude) to detect systematic distortions in AI-generated research summaries. It reveals that LLMs often misrepresent term frequency and epistemic voice, offering a practical scaffolding for accountable AI use in research.",
+            "whyItMatters": [
+              "For founders building AI research tools, this highlights a critical failure mode: LLMs can distort quantitative aspects of text (e.g., term frequency) that are invisible without non-AI measurement, meaning your product needs hybrid verification layers.",
+              "Technically, the PEEL framework provides a blueprint for integrating deterministic tools with LLMs to ensure epistemic accountability, which could become a standard for AI-enabled research platforms."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI research assistant, implement a 'deterministic check' step: use a tool like Voyant Tools or a simple frequency counter to verify key term distributions in LLM-generated summaries against the source text, then flag discrepancies to users.",
+              "note": "Start with a small pilot on 10-20 documents to calibrate thresholds for distortion before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-1jlza1",
+                "title": "Thinking Through Signs: PEEL as a Semiotic Scaffolding for Epistemically Accountable AI-Enabled Research",
+                "url": "https://arxiv.org/abs/2606.04152",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-1jlza1-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-1jlza1-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-1jlza1-2",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-m5nsug",
+            "title": "Multi-Agent AI: Disagreement as Signal, Not Error",
+            "tldr": "A new paper argues that in value-laden tasks like content moderation, disagreement among AI agents isn't a bug but a feature. It proposes a framework to classify reasoning-trace disagreements into four states, enabling more nuanced routing decisions than simple consensus.",
+            "whyItMatters": [
+              "For founders building multi-agent systems, this offers a principled way to handle normative uncertainty, potentially improving decision quality in sensitive applications like moderation, compliance, or ethical AI.",
+              "Technically, it bridges LLM deliberation with symbolic knowledge representation, enabling more interpretable and strategic agent coordination without relying on naive voting."
+            ],
+            "whatToTry": {
+              "description": "If you're building a multi-agent system for content moderation or policy enforcement, prototype a disagreement-aware routing layer that logs reasoning traces and classifies agent interactions into the four states (convergent/divergent agreement/disagreement). Use this to trigger human review only when divergent disagreement occurs, reducing false positives.",
+              "note": "Start with a simple binary decision task and two LLM agents with different system prompts to test the framework's feasibility."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-m5nsug",
+                "title": "Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal",
+                "url": "https://arxiv.org/abs/2606.04223",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-m5nsug-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-m5nsug-1",
+                "label": "Content Moderation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-m5nsug-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780569950645-3ughvs",
+            "title": "VAMPS: New Benchmark Reveals AI's Struggle with Visual Problem-Solving",
+            "tldr": "A new benchmark, VAMPS, tests multimodal LLMs on graph-assisted math problems, finding that direct analytical solving outperforms tool-enabled visual solving, even when plotting is a natural strategy. This highlights a critical gap for AI products relying on visual reasoning.",
+            "whyItMatters": [
+              "For founders building AI tools that involve data visualization or scientific computing, this benchmark reveals that current models may not effectively use visual aids, potentially leading to incorrect outputs in engineering or analytics workflows.",
+              "The finding that analytical solving beats visual reasoning suggests that integrating external visualization tools (e.g., plotting libraries) into AI pipelines may require careful design to avoid performance degradation, impacting product accuracy."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's performance on visual reasoning tasks by testing with the VAMPS benchmark (available on arXiv). If your product relies on plotting or graph-based outputs, consider implementing a hybrid approach that falls back to analytical methods when visual reasoning fails.",
+              "note": "The benchmark is bilingual (English/Persian) and focuses on algebra/calculus, so adapt tests to your domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780569950645-3ughvs",
+                "title": "VAMPS: Visual-Assisted Mathematical Problem Solving Benchmark",
+                "url": "https://arxiv.org/abs/2606.04244",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-3ughvs-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-3ughvs-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780569950645-3ughvs-2",
+                "label": "multimodal",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 04 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-03-afternoon",
@@ -876,7 +1324,7 @@
   },
   {
     "date": "2026-06-02",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Jun 2",
     "briefings": [
       {
         "id": "briefing-2026-06-02-afternoon",
@@ -6270,1323 +6718,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-05-28",
-    "displayDate": "Thursday, May 28",
-    "briefings": [
-      {
-        "id": "briefing-2026-05-28-morning",
-        "period": "morning",
-        "date": "2026-05-28",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: LLMs Can't Do Causal Discovery: New Proof & Fix, RULER: New method catches AI models that fake forgetting, LaneRoPE: Smarter Parallel Reasoning for LLMs.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1779966258823-mllwq2",
-            "title": "LLMs Can't Do Causal Discovery: New Proof & Fix",
-            "tldr": "A new paper proves that LLMs fundamentally cannot learn causal discovery from data due to a kernel obstruction theorem, but introduces Agentic Causal Bayesian Optimization (A-CBO) that uses LLMs as interventional oracles to provably converge on causal graphs without training.",
-            "whyItMatters": [
-              "For founders building AI for scientific discovery, healthcare, or any domain requiring causal reasoning: this shows current fine-tuning approaches are doomed to fail on causal tasks, but offers a practical workaround using LLMs as oracles with external Bayesian optimization.",
-              "Technically, the paper provides a rigorous proof that supervised fine-tuning, DPO, and ICL cannot distinguish between causal graphs from observational data, which is a critical insight for anyone designing AI systems that need to infer cause-effect relationships."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for causal inference, stop fine-tuning LLMs on causal discovery datasets. Instead, implement A-CBO: use a frozen LLM as an oracle to answer targeted intervention queries (e.g., 'What happens if we set variable X to value Y?'), and wrap it in a Bayesian optimization loop over candidate causal graphs. This avoids the fundamental limitation and converges in logarithmic rounds.",
-              "note": "Start with small graphs (under 10 variables) to test feasibility, as the paper shows success on up to 24 variables. The LLM's role is as an interventional oracle, not a causal learner."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-mllwq2",
-                "title": "Why LLMs Fail at Causal Discovery and How Interventional Agents Escape",
-                "url": "https://arxiv.org/abs/2605.27567",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-mllwq2-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-mllwq2-1",
-                "label": "Causal Discovery",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-mllwq2-2",
-                "label": "Bayesian Optimization",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-aar3eu",
-            "title": "RULER: New method catches AI models that fake forgetting",
-            "tldr": "Researchers introduce RULER, a representation-level verification method that reveals current machine unlearning techniques often fail to truly erase data from model internals, even when output-level tests pass. This is critical for founders building AI products that must comply with data deletion regulations like GDPR.",
-            "whyItMatters": [
-              "Business impact: Regulatory compliance (e.g., GDPR 'right to be forgotten') may require deeper verification than current industry practices; using RULER can prevent legal risks and audits.",
-              "Technical impact: Founders can now diagnose and improve unlearning pipelines by checking internal representations, not just outputs, leading to more robust privacy guarantees."
-            ],
-            "whatToTry": {
-              "description": "Integrate RULER's oracle-free metric M4 into your model evaluation pipeline to detect residual memorization before deployment, especially for sensitive data like clinical or face-identity records.",
-              "note": "M4 requires no retrained model, making it practical for continuous monitoring; start with tabular or image data where it's already validated."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-aar3eu",
-                "title": "RULER: Representation-Level Verification of Machine Unlearning",
-                "url": "https://arxiv.org/abs/2605.27569",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-aar3eu-0",
-                "label": "Machine Unlearning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-aar3eu-1",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-aar3eu-2",
-                "label": "Verification",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-7zb8qh",
-            "title": "LaneRoPE: Smarter Parallel Reasoning for LLMs",
-            "tldr": "LaneRoPE introduces inter-sequence attention and positional encoding to enable collaboration between parallel LLM generations, boosting accuracy on math tasks with minimal overhead. This could make best-of-N sampling more efficient for founders building reasoning-heavy AI products.",
-            "whyItMatters": [
-              "Enables better accuracy in parallel reasoning without major architectural changes, reducing compute costs for test-time scaling.",
-              "Opens up new possibilities for collaborative multi-agent or multi-path reasoning in production AI systems."
-            ],
-            "whatToTry": {
-              "description": "If you use best-of-N sampling or parallel generation for reasoning tasks (e.g., math, code), experiment with LaneRoPE by modifying your attention mask and RoPE implementation to allow inter-sequence dependencies. Start with small N (e.g., 2-4) to measure accuracy gains vs. overhead.",
-              "note": "Paper claims negligible inference overhead, but test on your specific model and task to validate."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-7zb8qh",
-                "title": "LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation",
-                "url": "https://arxiv.org/abs/2605.27570",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-7zb8qh-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-7zb8qh-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-gb64on",
-            "title": "Discovery Agents: Proactive Analytics Over Real-Time Streams",
-            "tldr": "A new arXiv paper proposes a multi-agent architecture that uses LLMs to autonomously discover insights from real-time data streams, shifting from reactive querying to proactive discovery. This is a significant research advance for building AI-powered analytics products.",
-            "whyItMatters": [
-              "Enables founders to build analytics products that surface insights automatically, reducing the need for manual querying and increasing user engagement.",
-              "Provides a modular, contract-driven design that can be replicated with existing tools (Kafka, Flink, LLMs), lowering the barrier to implementing proactive analytics."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current analytics stack for opportunities to add a 'discovery agent' layer. Start by identifying a high-volume data stream (e.g., user events, sales transactions) and prototype a simple agent that generates hypotheses (e.g., 'detect unusual spikes in signups') and alerts users via a dashboard or notification.",
-              "note": "Focus on one use case first (e.g., anomaly detection) to validate the approach before expanding to multiple agents."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-gb64on",
-                "title": "Discovery Agents for Real-Time Analytics: Toward Proactive Insight Systems",
-                "url": "https://arxiv.org/abs/2605.27571",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-gb64on-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-gb64on-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-gb64on-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-1n4pvt",
-            "title": "Agyn: Open-source platform for scalable, secure AI agents",
-            "tldr": "Agyn is a new open-source platform for deploying AI agents at scale, featuring a serverless Kubernetes runtime, Terraform-based agent definitions, and zero-trust security. It addresses key production challenges like stateful sessions, non-deterministic workflows, and privileged access, making it highly relevant for founders building agent-based products.",
-            "whyItMatters": [
-              "Provides a production-ready, open-source alternative to proprietary agent platforms, reducing vendor lock-in and infrastructure costs.",
-              "Enables scalable, secure agent deployment with built-in isolation and governance, critical for enterprise adoption and compliance."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Agyn for your agent deployment needs by exploring its GitHub repo and testing its Terraform provider to define agent harnesses and workflows. Start with a simple stateful agent to see how it handles non-deterministic tasks and zero-trust access.",
-              "note": "Agyn is agent-agnostic, so you can integrate it with your existing models and cloud infrastructure."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-1n4pvt",
-                "title": "Agyn: An Open-Source Platform for AI Agents with Scalable On-Demand Execution, Agent Definition as a Code, and Zero-Trust Access",
-                "url": "https://arxiv.org/abs/2605.27575",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-1n4pvt-0",
-                "label": "Agyn",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-1n4pvt-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-1n4pvt-2",
-                "label": "Kubernetes",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1779966258631-btpqja",
-            "title": "Illinois Passes Strongest US AI Safety Bill – What Founders Need to Know",
-            "tldr": "Illinois lawmakers passed a bill requiring AI companies to undergo third-party safety audits before deployment. Governor Pritzker will sign it, setting a precedent that could impact AI product compliance nationwide.",
-            "whyItMatters": [
-              "Founders building AI products must now consider compliance with state-level safety audits, potentially increasing time-to-market and legal costs.",
-              "This could trigger a wave of similar legislation in other states, creating a patchwork of regulations that complicates scaling AI products across the US."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's safety protocols now to prepare for potential compliance requirements. Start by documenting your model's training data, bias testing, and failure modes. Engage a third-party auditor early to identify gaps before the law takes effect.",
-              "note": "Consider joining industry groups like the Partnership on AI to stay ahead of regulatory trends and shape best practices."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779966258631-btpqja",
-                "title": "Illinois Lawmakers Just Passed America’s Strongest AI Safety Bill",
-                "url": "https://www.wired.com/story/illinois-pass-major-ai-safety-law-pritzker/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779966258631-btpqja-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779966258631-btpqja-1",
-                "label": "Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779966258631-btpqja-2",
-                "label": "Compliance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:10:42 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779966258642-24p9r3",
-            "title": "Snowflake's $6B AWS Deal: AI Chip Shift from Nvidia",
-            "tldr": "Snowflake signed a $6B, five-year deal with AWS for AI CPU chips, signaling a major move away from Nvidia dominance and validating AWS's custom silicon strategy for AI workloads.",
-            "whyItMatters": [
-              "For AI founders: Diversify chip sourcing to reduce Nvidia dependency and cost; AWS Trainium/Inferentia chips may offer better price-performance for inference-heavy workloads.",
-              "Technical impact: This deal could accelerate adoption of AWS-native AI chips, potentially lowering inference costs and improving availability for cloud-based AI products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate AWS Trainium/Inferentia for your AI inference pipeline. Run a cost comparison vs. Nvidia GPUs on your specific model size and latency requirements—especially if you're scaling on AWS.",
-              "note": "Start with small batch tests; AWS chips excel at inference but may underperform for training complex models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779966258642-24p9r3",
-                "title": "In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU chips",
-                "url": "https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779966258642-24p9r3-0",
-                "label": "AWS",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779966258642-24p9r3-1",
-                "label": "Snowflake",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779966258642-24p9r3-2",
-                "label": "AI Chips",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 27 May 2026 20:10:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1779966258631-6w9nvt",
-            "title": "Amazon's Networking Breakthrough Speeds Up Cloud AI Workloads",
-            "tldr": "Amazon claims a new data-center networking architecture dramatically accelerates information flow, which could reduce latency and cost for AI model training and inference on AWS.",
-            "whyItMatters": [
-              "Faster networking means shorter training times and lower costs for AI models, directly impacting the economics of building and deploying AI products.",
-              "Improved infrastructure reliability and throughput can enable more complex, real-time AI applications that were previously bottlenecked by network latency."
-            ],
-            "whatToTry": {
-              "description": "If you're training large models or running latency-sensitive AI inference on AWS, review your current network configuration and consider testing workloads in regions or availability zones that may benefit from this upgrade. Reach out to your AWS account team for early access details.",
-              "note": "Amazon hasn't disclosed specific metrics or rollout timelines yet, so treat this as a signal to prepare rather than an immediate switch."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779966258631-6w9nvt",
-                "title": "Amazon Thinks the Future of Data Centers Depends on a Technical Problem It Just Solved",
-                "url": "https://www.wired.com/story/amazon-thinks-the-future-of-data-centers-depends-on-a-technical-problem-it-just-solved/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779966258631-6w9nvt-0",
-                "label": "AWS",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779966258631-6w9nvt-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 10:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-e9zk7y",
-            "title": "New LLM Architecture Detects Human Values in Text",
-            "tldr": "A new modular LLM-based architecture can identify and quantify human values in text, adaptable to any value theory, enabling more ethical AI decision-making without complex prompt engineering.",
-            "whyItMatters": [
-              "Business impact: Enables AI products to align with user values, improving trust and personalization in recommendation systems, chatbots, and content moderation.",
-              "Technical impact: Provides a scalable, reproducible method for value detection that separates conceptualization from detection, reducing engineering overhead and improving adaptability."
-            ],
-            "whatToTry": {
-              "description": "Evaluate this architecture for your AI product by testing it with your own value framework (e.g., ethical guidelines, brand values) using the ValueEval dataset or your own text corpus to see if it improves alignment and user satisfaction.",
-              "note": "Start with a small pilot to assess performance with your specific use case before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-e9zk7y",
-                "title": "Identifying and Understanding Human Values in Text: A Tailorable LLM-based Architecture",
-                "url": "https://arxiv.org/abs/2605.27373",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-e9zk7y-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-e9zk7y-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1779966258823-o53868",
-            "title": "Soro: Tajik LLM Shows How to Build for Low-Resource Languages",
-            "tldr": "Researchers created Soro, a family of Tajik-specialized LLMs via continual pretraining on Gemma 3, achieving strong local benchmark performance while retaining English capability. It demonstrates a practical blueprint for adapting foundation models to underserved languages with limited compute and connectivity, including quantization for edge deployment.",
-            "whyItMatters": [
-              "For founders building AI products for non-English markets, this shows a cost-effective path to create specialized models using open-weight checkpoints and targeted data, without requiring massive resources.",
-              "The open-sourced benchmarks and quantization approach (FP8/INT4) enable reproducible evaluation and deployment on low-resource devices, directly applicable to edtech, government, or rural applications."
-            ],
-            "whatToTry": {
-              "description": "If you're targeting a low-resource language, start with an open-weight model like Gemma 3 or Llama 3, curate a domain-specific corpus (e.g., educational materials), and perform continual pretraining with supervised fine-tuning. Use quantization (FP8/INT4) to shrink the model for edge deployment.",
-              "note": "Focus on high-quality, curriculum-aligned data for your target domain to maximize relevance and performance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1779966258823-o53868",
-                "title": "Soro: A Lightweight Foundation Model and Chatbot for Tajik",
-                "url": "https://arxiv.org/abs/2605.27379",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-o53868-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-o53868-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1779966258823-o53868-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-28-afternoon",
-        "period": "afternoon",
-        "date": "2026-05-28",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Anthropic drops Opus 4.8 with Dynamic Workflows for agent swarms, Google I/O 2026: Gemini Omni & 3.5 Flash Lead 12 Major AI Announcements, Waymo's New Ojai Robotaxi: Chinese-Made, US-Deployed.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1779987940461-3fwrld",
-            "title": "Anthropic drops Opus 4.8 with Dynamic Workflows for agent swarms",
-            "tldr": "Anthropic released Opus 4.8, featuring a new 'Dynamic Workflows' tool that orchestrates swarms of subagents, enabling complex multi-step tasks. This is a major leap for AI agent coordination, directly impacting how founders build autonomous systems.",
-            "whyItMatters": [
-              "Business impact: Enables building sophisticated multi-agent systems without custom orchestration code, reducing development time and cost for AI-powered products.",
-              "Technical impact: Dynamic Workflows abstract away agent coordination logic, allowing founders to focus on task design and agent capabilities rather than infrastructure."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agent architecture for opportunities to replace custom orchestration with Dynamic Workflows. Start by prototyping a multi-step task (e.g., customer support escalation or data pipeline) using Opus 4.8's new tool to see if it simplifies your stack.",
-              "note": "Check Anthropic's documentation for Dynamic Workflows API limits and pricing before committing to a full migration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-3fwrld",
-                "title": "Anthropic releases Opus 4.8 with new ‘dynamic workflow’ tool",
-                "url": "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-3fwrld-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-3fwrld-1",
-                "label": "Dynamic Workflows",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-3fwrld-2",
-                "label": "Agent orchestration",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 17:00:09 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1779987940706-9pefo7",
-            "title": "Google I/O 2026: Gemini Omni & 3.5 Flash Lead 12 Major AI Announcements",
-            "tldr": "Google unveiled Gemini Omni (a multimodal reasoning model) and Gemini 3.5 Flash (a faster, cheaper variant) at I/O 2026, alongside 10 other key updates. This signals major shifts in model capabilities and pricing that directly impact AI product builders.",
-            "whyItMatters": [
-              "Gemini Omni introduces unified multimodal reasoning, enabling new product categories like real-time video analysis and cross-modal search without separate pipelines.",
-              "Gemini 3.5 Flash offers lower latency and cost, making it viable for high-volume, real-time applications like chatbots and agents, potentially disrupting existing pricing models."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Gemini Omni for multimodal use cases (e.g., analyzing video + text in customer support) and benchmark Gemini 3.5 Flash against your current model for latency-sensitive apps to reduce costs.",
-              "note": "Check Google's updated pricing page for 3.5 Flash—early adopters may get discounted rates."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1779987940706-9pefo7",
-                "title": "Catch up on 12 major I/O 2026 moments",
-                "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1779987940706-9pefo7-0",
-                "label": "Gemini Omni",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1779987940706-9pefo7-1",
-                "label": "Gemini 3.5 Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1779987940706-9pefo7-2",
-                "label": "Google I/O",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1779987940454-4bdg8m",
-            "title": "Waymo's New Ojai Robotaxi: Chinese-Made, US-Deployed",
-            "tldr": "Waymo is launching its new 'Ojai' robotaxi, built in China with Geely, in California and Arizona. This signals a major shift in AV supply chains and geopolitics, with implications for cost, regulation, and competition for AI founders building autonomous systems.",
-            "whyItMatters": [
-              "Business impact: Waymo's use of a Chinese-manufactured vehicle could lower robotaxi production costs, accelerating deployment and pressuring competitors like Cruise and Tesla to adapt their hardware strategies.",
-              "Technical impact: The Ojai likely integrates Waymo's latest sensor and compute stack, offering a reference design for AI-driven autonomy that founders can study for hardware-software co-optimization trends."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's hardware supply chain for geopolitical risks and cost advantages. If you're building for autonomous systems, consider partnerships with global manufacturers to reduce unit costs while ensuring compliance with local regulations.",
-              "note": "Monitor US-China trade policies closely—tariffs or bans could disrupt supply, so have a backup plan for domestic sourcing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779987940454-4bdg8m",
-                "title": "Here Comes Ojai, Waymo’s New Chinese-Made Robotaxi",
-                "url": "https://www.wired.com/story/here-comes-ojai-waymos-new-chinese-made-robotaxi/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779987940454-4bdg8m-0",
-                "label": "Waymo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779987940454-4bdg8m-1",
-                "label": "Robotaxi",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779987940454-4bdg8m-2",
-                "label": "Supply Chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779987940461-xoup7a",
-            "title": "Visa invests in Replit to enable agentic payments for devs",
-            "tldr": "Visa has invested in Replit and revealed that over 1,000 employees use it for prototyping. This signals a major push to embed payment capabilities directly into AI coding agents, making it easier for founders to monetize AI-generated apps.",
-            "whyItMatters": [
-              "Business impact: Enables AI agents to handle payments natively, reducing friction for founders building AI products that need to transact or charge users.",
-              "Technical impact: Replit's platform combined with Visa's infrastructure could become the default payment layer for agentic workflows, simplifying compliance and integration."
-            ],
-            "whatToTry": {
-              "description": "Explore Replit's agentic features and Visa's developer APIs to prototype a payment-enabled AI agent. Start by building a simple agent that can accept payments or initiate transactions using Replit's environment and Visa's sandbox.",
-              "note": "Focus on use cases like AI-powered checkout assistants or subscription management agents to capitalize on this trend early."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-xoup7a",
-                "title": "Visa invests in Replit to power agentic payments for developers",
-                "url": "https://techcrunch.com/2026/05/28/visa-invests-in-replit-to-power-agentic-payments-for-developers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-xoup7a-0",
-                "label": "Replit",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-xoup7a-1",
-                "label": "Visa",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-xoup7a-2",
-                "label": "Agentic Payments",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 14:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779987940461-5rv3ii",
-            "title": "Sesame launches iOS app for natural conversational AI",
-            "tldr": "Sesame, founded by Oculus alumni, released an iOS app featuring conversational AI agents that aim for human-like dialogue. This signals a shift toward more natural voice interfaces, which could impact how founders design user interactions.",
-            "whyItMatters": [
-              "Business impact: Raises the bar for user expectations in conversational AI, potentially driving demand for more natural voice interfaces in products.",
-              "Technical impact: Demonstrates progress in real-time, low-latency dialogue systems, which may influence API design and model selection for voice-enabled apps."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Sesame's app to benchmark its interaction quality against your own AI voice agents. Note latency, turn-taking, and emotional tone to identify gaps in your product's user experience.",
-              "note": "Consider testing with a diverse set of users to capture feedback on naturalness and engagement."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-5rv3ii",
-                "title": "Sesame, the conversational AI startup from Oculus founders, launches its iOS app",
-                "url": "https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-5rv3ii-0",
-                "label": "Sesame",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-5rv3ii-1",
-                "label": "Conversational AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-5rv3ii-2",
-                "label": "Voice Interfaces",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:35:43 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779987940461-polh3h",
-            "title": "Apple's Siri App Leak Signals Major AI Push vs ChatGPT",
-            "tldr": "Leaked renders reveal Apple is building a standalone Siri app for iOS 27 with a redesigned AI-powered experience, signaling a direct challenge to ChatGPT and other AI assistants. This matters because it could reshape the mobile AI assistant market and create new integration opportunities for developers.",
-            "whyItMatters": [
-              "Business impact: Apple's entry with a dedicated Siri app could disrupt the AI assistant market, forcing competitors to adapt and creating new distribution channels for AI-powered features on iOS.",
-              "Technical impact: Developers may need to prepare for new Siri APIs and integration patterns, potentially changing how AI features are built for Apple's ecosystem."
-            ],
-            "whatToTry": {
-              "description": "Start prototyping AI features that could integrate with a standalone Siri app, such as custom actions or voice-driven workflows, and monitor Apple's developer announcements for beta access to new Siri APIs.",
-              "note": "Focus on privacy-preserving designs since Apple prioritizes on-device processing, which may limit cloud-based AI capabilities."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-polh3h",
-                "title": "Sneak peek at new Siri app reveals Apple’s plans to take on ChatGPT and more",
-                "url": "https://techcrunch.com/2026/05/28/sneak-peek-at-new-siri-app-reveals-apples-plans-to-take-on-chatgpt-and-more/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-polh3h-0",
-                "label": "Apple",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-polh3h-1",
-                "label": "Siri",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-polh3h-2",
-                "label": "AI Assistant",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 14:45:13 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779987940461-lczb1p",
-            "title": "RSI: The New AGI That's Just as Elusive",
-            "tldr": "Multiple AI labs are pivoting to recursive self-improvement (RSI) as the next grand challenge, but early attempts show it's as hard to define and achieve as AGI was. This signals a shift in research focus that could reshape AI development priorities.",
-            "whyItMatters": [
-              "Founders should monitor RSI progress as it could lead to step-change improvements in model capabilities, affecting product roadmaps and competitive dynamics.",
-              "The difficulty in pinning down RSI means near-term breakthroughs are unlikely, but the research direction may influence funding and talent allocation in the AI ecosystem."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's current self-improvement mechanisms (e.g., fine-tuning loops, RLHF iterations) and consider if they could be extended with simple recursive feedback cycles—like using model outputs to generate training data for targeted improvements.",
-              "note": "Start small: test on a narrow task before scaling to avoid instability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-lczb1p",
-                "title": "RSI is the new AGI — and it’s just as hard to pin down",
-                "url": "https://techcrunch.com/2026/05/28/rsi-is-the-new-agi-and-its-just-as-hard-to-pin-down/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-lczb1p-0",
-                "label": "RSI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-lczb1p-1",
-                "label": "AGI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-lczb1p-2",
-                "label": "AI labs",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 14:30:17 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1779987940461-c388vl",
-            "title": "Databricks co-founder: Enterprise AI deals die on safety, not hype",
-            "tldr": "At TechCrunch Disrupt 2026, Databricks' co-founder highlighted that enterprise AI deals now fail due to safety and deployment concerns, not lack of excitement. This signals a shift from proof-of-concept to production readiness.",
-            "whyItMatters": [
-              "Founders must prioritize safety and compliance in their AI products to close enterprise deals, as buyers are now risk-averse.",
-              "Technical teams need to focus on robust deployment frameworks, explainability, and governance to meet enterprise standards."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for enterprise safety gaps: implement guardrails, bias detection, and audit trails. Prepare a deployment readiness checklist for enterprise buyers.",
-              "note": "Start with a small pilot to demonstrate safety and compliance before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1779987940461-c388vl",
-                "title": "At TechCrunch Disrupt 2026: Databricks’ co-founder on what kills enterprise AI deals",
-                "url": "https://techcrunch.com/2026/05/28/techcrunch-disrupt-2026-databricks-co-founder-on-what-kills-enterprise-ai-deals/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-c388vl-0",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-c388vl-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1779987940461-c388vl-2",
-                "label": "Databricks",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 14:30:00 +0000"
-          },
-          {
-            "id": "hn-48307887",
-            "title": "Frontier LLMs Disagree on Fact-Checks: A Reliability Red Flag",
-            "tldr": "A study shows top LLMs (GPT-4, Claude, Gemini) disagree on 20-30% of real-world fact-checks, highlighting reliability issues for AI products relying on factual accuracy. This is trending on HackerNews with 440 points.",
-            "whyItMatters": [
-              "For founders building AI products that depend on factual outputs (e.g., search, content generation, decision support), this inconsistency undermines trust and requires robust validation layers.",
-              "Technical teams must implement fact-checking pipelines or confidence scoring to mitigate disagreement risks, especially in high-stakes applications."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's factual consistency by running a sample of real-world queries through multiple LLMs and measuring disagreement rates. Use this to design fallback mechanisms or human-in-the-loop checks for critical outputs.",
-              "note": "Focus on domains where accuracy is non-negotiable (e.g., medical, legal, financial) to prioritize validation efforts."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48307887",
-                "title": "Disagreement Among Frontier LLMs on Real-World Fact-Checks",
-                "url": "https://lenz.io/research/llm-disagreement",
-                "domain": "lenz.io",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48307887-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48307887-1",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48307887-2",
-                "label": "Fact-Checking",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-05-28T12:20:19Z"
-          },
-          {
-            "id": "rss-wired-ai-1779987940454-zbx56g",
-            "title": "New Moms Face AI-Rewired Coding Jobs on Return",
-            "tldr": "A Wired report highlights how new mothers returning from parental leave encounter a software development landscape transformed by AI tools, creating both challenges and opportunities for re-skilling and adaptation.",
-            "whyItMatters": [
-              "Highlights a growing workforce gap: founders must consider onboarding and training for employees who missed rapid AI tool adoption, or risk losing experienced talent.",
-              "Signals a shift in developer productivity expectations: returning employees may need structured AI upskilling to match current workflows."
-            ],
-            "whatToTry": {
-              "description": "Create a 're-entry AI bootcamp' for employees returning from leave: a 1-2 week program covering current AI coding assistants (e.g., GitHub Copilot, Cursor), prompt engineering basics, and updated code review practices.",
-              "note": "Pair returning employees with an AI-savvy mentor for the first month to accelerate adaptation and reduce frustration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1779987940454-zbx56g",
-                "title": "New Moms Are Returning to Coding Jobs Radically Reshaped by AI",
-                "url": "https://www.wired.com/story/women-parental-leave-return-office-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1779987940454-zbx56g-0",
-                "label": "Workforce",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779987940454-zbx56g-1",
-                "label": "AI Tools",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1779987940454-zbx56g-2",
-                "label": "Productivity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 11:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-05-28-evening",
-        "period": "evening",
-        "date": "2026-05-28",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Anthropic raises $65B, nears $1T valuation ahead of IPO, Anthropic drops Opus 4.8 with Dynamic Workflows for agent swarms, Google I/O 2026: Gemini Omni & 3.5 Flash Unveiled.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1780006557107-oy7uh3",
-            "title": "Anthropic raises $65B, nears $1T valuation ahead of IPO",
-            "tldr": "Anthropic closed a $65B Series H at a $965B valuation, signaling its likely final private round before an IPO. This massive raise underscores the AI arms race and may reshape competitive dynamics for founders building on or against Claude.",
-            "whyItMatters": [
-              "Business impact: Anthropic's IPO will create a new public AI giant, potentially driving up costs for API access and increasing competition for talent and compute resources.",
-              "Technical impact: The funding will accelerate Claude model development, likely leading to more capable and cheaper models, raising the bar for AI product differentiation."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your dependency on Anthropic's API and consider diversifying across multiple model providers (e.g., OpenAI, Google, open-source) to hedge against pricing changes or service disruptions post-IPO.",
-              "note": "Start testing alternatives now to avoid lock-in; monitor Anthropic's IPO filing for clues on future pricing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-oy7uh3",
-                "title": "Anthropic raises $65 billion, nears $1T valuation ahead of IPO",
-                "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-oy7uh3-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-oy7uh3-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-oy7uh3-2",
-                "label": "IPO",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 18:52:51 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557107-lm1jek",
-            "title": "Anthropic drops Opus 4.8 with Dynamic Workflows for agent swarms",
-            "tldr": "Anthropic released Opus 4.8, featuring a new 'Dynamic Workflows' tool that orchestrates swarms of subagents, enabling complex multi-agent coordination out of the box. This is a major shift for building scalable AI systems.",
-            "whyItMatters": [
-              "Business impact: Reduces engineering overhead for multi-agent systems, allowing faster deployment of complex workflows like customer support escalation or automated research pipelines.",
-              "Technical impact: Dynamic Workflows abstracts away manual agent orchestration, making it easier to build robust, scalable agent swarms without custom infrastructure."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Dynamic Workflows for your next multi-agent project by prototyping a simple swarm (e.g., a research agent that delegates to subagents for web scraping and summarization) using the Opus 4.8 API. Compare its performance and latency against your current orchestration approach.",
-              "note": "Start with low-stakes tasks to test reliability and cost before scaling to production."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-lm1jek",
-                "title": "Anthropic releases Opus 4.8 with new ‘dynamic workflow’ tool",
-                "url": "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-lm1jek-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-lm1jek-1",
-                "label": "Dynamic Workflows",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-lm1jek-2",
-                "label": "Agent swarms",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 17:00:09 +0000"
-          },
-          {
-            "id": "rss-google-ai-blog-1780006557347-pjffud",
-            "title": "Google I/O 2026: Gemini Omni & 3.5 Flash Unveiled",
-            "tldr": "Google announced Gemini Omni, a multimodal model, and Gemini 3.5 Flash, a faster variant, at I/O 2026. This signals major platform shifts for AI product builders.",
-            "whyItMatters": [
-              "Business impact: New models enable richer user experiences (e.g., real-time multimodal interactions) and potential cost reductions with Flash variants, affecting product roadmaps and competitive positioning.",
-              "Technical impact: Developers need to evaluate Gemini Omni for multimodal tasks and Gemini 3.5 Flash for latency-sensitive applications, possibly replacing existing models."
-            ],
-            "whatToTry": {
-              "description": "Review the Gemini Omni and 3.5 Flash documentation on Google AI Studio to test their APIs for your use case, focusing on multimodal inputs and speed benchmarks.",
-              "note": "Start with a small prototype to assess latency and cost before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1780006557347-pjffud",
-                "title": "Catch up on 12 major I/O 2026 moments",
-                "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1780006557347-pjffud-0",
-                "label": "Gemini Omni",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1780006557347-pjffud-1",
-                "label": "Gemini 3.5 Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1780006557347-pjffud-2",
-                "label": "Google I/O",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557106-7i86n6",
-            "title": "Internet rebuilt for AI agents: AWS, Cloudflare lead shift",
-            "tldr": "Major cloud providers are redesigning infrastructure for machine-to-machine traffic as AI agents scale, signaling a fundamental shift from human-centric to agent-centric internet architecture.",
-            "whyItMatters": [
-              "Founders building AI agents must anticipate and adapt to infrastructure changes that prioritize low-latency, high-throughput machine interactions over human browsing patterns.",
-              "New API-first, agent-optimized cloud services will emerge, creating opportunities for startups to build middleware or specialized infrastructure for agent ecosystems."
-            ],
-            "whatToTry": {
-              "description": "Audit your current cloud architecture for agent readiness: evaluate latency, API rate limits, and data routing for machine-to-machine traffic. Consider testing AWS's new agent-optimized services or Cloudflare's AI gateway to reduce overhead.",
-              "note": "Start with a small-scale agent workload to benchmark performance before migrating core services."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557106-7i86n6",
-                "title": "The internet is being rebuilt for machines",
-                "url": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-7i86n6-0",
-                "label": "Cloud Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-7i86n6-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-7i86n6-2",
-                "label": "AWS",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-7i86n6-3",
-                "label": "Cloudflare",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 21:24:01 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557107-fj8zf9",
-            "title": "AI token futures coming to major exchanges",
-            "tldr": "Large exchanges are designing derivative products for AI tokens, treating them as a new commodity class like electricity or bandwidth. This signals growing institutional recognition of AI compute as a tradeable resource, with implications for pricing and access.",
-            "whyItMatters": [
-              "Business impact: Founders may soon hedge compute costs or speculate on token prices, changing financial planning for AI products.",
-              "Technical impact: Standardized token pricing could reduce volatility in API costs and enable more predictable scaling."
-            ],
-            "whatToTry": {
-              "description": "Monitor announcements from major exchanges (e.g., CME, ICE) for AI token futures listings. Start evaluating how your compute budget might benefit from hedging or fixed-price contracts if these products launch.",
-              "note": "This is early-stage; avoid over-committing until liquidity and regulatory clarity emerge."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-fj8zf9",
-                "title": "Just like gold and oil, we’ll soon be able to trade AI token futures",
-                "url": "https://techcrunch.com/2026/05/28/just-like-gold-and-oil-well-soon-be-able-to-trade-ai-token-futures/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-fj8zf9-0",
-                "label": "AI tokens",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-fj8zf9-1",
-                "label": "Commodity trading",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-fj8zf9-2",
-                "label": "Compute economics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 18:32:25 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557107-exrjt1",
-            "title": "Sesame launches iOS app: Conversational AI from Oculus founders",
-            "tldr": "Sesame, founded by Oculus veterans, released its iOS app featuring conversational AI agents that prioritize natural, human-like dialogue over traditional chatbot interactions, signaling a shift toward more immersive voice interfaces.",
-            "whyItMatters": [
-              "Competes with existing voice AI products (e.g., OpenAI Voice Mode, Character.AI) by emphasizing natural conversation flow, potentially raising user expectations for AI interaction quality.",
-              "Founders with Oculus pedigree suggests deep expertise in human-computer interaction, making this a credible contender in the conversational AI space."
-            ],
-            "whatToTry": {
-              "description": "Download the Sesame iOS app and test its conversational AI against your own product's voice interface to benchmark naturalness and latency. Note any unique interaction patterns that could inspire your UX improvements.",
-              "note": "Focus on evaluating turn-taking, interruption handling, and emotional tone—key differentiators for user retention."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-exrjt1",
-                "title": "Sesame, the conversational AI startup from Oculus founders, launches its iOS app",
-                "url": "https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-exrjt1-0",
-                "label": "Sesame",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-exrjt1-1",
-                "label": "Conversational AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-exrjt1-2",
-                "label": "Voice Interface",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:35:43 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1780006557143-ceby1f",
-            "title": "Waymo's Ojai Robotaxi: Chinese-Made EVs Hit US Streets",
-            "tldr": "Waymo is launching its new Chinese-made robotaxi, the Ojai, in California and Arizona, signaling a shift in autonomous vehicle hardware sourcing and potential regulatory implications for AI founders.",
-            "whyItMatters": [
-              "Business impact: Waymo's use of Chinese EVs could lower costs and accelerate deployment, but may face geopolitical scrutiny; founders should monitor supply chain and regulatory risks.",
-              "Technical impact: The Ojai likely integrates Waymo's latest self-driving stack, offering a reference for AI-hardware co-design in autonomous systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's hardware dependencies: if you rely on imported components (especially from China), map out alternative suppliers and assess trade policy risks to avoid disruptions.",
-              "note": "Consider diversifying manufacturing or partnering with domestic EV makers to future-proof your supply chain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1780006557143-ceby1f",
-                "title": "Here Comes Ojai, Waymo’s New Chinese-Made Robotaxi",
-                "url": "https://www.wired.com/story/here-comes-ojai-waymos-new-chinese-made-robotaxi/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1780006557143-ceby1f-0",
-                "label": "Waymo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1780006557143-ceby1f-1",
-                "label": "Autonomous Vehicles",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1780006557143-ceby1f-2",
-                "label": "Supply Chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557106-3svbjv",
-            "title": "Asana Acquires StackAI to Boost No-Code Agent Building",
-            "tldr": "Asana acquired StackAI, a no-code agent builder, to integrate AI agents into its workflow platform. This signals a major push by enterprise SaaS to embed agentic AI, making it easier for non-technical teams to automate tasks.",
-            "whyItMatters": [
-              "Business impact: Validates the market for no-code AI agents in enterprise workflows, potentially accelerating adoption among non-technical teams.",
-              "Technical impact: Shows that agent-building platforms are becoming acquisition targets, suggesting a consolidation trend that could affect tooling choices for founders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can integrate with or compete against enterprise workflow platforms like Asana. Consider building no-code interfaces for your agents to target business users directly.",
-              "note": "This acquisition may increase competition for standalone agent builders, so differentiate by focusing on niche verticals or advanced capabilities."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557106-3svbjv",
-                "title": "Asana acquires no-code agent-builder StackAI",
-                "url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-3svbjv-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557106-3svbjv-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 20:06:07 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557107-9042b7",
-            "title": "Anthropic-SpaceX deal: Short-term lease or long-term lock-in?",
-            "tldr": "Elon Musk claims xAI's compute deal with Anthropic is short-term and cancellable, but SpaceX's S-1 filing shows payments through May 2029. This highlights the importance of contract clarity in AI compute partnerships.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products must scrutinize compute contracts for hidden long-term commitments or cancellation terms that could affect flexibility and costs.",
-              "Technical impact: Access to massive compute (via SpaceX) is critical for training large models; ambiguous lease terms could disrupt scaling plans or create vendor lock-in risks."
-            ],
-            "whatToTry": {
-              "description": "Review your current compute contracts for termination clauses, payment schedules, and renewal terms. Negotiate clear exit options and avoid multi-year commitments without performance guarantees.",
-              "note": "Consider using short-term cloud credits or spot instances for experimentation before locking into long-term deals."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-9042b7",
-                "title": "How long is Anthropic’s lease with SpaceX? Opinions vary",
-                "url": "https://techcrunch.com/2026/05/28/how-long-is-anthropics-lease-with-spacex-opinions-vary/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-9042b7-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-9042b7-1",
-                "label": "Compute",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-9042b7-2",
-                "label": "Contract",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 15:36:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1780006557107-8p5q67",
-            "title": "Apple's Siri App Leak: New AI Strategy to Rival ChatGPT",
-            "tldr": "Leaked renders reveal Apple's iOS 27 overhaul with a standalone Siri app and redesigned experience, signaling a major push to compete with ChatGPT and other AI assistants. This matters for founders as it could reshape the AI assistant market and create new integration opportunities.",
-            "whyItMatters": [
-              "Business impact: Apple's entry with a dedicated Siri app could disrupt the AI assistant market, forcing competitors to adapt and opening up new distribution channels for AI services via Apple's ecosystem.",
-              "Technical impact: The standalone app suggests deeper AI integration into iOS, potentially offering new APIs or frameworks for developers to build on top of Siri's capabilities."
-            ],
-            "whatToTry": {
-              "description": "Start prototyping integrations with Apple's ecosystem (e.g., SiriKit) to prepare for the new Siri app's launch. Explore how your AI product could leverage Siri as a frontend or trigger for user interactions.",
-              "note": "Focus on privacy-preserving features, as Apple will likely emphasize on-device processing to differentiate from cloud-based rivals."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1780006557107-8p5q67",
-                "title": "Sneak peek at new Siri app reveals Apple’s plans to take on ChatGPT and more",
-                "url": "https://techcrunch.com/2026/05/28/sneak-peek-at-new-siri-app-reveals-apples-plans-to-take-on-chatgpt-and-more/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-8p5q67-0",
-                "label": "Apple",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-8p5q67-1",
-                "label": "Siri",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780006557107-8p5q67-2",
-                "label": "AI Assistants",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 28 May 2026 14:45:13 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
