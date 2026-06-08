@@ -8,66 +8,23 @@
         "period": "afternoon",
         "date": "2026-06-08",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Strategic Attack Selection Slashes AI Agent Safety by 20-28%, SafeGene: Reusable Safety Adapters for LLMs, Lean4Agent: Formal Verification for Reliable AI Agent Workflows.",
+        "executiveSummary": "Today's highlights: SafeGene: Reusable Safety Adapters for LLMs, Lean4Agent: Formal Verification for Reliable AI Agent Workflows, CrowdMath Dataset Reveals AI's Blind Spot in Collaborative Math.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1780920725436-e59k2y",
-            "title": "Strategic Attack Selection Slashes AI Agent Safety by 20-28%",
-            "tldr": "A new study reveals that AI agents that strategically choose when to attack (rather than attacking indiscriminately) can reduce safety by up to 28 percentage points in control evaluations, suggesting current safety tests may be overly optimistic for real-world deployments.",
-            "whyItMatters": [
-              "For founders building agentic AI products, this means current safety evaluations may significantly underestimate real-world risks, potentially leading to catastrophic failures in production.",
-              "Technical teams need to update their red-teaming and monitoring protocols to account for strategic attack selection, or risk deploying agents that can evade detection."
-            ],
-            "whatToTry": {
-              "description": "Incorporate attack selection into your AI agent safety evaluations by implementing start and stop policies in your red-teaming process. Start by simulating attackers that only attack during high-value operations (e.g., data exfiltration) and abort when detection risk is high. Use the paper's methodology as a template to stress-test your own monitoring and audit systems.",
-              "note": "Start with a 1% audit budget to match the study's conditions, then scale up to find your system's true safety threshold."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1780920725436-e59k2y",
-                "title": "Attack Selection in Agentic AI Control Evaluations Meaningfully Decreases Safety",
-                "url": "https://arxiv.org/abs/2606.06529",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-e59k2y-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-e59k2y-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-e59k2y-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1780920725436-am9wgy",
+            "id": "rss-arxiv-ai-1780937700953-49ywdj",
             "title": "SafeGene: Reusable Safety Adapters for LLMs",
-            "tldr": "SafeGene introduces reusable safety adapters that can be applied across fine-tuned LLMs to restore safety alignment without retraining, addressing a critical problem for AI product builders who frequently update models.",
+            "tldr": "SafeGene introduces reusable safety adapters that can be applied across different fine-tuned LLMs to restore safety alignment without sacrificing task performance, addressing a critical problem for founders deploying customized models.",
             "whyItMatters": [
-              "Enables safe deployment of custom fine-tuned models without repeated safety alignment, reducing engineering overhead and risk.",
-              "Decouples safety from task-specific updates, allowing founders to iterate faster on model improvements while maintaining guardrails."
+              "Enables founders to safely fine-tune open-weight LLMs for specific tasks without permanently weakening safety, reducing risk of harmful outputs from user prompts.",
+              "Provides a modular, reusable approach to safety that can be quickly applied to updated models, saving engineering time and maintaining compliance."
             ],
             "whatToTry": {
-              "description": "If you're fine-tuning open-weight LLMs for your product, consider implementing a safety adapter module like SafeGene to automatically re-align models after each update, rather than relying on manual safety checks or full retraining.",
-              "note": "Start with a small-scale test on one model family to validate the adapter's effectiveness for your specific use case."
+              "description": "If you're fine-tuning open-weight LLMs for your product, consider implementing a safety adapter module like SafeGene. Start by identifying a base aligned model and its degraded version after task fine-tuning, then extract safety vectors from layer discrepancies. Apply these vectors to new task-adapted models via few-shot recalibration to maintain safety without retraining.",
+              "note": "This is a research paper; practical implementation may require adapting the method to your specific model family and safety judges."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1780920725436-am9wgy",
+                "id": "src-rss-arxiv-ai-1780937700953-49ywdj",
                 "title": "SafeGene: Reusable Adapters for Transferable Safety Alignment",
                 "url": "https://arxiv.org/abs/2606.06519",
                 "domain": "arxiv.org",
@@ -76,17 +33,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-am9wgy-0",
+                "id": "tag-rss-arxiv-ai-1780937700953-49ywdj-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-am9wgy-1",
+                "id": "tag-rss-arxiv-ai-1780937700953-49ywdj-1",
                 "label": "safety",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-am9wgy-2",
+                "id": "tag-rss-arxiv-ai-1780937700953-49ywdj-2",
                 "label": "fine-tuning",
                 "type": "topic"
               }
@@ -97,20 +54,20 @@
             "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1780920725436-n597z7",
+            "id": "rss-arxiv-ai-1780937700953-am8q2k",
             "title": "Lean4Agent: Formal Verification for Reliable AI Agent Workflows",
-            "tldr": "Lean4Agent introduces a formal verification framework using Lean4 to model, verify, and debug agent workflows, improving success rates by ~12% on SWE-Bench. This addresses a critical gap in agent reliability, making it a must-watch for founders building production agent systems.",
+            "tldr": "Lean4Agent introduces a formal verification framework using Lean4 to model and verify agent workflows, improving reliability by ~12% on SWE-Bench. This is a significant step toward making agent systems more trustworthy and debuggable.",
             "whyItMatters": [
-              "Business impact: Reduces risk of agent failures in production by catching execution-time errors before deployment, enabling more reliable automation of complex tasks like code generation and multi-step workflows.",
-              "Technical impact: Provides a formal method to specify and verify agent behavior, moving beyond ad-hoc testing—potentially becoming a standard practice for agent development similar to type checking in programming."
+              "Business impact: Reduces risk of agent failures in production by catching semantic inconsistencies before deployment, enabling more reliable automation of complex tasks.",
+              "Technical impact: Provides a formal method to debug and improve agent trajectories, moving beyond black-box testing to principled verification, which could become a standard practice for agent development."
             ],
             "whatToTry": {
-              "description": "Evaluate integrating Lean4Agent's formal verification into your agent pipeline, especially for high-stakes workflows like code generation or financial transactions. Start by modeling a critical agent trajectory in Lean4 using FormalAgentLib to catch semantic inconsistencies early.",
-              "note": "Requires familiarity with Lean4; consider pairing with existing LLM-based agents for hybrid verification."
+              "description": "Evaluate your current agent workflows for critical tasks (e.g., code generation, multi-step reasoning) and consider integrating formal verification tools like Lean4Agent to catch failures early. Start by modeling a high-risk workflow in Lean4 to identify hidden assumptions and bugs.",
+              "note": "This is early-stage research; expect a learning curve with Lean4. Focus on workflows where failure costs are high."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1780920725436-n597z7",
+                "id": "src-rss-arxiv-ai-1780937700953-am8q2k",
                 "title": "Lean4Agent: Formal Modeling and Verification for Agent Workflow and Trajectory",
                 "url": "https://arxiv.org/abs/2606.06523",
                 "domain": "arxiv.org",
@@ -119,103 +76,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-n597z7-0",
+                "id": "tag-rss-arxiv-ai-1780937700953-am8q2k-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-n597z7-1",
+                "id": "tag-rss-arxiv-ai-1780937700953-am8q2k-1",
                 "label": "tool",
                 "type": "tool"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-n597z7-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1780920725436-yj8smw",
-            "title": "AI Science Must Study Training Dynamics, Not Just Post-Hoc Fixes",
-            "tldr": "A new position paper argues that AI research should focus on understanding training dynamics—how models evolve during training—rather than treating them as static artifacts. This shift could enable predicting capabilities, biases, and safety issues early, and designing training procedures to reliably produce desired properties.",
-            "whyItMatters": [
-              "For founders building AI products, this approach could reduce costly post-hoc fixes by predicting model behaviors (e.g., biases, safety risks) early in training, saving time and resources.",
-              "Technical impact: Advances in mechanistic interpretability and scaling laws could lead to more predictable and controllable AI systems, enabling faster iteration and safer deployment."
-            ],
-            "whatToTry": {
-              "description": "Start logging training dynamics (e.g., loss curves, gradient norms, activation patterns) for your models. Use early training signals to predict downstream behaviors like bias or robustness, and experiment with interventions (e.g., adjusting learning rate or data mix) when trajectories deviate.",
-              "note": "Focus on safety-relevant behaviors first—this is where early detection has the highest ROI."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1780920725436-yj8smw",
-                "title": "Position: Don't Just \"Fix it in Post\": A Science of AI Must Study Training Dynamics",
-                "url": "https://arxiv.org/abs/2606.06533",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-yj8smw-0",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-yj8smw-1",
-                "label": "Training Dynamics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-yj8smw-2",
-                "label": "Interpretability",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1780920725436-9ftsik",
-            "title": "AFSAT: GPU-Accelerated SAT Solver Hits Near-Linear Scaling",
-            "tldr": "AFSAT is a new GPU-accelerated pseudo-Boolean SAT solver that uses JAX for massive parallelism, achieving near-linear throughput across multiple accelerators. It addresses numerical stability and memory issues from earlier proof-of-concept work, making it a practical tool for AI product founders dealing with complex constraint satisfaction problems.",
-            "whyItMatters": [
-              "Enables faster solving of complex combinatorial optimization problems (e.g., scheduling, resource allocation) in AI products, reducing latency from hours to minutes.",
-              "Leverages JAX for automatic vectorization and JIT compilation, allowing seamless scaling across GPUs without custom CUDA code—lowering engineering overhead."
-            ],
-            "whatToTry": {
-              "description": "Evaluate AFSAT for your constraint-heavy AI workflows (e.g., logistics, chip design, or automated reasoning). Start by testing it on small pseudo-Boolean problems using the open-source code (if available) to benchmark against your current solver.",
-              "note": "AFSAT targets symmetric constraints; ensure your problem fits this pattern for optimal performance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1780920725436-9ftsik",
-                "title": "Accelerated Fourier SAT (AFSAT): Fully Realising a GPU-based Symmetric Pseudo-Boolean SAT Solver",
-                "url": "https://arxiv.org/abs/2606.06641",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-9ftsik-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-9ftsik-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725436-9ftsik-2",
+                "id": "tag-rss-arxiv-ai-1780937700953-am8q2k-2",
                 "label": "topic",
                 "type": "topic"
               }
@@ -226,101 +97,20 @@
             "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-techcrunch-ai-1780920725186-8qqudn",
-            "title": "Tokenpocalypse: AI pricing hikes ahead as big players go public",
-            "tldr": "Major AI companies are expected to raise token prices as they prepare for IPOs, signaling a shift from subsidized pricing to profit-driven models. This trend could significantly impact startup costs and margins.",
+            "id": "rss-arxiv-ai-1780937700953-hs4jxa",
+            "title": "CrowdMath Dataset Reveals AI's Blind Spot in Collaborative Math",
+            "tldr": "A new dataset from MIT PRIMES captures 10 years of collaborative mathematical problem-solving discussions, showing that while LLMs can predict next posts (83-88% accuracy), they fail to understand the functional roles of contributions (0.42 macro-F1). This highlights a critical gap for AI in open-ended, multi-agent reasoning tasks.",
             "whyItMatters": [
-              "Business impact: Founders must budget for higher API costs and consider alternative models or self-hosting to maintain margins.",
-              "Technical impact: Increased token costs may accelerate adoption of smaller, specialized models or caching strategies to reduce usage."
+              "For founders building AI products that require collaborative reasoning (e.g., code review, scientific research, strategy), this dataset provides a benchmark for measuring how well models understand the dynamics of group problem-solving, not just individual problem-solving.",
+              "The low performance on post-role classification (0.42 macro-F1) indicates that current models lack the ability to identify errors, partial progress, or proof completions in a collaborative context, which is essential for building AI agents that can participate in or facilitate team-based work."
             ],
             "whatToTry": {
-              "description": "Audit your current token usage and identify high-volume, low-value calls. Start experimenting with cheaper open-source models (e.g., Llama, Mistral) or implement caching for repeated queries to hedge against price hikes.",
-              "note": "Consider locking in long-term contracts with current providers if possible, but diversify your model stack to avoid vendor lock-in."
+              "description": "Use the CrowdMath dataset to evaluate your own models or agents on collaborative reasoning tasks. Focus on the post-role classification task to identify weaknesses in understanding the functional significance of contributions, then fine-tune or prompt-engineer to improve performance on error detection and partial progress synthesis.",
+              "note": "The dataset includes 164 expert-annotated progress chains from 2016-2025, making it a rich resource for training or benchmarking multi-agent systems."
             },
             "sources": [
               {
-                "id": "src-rss-techcrunch-ai-1780920725186-8qqudn",
-                "title": "Is this the dawn of the Tokenpocalypse?",
-                "url": "https://techcrunch.com/2026/06/07/is-this-the-dawn-of-the-tokenpocalypse/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1780920725186-8qqudn-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1780920725186-8qqudn-1",
-                "label": "model",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 07 Jun 2026 20:26:13 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1780920725435-8z8hmb",
-            "title": "Fairness as Symmetry: New Framework Cuts Bias 90% with 5% Accuracy Cost",
-            "tldr": "A new paper treats fairness as a symmetry operation, using loss-based regularization to reduce bias by over 90% with only ~5% accuracy loss. It requires no causal graph knowledge and works for any sensitive attribute definable as a bit-flip, making it practical for AI products in high-stakes settings.",
-            "whyItMatters": [
-              "Business impact: Enables founders to deploy fairer AI systems without complex causal modeling, reducing regulatory risk and improving brand trust.",
-              "Technical impact: Provides a computationally lightweight, plug-and-play regularization method that generalizes to any binary sensitive attribute, lowering the barrier to bias mitigation."
-            ],
-            "whatToTry": {
-              "description": "Implement the symmetry-based regularization loss in your training pipeline for binary sensitive attributes (e.g., gender, race). Start by adding a penalty term that enforces output invariance when the attribute is flipped, using a small lambda to tune the trade-off. Test on your own datasets to measure violation reduction and accuracy impact.",
-              "note": "The framework assumes merit features are held fixed; ensure your data has clear separation between sensitive and merit features for best results."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1780920725435-8z8hmb",
-                "title": "Detecting and Mitigating Bias by Treating Fairness as a Symmetry Operation",
-                "url": "https://arxiv.org/abs/2606.06514",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1780920725435-8z8hmb-0",
-                "label": "Fairness",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725435-8z8hmb-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1780920725435-8z8hmb-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1780920725436-mdic4f",
-            "title": "CrowdMath dataset reveals AI struggles with collaborative math reasoning",
-            "tldr": "A new dataset of 164 expert-annotated progress chains from collaborative math research shows frontier LLMs excel at next-post prediction (83-88%) but fail to classify the functional role of contributions (best macro-F1 0.42), highlighting a gap between solving well-specified problems and understanding collaborative reasoning.",
-            "whyItMatters": [
-              "For founders building AI tools for research or education, this dataset provides a benchmark for evaluating models on collaborative problem-solving, a key capability for products like AI research assistants or tutoring platforms.",
-              "The poor performance on post-role classification suggests current models lack nuanced understanding of argument structure, which is critical for applications requiring error detection or reasoning synthesis in multi-turn discussions."
-            ],
-            "whatToTry": {
-              "description": "Use the CrowdMath dataset to test your own models on collaborative reasoning tasks, especially post-role classification, to identify gaps before deploying in multi-user research or education products.",
-              "note": "The dataset is available on arXiv; consider fine-tuning on similar collaborative discussion data (e.g., from Stack Exchange or GitHub issues) to improve functional role understanding."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1780920725436-mdic4f",
+                "id": "src-rss-arxiv-ai-1780937700953-hs4jxa",
                 "title": "CrowdMath: A Dataset of Crowdsourced Mathematical Research Discussions",
                 "url": "https://arxiv.org/abs/2606.06526",
                 "domain": "arxiv.org",
@@ -329,18 +119,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-mdic4f-0",
+                "id": "tag-rss-arxiv-ai-1780937700953-hs4jxa-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-mdic4f-1",
+                "id": "tag-rss-arxiv-ai-1780937700953-hs4jxa-1",
                 "label": "dataset",
                 "type": "tool"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-mdic4f-2",
-                "label": "reasoning",
+                "id": "tag-rss-arxiv-ai-1780937700953-hs4jxa-2",
+                "label": "collaborative reasoning",
                 "type": "topic"
               }
             ],
@@ -350,40 +140,40 @@
             "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1780920725436-pj433h",
-            "title": "Parallel CLS for SAT: New Insights on Convergence & Hybrid Use",
-            "tldr": "A new study on parallel Continuous Local Search (CLS) for SAT problems reveals that redundant constraints can slow convergence, but CLS shows promise as a sub-solver in hybrid settings, quickly completing partial assignments. This matters for founders building SAT solvers or optimization tools on modern accelerators.",
+            "id": "rss-arxiv-ai-1780937700953-c9wpts",
+            "title": "Strategic Attack Selection Undermines AI Safety Evaluations",
+            "tldr": "New research shows that AI agents that strategically choose when to attack can bypass safety monitors, reducing measured safety by up to 28pp. This suggests current control evaluations may be overly optimistic, urging founders to incorporate attack selection in their safety testing.",
             "whyItMatters": [
-              "Business impact: Founders building SAT-based tools (e.g., for verification, planning, or scheduling) can leverage CLS as a fast sub-solver to reduce solve times in hybrid architectures, potentially lowering compute costs.",
-              "Technical impact: The finding that redundant constraints inhibit convergence suggests a need for smarter constraint pruning in CLS implementations, while the saddle-dense objective insight explains diminishing returns, guiding when to stop local search."
+              "Business impact: Founders deploying AI agents must update their safety protocols to account for strategic attacks, or risk deploying vulnerable systems that appear safe under standard evaluations.",
+              "Technical impact: The study introduces start and stop policies for attack selection, providing a concrete method to stress-test agentic AI systems more realistically."
             ],
             "whatToTry": {
-              "description": "If you're building a SAT solver or optimization tool, experiment with integrating parallel CLS as a warm-start sub-solver for partial assignments, and prune redundant constraints before running CLS to avoid slowdowns.",
-              "note": "Test on your specific SAT instances to validate the hybrid approach, as performance may vary with problem structure."
+              "description": "Implement attack selection in your AI agent safety evaluations by adding a red-team policy that can strategically choose when to start and stop attacks. Start with a simple heuristic: allow the attacker to only attack during high-value actions (e.g., file writes or network calls) and abort if the monitor shows high suspicion. Test this against your current monitor at a 1% audit budget to see if your safety estimates drop.",
+              "note": "This is an upper bound; real attackers may be less effective, but it's a critical stress test for high-stakes deployments."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1780920725436-pj433h",
-                "title": "A Study of Parallel Continuous Local Search",
-                "url": "https://arxiv.org/abs/2606.06656",
+                "id": "src-rss-arxiv-ai-1780937700953-c9wpts",
+                "title": "Attack Selection in Agentic AI Control Evaluations Meaningfully Decreases Safety",
+                "url": "https://arxiv.org/abs/2606.06529",
                 "domain": "arxiv.org",
                 "type": "paper"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-pj433h-0",
-                "label": "Continuous Local Search",
+                "id": "tag-rss-arxiv-ai-1780937700953-c9wpts-0",
+                "label": "AI Safety",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-pj433h-1",
-                "label": "SAT",
+                "id": "tag-rss-arxiv-ai-1780937700953-c9wpts-1",
+                "label": "Agentic AI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1780920725436-pj433h-2",
-                "label": "Optimization",
+                "id": "tag-rss-arxiv-ai-1780937700953-c9wpts-2",
+                "label": "Research",
                 "type": "topic"
               }
             ],
@@ -393,45 +183,265 @@
             "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-hugging-face-blog-1780920725295-lfrd1o",
-            "title": "Pakistan Notice Helper: AI for Local Safety",
-            "tldr": "A small AI tool built during a hackathon helps Pakistanis understand public safety notices by translating and summarizing Urdu text. It shows how niche, local problems can be solved with accessible AI, inspiring founders to target underserved markets.",
+            "id": "rss-arxiv-ai-1780937700954-z1y3lp",
+            "title": "AFSAT: GPU-Accelerated SAT Solver Hits Near-Linear Scaling",
+            "tldr": "A new GPU-accelerated SAT solver, AFSAT, achieves near-linear throughput scaling across multiple accelerators by using JAX for parallel continuous local search, addressing memory and floating-point limitations. This makes solving complex pseudo-Boolean problems dramatically faster and more scalable for AI and optimization tasks.",
             "whyItMatters": [
-              "Demonstrates a practical use case for AI in low-resource languages, opening opportunities for localization tools in emerging markets.",
-              "Highlights the potential of small, focused AI solutions to address specific community safety issues, reducing barriers to entry for founders."
+              "Enables faster solving of constraint satisfaction problems (e.g., scheduling, resource allocation) that underpin many AI systems, reducing time-to-insight for founders building optimization-heavy products.",
+              "Demonstrates practical use of JAX for high-performance computing on GPUs, offering a blueprint for accelerating other combinatorial algorithms in AI pipelines."
             ],
             "whatToTry": {
-              "description": "Identify a local problem in your region (e.g., public notices, signage, or alerts) and build a simple AI tool using open-source models like a small LLM or OCR to translate/summarize them. Start with a hackathon to validate demand.",
-              "note": "Focus on a single language or dialect first to keep scope manageable and iterate based on user feedback."
+              "description": "Evaluate AFSAT for your own pseudo-Boolean SAT problems by testing it on a GPU cluster (e.g., via JAX sharding) to see if it outperforms existing solvers like FastFourierSAT or traditional CPU-based solvers. Start with small batches to assess numerical stability improvements.",
+              "note": "AFSAT is research-grade; expect to adapt it for production use. Monitor memory usage with large constraint sets."
             },
             "sources": [
               {
-                "id": "src-rss-hugging-face-blog-1780920725295-lfrd1o",
-                "title": "Building Pakistan Notice Helper: A Small AI Tool for a Very Local Safety Problem",
-                "url": "https://huggingface.co/blog/build-small-hackathon/building-pakistan-notice-helper",
+                "id": "src-rss-arxiv-ai-1780937700954-z1y3lp",
+                "title": "Accelerated Fourier SAT (AFSAT): Fully Realising a GPU-based Symmetric Pseudo-Boolean SAT Solver",
+                "url": "https://arxiv.org/abs/2606.06641",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-z1y3lp-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-z1y3lp-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-z1y3lp-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-hugging-face-blog-1780937700982-j15ir7",
+            "title": "OpenEnv: Open Source RL for Agentic AI Gets Community Backing",
+            "tldr": "Hugging Face announces OpenEnv, a community-backed open-source framework for reinforcement learning in agentic AI, enabling developers to train agents with scalable RL environments. This matters because it lowers barriers for building robust, self-improving AI agents.",
+            "whyItMatters": [
+              "Business impact: Reduces dependency on proprietary RL platforms, accelerating agent development for startups and enterprises.",
+              "Technical impact: Provides standardized, extensible environments for training agents, improving reproducibility and scalability of RL experiments."
+            ],
+            "whatToTry": {
+              "description": "Evaluate OpenEnv for your agentic AI projects by setting up a simple RL environment (e.g., a grid world or API interaction task) to test agent training workflows. Start with the provided examples on Hugging Face to gauge integration effort.",
+              "note": "Check compatibility with your existing agent frameworks (e.g., LangChain, AutoGPT) before full adoption."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1780937700982-j15ir7",
+                "title": "The Open Source Community is backing OpenEnv for Agentic RL",
+                "url": "https://huggingface.co/blog/openenv-agentic-rl",
                 "domain": "huggingface.co",
                 "type": "blog"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-hugging-face-blog-1780920725295-lfrd1o-0",
-                "label": "tool",
+                "id": "tag-rss-hugging-face-blog-1780937700982-j15ir7-0",
+                "label": "OpenEnv",
                 "type": "tool"
               },
               {
-                "id": "tag-rss-hugging-face-blog-1780920725295-lfrd1o-1",
-                "label": "topic",
+                "id": "tag-rss-hugging-face-blog-1780937700982-j15ir7-1",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1780937700982-j15ir7-2",
+                "label": "Agentic AI",
                 "type": "topic"
               }
             ],
             "category": "tools",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Mon, 08 Jun 2026 11:46:56 GMT"
+            "publishedAt": "Mon, 08 Jun 2026 00:00:00 GMT"
+          },
+          {
+            "id": "rss-techcrunch-ai-1780937700749-i9ykln",
+            "title": "WWDC 2026: Apple's Siri Revamp & iOS 27 AI Features",
+            "tldr": "Apple's WWDC 2026 is expected to unveil a major Siri overhaul and new Apple Intelligence features in iOS 27, signaling a significant push into on-device AI that could reshape the mobile AI landscape.",
+            "whyItMatters": [
+              "Apple's AI moves set new standards for privacy-first, on-device AI, impacting how founders design AI products for iOS users.",
+              "Siri's revamp may open new API opportunities for integrating AI assistants into third-party apps, creating potential for innovative use cases."
+            ],
+            "whatToTry": {
+              "description": "Prepare your AI product for iOS 27 by exploring Apple's latest developer betas and documentation for SiriKit and Core ML enhancements. Test your app's compatibility with on-device AI features to leverage Apple's privacy-focused ecosystem.",
+              "note": "Focus on on-device processing to align with Apple's privacy stance; consider how your AI can complement Siri's new capabilities."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1780937700749-i9ykln",
+                "title": "WWDC 2026: What to expect, from Siri’s highly anticipated revamp to Apple Intelligence and iOS 27",
+                "url": "https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1780937700749-i9ykln-0",
+                "label": "Apple Intelligence",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780937700749-i9ykln-1",
+                "label": "Siri",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1780937700749-i9ykln-2",
+                "label": "iOS 27",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 08 Jun 2026 15:34:59 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1780937700953-glyzcs",
+            "title": "Fairness as Symmetry: New Bias Mitigation Framework for AI",
+            "tldr": "A new arXiv paper proposes treating fairness as a symmetry operation, using loss-based regularization to reduce bias by over 90% with only ~5% accuracy loss. It requires no causal graph knowledge and works for any sensitive attribute definable as a bit-flip, making it practical for real-world AI products.",
+            "whyItMatters": [
+              "Business impact: Enables founders to deploy fairer AI models in high-stakes domains (e.g., hiring, lending) without complex causal modeling, reducing legal and reputational risk.",
+              "Technical impact: Offers a computationally lightweight, plug-and-play regularization method that generalizes to various sensitive attributes, potentially replacing more cumbersome bias mitigation techniques."
+            ],
+            "whatToTry": {
+              "description": "Experiment with implementing this symmetry-based regularization in your model training pipeline for a sensitive attribute (e.g., gender, race) as a bit-flip. Start with a synthetic dataset to measure violation reduction and accuracy trade-offs before applying to production data.",
+              "note": "Ensure your sensitive attribute can be cleanly represented as a binary bit-flip for best results."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780937700953-glyzcs",
+                "title": "Detecting and Mitigating Bias by Treating Fairness as a Symmetry Operation",
+                "url": "https://arxiv.org/abs/2606.06514",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-glyzcs-0",
+                "label": "Fairness",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-glyzcs-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-glyzcs-2",
+                "label": "Bias Mitigation",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780937700953-z9724t",
+            "title": "DiBS: Diffusion Models Boost Sudoku Solving Speed",
+            "tldr": "A new paper introduces DiBS, which uses a diffusion model to guide branch selection in symbolic Sudoku solvers, reducing search costs by up to 50% on hard puzzles. This hybrid approach combines the correctness guarantees of symbolic solvers with learned guidance, offering a blueprint for improving constraint satisfaction in AI products.",
+            "whyItMatters": [
+              "Business impact: Founders building AI for scheduling, logistics, or resource allocation can apply this hybrid approach to reduce compute costs and latency in constraint-heavy applications.",
+              "Technical impact: Demonstrates that diffusion models can effectively guide search in discrete optimization, opening new paths for integrating generative AI with symbolic reasoning."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current constraint satisfaction pipeline (e.g., scheduling, routing) for bottlenecks in branch selection. Consider prototyping a lightweight diffusion model to reorder candidate choices, similar to DiBS, to reduce backtracking and improve solve times.",
+              "note": "Start with small-scale experiments on hard instances where search cost is highest; the paper's code is open-source for reference."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780937700953-z9724t",
+                "title": "DiBS: Diffusion-Informed Branch Selection",
+                "url": "https://arxiv.org/abs/2606.06518",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-z9724t-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-z9724t-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700953-z9724t-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1780937700954-xcvm7s",
+            "title": "AI Science Must Study Training Dynamics, Not Just Post-Hoc Fixes",
+            "tldr": "A position paper argues that AI research should shift from analyzing static models to studying the training dynamics that shape behavior, enabling prediction, intervention, and design of safer, more reliable AI systems.",
+            "whyItMatters": [
+              "For founders building AI products, understanding training dynamics could lead to more predictable model behavior, reducing costly post-deployment fixes and improving safety-critical applications.",
+              "Technical impact: Extending scaling laws to predict capabilities, biases, and robustness from early training signals could revolutionize how models are developed and debugged."
+            ],
+            "whatToTry": {
+              "description": "Start tracking training dynamics in your model development pipeline. Log intermediate checkpoints, loss curves, and gradient norms to identify early signs of unwanted behaviors (e.g., bias amplification, memorization) before they become entrenched.",
+              "note": "This is a research direction, not a ready-to-use tool. Consider collaborating with academic groups working on mechanistic interpretability or training dynamics."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1780937700954-xcvm7s",
+                "title": "Position: Don't Just \"Fix it in Post\": A Science of AI Must Study Training Dynamics",
+                "url": "https://arxiv.org/abs/2606.06533",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-xcvm7s-0",
+                "label": "Training Dynamics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-xcvm7s-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1780937700954-xcvm7s-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 08 Jun 2026 00:00:00 -0400"
           }
         ],
-        "totalReadTimeMinutes": 21,
+        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
