@@ -434,6 +434,445 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-06-12-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-12",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: MANGOS IPO wave: AI giants head to public markets, Arbor: Tree Search as Cognition Layer for Autonomous Agents, ToolSense Reveals LLM Tool Retrieval Collapse Under Realistic Queries.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1781281751483-b802tw",
+            "title": "MANGOS IPO wave: AI giants head to public markets",
+            "tldr": "A new acronym MANGOS (Meta/Microsoft, Anthropic, Nvidia, Google, OpenAI, SpaceX) is replacing FAANG, with several AI leaders like Anthropic and OpenAI planning IPOs this summer. This signals a major shift in market focus and a stress test for AI valuations.",
+            "whyItMatters": [
+              "Founders building AI products may see increased investor interest and higher valuations for AI-native companies as public markets embrace them.",
+              "The IPO wave could set valuation benchmarks for private AI startups, affecting fundraising strategies and exit planning."
+            ],
+            "whatToTry": {
+              "description": "Review your AI startup's financials and growth metrics to align with the valuation expectations set by these upcoming IPOs. Consider whether an IPO or acquisition is a viable exit path in this favorable market.",
+              "note": "Monitor the IPO filings closely for key metrics like revenue multiples and growth rates to benchmark your own company."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781281751483-b802tw-0",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              },
+              {
+                "id": "src-rss-techcrunch-ai-1781281751483-b802tw-1",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781281751483-b802tw-0",
+                "label": "Industry",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781281751483-b802tw-1",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 16:23:25 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-urs3z2",
+            "title": "Arbor: Tree Search as Cognition Layer for Autonomous Agents",
+            "tldr": "Arbor is a multi-agent framework that uses structured tree search as a shared working memory for autonomous agents, achieving up to 193% inference throughput-latency improvement over vendor-optimized baselines in LLM optimization. This matters because it introduces a scalable, failure-aware approach to complex, multi-domain optimization tasks.",
+            "whyItMatters": [
+              "Business impact: Enables fully autonomous, multi-day optimization campaigns for LLM inference, reducing need for large engineering teams and potentially lowering operational costs.",
+              "Technical impact: Introduces a novel architecture with Orchestrator and Critic agents for checks-and-balances, and decomposes agent capabilities into hard and soft skills, setting a new standard for autonomous system design."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Arbor's approach for your own LLM inference pipeline by experimenting with tree search-based exploration for hyperparameter tuning or architecture optimization, starting with small-scale tests to measure Pareto improvements.",
+              "note": "Focus on integrating the Critic agent for root-cause analysis to avoid stability issues during autonomous campaigns."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-urs3z2",
+                "title": "Arbor: Tree Search as a Cognition Layer for Autonomous Agents",
+                "url": "https://arxiv.org/abs/2606.12563",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-urs3z2-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-urs3z2-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-urs3z2-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-n09odj",
+            "title": "ToolSense Reveals LLM Tool Retrieval Collapse Under Realistic Queries",
+            "tldr": "A new diagnostic framework, ToolSense, exposes a critical flaw in parametric tool retrieval for LLM agents: models that ace standard benchmarks collapse by 50-64% on realistic, ambiguous queries, often scoring no better than random on factual tool knowledge. This is a wake-up call for any founder building agentic systems with large tool catalogs.",
+            "whyItMatters": [
+              "For founders building AI agents that rely on tool retrieval (e.g., API orchestrators, workflow automators), this shows that current benchmarks are misleading—your agent may fail in production when queries are vague or underspecified.",
+              "Technically, it highlights a dissociation between retrieval performance and actual tool understanding, meaning your agent might retrieve the right tool but misuse it, leading to unreliable behavior."
+            ],
+            "whatToTry": {
+              "description": "Audit your own tool retrieval pipeline using ToolSense's methodology: generate realistic, ambiguous queries (e.g., 'find me a flight' instead of 'book a flight from NYC to LA on June 5') and test your model's retrieval accuracy. If you see a drop, consider hybrid approaches that combine parametric retrieval with embedding-based fallbacks or explicit tool documentation lookups.",
+              "note": "ToolSense is open-source—integrate it into your CI/CD pipeline to catch retrieval regressions before deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-n09odj",
+                "title": "ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs",
+                "url": "https://arxiv.org/abs/2606.12451",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-n09odj-0",
+                "label": "ToolSense",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-n09odj-1",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-n09odj-2",
+                "label": "Tool Retrieval",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-9tltq1",
+            "title": "New Framework for Strategic Decision Support in AI Agents",
+            "tldr": "A new paper from ArXiv proposes a framework for optimizing when AI agents should seek human or tool support, using a counterfactual error metric and an online algorithm to minimize support calls while controlling risk. This is crucial for building reliable agentic systems.",
+            "whyItMatters": [
+              "Provides a principled method to balance autonomy and safety in AI agents, reducing costly errors without over-relying on human oversight.",
+              "Offers an online algorithm with randomized exploration that adapts to real-world data, enabling practical deployment in dynamic environments."
+            ],
+            "whatToTry": {
+              "description": "Implement a threshold-based support system for your AI agent: define a 'value of support' score (e.g., based on uncertainty or task complexity), then use the paper's online algorithm to dynamically adjust when to escalate to a human or tool, starting with a calibration phase to minimize unnecessary calls.",
+              "note": "Start with a simple proxy for support value, like model confidence or task novelty, and iterate based on observed missed-support errors."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-9tltq1",
+                "title": "Strategic Decision Support for AI Agents",
+                "url": "https://arxiv.org/abs/2606.12587",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-9tltq1-0",
+                "label": "Agentic Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-9tltq1-1",
+                "label": "Decision Support",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-9tltq1-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-sqj59p",
+            "title": "Pythagoras-Prover: Efficient Lean Theorem Proving with 4B Model",
+            "tldr": "A new open-source family of Lean theorem provers achieves state-of-the-art results with far less compute, including a 4B model that outperforms DeepSeek-Prover-V2-671B on MiniF2F-Test. This makes formal verification more accessible for AI product builders.",
+            "whyItMatters": [
+              "Reduces compute cost for formal proof generation by orders of magnitude, enabling integration into CI/CD pipelines for AI products that require correctness guarantees.",
+              "Introduces a diffusion-based prover and curriculum learning approach that could inspire more efficient training strategies for other reasoning tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Pythagoras-Prover for verifying critical code paths in your AI product, especially if you're building in regulated domains (finance, healthcare). Start with the 4B autoregressive model for proof generation and use the ALF technique to augment your own training data for domain-specific formal reasoning.",
+              "note": "The diffusion-based prover is a proof-of-concept; for production, stick with the autoregressive models until further validation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-sqj59p",
+                "title": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation",
+                "url": "https://arxiv.org/abs/2606.12594",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-sqj59p-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-sqj59p-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-sqj59p-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-38vun9",
+            "title": "Evoflux: Fixing Tool Workflows for Small AI Agents at Inference Time",
+            "tldr": "Evoflux is a new method that uses evolutionary search at inference time to repair tool workflows for small language models, boosting execution feasibility from ~3% to 17-24% on MCP-Bench tasks. This matters because it offers a practical way to make compact agents reliable for tool use without expensive retraining.",
+            "whyItMatters": [
+              "Business impact: Enables cost-effective AI agents that can reliably use live tool catalogs (e.g., MCP servers) without needing large models or extensive fine-tuning, reducing deployment risk and token costs.",
+              "Technical impact: Introduces a novel inference-time repair mechanism that outperforms SFT and DPO on scarce data, suggesting a shift from training-heavy to search-based approaches for tool-using agents."
+            ],
+            "whatToTry": {
+              "description": "If you're building a tool-using agent with a small LM, prototype Evoflux's approach: implement a workflow graph with typed nodes, then use evolutionary search (structured edits + execution feedback) to repair failed plans at inference time, rather than relying solely on distillation or fine-tuning.",
+              "note": "Start with a small set of live tools (e.g., 10-20) to test feasibility; the paper's results show gains even with limited teacher traces."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-38vun9",
+                "title": "Evoflux: Inference-Time Evolution of Executable Tool Workflows for Compact Agents",
+                "url": "https://arxiv.org/abs/2606.12674",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-38vun9-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-38vun9-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-38vun9-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-85gyd7",
+            "title": "From AGI to ASI: Mapping the Path to Superintelligence",
+            "tldr": "A new arXiv report systematically explores how AI might evolve from human-level AGI to artificial superintelligence (ASI), outlining four pathways: scaling, paradigm shifts, recursive improvement, and multi-agent collectives. It highlights key bottlenecks and open research questions, making it essential reading for founders planning long-term AI strategy.",
+            "whyItMatters": [
+              "Business impact: Founders can anticipate the trajectory of AI capabilities and invest in areas that will remain critical (e.g., multi-agent systems, safety) as ASI approaches.",
+              "Technical impact: The report identifies concrete research gaps (e.g., frictions in scaling) that could become competitive advantages if solved early."
+            ],
+            "whatToTry": {
+              "description": "Review your product roadmap against the four ASI pathways—especially multi-agent collectives and recursive improvement—to identify where your team can build moats (e.g., proprietary agent coordination frameworks).",
+              "note": "Focus on bottlenecks like data efficiency or alignment; these are likely to persist even as models scale."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-85gyd7",
+                "title": "From AGI to ASI",
+                "url": "https://arxiv.org/abs/2606.12683",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-85gyd7-0",
+                "label": "AGI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-85gyd7-1",
+                "label": "ASI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-85gyd7-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-hugging-face-blog-1781281751720-jzztt4",
+            "title": "Olmo-Eval: Streamline AI Model Evaluation for Faster Iteration",
+            "tldr": "Allen AI and Hugging Face released olmo-eval, an open-source evaluation workbench designed to integrate directly into the model development loop, enabling rapid, reproducible benchmarking and debugging of AI models.",
+            "whyItMatters": [
+              "Reduces the time and complexity of evaluating model performance during development, allowing founders to iterate faster and catch regressions early.",
+              "Provides a standardized, reproducible evaluation framework that can be integrated into CI/CD pipelines, improving team collaboration and model quality."
+            ],
+            "whatToTry": {
+              "description": "Integrate olmo-eval into your model training pipeline to automate evaluation after each training run. Start by cloning the repo and configuring it to run your existing benchmarks, then use the results to guide hyperparameter tuning or data augmentation decisions.",
+              "note": "Best suited for teams already using Hugging Face or Allen AI tools; requires some setup for custom benchmarks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1781281751720-jzztt4",
+                "title": "olmo-eval: An evaluation workbench for the model development loop",
+                "url": "https://huggingface.co/blog/allenai/olmo-eval",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1781281751720-jzztt4-0",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1781281751720-jzztt4-1",
+                "label": "evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 15:56:10 GMT"
+          },
+          {
+            "id": "rss-techcrunch-ai-1781281751483-xfgqol",
+            "title": "Avataar's $0.005/sec video AI targets India's market",
+            "tldr": "Avataar AI launched a distilled video generation model priced at $0.005 per second, optimized for Indian languages and cultural contexts, making it a cost-effective option for localizing AI video content at scale.",
+            "whyItMatters": [
+              "Enables cost-effective video generation for Indian startups and enterprises, reducing barriers to AI-powered content creation in regional languages.",
+              "Demonstrates a trend toward specialized, culturally-aware AI models that can outperform generic global models in specific markets."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Avataar's video model for use cases like ad creation, social media content, or training videos in Indian languages. Compare its cost and quality against alternatives like Runway or Pika for your target audience.",
+              "note": "Start with a small pilot to test cultural relevance and output quality for your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781281751483-xfgqol",
+                "title": "Cheaper, faster, and culturally aware, Avataar’s video AI is built for India’s scale",
+                "url": "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781281751483-xfgqol-0",
+                "label": "Avataar AI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781281751483-xfgqol-1",
+                "label": "Video Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781281751483-xfgqol-2",
+                "label": "India",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 04:30:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1781281751673-3wle83",
+            "title": "PersonaDrive: Human-Style VLA Agents for Driving Sims",
+            "tldr": "A new pipeline, PersonaDrive, enables vision-language-action (VLA) agents in closed-loop driving simulators to adopt human-like driving styles (aggressive, neutral, conservative) by retrieving demonstrations from a style-instructed human dataset, eliminating per-style retraining.",
+            "whyItMatters": [
+              "For founders building autonomous driving or simulation products, this offers a scalable way to generate diverse, human-like traffic agents without manual reward engineering, improving realism in testing environments.",
+              "Technically, it demonstrates a retrieval-augmented approach to conditioning VLA models on behavioral styles, which could be applied to other domains requiring nuanced agent behavior (e.g., robotics, gaming)."
+            ],
+            "whatToTry": {
+              "description": "If you're developing driving simulators or autonomous vehicle testing tools, consider integrating a retrieval-augmented pipeline like PersonaDrive to generate style-diverse traffic agents. Start by collecting a small dataset of human driving demonstrations with explicit style instructions (e.g., aggressive, neutral), then train a lightweight retrieval head to condition your VLA model on these styles at inference.",
+              "note": "This approach avoids per-style retraining, so it's efficient for rapid iteration. Ensure your retrieval database is diverse to avoid overfitting to specific styles."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781281751673-3wle83",
+                "title": "PersonaDrive: Human-Style Retrieval-Augmented VLA Agents for Closed-Loop Driving Simulation",
+                "url": "https://arxiv.org/abs/2606.12616",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-3wle83-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-3wle83-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781281751673-3wle83-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 12 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 24,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
