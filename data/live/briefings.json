@@ -873,6 +873,460 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-06-19-evening",
+        "period": "evening",
+        "date": "2026-06-19",
+        "scheduledTime": "20:30",
+        "executiveSummary": "Today's highlights: LLMs Self-Correct Ethics: Emergent Alignment Breakthrough, ITNet Unifies Conv, Attention, Recurrence into One Operator, AgenticRei: Deontic Policies for AI Agent Governance.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1781905384801-wklpoi",
+            "title": "LLMs Self-Correct Ethics: Emergent Alignment Breakthrough",
+            "tldr": "A new paper introduces 'Emergent Alignment,' where LLMs use a self-review 'conscience' step and DPO to self-correct unethical outputs without external judges. This offers a scalable, online alignment technique for training, fine-tuning, and adversarial scenarios, directly addressing the 'Emergent Misalignment' problem.",
+            "whyItMatters": [
+              "Business impact: Reduces reliance on costly human feedback or external judge models for alignment, enabling faster and cheaper deployment of ethical AI products.",
+              "Technical impact: Introduces a novel self-supervised alignment method that works across training, fine-tuning, and zero-shot learning, potentially making AI systems more robust to adversarial attacks."
+            ],
+            "whatToTry": {
+              "description": "Experiment with adding a 'conscience' step in your LLM pipeline: after generating an output, prompt the model to review its own reasoning for ethical alignment (e.g., 'Is this response ethical? If not, correct it.'). Combine with DPO fine-tuning on a small dataset of ethical vs. unethical examples to steer behavior.",
+              "note": "Start with a frozen copy of your model to avoid catastrophic forgetting; test on code generation tasks first, as the paper shows strong results there."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-wklpoi",
+                "title": "Emergent Alignment",
+                "url": "https://arxiv.org/abs/2606.19527",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-wklpoi-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-wklpoi-1",
+                "label": "alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-wklpoi-2",
+                "label": "DPO",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384801-4q0f5v",
+            "title": "ITNet Unifies Conv, Attention, Recurrence into One Operator",
+            "tldr": "A new paper introduces ITNet, a learnable integral transform that subsumes convolution, self-attention, and recurrence as special cases. It matches or beats specialized models on ImageNet, GLUE, and VQA, suggesting a single architecture could replace multiple backends.",
+            "whyItMatters": [
+              "Business impact: Founders can reduce engineering complexity by using one architecture for vision, language, and multimodal tasks, lowering maintenance and training costs.",
+              "Technical impact: ITNet's unified kernel (MLP-based) adapts to data, potentially eliminating the need to choose between CNNs, RNNs, or transformers for new products."
+            ],
+            "whatToTry": {
+              "description": "Evaluate ITNet as a drop-in replacement for your current backbone (e.g., replace a transformer encoder with ITNet) on a small-scale task like image classification or sentiment analysis. Use the paper's tiled kernel fusion and Monte Carlo integration for efficient scaling.",
+              "note": "The paper is a preprint; wait for code release or implement from scratch for production use."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-4q0f5v",
+                "title": "ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence",
+                "url": "https://arxiv.org/abs/2606.19538",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-4q0f5v-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-4q0f5v-1",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-4q0f5v-2",
+                "label": "architecture",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384800-8z64lr",
+            "title": "AgenticRei: Deontic Policies for AI Agent Governance",
+            "tldr": "A new framework, AgenticRei, extends beyond basic permit/prohibit policies to handle obligations, dispensations, and conflict resolution for LLM-driven agents, addressing critical gaps in enterprise governance for autonomous AI systems.",
+            "whyItMatters": [
+              "Founders building agentic AI products can now design systems that comply with complex enterprise rules (e.g., mandatory notifications, waivers) without custom engineering, reducing legal and security risks.",
+              "Technical teams can leverage OWL-based reasoning to enforce domain-specific policies (e.g., healthcare data privacy) that current policy engines like XACML or Rego cannot handle."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agentic AI stack for governance gaps—specifically, whether your policy engine supports obligation lifecycles and conflict resolution. If not, prototype integrating AgenticRei's deontic logic into your agent orchestration layer to handle compliance scenarios like 'notify CISO after data access' or 'waive logging for emergency requests'.",
+              "note": "Start with a simple use case (e.g., a customer support agent that must log all refunds) to test obligation enforcement before scaling to multi-agent systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384800-8z64lr",
+                "title": "Deontic Policies for Runtime Governance of Agentic AI Systems",
+                "url": "https://arxiv.org/abs/2606.19464",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384800-8z64lr-0",
+                "label": "AgenticRei",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384800-8z64lr-1",
+                "label": "Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384800-8z64lr-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384801-e4w9su",
+            "title": "Diffusion LLMs vs Autoregressive: First Systematic Benchmark",
+            "tldr": "A new systematic study evaluates 8 diffusion language models across 8 benchmarks, revealing their strengths in parallel generation and trade-offs in reasoning tasks. This is the first comprehensive comparison, offering actionable insights for founders considering DLM architectures.",
+            "whyItMatters": [
+              "Founders building text generation products can now evaluate if diffusion models offer cost or speed advantages for their use case, especially for tasks like translation or structured output where parallel refinement shines.",
+              "The analysis of inference-time factors (denoising steps, context length) provides concrete guidance for optimizing DLM deployment, potentially reducing compute costs by 2-5x compared to autoregressive models."
+            ],
+            "whatToTry": {
+              "description": "Review the paper's findings on inference budgets and task performance. If you're building a product that requires fast, parallel text generation (e.g., code completion, translation), prototype with a diffusion model like MDLM or SSD-LM, focusing on tuning denoising steps for your latency requirements.",
+              "note": "Start with smaller models (e.g., 1B parameters) to validate performance before scaling, as the paper shows DLM behavior varies significantly with model size."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-e4w9su",
+                "title": "Diffusion Language Models: An Experimental Analysis",
+                "url": "https://arxiv.org/abs/2606.19475",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-e4w9su-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-e4w9su-1",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-e4w9su-2",
+                "label": "inference",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384801-fszgvq",
+            "title": "Hidden Anchors in Multi-Agent LLM Deliberation: A New Model",
+            "tldr": "A new paper models multi-agent LLM deliberation as a dynamical system where each agent has a hidden 'anchor' belief that pulls its opinion, explaining how groups can converge to answers beyond any initial position. This provides a testable framework for understanding and improving multi-agent reasoning.",
+            "whyItMatters": [
+              "Business impact: Founders building multi-agent systems can now diagnose and optimize deliberation dynamics, potentially improving accuracy and reducing groupthink in AI teams.",
+              "Technical impact: The anchor recovery method offers a way to probe model behavior and predict when deliberation will escape initial beliefs, enabling more robust system design."
+            ],
+            "whatToTry": {
+              "description": "If you're building multi-agent LLM systems, implement the anchor recovery test from this paper on your own deliberation runs. Check if recovered anchors generalize to held-out runs to see if your agents are truly driven by hidden beliefs. Use this to tune the number of rounds or agent diversity to escape initial opinion hulls for better reasoning.",
+              "note": "Start with open-weight models like Llama or Mistral to replicate the spectrum of anchor behavior before applying to proprietary models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-fszgvq",
+                "title": "Hidden Anchors in Multi-Agent LLM Deliberation",
+                "url": "https://arxiv.org/abs/2606.19494",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-fszgvq-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-fszgvq-1",
+                "label": "LLM Deliberation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-fszgvq-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384801-5ghmo2",
+            "title": "LLMs Can't Gauge Their Own Knowledge on Clinical Data",
+            "tldr": "A new study reveals that LLMs like Qwen 2.5 have no idea when they're wrong on structured clinical tasks—their confidence scores are meaningless. The fix? Cross-model attribution divergence with XGBoost, which slashes error and replaces fake confidence with real reliability estimates.",
+            "whyItMatters": [
+              "For founders building AI in regulated domains (healthcare, finance), this shows that LLM confidence is a dangerous illusion—you need a separate calibration layer to know when to trust the model.",
+              "The cross-model approach (LLM + XGBoost) is a practical, zero-training method to detect epistemic blind spots, enabling safer deployment without fine-tuning."
+            ],
+            "whatToTry": {
+              "description": "Implement a cross-model calibrator for your LLM-based product: pair your LLM with a simpler model (e.g., XGBoost) on structured data tasks. Use attribution divergence (e.g., SHAP-based disagreement) to flag low-confidence predictions and fall back to the simpler model or a human-in-the-loop.",
+              "note": "This works best on tabular data; test on your specific domain first. No need to access model internals—just compare outputs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-5ghmo2",
+                "title": "LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data",
+                "url": "https://arxiv.org/abs/2606.19509",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-5ghmo2-0",
+                "label": "Qwen 2.5",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-5ghmo2-1",
+                "label": "XGBoost",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-5ghmo2-2",
+                "label": "Epistemic Uncertainty",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-5ghmo2-3",
+                "label": "Clinical Data",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781905384801-qslbgs",
+            "title": "New Prompt-Based Method Lets LLM Agents Ask for Clarification",
+            "tldr": "Researchers propose a simple prompt-based method to decompose uncertainty into action confidence and request uncertainty, enabling LLM agents to proactively ask for clarification when tasks are ambiguous. This is a practical, deployment-ready approach that works with black-box APIs and improves performance on new clarification-augmented benchmarks.",
+            "whyItMatters": [
+              "Enables LLM agents to handle underspecified tasks more robustly, reducing costly errors in real-world applications like customer support or automation.",
+              "Provides a lightweight, training-free method that works with any LLM backend, making it immediately applicable for founders building interactive agents."
+            ],
+            "whatToTry": {
+              "description": "Implement a prompt-based uncertainty decomposition in your agent by adding a separate 'request uncertainty' output to your system prompt. When the agent's confidence in the action is low but request uncertainty is high, trigger a clarification loop to ask the user for more details before proceeding.",
+              "note": "Start with simple prompts and test on your own ambiguous task scenarios; the paper's method is designed to be model-agnostic and requires no labeled data."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781905384801-qslbgs",
+                "title": "Uncertainty Decomposition for Clarification Seeking in LLM Agents",
+                "url": "https://arxiv.org/abs/2606.19559",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-qslbgs-0",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-qslbgs-1",
+                "label": "Uncertainty Estimation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781905384801-qslbgs-2",
+                "label": "Prompt Engineering",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1781905384560-deoxq3",
+            "title": "Elastic buys Deductive AI for $85M: AI bug catching goes mainstream",
+            "tldr": "Elastic acquired Deductive AI, a 3-year-old startup using AI to detect and fix software bugs, for up to $85M. This signals growing enterprise demand for AI-powered code quality tools and validates the market for automated debugging solutions.",
+            "whyItMatters": [
+              "Business impact: Validates the market for AI-driven software quality tools, potentially increasing acquisition interest for similar startups and creating new opportunities for founders building in this space.",
+              "Technical impact: Shows that AI for automated debugging is maturing, with major infrastructure players like Elastic integrating it into their platforms, making it easier for developers to adopt."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own product's integration with observability platforms like Elastic to offer AI-powered bug detection as a feature, or explore building a similar tool targeting CI/CD pipelines to capitalize on this trend.",
+              "note": "Focus on seamless integration with existing developer workflows to maximize adoption."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781905384560-deoxq3",
+                "title": "Source: Elastic agrees to buy CRV-backed Deductive AI for up to $85M",
+                "url": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-deoxq3-0",
+                "label": "Deductive AI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-deoxq3-1",
+                "label": "Elastic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-deoxq3-2",
+                "label": "AI debugging",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 00:51:11 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1781905384560-wp4y4h",
+            "title": "US govt bans Anthropic's Fable 5 & Mythos 5 over jailbreak fears",
+            "tldr": "The US government forced Anthropic to pull its two newest models, Fable 5 and Mythos 5, after Amazon researchers found a way to bypass guardrails. Cybersecurity researchers and Anthropic argue the same vulnerabilities exist in other models, raising questions about selective enforcement and potential brand boost for Anthropic.",
+            "whyItMatters": [
+              "Founders relying on frontier models must reassess supply chain risk: government intervention can remove key models overnight, forcing pivots to alternatives.",
+              "The ban highlights the fragility of model availability and the need for diversified AI strategies, especially for products dependent on specific model capabilities."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's dependency on single-model providers. Identify at least two alternative models (e.g., open-source or from different vendors) that can serve as fallbacks, and test them for your core use cases to ensure continuity if a model is banned or restricted.",
+              "note": "Consider models with similar safety profiles to avoid compliance surprises."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781905384560-wp4y4h-0",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              },
+              {
+                "id": "src-rss-techcrunch-ai-1781905384560-wp4y4h-1",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-wp4y4h-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-wp4y4h-1",
+                "label": "Government regulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-wp4y4h-2",
+                "label": "Model availability",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 16:08:17 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1781905384560-uwswzq",
+            "title": "Ambani's Reliance embeds AI into 500M-user telecom network",
+            "tldr": "Reliance is integrating AI across its telecom services, impacting over 500 million users. This signals a massive shift in how AI is deployed at scale in consumer telecom, creating both opportunities and competitive pressure for AI product builders targeting emerging markets.",
+            "whyItMatters": [
+              "Business impact: Opens a huge new distribution channel for AI features in telecom, potentially setting a precedent for other carriers globally. Founders building AI for customer service, voice assistants, or home automation should watch for integration opportunities or partnerships.",
+              "Technical impact: Demonstrates feasibility of deploying AI at massive scale in telecom infrastructure, likely requiring edge inference and low-latency models. This could accelerate demand for optimized, small-footprint models and on-device AI."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's compatibility with telecom APIs (e.g., Twilio, Vonage) and consider building a lightweight, telecom-optimized version for emerging markets. Reach out to Reliance's Jio platform for potential pilot integrations if your product fits voice, messaging, or home automation.",
+              "note": "Focus on latency and data privacy—telecom deployments often require on-device processing to meet regulatory and performance needs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781905384560-uwswzq",
+                "title": "Billionaire Ambani wants AI in every call, app, and home",
+                "url": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-uwswzq-0",
+                "label": "Reliance",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-uwswzq-1",
+                "label": "Telecom AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781905384560-uwswzq-2",
+                "label": "Emerging Markets",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 15:23:28 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
