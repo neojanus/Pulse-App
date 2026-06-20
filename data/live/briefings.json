@@ -1,7 +1,472 @@
 [
   {
-    "date": "2026-06-19",
+    "date": "2026-06-20",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-20-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-20",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: LLMs Self-Correct Ethics: Emergent Alignment via Introspection, ITNet: One Architecture to Rule Them All (Conv, Attention, RNN), Deontic Policies for Agentic AI Governance: Beyond Permit/Prohibit.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1781968830752-xikedz",
+            "title": "LLMs Self-Correct Ethics: Emergent Alignment via Introspection",
+            "tldr": "A new paper introduces a method where LLMs use a 'conscience step' to review and self-correct their own outputs for ethical alignment, using DPO without external judges. This enables online alignment across training, fine-tuning, and adversarial scenarios, directly addressing the Emergent Misalignment problem.",
+            "whyItMatters": [
+              "Founders can reduce reliance on costly human feedback or external judge models for alignment, potentially lowering deployment costs and improving safety in production AI systems.",
+              "The technique works in zero-shot and adversarial settings, offering a scalable way to maintain ethical behavior in dynamic or untrusted environments, critical for customer-facing AI products."
+            ],
+            "whatToTry": {
+              "description": "Experiment with adding a single introspective question (e.g., 'Is this output ethical?') to your model's inference pipeline, then use DPO to fine-tune on self-generated corrections. This can be tested on a small dataset to see if it reduces unethical outputs without external judges.",
+              "note": "Start with a frozen copy of your model to avoid catastrophic forgetting; the paper suggests this works for code hacking scenarios, so test on your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-xikedz",
+                "title": "Emergent Alignment",
+                "url": "https://arxiv.org/abs/2606.19527",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-xikedz-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-xikedz-1",
+                "label": "alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-xikedz-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-fm0854",
+            "title": "ITNet: One Architecture to Rule Them All (Conv, Attention, RNN)",
+            "tldr": "A new paper introduces ITNet, a single learnable integral transform that unifies convolution, attention, and recurrence under one mathematical framework. It matches or beats specialized models on ImageNet, GLUE, and VQA, suggesting a future where one architecture handles vision, language, and more.",
+            "whyItMatters": [
+              "Business impact: Founders can now consider a single architecture for multimodal products, reducing the need to maintain separate models for different data types (images, text, 3D). This could simplify AI stacks and lower engineering costs.",
+              "Technical impact: ITNet's learnable kernel (via MLP) adapts to data, potentially eliminating the need to choose between CNNs, Transformers, or RNNs. The paper's efficient techniques (tiled fusion, Monte Carlo integration) make it practical for production."
+            ],
+            "whatToTry": {
+              "description": "Evaluate ITNet as a unified backbone for your next multimodal product. Start by testing the open-source implementation (if released) on a small-scale task combining text and images, like a simple VQA or classification benchmark, to see if it simplifies your architecture without sacrificing performance.",
+              "note": "The paper is from June 2025; check for code release on GitHub or ArXiv. If not yet available, consider implementing the core idea (learnable pairwise kernel via MLP) in your own framework using the described efficient approximations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-fm0854",
+                "title": "ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence",
+                "url": "https://arxiv.org/abs/2606.19538",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-fm0854-0",
+                "label": "ITNet",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-fm0854-1",
+                "label": "Unified Architecture",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-fm0854-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-lfyahl",
+            "title": "Deontic Policies for Agentic AI Governance: Beyond Permit/Prohibit",
+            "tldr": "A new framework, AgenticRei, addresses the governance gap for LLM-driven agents by adding obligation management, conflict resolution, and dispensations—critical for enterprise compliance in autonomous AI systems.",
+            "whyItMatters": [
+              "Founders building agentic AI products need to handle not just access control but also obligations (e.g., notify CISO after actions) and policy conflicts, which current tools like XACML or Rego don't support.",
+              "Technical impact: Enables safer deployment of agents that can invoke tools, manipulate data, and coordinate across boundaries, reducing legal and security risks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agent governance stack against the deontic requirements (obligations, dispensations, conflict resolution) outlined in AgenticRei. Consider prototyping with OWL-based policy rules to handle complex enterprise scenarios like healthcare or cybersecurity.",
+              "note": "Start with a simple use case (e.g., agent must log all data writes) to test obligation lifecycle management before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-lfyahl",
+                "title": "Deontic Policies for Runtime Governance of Agentic AI Systems",
+                "url": "https://arxiv.org/abs/2606.19464",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-lfyahl-0",
+                "label": "AgenticRei",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-lfyahl-1",
+                "label": "Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-lfyahl-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-487xkl",
+            "title": "Diffusion LLMs vs Autoregressive: New Benchmark Analysis",
+            "tldr": "A systematic study of 8 diffusion language models across 8 benchmarks reveals their strengths in parallel generation and structured tasks, but also highlights trade-offs in inference cost and task performance compared to autoregressive models.",
+            "whyItMatters": [
+              "For founders building text generation products, DLMs offer a new paradigm for faster, parallel text refinement, potentially reducing latency in applications like code generation or translation.",
+              "The analysis of inference factors (denoising steps, context length) provides practical guidance for optimizing DLM deployment, enabling more efficient use of compute resources."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if diffusion models fit your use case by testing one of the 8 DLMs (e.g., MDLM or SEDD) on tasks requiring iterative refinement, such as code completion or structured output generation, and compare latency vs. quality trade-offs with your current autoregressive model.",
+              "note": "Start with smaller models to gauge performance before scaling, as inference budget significantly impacts results."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-487xkl",
+                "title": "Diffusion Language Models: An Experimental Analysis",
+                "url": "https://arxiv.org/abs/2606.19475",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-487xkl-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-487xkl-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-ajq5k3",
+            "title": "DeXposure-Claw: AI Agent for DeFi Risk Supervision",
+            "tldr": "A new system combines a graph time-series foundation model with LLM agents to supervise DeFi credit risks, reducing false alarms by routing decisions through structured evidence and confidence gates. This matters for founders building AI agents in regulated or high-stakes domains.",
+            "whyItMatters": [
+              "Business impact: Provides a blueprint for building AI agents that can operate in high-stakes financial environments without over-triggering false alarms, reducing regulatory and operational risks.",
+              "Technical impact: Introduces a forecast-grounded architecture that combines specialized models (graph time-series) with general-purpose LLMs, plus a six-axis evaluation harness (DeXposure-Bench) to measure false-intervention rates—a key metric for agent reliability."
+            ],
+            "whatToTry": {
+              "description": "If building AI agents for regulated or high-stakes domains (e.g., finance, healthcare), adopt a similar 'structured evidence routing' pattern: use a specialized forecasting model to generate typed alerts, then gate LLM decisions with confidence thresholds and data-health checks before taking action. Test your agent's false-intervention rate using a custom evaluation harness like DeXposure-Bench.",
+              "note": "Start with a simple domain-specific forecasting model and gradually add LLM-based reasoning layers to avoid over-reliance on weak evidence."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-ajq5k3",
+                "title": "DeXposure-Claw: An Agentic System for DeFi Risk Supervision",
+                "url": "https://arxiv.org/abs/2606.19501",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-ajq5k3-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-ajq5k3-1",
+                "label": "DeFi",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-ajq5k3-2",
+                "label": "AI agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-sbbr1n",
+            "title": "LLMs Don't Know Their Limits on Tabular Data—Fix Found",
+            "tldr": "A new paper reveals LLMs have 'epistemic blind spots' on clinical tabular data, with confidence scores that are meaningless. The key finding: combining LLMs with XGBoost via attribution divergence analysis can dramatically improve accuracy (49% to 75.3%) and calibration, offering a practical method to detect when LLMs are unreliable without extra inference.",
+            "whyItMatters": [
+              "For founders building AI on structured data (e.g., healthcare, finance), this shows LLM confidence is untrustworthy—a critical insight for product reliability and user trust.",
+              "The cross-model calibration technique provides a lightweight way to boost accuracy and calibration, potentially reducing the need for expensive fine-tuning or repeated inference."
+            ],
+            "whatToTry": {
+              "description": "Implement a cross-model calibrator for your LLM-based tabular prediction pipeline: pair your LLM with a simpler model (e.g., XGBoost) and use attribution divergence (e.g., SHAP-based disagreement) to flag when the LLM is likely wrong. This can replace verbalized confidence with patient-specific reliability estimates, improving accuracy without retraining.",
+              "note": "Start with a small dataset to compute attribution divergence—this approach is model-agnostic and doesn't require internal access."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-sbbr1n",
+                "title": "LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data",
+                "url": "https://arxiv.org/abs/2606.19509",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-sbbr1n-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-sbbr1n-1",
+                "label": "XGBoost",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-sbbr1n-2",
+                "label": "Epistemic Uncertainty",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-sbbr1n-3",
+                "label": "Tabular Data",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-sbbr1n-4",
+                "label": "Calibration",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-yv3xbk",
+            "title": "New Prompt-Based Method Lets LLM Agents Ask for Clarification",
+            "tldr": "Researchers propose a simple prompt-based technique to decompose uncertainty in LLM agents, enabling them to proactively seek clarification when tasks are ambiguous. This addresses a key limitation in deploying agents for real-world tasks where specifications are often underspecified, and the method works with black-box APIs without needing training data.",
+            "whyItMatters": [
+              "Enables AI agents to handle ambiguous instructions autonomously, reducing costly errors and user frustration in production systems.",
+              "Provides a practical, deployment-ready approach that works with any LLM API, avoiding the need for logprobs or multiple samples, which is critical for latency-sensitive applications."
+            ],
+            "whatToTry": {
+              "description": "Implement a prompt-based uncertainty decomposition in your agent by adding a separate 'request uncertainty' output to your system prompt. When the agent's confidence in the action is low but request uncertainty is high, trigger a clarification question to the user. Test on your own ambiguous task scenarios.",
+              "note": "Start with a simple binary flag for uncertainty to avoid overcomplicating prompts. The paper shows this works across multiple LLM backbones, so it's model-agnostic."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-yv3xbk",
+                "title": "Uncertainty Decomposition for Clarification Seeking in LLM Agents",
+                "url": "https://arxiv.org/abs/2606.19559",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-yv3xbk-0",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-yv3xbk-1",
+                "label": "Uncertainty Estimation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-yv3xbk-2",
+                "label": "Prompt Engineering",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-tuechy",
+            "title": "Hidden Anchors Drive Multi-Agent LLM Deliberation",
+            "tldr": "A new paper models multi-agent LLM deliberation as a closed-loop system where each agent has a hidden 'anchor' belief that pulls its final opinion. This explains why agents can exceed initial accuracy and provides a test to detect when deliberation is truly anchor-driven, with implications for designing more reliable multi-agent systems.",
+            "whyItMatters": [
+              "Business impact: Founders building multi-agent AI systems can now understand and predict when deliberation improves accuracy versus when it's just groupthink, enabling better system design and debugging.",
+              "Technical impact: The paper offers a mathematical framework to recover hidden anchors from deliberation data, allowing developers to test if their agents are truly reasoning or just converging to a hidden bias."
+            ],
+            "whatToTry": {
+              "description": "If you're building multi-agent systems, use the paper's test: check if recovered anchors from one deliberation round predict outcomes in held-out runs. If they do, your agents have hidden biases that may limit performance—consider adjusting prompts or agent diversity to shift anchors.",
+              "note": "This is most useful for open-weight models (e.g., Llama, Mistral) where you can inspect internal states; for closed APIs, you may need to approximate anchors via output analysis."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-tuechy",
+                "title": "Hidden Anchors in Multi-Agent LLM Deliberation",
+                "url": "https://arxiv.org/abs/2606.19494",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-tuechy-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-tuechy-1",
+                "label": "LLM Deliberation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-tuechy-2",
+                "label": "Research Paper",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1781968830752-pf267n",
+            "title": "REVEAL++: Soft Phenotypic Grouping Boosts Retinal AD Risk Prediction",
+            "tldr": "A new vision-language model, REVEAL++, uses differentiable weighting instead of hard clusters to group patients by Alzheimer's risk from retinal images and clinical narratives, improving early prediction. This continuous approach to phenotypic similarity could enhance any medical AI that relies on contrastive learning with patient cohorts.",
+            "whyItMatters": [
+              "For founders building AI diagnostic tools: This method replaces rigid patient grouping with a learnable, continuous similarity function, potentially improving accuracy in risk stratification for neurodegenerative diseases.",
+              "Technically, it introduces a soft-target contrastive objective that jointly learns cross-modal alignment and phenotypic structure, which could be adapted for other multimodal medical datasets (e.g., imaging + EHR)."
+            ],
+            "whatToTry": {
+              "description": "If you're developing a vision-language model for medical imaging (e.g., retinal, pathology, radiology), experiment with replacing hard cluster assignments in your contrastive learning pipeline with a differentiable weighting function based on intra-modality embeddings. This could improve performance on tasks with continuous risk spectra.",
+              "note": "Start with a small dataset like UK Biobank or a local cohort to validate the approach before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1781968830752-pf267n",
+                "title": "REVEAL++: Differentiable Phenotypic Grouping for Vision-Language Retinal Modeling of Alzheimer's Disease Risk",
+                "url": "https://arxiv.org/abs/2606.19522",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-pf267n-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-pf267n-1",
+                "label": "vision-language",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-pf267n-2",
+                "label": "Alzheimer's disease",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1781968830752-pf267n-3",
+                "label": "contrastive learning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 20 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1781968830471-zgsxth",
+            "title": "US govt bans Anthropic's latest models; brand gains mystique",
+            "tldr": "The US government forced Anthropic to pull its Fable 5 and Mythos 5 models over national security concerns after Amazon researchers found a jailbreak. Cybersecurity experts and Anthropic argue the same flaws exist elsewhere, potentially boosting Anthropic's brand as a 'dangerous' innovator.",
+            "whyItMatters": [
+              "Founders should watch for regulatory overreach that could create artificial scarcity or hype for banned models, affecting competitive dynamics.",
+              "The incident highlights the growing tension between AI safety and innovation, influencing how founders approach model deployment and compliance."
+            ],
+            "whatToTry": {
+              "description": "Consider positioning your AI product as 'safety-first' to avoid regulatory backlash, but also monitor banned models for potential open-source or alternative access that could give you a competitive edge.",
+              "note": "Be cautious about using banned models; focus on building robust guardrails to preempt similar scrutiny."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1781968830471-zgsxth-0",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              },
+              {
+                "id": "src-rss-techcrunch-ai-1781968830471-zgsxth-1",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1781968830471-zgsxth-0",
+                "label": "Anthropic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781968830471-zgsxth-1",
+                "label": "Regulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1781968830471-zgsxth-2",
+                "label": "Model Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 19 Jun 2026 16:08:17 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-19",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-19-morning",
@@ -1332,7 +1797,7 @@
   },
   {
     "date": "2026-06-18",
-    "displayDate": "Yesterday",
+    "displayDate": "Thursday, Jun 18",
     "briefings": [
       {
         "id": "briefing-2026-06-18-afternoon",
@@ -5931,1322 +6396,6 @@
           }
         ],
         "totalReadTimeMinutes": 12,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-06-13",
-    "displayDate": "Saturday, Jun 13",
-    "briefings": [
-      {
-        "id": "briefing-2026-06-13-morning",
-        "period": "morning",
-        "date": "2026-06-13",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: German Court: Google Liable for AI Overview Falsehoods, Government pulls Anthropic's most powerful AI after safety warnings backfire, Anthropic Shuts Down Claude Fable 5 After US Gov't Order.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1781345427473-os72vs",
-            "title": "German Court: Google Liable for AI Overview Falsehoods",
-            "tldr": "A German court ruled Google is legally liable for false statements in AI Overviews, setting a precedent that AI system operators are responsible for generated content. This shifts liability risk for all AI product builders.",
-            "whyItMatters": [
-              "Business impact: Founders must now factor in legal liability for AI-generated outputs, potentially increasing insurance and compliance costs.",
-              "Technical impact: Requires implementing robust content filtering, fact-checking, and disclaimers in AI products to mitigate legal risk."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's output for potential false statements and add a clear disclaimer of liability. Consult with a lawyer to understand jurisdiction-specific risks and consider adding a human-in-the-loop review for high-stakes content.",
-              "note": "This ruling is in Germany but may influence other jurisdictions; proactive compliance is cheaper than reactive litigation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781345427473-os72vs",
-                "title": "A German Court Has Ruled That Google Is Liable for False Statements Generated by AI Overviews",
-                "url": "https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781345427473-os72vs-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-os72vs-1",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-os72vs-2",
-                "label": "AI Overviews",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781345427499-6owlra",
-            "title": "Government pulls Anthropic's most powerful AI after safety warnings backfire",
-            "tldr": "Anthropic's transparency about a narrow jailbreak vulnerability led to a government recall of its flagship model, highlighting the tension between safety disclosures and regulatory overreach. This sets a precedent that could reshape how AI companies handle vulnerability reporting.",
-            "whyItMatters": [
-              "Founders must now weigh the risk of disclosing safety issues against potential regulatory action, which could slow product launches and increase legal costs.",
-              "This event may trigger stricter government oversight of AI model deployments, affecting go-to-market strategies and compliance requirements for new products."
-            ],
-            "whatToTry": {
-              "description": "Review your vulnerability disclosure policy and consider implementing a staged disclosure process that coordinates with regulators before public announcements, to avoid similar backfire scenarios.",
-              "note": "Consult with legal counsel to understand jurisdictional differences in AI model recall procedures."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781345427499-6owlra",
-                "title": "Anthropic’s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
-                "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-6owlra-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-6owlra-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-6owlra-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:30 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1781345427473-6xoz4z",
-            "title": "Anthropic Shuts Down Claude Fable 5 After US Gov't Order",
-            "tldr": "Anthropic took its Claude Fable 5 model offline due to a US government order citing a discovered jailbreak method, highlighting escalating regulatory pressure on frontier AI models and the fragility of model access for builders.",
-            "whyItMatters": [
-              "Business impact: Founders relying on specific models like Fable 5 face sudden service disruptions, underscoring the need for model diversification and fallback strategies.",
-              "Technical impact: The jailbreak discovery signals that even advanced safety measures can be bypassed, pushing the industry toward more robust red-teaming and compliance requirements."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's model dependencies and implement a multi-model fallback system (e.g., using Claude 3, GPT-4, or open-source alternatives) to mitigate risks from sudden regulatory takedowns.",
-              "note": "Consider building a simple abstraction layer to switch models without code changes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781345427473-6xoz4z",
-                "title": "Anthropic Says It’s Taking Claude Fable 5 Offline to Comply With US Government Order",
-                "url": "https://www.wired.com/story/anthropic-says-us-government-ordered-it-to-shut-down-mythos-models/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781345427473-6xoz4z-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-6xoz4z-1",
-                "label": "Claude Fable 5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-6xoz4z-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:10 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781345427499-ldkbch",
-            "title": "Mistral rumored raising €3B at €20B valuation",
-            "tldr": "Mistral AI is reportedly raising €3 billion at a €20 billion valuation, nearly doubling its previous valuation. This signals massive investor confidence in open-weight models and could reshape the competitive landscape for AI startups.",
-            "whyItMatters": [
-              "Business impact: This validates the open-weight model approach as a viable business strategy, potentially attracting more talent and funding to the ecosystem, and increasing competition for closed-source providers like OpenAI.",
-              "Technical impact: With more capital, Mistral can invest in larger training runs, better infrastructure, and more advanced models, accelerating the pace of open-weight AI development and giving founders more powerful, accessible alternatives."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Mistral's models (e.g., Mistral Large, Mixtral) for your product stack now, as increased funding may lead to rapid improvements and lower costs. Consider building flexibility into your architecture to switch between open-weight and closed-source models as the landscape evolves.",
-              "note": "Keep an eye on Mistral's pricing and licensing changes post-funding; early adoption could give you a competitive edge."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781345427499-ldkbch",
-                "title": "Mistral is rumored to be raising €3B at €20B valuation",
-                "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-ldkbch-0",
-                "label": "Mistral",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-ldkbch-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-ldkbch-2",
-                "label": "Open-weight",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 17:38:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781345427500-4y3rwc",
-            "title": "MANGOS IPO wave: AI giants head to public markets",
-            "tldr": "A new acronym MANGOS (Meta/Microsoft, Anthropic, Nvidia, Google, OpenAI, SpaceX) is replacing FAANG, with multiple AI leaders like Anthropic and OpenAI planning IPOs in the same window. This signals a major liquidity event for AI investors and a stress test for valuations.",
-            "whyItMatters": [
-              "Founders building AI products should watch these IPOs for valuation benchmarks and market appetite for AI-native companies, which will influence fundraising and exit strategies.",
-              "The IPO window could set pricing precedents for AI models and infrastructure, affecting costs and competitive dynamics for startups relying on these platforms."
-            ],
-            "whatToTry": {
-              "description": "Monitor the IPO filings of Anthropic and OpenAI closely to gauge investor sentiment on AI business models. Use their S-1 disclosures to benchmark your own unit economics and growth metrics against public market expectations.",
-              "note": "Focus on revenue concentration, customer acquisition costs, and model margin data in filings—these will reveal the true economics behind the hype."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781345427500-4y3rwc-0",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              },
-              {
-                "id": "src-rss-techcrunch-ai-1781345427500-4y3rwc-1",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427500-4y3rwc-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427500-4y3rwc-1",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427500-4y3rwc-2",
-                "label": "IPO",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 16:23:25 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1781345427473-fpv13w",
-            "title": "Meta's AI Strategy in Chaos: Internal Turmoil Exposed",
-            "tldr": "Wired reports that Meta's AI unit is plagued by executive infighting, unclear direction, and employee frustration, highlighting the risks of scaling AI without coherent strategy. This matters because it shows even Big Tech struggles with AI execution, offering lessons for startups on focus and culture.",
-            "whyItMatters": [
-              "Business impact: Founders can learn from Meta's mistakes—avoid spreading resources too thin across competing AI initiatives without clear prioritization.",
-              "Technical impact: Highlights the importance of aligning AI development with product goals and avoiding internal politics that derail innovation."
-            ],
-            "whatToTry": {
-              "description": "Audit your own AI team's focus: List all active AI projects and rank them by alignment with core business metrics. Cut or pause any that don't directly support a clear, measurable goal within 3 months.",
-              "note": "Use this as a cautionary tale—don't let hype-driven projects distract from shipping real value."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781345427473-fpv13w",
-                "title": "‘Tell Him He’s a Piece of Shit’: Meta’s New AI Unit Is a Total Mess",
-                "url": "https://www.wired.com/story/mark-zuckerberg-meta-employee-meeting-interrupt-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781345427473-fpv13w-0",
-                "label": "Meta",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-fpv13w-1",
-                "label": "AI Strategy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781345427473-fpv13w-2",
-                "label": "Organizational Culture",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 21:16:25 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781345427499-g36i9n",
-            "title": "Google sues AI-powered Chinese scam ring targeting 100K+ victims",
-            "tldr": "Google is suing a Chinese cybercrime group called 'Outsider Enterprise' that used AI to send 2.5 million scam texts in two weeks, scamming hundreds of thousands of victims. This highlights the growing threat of AI-powered fraud and the need for AI founders to build robust safety measures.",
-            "whyItMatters": [
-              "AI-powered scams are scaling rapidly, creating a new vector for fraud that founders must defend against in their products.",
-              "Legal and regulatory scrutiny on AI misuse will increase, potentially impacting how AI tools are deployed and marketed."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for potential misuse vectors (e.g., text generation, voice cloning, deepfakes) and implement guardrails like rate limiting, content filters, and user verification to prevent abuse.",
-              "note": "Consider partnering with cybersecurity firms or using anti-fraud APIs to stay ahead of evolving threats."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781345427499-g36i9n",
-                "title": "Chinese cybercrime operation that used AI to scam ‘hundreds of thousands of victims’ sued by Google",
-                "url": "https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-g36i9n-0",
-                "label": "AI safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-g36i9n-1",
-                "label": "Fraud",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-g36i9n-2",
-                "label": "Google",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 20:38:09 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1781345427736-oo9n4g",
-            "title": "Olmo-Eval: Streamline AI model evaluation in dev loop",
-            "tldr": "Allen AI and Hugging Face released olmo-eval, an open-source evaluation workbench that integrates model evaluation directly into the development loop, enabling faster iteration and more reliable benchmarking for AI builders.",
-            "whyItMatters": [
-              "Reduces friction in model development by automating evaluation, helping founders iterate faster on custom models or fine-tuned variants.",
-              "Provides standardized, reproducible benchmarks, which is critical for comparing model performance and making data-driven decisions."
-            ],
-            "whatToTry": {
-              "description": "Integrate olmo-eval into your model development pipeline to automate evaluation runs. Start by cloning the repo and configuring it for your specific benchmarks (e.g., GLUE, MMLU) to catch regressions early and accelerate iteration cycles.",
-              "note": "Best suited for teams already using Hugging Face Transformers or training custom models; may require initial setup time."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1781345427736-oo9n4g",
-                "title": "olmo-eval: An evaluation workbench for the model development loop",
-                "url": "https://huggingface.co/blog/allenai/olmo-eval",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1781345427736-oo9n4g-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1781345427736-oo9n4g-1",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1781345427736-oo9n4g-2",
-                "label": "evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 15:56:10 GMT"
-          },
-          {
-            "id": "hn-48504912",
-            "title": "Taming AI-Generated Frontend Slop: Practical Tips",
-            "tldr": "A developer shares techniques to reduce the 'sloppiness' of AI-generated frontend code, covering prompt engineering, iterative refinement, and validation strategies. The HackerNews discussion (120+ comments) highlights widespread pain points and actionable fixes for founders shipping AI-assisted UIs.",
-            "whyItMatters": [
-              "Improves product quality and user trust by reducing visual and functional inconsistencies in AI-generated UIs.",
-              "Saves engineering time by establishing repeatable patterns for cleaner AI output, accelerating iteration cycles."
-            ],
-            "whatToTry": {
-              "description": "Adopt a 'prompt + review + refine' loop: start with detailed, component-level prompts (e.g., 'Generate a responsive card component with Tailwind CSS, using semantic HTML and consistent spacing'), then manually review for layout shifts, missing states, and accessibility gaps, and feed corrections back into the prompt for the next generation.",
-              "note": "Pair this with automated visual regression tests to catch slop early; tools like Percy or Chromatic can flag inconsistencies."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48504912",
-                "title": "Slightly reducing the sloppiness of AI generated front end",
-                "url": "https://envs.net/~volpe/blog/posts/reduce-slop.html",
-                "domain": "envs.net",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48504912-0",
-                "label": "Frontend",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48504912-1",
-                "label": "Prompt Engineering",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48504912-2",
-                "label": "Code Quality",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-12T14:48:38Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781345427499-oxz0gm",
-            "title": "Andrew Yang: Next big startup play is cutting living costs",
-            "tldr": "Andrew Yang argues that the next wave of startup opportunities lies in reducing the cost of living (housing, food, wireless) rather than creating new luxuries, signaling a shift in consumer priorities that AI founders can target.",
-            "whyItMatters": [
-              "Business impact: Founders can pivot to building AI-driven solutions that optimize supply chains, automate logistics, or reduce overhead in essential sectors like housing and food, tapping into a growing demand for affordability.",
-              "Technical impact: AI models can be applied to predict pricing, optimize resource allocation, or personalize cost-saving recommendations, making efficiency the core value proposition."
-            ],
-            "whatToTry": {
-              "description": "Identify one essential category (e.g., housing or food) and prototype an AI tool that reduces costs by 10-20%—for example, an AI agent that negotiates rent or a meal-planning app that minimizes grocery waste using predictive analytics.",
-              "note": "Focus on underserved markets where incumbents are inefficient; avoid luxury niches."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781345427499-oxz0gm",
-                "title": "Andrew Yang thinks the next big startup opportunity is lowering the cost of living",
-                "url": "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781345427499-oxz0gm-0",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 04:14:19 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-13-afternoon",
-        "period": "afternoon",
-        "date": "2026-06-13",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Court Rules Google Liable for AI Overview False Statements, Anthropic's safety warnings backfire: government pulls plug on powerful AI, AI OSS Tool TensorZero Goes Dark After $7.3M Seed.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1781363760143-59xne6",
-            "title": "Court Rules Google Liable for AI Overview False Statements",
-            "tldr": "A landmark court ruling holds Google legally responsible for false statements made by its AI Overviews, setting a precedent that companies designing, training, and operating AI systems are liable for damages caused by their outputs. This directly impacts AI product builders' risk and compliance strategies.",
-            "whyItMatters": [
-              "Business impact: Founders must now factor in legal liability for AI-generated content, potentially increasing insurance costs and requiring stricter content moderation or disclaimers.",
-              "Technical impact: This ruling may accelerate adoption of guardrails, fact-checking pipelines, and human-in-the-loop systems to mitigate false outputs."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI system's output for potential false or harmful statements, and implement a content review process (e.g., automated fact-checking or human oversight) to reduce liability risk. Consider consulting a legal expert to update your terms of service and disclaimers.",
-              "note": "This ruling applies to companies that design and operate AI systems, not just end-users—so even if you use a third-party model, you may still be liable if you control the system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781363760143-59xne6",
-                "title": "A Court Has Ruled That Google Is Liable for False Statements Generated by AI Overviews",
-                "url": "https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781363760143-59xne6-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-59xne6-1",
-                "label": "AI Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-59xne6-2",
-                "label": "Google",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781363760151-jlhjnb",
-            "title": "Anthropic's safety warnings backfire: government pulls plug on powerful AI",
-            "tldr": "Anthropic's proactive disclosure of a potential jailbreak in its most powerful model led to a government recall, despite the company arguing the risk was narrow. This sets a precedent for regulatory overreach that could chill safety research and deployment.",
-            "whyItMatters": [
-              "Founders must now weigh the legal and business risks of transparent safety disclosures against the potential for regulatory action that can halt product deployment.",
-              "This could accelerate a shift toward less transparent safety practices or push companies to lobby for clearer rules before releasing models."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's safety disclosure policies and legal exposure. Consider implementing a staged rollout with government liaison to preempt recalls, and document all risk assessments to defend against sudden regulatory actions.",
-              "note": "This is a wake-up call to engage with regulators early and build contingency plans for model takedowns."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-jlhjnb",
-                "title": "Anthropic’s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
-                "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-jlhjnb-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-jlhjnb-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-jlhjnb-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:30 +0000"
-          },
-          {
-            "id": "hn-48516504",
-            "title": "AI OSS Tool TensorZero Goes Dark After $7.3M Seed",
-            "tldr": "TensorZero, an open-source AI tool that raised $7.3M in seed funding, unexpectedly archived its GitHub repo overnight. The HackerNews community is buzzing with 78 comments, raising concerns about the sustainability of open-source AI startups and founder burnout.",
-            "whyItMatters": [
-              "Business impact: Signals risk for founders relying on OSS AI tools—sudden archiving can break workflows and erode trust in the ecosystem.",
-              "Technical impact: Highlights the fragility of open-source dependencies in AI stacks; teams may need to fork or migrate to more stable alternatives."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI toolchain for OSS dependencies with low bus factor or unclear funding. For critical tools, fork the repo now and set up internal mirrors to avoid disruption if the upstream goes dark.",
-              "note": "Consider contributing to or sponsoring tools you depend on to improve their longevity."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48516504",
-                "title": "AI OSS tool repo goes archived over night after raising $7.3M Seed",
-                "url": "https://github.com/tensorzero/tensorzero",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48516504-0",
-                "label": "TensorZero",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48516504-1",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48516504-2",
-                "label": "Startup Risk",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T12:10:47Z"
-          },
-          {
-            "id": "rss-wired-ai-1781363760143-zu1i8s",
-            "title": "Anthropic Shuts Down Claude Fable 5 After US Gov't Order",
-            "tldr": "Anthropic took its Claude Fable 5 model offline after a US government order citing a discovered jailbreak method, signaling increased regulatory scrutiny on AI safety and compliance for founders.",
-            "whyItMatters": [
-              "Business impact: Founders must anticipate and prepare for government interventions on AI models, especially those with advanced capabilities, potentially affecting product roadmaps and deployment timelines.",
-              "Technical impact: The existence of a known jailbreak method highlights the need for robust red-teaming and safety testing before launch, as vulnerabilities can lead to forced shutdowns."
-            ],
-            "whatToTry": {
-              "description": "Review your AI model's safety protocols and implement proactive red-teaming exercises to identify jailbreak vulnerabilities before they become regulatory issues. Consider building a compliance checklist for government interactions.",
-              "note": "This is especially critical if your product uses frontier models or handles sensitive data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781363760143-zu1i8s",
-                "title": "Anthropic Says It’s Taking Claude Fable 5 Offline to Comply With US Government Order",
-                "url": "https://www.wired.com/story/anthropic-says-us-government-ordered-it-to-shut-down-mythos-models/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781363760143-zu1i8s-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-zu1i8s-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-zu1i8s-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:10 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781363760151-gi6ybw",
-            "title": "Google sues AI-powered Chinese scam ring targeting 100K+ victims",
-            "tldr": "Google is suing a Chinese cybercrime group called 'Outsider Enterprise' that used AI to send 2.5M scam texts in two weeks, victimizing hundreds of thousands. This highlights the growing threat of AI-powered fraud and the need for robust detection systems.",
-            "whyItMatters": [
-              "Business impact: AI-powered scams are becoming more sophisticated and scalable, posing direct threats to user trust and platform integrity. Founders building consumer-facing AI products must prioritize fraud detection and user safety features.",
-              "Technical impact: The use of AI to generate convincing scam messages at scale means traditional rule-based filters are insufficient. Founders need to invest in adversarial AI defenses and real-time anomaly detection."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's potential for misuse by running red-team exercises focused on generating deceptive content. Implement rate limiting, content fingerprinting, and user behavior analytics to detect and block mass messaging campaigns.",
-              "note": "Consider partnering with platforms like Google or Microsoft for threat intelligence sharing to stay ahead of emerging scam patterns."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-gi6ybw",
-                "title": "Chinese cybercrime operation that used AI to scam ‘hundreds of thousands of victims’ sued by Google",
-                "url": "https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-gi6ybw-0",
-                "label": "AI safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-gi6ybw-1",
-                "label": "Fraud detection",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-gi6ybw-2",
-                "label": "Google",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 20:38:09 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781363760151-p4kmlg",
-            "title": "Mistral rumored raising €3B at €20B valuation",
-            "tldr": "Mistral AI is reportedly raising €3 billion at a €20 billion valuation, nearly doubling its previous valuation. This signals massive investor confidence in open-weight models and could reshape the AI model landscape for founders.",
-            "whyItMatters": [
-              "Business impact: Validates the open-weight model business model, potentially increasing competition and lowering costs for founders building on open models.",
-              "Technical impact: More funding means Mistral can invest in larger, more capable models, possibly accelerating the pace of open-weight model releases and narrowing the gap with closed-source alternatives."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI stack's reliance on Mistral models. If you use Mistral, consider diversifying to include other open-weight models (e.g., Llama, Qwen) to avoid vendor lock-in as Mistral's pricing or licensing may change post-funding. If you don't, now is a good time to test Mistral's latest models for your use case, as they may improve rapidly.",
-              "note": "Keep an eye on Mistral's licensing terms—they may shift toward more commercial-friendly options to attract enterprise customers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-p4kmlg",
-                "title": "Mistral is rumored to be raising €3B at €20B valuation",
-                "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-p4kmlg-0",
-                "label": "Mistral",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-p4kmlg-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-p4kmlg-2",
-                "label": "Open-weight models",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 17:38:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781363760151-k6er2j",
-            "title": "MANGOS IPO wave: AI giants head to public markets",
-            "tldr": "A new acronym MANGOS (Meta/Microsoft, Anthropic, Nvidia, Google, OpenAI, SpaceX) is replacing FAANG, with half of these AI leaders planning IPOs in the same window. This signals a major shift in market focus toward AI-native companies and will stress-test valuations for founders building in this space.",
-            "whyItMatters": [
-              "Business impact: The IPO wave creates a liquidity event for AI startups, potentially setting valuation benchmarks and attracting more capital to the sector. Founders should watch these IPOs for pricing signals that could affect their own fundraising.",
-              "Technical impact: Public market scrutiny will force these AI leaders to disclose more about their technical moats, model architectures, and revenue models, providing rare transparency for competitors and partners."
-            ],
-            "whatToTry": {
-              "description": "Monitor the S-1 filings of Anthropic and OpenAI when they go public to extract key metrics on AI model monetization, customer concentration, and R&D spend. Use these as benchmarks for your own business model and pitch deck.",
-              "note": "Start tracking now—IPOs could hit within 12-18 months. Focus on how they define 'AI revenue' vs. traditional SaaS metrics."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-k6er2j-0",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              },
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-k6er2j-1",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-k6er2j-0",
-                "label": "Industry trends",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-k6er2j-1",
-                "label": "Funding & IPOs",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-k6er2j-2",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-k6er2j-3",
-                "label": "OpenAI",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 16:23:25 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1781363760143-87ylnt",
-            "title": "Meta's AI Unit in Chaos: What Founders Can Learn",
-            "tldr": "Wired reports that Meta's AI strategy is plagued by internal chaos, with executives and employees struggling to align. This highlights the dangers of top-down AI mandates without clear execution plans, a cautionary tale for founders scaling AI teams.",
-            "whyItMatters": [
-              "Business impact: Demonstrates that even well-funded AI efforts can fail without coherent strategy and culture, risking wasted resources and missed market opportunities.",
-              "Technical impact: Suggests that rapid AI deployment without proper team alignment leads to technical debt and poor product outcomes, emphasizing the need for iterative, focused development."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI team's alignment by running a 'strategy clarity' workshop: define one core AI use case, assign clear ownership, and set measurable milestones for the next 90 days. Avoid spreading resources across too many initiatives.",
-              "note": "Start with a single high-impact problem rather than trying to build a general AI unit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781363760143-87ylnt",
-                "title": "‘Tell Him He’s a Piece of Shit’: Meta’s New AI Unit Is a Total Mess",
-                "url": "https://www.wired.com/story/mark-zuckerberg-meta-employee-meeting-interrupt-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781363760143-87ylnt-0",
-                "label": "Meta",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-87ylnt-1",
-                "label": "AI strategy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781363760143-87ylnt-2",
-                "label": "team management",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 12 Jun 2026 21:16:25 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781363760151-kfjri2",
-            "title": "Andrew Yang: Next big startup play is cutting living costs",
-            "tldr": "Andrew Yang argues that the next major startup opportunity lies in reducing the cost of living for Americans, targeting overpriced essentials like housing, food, and wireless. This signals a shift in founder focus from growth-at-all-costs to efficiency and affordability, which could reshape AI product priorities.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products should pivot toward cost-reduction solutions (e.g., AI-driven supply chain optimization, automated housing management) to tap into a growing market demand for affordability.",
-              "Technical impact: AI models and tools that optimize resource allocation, reduce waste, or automate expensive manual processes (e.g., in logistics or construction) will become more valuable."
-            ],
-            "whatToTry": {
-              "description": "Audit your current product roadmap for opportunities to directly lower user costs—e.g., integrate AI to automate a high-cost service or optimize pricing for essentials. Consider targeting sectors like housing (AI for property management) or food (AI for waste reduction).",
-              "note": "Focus on measurable cost savings to differentiate from hype-driven AI products."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781363760151-kfjri2",
-                "title": "Andrew Yang thinks the next big startup opportunity is lowering the cost of living",
-                "url": "https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781363760151-kfjri2-0",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 04:14:19 +0000"
-          },
-          {
-            "id": "hn-48511908",
-            "title": "Open source AI must win: Community rallies for transparency",
-            "tldr": "A viral HackerNews discussion (1277 points, 399 comments) argues that open source AI is critical for innovation and safety, highlighting growing community pressure against closed models.",
-            "whyItMatters": [
-              "Founders building on open source models can avoid vendor lock-in and benefit from community-driven improvements, but must navigate licensing and support challenges.",
-              "The debate signals potential shifts in funding and regulation, favoring open ecosystems that could lower barriers to entry for startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI stack for open source alternatives (e.g., Llama, Mistral, Stable Diffusion) to reduce dependency on proprietary APIs and gain flexibility in customization.",
-              "note": "Check license terms carefully—some open models have restrictions on commercial use or require attribution."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48511908",
-                "title": "Open source AI must win",
-                "url": "https://opensourceaimustwin.com/?share=v2",
-                "domain": "opensourceaimustwin.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48511908-0",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48511908-1",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T02:14:24Z"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-13-evening",
-        "period": "evening",
-        "date": "2026-06-13",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Court Rules Google Liable for AI Overview False Statements, Government pulls Anthropic's most powerful AI after safety warnings backfire, KPMG Pulls AI Report Over Hallucinations: A Cautionary Tale.",
-        "items": [
-          {
-            "id": "rss-wired-ai-1781387054197-pop67r",
-            "title": "Court Rules Google Liable for AI Overview False Statements",
-            "tldr": "A court has ruled that companies designing, training, and operating AI systems are legally liable for damages from generated responses. This sets a precedent that could reshape liability for all AI product builders.",
-            "whyItMatters": [
-              "Business impact: Founders must now factor in legal liability for AI outputs, potentially requiring insurance, disclaimers, or stricter content moderation.",
-              "Technical impact: This ruling may accelerate adoption of guardrails, human-in-the-loop systems, and output validation to mitigate legal risk."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's output pipeline for potential liability. Implement a review layer for high-risk responses (e.g., legal, medical, financial) and add clear disclaimers. Consult a lawyer to assess your exposure under this precedent.",
-              "note": "This ruling is specific to Google's AI Overviews, but the principle could extend to other AI systems. Proactive risk management is key."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781387054197-pop67r",
-                "title": "A Court Has Ruled That Google Is Liable for False Statements Generated by AI Overviews",
-                "url": "https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781387054197-pop67r-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781387054197-pop67r-1",
-                "label": "AI Liability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781387054197-pop67r-2",
-                "label": "Google",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781387054193-j2zp8n",
-            "title": "Government pulls Anthropic's most powerful AI after safety warnings backfire",
-            "tldr": "Anthropic's proactive disclosure of a potential jailbreak in its latest model led to a government recall, despite the company arguing the risk was narrow. This sets a precedent for regulatory overreach that could chill safety transparency in AI development.",
-            "whyItMatters": [
-              "Business impact: Founders must now weigh the risk of disclosing vulnerabilities against potential regulatory action, which could delay product launches and increase compliance costs.",
-              "Technical impact: The incident may push companies to hide or downplay safety issues, undermining the very transparency that builds trust with users and regulators."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's vulnerability disclosure policy and consider implementing a staged disclosure process—first privately to regulators, then publicly—to mitigate the risk of forced recalls while maintaining transparency.",
-              "note": "Consult with legal counsel to understand jurisdiction-specific regulations, as this case may trigger new guidelines."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781387054193-j2zp8n",
-                "title": "Anthropic’s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
-                "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-j2zp8n-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-j2zp8n-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-j2zp8n-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:30 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781387054193-eqog95",
-            "title": "KPMG Pulls AI Report Over Hallucinations: A Cautionary Tale",
-            "tldr": "KPMG retracted a report on AI usage after discovering it contained hallucinated data, highlighting the risks of relying on AI for market analysis and the need for rigorous human oversight.",
-            "whyItMatters": [
-              "Business impact: Undermines trust in AI-generated market intelligence, forcing founders to implement stricter validation processes before using AI for client-facing reports or strategic decisions.",
-              "Technical impact: Demonstrates that even advanced AI models can produce convincing but false outputs, emphasizing the importance of grounding systems with verified data sources and human-in-the-loop review."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI-generated content pipeline for hallucinations: set up a mandatory human review step for any AI-produced reports or analyses, and cross-reference key claims with trusted external sources before publication.",
-              "note": "Consider using retrieval-augmented generation (RAG) with a curated, verified knowledge base to reduce hallucination risk."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781387054193-eqog95",
-                "title": "KPMG pulls report on AI usage due to apparent hallucinations",
-                "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-eqog95-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-eqog95-1",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 20:42:31 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781387054193-gmt54r",
-            "title": "Amazon CEO flagged Anthropic model risks before ban",
-            "tldr": "Amazon CEO Andy Jassy reportedly raised security concerns about Anthropic's models, leading to a global access cut-off for two models. This signals growing scrutiny of AI safety from major investors and regulators, directly impacting founders relying on Anthropic's APIs.",
-            "whyItMatters": [
-              "Business impact: Founders using Anthropic models may face sudden API access changes or stricter compliance requirements, disrupting product roadmaps.",
-              "Technical impact: The incident highlights the need for model diversification and robust fallback strategies to mitigate supply chain risks from regulatory or investor-driven actions."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI stack for single-vendor dependency on Anthropic. Set up fallback integrations with alternative providers (e.g., OpenAI, open-source models) and monitor Anthropic's API status page for updates.",
-              "note": "Consider contract terms that guarantee API access or notice periods for model changes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781387054193-gmt54r",
-                "title": "Amazon CEO reportedly raised Anthropic model concerns before government crackdown",
-                "url": "https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-gmt54r-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-gmt54r-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-gmt54r-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 19:11:41 +0000"
-          },
-          {
-            "id": "hn-48519092",
-            "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
-            "tldr": "WSJ reports that Amazon CEO Andy Jassy's discussions with U.S. officials led to increased regulatory scrutiny on Anthropic's AI models, highlighting the growing tension between Big Tech investments in AI startups and national security concerns.",
-            "whyItMatters": [
-              "Founders building on Anthropic models may face sudden compliance hurdles or model access restrictions due to regulatory actions.",
-              "This signals that government oversight of AI is intensifying, potentially affecting deployment timelines and partnership strategies for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Review your AI model supply chain and diversify dependencies. If you rely heavily on Anthropic models, start evaluating alternatives like open-source models (e.g., Llama 3) or other API providers to mitigate regulatory risk.",
-              "note": "Consider building a modular architecture that allows swapping model providers without major rework."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48519092",
-                "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
-                "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
-                "domain": "wsj.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48519092-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48519092-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48519092-2",
-                "label": "Amazon",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T16:57:49Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1781387054193-6o22jd",
-            "title": "OpenAI Under State AG Investigation: Privacy & Ads Scrutinized",
-            "tldr": "Multiple state attorneys general are investigating OpenAI, probing its ad policies and health data handling. This signals escalating regulatory risk for AI companies, especially those handling sensitive data.",
-            "whyItMatters": [
-              "Business impact: Founders must anticipate similar scrutiny on their own AI products, especially around data privacy and advertising practices. Compliance costs and legal risks are rising.",
-              "Technical impact: Health data handling is a key focus—AI products in regulated industries (health, finance) need robust data governance and transparency from day one."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's data handling and advertising policies now. Ensure you have clear opt-in/opt-out mechanisms, data minimization practices, and transparent ad disclosures. Consider consulting with a privacy attorney to preempt state-level inquiries.",
-              "note": "Start with health-related data if applicable—this is a high-risk area."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1781387054193-6o22jd",
-                "title": "OpenAI faces investigation from state attorneys general",
-                "url": "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-6o22jd-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-6o22jd-1",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1781387054193-6o22jd-2",
-                "label": "Privacy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 16:47:18 +0000"
-          },
-          {
-            "id": "hn-48516504",
-            "title": "AI OSS Tool TensorZero Goes Dark After $7.3M Seed",
-            "tldr": "TensorZero, an open-source AI tool that raised $7.3M in seed funding, unexpectedly archived its GitHub repo overnight, sparking community debate on HackerNews about the sustainability of OSS AI projects.",
-            "whyItMatters": [
-              "Raises red flags for founders relying on OSS AI tools for their stack—sudden archiving can disrupt workflows and trust.",
-              "Highlights the tension between VC funding and open-source commitments, urging founders to vet project governance and backup plans."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI tool dependencies: identify critical OSS tools in your stack, check their repo activity and funding status, and plan for fallbacks (e.g., forked repos or commercial alternatives) to avoid sudden disruptions.",
-              "note": "Consider contributing to or forking active projects to reduce single-point-of-failure risk."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48516504",
-                "title": "AI OSS tool repo goes archived over night after raising $7.3M Seed",
-                "url": "https://github.com/tensorzero/tensorzero",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48516504-0",
-                "label": "TensorZero",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48516504-1",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48516504-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T12:10:47Z"
-          },
-          {
-            "id": "rss-wired-ai-1781387054197-f2ewml",
-            "title": "Anthropic Shuts Down Claude Fable 5 After US Gov't Order",
-            "tldr": "Anthropic took Claude Fable 5 offline due to a US government order citing a discovered jailbreak method, highlighting escalating regulatory pressure on AI safety and model deployment.",
-            "whyItMatters": [
-              "Business impact: Founders building on frontier models face sudden shutdown risks from government intervention, requiring contingency plans and compliance strategies.",
-              "Technical impact: Jailbreak vulnerabilities in advanced models can trigger forced takedowns, emphasizing the need for robust red-teaming and safety testing before launch."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's compliance posture: review any government or regulatory guidelines relevant to your model's capabilities, and implement a rapid response plan for potential shutdowns, including backup models or local alternatives.",
-              "note": "Consider diversifying model providers to reduce dependency on a single frontier model that could be taken offline."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1781387054197-f2ewml",
-                "title": "Anthropic Says It’s Taking Claude Fable 5 Offline to Comply With US Government Order",
-                "url": "https://www.wired.com/story/anthropic-says-us-government-ordered-it-to-shut-down-mythos-models/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1781387054197-f2ewml-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781387054197-f2ewml-1",
-                "label": "Claude Fable 5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1781387054197-f2ewml-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 13 Jun 2026 02:26:10 +0000"
-          },
-          {
-            "id": "hn-48518969",
-            "title": "AI Coding at Home Without Going Broke: Practical Tips",
-            "tldr": "A popular HackerNews discussion (178 points, 166 comments) explores cost-effective ways to use AI for coding at home, highlighting local models, API tricks, and open-source tools to avoid high cloud costs.",
-            "whyItMatters": [
-              "For founders bootstrapping AI products, this provides actionable strategies to reduce infrastructure costs while maintaining coding productivity.",
-              "Shows that local AI models (e.g., Llama, Mistral) are now viable for many coding tasks, reducing dependency on expensive APIs."
-            ],
-            "whatToTry": {
-              "description": "Evaluate using local open-source models like Llama 3 or Mistral for code generation and debugging tasks via tools like Ollama or LM Studio. Start with smaller models (7B parameters) to test performance on your hardware before scaling up.",
-              "note": "Local models may lag behind GPT-4 for complex tasks but excel for boilerplate, refactoring, and simple scripts, saving significant API costs."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48518969",
-                "title": "AI coding at home without going broke",
-                "url": "https://stephen.bochinski.dev/blog/2026/06/13/ai-coding-at-home-without-going-broke/",
-                "domain": "stephen.bochinski.dev",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48518969-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48518969-1",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48518969-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T16:45:03Z"
-          },
-          {
-            "id": "hn-48518684",
-            "title": "GLM 5.2 Released: New Benchmark for Open-Source LLMs",
-            "tldr": "Zhipu AI released GLM 5.2, a new open-source large language model that reportedly achieves competitive performance against GPT-4 on several benchmarks. This matters for founders as it provides a powerful, accessible alternative for building AI products without vendor lock-in.",
-            "whyItMatters": [
-              "Business impact: Reduces dependency on proprietary APIs like OpenAI, potentially lowering costs and increasing control over model deployment and customization.",
-              "Technical impact: Offers a strong open-source option for fine-tuning and integration into existing stacks, enabling faster iteration and experimentation."
-            ],
-            "whatToTry": {
-              "description": "Evaluate GLM 5.2 for your use case by testing it on a representative sample of your data, focusing on tasks like reasoning, code generation, or multilingual support. Compare its performance and latency against your current model to assess cost and quality trade-offs.",
-              "note": "Check the model's licensing and deployment requirements (e.g., GPU memory) to ensure it fits your infrastructure."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48518684",
-                "title": "GLM 5.2 Is Out",
-                "url": "https://twitter.com/jietang/status/2065784751345287314",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48518684-0",
-                "label": "GLM 5.2",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48518684-1",
-                "label": "Open-Source LLM",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-06-13T16:18:31Z"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
