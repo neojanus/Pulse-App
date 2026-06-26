@@ -419,6 +419,433 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-06-26-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-26",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Beyond Accuracy: New Dimensions for AI Agent Benchmarks, Refusal Gated by Persona: New Research on AI Safety, LLM Pipeline Analyzes DAO vs. Corporate AI Agent Governance.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1782488135784-4jfq88",
+            "title": "Beyond Accuracy: New Dimensions for AI Agent Benchmarks",
+            "tldr": "A new paper from ArXiv proposes measuring AI agents on 6 dimensions beyond accuracy (e.g., efficiency, reliability, human collaboration uplift) using CORE-Bench as a case study, revealing insights even after accuracy saturates. This is a significant shift in how to evaluate agent performance, directly impacting product development and benchmarking strategies.",
+            "whyItMatters": [
+              "Business impact: Founders can now differentiate their AI products by optimizing for efficiency and reliability, not just accuracy, which is critical for real-world deployment and customer trust.",
+              "Technical impact: Provides a framework to identify and fix shortcuts in benchmarks, leading to more robust and generalizable agents, and highlights the importance of human-AI collaboration for speed gains."
+            ],
+            "whatToTry": {
+              "description": "When evaluating your AI agent, adopt a multi-dimensional approach: measure not just accuracy but also efficiency (time to complete), reliability (consistency across runs), and uplift from human collaboration. Use this to identify weaknesses and prioritize improvements that matter in production.",
+              "note": "Start with a small-scale experiment comparing agent-only vs. human-agent collaboration on a real task to quantify speedup and identify bottlenecks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-4jfq88",
+                "title": "Life After Benchmark Saturation: A Case Study of CORE-Bench",
+                "url": "https://arxiv.org/abs/2606.26158",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4jfq88-0",
+                "label": "CORE-Bench",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4jfq88-1",
+                "label": "Agent Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4jfq88-2",
+                "label": "Benchmarking",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-gbymzr",
+            "title": "Refusal Gated by Persona: New Research on AI Safety",
+            "tldr": "New research shows that refusal behavior in chat models is gated by a compliant persona direction in activation space, not just a single refusal direction. This means safety interventions must account for persona to be effective.",
+            "whyItMatters": [
+              "Business impact: Founders building AI products must understand that safety guardrails are not independent of model persona; a compliant model may bypass refusal even if refusal direction is intact, requiring more nuanced safety testing.",
+              "Technical impact: The finding that refusal is computed early but expressed late, gated by persona, suggests that fine-tuning or steering for compliance can inadvertently weaken safety, and vice versa. This has implications for model alignment and jailbreak prevention."
+            ],
+            "whatToTry": {
+              "description": "Audit your chat model's refusal behavior by testing with prompts that vary persona (e.g., 'You are a helpful assistant' vs. 'You are a neutral assistant') to see if refusal rates change. If they do, consider adding persona-aware safety checks or steering refusal direction at late layers.",
+              "note": "This is a research finding; practical implementation may require custom activation steering tools. Start with simple probing before investing in complex interventions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-gbymzr",
+                "title": "Refusal Lives Downstream of Persona in Chat Models",
+                "url": "https://arxiv.org/abs/2606.26161",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-gbymzr-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-gbymzr-1",
+                "label": "safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-gbymzr-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-2tftsa",
+            "title": "LLM Pipeline Analyzes DAO vs. Corporate AI Agent Governance",
+            "tldr": "A new arXiv paper introduces an LLM-powered pipeline to compare governance structures of AI agent protocols (ERC-8004 vs. Google A2A), finding that open governance fosters thematic convergence but both systems suffer from participation inequality. This offers a practical method for founders to evaluate governance risks in agentic infrastructure.",
+            "whyItMatters": [
+              "Business impact: Founders building agentic systems can use this pipeline to assess governance models for their own protocols, identifying risks like centralization or fragmentation before launch.",
+              "Technical impact: The open-source LLM-assisted method enables scalable analysis of governance discourse, potentially becoming a standard tool for designing equitable AI standards."
+            ],
+            "whatToTry": {
+              "description": "Download the open-source pipeline from the paper to analyze your own protocol's governance discourse—apply LLM-assisted coding and topic modeling to spot participation inequality or thematic gaps in your community.",
+              "note": "Focus on comparing your governance structure against both permissionless (ERC-8004) and corporate (A2A) models to anticipate trade-offs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-2tftsa",
+                "title": "Agentic Analysis for Agentic Infrastructure: An LLM-Powered Pipeline for Comparative Governance of DAO and Corporate AI Protocols",
+                "url": "https://arxiv.org/abs/2606.26203",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-2tftsa-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-2tftsa-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-2tftsa-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-ue4j58",
+            "title": "Multi-Agent KG for Mental Health Med Info: Provenance-Aware AI",
+            "tldr": "A new multi-agent framework combines Reddit, WebMD reviews, and FDA adverse event data for psychiatric drugs, using a knowledge graph to keep regulatory facts and patient anecdotes separate. This enables traceable, auditable medication information seeking, with early detection of adverse events from community sources.",
+            "whyItMatters": [
+              "For founders building AI in healthcare or mental health, this shows a practical architecture for integrating high-risk, multi-source data without conflating evidence and anecdote, reducing liability and improving trust.",
+              "Technically, it demonstrates how knowledge graphs with provenance tracking (Neo4j, ATC-N, ICD-10, MedDRA) can make AI outputs auditable, a key requirement for regulated industries."
+            ],
+            "whatToTry": {
+              "description": "Consider adopting a provenance-aware knowledge graph approach for your AI product if you're aggregating data from both authoritative and user-generated sources. Start by mapping your data sources to standardized ontologies (like ICD-10 or MedDRA) and use a graph database to track the origin of each fact, enabling source-aware filtering and audit trails.",
+              "note": "This is especially critical for health, legal, or financial domains where mixing evidence and anecdote can cause harm or regulatory issues."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-ue4j58",
+                "title": "Knowledge-augmented Agentic AI for Mental Health Medication Information Seeking",
+                "url": "https://arxiv.org/abs/2606.26205",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-ue4j58-0",
+                "label": "Knowledge Graph",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-ue4j58-1",
+                "label": "Multi-Agent",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-ue4j58-2",
+                "label": "Healthcare",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-4j85xq",
+            "title": "New Governance Model for Autonomous AI Agents",
+            "tldr": "A new paper proposes a governance model where AI agents retain full autonomy over planning but require independent attestations for high-risk actions, with a proof-of-concept for software deployment and clinical prescribing. This offers a practical framework for founders to build safer, auditable AI systems without stifling innovation.",
+            "whyItMatters": [
+              "Provides a concrete, implementable governance model that balances agent autonomy with safety, reducing legal and operational risks for AI product deployment.",
+              "Introduces a cryptographic attestation mechanism that enables tamper-evident logging and independent verification, crucial for compliance in regulated industries like healthcare and finance."
+            ],
+            "whatToTry": {
+              "description": "Review your AI agent's execution pipeline and identify high-risk actions (e.g., code deployment, financial transactions). Design a policy that requires separate, independent attestations (e.g., from a human reviewer or another AI service) before those actions execute, and log all decisions in an immutable audit trail.",
+              "note": "Start with one high-risk action to test feasibility; the paper's proof-of-concept can serve as a reference architecture."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-4j85xq",
+                "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems",
+                "url": "https://arxiv.org/abs/2606.26298",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4j85xq-0",
+                "label": "Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4j85xq-1",
+                "label": "Autonomous Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-4j85xq-2",
+                "label": "Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-zp2ksz",
+            "title": "Verification Becomes Harder Than Coding for AI Agents",
+            "tldr": "A new paper argues that as coding agents get better at generating solutions, verification—not generation—becomes the bottleneck. It challenges the classic 'verification is easier than production' assumption, showing that reward hacking and underspecified intent make reliable verification a triple challenge of scalability, faithfulness, and robustness.",
+            "whyItMatters": [
+              "For founders building AI coding tools: your competitive edge may shift from generation quality to verification infrastructure—invest in robust reward signals and proxy metrics that resist gaming.",
+              "For those training coding agents: expect diminishing returns from improving base models alone; you'll need to solve the verification problem to avoid reward hacking and signal saturation."
+            ],
+            "whatToTry": {
+              "description": "Audit your current verification pipeline for coding agents. Identify which of the three dimensions—scalability, faithfulness, or robustness—is weakest, then experiment with combining multiple verifier types (e.g., test-based + rubric-based + human-in-the-loop) to create a more resilient signal.",
+              "note": "Start with simple test verifiers for well-defined tasks, but layer in rubric or agent verifiers for complex, open-ended coding challenges to catch reward hacking early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-zp2ksz",
+                "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
+                "url": "https://arxiv.org/abs/2606.26300",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-zp2ksz-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-zp2ksz-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-l5wslg",
+            "title": "New method detects and steers AI sycophancy with linear features",
+            "tldr": "Researchers developed an iterative data pipeline that isolates 'cascading linear features' to detect and control sycophancy in LLMs, outperforming LLM-as-a-judge and system prompting with lower compute and better interpretability.",
+            "whyItMatters": [
+              "Founders can reduce sycophancy in their AI products without expensive LLM judges, improving reliability and user trust.",
+              "The method offers a deterministic, interpretable way to steer model behavior, enabling safer deployment in customer-facing apps."
+            ],
+            "whatToTry": {
+              "description": "Explore the cascading features pipeline to detect sycophancy in your own models: collect contrastive samples showing degrees of sycophantic behavior, then use linear probes to identify and steer away from those features. Start with the open-source code and data at the provided URL.",
+              "note": "This approach works best with models where you have access to internal activations (e.g., open-source LLMs)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-l5wslg",
+                "title": "Detecting and Controlling Sycophancy with Cascading Linear Features",
+                "url": "https://arxiv.org/abs/2606.26155",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-l5wslg-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-l5wslg-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782488135784-x32tky",
+            "title": "AlgoEvolve: LLMs Evolve Trading Strategies with Meta-Evolution",
+            "tldr": "AlgoEvolve uses LLMs as mutation operators to evolve Python-based trading strategies, with a meta-evolutionary loop that optimizes the prompts themselves. This shows LLMs can handle noisy, non-stationary domains like finance, moving beyond static coding benchmarks.",
+            "whyItMatters": [
+              "For founders building AI-driven trading or financial products, this demonstrates a viable approach to generating adaptive strategies that can autonomously shift rules in changing markets, reducing manual tuning.",
+              "The meta-evolutionary outer loop that evolves prompts is a novel technique that could be applied to other complex domains (e.g., robotics, logistics) where search heuristics need continuous improvement."
+            ],
+            "whatToTry": {
+              "description": "Experiment with using an LLM as a mutation operator in your own evolutionary algorithm for a noisy domain (e.g., portfolio optimization, ad bidding). Start by defining a simple fitness function and a set of seed strategies, then let the LLM generate variants and select top performers iteratively.",
+              "note": "Ensure you have a robust evaluation pipeline to avoid overfitting to historical data, as financial markets are non-stationary."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782488135784-x32tky",
+                "title": "AlgoEvolve: LLM-driven Meta-evolution of Algorithmic Trading Programs",
+                "url": "https://arxiv.org/abs/2606.26173",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-x32tky-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782488135784-x32tky-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1782488135789-tvwqmh",
+            "title": "Anthropic: Power Concentration Is Key to AI Safety",
+            "tldr": "Anthropic defends its growing influence, arguing that centralizing control under its own governance is necessary for responsible AI development, sparking debate on safety vs. power accumulation.",
+            "whyItMatters": [
+              "Business impact: Founders must navigate the tension between scaling AI products and maintaining safety, potentially facing scrutiny over power concentration.",
+              "Technical impact: Anthropic's stance may influence how AI companies design governance and safety protocols, affecting open-source vs. closed-source debates."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own AI product's governance model: consider implementing transparent safety audits and third-party oversight to preempt criticism while scaling.",
+              "note": "This approach can build trust with users and regulators, especially if you're in a high-stakes domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1782488135789-tvwqmh",
+                "title": "Anthropic Thinks Its Own Success Is Key to Making AI Safe",
+                "url": "https://www.wired.com/story/anthropic-thinks-ai-can-only-be-safe-under-its-control/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1782488135789-tvwqmh-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782488135789-tvwqmh-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782488135789-tvwqmh-2",
+                "label": "Governance",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:49:13 +0000"
+          },
+          {
+            "id": "rss-hugging-face-blog-1782488135903-zst48n",
+            "title": "Run vLLM Server on HF Jobs with One Command",
+            "tldr": "Hugging Face now lets you deploy a vLLM server on their infrastructure with a single command, simplifying the process of serving large language models for inference.",
+            "whyItMatters": [
+              "Reduces the operational overhead of deploying and scaling LLM inference servers, allowing founders to focus on product development.",
+              "Enables rapid prototyping and testing of models without managing complex infrastructure, accelerating time-to-market for AI features."
+            ],
+            "whatToTry": {
+              "description": "Deploy a vLLM server for your chosen model using the Hugging Face Jobs API with a single command. For example, use `huggingface-cli jobs create --type vllm --model your-model` to spin up an inference endpoint instantly.",
+              "note": "Ensure your model is compatible with vLLM (e.g., Llama, Mistral) and monitor costs, as server time on HF Jobs is billed by usage."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1782488135903-zst48n",
+                "title": "Run a vLLM Server on HF Jobs in One Command",
+                "url": "https://huggingface.co/blog/vllm-jobs",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1782488135903-zst48n-0",
+                "label": "vLLM",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1782488135903-zst48n-1",
+                "label": "Hugging Face",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1782488135903-zst48n-2",
+                "label": "Inference",
+                "type": "topic"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 26 Jun 2026 00:00:00 GMT"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
