@@ -8,23 +8,23 @@
         "period": "afternoon",
         "date": "2026-06-29",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Personality Prompting in Multi-Agent LLMs: Task Matters, New training paradigm gives LLM agents internal world models for planning, ODYSSEY: Categorical Framework for Verifiable Foundation Models.",
+        "executiveSummary": "Today's highlights: Personality Prompting in Multi-Agent LLMs: Task Matters, New training paradigm gives LLM agents internal world models for planning, ODYSSEY: A Categorical Framework for Verifiable Foundation Models.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1782735249832-lo90qw",
+            "id": "rss-arxiv-ai-1782751444897-7tu9u7",
             "title": "Personality Prompting in Multi-Agent LLMs: Task Matters",
-            "tldr": "New research shows that manipulating personality traits in LLM agents affects performance differently by task: low agreeableness harms open-ended collaboration and bargaining but has little effect on structured coding. This has direct implications for designing multi-agent systems.",
+            "tldr": "A new study shows that prompting LLM agents with different personality traits (like agreeableness) significantly impacts performance in open-ended and bargaining tasks, but has little effect on structured coding. This highlights that personality composition is a critical design choice for multi-agent systems, depending on the task domain.",
             "whyItMatters": [
-              "For founders building multi-agent systems, this study provides actionable guidance on when to invest in personality prompting vs. when it's unnecessary, saving engineering effort and compute costs.",
-              "It reveals that personality effects are task-dependent, meaning one-size-fits-all agent design fails; you must tailor agent personas to the specific workflow."
+              "Business impact: Founders building multi-agent systems for collaborative or negotiation tasks must carefully design agent personalities to avoid performance degradation, while for coding tasks, personality shifts may be less critical.",
+              "Technical impact: The research provides empirical evidence that personality prompting is not a one-size-fits-all technique, guiding developers on when to invest in personality tuning vs. focusing on other system optimizations."
             ],
             "whatToTry": {
-              "description": "When designing multi-agent teams, map your tasks to the study's findings: for structured coding tasks, skip personality prompting to reduce complexity and cost; for open-ended collaboration or negotiation, experiment with high agreeableness prompts to boost performance.",
-              "note": "Test with your specific LLM and task domain, as results may vary by model and prompt engineering."
+              "description": "When designing multi-agent teams for open-ended tasks (e.g., research, bargaining), test low vs. high agreeableness prompts on a small scale to measure performance impact before deploying. For structured coding tasks, prioritize other optimizations over personality tuning.",
+              "note": "Consider using the paper's task taxonomy to categorize your own use case and apply personality effects accordingly."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-lo90qw",
+                "id": "src-rss-arxiv-ai-1782751444897-7tu9u7",
                 "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
                 "url": "https://arxiv.org/abs/2606.27443",
                 "domain": "arxiv.org",
@@ -33,19 +33,19 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-0",
+                "id": "tag-rss-arxiv-ai-1782751444897-7tu9u7-0",
                 "label": "Multi-Agent Systems",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-1",
-                "label": "LLM Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-2",
+                "id": "tag-rss-arxiv-ai-1782751444897-7tu9u7-1",
                 "label": "Personality Prompting",
                 "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782751444897-7tu9u7-2",
+                "label": "LLM Research",
+                "type": "model"
               }
             ],
             "category": "research",
@@ -54,20 +54,20 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1782735249832-bmjxt3",
+            "id": "rss-arxiv-ai-1782751444897-j7xg8h",
             "title": "New training paradigm gives LLM agents internal world models for planning",
-            "tldr": "A new paper introduces a three-stage training method (WM-AMT, FE-SFT, FC-RL) that enables LLM agents to internalize world models for 'what-if' reasoning, outperforming baselines on search and math tasks. This addresses a key limitation of reactive agents in long-horizon tasks.",
+            "tldr": "Researchers propose a three-stage training method (WM-AMT, FE-SFT, FC-RL) that enables LLM agents to simulate future outcomes internally before acting, outperforming standard fine-tuning on search and math tasks. This addresses a key limitation of reactive agents.",
             "whyItMatters": [
-              "Business impact: Enables building AI agents that can simulate future outcomes before acting, improving reliability in complex, multi-step tasks like logistics, robotics, or strategic planning.",
-              "Technical impact: Provides a practical, training-based approach to world model integration without architectural changes, making it easier to adopt with existing LLMs."
+              "For founders building autonomous agents, this offers a concrete path to improve long-horizon planning without external simulators, reducing reliance on costly rollouts.",
+              "The capability-first pipeline suggests that current post-training methods may miss deeper predictive reasoning, opening opportunities for more robust agent architectures."
             ],
             "whatToTry": {
-              "description": "If you're building agentic systems for long-horizon tasks, experiment with adding a 'simulate' step in your agent's loop: have it generate a textual plan, then conditionally predict success probabilities before execution. This mirrors the paper's foresight-conditioned RL approach.",
-              "note": "Start with simple domains like web navigation or data pipelines to validate the approach before scaling to complex environments."
+              "description": "Experiment with adding a world model stage to your agent training pipeline: after base pretraining, insert a mid-training phase (like WM-AMT) that forces the model to predict future states and success probabilities before fine-tuning on task-specific data.",
+              "note": "Start with small-scale tasks (e.g., navigation or math) to validate the approach before scaling to complex environments."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-bmjxt3",
+                "id": "src-rss-arxiv-ai-1782751444897-j7xg8h",
                 "title": "Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning",
                 "url": "https://arxiv.org/abs/2606.27483",
                 "domain": "arxiv.org",
@@ -76,18 +76,13 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-0",
+                "id": "tag-rss-arxiv-ai-1782751444897-j7xg8h-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-1",
-                "label": "research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-2",
-                "label": "agents",
+                "id": "tag-rss-arxiv-ai-1782751444897-j7xg8h-1",
+                "label": "topic",
                 "type": "topic"
               }
             ],
@@ -97,20 +92,20 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1782735249832-tbn7on",
-            "title": "ODYSSEY: Categorical Framework for Verifiable Foundation Models",
-            "tldr": "A new paper introduces ODYSSEY, a categorical framework for building verifiable, local truth-preserving foundation models using sheaf theory and Kan extensions. It offers a structured approach to compose 'foundries' (architectural components) with built-in argumentation, enabling domain-specific, auditable AI systems—a potential game-changer for regulated industries.",
+            "id": "rss-arxiv-ai-1782751444898-hy3y6q",
+            "title": "ODYSSEY: A Categorical Framework for Verifiable Foundation Models",
+            "tldr": "A new arXiv paper introduces ODYSSEY, a categorical framework for building verifiable, local truth-preserving foundation models using sheaf theory and Kan extensions. It offers a principled approach to constructing AI systems with built-in argumentation and consistency checks, which could be critical for high-stakes AI applications.",
             "whyItMatters": [
-              "Business impact: Enables building AI systems with verifiable truth preservation and audit trails, crucial for regulated sectors like finance, healthcare, and legal.",
-              "Technical impact: Provides a formal, compositional method (using sheaves and Kan extensions) to construct foundation models that maintain local consistency and can be certified via TICKET, reducing hallucination risks."
+              "Provides a formal method to ensure AI models maintain truth and consistency across different contexts, addressing a key trust issue in AI products.",
+              "Introduces Foundry SQL and TICKET certification for integrating external models, enabling modular and auditable AI system design."
             ],
             "whatToTry": {
-              "description": "Explore the ODYSSEY framework for your AI product by reviewing the paper's implementation details and testing its Foundry SQL (FSQL) for slicing maintained artifacts. Consider applying it to a domain where verifiability is critical, like compliance or scientific research.",
-              "note": "The framework is fully implemented; start with the evaluation-harness foundry to assess its fit for your use case."
+              "description": "For founders building AI in regulated or high-stakes domains (e.g., finance, healthcare, legal), explore the ODYSSEY framework's sheaf-based approach to design your model's architecture for verifiability. Start by mapping your domain's local contexts and constraints using the foundry concept.",
+              "note": "This is a research paper; practical implementation may require significant adaptation. Consider collaborating with academic partners or hiring experts in category theory."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-tbn7on",
+                "id": "src-rss-arxiv-ai-1782751444898-hy3y6q",
                 "title": "Odyssey: Constructing Verifiable Local Truth-Preserving Foundation Models",
                 "url": "https://arxiv.org/abs/2606.27593",
                 "domain": "arxiv.org",
@@ -119,18 +114,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-0",
+                "id": "tag-rss-arxiv-ai-1782751444898-hy3y6q-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-1",
-                "label": "tool",
-                "type": "tool"
+                "id": "tag-rss-arxiv-ai-1782751444898-hy3y6q-1",
+                "label": "research",
+                "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-2",
-                "label": "topic",
+                "id": "tag-rss-arxiv-ai-1782751444898-hy3y6q-2",
+                "label": "verifiability",
                 "type": "topic"
               }
             ],
@@ -140,20 +135,20 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1782735249832-v66fqk",
-            "title": "Tree of Evidence: New Framework Fights AI-Generated Misinfo",
-            "tldr": "A new hierarchical fact-checking framework, Tree of Evidence (ToE), uses reinforcement learning to dynamically retrieve and verify claims across multiple sources, showing 4-24% accuracy gains against adversarial misinformation. This matters as GEO poisoning makes fake news harder to detect.",
+            "id": "rss-arxiv-ai-1782751444898-9v1mkv",
+            "title": "Tree of Evidence: New Framework for Explainable Fact-Checking Against AI Misinfo",
+            "tldr": "A new hierarchical framework, Tree of Evidence (ToE), uses reinforcement learning to dynamically retrieve and aggregate evidence from multiple sources for claim verification, achieving 4-24% accuracy gains over baselines, especially against AI-generated misinformation under GEO poisoning.",
             "whyItMatters": [
-              "For founders building AI products that rely on retrieved information (e.g., RAG systems, search tools), ToE offers a blueprint for robust verification against adversarial content poisoning.",
-              "The dynamic evidence tree approach provides explainable reasoning chains, which is critical for trust and compliance in regulated industries like healthcare or finance."
+              "For founders building AI products that rely on LLM-generated content or retrieval-augmented generation (RAG), this framework offers a robust method to detect and mitigate adversarial misinformation, improving trustworthiness and safety.",
+              "The theoretical error bound and explainable evidence chain provide a foundation for building verifiable AI systems, which is critical for compliance and user trust in regulated industries."
             ],
             "whatToTry": {
-              "description": "Evaluate your current retrieval pipeline for adversarial robustness. If you use RAG, consider implementing a multi-source verification step (e.g., cross-referencing top-k results from different sources) to catch poisoned content before it reaches your LLM.",
-              "note": "Start with a simple majority-vote or consistency check across sources before adopting a full RL-based approach."
+              "description": "Evaluate integrating a hierarchical evidence retrieval and aggregation step into your RAG pipeline, using reinforcement learning to dynamically select and verify sources, especially if your product faces adversarial inputs or needs explainable outputs.",
+              "note": "Start with a small-scale prototype using open-source LLMs and a multi-source retrieval agent to test the approach on your specific domain data."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-v66fqk",
+                "id": "src-rss-arxiv-ai-1782751444898-9v1mkv",
                 "title": "ToE: A Hierarchical and Explainable Claim Verification Framework with Dynamic Multi-source Evidence Retrieval and Aggregation",
                 "url": "https://arxiv.org/abs/2606.27736",
                 "domain": "arxiv.org",
@@ -162,12 +157,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-v66fqk-0",
+                "id": "tag-rss-arxiv-ai-1782751444898-9v1mkv-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-v66fqk-1",
+                "id": "tag-rss-arxiv-ai-1782751444898-9v1mkv-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782751444898-9v1mkv-2",
                 "label": "topic",
                 "type": "topic"
               }
@@ -178,101 +178,101 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1782735249832-6favem",
-            "title": "GILP: Hybrid World Model Cuts LLM Hallucinations by 80%",
-            "tldr": "A new method, Grounded Iterative Language Planning (GILP), combines a small parameterized world model with LLM reasoning to reduce hallucinated state changes from 17.6% to 3.5% on planning benchmarks, boosting success rates by 25% with minimal extra compute.",
+            "id": "rss-techcrunch-ai-1782751444707-0eighu",
+            "title": "TIDAL blocks AI music monetization: what founders need to know",
+            "tldr": "TIDAL has updated its policy to prevent AI-generated music from earning royalties on its platform, signaling a growing industry trend that AI music startups must navigate carefully.",
             "whyItMatters": [
-              "For founders building LLM agents that interact with real-world systems (e.g., automation, robotics, code generation), hallucinated state changes can lead to costly errors. GILP offers a practical hybrid approach to ground agent reasoning without sacrificing flexibility.",
-              "The parameterized world model provides measurable error metrics (NodeMSE, delta accuracy), enabling better debugging and validation of agent behavior—critical for production deployments."
+              "For founders building AI music tools, this policy change creates a clear barrier to monetization on major streaming platforms, potentially limiting distribution and revenue models.",
+              "Technically, it may force AI music startups to invest in provenance detection or human-in-the-loop workflows to prove content is not fully AI-generated."
             ],
             "whatToTry": {
-              "description": "If you're building an LLM agent for a structured task (e.g., API orchestration, game playing, or simulation), prototype a small parameterized world model (e.g., a lightweight transformer) that predicts state transitions. Use it as a consistency gate: when the LLM's proposed action and the model's predicted delta disagree, trigger a revision loop. This can be implemented with existing LLM APIs and a few hundred lines of code.",
-              "note": "Start with a simple graph or state machine domain to validate the approach before scaling to more complex environments."
+              "description": "If you're building an AI music product, audit your distribution strategy now. Consider partnering with platforms that have clear AI policies or build in features that allow artists to verify human involvement (e.g., recording metadata, human co-creation logs) to avoid future monetization blocks.",
+              "note": "This is a fast-moving space—monitor other platforms like Spotify and Apple Music for similar policy updates."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-6favem",
-                "title": "Grounded Iterative Language Planning: How Parameterized World Models Reduce Hallucination Propagation in LLM Agents",
-                "url": "https://arxiv.org/abs/2606.27806",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-6favem-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-6favem-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-6favem-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782735249665-t9lwlb",
-            "title": "Ford rehires 'gray beard' engineers after AI falls short",
-            "tldr": "Ford admits AI alone couldn't deliver quality, rehiring experienced engineers. This underscores the critical need for domain expertise alongside AI in complex manufacturing.",
-            "whyItMatters": [
-              "Business impact: Founders must avoid over-reliance on AI for mission-critical tasks; human expertise remains essential for quality control and nuanced decision-making.",
-              "Technical impact: AI models need high-quality, domain-specific training data and human oversight to avoid costly failures in production environments."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI deployment for tasks requiring deep domain knowledge. Pair AI outputs with expert review loops, especially in regulated or high-stakes industries like manufacturing, healthcare, or finance.",
-              "note": "Consider building a 'human-in-the-loop' system where domain experts validate AI decisions before they impact production."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782735249665-t9lwlb",
-                "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
-                "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
+                "id": "src-rss-techcrunch-ai-1782751444707-0eighu",
+                "title": "TIDAL cracks down on AI music by cutting off monetization",
+                "url": "https://techcrunch.com/2026/06/29/tidal-cracks-down-on-ai-music-by-cutting-off-monetization/",
                 "domain": "techcrunch.com",
                 "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-techcrunch-ai-1782735249665-t9lwlb-0",
-                "label": "Industry",
+                "id": "tag-rss-techcrunch-ai-1782751444707-0eighu-0",
+                "label": "topic",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1782735249665-t9lwlb-1",
-                "label": "AI Deployment",
+                "id": "tag-rss-techcrunch-ai-1782751444707-0eighu-1",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 16:29:04 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782751444707-e1v8bd",
+            "title": "Robot hand startup settles Tesla suit, raises $11M for novel data approach",
+            "tldr": "Proception settled a trade secret lawsuit with Tesla and raised $11M to advance its unique data collection method for robotic hands, a notoriously hard problem in robotics.",
+            "whyItMatters": [
+              "Highlights the critical bottleneck of dexterous manipulation in robotics and a novel approach to solving it, which could unlock new automation capabilities.",
+              "Shows that even amidst legal challenges, investors are betting on differentiated data strategies for physical AI, signaling a shift toward data-centric robotics."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own training data pipeline for robotic manipulation tasks—consider if you can collect real-world interaction data more efficiently (e.g., via teleoperation or synthetic generation) to gain a competitive edge.",
+              "note": "Proception's approach may involve human-in-the-loop data collection; explore partnerships with research labs or use simulation tools like MuJoCo or Isaac Sim to prototype."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782751444707-e1v8bd",
+                "title": "Robot hand company settles Tesla trade secret suit and announces $11M raise",
+                "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782751444707-e1v8bd-0",
+                "label": "Robotics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782751444707-e1v8bd-1",
+                "label": "Training Data",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782751444707-e1v8bd-2",
+                "label": "Funding",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Sun, 28 Jun 2026 19:05:39 +0000"
+            "publishedAt": "Mon, 29 Jun 2026 14:00:08 +0000"
           },
           {
-            "id": "rss-wired-ai-1782735249623-zwr4ce",
-            "title": "Humanoid Robot Intern: Competent Office Worker from Flexion Robotics",
-            "tldr": "Flexion Robotics, founded by ex-Nvidia engineers, has developed a humanoid robot that can perform office intern tasks with surprising competence, signaling a shift in how robots are trained for real-world work.",
+            "id": "rss-wired-ai-1782751444697-08r7s9",
+            "title": "Humanoid Robot Intern: Competent, Cheap, and Scaling Fast",
+            "tldr": "Flexion Robotics, founded by ex-Nvidia engineers, has trained a humanoid robot to perform office tasks like fetching coffee and delivering packages, using a novel simulation-to-reality transfer method. This signals a shift toward practical, cost-effective robotics for mundane labor, with implications for startups building AI-powered automation.",
             "whyItMatters": [
-              "Business impact: Could reduce labor costs for repetitive office tasks, potentially disrupting the intern market and entry-level roles.",
-              "Technical impact: Demonstrates a novel training approach that makes robots more adaptable to dynamic environments, accelerating deployment in commercial settings."
+              "Business impact: Reduces labor costs for repetitive office tasks, potentially disrupting intern hiring and low-skill service roles.",
+              "Technical impact: Demonstrates a scalable training pipeline (sim-to-real) that could accelerate deployment of humanoid robots in unstructured environments."
             ],
             "whatToTry": {
-              "description": "Evaluate your own workflows for tasks that are repetitive, rule-based, and low-risk (e.g., data entry, document sorting, scheduling). Consider piloting a humanoid robot like Flexion's to automate these, starting with a single department to measure efficiency gains.",
-              "note": "Start with non-customer-facing tasks to minimize risk and gather data on reliability before scaling."
+              "description": "Evaluate your startup's workflows for tasks that are repetitive, location-dependent, and low-cognition (e.g., fetching, sorting, basic delivery). Consider prototyping with Flexion's API or similar sim-to-real platforms to automate these tasks, reducing operational overhead.",
+              "note": "Start with a single, high-volume task to test reliability and ROI before scaling."
             },
             "sources": [
               {
-                "id": "src-rss-wired-ai-1782735249623-zwr4ce",
+                "id": "src-rss-wired-ai-1782751444697-08r7s9",
                 "title": "This Humanoid Robot Is a Terrifyingly Competent Office Intern",
                 "url": "https://www.wired.com/story/this-robot-is-going-to-replace-your-interns-flexion/",
                 "domain": "wired.com",
@@ -281,17 +281,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-0",
+                "id": "tag-rss-wired-ai-1782751444697-08r7s9-0",
                 "label": "Flexion Robotics",
                 "type": "tool"
               },
               {
-                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-1",
+                "id": "tag-rss-wired-ai-1782751444697-08r7s9-1",
                 "label": "Humanoid Robot",
                 "type": "model"
               },
               {
-                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-2",
+                "id": "tag-rss-wired-ai-1782751444697-08r7s9-2",
                 "label": "Automation",
                 "type": "topic"
               }
@@ -302,63 +302,20 @@
             "publishedAt": "Mon, 29 Jun 2026 08:00:00 +0000"
           },
           {
-            "id": "rss-openai-blog-1782735250145-ubcsbz",
-            "title": "OpenAI Maps EU Jobs at Risk & Opportunity from AI",
-            "tldr": "OpenAI released a report analyzing how AI will impact occupations across the EU, identifying roles most exposed to automation, growth, and workflow changes. This provides a data-driven map for founders to target AI product opportunities in specific sectors.",
+            "id": "rss-arxiv-ai-1782751444897-mvj2hd",
+            "title": "World Wide AI-ModelNet: Interconnecting Models Like the Internet",
+            "tldr": "A new paper proposes AI-ModelNet, a paradigm for interconnecting heterogeneous AI models to enable sharing and collaborative reasoning, addressing high costs and deployment complexities of large models. This concept could reshape how founders build and deploy AI systems.",
             "whyItMatters": [
-              "Founders can identify high-impact verticals for AI products based on which EU jobs are most exposed to automation or augmentation.",
-              "The report offers a framework to anticipate regulatory and workforce shifts, helping founders align product strategy with EU labor trends."
+              "Business impact: Enables cost-effective AI by leveraging lightweight, domain-specific models that collaborate, reducing reliance on monolithic large models and lowering infrastructure costs.",
+              "Technical impact: Introduces a standardized architecture for model-to-model communication, potentially unlocking new capabilities like federated reasoning and dynamic model composition."
             ],
             "whatToTry": {
-              "description": "Review the report's occupational categories to pinpoint sectors with high automation potential (e.g., administrative roles) and target those for AI workflow tools. For growth areas (e.g., AI-related tech jobs), consider building upskilling or productivity solutions.",
-              "note": "Use the EU-specific data to tailor your go-to-market strategy for European customers, as local labor dynamics may differ from global trends."
+              "description": "Explore building modular AI systems where specialized models (e.g., for vision, NLP, or domain tasks) can be interconnected via APIs or lightweight protocols, similar to microservices. Start by identifying a use case where combining small models outperforms a single large model.",
+              "note": "Focus on interoperability standards (e.g., shared schemas) early to avoid vendor lock-in."
             },
             "sources": [
               {
-                "id": "src-rss-openai-blog-1782735250145-ubcsbz",
-                "title": "Mapping Europe’s AI Workforce Opportunity",
-                "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-1",
-                "label": "EU AI Jobs",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-2",
-                "label": "Workforce Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 29 Jun 2026 07:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1782735249832-72ezyr",
-            "title": "AI-ModelNet: A New Paradigm for Interconnecting AI Models",
-            "tldr": "A new paper proposes AI-ModelNet, a framework inspired by the Internet, to enable interconnection, capability sharing, and collaborative reasoning among heterogeneous AI models. This addresses the bottleneck of model collaboration as the industry shifts from monolithic large models to lightweight, domain-specific ones.",
-            "whyItMatters": [
-              "For founders building AI products, this concept suggests a future where models are interoperable, reducing vendor lock-in and enabling composable AI systems. It could lower integration costs and accelerate product development by leveraging specialized models from different providers.",
-              "Technically, it introduces a hierarchical architecture for model routing and orchestration, which could influence how AI platforms design APIs and middleware for multi-model workflows."
-            ],
-            "whatToTry": {
-              "description": "Explore designing your AI product's architecture to support modular, interchangeable models. Consider implementing a simple model router or adapter layer that can switch between different models (e.g., for different tasks like summarization vs. reasoning) to future-proof against the trend toward model networks.",
-              "note": "Start with a proof-of-concept using existing APIs (e.g., OpenAI, Anthropic, open-source models) to test interoperability before committing to a full framework."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782735249832-72ezyr",
+                "id": "src-rss-arxiv-ai-1782751444897-mvj2hd",
                 "title": "AI-Model Network: Concept, Current State and Future",
                 "url": "https://arxiv.org/abs/2606.27382",
                 "domain": "arxiv.org",
@@ -367,18 +324,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-0",
+                "id": "tag-rss-arxiv-ai-1782751444897-mvj2hd-0",
                 "label": "AI-ModelNet",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-1",
-                "label": "model collaboration",
-                "type": "topic"
+                "id": "tag-rss-arxiv-ai-1782751444897-mvj2hd-1",
+                "label": "Large Models",
+                "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-2",
-                "label": "research",
+                "id": "tag-rss-arxiv-ai-1782751444897-mvj2hd-2",
+                "label": "Collaborative AI",
                 "type": "topic"
               }
             ],
@@ -388,20 +345,20 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1782735249832-ypt6kp",
-            "title": "DysLexLens: LLM Framework for Analyzing Dyslexic Learners in Forums",
-            "tldr": "A new low-resource LLM framework, DysLexLens, extracts insights from noisy Reddit posts to understand how dyslexic learners use AI tools. It combines dictionary filtering, knowledge graphs, and hallucination checks, offering a blueprint for building niche, evidence-traceable AI analysis tools from sparse data.",
+            "id": "rss-arxiv-ai-1782751444898-s2mnpc",
+            "title": "DysLexLens: LLM Framework for Analyzing Dyslexic Learners' AI Use",
+            "tldr": "Researchers propose DysLexLens, a low-resource LLM framework that analyzes dyslexic learners' experiences with AI tools by processing noisy social media data from Reddit. It combines dictionary-driven filtering, knowledge graphs, and evaluation metrics to extract actionable insights, addressing a gap in understanding how underserved users interact with AI.",
             "whyItMatters": [
-              "Business impact: Enables founders to build specialized AI analytics for underserved user groups (e.g., accessibility) using low-resource data, opening niche markets.",
-              "Technical impact: Provides a replicable architecture (dictionary filtering + KG reasoning + hallucination evaluation) for creating reliable, verifiable LLM-based analysis from noisy social media."
+              "Business impact: Founders building AI products for accessibility or education can use this framework to analyze user feedback from forums, improving product design for neurodiverse users without requiring massive datasets.",
+              "Technical impact: Demonstrates a practical approach to low-resource LLM applications with built-in hallucination detection and evidence alignment, which can be adapted for other niche domains."
             ],
             "whatToTry": {
-              "description": "If you're building an AI product for a niche audience (e.g., accessibility, education), adopt DysLexLens' approach: start with a domain-specific dictionary to filter noisy forum data, then use a knowledge graph to structure LLM queries and add RAGAS-based evaluation to catch hallucinations before surfacing insights.",
-              "note": "Focus on low-resource settings where labeled data is scarce; the dictionary-driven filtering is key to reducing noise without expensive annotation."
+              "description": "If you're building AI tools for accessibility, consider implementing a similar dictionary-driven filtering pipeline to extract high-signal user feedback from social media. Start by curating a domain-specific keyword list and use a lightweight LLM to classify and summarize posts, then validate outputs with a knowledge graph for traceability.",
+              "note": "Focus on Reddit or other forums where neurodiverse communities actively discuss AI tools; this approach reduces noise and improves relevance without expensive fine-tuning."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1782735249832-ypt6kp",
+                "id": "src-rss-arxiv-ai-1782751444898-s2mnpc",
                 "title": "DysLexLens: A Low-Resource LLM Framework for Analysing Dyslexic Learners Insights from Online Forums",
                 "url": "https://arxiv.org/abs/2606.27619",
                 "domain": "arxiv.org",
@@ -410,17 +367,55 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-0",
+                "id": "tag-rss-arxiv-ai-1782751444898-s2mnpc-0",
+                "label": "LLM Framework",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782751444898-s2mnpc-1",
+                "label": "Accessibility",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782751444898-s2mnpc-2",
+                "label": "Low-Resource",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782751444898-i7xpg1",
+            "title": "MER-R1: Boosting Emotion AI with Fast-Slow Thinking Synergy",
+            "tldr": "A new RL framework, MER-R1, shows that combining fast (intuitive) and slow (deliberative) reasoning improves multimodal emotion recognition, achieving SOTA on benchmarks. Key insight: fast thinking boosts recall, slow thinking boosts precision—MER-R1 optimizes both jointly.",
+            "whyItMatters": [
+              "Business impact: Enables more accurate and interpretable emotion AI for customer sentiment analysis, mental health apps, or human-computer interaction, reducing false positives/negatives.",
+              "Technical impact: Provides a practical RL-based method to balance recall and precision in multimodal models, applicable beyond emotion recognition to any classification task with reasoning."
+            ],
+            "whatToTry": {
+              "description": "If building emotion-aware products, test MER-R1's dual-objective approach by fine-tuning your MLLM with separate recall and precision rewards. Start with a small dataset to see if it reduces overconfident errors while maintaining coverage.",
+              "note": "Requires access to multimodal data (e.g., video+audio+text) and RL infrastructure; consider using LoRA for efficiency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782751444898-i7xpg1",
+                "title": "MER-R1: Multimodal Emotion Reasoning via Slow-Fast Thinking Synergy",
+                "url": "https://arxiv.org/abs/2606.27652",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782751444898-i7xpg1-0",
                 "label": "model",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-2",
+                "id": "tag-rss-arxiv-ai-1782751444898-i7xpg1-1",
                 "label": "topic",
                 "type": "topic"
               }
@@ -431,7 +426,7 @@
             "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
           }
         ],
-        "totalReadTimeMinutes": 22,
+        "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
       }
