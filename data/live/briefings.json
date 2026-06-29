@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-06-28",
+    "date": "2026-06-29",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-29-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-29",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Personality Prompting in Multi-Agent LLMs: Task Matters, New training paradigm gives LLM agents internal world models for planning, ODYSSEY: Categorical Framework for Verifiable Foundation Models.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1782735249832-lo90qw",
+            "title": "Personality Prompting in Multi-Agent LLMs: Task Matters",
+            "tldr": "New research shows that manipulating personality traits in LLM agents affects performance differently by task: low agreeableness harms open-ended collaboration and bargaining but has little effect on structured coding. This has direct implications for designing multi-agent systems.",
+            "whyItMatters": [
+              "For founders building multi-agent systems, this study provides actionable guidance on when to invest in personality prompting vs. when it's unnecessary, saving engineering effort and compute costs.",
+              "It reveals that personality effects are task-dependent, meaning one-size-fits-all agent design fails; you must tailor agent personas to the specific workflow."
+            ],
+            "whatToTry": {
+              "description": "When designing multi-agent teams, map your tasks to the study's findings: for structured coding tasks, skip personality prompting to reduce complexity and cost; for open-ended collaboration or negotiation, experiment with high agreeableness prompts to boost performance.",
+              "note": "Test with your specific LLM and task domain, as results may vary by model and prompt engineering."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-lo90qw",
+                "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
+                "url": "https://arxiv.org/abs/2606.27443",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-1",
+                "label": "LLM Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-lo90qw-2",
+                "label": "Personality Prompting",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-bmjxt3",
+            "title": "New training paradigm gives LLM agents internal world models for planning",
+            "tldr": "A new paper introduces a three-stage training method (WM-AMT, FE-SFT, FC-RL) that enables LLM agents to internalize world models for 'what-if' reasoning, outperforming baselines on search and math tasks. This addresses a key limitation of reactive agents in long-horizon tasks.",
+            "whyItMatters": [
+              "Business impact: Enables building AI agents that can simulate future outcomes before acting, improving reliability in complex, multi-step tasks like logistics, robotics, or strategic planning.",
+              "Technical impact: Provides a practical, training-based approach to world model integration without architectural changes, making it easier to adopt with existing LLMs."
+            ],
+            "whatToTry": {
+              "description": "If you're building agentic systems for long-horizon tasks, experiment with adding a 'simulate' step in your agent's loop: have it generate a textual plan, then conditionally predict success probabilities before execution. This mirrors the paper's foresight-conditioned RL approach.",
+              "note": "Start with simple domains like web navigation or data pipelines to validate the approach before scaling to complex environments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-bmjxt3",
+                "title": "Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning",
+                "url": "https://arxiv.org/abs/2606.27483",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-1",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-bmjxt3-2",
+                "label": "agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-tbn7on",
+            "title": "ODYSSEY: Categorical Framework for Verifiable Foundation Models",
+            "tldr": "A new paper introduces ODYSSEY, a categorical framework for building verifiable, local truth-preserving foundation models using sheaf theory and Kan extensions. It offers a structured approach to compose 'foundries' (architectural components) with built-in argumentation, enabling domain-specific, auditable AI systems—a potential game-changer for regulated industries.",
+            "whyItMatters": [
+              "Business impact: Enables building AI systems with verifiable truth preservation and audit trails, crucial for regulated sectors like finance, healthcare, and legal.",
+              "Technical impact: Provides a formal, compositional method (using sheaves and Kan extensions) to construct foundation models that maintain local consistency and can be certified via TICKET, reducing hallucination risks."
+            ],
+            "whatToTry": {
+              "description": "Explore the ODYSSEY framework for your AI product by reviewing the paper's implementation details and testing its Foundry SQL (FSQL) for slicing maintained artifacts. Consider applying it to a domain where verifiability is critical, like compliance or scientific research.",
+              "note": "The framework is fully implemented; start with the evaluation-harness foundry to assess its fit for your use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-tbn7on",
+                "title": "Odyssey: Constructing Verifiable Local Truth-Preserving Foundation Models",
+                "url": "https://arxiv.org/abs/2606.27593",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-tbn7on-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-v66fqk",
+            "title": "Tree of Evidence: New Framework Fights AI-Generated Misinfo",
+            "tldr": "A new hierarchical fact-checking framework, Tree of Evidence (ToE), uses reinforcement learning to dynamically retrieve and verify claims across multiple sources, showing 4-24% accuracy gains against adversarial misinformation. This matters as GEO poisoning makes fake news harder to detect.",
+            "whyItMatters": [
+              "For founders building AI products that rely on retrieved information (e.g., RAG systems, search tools), ToE offers a blueprint for robust verification against adversarial content poisoning.",
+              "The dynamic evidence tree approach provides explainable reasoning chains, which is critical for trust and compliance in regulated industries like healthcare or finance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current retrieval pipeline for adversarial robustness. If you use RAG, consider implementing a multi-source verification step (e.g., cross-referencing top-k results from different sources) to catch poisoned content before it reaches your LLM.",
+              "note": "Start with a simple majority-vote or consistency check across sources before adopting a full RL-based approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-v66fqk",
+                "title": "ToE: A Hierarchical and Explainable Claim Verification Framework with Dynamic Multi-source Evidence Retrieval and Aggregation",
+                "url": "https://arxiv.org/abs/2606.27736",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-v66fqk-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-v66fqk-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-6favem",
+            "title": "GILP: Hybrid World Model Cuts LLM Hallucinations by 80%",
+            "tldr": "A new method, Grounded Iterative Language Planning (GILP), combines a small parameterized world model with LLM reasoning to reduce hallucinated state changes from 17.6% to 3.5% on planning benchmarks, boosting success rates by 25% with minimal extra compute.",
+            "whyItMatters": [
+              "For founders building LLM agents that interact with real-world systems (e.g., automation, robotics, code generation), hallucinated state changes can lead to costly errors. GILP offers a practical hybrid approach to ground agent reasoning without sacrificing flexibility.",
+              "The parameterized world model provides measurable error metrics (NodeMSE, delta accuracy), enabling better debugging and validation of agent behavior—critical for production deployments."
+            ],
+            "whatToTry": {
+              "description": "If you're building an LLM agent for a structured task (e.g., API orchestration, game playing, or simulation), prototype a small parameterized world model (e.g., a lightweight transformer) that predicts state transitions. Use it as a consistency gate: when the LLM's proposed action and the model's predicted delta disagree, trigger a revision loop. This can be implemented with existing LLM APIs and a few hundred lines of code.",
+              "note": "Start with a simple graph or state machine domain to validate the approach before scaling to more complex environments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-6favem",
+                "title": "Grounded Iterative Language Planning: How Parameterized World Models Reduce Hallucination Propagation in LLM Agents",
+                "url": "https://arxiv.org/abs/2606.27806",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-6favem-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-6favem-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-6favem-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782735249665-t9lwlb",
+            "title": "Ford rehires 'gray beard' engineers after AI falls short",
+            "tldr": "Ford admits AI alone couldn't deliver quality, rehiring experienced engineers. This underscores the critical need for domain expertise alongside AI in complex manufacturing.",
+            "whyItMatters": [
+              "Business impact: Founders must avoid over-reliance on AI for mission-critical tasks; human expertise remains essential for quality control and nuanced decision-making.",
+              "Technical impact: AI models need high-quality, domain-specific training data and human oversight to avoid costly failures in production environments."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI deployment for tasks requiring deep domain knowledge. Pair AI outputs with expert review loops, especially in regulated or high-stakes industries like manufacturing, healthcare, or finance.",
+              "note": "Consider building a 'human-in-the-loop' system where domain experts validate AI decisions before they impact production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782735249665-t9lwlb",
+                "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
+                "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782735249665-t9lwlb-0",
+                "label": "Industry",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782735249665-t9lwlb-1",
+                "label": "AI Deployment",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 28 Jun 2026 19:05:39 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1782735249623-zwr4ce",
+            "title": "Humanoid Robot Intern: Competent Office Worker from Flexion Robotics",
+            "tldr": "Flexion Robotics, founded by ex-Nvidia engineers, has developed a humanoid robot that can perform office intern tasks with surprising competence, signaling a shift in how robots are trained for real-world work.",
+            "whyItMatters": [
+              "Business impact: Could reduce labor costs for repetitive office tasks, potentially disrupting the intern market and entry-level roles.",
+              "Technical impact: Demonstrates a novel training approach that makes robots more adaptable to dynamic environments, accelerating deployment in commercial settings."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own workflows for tasks that are repetitive, rule-based, and low-risk (e.g., data entry, document sorting, scheduling). Consider piloting a humanoid robot like Flexion's to automate these, starting with a single department to measure efficiency gains.",
+              "note": "Start with non-customer-facing tasks to minimize risk and gather data on reliability before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1782735249623-zwr4ce",
+                "title": "This Humanoid Robot Is a Terrifyingly Competent Office Intern",
+                "url": "https://www.wired.com/story/this-robot-is-going-to-replace-your-interns-flexion/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-0",
+                "label": "Flexion Robotics",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-1",
+                "label": "Humanoid Robot",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782735249623-zwr4ce-2",
+                "label": "Automation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 08:00:00 +0000"
+          },
+          {
+            "id": "rss-openai-blog-1782735250145-ubcsbz",
+            "title": "OpenAI Maps EU Jobs at Risk & Opportunity from AI",
+            "tldr": "OpenAI released a report analyzing how AI will impact occupations across the EU, identifying roles most exposed to automation, growth, and workflow changes. This provides a data-driven map for founders to target AI product opportunities in specific sectors.",
+            "whyItMatters": [
+              "Founders can identify high-impact verticals for AI products based on which EU jobs are most exposed to automation or augmentation.",
+              "The report offers a framework to anticipate regulatory and workforce shifts, helping founders align product strategy with EU labor trends."
+            ],
+            "whatToTry": {
+              "description": "Review the report's occupational categories to pinpoint sectors with high automation potential (e.g., administrative roles) and target those for AI workflow tools. For growth areas (e.g., AI-related tech jobs), consider building upskilling or productivity solutions.",
+              "note": "Use the EU-specific data to tailor your go-to-market strategy for European customers, as local labor dynamics may differ from global trends."
+            },
+            "sources": [
+              {
+                "id": "src-rss-openai-blog-1782735250145-ubcsbz",
+                "title": "Mapping Europe’s AI Workforce Opportunity",
+                "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-0",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-1",
+                "label": "EU AI Jobs",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-openai-blog-1782735250145-ubcsbz-2",
+                "label": "Workforce Automation",
+                "type": "topic"
+              }
+            ],
+            "category": "releases",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 07:00:00 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-72ezyr",
+            "title": "AI-ModelNet: A New Paradigm for Interconnecting AI Models",
+            "tldr": "A new paper proposes AI-ModelNet, a framework inspired by the Internet, to enable interconnection, capability sharing, and collaborative reasoning among heterogeneous AI models. This addresses the bottleneck of model collaboration as the industry shifts from monolithic large models to lightweight, domain-specific ones.",
+            "whyItMatters": [
+              "For founders building AI products, this concept suggests a future where models are interoperable, reducing vendor lock-in and enabling composable AI systems. It could lower integration costs and accelerate product development by leveraging specialized models from different providers.",
+              "Technically, it introduces a hierarchical architecture for model routing and orchestration, which could influence how AI platforms design APIs and middleware for multi-model workflows."
+            ],
+            "whatToTry": {
+              "description": "Explore designing your AI product's architecture to support modular, interchangeable models. Consider implementing a simple model router or adapter layer that can switch between different models (e.g., for different tasks like summarization vs. reasoning) to future-proof against the trend toward model networks.",
+              "note": "Start with a proof-of-concept using existing APIs (e.g., OpenAI, Anthropic, open-source models) to test interoperability before committing to a full framework."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-72ezyr",
+                "title": "AI-Model Network: Concept, Current State and Future",
+                "url": "https://arxiv.org/abs/2606.27382",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-0",
+                "label": "AI-ModelNet",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-1",
+                "label": "model collaboration",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-72ezyr-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782735249832-ypt6kp",
+            "title": "DysLexLens: LLM Framework for Analyzing Dyslexic Learners in Forums",
+            "tldr": "A new low-resource LLM framework, DysLexLens, extracts insights from noisy Reddit posts to understand how dyslexic learners use AI tools. It combines dictionary filtering, knowledge graphs, and hallucination checks, offering a blueprint for building niche, evidence-traceable AI analysis tools from sparse data.",
+            "whyItMatters": [
+              "Business impact: Enables founders to build specialized AI analytics for underserved user groups (e.g., accessibility) using low-resource data, opening niche markets.",
+              "Technical impact: Provides a replicable architecture (dictionary filtering + KG reasoning + hallucination evaluation) for creating reliable, verifiable LLM-based analysis from noisy social media."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product for a niche audience (e.g., accessibility, education), adopt DysLexLens' approach: start with a domain-specific dictionary to filter noisy forum data, then use a knowledge graph to structure LLM queries and add RAGAS-based evaluation to catch hallucinations before surfacing insights.",
+              "note": "Focus on low-resource settings where labeled data is scarce; the dictionary-driven filtering is key to reducing noise without expensive annotation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782735249832-ypt6kp",
+                "title": "DysLexLens: A Low-Resource LLM Framework for Analysing Dyslexic Learners Insights from Online Forums",
+                "url": "https://arxiv.org/abs/2606.27619",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782735249832-ypt6kp-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 29 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-28",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-28-afternoon",
@@ -193,7 +631,7 @@
   },
   {
     "date": "2026-06-27",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Jun 27",
     "briefings": [
       {
         "id": "briefing-2026-06-27-morning",
@@ -6245,858 +6683,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-06-22",
-    "displayDate": "Monday, Jun 22",
-    "briefings": [
-      {
-        "id": "briefing-2026-06-22-afternoon",
-        "period": "afternoon",
-        "date": "2026-06-22",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: SpaceX & Reflection AI: $150M/mo compute deal for open-source AI, OpenAI Launches Daybreak: AI-Powered Security Tools for Organizations, OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs with GPT-5.5-Cyber.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782151136928-pxxihf",
-            "title": "SpaceX & Reflection AI: $150M/mo compute deal for open-source AI",
-            "tldr": "Reflection AI commits $150M/month to SpaceX for exclusive access to Nvidia GB300 chips in Colossus 2 data center, signaling massive infrastructure investment for open-source AI development.",
-            "whyItMatters": [
-              "Business impact: Validates open-source AI labs can secure massive compute deals, potentially reshaping cloud GPU market dynamics and pricing for startups.",
-              "Technical impact: Guarantees Reflection AI access to cutting-edge Nvidia GB300 hardware, enabling training of frontier-scale open-source models that could compete with closed-source leaders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your compute strategy: If you're building AI products, consider locking in long-term compute contracts with hyperscalers or data center operators to hedge against GPU shortages and price volatility, especially if you need consistent access to latest hardware.",
-              "note": "Smaller teams might explore fractional compute or spot instances from similar providers to avoid multi-million dollar commitments."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782151136928-pxxihf",
-                "title": "SpaceX inks compute deal with Reflection AI, an open source AI lab",
-                "url": "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-pxxihf-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-pxxihf-1",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-pxxihf-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 16:51:29 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782151137365-b9gc3d",
-            "title": "OpenAI Launches Daybreak: AI-Powered Security Tools for Organizations",
-            "tldr": "OpenAI released Daybreak, a suite of security tools including Codex Security and GPT-5.5-Cyber, designed to automate vulnerability discovery, validation, and patching at scale. This marks a major push into cybersecurity, offering AI-native solutions for organizations.",
-            "whyItMatters": [
-              "Business impact: Enables organizations to automate security workflows, reducing manual effort and accelerating patch cycles, which can lower breach risks and compliance costs.",
-              "Technical impact: Provides AI models specialized in code security analysis, potentially improving accuracy in detecting vulnerabilities compared to traditional static analysis tools."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Daybreak tools for your security pipeline: start by integrating Codex Security into your CI/CD to automatically scan code commits for vulnerabilities, then test GPT-5.5-Cyber for generating and validating patches in a sandbox environment.",
-              "note": "Consider running a pilot on non-critical codebases first to assess false positive rates and integration complexity."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782151137365-b9gc3d",
-                "title": "Daybreak: Tools for securing every organization in the world",
-                "url": "https://openai.com/index/daybreak-securing-the-world",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782151137365-b9gc3d-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-b9gc3d-1",
-                "label": "Codex Security",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-b9gc3d-2",
-                "label": "GPT-5.5-Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-b9gc3d-3",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 10:00:00 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1782151136969-zjj7n9",
-            "title": "OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs with GPT-5.5-Cyber",
-            "tldr": "OpenAI announced GPT-5.5-Cyber, an improved cybersecurity model, and the 'Patch the Planet' initiative to automatically fix open-source software vulnerabilities, signaling a direct competitive move against Anthropic's Mythos.",
-            "whyItMatters": [
-              "For founders building AI products, this means a new, specialized model for cybersecurity tasks that could be leveraged for automated vulnerability detection and patching in their own software stacks.",
-              "The initiative could reduce the attack surface of open-source dependencies, lowering security risks for startups that rely heavily on open-source libraries."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating GPT-5.5-Cyber into your CI/CD pipeline for automated security scanning and patch generation for open-source dependencies. Start with a small pilot on non-critical repos to assess accuracy and false positive rates.",
-              "note": "Monitor OpenAI's API pricing and rate limits for this model, as cybersecurity tasks may require high throughput."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782151136969-zjj7n9",
-                "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
-                "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782151136969-zjj7n9-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-zjj7n9-1",
-                "label": "GPT-5.5-Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-zjj7n9-2",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782151137365-bvxg61",
-            "title": "Samsung Deploys ChatGPT & Codex to Employees Globally",
-            "tldr": "Samsung Electronics is rolling out ChatGPT Enterprise and Codex to employees worldwide in one of OpenAI's largest enterprise deployments, signaling a major shift in how large corporations are adopting AI for productivity and coding.",
-            "whyItMatters": [
-              "Validates enterprise AI adoption at scale, opening opportunities for startups building AI tools for large organizations.",
-              "Demonstrates demand for AI-assisted coding (Codex) in enterprise settings, a signal for founders targeting developer tools."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products for enterprises, study Samsung's use case: focus on security, compliance, and integration with existing workflows. Consider offering free trials or pilots to large companies to replicate this adoption pattern.",
-              "note": "Enterprise sales cycles are long; start with mid-market companies to build case studies before targeting Fortune 500s."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782151137365-bvxg61",
-                "title": "Samsung Electronics brings ChatGPT and Codex to employees",
-                "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782151137365-bvxg61-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-bvxg61-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-bvxg61-2",
-                "label": "Codex",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 21 Jun 2026 23:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782151136928-e5d65k",
-            "title": "Amazon tests Alexa+ in India with Hindi support",
-            "tldr": "Amazon is inviting Indian customers to test Alexa+ with Hindi support, signaling a push into non-English markets and potential competition for local AI assistants.",
-            "whyItMatters": [
-              "Expands the addressable market for voice AI in India, a key growth region with over 600 million Hindi speakers.",
-              "Forces AI product founders to consider multilingual support as a competitive differentiator, especially in emerging markets."
-            ],
-            "whatToTry": {
-              "description": "If building a voice or AI assistant product, prioritize adding support for at least one major regional language (e.g., Hindi, Spanish, Mandarin) to capture underserved markets and test with local user groups.",
-              "note": "Start with a limited beta to gather feedback on accent and dialect variations before full rollout."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782151136928-e5d65k",
-                "title": "Amazon is testing Alexa+ in India with Hindi support",
-                "url": "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-e5d65k-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-e5d65k-1",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782151136928-e5d65k-2",
-                "label": "Multilingual",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:31:29 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782151137189-6r1yeb",
-            "title": "PP-OCRv6: 50-Language OCR Model Hits Hugging Face",
-            "tldr": "PaddlePaddle released PP-OCRv6 on Hugging Face, a scalable OCR model supporting 50 languages with parameter sizes from 1.5M to 34.5M, enabling flexible deployment from edge to cloud.",
-            "whyItMatters": [
-              "Business impact: Founders can now integrate multilingual OCR into products without building from scratch, reducing time-to-market for document processing, translation, or data extraction apps.",
-              "Technical impact: The range of model sizes allows optimization for latency-sensitive or resource-constrained environments, making it viable for mobile or IoT use cases."
-            ],
-            "whatToTry": {
-              "description": "Test PP-OCRv6 on Hugging Face for your specific language set and deployment scenario. Start with the smallest model (1.5M params) for edge devices or the largest (34.5M) for cloud-based high-accuracy tasks.",
-              "note": "Evaluate accuracy on your domain-specific documents (e.g., receipts, forms) as OCR performance can vary with fonts and layouts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782151137189-6r1yeb",
-                "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
-                "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782151137189-6r1yeb-0",
-                "label": "PP-OCRv6",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782151137189-6r1yeb-1",
-                "label": "OCR",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782151137189-6r1yeb-2",
-                "label": "Hugging Face",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 13:18:56 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1782151137365-9xn4ha",
-            "title": "OpenAI Launches Patch the Planet for Open Source Security",
-            "tldr": "OpenAI's Daybreak initiative launches Patch the Planet, providing AI-assisted vulnerability detection and expert review for open-source maintainers, aiming to improve security at scale.",
-            "whyItMatters": [
-              "Open-source maintainers can now leverage AI to find and fix vulnerabilities faster, reducing security risks for the entire ecosystem.",
-              "This initiative could set a precedent for how AI companies support open-source projects, potentially influencing future funding and tooling."
-            ],
-            "whatToTry": {
-              "description": "If you maintain an open-source project, apply for Patch the Planet to get AI-powered vulnerability scanning and expert validation for your codebase.",
-              "note": "Check eligibility and application details on the OpenAI blog; this is a limited initiative, so act quickly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782151137365-9xn4ha",
-                "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-                "url": "https://openai.com/index/patch-the-planet",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782151137365-9xn4ha-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-9xn4ha-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782151137365-9xn4ha-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 10:00:00 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1782151136969-bwafxy",
-            "title": "Electricians Question Data Center Buildouts: Sellout or Opportunity?",
-            "tldr": "As Big Tech invests heavily in data centers, some electricians are questioning the ethics and sustainability of building them, reflecting growing national opposition. This signals potential labor and reputational risks for AI founders relying on massive compute infrastructure.",
-            "whyItMatters": [
-              "Business impact: Labor shortages or ethical concerns could delay data center projects, increasing costs and time-to-market for AI products.",
-              "Technical impact: Founders may need to explore alternative compute strategies (e.g., edge computing, efficiency optimizations) to reduce reliance on new data centers."
-            ],
-            "whatToTry": {
-              "description": "Assess your AI infrastructure dependencies: review your compute needs and consider diversifying with smaller, distributed edge nodes or negotiating with providers that use existing data centers to avoid delays from new construction.",
-              "note": "Start by auditing your current compute usage and projecting future needs to identify where you can optimize or shift workloads."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782151136969-bwafxy",
-                "title": "Some Electricians Think Building Data Centers Is for Sellouts",
-                "url": "https://www.wired.com/story/data-center-buildout-electricians-selling-out/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782151136969-bwafxy-0",
-                "label": "Data Centers",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-bwafxy-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-bwafxy-2",
-                "label": "Labor",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 09:30:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782151136969-y9o35s",
-            "title": "AI-Powered World Cup Scams: A New Frontier for Fraud Detection",
-            "tldr": "Wired reports that AI is being used to create highly convincing fake tickets, cloned websites, and phishing scams targeting World Cup fans, highlighting a growing need for AI-driven fraud detection tools.",
-            "whyItMatters": [
-              "Opportunity for AI startups to build specialized fraud detection models for event ticketing and e-commerce, addressing a clear market need.",
-              "Raises awareness of AI's dual-use nature, pushing founders to consider adversarial robustness in their own products."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating or building a lightweight AI verification tool (e.g., using computer vision for fake ticket detection or NLP for phishing site analysis) as a feature for your product, targeting event platforms or ticketing marketplaces.",
-              "note": "Start with a simple proof-of-concept using open-source models like YOLO for image analysis or a fine-tuned BERT for text classification."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782151136969-y9o35s",
-                "title": "World Cup Scams Are Getting Harder to Spot",
-                "url": "https://www.wired.com/story/world-cup-scams-are-getting-harder-to-spot/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782151136969-y9o35s-0",
-                "label": "Fraud Detection",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-y9o35s-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782151136969-y9o35s-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 09:30:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 18,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-22-evening",
-        "period": "evening",
-        "date": "2026-06-22",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: SpaceX & Reflection AI: $150M/mo Compute Deal for Open Source AI, OpenAI Launches Daybreak: Codex Security & GPT-5.5-Cyber for Automated Patching, Groq raises $650M, pivots to neocloud after Nvidia deal.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782166862579-bicooe",
-            "title": "SpaceX & Reflection AI: $150M/mo Compute Deal for Open Source AI",
-            "tldr": "Reflection AI, an open-source AI lab, commits $150M/month from July 2026 to 2029 for exclusive access to Nvidia's latest GB300 chips in SpaceX's Colossus 2 data center. This signals a massive bet on open-source AI and a new compute-as-a-service model for founders.",
-            "whyItMatters": [
-              "Business impact: Validates that open-source AI labs can secure massive compute deals, potentially lowering barriers for other startups to access cutting-edge hardware through similar partnerships.",
-              "Technical impact: Guaranteed access to Nvidia's GB300 chips (next-gen) gives Reflection AI a significant edge in training frontier models, accelerating open-source model capabilities."
-            ],
-            "whatToTry": {
-              "description": "Evaluate compute partnerships with non-traditional providers like SpaceX or other data center operators. For open-source AI founders, consider negotiating long-term compute deals (3+ years) to lock in pricing and capacity, especially for upcoming Nvidia hardware.",
-              "note": "Start small with pilot projects to test latency and reliability before committing to multi-million dollar contracts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782166862579-bicooe",
-                "title": "SpaceX inks compute deal with Reflection AI, an open source AI lab",
-                "url": "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-bicooe-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-bicooe-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-bicooe-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 16:51:29 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782166863056-bz539f",
-            "title": "OpenAI Launches Daybreak: Codex Security & GPT-5.5-Cyber for Automated Patching",
-            "tldr": "OpenAI released Daybreak, a suite of tools (Codex Security, GPT-5.5-Cyber) that automate vulnerability discovery, validation, and patching at scale. This directly impacts how AI product teams handle security, reducing manual toil and accelerating fixes.",
-            "whyItMatters": [
-              "Business impact: Reduces security team workload and time-to-patch, lowering breach risk and compliance costs for organizations using AI products.",
-              "Technical impact: Enables AI-native security workflows, integrating automated vulnerability management into CI/CD pipelines, which is critical for AI product founders shipping fast."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Codex Security and GPT-5.5-Cyber for your own product's security pipeline. Start by integrating them into your CI/CD to automatically scan, validate, and patch vulnerabilities in your codebase before deployment.",
-              "note": "Start with a non-critical repo to test accuracy and avoid breaking changes. Monitor for false positives and tune the model's context window for your specific stack."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782166863056-bz539f",
-                "title": "Daybreak: Tools for securing every organization in the world",
-                "url": "https://openai.com/index/daybreak-securing-the-world",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782166863056-bz539f-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782166863056-bz539f-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782166863056-bz539f-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 10:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782166862579-w648y8",
-            "title": "Groq raises $650M, pivots to neocloud after Nvidia deal",
-            "tldr": "Groq confirmed a $650M raise and is restructuring around its neocloud business after Nvidia's $20B 'not-acqui-hire' deal. This signals a shift in AI chip strategy and validates the neocloud model for inference.",
-            "whyItMatters": [
-              "Groq's pivot to neocloud indicates that specialized AI hardware companies are finding more traction in offering cloud services rather than just chips, which could influence your infrastructure choices.",
-              "The $650M raise shows investor confidence in alternative inference architectures, potentially reducing dependency on Nvidia for AI workloads."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Groq's neocloud for your inference workloads, especially if you need low latency for real-time AI applications. Test their API for a small project to compare cost and speed against traditional GPU clouds.",
-              "note": "Groq's LPU architecture excels at sequential tasks like chatbots; it may not suit all model types."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782166862579-w648y8",
-                "title": "AI chipmaker Groq confirms $650M raise, re-staffs after Nvidia’s $20B not-acqui-hire deal",
-                "url": "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-w648y8-0",
-                "label": "Groq",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-w648y8-1",
-                "label": "Neocloud",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-w648y8-2",
-                "label": "AI Chips",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:13:58 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782166862579-9tmxl1",
-            "title": "Google DeepMind & A24: $75M AI Filmmaking Tools Deal",
-            "tldr": "Google DeepMind is investing $75M to partner with indie studio A24 on developing AI tools for filmmaking, signaling a major push to embed AI in Hollywood's creative pipeline.",
-            "whyItMatters": [
-              "Business impact: Opens a new revenue stream for AI tooling in entertainment; validates market for AI-assisted film production.",
-              "Technical impact: Likely advances multimodal AI (video, audio, text) and real-time generation, with implications for other creative industries."
-            ],
-            "whatToTry": {
-              "description": "Explore partnerships with niche creative studios or production houses to pilot AI tools for video editing, script analysis, or storyboarding. Start with a small, focused use case to gather feedback and iterate.",
-              "note": "Focus on high-quality, controlled environments (like indie film) to refine your AI before scaling to broader markets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782166862579-9tmxl1",
-                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
-                "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-9tmxl1-0",
-                "label": "Google DeepMind",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-9tmxl1-1",
-                "label": "A24",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-9tmxl1-2",
-                "label": "AI filmmaking",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 18:49:44 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782166862570-f5c0j2",
-            "title": "OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs",
-            "tldr": "OpenAI released GPT-5.5-Cyber and launched 'Patch the Planet,' a full-scale initiative to automatically fix open-source software vulnerabilities, signaling a major push to compete with Anthropic in AI security.",
-            "whyItMatters": [
-              "Business impact: Founders can leverage this initiative to secure their open-source dependencies, reducing vulnerability management costs and improving product security posture.",
-              "Technical impact: GPT-5.5-Cyber's automated patching capability could accelerate bug fixes in critical open-source projects, lowering the barrier for maintaining secure codebases."
-            ],
-            "whatToTry": {
-              "description": "Audit your open-source dependencies for known vulnerabilities and consider integrating GPT-5.5-Cyber's patching API (once available) into your CI/CD pipeline to automate fixes for high-severity bugs.",
-              "note": "Start with a small, non-critical project to test patch quality before scaling to production systems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782166862570-f5c0j2",
-                "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
-                "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782166862570-f5c0j2-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782166862570-f5c0j2-1",
-                "label": "GPT-5.5-Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782166862570-f5c0j2-2",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782166862579-dges76",
-            "title": "The AI world is getting ‘loopy’: persistent agent swarms",
-            "tldr": "TechCrunch reports on a shift toward 'loopy' AI—persistent, background swarms of agents that work continuously without human intervention. This moves beyond task-based agents to always-on systems, which could redefine automation but raises concerns about cost, control, and unintended behavior.",
-            "whyItMatters": [
-              "Business impact: Enables 24/7 autonomous workflows (e.g., monitoring, optimization, customer engagement) that can reduce human oversight and accelerate decision-making, but requires new infrastructure for reliability and cost management.",
-              "Technical impact: Demands robust orchestration, error handling, and observability for long-running agent swarms; shifts focus from single-agent tasks to multi-agent coordination and persistence."
-            ],
-            "whatToTry": {
-              "description": "Experiment with a small-scale 'loopy' agent swarm for a non-critical background task, like monitoring your product's social mentions or optimizing a recurring data pipeline. Use a framework like LangGraph or CrewAI to set up persistent agents with clear termination conditions and cost limits.",
-              "note": "Start with a sandbox environment to observe behavior and costs before deploying to production. Monitor for 'runaway' loops or unexpected interactions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782166862579-dges76",
-                "title": "The AI world is getting ‘loopy’",
-                "url": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-dges76-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-dges76-1",
-                "label": "Multi-agent systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-dges76-2",
-                "label": "Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:53:11 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782166862570-uea87l",
-            "title": "Meta Exposed Keystroke Data from Employee-Tracking AI Program",
-            "tldr": "Meta accidentally exposed internal keystroke data from its employee-tracking AI training program, raising privacy and trust concerns. This highlights risks of using sensitive employee data for AI training, relevant for founders building internal tools or AI products.",
-            "whyItMatters": [
-              "For founders building AI products: underscores the critical need for robust data access controls and transparency when using sensitive data (e.g., employee keystrokes) for model training, as data leaks can erode trust and invite regulatory scrutiny.",
-              "For technical teams: demonstrates that even large companies like Meta can mishandle internal data governance, emphasizing the importance of implementing strict access controls, audit trails, and anonymization before using proprietary or personal data in AI pipelines."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI training data pipelines for any sensitive or personally identifiable information (PII). Implement role-based access controls and encryption for all training datasets, and consider using synthetic data or differential privacy techniques to reduce exposure risks.",
-              "note": "Start with a simple data inventory to identify where employee or customer data is used in model training, then apply least-privilege access."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782166862570-uea87l",
-                "title": "Meta Exposed Data Internally From Its Controversial Employee-Tracking Program",
-                "url": "https://www.wired.com/story/meta-accidentally-let-employees-access-each-others-keystroke-data/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782166862570-uea87l-0",
-                "label": "Data Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782166862570-uea87l-1",
-                "label": "AI Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782166862570-uea87l-2",
-                "label": "Meta",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:28:53 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782166862579-44u6hr",
-            "title": "Amazon Tests Alexa+ in India with Hindi Support",
-            "tldr": "Amazon is rolling out a Hindi-language version of its new conversational AI assistant Alexa+ for testing in India, signaling a major push into non-English markets and voice-first AI adoption.",
-            "whyItMatters": [
-              "Expands the addressable market for voice AI assistants, creating opportunities for founders building multilingual or India-focused AI products.",
-              "Highlights the growing importance of regional language support in AI, which could influence product strategy for global AI startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating Hindi or other Indic language support into your AI product using existing APIs (e.g., Google Cloud Translation, Bhashini) to tap into India's large user base before Alexa+ becomes widely available.",
-              "note": "Start with a small pilot to test user engagement and accuracy, as regional language AI can be challenging for nuanced tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782166862579-44u6hr",
-                "title": "Amazon is testing Alexa+ in India with Hindi support",
-                "url": "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-44u6hr-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-44u6hr-1",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782166862579-44u6hr-2",
-                "label": "India",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:31:29 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782166862922-8ya8jn",
-            "title": "PP-OCRv6: 50-Language OCR Model Hits Hugging Face",
-            "tldr": "PaddlePaddle released PP-OCRv6 on Hugging Face, offering a scalable OCR model supporting 50 languages with parameter sizes from 1.5M to 34.5M, enabling flexible deployment from edge to cloud.",
-            "whyItMatters": [
-              "Founders can integrate multilingual OCR into products without building from scratch, reducing time-to-market for document processing, translation, or data extraction features.",
-              "The range of model sizes allows cost-effective scaling: use the 1.5M model for mobile apps or the 34.5M for high-accuracy server-side tasks, optimizing compute budgets."
-            ],
-            "whatToTry": {
-              "description": "Test PP-OCRv6 on Hugging Face for your use case: start with the 1.5M model for real-time mobile OCR or the 34.5M for batch document processing. Evaluate accuracy on your target languages and compare latency to existing solutions.",
-              "note": "Consider fine-tuning on domain-specific data (e.g., receipts, invoices) to improve accuracy for your niche."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782166862922-8ya8jn",
-                "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
-                "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782166862922-8ya8jn-0",
-                "label": "PP-OCRv6",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782166862922-8ya8jn-1",
-                "label": "OCR",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782166862922-8ya8jn-2",
-                "label": "Hugging Face",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 13:18:56 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1782166863056-4msz2x",
-            "title": "OpenAI's Patch the Planet: AI for Open Source Security",
-            "tldr": "OpenAI launches Patch the Planet, a Daybreak initiative that uses AI and expert review to help open-source maintainers find and fix vulnerabilities, making security more accessible for small teams.",
-            "whyItMatters": [
-              "Open-source maintainers often lack resources for security audits; this initiative could reduce vulnerability response time and improve trust in AI-powered tools.",
-              "Demonstrates a practical, non-hype application of AI for code security, potentially setting a precedent for similar programs."
-            ],
-            "whatToTry": {
-              "description": "If you maintain an open-source project, check the Patch the Planet program details to see if you can apply for vulnerability scanning and expert review support. If you build AI security tools, study their approach to combining AI with human review for your own product.",
-              "note": "The program may have limited slots; act quickly if interested."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782166863056-4msz2x",
-                "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-                "url": "https://openai.com/index/patch-the-planet",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782166863056-4msz2x-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782166863056-4msz2x-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782166863056-4msz2x-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 10:00:00 GMT"
           }
         ],
         "totalReadTimeMinutes": 20,
