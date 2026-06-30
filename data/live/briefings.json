@@ -1,7 +1,430 @@
 [
   {
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-06-30-morning",
+        "period": "morning",
+        "date": "2026-06-30",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: ATHENA-R1: AI agent for treatment reasoning beats GPT-5 by 18%, RSEA: Self-Evolving AI Agents That Don't Regress, Close the Loop: Diagnose LLM Failures with Capability Slices.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1782816089866-4062yx",
+            "title": "ATHENA-R1: AI agent for treatment reasoning beats GPT-5 by 18%",
+            "tldr": "ATHENA-R1, an AI agent trained via reinforcement learning over 212 biomedical tools, achieves 94.7% accuracy on drug reasoning and 82.9% on treatment reasoning, outperforming GPT-5 by 17.8 and 10.7 points respectively. It uses a self-learning framework without human annotations, making it a breakthrough for clinical decision support.",
+            "whyItMatters": [
+              "Business impact: Founders building AI for healthcare can leverage this approach to create agents that reason over domain-specific tools, potentially reducing time-to-market for clinical decision support systems.",
+              "Technical impact: The two-level self-learning framework (multi-agent construction + RL with scientific feedback) offers a blueprint for training specialized AI agents without costly human annotations, applicable beyond biomedicine."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's reasoning pipeline by integrating domain-specific tools (e.g., drug databases, clinical guidelines) and applying reinforcement learning with scientific feedback to improve accuracy and groundedness. Start with a small set of tools and iterate.",
+              "note": "Consider partnering with domain experts to define reward signals for reasoning quality, as done with rare disease organizations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-4062yx",
+                "title": "An AI agent for treatment reasoning over a biomedical tool universe",
+                "url": "https://arxiv.org/abs/2606.28692",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-4062yx-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-4062yx-1",
+                "label": "healthcare",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-4062yx-2",
+                "label": "reinforcement learning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-vqtiaw",
+            "title": "RSEA: Self-Evolving AI Agents That Don't Regress",
+            "tldr": "New research introduces RSEA, a method for LLM agents to recursively improve their own strategies, skills, and playbooks without weight updates, using a held-out validation gate to prevent regression. It outperforms ReAct on ALFWorld but reveals no universal best approach—context evolution without safeguards is high-risk.",
+            "whyItMatters": [
+              "Founders can build agents that self-improve over time without costly retraining, reducing operational overhead and enabling adaptive behavior in production.",
+              "The held-out selection mechanism provides a safety net against performance degradation, a critical feature for deploying autonomous agents in customer-facing or high-stakes environments."
+            ],
+            "whatToTry": {
+              "description": "Implement a 'keep-better gate' in your agent pipeline: when your agent generates a new strategy or prompt from its own logs, test it against a held-out set of past successful interactions before deploying it live. This prevents regressions and ensures only improvements are adopted.",
+              "note": "Start with a small held-out set (e.g., 10-20 examples) to avoid overfitting; iterate as your agent's task diversity grows."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-vqtiaw",
+                "title": "Recursive Self-Evolving Agents via Held-Out Selection",
+                "url": "https://arxiv.org/abs/2606.28374",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-vqtiaw-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-vqtiaw-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-vqtiaw-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-u23eae",
+            "title": "Close the Loop: Diagnose LLM Failures with Capability Slices",
+            "tldr": "A new arXiv paper introduces the 'capability slice'—a structured unit that bridges the gap between evaluation failures and data fixes, enabling targeted interventions without guesswork. This method turns vague benchmark drops into precise, testable data changes, as shown in a case study where BBH scores were recovered by fixing a masked loss issue.",
+            "whyItMatters": [
+              "For founders building AI products, this provides a systematic way to debug model weaknesses, reducing the time spent on trial-and-error data fixes and improving iteration speed.",
+              "Technically, it offers a framework to map evaluation failures to specific data interventions, enabling more efficient use of compute and data resources during model development."
+            ],
+            "whatToTry": {
+              "description": "Implement a capability slice taxonomy for your model's evaluation benchmarks: group test samples by task type, operation, and constraints. When a benchmark drops, use these slices to isolate the failure to a specific data domain or loss component, then test targeted data fixes (e.g., adjusting loss masking) before retraining.",
+              "note": "Start with a small set of benchmarks (e.g., BBH, MMLU) and manually define slices; automate with scripts as you validate the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-u23eae",
+                "title": "Data and Evaluation Closed-Loop for Model Capability Enhancement",
+                "url": "https://arxiv.org/abs/2606.28471",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-u23eae-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-u23eae-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-rcinhn",
+            "title": "GPTNT Benchmark: AI Agents Fail Real-Time Bomb Defusal",
+            "tldr": "New benchmark GPTNT tests multimodal AI agents on real-time collaboration in the game 'Keep Talking and Nobody Explodes'. State-of-the-art models fail to defuse a single bomb under time pressure, highlighting critical weaknesses in state tracking and efficient communication that humans easily overcome.",
+            "whyItMatters": [
+              "For founders building collaborative AI products, this reveals a gap between current models and real-world coordination needs, especially under time constraints and information asymmetry.",
+              "Technical impact: The benchmark isolates collaboration from memorization, providing a rigorous test for developing agents that can handle asynchronous, real-time tasks with imperfect communication."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own multimodal agent against the GPTNT benchmark to identify specific weaknesses in state tracking and real-time communication. Use the controlled experiments (withholding manual or partner) to isolate whether your model relies on memorized solutions or genuine collaboration.",
+              "note": "This is a research paper; the benchmark may not be publicly available yet. Monitor for code release to integrate into your testing pipeline."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-rcinhn",
+                "title": "GPTNT: Benchmarking Real-Time Collaboration Between Multimodal Agents on Keep Talking And Nobody Explodes",
+                "url": "https://arxiv.org/abs/2606.28514",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-rcinhn-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-rcinhn-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-ssy1go",
+            "title": "DynaSteer: Steering LLM Reasoning Toward Truth, Not Just Thinking",
+            "tldr": "A new framework, DynaSteer, dynamically edits LLM representations to guide reasoning toward truth, outperforming Chain-of-Thought and 'Wait' prompts on math benchmarks. It reveals that truth is encoded at the sentence level and interventions are most effective early in high-entropy forks, offering a more precise way to improve reasoning without collateral damage.",
+            "whyItMatters": [
+              "For founders building reasoning-heavy AI products (e.g., math tutors, code assistants), DynaSteer offers a method to improve output accuracy without retraining models, potentially reducing hallucination and enhancing trust.",
+              "Technically, it introduces a dynamic intervention approach that could be integrated into existing LLM pipelines, making it a practical tool for improving reasoning trajectories in production systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product that requires reliable reasoning (e.g., automated math solvers or code generators), experiment with DynaSteer's open-source code to see if dynamic representation editing improves your model's accuracy on complex tasks. Start by applying it to early, high-entropy reasoning steps to maximize impact.",
+              "note": "The paper shows strong results on math benchmarks and generalizes to coding tasks, but test on your specific domain to validate effectiveness."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-ssy1go",
+                "title": "Search for Truth from Reasoning: A Dynamic Representation Editing Framework for Steering LLM Trajectories",
+                "url": "https://arxiv.org/abs/2606.28589",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ssy1go-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ssy1go-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ssy1go-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-ozdf2u",
+            "title": "BV-Blend: Stabilizing RL for LLMs Without a Critic",
+            "tldr": "A new method, BV-Blend, improves training stability in critic-free reinforcement learning for LLMs (like GRPO) by blending historical reward statistics with on-policy data, preventing stalls when all responses in a group get identical rewards. This is crucial for founders using verifiable rewards (e.g., math, code) to fine-tune models.",
+            "whyItMatters": [
+              "Business impact: Reduces compute and memory costs by avoiding a critic network, making RL alignment more accessible for startups with limited resources.",
+              "Technical impact: Solves a key instability in GRPO-style methods, enabling more reliable training on binary verifiers (e.g., pass/fail) common in reasoning tasks."
+            ],
+            "whatToTry": {
+              "description": "If you're using GRPO or similar critic-free RL for LLM alignment, experiment with BV-Blend's EMA-based historical blending to stabilize advantage estimation, especially in cold-start scenarios with binary rewards.",
+              "note": "The paper uses semantic clustering for historical moments; you can start with simple task-level clusters (e.g., by problem type) to test the approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-ozdf2u",
+                "title": "BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards",
+                "url": "https://arxiv.org/abs/2606.28707",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ozdf2u-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ozdf2u-1",
+                "label": "RL",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-ozdf2u-2",
+                "label": "LLM alignment",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782816089733-cjezjm",
+            "title": "Base44 launches own model to beat frontier AI in vibe coding",
+            "tldr": "Wix-owned vibe coding platform Base44 is rolling out its own AI model, aiming to eventually outperform frontier models. This signals a trend where AI startups build proprietary models for defensibility, moving beyond API wrappers.",
+            "whyItMatters": [
+              "For founders building AI products: This validates the strategy of vertical-specific fine-tuning or custom models as a moat against commoditization by big API providers.",
+              "Technical impact: Custom models can optimize for specific tasks (e.g., code generation for no-code platforms), potentially offering better latency, cost, and accuracy than general-purpose frontier models."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's defensibility: If you rely solely on third-party APIs, consider fine-tuning a smaller open-source model on your domain-specific data to improve performance and reduce dependency. Start with a small dataset to test viability.",
+              "note": "Focus on a narrow, high-value use case first—don't try to beat GPT-4 on everything."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782816089733-cjezjm",
+                "title": "Vibe coding platform Base44 launches own model as AI startups seek defensibility",
+                "url": "https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-cjezjm-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-cjezjm-1",
+                "label": "Vibe Coding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-cjezjm-2",
+                "label": "Defensibility",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 02:28:41 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782816089733-zy13uc",
+            "title": "OKX builds marketplace for AI agents to hire and pay each other",
+            "tldr": "Crypto exchange OKX is creating a marketplace that combines payments, identity, and reputation for AI agents, enabling them to autonomously hire and pay each other. This signals a shift toward agent-to-agent economies that founders can leverage.",
+            "whyItMatters": [
+              "Business impact: Opens new revenue models where AI agents can transact autonomously, reducing human overhead in B2B workflows.",
+              "Technical impact: Requires integrating identity and reputation systems into agent architectures, which could become a standard for agent interoperability."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating decentralized identity and payment rails into your AI agent stack. Start by prototyping a simple agent-to-agent payment flow using OKX's marketplace or similar crypto-based APIs to test autonomous hiring and billing.",
+              "note": "Focus on use cases like automated freelancer matching or supply chain payments where trust and settlement are critical."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782816089733-zy13uc",
+                "title": "Crypto exchange OKX wants AI agents to hire and pay each other",
+                "url": "https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-zy13uc-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-zy13uc-1",
+                "label": "Crypto Payments",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-zy13uc-2",
+                "label": "Marketplace",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 09:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782816089733-uomc3m",
+            "title": "AI adoption linked to 10% headcount growth, not cuts",
+            "tldr": "A new report shows companies that heavily adopt AI actually increased headcount by 10.2%, with entry-level roles growing 12%. This challenges the narrative that AI eliminates junior jobs and suggests AI may drive hiring instead.",
+            "whyItMatters": [
+              "Business impact: Founders can use this data to counter internal resistance to AI adoption, arguing it may enable team growth rather than layoffs.",
+              "Technical impact: The report highlights that AI tools are augmenting rather than replacing junior roles, which could influence product design for AI-assisted workflows."
+            ],
+            "whatToTry": {
+              "description": "Audit your own hiring data to see if AI tool adoption correlates with headcount changes. Use this report as a talking point when pitching AI investments to stakeholders or investors.",
+              "note": "Correlation isn't causation—consider other factors like market growth or funding that may also drive hiring."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782816089733-uomc3m",
+                "title": "The AI jobs debate just got messier",
+                "url": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782816089733-uomc3m-0",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 04:01:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1782816089866-nohuo0",
+            "title": "New Medical AI Benchmark Reveals Safety Gaps in Multimodal LLMs",
+            "tldr": "IMCBench is a new benchmark testing multimodal LLMs on image-grounded, multi-turn medical conversations. Claude Opus 4.6 leads overall, but all models show safety degradation for malignant and rare conditions, highlighting critical gaps for clinical AI deployment.",
+            "whyItMatters": [
+              "For founders building medical AI products, this benchmark provides a realistic evaluation framework to test their models' safety and accuracy in multi-turn clinical scenarios, directly impacting product reliability and regulatory readiness.",
+              "The finding that safety degrades for malignant and rare conditions across all models signals a need for specialized fine-tuning or guardrails, which could be a competitive differentiator for startups targeting high-risk clinical use cases."
+            ],
+            "whatToTry": {
+              "description": "Use IMCBench's evaluation methodology (LLM-as-Jury with expert calibration) to stress-test your own multimodal medical AI system, focusing on safety for rare and malignant conditions. Consider integrating visual and EHR context to improve robustness, as ablation studies show both are critical.",
+              "note": "The benchmark uses synthetic patient profiles, so validate findings with real clinical data before production deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782816089866-nohuo0",
+                "title": "IMCBench: A benchmark for multimodal LLMs in Image-grounded Medical Conversations",
+                "url": "https://arxiv.org/abs/2606.28556",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-nohuo0-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782816089866-nohuo0-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-29",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-29-afternoon",
@@ -866,7 +1289,7 @@
   },
   {
     "date": "2026-06-28",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Jun 28",
     "briefings": [
       {
         "id": "briefing-2026-06-28-afternoon",
@@ -5808,1308 +6231,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 24 Jun 2026 16:48:43 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-06-23",
-    "displayDate": "Tuesday, Jun 23",
-    "briefings": [
-      {
-        "id": "briefing-2026-06-23-morning",
-        "period": "morning",
-        "date": "2026-06-23",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: SpaceX sells $150M/mo compute to open-source AI lab Reflection, Groq raises $650M, pivots to cloud after Nvidia deal falls through, Google DeepMind invests $75M in AI filmmaking with A24.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782211535565-nk9jfu",
-            "title": "SpaceX sells $150M/mo compute to open-source AI lab Reflection",
-            "tldr": "Reflection AI commits to $150M/month from July 2026 to 2029 for exclusive access to Nvidia GB300 chips at SpaceX's Colossus 2 data center, signaling a massive bet on open-source AI and a new compute-as-a-service model from a non-traditional provider.",
-            "whyItMatters": [
-              "This deal validates open-source AI labs as serious commercial players, potentially shifting how founders secure compute for open-weight models.",
-              "SpaceX entering the compute market could disrupt pricing and availability for AI infrastructure, offering an alternative to AWS, Azure, or GCP for high-performance GPU clusters."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your compute procurement strategy: consider negotiating with non-traditional providers like SpaceX or energy companies for long-term GPU access, especially if you're building open-source models. Start conversations now to lock in rates before 2026.",
-              "note": "This deal is for cutting-edge GB300 chips; smaller labs may need to partner with larger open-source entities to get similar terms."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-nk9jfu",
-                "title": "SpaceX inks compute deal with Reflection AI, an open source AI lab",
-                "url": "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-nk9jfu-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-nk9jfu-1",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-nk9jfu-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 16:51:29 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-62so9b",
-            "title": "Groq raises $650M, pivots to cloud after Nvidia deal falls through",
-            "tldr": "Groq confirmed a $650M raise and is restructuring its leadership and neocloud business after Nvidia's $20B 'not-acqui-hire' deal collapsed. This signals a major shift in AI chip strategy and validates the growing demand for alternative inference infrastructure.",
-            "whyItMatters": [
-              "Founders building AI products now have a well-funded alternative to Nvidia for inference, potentially lowering costs and reducing vendor lock-in.",
-              "Groq's pivot to neocloud suggests a trend where chip startups become cloud providers, opening new partnership and integration opportunities for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Groq's neocloud for your inference workloads, especially if you need low latency for real-time applications. Monitor their new exec hires for clues about upcoming pricing or API changes.",
-              "note": "Groq's LPU architecture excels at sequential tasks but may not suit all model types—test with your specific use case first."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-62so9b",
-                "title": "AI chipmaker Groq confirms $650M raise, re-staffs after Nvidia’s $20B not-acqui-hire deal",
-                "url": "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-62so9b-0",
-                "label": "Groq",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-62so9b-1",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-62so9b-2",
-                "label": "AI chips",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-62so9b-3",
-                "label": "neocloud",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:13:58 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-ayuytp",
-            "title": "Google DeepMind invests $75M in AI filmmaking with A24",
-            "tldr": "Google DeepMind is investing $75M to partner with indie studio A24 on AI tools for filmmaking, signaling a major push to embed generative AI in Hollywood production pipelines.",
-            "whyItMatters": [
-              "Opens a new vertical for AI founders: specialized tools for creative industries like film editing, script analysis, and visual effects.",
-              "Validates that top-tier studios see AI as a production asset, not just a gimmick—creating opportunities for B2B AI startups targeting media."
-            ],
-            "whatToTry": {
-              "description": "Explore partnerships with indie studios or production houses to co-develop AI tools for pre-production (storyboarding, script breakdown) or post-production (automated editing, color grading).",
-              "note": "Focus on niche workflows where AI can reduce costs or speed up iteration, like generating B-roll or syncing dailies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-ayuytp",
-                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
-                "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-ayuytp-0",
-                "label": "Google DeepMind",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-ayuytp-1",
-                "label": "A24",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-ayuytp-2",
-                "label": "AI filmmaking",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 18:49:44 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782211535590-3oopn8",
-            "title": "OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs with GPT-5.5-Cyber",
-            "tldr": "OpenAI released an improved GPT-5.5-Cyber model and a new 'Patch the Planet' initiative to automatically fix vulnerabilities in open-source software, signaling a strategic push to compete with Anthropic's cybersecurity efforts.",
-            "whyItMatters": [
-              "Founders building AI products can leverage this initiative to secure their open-source dependencies, reducing risk of exploits and compliance issues.",
-              "The improved GPT-5.5-Cyber model offers a new tool for automated vulnerability patching, potentially lowering security overhead for startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating GPT-5.5-Cyber into your CI/CD pipeline to automatically scan and patch open-source dependencies in your AI stack. Start by testing on a non-critical repo to assess accuracy and false-positive rates.",
-              "note": "Monitor OpenAI's API pricing for GPT-5.5-Cyber, as costs may be higher than standard models. Consider combining with existing security tools for best results."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782211535590-3oopn8",
-                "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
-                "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782211535590-3oopn8-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782211535590-3oopn8-1",
-                "label": "GPT-5.5-Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782211535590-3oopn8-2",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-93scwv",
-            "title": "2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts",
-            "tldr": "TechCrunch tracks a growing list of major tech companies in 2026 citing AI as a reason for significant layoffs, signaling a structural shift where AI is replacing roles rather than just augmenting them. This trend matters for founders as it validates the urgency to build AI-native products and rethink team composition.",
-            "whyItMatters": [
-              "Confirms that AI is now a primary driver of workforce reduction, not just a buzzword—founders must plan for leaner teams and AI-first operations.",
-              "Indicates a market shift where legacy tech companies are cutting costs to invest in AI, creating opportunities for startups to offer AI solutions that replace or enhance human workflows."
-            ],
-            "whatToTry": {
-              "description": "Audit your current team structure and identify 2-3 roles or processes that could be automated or augmented with AI within the next 6 months. Use this as a blueprint to reduce headcount dependency and increase efficiency, then pitch your product as a cost-saving AI alternative to enterprises undergoing layoffs.",
-              "note": "Focus on high-volume, repetitive tasks (e.g., customer support, data entry, content moderation) where AI tools are mature enough to deliver immediate ROI."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-93scwv",
-                "title": "The running list: major tech layoffs in 2026 where employers cited AI",
-                "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-93scwv-0",
-                "label": "Industry trends",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-93scwv-1",
-                "label": "AI adoption",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-93scwv-2",
-                "label": "Startup strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 01:27:55 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-h61bgg",
-            "title": "OpenAI launches AI-powered open source bug hunting initiative",
-            "tldr": "OpenAI is using its AI models to help identify and patch vulnerabilities in open source software, potentially improving security for the entire ecosystem.",
-            "whyItMatters": [
-              "Open source software underpins most AI products; better security reduces risk for founders building on these libraries.",
-              "Automated bug finding and patching could lower maintenance overhead for teams relying on open source dependencies."
-            ],
-            "whatToTry": {
-              "description": "Review your project's open source dependencies and consider integrating automated vulnerability scanning tools (like Dependabot or Snyk) now, and watch for OpenAI's specific tooling or API access to this initiative when released.",
-              "note": "This is an announcement; actual tools may not be available immediately. Stay tuned for beta access."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-h61bgg",
-                "title": "OpenAI launches new initiative to help find and patch open source bugs",
-                "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-h61bgg-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-h61bgg-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-h61bgg-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:11:31 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782211535742-nm9a03",
-            "title": "Hugging Face ships hub weekly with AI + human review",
-            "tldr": "Hugging Face details their CI pipeline for weekly releases of huggingface_hub, using AI for code review and changelog generation with a human in the loop. This offers a practical blueprint for AI product teams to accelerate releases without sacrificing quality.",
-            "whyItMatters": [
-              "Shows a proven workflow for integrating AI into release cycles, reducing manual overhead while maintaining reliability.",
-              "Demonstrates how to balance automation with human oversight, a key challenge for AI product teams."
-            ],
-            "whatToTry": {
-              "description": "Adopt a similar weekly release cadence for your AI tool or library: set up automated tests, use an LLM to draft changelogs and review PRs, then have a human approve final releases. Start with a small, low-risk component to iterate.",
-              "note": "Ensure your AI review prompts are specific to your codebase to avoid generic suggestions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782211535742-nm9a03",
-                "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
-                "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782211535742-nm9a03-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782211535742-nm9a03-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-dpz3bt",
-            "title": "The AI world is getting ‘loopy’",
-            "tldr": "TechCrunch reports on a new paradigm where AI agents operate in continuous, autonomous loops, working endlessly in the background. This shift from task-based to persistent agent swarms could redefine how AI products handle complex, ongoing workflows.",
-            "whyItMatters": [
-              "Enables AI products to handle continuous, real-time tasks like monitoring, optimization, and autonomous decision-making without human intervention.",
-              "Introduces new challenges in cost, reliability, and oversight for persistent agent systems, requiring founders to rethink infrastructure and safety."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI product for tasks that could benefit from continuous background processing—such as data monitoring, automated customer support escalation, or dynamic pricing. Prototype a simple loop with a single agent using a framework like LangChain or AutoGPT, then test for reliability and cost before scaling to a swarm.",
-              "note": "Start with a single-agent loop to manage complexity and costs; swarms amplify both benefits and risks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-dpz3bt",
-                "title": "The AI world is getting ‘loopy’",
-                "url": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dpz3bt-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dpz3bt-1",
-                "label": "Autonomous Agents",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dpz3bt-2",
-                "label": "Workflow Automation",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:53:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782211535565-dv1ykk",
-            "title": "Amazon tests Alexa+ in India with Hindi support",
-            "tldr": "Amazon is rolling out a Hindi-language version of its new conversational AI assistant Alexa+ for testing in India, signaling a major push into non-English markets and a competitive move against local AI assistants.",
-            "whyItMatters": [
-              "For founders building AI products for global markets, this shows the importance of multilingual support and localization to capture large user bases.",
-              "Technically, it indicates Amazon's investment in conversational AI for diverse languages, which could set new standards for voice assistants and open up opportunities for integration or competition."
-            ],
-            "whatToTry": {
-              "description": "If you're building a voice-enabled AI product, consider adding Hindi or other regional language support early to tap into India's massive market. Start by testing with a small user group to refine accuracy and cultural nuances.",
-              "note": "Localization goes beyond translation—ensure your model handles dialects and context-specific phrases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782211535565-dv1ykk",
-                "title": "Amazon is testing Alexa+ in India with Hindi support",
-                "url": "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dv1ykk-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dv1ykk-1",
-                "label": "Alexa+",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782211535565-dv1ykk-2",
-                "label": "Multilingual AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:31:29 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782211535742-chwa07",
-            "title": "PP-OCRv6: 50-Language OCR with Tiny to Large Models",
-            "tldr": "PaddlePaddle released PP-OCRv6 on Hugging Face, offering OCR models supporting 50 languages with parameter sizes from 1.5M to 34.5M, enabling flexible deployment from edge to cloud.",
-            "whyItMatters": [
-              "Business impact: Founders can now integrate multilingual OCR into products without building from scratch, reducing time-to-market for document processing, translation, or data extraction apps.",
-              "Technical impact: The range of model sizes allows optimization for latency-sensitive or resource-constrained environments (e.g., mobile apps, IoT) while maintaining accuracy."
-            ],
-            "whatToTry": {
-              "description": "Evaluate PP-OCRv6's smallest model (1.5M params) for real-time OCR in your mobile or web app, and test the largest (34.5M) for high-accuracy batch processing on servers. Use Hugging Face's inference API for quick prototyping.",
-              "note": "Check language coverage for your target markets—50 languages includes major ones but verify niche languages."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782211535742-chwa07",
-                "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
-                "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782211535742-chwa07-0",
-                "label": "PP-OCRv6",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782211535742-chwa07-1",
-                "label": "OCR",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782211535742-chwa07-2",
-                "label": "Multilingual",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 13:18:56 GMT"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-23-afternoon",
-        "period": "afternoon",
-        "date": "2026-06-23",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Groq raises $650M, pivots to neocloud after Nvidia deal, OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs, Build Real Agentic Apps with CUGA: 24 Lightweight Examples.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782230858710-1x0h69",
-            "title": "Groq raises $650M, pivots to neocloud after Nvidia deal",
-            "tldr": "AI chip startup Groq confirmed a $650M funding round and is restructuring its business around its neocloud service, following a $20B 'not-acqui-hire' deal with Nvidia. This signals a major shift in AI infrastructure strategy and validates the neocloud model for founders.",
-            "whyItMatters": [
-              "Business impact: Groq's pivot to neocloud shows a viable path for AI chip startups to monetize without competing directly with Nvidia's hardware dominance, offering founders an alternative infrastructure model.",
-              "Technical impact: The neocloud model provides developers with low-latency inference via Groq's LPU architecture, potentially reducing costs and improving performance for real-time AI applications."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Groq's neocloud for your AI inference workloads, especially if you need low latency for real-time applications like chatbots or voice assistants. Test their API against your current provider to compare cost and speed.",
-              "note": "Groq's LPU is optimized for inference, not training, so focus on deployment use cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-1x0h69",
-                "title": "AI chipmaker Groq confirms $650M raise, re-staffs after Nvidia’s $20B not-acqui-hire deal",
-                "url": "https://techcrunch.com/2026/06/22/ai-chipmaker-groq-confirms-650m-raise-re-staffs-after-nvidias-20b-not-acqui-hire-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1x0h69-0",
-                "label": "Groq",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1x0h69-1",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1x0h69-2",
-                "label": "AI infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:13:58 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782230858701-bo94w1",
-            "title": "OpenAI Launches 'Patch the Planet' to Fix Open-Source Bugs",
-            "tldr": "OpenAI released GPT-5.5-Cyber and a new initiative to automatically patch open-source vulnerabilities, signaling a strategic push to compete with Anthropic's security-focused Mythos model.",
-            "whyItMatters": [
-              "Business impact: Founders building on open-source can now leverage automated bug fixing, reducing security overhead and accelerating development cycles.",
-              "Technical impact: GPT-5.5-Cyber's improved cybersecurity capabilities may set a new baseline for AI-assisted code auditing and patching, raising the bar for AI product security."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating GPT-5.5-Cyber into your CI/CD pipeline for automated vulnerability scanning and patch generation on open-source dependencies. Start with a small project to test accuracy and false positive rates.",
-              "note": "Consider the cost of API calls vs. manual review; this is best for high-volume, low-criticality bugs initially."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782230858701-bo94w1",
-                "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
-                "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782230858701-bo94w1-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782230858701-bo94w1-1",
-                "label": "GPT-5.5-Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782230858701-bo94w1-2",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782230858928-r4z2f0",
-            "title": "Build Real Agentic Apps with CUGA: 24 Lightweight Examples",
-            "tldr": "IBM Research released CUGA, a lightweight harness for building agentic applications, with two dozen working examples. It simplifies multi-step AI workflows without heavy frameworks, making it practical for founders to prototype and deploy quickly.",
-            "whyItMatters": [
-              "Business impact: Enables rapid prototyping of agentic apps with minimal overhead, reducing time-to-market for AI-powered features.",
-              "Technical impact: Provides a modular, lightweight alternative to complex agent frameworks, lowering the barrier to entry for building reliable multi-step AI systems."
-            ],
-            "whatToTry": {
-              "description": "Explore the CUGA repository on Hugging Face to adapt one of the 24 examples for your use case, such as automating customer support or data extraction workflows.",
-              "note": "Start with a simple example like 'web search + summarization' to test integration with your existing stack before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782230858928-r4z2f0",
-                "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
-                "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782230858928-r4z2f0-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782230858928-r4z2f0-1",
-                "label": "agentic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 12:51:55 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-cuaugy",
-            "title": "2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts",
-            "tldr": "TechCrunch is tracking a growing list of major tech companies in 2026 that have announced significant layoffs, explicitly citing AI as a reason. This signals a structural shift where AI is replacing roles, not just augmenting them, which directly impacts the market for AI products and the talent pool.",
-            "whyItMatters": [
-              "For founders building AI products: This trend validates the market for automation and AI-driven efficiency tools, as companies are willing to restructure around AI. It also means a larger pool of displaced talent may be available for hire or become competitors.",
-              "For technical strategy: The layoffs suggest that incumbents are prioritizing AI integration over human labor, creating opportunities for startups to offer more targeted, cost-effective AI solutions that replace or augment specific workflows."
-            ],
-            "whatToTry": {
-              "description": "Analyze the specific roles and departments being cut (e.g., customer support, data entry, software engineering) to identify the highest-demand AI replacement products. Then, build a targeted pitch or MVP for that niche, emphasizing cost savings and efficiency gains.",
-              "note": "Focus on roles that are repetitive or data-intensive, as these are most likely to be replaced by current AI capabilities. Avoid overpromising on creative or highly strategic roles."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-cuaugy",
-                "title": "The running list: major tech layoffs in 2026 where employers cited AI",
-                "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-cuaugy-0",
-                "label": "Industry Trends",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-cuaugy-1",
-                "label": "AI Adoption",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 01:27:55 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-ehqefv",
-            "title": "OpenAI uses AI to find & patch open source bugs",
-            "tldr": "OpenAI launched an initiative applying its models to detect and fix vulnerabilities in open source projects, potentially reducing security risks for the entire ecosystem.",
-            "whyItMatters": [
-              "Open source software underpins most AI products; automated bug patching can reduce security debt and maintenance overhead for founders.",
-              "This could lower the barrier for securing AI pipelines and dependencies, making it easier to ship safer products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's open source dependencies and consider integrating automated vulnerability scanning tools (e.g., Dependabot, Snyk) now, while monitoring OpenAI's initiative for future API access.",
-              "note": "Start with critical libraries in your stack to prioritize fixes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-ehqefv",
-                "title": "OpenAI launches new initiative to help find and patch open source bugs",
-                "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-ehqefv-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-ehqefv-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-ehqefv-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:11:31 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782230858928-sht060",
-            "title": "Hugging Face ships weekly releases with AI + human review",
-            "tldr": "Hugging Face shares how they use AI tools and human oversight to ship weekly updates to huggingface_hub, offering a practical CI/CD pattern for AI product teams.",
-            "whyItMatters": [
-              "Shows a repeatable process for maintaining high-velocity releases in AI infrastructure products",
-              "Demonstrates how to balance automation with quality control, a key challenge for AI startups"
-            ],
-            "whatToTry": {
-              "description": "Adopt a similar weekly release cadence for your AI library or tool: set up automated tests and AI-assisted changelog generation, but keep a human reviewer for final sign-off on each release.",
-              "note": "Start with a small team and scale automation as you gain confidence in your CI pipeline."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782230858928-sht060",
-                "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
-                "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782230858928-sht060-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782230858928-sht060-1",
-                "label": "CI/CD",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782230858928-sht060-2",
-                "label": "Hugging Face",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-2ced7b",
-            "title": "The AI world is getting ‘loopy’",
-            "tldr": "TechCrunch reports on a new paradigm where AI agents operate in continuous loops, working endlessly in the background. This shifts AI from task-based to persistent, autonomous operations, which could redefine product architectures and user expectations.",
-            "whyItMatters": [
-              "Business impact: Enables always-on AI services (e.g., monitoring, optimization) that can generate recurring revenue and reduce manual oversight.",
-              "Technical impact: Requires new infrastructure for managing persistent agent swarms, including state management, error handling, and cost control."
-            ],
-            "whatToTry": {
-              "description": "Prototype a background agent that continuously monitors a key metric (e.g., user engagement, server health) and takes predefined actions when thresholds are met. Use a simple loop with a sleep interval to start, then iterate on state persistence and error recovery.",
-              "note": "Start with a single agent to test loop stability before scaling to a swarm."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-2ced7b",
-                "title": "The AI world is getting ‘loopy’",
-                "url": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-2ced7b-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-2ced7b-1",
-                "label": "Autonomous agents",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 20:53:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-1ryo26",
-            "title": "Google DeepMind & A24's $75M AI Filmmaking Deal",
-            "tldr": "Google DeepMind is investing $75M to partner with indie studio A24 on AI tools for filmmaking, signaling a major push to legitimize AI in creative industries and potentially unlock new revenue streams for AI startups targeting media.",
-            "whyItMatters": [
-              "Business impact: Validates AI's role in high-value creative production, opening doors for B2B AI tools in entertainment and advertising.",
-              "Technical impact: Expect advances in video generation, editing, and post-production AI that could trickle down to smaller studios and startups."
-            ],
-            "whatToTry": {
-              "description": "Explore partnerships with indie studios or content creators to co-develop AI tools for specific creative workflows (e.g., storyboarding, VFX, or automated editing). This deal shows that niche, artist-friendly AI solutions can attract major investment.",
-              "note": "Focus on user experience and creative control—A24 is known for artistic integrity, so tools must enhance rather than replace human creativity."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-1ryo26",
-                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
-                "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1ryo26-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1ryo26-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-1ryo26-2",
-                "label": "model",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 18:49:44 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-whvmag",
-            "title": "Amazon tests Alexa+ in India with Hindi support",
-            "tldr": "Amazon is rolling out a Hindi-language version of its new conversational AI assistant Alexa+ for testing in India, signaling a major push into non-English markets and a competitive move against local AI assistants.",
-            "whyItMatters": [
-              "For founders building AI products for global markets, this shows the importance of multilingual support and localization to capture large user bases beyond English-speaking regions.",
-              "Technically, it highlights the need for robust NLP models that handle code-switching and regional dialects, which could influence your model selection or training data strategy."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's multilingual capabilities by testing with Hindi or other regional languages. Consider integrating with translation APIs or fine-tuning models on local datasets to prepare for market expansion.",
-              "note": "Start with a small user group to gather feedback on accuracy and cultural relevance before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-whvmag",
-                "title": "Amazon is testing Alexa+ in India with Hindi support",
-                "url": "https://techcrunch.com/2026/06/22/amazon-is-testing-alexa-in-india-with-hindi-support/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-whvmag-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-whvmag-1",
-                "label": "Alexa+",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-whvmag-2",
-                "label": "Multilingual AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 22 Jun 2026 17:31:29 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782230858710-7ovyu9",
-            "title": "Fika Jobs raises $4M for AI video interview platform",
-            "tldr": "Fika Jobs raised $4M to build a hiring platform where AI agents conduct video interviews and candidates create short-form video profiles, blending LinkedIn with TikTok. This signals growing investor interest in AI-driven recruitment tools that automate screening.",
-            "whyItMatters": [
-              "For founders building AI products, this validates the market for AI agents that replace human interviewers in early-stage hiring, potentially reducing time-to-hire and bias.",
-              "Technically, it showcases a practical application of multimodal AI (video + NLP) for candidate assessment, which could inspire similar approaches in other HR or customer-facing domains."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your product could benefit from integrating AI-driven video interviews or short-form candidate profiles to streamline hiring. Consider prototyping a simple AI screener using existing video APIs and LLMs to test candidate fit.",
-              "note": "Start with a narrow use case (e.g., initial screening for one role) to validate accuracy and candidate acceptance before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782230858710-7ovyu9",
-                "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
-                "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-7ovyu9-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-7ovyu9-1",
-                "label": "Hiring",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782230858710-7ovyu9-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 13:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-23-evening",
-        "period": "evening",
-        "date": "2026-06-23",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Anthropic’s Claude Tag: AI learns your company via Slack, GPT-5 Pro cracks 3-year immunology mystery, aiding cancer research, 2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782251753470-6nmizx",
-            "title": "Anthropic’s Claude Tag: AI learns your company via Slack",
-            "tldr": "Anthropic launched Claude Tag, an always-on AI teammate in Slack that captures organizational context and institutional knowledge. This is a strategic move to embed AI deeply into enterprise workflows, making it harder for competitors to displace.",
-            "whyItMatters": [
-              "Business impact: Claude Tag turns Slack into a live knowledge base, reducing onboarding time and improving decision-making by surfacing past decisions and context.",
-              "Technical impact: This feature signals a shift toward context-aware AI that learns from unstructured enterprise data, raising the bar for AI integrations in collaboration tools."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product for enterprises, consider adding a similar 'always-on' integration with Slack or Teams that indexes messages and documents to provide contextual answers. Start by identifying a specific workflow (e.g., customer support or engineering) where past Slack conversations hold critical knowledge.",
-              "note": "Ensure you handle data privacy and compliance (e.g., GDPR, SOC 2) from day one, as enterprises will demand it."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782251753470-6nmizx",
-                "title": "Anthropic’s Claude Tag is learning your company, one Slack message at a time",
-                "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-6nmizx-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-6nmizx-1",
-                "label": "Claude Tag",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-6nmizx-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782251753935-8coh5l",
-            "title": "GPT-5 Pro cracks 3-year immunology mystery, aiding cancer research",
-            "tldr": "OpenAI's GPT-5 Pro helped immunologist Derya Unutmaz solve a long-standing puzzle about T cell behavior, demonstrating AI's potential to accelerate biomedical discovery and offering a concrete use case for AI in drug development.",
-            "whyItMatters": [
-              "Validates AI as a tool for hypothesis generation and data analysis in complex biological systems, potentially reducing research timelines from years to months.",
-              "Opens new avenues for AI-powered drug discovery and personalized medicine, especially in cancer and autoimmune disease treatments."
-            ],
-            "whatToTry": {
-              "description": "Explore using GPT-5 Pro or similar advanced models for your own domain-specific research problems—start by feeding it raw experimental data or literature and asking it to identify patterns or generate testable hypotheses.",
-              "note": "Ensure data privacy and compliance with regulations (e.g., HIPAA) when handling sensitive biomedical data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782251753935-8coh5l",
-                "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-                "url": "https://openai.com/index/gpt-5-immunology-mystery",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782251753935-8coh5l-0",
-                "label": "GPT-5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-8coh5l-1",
-                "label": "Biomedical AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-8coh5l-2",
-                "label": "Drug Discovery",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 17:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782251753470-0systm",
-            "title": "2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts",
-            "tldr": "TechCrunch is tracking a growing list of major tech layoffs in 2026 where companies explicitly cite AI as a reason, signaling a structural shift in how tech firms are reallocating resources from human roles to AI-driven automation.",
-            "whyItMatters": [
-              "For founders building AI products, this trend validates the market demand for AI solutions that can replace or augment human labor, creating opportunities for B2B sales to cost-cutting enterprises.",
-              "It also signals a tightening labor market for AI talent as companies restructure, potentially making it harder to hire top engineers and researchers."
-            ],
-            "whatToTry": {
-              "description": "Analyze the layoff announcements for patterns in which roles are being cut (e.g., customer support, content moderation, data entry) and tailor your AI product's value proposition to directly address those pain points. For example, if many layoffs target customer service, prioritize building or marketing an AI customer support agent.",
-              "note": "Focus on roles with high repeatability and low decision complexity, as these are most vulnerable to automation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782251753470-0systm",
-                "title": "The running list: major tech layoffs in 2026 where employers cited AI",
-                "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-0systm-0",
-                "label": "Industry Trends",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-0systm-1",
-                "label": "AI Adoption",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 01:27:55 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782251753608-mhm0pp",
-            "title": "CUGA: Build Real Agentic Apps with 24 Examples on a Lightweight Harness",
-            "tldr": "IBM Research released CUGA, a lightweight harness with two dozen working examples for building agentic applications, offering a practical alternative to complex frameworks like LangChain.",
-            "whyItMatters": [
-              "Provides a low-overhead way to prototype and deploy agentic apps, reducing time to market for founders.",
-              "Demonstrates real-world patterns (e.g., tool use, multi-step reasoning) that can be directly adapted or extended."
-            ],
-            "whatToTry": {
-              "description": "Clone the CUGA repository and run one of the 24 examples (e.g., a web search agent) to see how the harness simplifies agent orchestration without heavy dependencies.",
-              "note": "Focus on examples that match your use case, like data retrieval or task automation, to quickly validate feasibility."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782251753608-mhm0pp",
-                "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
-                "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753608-mhm0pp-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753608-mhm0pp-1",
-                "label": "agent",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 12:51:55 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782251753470-y1se84",
-            "title": "OpenAI uses AI to hunt & patch open source bugs",
-            "tldr": "OpenAI launched an initiative applying AI to automatically find and fix vulnerabilities in open source projects, potentially reducing security risks for the entire ecosystem.",
-            "whyItMatters": [
-              "Business impact: Reduces security liability for startups relying on open source dependencies, lowering risk of breaches and compliance issues.",
-              "Technical impact: Automates vulnerability discovery and patching, accelerating fixes and freeing developer time for feature work."
-            ],
-            "whatToTry": {
-              "description": "Audit your open source dependencies for critical vulnerabilities and consider integrating AI-powered security scanning tools (like this initiative or similar) into your CI/CD pipeline to catch bugs early.",
-              "note": "Start with high-risk libraries and prioritize patches for known CVEs to maximize immediate security gains."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782251753470-y1se84",
-                "title": "OpenAI launches new initiative to help find and patch open source bugs",
-                "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-y1se84-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-y1se84-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-y1se84-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:11:31 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782251753608-j76ppf",
-            "title": "Hugging Face ships hub weekly with AI + human review",
-            "tldr": "Hugging Face shares their CI/CD pipeline for releasing huggingface_hub weekly, using AI for changelog generation and automated testing, with a human in the loop for quality control. This is a practical blueprint for AI product teams shipping frequently.",
-            "whyItMatters": [
-              "Shows how to maintain rapid release cadence (weekly) without sacrificing quality, using AI for automation and humans for oversight",
-              "Demonstrates a real-world pattern for AI-assisted development workflows that other teams can adopt"
-            ],
-            "whatToTry": {
-              "description": "Implement a similar weekly release cycle for your AI product: set up automated tests, use an LLM to draft changelogs from commit messages, and have a human review before shipping. Start with a simple script that generates release notes from git log and runs a test suite.",
-              "note": "Focus on reducing manual overhead in changelog creation and testing, not on full automation—human review catches edge cases AI misses."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782251753608-j76ppf",
-                "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
-                "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753608-j76ppf-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753608-j76ppf-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782251753609-f51t0g",
-            "title": "Cross-Origin Storage API: Client-Side AI Gets a Boost",
-            "tldr": "Hugging Face proposes a Cross-Origin Storage API for Transformers.js, enabling browser-based AI models to cache and reuse large files across origins, reducing load times and bandwidth. This could make client-side AI more practical for web apps.",
-            "whyItMatters": [
-              "Business impact: Enables faster, offline-capable AI features in web apps, improving user experience and reducing server costs for AI-powered products.",
-              "Technical impact: Solves a key bottleneck for client-side AI—large model file caching—by allowing cross-origin storage, making it easier to deploy models in browsers without repeated downloads."
-            ],
-            "whatToTry": {
-              "description": "If you're building web-based AI tools, experiment with the proposed API in Transformers.js to cache model files across origins. Test it in your app to reduce load times for returning users, especially for large models like Whisper or BERT.",
-              "note": "This is an experimental proposal; monitor browser support and fallback to IndexedDB or Cache API for now."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782251753609-f51t0g",
-                "title": "Experimenting with the proposed Cross-Origin Storage API in Transformers.js",
-                "url": "https://huggingface.co/blog/cross-origin-storage",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753609-f51t0g-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753609-f51t0g-1",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782251753609-f51t0g-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782251753470-ou0j24",
-            "title": "Fika Jobs Raises $4M for AI Video Hiring Platform",
-            "tldr": "Stockholm-based Fika Jobs secured $4M to build a video-first hiring platform where AI agents interview candidates and create short-form video profiles, blending LinkedIn and TikTok for recruitment.",
-            "whyItMatters": [
-              "Business impact: Signals growing investor confidence in AI-driven recruitment, potentially disrupting traditional hiring workflows with faster, scalable candidate screening.",
-              "Technical impact: Demonstrates practical use of AI agents for conversational interviews and video generation, offering a template for founders building multimodal hiring tools."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your product could benefit from AI-powered candidate screening by prototyping a simple video interview agent using existing APIs (e.g., OpenAI's Whisper for transcription, GPT for question generation) to test efficiency gains in your own hiring pipeline.",
-              "note": "Focus on compliance with hiring regulations (e.g., bias mitigation) early to avoid legal pitfalls."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782251753470-ou0j24",
-                "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
-                "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-ou0j24-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-ou0j24-1",
-                "label": "Hiring",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782251753470-ou0j24-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782251753935-ecebxr",
-            "title": "OpenAI Backs Appia Foundation for AI Safety Standards",
-            "tldr": "OpenAI is supporting the Appia Foundation to develop shared evaluation frameworks, safety practices, and global cooperation for advanced AI, signaling a push for industry-wide standards that could shape compliance and interoperability.",
-            "whyItMatters": [
-              "Founders building AI products may need to align with emerging safety and evaluation standards, affecting product design and regulatory readiness.",
-              "Collaboration on shared frameworks could reduce fragmentation, making it easier to integrate AI tools across platforms and regions."
-            ],
-            "whatToTry": {
-              "description": "Monitor Appia Foundation's published frameworks and consider aligning your AI product's safety and evaluation practices with these standards early to gain a competitive edge in compliance and trust.",
-              "note": "Standards are still evolving; stay flexible to adapt as they solidify."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782251753935-ecebxr",
-                "title": "Helping build shared standards for advanced AI",
-                "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782251753935-ecebxr-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-ecebxr-1",
-                "label": "Appia Foundation",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-ecebxr-2",
-                "label": "AI Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 13:00:00 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1782251753935-q7wkb9",
-            "title": "Omio uses OpenAI to build conversational travel experiences",
-            "tldr": "Omio, a travel booking platform, shares how it leverages OpenAI's models to create conversational interfaces for travel planning, speeding up product development and shifting to an AI-native approach. This case study offers practical insights for founders on integrating AI into existing products.",
-            "whyItMatters": [
-              "Demonstrates a real-world application of conversational AI in a complex domain like travel, showing how to handle multi-step booking flows and user intent.",
-              "Highlights the operational shift to becoming an AI-native company, which is a strategic move for many startups looking to stay competitive."
-            ],
-            "whatToTry": {
-              "description": "Review your product's user journey and identify 2-3 high-friction points where a conversational interface could reduce steps or improve clarity. Prototype a simple chatbot using an API like OpenAI's to handle one of these flows, focusing on a narrow use case first.",
-              "note": "Start with a low-risk, high-value interaction (e.g., itinerary changes or FAQs) to test user adoption before expanding."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782251753935-q7wkb9",
-                "title": "How Omio is building the future of conversational travel",
-                "url": "https://openai.com/index/omio",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782251753935-q7wkb9-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-q7wkb9-1",
-                "label": "Conversational AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782251753935-q7wkb9-2",
-                "label": "Travel Tech",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT"
           }
         ],
         "totalReadTimeMinutes": 20,
