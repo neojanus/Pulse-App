@@ -419,6 +419,423 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-06-30-afternoon",
+        "period": "afternoon",
+        "date": "2026-06-30",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Amazon launches $1B FDE org for custom AI agents, Why Specialization Is Inevitable for AI Products, RSEA: Recursive Self-Evolving Agents Outperform on Benchmarks.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1782834327736-eqt8l6",
+            "title": "Amazon launches $1B FDE org for custom AI agents",
+            "tldr": "Amazon is investing $1 billion in a new Field Deployment Engineering (FDE) organization that embeds engineers with customers to build and deploy purpose-built AI agents, mirroring moves by OpenAI and Anthropic. This signals a major shift toward hands-on, enterprise AI deployment.",
+            "whyItMatters": [
+              "Business impact: Creates a new competitive dynamic where cloud providers offer deep integration services, potentially raising customer expectations and shortening time-to-value for AI agents.",
+              "Technical impact: Indicates that off-the-shelf AI models still require significant customization for enterprise use cases, validating the need for agent-building expertise and infrastructure."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own AI agent deployment strategy: consider offering embedded engineering services or partnerships to help enterprise customers achieve self-sufficiency faster, similar to Amazon's FDE model.",
+              "note": "Start with a pilot program for 1-2 key customers to test demand before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782834327736-eqt8l6",
+                "title": "Amazon launches new $1 billion FDE org, following OpenAI and Anthropic",
+                "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-eqt8l6-0",
+                "label": "Amazon",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-eqt8l6-1",
+                "label": "AI agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-eqt8l6-2",
+                "label": "Enterprise deployment",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 15:00:00 +0000"
+          },
+          {
+            "id": "rss-hugging-face-blog-1782834327975-rkgqhh",
+            "title": "Why Specialization Is Inevitable for AI Products",
+            "tldr": "A Hugging Face blog post argues that as AI models commoditize, specialization (fine-tuning for specific domains) becomes the key differentiator for startups, not general-purpose models. This matters because it validates a strategic shift from chasing AGI to building niche, high-value AI solutions.",
+            "whyItMatters": [
+              "Business impact: Founders should pivot from building on generic models to creating specialized, domain-specific AI products that solve real, narrow problems, reducing competition with big tech.",
+              "Technical impact: Specialization via fine-tuning or small, task-specific models can lower costs, improve accuracy, and enable faster iteration compared to relying on large, expensive general models."
+            ],
+            "whatToTry": {
+              "description": "Identify a high-value, narrow domain (e.g., legal contract review, medical coding, or customer support for a specific industry) and fine-tune a small open-source model (like Llama or Mistral) on proprietary data to create a specialized tool. Start with a single, painful problem for a specific user group.",
+              "note": "Focus on data moats—your specialized dataset is your competitive advantage, not the model itself."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1782834327975-rkgqhh",
+                "title": "Why Specialization Is Inevitable",
+                "url": "https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1782834327975-rkgqhh-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1782834327975-rkgqhh-1",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 14:39:11 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1782834327920-do3o98",
+            "title": "RSEA: Recursive Self-Evolving Agents Outperform on Benchmarks",
+            "tldr": "A new paper introduces RSEA, a recursive self-evolving agent that improves its natural-language state (strategy, skills, playbook) without weight updates, using a held-out selection gate to prevent regression. It beats ReAct on ALFWorld (69.3% vs 64.6%) but shows no universal winner—concrete-workflow induction (AWM) is better for tool-use tasks.",
+            "whyItMatters": [
+              "Business impact: Founders building AI agents can adopt RSEA's held-out selection method to safely improve agent performance without retraining, reducing risk of regressions in production.",
+              "Technical impact: Demonstrates that unguarded context evolution (like Dynamic Cheatsheet) is high-variance and unsafe, highlighting the need for validation gates in self-improving agents."
+            ],
+            "whatToTry": {
+              "description": "Implement a held-out validation set for your agent's self-improvement loop—test candidate updates on a disjoint split before deploying to production, similar to RSEA's keep-better gate.",
+              "note": "Start with a small held-out set (e.g., 10-20% of your test cases) to catch regressions early; this is especially critical for agents with evolving prompts or workflows."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782834327920-do3o98",
+                "title": "Recursive Self-Evolving Agents via Held-Out Selection",
+                "url": "https://arxiv.org/abs/2606.28374",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-do3o98-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-do3o98-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782834327920-35vvhz",
+            "title": "New Framework Closes Data-Evaluation Loop for LLMs",
+            "tldr": "A new method from ArXiv introduces the 'capability slice' to systematically link evaluation failures to specific data issues, enabling targeted fixes instead of guesswork. This is covered by a single research paper but offers a practical framework for improving model performance.",
+            "whyItMatters": [
+              "Founders can replace intuition-based debugging with a structured approach to diagnose and fix model weaknesses, reducing iteration time.",
+              "Enables precise data interventions (e.g., fixing a masked loss) rather than broad retraining, saving compute and improving outcomes."
+            ],
+            "whatToTry": {
+              "description": "Adopt the capability slice framework: decompose evaluation benchmarks into slices (background, task, operation, constraint) to isolate failures, then map them to data taxonomy for targeted fixes. Start with one underperforming benchmark.",
+              "note": "Requires manual taxonomy creation initially, but automates debugging once established."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782834327920-35vvhz",
+                "title": "Data and Evaluation Closed-Loop for Model Capability Enhancement",
+                "url": "https://arxiv.org/abs/2606.28471",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-35vvhz-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-35vvhz-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782834327920-3cqxry",
+            "title": "GPTNT: New Benchmark Reveals AI Collaboration Gaps Under Real-Time Pressure",
+            "tldr": "A new benchmark, GPTNT, based on the cooperative game 'Keep Talking and Nobody Explodes', tests multimodal agents on real-time collaboration with information asymmetry and time pressure. Current state-of-the-art models fail to defuse a single bomb, highlighting critical weaknesses in state tracking and efficient action under time constraints.",
+            "whyItMatters": [
+              "For founders building AI agents that need to collaborate with humans or other agents in real-time (e.g., customer support, robotics, gaming), this benchmark exposes fundamental limitations in current models' ability to handle asynchronous communication and time pressure.",
+              "Technically, it shows that existing multimodal models lack robust state tracking and efficient action under dynamic conditions, which is crucial for deploying AI in real-world collaborative tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own AI agent's performance on the GPTNT benchmark to identify specific weaknesses in real-time collaboration, then focus training or fine-tuning on improving state tracking and communication efficiency under time constraints.",
+              "note": "Consider using this benchmark as a stress test before deploying agents in time-sensitive collaborative environments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782834327920-3cqxry",
+                "title": "GPTNT: Benchmarking Real-Time Collaboration Between Multimodal Agents on Keep Talking And Nobody Explodes",
+                "url": "https://arxiv.org/abs/2606.28514",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-3cqxry-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-3cqxry-1",
+                "label": "benchmark",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-3cqxry-2",
+                "label": "collaboration",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782834327920-ki44yf",
+            "title": "DynaSteer: Dynamic LLM Steering for Truthful Reasoning",
+            "tldr": "A new paper introduces DynaSteer, a framework that dynamically steers LLM reasoning toward truth by intervening at early, high-entropy points, showing significant gains on math benchmarks and generalization to coding tasks.",
+            "whyItMatters": [
+              "For founders building AI products, this offers a practical method to improve LLM output reliability without retraining, reducing hallucinations in reasoning-heavy applications like tutoring or code generation.",
+              "The dynamic intervention approach minimizes collateral damage to correct trajectories, making it safer for production use compared to naive steering methods."
+            ],
+            "whatToTry": {
+              "description": "Evaluate DynaSteer's open-source code for your own LLM pipeline, especially if you're working on math, logic, or coding tasks where truthfulness is critical. Start by testing it on a small set of reasoning-heavy prompts to measure accuracy improvements.",
+              "note": "The framework requires access to model internals (activations), so it's best suited for open-weight models like Llama or Mistral."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782834327920-ki44yf",
+                "title": "Search for Truth from Reasoning: A Dynamic Representation Editing Framework for Steering LLM Trajectories",
+                "url": "https://arxiv.org/abs/2606.28589",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-ki44yf-0",
+                "label": "DynaSteer",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-ki44yf-1",
+                "label": "LLM Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-ki44yf-2",
+                "label": "Representation Editing",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782834327736-7oic08",
+            "title": "X launches MCP server to simplify AI API access",
+            "tldr": "X released a hosted MCP server, enabling AI tools to directly interact with its platform via a standardized protocol, reducing integration complexity for developers.",
+            "whyItMatters": [
+              "Business impact: Lowers barrier for AI startups to integrate X data (e.g., tweets, trends) into their products, potentially driving new use cases like real-time sentiment analysis or automated content moderation.",
+              "Technical impact: MCP standardizes how AI agents connect to external APIs, cutting development time and maintenance overhead compared to custom integrations."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI tool that needs social media data, test X's MCP server to see if it simplifies your data pipeline. Start by reviewing the MCP protocol docs and X's API endpoints to assess fit for your use case.",
+              "note": "MCP is still emerging; evaluate reliability and rate limits before committing to production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782834327736-7oic08",
+                "title": "X now offers an MCP server to make its platform easier for AI tools to use",
+                "url": "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-7oic08-0",
+                "label": "X",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-7oic08-1",
+                "label": "MCP",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-7oic08-2",
+                "label": "API",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 15:08:42 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782834327736-bxuyxl",
+            "title": "OKX builds marketplace for AI agents to hire and pay each other",
+            "tldr": "Crypto exchange OKX is creating a marketplace where AI agents can autonomously hire, pay, and build reputation using crypto rails—signaling a shift toward agent-to-agent economies that founders should watch for infrastructure opportunities.",
+            "whyItMatters": [
+              "Enables new business models where AI agents can autonomously transact, reducing friction in multi-agent workflows and automated services.",
+              "Introduces identity and reputation systems for agents, which could become critical infrastructure for trust in agentic AI systems."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating crypto payment APIs (e.g., OKX or similar) into your AI agent platform to allow agents to pay for API calls, data access, or services autonomously—start with a simple proof-of-concept for agent-to-agent microtransactions.",
+              "note": "Focus on regulatory compliance and user consent; this is early-stage infrastructure, so test with small, controlled experiments."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782834327736-bxuyxl",
+                "title": "Crypto exchange OKX wants AI agents to hire and pay each other",
+                "url": "https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-bxuyxl-0",
+                "label": "Crypto",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-bxuyxl-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-bxuyxl-2",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 09:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782834327736-on2vx3",
+            "title": "AI adoption boosts headcount 10.2%, especially junior roles",
+            "tldr": "A new report shows companies heavily adopting AI increased headcount by 10.2%, with entry-level roles growing 12%, challenging the narrative that AI eliminates junior jobs. This data is crucial for founders planning hiring strategies.",
+            "whyItMatters": [
+              "Business impact: Founders can invest in AI tools without fearing job cuts; instead, they may need to scale teams, especially junior talent, to leverage AI effectively.",
+              "Technical impact: The data suggests AI augments rather than replaces work, encouraging investment in AI-powered workflows and training for entry-level employees."
+            ],
+            "whatToTry": {
+              "description": "Review your hiring plans: consider increasing entry-level hires to handle AI-augmented tasks, and pilot AI tools in areas where junior staff can upskill quickly.",
+              "note": "Focus on roles where AI can automate repetitive tasks, freeing juniors for higher-value work."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782834327736-on2vx3",
+                "title": "The AI jobs debate just got messier",
+                "url": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782834327736-on2vx3-0",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 04:01:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1782834327920-o8n93u",
+            "title": "New Medical AI Benchmark Reveals Safety Gaps in Multimodal LLMs",
+            "tldr": "IMCBench is a new benchmark for multimodal LLMs in image-grounded medical conversations, testing safety, accuracy, and uncertainty. Claude Opus 4.6 leads overall but all models show safety degradation for malignant and rare conditions, highlighting critical gaps for clinical AI.",
+            "whyItMatters": [
+              "For founders building medical AI: This benchmark provides a realistic evaluation framework for multi-turn, image-grounded clinical conversations, revealing that even top models struggle with safety in critical scenarios like rare diseases.",
+              "Technical insight: Visual input and EHR context both significantly impact safety, with stronger models leveraging visual features more effectively—guiding architecture decisions for medical AI products."
+            ],
+            "whatToTry": {
+              "description": "If you're developing a medical AI product, use IMCBench's evaluation criteria (safety, accuracy, uncertainty) to stress-test your own multimodal pipeline, especially for rare or malignant conditions where safety drops occur. Consider augmenting with EHR context to improve safety scores.",
+              "note": "The benchmark uses LLM-as-Jury scoring calibrated against expert clinicians—consider adopting a similar human-in-the-loop validation for your product."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782834327920-o8n93u",
+                "title": "IMCBench: A benchmark for multimodal LLMs in Image-grounded Medical Conversations",
+                "url": "https://arxiv.org/abs/2606.28556",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-o8n93u-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-o8n93u-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782834327920-o8n93u-2",
+                "label": "healthcare",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
