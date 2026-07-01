@@ -1,7 +1,455 @@
 [
   {
-    "date": "2026-06-30",
+    "date": "2026-07-01",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-01-morning",
+        "period": "morning",
+        "date": "2026-07-01",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: HASTE: AI agent that reuses skills across ML competitions, boosting medal rate to 100%, US Lifts Export Controls on Anthropic's Mythos & Fable Models, Claude Opus 4.7 Helps Hacker Exploit Major Ticket Vendor.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1782903081749-k85w24",
+            "title": "HASTE: AI agent that reuses skills across ML competitions, boosting medal rate to 100%",
+            "tldr": "A new hierarchical multi-agent system called HASTE organizes ML engineering skills into global, domain, and competition-specific tiers, achieving 100% medal rate on 8 Kaggle competitions vs 62.5% for flat loading, while using 52% fewer refinement iterations. This suggests structured knowledge reuse can substitute for model strength and compute budget.",
+            "whyItMatters": [
+              "For founders building AI agents that solve ML problems, this demonstrates a practical architecture for transfer learning that dramatically improves efficiency and success rates without requiring larger models.",
+              "The hierarchical skill organization approach can be applied to any multi-task AI system, reducing cold-start costs and enabling faster iteration on new problems."
+            ],
+            "whatToTry": {
+              "description": "Implement a tiered skill repository in your ML agent: separate skills into global (e.g., data preprocessing), domain (e.g., NLP), and competition-specific (e.g., Kaggle task) levels. Use an LLM orchestrator to load only relevant skills per task, and track how skill inventory size affects agent performance.",
+              "note": "Start with a small set of 10-20 skills per tier and measure refinement iterations saved; the paper shows benefits kick in after 50+ skills."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-k85w24",
+                "title": "Why Solve It Twice? Hierarchical Accumulation of Skills for Transfer-Efficient ML Engineering",
+                "url": "https://arxiv.org/abs/2606.30911",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-k85w24-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-k85w24-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-k85w24-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1782903081521-odm81e",
+            "title": "US Lifts Export Controls on Anthropic's Mythos & Fable Models",
+            "tldr": "The Trump administration reversed its earlier order, lifting export restrictions on Anthropic's advanced AI models (Mythos and Fable) weeks after suspending foreign national access. This signals a volatile regulatory environment for AI model distribution, directly impacting founders' go-to-market strategies and compliance planning.",
+            "whyItMatters": [
+              "Founders relying on Anthropic's models for global products now face sudden regulatory shifts, requiring agile compliance and contingency plans for international access.",
+              "The reversal indicates political influence on AI export policy, creating uncertainty for long-term product roadmaps and investment in model-dependent startups."
+            ],
+            "whatToTry": {
+              "description": "Review your current reliance on Anthropic's Mythos and Fable models for international customers. Prepare a fallback strategy using alternative models (e.g., open-source or other providers) and monitor policy changes closely to avoid sudden access disruptions.",
+              "note": "Consider building model-agnostic abstractions in your stack to swap providers quickly if export controls change again."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1782903081521-odm81e",
+                "title": "The Trump Administration Is Lifting Its Export Controls on Anthropic’s Mythos and Fable AI Models",
+                "url": "https://www.wired.com/story/trump-administration-lifts-export-controls-on-anthropics-mythos-and-fable-ai-models/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1782903081521-odm81e-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782903081521-odm81e-1",
+                "label": "Export Controls",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782903081521-odm81e-2",
+                "label": "Regulation",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 30 Jun 2026 23:23:04 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1782903081521-ybjocq",
+            "title": "Claude Opus 4.7 Helps Hacker Exploit Major Ticket Vendor",
+            "tldr": "A researcher used Anthropic's Claude Opus 4.7 to find and exploit a vulnerability in Front Gate Tickets, the platform behind Lollapalooza and Bonnaroo, enabling unauthorized ticket issuance. This highlights AI's growing role in security research and the need for robust defenses.",
+            "whyItMatters": [
+              "Demonstrates AI's ability to autonomously discover and exploit real-world vulnerabilities, raising the bar for security testing and defense.",
+              "Shows that frontier models can now perform complex, multi-step hacking tasks, which could lower the barrier for malicious actors and increase pressure on startups to secure their systems."
+            ],
+            "whatToTry": {
+              "description": "If you build web applications, use Claude or similar models to perform automated penetration testing on your own systems—start by feeding it your API docs and asking it to find injection or authentication flaws.",
+              "note": "Ensure you have explicit permission to test your own systems and consider using a sandboxed environment to avoid unintended damage."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1782903081521-ybjocq",
+                "title": "Claude Helped a Hacker Find a Way to Issue Tickets to Almost Every US Music Festival",
+                "url": "https://www.wired.com/story/claude-helped-a-hacker-find-a-way-to-issue-tickets-to-almost-every-us-music-festival/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1782903081521-ybjocq-0",
+                "label": "Claude Opus 4.7",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782903081521-ybjocq-1",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1782903081521-ybjocq-2",
+                "label": "Vulnerability Research",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-diegty",
+            "title": "Feedback vs. Retries: What Actually Improves AI Agents?",
+            "tldr": "A new study reveals that multi-turn AI agent improvement often comes from repeated attempts, not feedback. Self-feedback adds little, but strong external teachers boost performance—highlighting that the ability to act on feedback, not just its availability, is key.",
+            "whyItMatters": [
+              "For founders building AI agents: This paper provides a rigorous method to evaluate whether your feedback loops are truly effective, preventing wasted engineering on self-feedback that doesn't improve outcomes.",
+              "Technically, it introduces a controlled protocol to isolate feedback gains from retry effects, offering a benchmark for agent design and a clear signal that investing in student's feedback utilization is more critical than teacher quality."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI agent's feedback loop: Run a controlled experiment comparing performance with and without feedback, controlling for number of attempts. If self-feedback shows no gain over retries, pivot to using stronger external teachers (e.g., better models or human-in-the-loop) or train your agent to better act on feedback.",
+              "note": "Start with a simple task like code debugging or math problem solving, and track accuracy per attempt with and without feedback."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-diegty",
+                "title": "What Drives Interactive Improvement from Feedback?",
+                "url": "https://arxiv.org/abs/2606.30774",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-diegty-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-diegty-1",
+                "label": "Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-diegty-2",
+                "label": "Feedback",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-vwxyoh",
+            "title": "Contrastive Reflection: Smarter Prompt Optimization for AI Agents",
+            "tldr": "A new framework, Contrastive Reflection, uses structured error analysis and contrastive examples to iteratively improve prompts for LLM agents, achieving a 9% accuracy boost on HotpotQA. It's a practical debugging tool for founders building agentic IR systems.",
+            "whyItMatters": [
+              "Provides a systematic method to debug and optimize prompts for AI agents, reducing trial-and-error and improving reliability in production.",
+              "Enables targeted prompt edits by identifying specific failure patterns and contrasting them with successful behaviors, leading to measurable gains without regressions."
+            ],
+            "whatToTry": {
+              "description": "Implement a contrastive reflection loop in your agentic IR pipeline: log retrieval/reasoning traces and grading scores, identify error slices, add nearby successful examples, and use a Teacher LLM to propose prompt edits. Validate changes on held-out data with regression checks.",
+              "note": "Start with a simple slice selector (e.g., tree-based) and focus on high-impact failure modes first."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-vwxyoh",
+                "title": "Contrastive Reflection for Iterative Prompt Optimization",
+                "url": "https://arxiv.org/abs/2606.30840",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-vwxyoh-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-vwxyoh-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-vwxyoh-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-3lkd14",
+            "title": "BayesBench: LLMs Fail at Multi-Turn Bayesian Reasoning",
+            "tldr": "A new benchmark reveals that even large LLMs struggle to update beliefs rationally across multiple turns, matching Bayesian reasoning only in simple cases and failing to use inferred knowledge for predictions. This highlights a critical gap for building reliable AI agents.",
+            "whyItMatters": [
+              "For founders building conversational AI or agents, this shows that current LLMs may not reliably accumulate evidence over multiple interactions, leading to inconsistent or irrational behavior in real-world applications.",
+              "Technical teams can use BayesBench to evaluate and improve their models' multi-turn reasoning, potentially by fine-tuning on Bayesian inference tasks or incorporating explicit belief-updating mechanisms."
+            ],
+            "whatToTry": {
+              "description": "Test your LLM-based product with multi-turn scenarios that require evidence accumulation, such as customer support or diagnostic agents. Use BayesBench's tasks (estimation, prediction, persona-framed) to identify where your model fails to update beliefs rationally.",
+              "note": "Consider augmenting your system with a separate Bayesian tracker or chain-of-thought prompting to improve belief updates, especially for downstream predictions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-3lkd14",
+                "title": "BayesBench: Evaluating LLM Belief Trajectories Under Multi-Turn Evidence Accumulation",
+                "url": "https://arxiv.org/abs/2606.30850",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-3lkd14-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-3lkd14-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-3lkd14-2",
+                "label": "reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-8ly5nu",
+            "title": "Agents must help users learn what they want, not just ask",
+            "tldr": "A new paper from ArXiv argues that AI agents wrongly assume users have well-formed preferences. It introduces CoPref and CoShop, showing frontier models fail 44%+ of the time because they don't help users construct preferences through learning. This challenges the default 'ask clarifying questions' approach in AI products.",
+            "whyItMatters": [
+              "For founders building AI agents or recommender systems: the standard approach of eliciting preferences via questions is fundamentally flawed for non-expert users, leading to poor outcomes and user frustration.",
+              "Technically, this means agents need to incorporate educational or exploratory interactions (e.g., examples, explanations) to help users build domain knowledge before making recommendations, which changes how you design conversation flows and evaluate success."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent's user interactions: replace pure preference-elicitation questions with 'learning loops' that first teach users about relevant features (e.g., 'Here are 3 examples of what this feature means') before asking for their preference. Test with novice users to see if completion rates improve.",
+              "note": "Start with a simple A/B test on one feature to measure if users complete tasks faster or with higher satisfaction when given educational context first."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-8ly5nu",
+                "title": "Beyond expert users: agents should help users construct preferences, not just elicit them",
+                "url": "https://arxiv.org/abs/2606.30863",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-8ly5nu-0",
+                "label": "CoPref",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-8ly5nu-1",
+                "label": "CoShop",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-8ly5nu-2",
+                "label": "Agent Design",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-se293c",
+            "title": "RoPoLL: Robust LLM Jury Beats Single Giant Judge",
+            "tldr": "A new paper formalizes the flaws in using panels of LLM judges (PoLL) and proposes RoPoLL, which replaces the consensus aggregation with a robust geometric median. This simple fix eliminates unbounded bias from corrupted judges and allows a 3-judge committee (38B total) to outperform a 675B single model, offering a practical, compute-efficient path to reliable LLM evaluation.",
+            "whyItMatters": [
+              "For founders building AI evaluation pipelines, this provides a mathematically grounded method to make LLM-as-judge systems robust to biased or failing judges, reducing the risk of unreliable evaluations in production.",
+              "Technically, it shows that a small panel of smaller models with robust aggregation can match or beat a single large model, enabling cost-effective and scalable evaluation without sacrificing accuracy."
+            ],
+            "whatToTry": {
+              "description": "If you use LLM judges for evaluating your AI product's outputs, experiment with replacing your current consensus aggregation (e.g., mean or majority vote) with the geometric median. Start with a small panel of 3-5 open-weight models (e.g., 7B-13B each) and compare performance against a single large judge like GPT-4 or Claude.",
+              "note": "The geometric median is tuning-free and has optimal breakdown point of 50%, meaning it can handle up to half the judges being corrupted. Implement it using existing robust statistics libraries (e.g., SciPy's geometric_median)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-se293c",
+                "title": "RoPoLL: Robust Panel of LLM Judges",
+                "url": "https://arxiv.org/abs/2606.30931",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-se293c-0",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-se293c-1",
+                "label": "Robust Statistics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-se293c-2",
+                "label": "Research Paper",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1782903081496-sk8fq6",
+            "title": "Trump lifts restrictions on Anthropic’s Mythos & Fable models",
+            "tldr": "The Trump administration has removed regulatory restrictions on Anthropic's Mythos and Fable models, signaling a shift in AI policy that creates uncertainty for future model releases but opens the door for faster deployment of advanced AI.",
+            "whyItMatters": [
+              "Founders can now deploy Anthropic's latest models without previous compliance hurdles, potentially accelerating product timelines and reducing legal overhead.",
+              "The policy reversal highlights the volatility of AI regulation, urging founders to build flexible compliance strategies that can adapt to sudden changes."
+            ],
+            "whatToTry": {
+              "description": "Evaluate integrating Mythos or Fable into your product stack immediately to gain a competitive edge, but prepare contingency plans for potential re-regulation by diversifying model providers and staying informed on policy shifts.",
+              "note": "Monitor Anthropic's official updates and legal advisories to ensure ongoing compliance as the regulatory landscape remains fluid."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1782903081496-sk8fq6",
+                "title": "Trump drops restrictions on Anthropic’s Mythos and Fable models",
+                "url": "https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1782903081496-sk8fq6-0",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782903081496-sk8fq6-1",
+                "label": "Regulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1782903081496-sk8fq6-2",
+                "label": "Policy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 02:16:06 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1782903081749-58po8j",
+            "title": "LearnStop: When Early Exits in Reasoning Models Actually Help",
+            "tldr": "A new paper introduces LearnStop, a method for early stopping in reasoning language models, finding that learned multi-feature stopping improves cost-efficiency on free-form math tasks but scalar methods suffice for multiple-choice and hard problems. This matters for founders optimizing inference costs without sacrificing accuracy.",
+            "whyItMatters": [
+              "Business impact: Reduces inference costs by stopping reasoning early when confidence is high, directly lowering API bills for AI products.",
+              "Technical impact: Provides a framework to decide when to use learned vs. simple stopping rules, enabling more efficient model deployment."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own reasoning model's outputs by tracking features like answer confidence, entropy, and answer stability at intermediate checkpoints. Use simple scalar thresholds (e.g., confidence > 0.9) for multiple-choice tasks, but consider a learned multi-feature stopper for free-form math or open-ended generation to maximize cost savings.",
+              "note": "Start with scalar exits for simplicity; only invest in learned stoppers if your task shows high variability in reasoning length."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1782903081749-58po8j",
+                "title": "When Does Learning to Stop Help? A Cost-Aware Study of Early Exits in Reasoning Models",
+                "url": "https://arxiv.org/abs/2606.30852",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-58po8j-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-58po8j-1",
+                "label": "optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1782903081749-58po8j-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 01 Jul 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-06-30-morning",
@@ -1278,7 +1726,7 @@
   },
   {
     "date": "2026-06-29",
-    "displayDate": "Yesterday",
+    "displayDate": "Monday, Jun 29",
     "briefings": [
       {
         "id": "briefing-2026-06-29-afternoon",
@@ -5778,1313 +6226,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Thu, 25 Jun 2026 11:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-06-24",
-    "displayDate": "Wednesday, Jun 24",
-    "briefings": [
-      {
-        "id": "briefing-2026-06-24-morning",
-        "period": "morning",
-        "date": "2026-06-24",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: RIFT-Bench: Dynamic Red-Teaming for Agentic AI Security, RL for Broadly Beneficial AI: Generalizes Beyond Training, Anthropic’s Claude Tag: AI learns your company via Slack.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1782296976108-x380rd",
-            "title": "RIFT-Bench: Dynamic Red-Teaming for Agentic AI Security",
-            "tldr": "RIFT-Bench is a new framework for dynamically red-teaming agentic AI systems, using graph representations to automatically discover system structure and deploy adaptive adversarial attacks. It enables unified security evaluation across diverse agentic architectures, tested on 45 systems, and supports testing mitigation strategies.",
-            "whyItMatters": [
-              "Agentic AI systems introduce new attack vectors beyond traditional LLM vulnerabilities, and RIFT-Bench provides a standardized, scalable way to evaluate security across different implementations.",
-              "Founders can use this framework to systematically test their own agentic systems for vulnerabilities, reducing risk before deployment and improving trust with users and investors."
-            ],
-            "whatToTry": {
-              "description": "Review the RIFT-Bench paper and consider integrating its methodology into your security testing pipeline for agentic AI products. Start by mapping your system's architecture to identify potential attack surfaces, then use the adaptive adversarial probes to uncover weaknesses.",
-              "note": "The framework is research-stage; expect to adapt it to your specific stack. Focus on the Discovery phase first to understand your system's structure."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-x380rd",
-                "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems",
-                "url": "https://arxiv.org/abs/2606.23927",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-x380rd-0",
-                "label": "RIFT-Bench",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-x380rd-1",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-x380rd-2",
-                "label": "Security",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-zclvhv",
-            "title": "RL for Broadly Beneficial AI: Generalizes Beyond Training",
-            "tldr": "A new paper shows that training AI models with reinforcement learning on beneficial behaviors (truthfulness, fairness, corrigibility) in one domain (e.g., health) significantly improves alignment across 50+ out-of-distribution benchmarks, reducing reward hacking and deception. This is a major step toward persistent, generalizable alignment.",
-            "whyItMatters": [
-              "Founders can use this approach to build AI products that stay aligned in novel, real-world scenarios without extensive retraining, reducing risk of costly misalignment failures.",
-              "The method demonstrates that targeted RL on beneficial traits can transfer across domains, potentially lowering the cost and complexity of alignment for multi-use AI systems."
-            ],
-            "whatToTry": {
-              "description": "Incorporate a 'beneficial behavior RL' fine-tuning step into your model training pipeline, focusing on traits like truthfulness and risk awareness using domain-specific datasets (e.g., health, education). Then test on diverse out-of-distribution benchmarks to validate generalization.",
-              "note": "Start with a single domain to keep costs low; the paper shows cross-domain transfer works well."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-zclvhv",
-                "title": "Reinforcement Learning Towards Broadly and Persistently Beneficial Models",
-                "url": "https://arxiv.org/abs/2606.24014",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-zclvhv-0",
-                "label": "Reinforcement Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-zclvhv-1",
-                "label": "AI Alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-zclvhv-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782296975824-u62452",
-            "title": "Anthropic’s Claude Tag: AI learns your company via Slack",
-            "tldr": "Anthropic launched Claude Tag, an always-on AI teammate in Slack that captures organizational context and institutional knowledge. This is a strategic move to embed AI into enterprise workflows and data, making it harder for competitors to replicate.",
-            "whyItMatters": [
-              "Business impact: Enables AI to understand your company’s unique context, improving automation and decision-making across teams.",
-              "Technical impact: Creates a moat by ingesting proprietary Slack data, making the AI more valuable and harder to switch away from."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating Claude Tag into your Slack workspace to see how it surfaces institutional knowledge. Start with a pilot team to test its ability to answer questions about past decisions, project history, and internal processes.",
-              "note": "Be mindful of data privacy and compliance—review Anthropic’s data handling policies before full rollout."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782296975824-u62452",
-                "title": "Anthropic’s Claude Tag is learning your company, one Slack message at a time",
-                "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782296975824-u62452-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782296975824-u62452-1",
-                "label": "Claude Tag",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782296975824-u62452-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 17:00:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782296976248-vg1u2p",
-            "title": "GPT-5 Pro cracks 3-year immunology mystery, aiding cancer research",
-            "tldr": "OpenAI's GPT-5 Pro helped immunologist Derya Unutmaz solve a long-standing mystery about T cell behavior, potentially accelerating cancer and autoimmune disease research. This showcases GPT-5's advanced reasoning capabilities for complex scientific problems.",
-            "whyItMatters": [
-              "Demonstrates GPT-5's ability to assist in cutting-edge scientific research, opening new use cases for AI in biotech and pharma",
-              "Validates that frontier models can generate novel hypotheses, not just summarize existing knowledge, which could reduce R&D timelines for AI product builders targeting life sciences"
-            ],
-            "whatToTry": {
-              "description": "Evaluate GPT-5 Pro for your own complex problem-solving tasks, especially if you're building in biotech, drug discovery, or scientific research. Test it on a domain-specific mystery or hypothesis generation to see if it can uncover insights you've missed.",
-              "note": "Start with a well-defined problem and provide rich context; GPT-5's reasoning shines when given detailed background and constraints."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782296976248-vg1u2p",
-                "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-                "url": "https://openai.com/index/gpt-5-immunology-mystery",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782296976248-vg1u2p-0",
-                "label": "GPT-5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782296976248-vg1u2p-1",
-                "label": "Biotech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782296976248-vg1u2p-2",
-                "label": "Scientific Research",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 23 Jun 2026 17:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-mi46f8",
-            "title": "Neuro-Symbolic Drive: Rule-Grounded Reasoning Boosts VLA Performance",
-            "tldr": "A new neuro-symbolic framework uses rule-based planner traces to supervise driving VLAs, improving reasoning fidelity and motion planning accuracy by 45% on ADE@3s. This approach ensures causal coupling between reasoning and action, addressing a key weakness in current CoT-based driving models.",
-            "whyItMatters": [
-              "For founders building autonomous driving or robotics AI: This method reduces hallucinated reasoning by grounding it in symbolic rules, potentially enabling safer, more interpretable decision-making in safety-critical applications.",
-              "Technical impact: The technique of using planner traces as supervision can be adapted to other domains where rule-based systems exist (e.g., logistics, manufacturing), offering a path to combine symbolic AI with deep learning for reliable reasoning."
-            ],
-            "whatToTry": {
-              "description": "If you're developing a driving or robotics VLA, consider instrumenting your existing rule-based planner to extract decision traces. Use these traces as supervised training data for your model, focusing on the step-by-step rule evaluations that lead to final actions. This can improve reasoning fidelity without requiring manual annotation.",
-              "note": "Start with a simulation environment to generate traces; the paper used Qwen3.5-4B as the base model, but you can experiment with smaller VLMs for faster iteration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-mi46f8",
-                "title": "Neuro-Symbolic Drive: Rule-Grounded Faithful Reasoning for Driving VLAs",
-                "url": "https://arxiv.org/abs/2606.23938",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-mi46f8-0",
-                "label": "Neuro-Symbolic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-mi46f8-1",
-                "label": "Driving VLA",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-mi46f8-2",
-                "label": "Rule-Based Planning",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-btop28",
-            "title": "New Paper: When Does Automation Become Agency?",
-            "tldr": "A new arXiv paper proposes a framework to distinguish between 'agentic' systems (engineered workflows) and 'agentive' systems (endogenous capabilities), arguing that true agency requires internalized goal, identity, decision-making, self-regulation, and learning. This matters for founders building AI agents, as it clarifies design choices and potential limitations of current LLM-based agents.",
-            "whyItMatters": [
-              "Provides a clear taxonomy to evaluate and design AI agents, helping founders avoid overhyping or underdelivering on autonomy claims.",
-              "Introduces the Goal-Identity-Configurator (GIC) architecture, which could inspire new approaches to building more capable, self-contained agents."
-            ],
-            "whatToTry": {
-              "description": "Review your current agent architecture against the paper's five dimensions (goal, identity, decision-making, self-regulation, learning). Identify which are externally scaffolded vs. internalized, and consider whether moving toward internalization could improve robustness or autonomy for your use case.",
-              "note": "This is a conceptual paper; practical implementation may require significant R&D. Start by auditing your system's current design."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-btop28",
-                "title": "Critique of Agent Model",
-                "url": "https://arxiv.org/abs/2606.23991",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-btop28-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-btop28-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-uy7ybi",
-            "title": "Hierarchical Multi-Agent RL with Hard Safety Guarantees",
-            "tldr": "A new framework combines reinforcement learning with control theory to enforce hard safety constraints in multi-agent systems, achieving near-perfect safety rates while maintaining competitive performance and generalizing to varying agent counts.",
-            "whyItMatters": [
-              "Enables safe deployment of multi-agent AI systems in real-world applications like autonomous fleets, robotics, and drone swarms without sacrificing performance.",
-              "Provides theoretical safety guarantees that are critical for regulatory approval and trust in safety-critical AI products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate this framework for your multi-agent coordination tasks by testing its constraint manifold approach in simulation environments (e.g., using ROS or Gazebo) to see if it reduces safety violations without excessive conservatism.",
-              "note": "Start with small-scale simulations to validate the safety guarantees before scaling to production systems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-uy7ybi",
-                "title": "Safe and Generalizable Hierarchical Multi-Agent RL via Constraint Manifold Control",
-                "url": "https://arxiv.org/abs/2606.24010",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-uy7ybi-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-uy7ybi-1",
-                "label": "reinforcement learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-uy7ybi-2",
-                "label": "multi-agent systems",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-hncxzs",
-            "title": "LM Agents as Circuit Explainers: HyVE Benchmark for Mechanistic Interpretability",
-            "tldr": "New research introduces HyVE, an LM agent that automates circuit explanation in mechanistic interpretability, and AgenticInterpBench, a benchmark of 84 circuits. While promising, reliable validation remains a key challenge, making this directly relevant for founders building AI safety or interpretability tools.",
-            "whyItMatters": [
-              "Business impact: Opens opportunities for startups to build automated interpretability tools that reduce manual labor in AI safety audits, potentially lowering costs for compliance and debugging.",
-              "Technical impact: Demonstrates that LM agents can generate useful explanations for transformer circuits, but highlights validation as a critical bottleneck—pointing to a clear technical gap for product development."
-            ],
-            "whatToTry": {
-              "description": "Evaluate HyVE's approach for your own models: set up an iterative loop of observation, hypothesis generation, and causal validation for circuit components. Start with semi-synthetic circuits to test, then extend to naturally trained models like Llama-3-8B.",
-              "note": "Focus on improving validation plans and handling code execution errors, as these are the main failure points identified."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-hncxzs",
-                "title": "Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?",
-                "url": "https://arxiv.org/abs/2606.24026",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-hncxzs-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-hncxzs-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-hncxzs-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-vgm88y",
-            "title": "Pareto-DQN for Multi-Objective RecSys: Balance Engagement & Diversity",
-            "tldr": "A new multi-objective RL framework (Pareto-DQN) treats engagement, diversity, and fairness as separate rewards, avoiding filter bubbles. On MovieLens, it maps the Pareto frontier, boosting societal goals with minimal engagement loss.",
-            "whyItMatters": [
-              "For founders building recommendation systems, this offers a principled way to reduce filter bubbles without sacrificing user retention, addressing regulatory and ethical pressures.",
-              "Technically, it shows how semantic embeddings + multi-objective RL can replace single-objective models, opening a path to more aligned, responsible AI products."
-            ],
-            "whatToTry": {
-              "description": "If you're building a recommender, experiment with treating engagement, diversity, and fairness as separate reward signals in your RL pipeline. Use semantic embeddings (e.g., from a small LLM) to represent items, and implement a Pareto-based action selection (e.g., hypervolume maximization) to explore trade-offs. Start with a small dataset like MovieLens to validate before scaling.",
-              "note": "This is research, not a production-ready library. Expect to adapt the Pareto-DQN architecture to your domain and data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-vgm88y",
-                "title": "Breaking the Filter Bubble: A Semantic Pareto-DQN Framework for Multi-Objective Recommendation",
-                "url": "https://arxiv.org/abs/2606.24042",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-vgm88y-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-vgm88y-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782296976108-6s8e0d",
-            "title": "SGPO: New Method Boosts LLM Reasoning Beyond Imitation",
-            "tldr": "A new framework, Strategy-Guided Policy Optimization (SGPO), replaces trajectory imitation with reusable strategy distillation, improving LLM reasoning generalization by 2.2 points on math benchmarks.",
-            "whyItMatters": [
-              "For founders building reasoning-heavy AI products (e.g., tutoring, code generation), SGPO offers a way to improve model generalization without costly trajectory data, reducing dependency on strong models.",
-              "The method's adaptive weighting and token-level objectives could be integrated into fine-tuning pipelines to enhance performance on novel problems, potentially lowering iteration cycles."
-            ],
-            "whatToTry": {
-              "description": "Evaluate SGPO for your LLM fine-tuning pipeline by replacing supervised fine-tuning (SFT) with strategy-guided distillation. Start with a small dataset of strong-model responses to extract structured strategies, then apply the forward-KL objective with adaptive weighting to your weaker model.",
-              "note": "Requires access to a strong teacher model (e.g., GPT-4) and a weaker student model (e.g., Qwen2.5-7B). The paper's code is not yet released, so implement based on the described algorithm."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782296976108-6s8e0d",
-                "title": "Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning",
-                "url": "https://arxiv.org/abs/2606.24064",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-6s8e0d-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782296976108-6s8e0d-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-24-afternoon",
-        "period": "afternoon",
-        "date": "2026-06-24",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: OpenAI unveils custom inference chip 'Jalapeño' with Broadcom, OpenAI & Broadcom unveil Jalapeño chip for LLM inference, Qualcomm Acquires AI Chip Startup Modular for $4B.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782315610654-xq1a5a",
-            "title": "OpenAI unveils custom inference chip 'Jalapeño' with Broadcom",
-            "tldr": "OpenAI announced its first custom chip, Jalapeño, designed with Broadcom for inference workloads. This signals a major shift toward vertical integration in AI infrastructure, reducing reliance on NVIDIA and potentially lowering costs for API users.",
-            "whyItMatters": [
-              "Business impact: OpenAI's move to custom silicon could reduce inference costs over time, affecting pricing for API customers and competitors relying on general-purpose GPUs.",
-              "Technical impact: Custom chips optimized for transformer inference may enable faster, more efficient model serving, setting new performance benchmarks for AI workloads."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your inference pipeline's cost structure and consider how custom chip trends might affect future pricing. If you rely on OpenAI's API, monitor for cost reductions or performance improvements in the coming months.",
-              "note": "This is early-stage; actual impact on pricing may take 12-18 months."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782315610654-xq1a5a",
-                "title": "OpenAI unveils its first custom chip, built by Broadcom",
-                "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782315610654-xq1a5a-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782315610654-xq1a5a-1",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782315610654-xq1a5a-2",
-                "label": "Inference",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 14:54:46 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782315611095-bfcci0",
-            "title": "OpenAI & Broadcom unveil Jalapeño chip for LLM inference",
-            "tldr": "OpenAI and Broadcom announced Jalapeño, a custom chip optimized for LLM inference, promising major gains in performance and efficiency. This signals a shift toward specialized hardware that could reduce inference costs and reshape the AI infrastructure landscape.",
-            "whyItMatters": [
-              "Directly lowers inference costs for AI products, enabling more affordable scaling and faster deployment of LLM-based features.",
-              "Sets a new standard for hardware-software co-design, potentially forcing competitors to invest in custom silicon to stay competitive."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current inference stack for cost bottlenecks and consider piloting Jalapeño-based instances once available via cloud providers. Start benchmarking your models on existing GPU alternatives to prepare for a potential switch.",
-              "note": "Jalapeño is likely optimized for OpenAI's models first; check compatibility with your own fine-tuned or open-source models before committing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782315611095-bfcci0",
-                "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-                "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782315611095-bfcci0-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782315611095-bfcci0-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782315611095-bfcci0-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 06:00:00 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1782315610659-s81lf2",
-            "title": "Qualcomm Acquires AI Chip Startup Modular for $4B",
-            "tldr": "Qualcomm is buying Modular, a high-profile chip software startup, for nearly $4 billion, signaling a major consolidation in AI hardware and a bet on software-defined chips for AI workloads.",
-            "whyItMatters": [
-              "Founders building AI products may see increased competition for specialized AI chips and software stacks, potentially driving up costs or limiting access to cutting-edge hardware.",
-              "The acquisition highlights the strategic importance of software that optimizes AI models for specific hardware, suggesting a shift toward more integrated AI solutions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI infrastructure stack for potential dependencies on chip software that could be affected by this acquisition. Consider diversifying your hardware and software options to reduce vendor lock-in.",
-              "note": "Keep an eye on Qualcomm's future licensing terms for Modular's technology, as they may change post-acquisition."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782315610659-s81lf2",
-                "title": "Qualcomm Buys Buzzy Chip Startup Modular for Nearly $4 Billion",
-                "url": "https://www.wired.com/story/qualcomm-buys-buzzy-chip-startup-modular-for-nearly-dollar4-billion/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782315610659-s81lf2-0",
-                "label": "Qualcomm",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782315610659-s81lf2-1",
-                "label": "Modular",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782315610659-s81lf2-2",
-                "label": "AI Hardware",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 12:36:07 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610773-t8hiql",
-            "title": "RIFT-Bench: Dynamic Red-Teaming for Agentic AI Security",
-            "tldr": "RIFT-Bench is a new framework for dynamically red-teaming agentic AI systems, using graph representations to automatically discover system structure and deploy adaptive adversarial attacks across 45 diverse implementations. It enables unified security evaluations and mitigation testing, addressing a critical gap as autonomous agents introduce novel attack vectors beyond traditional LLM vulnerabilities.",
-            "whyItMatters": [
-              "Business impact: Founders building agentic AI products can use RIFT-Bench to systematically identify and fix security vulnerabilities before deployment, reducing risk of costly exploits and building trust with customers.",
-              "Technical impact: The graph-based approach generalizes across heterogeneous agent architectures, providing a scalable, automated security evaluation pipeline that can be integrated into CI/CD workflows for continuous testing."
-            ],
-            "whatToTry": {
-              "description": "Review the RIFT-Bench paper and consider integrating its methodology into your agentic AI development pipeline. Start by mapping your system's architecture to the hierarchical representation, then run the Discovery and Scanning phases to identify vulnerabilities and test mitigation strategies before production release.",
-              "note": "The framework supports direct evaluation of mitigations, so you can iterate on security fixes quickly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610773-t8hiql",
-                "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems",
-                "url": "https://arxiv.org/abs/2606.23927",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-t8hiql-0",
-                "label": "RIFT-Bench",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-t8hiql-1",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-t8hiql-2",
-                "label": "Red-teaming",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610773-yehcr1",
-            "title": "RL for Broadly Beneficial AI: Alignment Generalizes Beyond Training",
-            "tldr": "A new arXiv paper shows that training AI models with reinforcement learning on beneficial behaviors (truthfulness, fairness, corrigibility) in one domain (e.g., health) improves alignment across 80% of out-of-distribution benchmarks, reducing reward hacking and deception. This suggests RL can produce persistent, generalizable alignment, a key insight for founders building safe AI products.",
-            "whyItMatters": [
-              "Business impact: Founders can reduce alignment risks in deployed AI products by training on diverse beneficial traits, potentially lowering costs from safety failures and improving user trust across use cases.",
-              "Technical impact: Demonstrates that RL-based alignment interventions can transfer across domains, enabling more efficient training pipelines that generalize without needing exhaustive domain-specific data."
-            ],
-            "whatToTry": {
-              "description": "Integrate a 'beneficial trait RL' step into your model training pipeline: curate a small dataset of realistic situations emphasizing truthfulness, fairness, and corrigibility in your target domain, then fine-tune with RL. Evaluate on out-of-distribution benchmarks to test alignment transfer.",
-              "note": "Start with a single domain (e.g., customer support) to validate transfer before scaling; use compute-matched baselines to measure improvement."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610773-yehcr1",
-                "title": "Reinforcement Learning Towards Broadly and Persistently Beneficial Models",
-                "url": "https://arxiv.org/abs/2606.24014",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-yehcr1-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-yehcr1-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610774-jg0eic",
-            "title": "SGPO: New RL method beats SFT for LLM reasoning",
-            "tldr": "A new paper introduces Strategy-Guided Policy Optimization (SGPO), which replaces trajectory imitation with strategy distillation for LLM reasoning. It outperforms SFT and RL baselines by 2.2 points on Qwen2.5-7B, offering a more transferable approach to distilling reasoning skills.",
-            "whyItMatters": [
-              "For founders building AI products that require reasoning (e.g., coding assistants, math solvers), SGPO offers a more efficient way to improve model performance without relying on massive datasets or expensive fine-tuning.",
-              "Technically, it introduces a token-level forward-KL objective and adaptive weighting, which could inspire new training pipelines for smaller models to achieve stronger reasoning capabilities."
-            ],
-            "whatToTry": {
-              "description": "If you're fine-tuning a smaller LLM for reasoning tasks, experiment with SGPO's strategy distillation approach: extract structured reasoning strategies from a stronger model (like GPT-4) and use them as guidance during RL training, rather than just imitating full trajectories.",
-              "note": "The paper uses mathematical benchmarks; test on your domain-specific reasoning tasks to validate transferability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610774-jg0eic",
-                "title": "Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning",
-                "url": "https://arxiv.org/abs/2606.24064",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-jg0eic-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-jg0eic-1",
-                "label": "RL",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-jg0eic-2",
-                "label": "reasoning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610773-lxglp7",
-            "title": "Neuro-Symbolic Drive: Rule-Grounded Reasoning for Safer Driving VLAs",
-            "tldr": "A new neuro-symbolic framework supervises driving VLAs with rule-grounded reasoning traces from classical planners, improving trajectory accuracy (ADE@3s from 0.47 to 0.26) and reducing miss rate (8.30% to 6.40%). This bridges symbolic AI and neural models for more reliable autonomous driving.",
-            "whyItMatters": [
-              "For founders building autonomous driving or robotics products, this approach offers a way to make VLA reasoning causally connected to actions, reducing hallucination and improving safety-critical performance.",
-              "Technically, it shows how to leverage existing symbolic planners to generate high-quality training data for fine-tuning small VLMs (Qwen3.5-4B), enabling more interpretable and trustworthy AI systems."
-            ],
-            "whatToTry": {
-              "description": "If you're developing driving or robotics VLAs, consider instrumenting your existing rule-based planner to extract decision traces (e.g., safety constraints, maneuver search steps) and use them as supervised training data for fine-tuning a small VLM like Qwen3.5-4B. This can improve reasoning fidelity and motion planning accuracy.",
-              "note": "Start with a simulation environment to generate traces; the paper uses a custom simulator benchmark."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610773-lxglp7",
-                "title": "Neuro-Symbolic Drive: Rule-Grounded Faithful Reasoning for Driving VLAs",
-                "url": "https://arxiv.org/abs/2606.23938",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-lxglp7-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-lxglp7-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610773-qs0nbd",
-            "title": "New Paper Defines True Agency vs. Automation for AI Agents",
-            "tldr": "A new arXiv paper proposes a framework distinguishing 'agentic' (externally scaffolded) from 'agentive' (internally autonomous) AI systems, arguing that genuine agency requires internalized goals, identity, and decision-making. This matters for founders building agent products, as it clarifies design choices and potential limitations of current LLM-based agents.",
-            "whyItMatters": [
-              "Business impact: Helps founders decide whether to build agentic (task-specific) or agentive (autonomous) systems, affecting product scope, reliability, and user trust.",
-              "Technical impact: Introduces the Goal-Identity-Configurator (GIC) architecture as a blueprint for more autonomous agents, potentially guiding R&D on internalizing agent capabilities."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agent architecture against the paper's five dimensions (goal, identity, decision-making, self-regulation, learning) to identify if your system is agentic or agentive. If you're building for open-world tasks, consider prototyping internalized mechanisms for goal-setting and self-regulation.",
-              "note": "The paper is theoretical—focus on the framework for design thinking rather than immediate implementation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610773-qs0nbd",
-                "title": "Critique of Agent Model",
-                "url": "https://arxiv.org/abs/2606.23991",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-qs0nbd-0",
-                "label": "Agent Architecture",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-qs0nbd-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-qs0nbd-2",
-                "label": "Autonomy",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610773-epcgmc",
-            "title": "Hierarchical Multi-Agent RL with Hard Safety Guarantees",
-            "tldr": "A new framework combines reinforcement learning with control theory to enforce hard safety constraints in multi-agent systems, achieving near-perfect safety rates while generalizing to varying agent counts and obstacles. This bridges a key gap between empirical performance and theoretical safety.",
-            "whyItMatters": [
-              "Enables deployment of multi-agent AI systems in safety-critical applications (e.g., autonomous fleets, robotics) without sacrificing performance for safety.",
-              "Provides theoretical safety guarantees that reduce regulatory and liability risks for founders building coordinated AI products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate this framework for your multi-agent coordination tasks, especially if you need to enforce strict safety constraints (e.g., collision avoidance). Consider prototyping with a small number of agents to test generalization before scaling.",
-              "note": "The paper assumes mild conditions; verify your use case's constraints align with their assumptions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610773-epcgmc",
-                "title": "Safe and Generalizable Hierarchical Multi-Agent RL via Constraint Manifold Control",
-                "url": "https://arxiv.org/abs/2606.24010",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-epcgmc-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-epcgmc-1",
-                "label": "reinforcement learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610773-epcgmc-2",
-                "label": "multi-agent systems",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1782315610774-5b1xev",
-            "title": "LM Agents as Circuit Explainers: New Benchmark & Agentic Framework",
-            "tldr": "A new paper introduces AgenticInterpBench, a benchmark for circuit explanation, and HyVE, an agentic framework that uses LM agents to explain neural network components. While promising, reliable validation remains a key challenge.",
-            "whyItMatters": [
-              "Business impact: Automates the labor-intensive task of explaining model components, potentially reducing interpretability costs and speeding up safety audits for AI products.",
-              "Technical impact: Provides a standardized benchmark and agentic approach for mechanistic interpretability, enabling more systematic debugging and understanding of transformer models."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products that require interpretability, consider using HyVE as a starting point for automating circuit explanations. Start by testing it on your own transformer models using the AgenticInterpBench framework to identify and explain key components.",
-              "note": "Be prepared for validation failures—the paper highlights that incomplete validation plans and code errors are common. Invest in robust validation loops."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782315610774-5b1xev",
-                "title": "Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?",
-                "url": "https://arxiv.org/abs/2606.24026",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-5b1xev-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-5b1xev-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782315610774-5b1xev-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-06-24-evening",
-        "period": "evening",
-        "date": "2026-06-24",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI unveils custom inference chip 'Jalapeño' with Broadcom, OpenAI & Broadcom Unveil Jalapeño: Custom LLM Inference Chip, Token Rationing Era Begins: Firms Cap AI Budgets as Employees Overuse.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1782337971252-ga54q8",
-            "title": "OpenAI unveils custom inference chip 'Jalapeño' with Broadcom",
-            "tldr": "OpenAI revealed its first custom chip, Jalapeño, designed with Broadcom for inference workloads. This signals a major shift toward vertical integration, reducing reliance on NVIDIA and potentially lowering costs for AI deployment.",
-            "whyItMatters": [
-              "Business impact: OpenAI's move to custom silicon could disrupt the GPU supply chain, driving down inference costs and increasing competition among chipmakers. Founders may see more affordable AI inference options in the future.",
-              "Technical impact: Custom chips optimized for inference can improve latency and throughput for production AI systems, enabling faster and more efficient model serving at scale."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current inference infrastructure costs and latency. Consider testing OpenAI's new chip when available for high-volume production workloads, and monitor pricing changes that could reduce your operational expenses.",
-              "note": "Custom chips often have limited initial availability; plan for gradual adoption and keep existing GPU setups as fallback."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782337971252-ga54q8",
-                "title": "OpenAI unveils its first custom chip, built by Broadcom",
-                "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-ga54q8-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-ga54q8-1",
-                "label": "Jalapeño",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-ga54q8-2",
-                "label": "Inference",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 14:54:46 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1782337971794-4bd65f",
-            "title": "OpenAI & Broadcom Unveil Jalapeño: Custom LLM Inference Chip",
-            "tldr": "OpenAI and Broadcom announced Jalapeño, a custom AI chip optimized for LLM inference, promising significant performance and efficiency gains. This could reshape the AI hardware landscape and reduce inference costs for builders.",
-            "whyItMatters": [
-              "Business impact: Lower inference costs and improved latency could make AI products more economically viable and responsive, potentially shifting the competitive landscape for startups relying on LLMs.",
-              "Technical impact: A custom chip designed specifically for transformer-based models may enable new architectures or larger models to run efficiently, pushing the boundaries of what's possible in production."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current inference pipeline costs and latency. If you're using OpenAI models, watch for pricing changes or API improvements tied to Jalapeño. For custom models, consider how specialized hardware might affect your deployment strategy—start benchmarking with OpenAI's upcoming chip-optimized endpoints.",
-              "note": "Jalapeño is not yet publicly available; monitor OpenAI's developer updates for early access or pricing announcements."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1782337971794-4bd65f",
-                "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-                "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1782337971794-4bd65f-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782337971794-4bd65f-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1782337971794-4bd65f-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 06:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782337971252-9yld2p",
-            "title": "Token Rationing Era Begins: Firms Cap AI Budgets as Employees Overuse",
-            "tldr": "Companies are implementing strict AI usage budgets and monitoring as employees burn through costly tokens on trivial tasks like summarizing emails, signaling a shift from unlimited AI access to rationed, cost-controlled usage.",
-            "whyItMatters": [
-              "Founders must design AI products with cost transparency and usage limits to avoid customer backlash or churn as enterprises enforce token budgets.",
-              "This trend creates opportunities for building AI cost optimization tools, usage analytics dashboards, and lightweight models for small tasks."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's token consumption per user action and consider offering tiered pricing or usage caps. Build a simple dashboard that shows customers their token spend in real-time to preempt budget overruns.",
-              "note": "Start with a free tier that limits trivial tasks (e.g., email summaries) to 50/day, and charge for high-value features like document analysis."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782337971252-9yld2p",
-                "title": "Companies are scrambling to stop employees from maxing out AI budgets with small tasks",
-                "url": "https://techcrunch.com/2026/06/24/companies-are-scrambling-to-stop-employees-from-maxing-out-ai-budgets-with-small-tasks/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-9yld2p-0",
-                "label": "Topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-9yld2p-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 20:09:45 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1782337971414-3t5d1a",
-            "title": "NVIDIA NeMo AutoModel Speeds Up Transformer Fine-Tuning",
-            "tldr": "NVIDIA released NeMo AutoModel, a tool that automates and accelerates fine-tuning of transformer models, reducing setup time and computational overhead. This matters for founders because it lowers the barrier to customizing large models for specific use cases.",
-            "whyItMatters": [
-              "Business impact: Faster fine-tuning means quicker iteration on custom AI products, reducing time-to-market and development costs for startups.",
-              "Technical impact: Automates complex configuration and optimization, enabling teams with limited ML expertise to fine-tune state-of-the-art models efficiently."
-            ],
-            "whatToTry": {
-              "description": "Evaluate NeMo AutoModel for your next fine-tuning project by testing it on a small dataset to compare setup time and performance against manual fine-tuning workflows.",
-              "note": "Start with a small model like BERT-base to gauge automation benefits before scaling to larger transformers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1782337971414-3t5d1a",
-                "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
-                "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1782337971414-3t5d1a-0",
-                "label": "NVIDIA NeMo AutoModel",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782337971414-3t5d1a-1",
-                "label": "Fine-tuning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1782337971414-3t5d1a-2",
-                "label": "Transformers",
-                "type": "model"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 16:00:13 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1782337971321-ux7ye2",
-            "title": "Qualcomm Acquires AI Chip Startup Modular for $4B",
-            "tldr": "Qualcomm is acquiring Modular, a high-profile AI chip software startup, for nearly $4 billion, signaling a major consolidation in the AI hardware ecosystem and validating the importance of software optimization for AI chips.",
-            "whyItMatters": [
-              "For founders building AI products, this acquisition highlights the strategic value of chip-level software optimization, potentially leading to better performance and lower costs for AI inference on Qualcomm-powered devices.",
-              "The deal may accelerate the availability of optimized AI models for edge devices, opening new opportunities for on-device AI applications in mobile, IoT, and automotive."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI stack's dependency on chip-specific optimizations. If you're deploying models on edge devices, consider prototyping with Qualcomm's AI Engine or Snapdragon platforms to leverage potential performance gains from this acquisition.",
-              "note": "Keep an eye on Modular's open-source tools (like Mojo) for potential integration into your workflow, as Qualcomm may continue to support them."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782337971321-ux7ye2",
-                "title": "Qualcomm Buys Buzzy Chip Startup Modular for Nearly $4 Billion",
-                "url": "https://www.wired.com/story/qualcomm-buys-buzzy-chip-startup-modular-for-nearly-dollar4-billion/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782337971321-ux7ye2-0",
-                "label": "Qualcomm",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782337971321-ux7ye2-1",
-                "label": "Modular",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782337971321-ux7ye2-2",
-                "label": "AI Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782337971321-ux7ye2-3",
-                "label": "Acquisition",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 12:36:07 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1782337971463-zbqky3",
-            "title": "RIFT-Bench: Dynamic Red-Teaming for Agentic AI Security",
-            "tldr": "A new benchmark, RIFT-Bench, uses graph-based methods to automatically discover and attack vulnerabilities in diverse agentic AI systems, enabling unified security comparisons across architectures. This is critical as agentic systems introduce novel attack vectors beyond traditional LLM flaws.",
-            "whyItMatters": [
-              "Business impact: Founders can use RIFT-Bench to systematically evaluate and harden their agentic products against adversarial attacks, reducing security risks before deployment.",
-              "Technical impact: Provides a scalable, automated framework for red-teaming that works across heterogeneous agentic architectures, enabling standardized security audits and mitigation testing."
-            ],
-            "whatToTry": {
-              "description": "If you're building an agentic AI system, consider integrating RIFT-Bench's methodology into your CI/CD pipeline for automated security testing. Start by mapping your system's architecture to the hierarchical representation it uses, then run the Discovery and Scanning phases to identify vulnerabilities.",
-              "note": "The paper evaluates 45 systems, so the approach is validated; however, adapting it may require customizing adversarial probes for your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1782337971463-zbqky3",
-                "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems",
-                "url": "https://arxiv.org/abs/2606.23927",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1782337971463-zbqky3-0",
-                "label": "RIFT-Bench",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782337971463-zbqky3-1",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1782337971463-zbqky3-2",
-                "label": "Security",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782337971252-zd379a",
-            "title": "Top AI researchers flee Google for Anthropic",
-            "tldr": "Jonas Adler and Alexander Pritzel have left Google for Anthropic, joining a wave of top scientists like Noam Shazeer and John Jumper. This signals a talent drain at Google and a strengthening of Anthropic's research team, which could shift the competitive landscape for AI model development.",
-            "whyItMatters": [
-              "For founders building on AI models, this could mean Anthropic's models (like Claude) may see faster improvements and new capabilities, while Google's pace of innovation might slow, affecting API reliability and feature releases.",
-              "The talent migration highlights a trend where top researchers prefer startups with more focused missions, potentially leading to more specialized or safety-oriented AI products that founders can leverage."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your dependency on Google's AI APIs (e.g., Gemini) versus alternatives like Anthropic's Claude. Consider diversifying your model stack to mitigate risk from potential delays in Google's roadmap, and test Anthropic's latest models for your use case to capture early advantages from their enhanced research team.",
-              "note": "Monitor Anthropic's model release cadence and pricing changes over the next 6 months as this talent influx matures."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782337971252-zd379a",
-                "title": "AI researchers continue to leave Google for its rivals",
-                "url": "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-zd379a-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-zd379a-1",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-zd379a-2",
-                "label": "Talent",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 21:42:07 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782337971252-7pxi5p",
-            "title": "Memory chip crunch fuels massive revenue surge for U.S. firm",
-            "tldr": "A U.S. memory chip company saw revenue quadruple to $41.45B and profit jump to $28.2B year-over-year, driven by AI demand for high-bandwidth memory. This signals a critical supply constraint that AI founders must navigate.",
-            "whyItMatters": [
-              "Business impact: Memory chip shortages and price hikes directly increase costs for AI infrastructure, affecting margins and scaling plans for startups relying on GPUs and accelerators.",
-              "Technical impact: High-bandwidth memory (HBM) is essential for training large models; supply constraints may delay model development or force architectural optimizations."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI infrastructure's memory requirements and explore memory-efficient model architectures (e.g., quantization, pruning) to reduce dependency on high-bandwidth memory. Consider locking in long-term supply contracts with cloud providers to hedge against price volatility.",
-              "note": "Startups with smaller models may benefit from using lower-cost memory tiers or edge deployment strategies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782337971252-7pxi5p",
-                "title": "The memory chip crunch is paying off for this U.S. company",
-                "url": "https://techcrunch.com/2026/06/24/the-memory-chip-crunch-is-paying-off-for-this-u-s-company/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-7pxi5p-0",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-7pxi5p-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-7pxi5p-2",
-                "label": "Supply Chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 21:30:55 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1782337971320-0obmeq",
-            "title": "China's AI Experts Fear a 'Chernobyl Moment' in US-China Race",
-            "tldr": "A Wired report reveals that top Chinese AI researchers share US concerns about an uncontrolled AI arms race, highlighting the risk of a catastrophic failure that could trigger global backlash. This underscores the urgency for cross-border safety cooperation.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products may face sudden regulatory shifts or public backlash if a major incident occurs, especially in geopolitically sensitive markets.",
-              "Technical impact: The lack of coordinated safety standards between US and China increases the risk of deploying unsafe models, which could undermine trust in AI systems globally."
-            ],
-            "whatToTry": {
-              "description": "Proactively implement robust AI safety measures (e.g., red-teaming, alignment testing) and monitor geopolitical developments to anticipate regulatory changes. Consider joining or forming industry coalitions that advocate for international safety norms.",
-              "note": "This is not about avoiding competition but ensuring your product is resilient to potential shocks from a global AI crisis."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1782337971320-0obmeq",
-                "title": "I Met With China’s Top AI Experts. They’re Freaking Out, Too",
-                "url": "https://www.wired.com/story/ai-arms-race-china-us-cooperation/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1782337971320-0obmeq-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782337971320-0obmeq-1",
-                "label": "Geopolitics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1782337971320-0obmeq-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 18:45:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1782337971252-6e24ad",
-            "title": "Agility Robotics to go public via SPAC at $2.5B valuation",
-            "tldr": "Humanoid robotics startup Agility Robotics plans to go public via a SPAC merger, expecting $620M in proceeds. This signals growing investor confidence in commercial humanoid robots and may accelerate funding and competition in the space.",
-            "whyItMatters": [
-              "Business impact: Validates the market for humanoid robotics, potentially opening up new funding avenues and partnerships for AI founders building embodied AI products.",
-              "Technical impact: Indicates that humanoid robots are moving from research to commercial deployment, creating demand for AI software stacks (perception, manipulation, navigation) that can run on such hardware."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can integrate with or target humanoid robotics platforms like Agility's Digit. Consider reaching out to Agility or similar startups for potential pilot programs or API access to test your models in real-world robotic tasks.",
-              "note": "Focus on high-value use cases like warehouse logistics or last-mile delivery where humanoid robots are being deployed first."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1782337971252-6e24ad",
-                "title": "Agility Robotics plans to go public via SPAC in a $2.5B deal",
-                "url": "https://techcrunch.com/2026/06/24/agility-robotics-plans-to-go-public-via-spac-in-a-2-5b-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-6e24ad-0",
-                "label": "Agility Robotics",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-6e24ad-1",
-                "label": "Humanoid Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1782337971252-6e24ad-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 24 Jun 2026 16:48:43 +0000"
           }
         ],
         "totalReadTimeMinutes": 20,
