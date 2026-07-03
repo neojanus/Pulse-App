@@ -429,6 +429,438 @@
         "totalReadTimeMinutes": 22,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-07-03-afternoon",
+        "period": "afternoon",
+        "date": "2026-07-03",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Auto-FL-Research: Agentic Search Automates Federated Learning Design, Wiola: A Novel SLM Architecture from First Principles, Difficulty-Routed Control: Smarter AI Customer Service Agents.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1783092721144-8k5u69",
+            "title": "Auto-FL-Research: Agentic Search Automates Federated Learning Design",
+            "tldr": "A new agentic workflow, Auto-FL-Research (AFR), uses coding agents to automatically search and propose federated learning algorithm recipes, showing gains on multiple healthcare and LEAF tasks but also revealing seed sensitivity and failure cases—highlighting both promise and pitfalls for automated ML research.",
+            "whyItMatters": [
+              "Business impact: Reduces manual trial-and-error in FL algorithm design, potentially accelerating deployment of privacy-preserving AI in healthcare and other sensitive domains.",
+              "Technical impact: Introduces a constrained agentic search paradigm that could be adapted for other ML subfields, but cautions that gains may not always generalize, emphasizing the need for rigorous evaluation."
+            ],
+            "whatToTry": {
+              "description": "If you're building FL systems, consider integrating agentic search tools like AFR to automate hyperparameter and algorithm exploration, but always run multi-seed evaluations and held-out tests to validate robustness before production deployment.",
+              "note": "Start with small-scale campaigns to understand seed sensitivity and failure modes before scaling up."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-8k5u69",
+                "title": "Auto-FL-Research: Agentic Search for Federated Learning Algorithms",
+                "url": "https://arxiv.org/abs/2607.01366",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-8k5u69-0",
+                "label": "Federated Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-8k5u69-1",
+                "label": "Agentic Search",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-8k5u69-2",
+                "label": "AutoML",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-cvx455",
+            "title": "Wiola: A Novel SLM Architecture from First Principles",
+            "tldr": "Wiola introduces a fully original small language model architecture with five novel components, including spiral positional encoding and adaptive token merging, released in sizes up to 1.5B parameters and compatible with HuggingFace. This matters because it offers a fresh alternative to GPT/LLaMA-based models, potentially enabling more efficient and coherent small models for production use.",
+            "whyItMatters": [
+              "Business impact: Founders can experiment with a novel, efficient architecture that may reduce compute costs for inference and fine-tuning, especially for edge or resource-constrained applications.",
+              "Technical impact: The adaptive token merging and gated cross-layer attention could improve model coherence and reduce attention complexity, offering new design patterns for building smaller, faster models."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Wiola for your use case by downloading the 360M or 700M variant from HuggingFace and testing it on a representative task (e.g., text generation or classification) to compare performance and latency against LLaMA-2 or Mistral models of similar size.",
+              "note": "Start with the 360M model for quick prototyping; the 1.5B variant may require more GPU memory but offers higher capacity."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-cvx455",
+                "title": "The Wiola Architecture for Efficient Small Language Models",
+                "url": "https://arxiv.org/abs/2607.01394",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-cvx455-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-cvx455-1",
+                "label": "Wiola",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-cvx455-2",
+                "label": "SLM",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-m0x2mo",
+            "title": "Difficulty-Routed Control: Smarter AI Customer Service Agents",
+            "tldr": "A new arXiv paper proposes a difficulty-routed architecture for AI customer service agents that routes routine requests to a fast path and escalates complex, operationally risky ones to a safeguarded workflow. This improves reliability on tasks like refunds and cancellations without slowing down simple queries.",
+            "whyItMatters": [
+              "For founders building AI customer service agents, this offers a practical way to balance speed and safety, reducing operational errors on high-stakes actions like refunds or order changes.",
+              "Technically, it introduces a lightweight router and conflict-aware communication that concentrates safeguards only where needed, potentially lowering compute costs and improving user trust."
+            ],
+            "whatToTry": {
+              "description": "Implement a two-tier routing system in your AI agent: use a simple classifier to detect operational complexity (e.g., policy conflicts, multi-step writes) and route simple queries to a fast, low-cost model while sending complex ones to a more deliberative model with explicit conflict checks before executing backend writes.",
+              "note": "Start with a small set of high-risk actions (e.g., refunds, cancellations) to test the routing logic before scaling to all operations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-m0x2mo",
+                "title": "When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations",
+                "url": "https://arxiv.org/abs/2607.01426",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-m0x2mo-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-m0x2mo-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-j4damw",
+            "title": "CreativityNeuro: Boost LLM Divergent Thinking Without Retraining",
+            "tldr": "A new data-free method called CreativityNeuro uses contrastive weight steering to improve LLM divergent thinking by up to 14 human percentile points on creativity tests, reducing mode collapse without retraining or fine-tuning.",
+            "whyItMatters": [
+              "Founders building creative AI tools can enhance output diversity and originality without costly retraining, directly improving user experience in open-ended tasks like brainstorming or content generation.",
+              "Technical teams can implement weight-space steering as a lightweight alternative to activation steering, which generalizes better to unseen tasks, reducing the risk of repetitive or 'hivemind' outputs."
+            ],
+            "whatToTry": {
+              "description": "Experiment with contrastive weight steering on your LLM by adjusting weights to favor divergent responses—start with a small pilot on open-ended tasks like idea generation or creative writing to measure originality gains.",
+              "note": "This method is data-free and doesn't require gradient-based fine-tuning, making it quick to test with existing models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-j4damw",
+                "title": "CreativityNeuro: Steering Language Model Weights to Improve Divergent Thinking and Reduce Mode Collapse",
+                "url": "https://arxiv.org/abs/2607.01433",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-j4damw-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-j4damw-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-3e2tnb",
+            "title": "Diffusion LLM beats AR in radiology: 4x faster, any-order infill",
+            "tldr": "A diffusion-based language model (DiffusionGemma-26B) matches or outperforms autoregressive models on medical VQA tasks while being 3.5-4.4x faster and enabling any-order infill—a game-changer for interactive report drafting in radiology.",
+            "whyItMatters": [
+              "For founders building AI medical tools: diffusion models offer a new paradigm for interactive document editing, allowing clinicians to fix fragments and have the model fill in between, which is impossible with autoregressive models.",
+              "Technically, this shows diffusion LLMs can match AR quality with lower latency and active parameters (3.8B), making them viable for real-time clinical workflows and reducing compute costs."
+            ],
+            "whatToTry": {
+              "description": "Evaluate diffusion LLMs for any application requiring iterative, non-sequential text generation (e.g., legal drafting, code completion, or collaborative editing). Start with DiffusionGemma or similar open-source models to prototype any-order infill capabilities.",
+              "note": "Diffusion models are still less common than AR; ensure your infrastructure supports bidirectional decoding and consider latency vs. quality trade-offs for your use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-3e2tnb",
+                "title": "Discrete Diffusion Language Models for Interactive Radiology Report Drafting",
+                "url": "https://arxiv.org/abs/2607.01436",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3e2tnb-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3e2tnb-1",
+                "label": "healthcare",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3e2tnb-2",
+                "label": "diffusion",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-e9x0sw",
+            "title": "RLVR Boosts Small Models for Enterprise API Tasks",
+            "tldr": "A new paper shows that Reinforcement Learning with Verifiable Rewards (RLVR) can dramatically improve small language models (1.7B-4B parameters) on niche enterprise API workflows, lifting success rates from 0.35 to 1.00 on Jira and Confluence tasks. This is a practical proof of concept for founders building AI agents that need to reliably call specific SaaS APIs.",
+            "whyItMatters": [
+              "Business impact: Enables reliable automation of complex enterprise workflows (e.g., creating Confluence pages, managing Jira tickets) without human oversight, reducing operational costs and errors.",
+              "Technical impact: Demonstrates that RLVR can overcome the next-token prediction mismatch for tool-use agents, making small models viable for niche API tasks where large models are overkill or too expensive."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI agent for a specific SaaS API (e.g., Salesforce, HubSpot), prototype a verifiable reward function based on the API's success criteria (e.g., correct endpoint, required fields, order of calls). Use a small open-source model like Qwen3-1.7B and train it with GRPO on synthetic traces of your API to see if RLVR boosts reliability in your niche workflow.",
+              "note": "Start with a single, well-defined workflow to avoid the scalability issue of hand-crafting rewards. The paper's limitation on scaling rewards beyond a few endpoints is key—focus on high-value, repetitive tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-e9x0sw",
+                "title": "Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows",
+                "url": "https://arxiv.org/abs/2607.01465",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-e9x0sw-0",
+                "label": "Qwen3",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-e9x0sw-1",
+                "label": "RLVR",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-e9x0sw-2",
+                "label": "Tool-use agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-4kak84",
+            "title": "RL for Clinical Agents Hits Barriers: New Benchmark Reveals Limits",
+            "tldr": "A new paper audits RL for clinical protocol tasks, finding that pure RL fails on 10/20 task types due to capability ceilings and format-knowledge barriers. The proposed MedAgentBench-v3 benchmark and decision taxonomy offer a roadmap for combining SFT and RL effectively.",
+            "whyItMatters": [
+              "For founders building AI agents in healthcare: pure RL is insufficient for clinical tasks requiring exact codes or complex conditionals; a hybrid SFT+RL approach is necessary.",
+              "Technical insight: the decision/format-knowledge/lookup taxonomy provides a framework to predict which tasks are RL-learnable, saving months of trial-and-error in agent development."
+            ],
+            "whatToTry": {
+              "description": "When designing RL for clinical agents, first classify each task using the paper's taxonomy: if it requires exact codes (e.g., ICD-10, LOINC), use SFT to inject that knowledge before RL; reserve RL for tasks with clear conditionals and verifiable outcomes.",
+              "note": "The 41.7% silent-finish ceiling in earlier benchmarks means many agents appear to succeed but actually do nothing—audit your own benchmarks for similar artifacts."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-4kak84",
+                "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments",
+                "url": "https://arxiv.org/abs/2607.01470",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-4kak84-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-4kak84-1",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-4kak84-2",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783092721144-3gtnbx",
+            "title": "PMD: Self-Improving LLMs via Procedural Memory Distillation",
+            "tldr": "A new method, Procedural Memory Distillation (PMD), enables language models to learn from cross-episode patterns in their own rollouts, converting procedural knowledge into weights without needing memory at inference. This could significantly improve RLVR training efficiency for AI products.",
+            "whyItMatters": [
+              "Reduces need for expensive human feedback by leveraging self-generated data across episodes, lowering training costs for AI products.",
+              "Enables models to internalize strategies and avoid persistent failures, leading to more robust and reliable AI behavior in production."
+            ],
+            "whatToTry": {
+              "description": "If you're using RLVR or self-distillation (e.g., SDPO) for your AI product, experiment with PMD by logging cross-episode rollouts and extracting recurring patterns (e.g., common failure modes) to augment your training pipeline. Start with a small domain-specific task to validate the approach.",
+              "note": "PMD requires careful memory management to avoid overfitting; monitor for strategy diversity."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783092721144-3gtnbx",
+                "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
+                "url": "https://arxiv.org/abs/2607.01480",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3gtnbx-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3gtnbx-1",
+                "label": "RLVR",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783092721144-3gtnbx-2",
+                "label": "self-improvement",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 03 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1783092720831-8l7l70",
+            "title": "Meta launches Pocket: AI-generated mini games from text prompts",
+            "tldr": "Meta quietly released Pocket, an experimental app where users create and share interactive mini games via text prompts, signaling a new frontier for AI-driven user-generated content and social gaming.",
+            "whyItMatters": [
+              "Shows Meta's pivot to AI-native social experiences, opening opportunities for founders to build similar UGC platforms or integrate AI game generation into existing products.",
+              "Demonstrates a practical application of 'vibe coding'—using AI to generate interactive content—which could lower barriers for non-technical creators and inspire new business models in gaming and entertainment."
+            ],
+            "whatToTry": {
+              "description": "Explore building a prototype that lets users generate simple interactive experiences (e.g., quizzes, puzzles, or mini games) from natural language prompts, using models like GPT-4 or Claude for code generation and a lightweight game engine like Phaser or PixiJS.",
+              "note": "Focus on shareability and social loops to drive virality, similar to how Pocket leverages Meta's existing network effects."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1783092720831-8l7l70",
+                "title": "Meta quietly launches vibe-coded gaming app Pocket",
+                "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1783092720831-8l7l70-0",
+                "label": "Meta",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1783092720831-8l7l70-1",
+                "label": "AI gaming",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1783092720831-8l7l70-2",
+                "label": "vibe coding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Jul 2026 18:44:02 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1783092720892-tsx5u7",
+            "title": "Cursor's SpaceX Acquisition: AI Platform Independence at Risk",
+            "tldr": "Cursor, a popular AI coding tool, aims to keep offering third-party models (OpenAI, Anthropic) after SpaceX acquisition, testing whether platform neutrality can survive under a single-company owner. This matters because it signals potential consolidation risks in the AI tooling ecosystem.",
+            "whyItMatters": [
+              "Business impact: Founders relying on Cursor for multi-model access may face vendor lock-in if SpaceX prioritizes proprietary or exclusive models, disrupting workflows and increasing costs.",
+              "Technical impact: The outcome sets a precedent for how AI platforms balance openness with corporate ownership, affecting future integrations and model diversity for developers."
+            ],
+            "whatToTry": {
+              "description": "Diversify your AI coding tool stack now by evaluating alternatives like Continue.dev (open-source) or GitHub Copilot to reduce dependency on Cursor's multi-model access. Monitor Cursor's post-acquisition model support announcements closely.",
+              "note": "Consider building internal abstractions (e.g., using a unified API layer) to switch between coding assistants without rewriting workflows."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1783092720892-tsx5u7",
+                "title": "Can Cursor Remain a Platform for OpenAI and Anthropic’s Models Inside SpaceX?",
+                "url": "https://www.wired.com/story/can-cursor-remain-an-open-platform-inside-of-spacex/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1783092720892-tsx5u7-0",
+                "label": "Cursor",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1783092720892-tsx5u7-1",
+                "label": "SpaceX",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1783092720892-tsx5u7-2",
+                "label": "AI Platform",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 02 Jul 2026 18:01:20 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
