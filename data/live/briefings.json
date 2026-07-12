@@ -1,7 +1,311 @@
 [
   {
-    "date": "2026-07-11",
+    "date": "2026-07-12",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-12-evening",
+        "period": "evening",
+        "date": "2026-07-12",
+        "scheduledTime": "20:30",
+        "executiveSummary": "Today's highlights: Claude Code wastes 33k tokens per prompt vs OpenCode's 7k, AI in Research: Boosts Careers, Narrows Idea Diversity, Mesh LLM: Distributed AI Computing on iroh.",
+        "items": [
+          {
+            "id": "hn-48883275",
+            "title": "Claude Code wastes 33k tokens per prompt vs OpenCode's 7k",
+            "tldr": "A study reveals Claude Code sends 33k tokens in overhead before processing prompts, compared to OpenCode's 7k—a 5x inefficiency that directly impacts API costs for AI coding tools. This is actionable for founders optimizing token budgets.",
+            "whyItMatters": [
+              "For founders building AI coding agents, token overhead directly scales with usage costs; Claude Code's inefficiency could inflate operational expenses by 300-500% for heavy users.",
+              "Technical insight: cache strategy and harness token usage differ significantly, suggesting architectural choices (e.g., prompt caching, context management) have major cost implications."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI coding tool's token usage by logging API requests to the endpoint (e.g., Anthropic's) and comparing overhead vs. actual prompt tokens. Use this data to switch to a more efficient tool like OpenCode or optimize your own agent's context window management.",
+              "note": "Consider implementing prompt caching or context pruning to reduce overhead, especially for repetitive tasks."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48883275",
+                "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+                "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+                "domain": "systima.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48883275-0",
+                "label": "Claude Code",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-1",
+                "label": "OpenCode",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-2",
+                "label": "Token Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T18:25:51Z"
+          },
+          {
+            "id": "hn-48881043",
+            "title": "AI in Research: Boosts Careers, Narrows Idea Diversity",
+            "tldr": "A new study shows AI accelerates individual research careers but reduces the diversity of ideas explored, potentially flattening scientific discovery. This is being widely discussed on HackerNews, signaling a critical debate for AI product builders.",
+            "whyItMatters": [
+              "For founders building AI tools for science or R&D: your product may inadvertently narrow exploration, which could limit long-term innovation and user trust.",
+              "Technically, this suggests AI models trained on existing data may reinforce dominant paradigms, creating a risk of homogenized outputs that founders need to mitigate."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's training data and recommendation algorithms for diversity. Introduce mechanisms that deliberately surface outlier ideas or less-common approaches to counterbalance the narrowing effect.",
+              "note": "Consider implementing novelty scoring or random exploration prompts to preserve idea diversity."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48881043",
+                "title": "AI boosts research careers but narrow the span of ideas explored: study",
+                "url": "https://spectrum.ieee.org/ai-science-research-flattens-discovery",
+                "domain": "spectrum.ieee.org",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48881043-0",
+                "label": "AI Research Impact",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48881043-1",
+                "label": "Scientific Discovery",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48881043-2",
+                "label": "Innovation Risk",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T13:26:13Z"
+          },
+          {
+            "id": "hn-48876505",
+            "title": "Mesh LLM: Distributed AI Computing on iroh",
+            "tldr": "Mesh LLM introduces a peer-to-peer approach to running LLMs across distributed nodes using iroh, enabling decentralized inference without centralized servers. This matters for founders exploring cost-effective, private, or censorship-resistant AI deployments.",
+            "whyItMatters": [
+              "Reduces reliance on expensive centralized GPU clusters, potentially lowering inference costs for startups.",
+              "Enables privacy-preserving AI by processing data locally across nodes, appealing to regulated industries."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Mesh LLM for use cases requiring low-cost inference or data sovereignty, such as edge AI or collaborative model serving. Start by testing with small models to assess latency and reliability in your infrastructure.",
+              "note": "Distributed inference may introduce latency trade-offs; benchmark against centralized solutions for your specific workload."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48876505",
+                "title": "Mesh LLM: distributed AI computing on iroh",
+                "url": "https://www.iroh.computer/blog/mesh-llm",
+                "domain": "iroh.computer",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48876505-0",
+                "label": "Mesh LLM",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48876505-1",
+                "label": "iroh",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48876505-2",
+                "label": "Distributed Computing",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-11T22:38:57Z"
+          },
+          {
+            "id": "hn-48876441",
+            "title": "Stop Telling Me to Ask an LLM: A Founder's Reality Check",
+            "tldr": "A viral HackerNews post critiques the reflex to suggest 'just ask an LLM' for every problem, highlighting the gap between AI hype and practical utility. This matters because it signals growing user frustration with AI-as-panacea thinking, which founders must address in product design.",
+            "whyItMatters": [
+              "Business impact: Users are pushing back against AI-first solutions that ignore real workflows; products that force LLM interactions risk alienating customers.",
+              "Technical impact: Founders need to design AI features that are optional, context-aware, and solve specific pain points rather than adding friction."
+            ],
+            "whatToTry": {
+              "description": "Audit your product's AI interactions: identify every place you default to an LLM response and ask if it truly adds value or just creates extra steps. Replace generic 'ask AI' prompts with targeted, task-specific features.",
+              "note": "Consider A/B testing a version with reduced AI prompts to measure user satisfaction and retention."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48876441",
+                "title": "Stop Telling Me to Ask an LLM",
+                "url": "https://blog.yaelwrites.com/stop-telling-me-to-ask-an-llm/",
+                "domain": "blog.yaelwrites.com",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48876441-0",
+                "label": "User Experience",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48876441-1",
+                "label": "Product Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48876441-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-11T22:28:48Z"
+          },
+          {
+            "id": "hn-48883343",
+            "title": "I love LLMs, I hate hype: A founder's reality check",
+            "tldr": "A popular HackerNews discussion (201 points, 110 comments) around a blog post by George Hotz argues that while LLMs are powerful, the hype around them is dangerous for founders. The key insight: focus on practical applications over AGI fantasies.",
+            "whyItMatters": [
+              "Business impact: Helps founders avoid over-investing in hype-driven features that don't solve real problems, saving time and capital.",
+              "Technical impact: Encourages building with current LLM capabilities (e.g., code generation, summarization) rather than chasing speculative breakthroughs."
+            ],
+            "whatToTry": {
+              "description": "Audit your product roadmap: identify any features that rely on unproven LLM capabilities (e.g., AGI-level reasoning) and replace them with proven, narrow use cases like text completion or classification.",
+              "note": "Hotz emphasizes that LLMs are 'glorified autocomplete'—use them for tasks where 80% accuracy is acceptable, not for mission-critical decisions."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48883343",
+                "title": "I love LLMs, I hate hype",
+                "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+                "domain": "geohot.github.io",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48883343-0",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T18:31:56Z"
+          },
+          {
+            "id": "rss-wired-ai-1783891346689-10wb3l",
+            "title": "AI + Quantum Computing for Peptide Drug Discovery",
+            "tldr": "Researchers combined AI and quantum computing to generate novel peptides for rare diseases, showing a new approach to drug development that could lower costs and target underserved populations.",
+            "whyItMatters": [
+              "Demonstrates a practical use case for quantum computing in drug discovery, potentially reducing the time and cost of peptide design.",
+              "Highlights how AI and quantum methods can address neglected diseases, opening niche markets for AI-first biotech startups."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating quantum-inspired algorithms (e.g., variational quantum eigensolvers) into your AI peptide design pipeline to optimize molecular properties like binding affinity or stability.",
+              "note": "Start with classical simulators (e.g., IBM Qiskit or PennyLane) to prototype before accessing real quantum hardware."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1783891346689-10wb3l",
+                "title": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+                "url": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1783891346689-10wb3l-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1783891346689-10wb3l-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1783891346689-10wb3l-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sun, 12 Jul 2026 10:00:00 +0000"
+          },
+          {
+            "id": "hn-48878126",
+            "title": "Colleges Must Prove Grads' Financial Gain or Lose Aid",
+            "tldr": "A new federal rule requires colleges to demonstrate that graduates are better off financially, or risk losing access to federal financial aid. This shifts incentives for educational institutions and could impact the talent pipeline for AI startups hiring from these schools.",
+            "whyItMatters": [
+              "Business impact: AI startups hiring from colleges may see changes in curriculum quality and graduate readiness as schools focus on financial outcomes, potentially affecting talent acquisition strategies.",
+              "Technical impact: The rule may push colleges to emphasize practical, high-demand skills (like AI/ML) to ensure graduates' employability, influencing the supply of skilled AI talent."
+            ],
+            "whatToTry": {
+              "description": "Review your hiring pipeline from colleges and consider partnering with institutions that are adapting to this rule. Engage with career services to understand how they're aligning programs with job market demands, especially for AI roles.",
+              "note": "This is a long-term trend; start monitoring which colleges are investing in outcome-driven programs to identify future talent pools."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48878126",
+                "title": "Under federal rule, colleges must leave grads better off or lose financial aid",
+                "url": "https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans",
+                "domain": "npr.org",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48878126-0",
+                "label": "Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48878126-1",
+                "label": "Talent",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T04:00:14Z"
+          }
+        ],
+        "totalReadTimeMinutes": 14,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-11",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-11-evening",
@@ -224,7 +528,7 @@
   },
   {
     "date": "2026-07-10",
-    "displayDate": "Yesterday",
+    "displayDate": "Friday, Jul 10",
     "briefings": [
       {
         "id": "briefing-2026-07-10-morning",
@@ -5005,349 +5309,6 @@
           }
         ],
         "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-05",
-    "displayDate": "Sunday, Jul 5",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-05-morning",
-        "period": "morning",
-        "date": "2026-07-05",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Midjourney Demands Hollywood Studios Disclose AI Usage in Legal Fight, Alibaba bans Claude Code as high-risk software, Mistral AI: The Open-Source Challenger to OpenAI.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783245205413-j6qhy2",
-            "title": "Midjourney Demands Hollywood Studios Disclose AI Usage in Legal Fight",
-            "tldr": "Midjourney is pushing three Hollywood studios to reveal their internal AI practices as part of a copyright lawsuit, potentially forcing transparency on how major studios use generative AI in production.",
-            "whyItMatters": [
-              "Business impact: Sets a precedent for AI vendors to demand transparency from clients, affecting licensing and compliance strategies for AI product builders.",
-              "Technical impact: Could lead to new requirements for AI usage tracking and reporting features in AI tools, as studios may need to document their workflows."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's usage logging and audit capabilities. Consider adding features that allow clients to easily document and report how they use your AI, as this may become a legal or contractual requirement.",
-              "note": "Start with basic metadata logging (e.g., prompts, outputs, timestamps) to prepare for potential transparency demands."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783245205413-j6qhy2",
-                "title": "Midjourney wants Hollywood studios to reveal the details of their AI usage",
-                "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-j6qhy2-0",
-                "label": "Midjourney",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-j6qhy2-1",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-j6qhy2-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 18:00:05 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783245205413-jv27ow",
-            "title": "Alibaba bans Claude Code as high-risk software",
-            "tldr": "Alibaba has reportedly classified Anthropic's Claude Code as high-risk software, banning employees from using it. This signals growing corporate and geopolitical friction around AI coding tools, especially for Chinese tech giants.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products for global markets must consider compliance and geopolitical risks when integrating third-party AI coding assistants, especially those from US companies.",
-              "Technical impact: Teams may need to evaluate alternative coding tools or self-hosted solutions to avoid disruptions in regions with restrictive policies."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's AI coding tool dependencies and assess geopolitical risks. For global operations, consider diversifying tools (e.g., open-source alternatives like Code Llama or local models) to ensure continuity.",
-              "note": "If your team relies heavily on Claude Code, prepare a contingency plan for potential bans in other markets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783245205413-jv27ow",
-                "title": "Alibaba reportedly bans employees from using Claude Code",
-                "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-jv27ow-0",
-                "label": "Claude Code",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-jv27ow-1",
-                "label": "Geopolitical risk",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-jv27ow-2",
-                "label": "AI coding assistants",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 16:32:08 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783245205413-baf9ci",
-            "title": "Mistral AI: The Open-Source Challenger to OpenAI",
-            "tldr": "A comprehensive overview of Mistral AI, a well-funded French startup offering open-source AI models, positioning itself as a key competitor to OpenAI with a mission to democratize frontier AI.",
-            "whyItMatters": [
-              "For founders building AI products, Mistral's open-source models provide a viable alternative to proprietary APIs, offering potential cost savings, customization, and data control.",
-              "Mistral's rapid funding and growth signal a shift in the AI landscape, where open-source models are gaining traction and could influence pricing and availability of AI capabilities."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Mistral's open-source models (e.g., Mistral 7B, Mixtral 8x7B) for your use case. Test them on Hugging Face or via their API to compare performance, latency, and cost against OpenAI's models for tasks like text generation or summarization.",
-              "note": "Start with smaller models for prototyping to minimize compute costs, and check licensing terms for commercial use."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783245205413-baf9ci",
-                "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
-                "url": "https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-baf9ci-0",
-                "label": "Mistral AI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-baf9ci-1",
-                "label": "Open-source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783245205413-baf9ci-2",
-                "label": "Competition",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 15:51:32 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 6,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-05-afternoon",
-        "period": "afternoon",
-        "date": "2026-07-05",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Midjourney Demands Hollywood Studios Disclose AI Use in Legal Fight, Alibaba bans Claude Code as high-risk software, Mistral AI: The Open-Source Challenger to OpenAI.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783263367851-f315sh",
-            "title": "Midjourney Demands Hollywood Studios Disclose AI Use in Legal Fight",
-            "tldr": "Midjourney is pushing three Hollywood studios to reveal their own AI usage as part of a copyright dispute, potentially setting a precedent for transparency in AI adoption across creative industries.",
-            "whyItMatters": [
-              "Business impact: This could force major studios to disclose AI workflows, creating legal and competitive intelligence for AI startups targeting media and entertainment.",
-              "Technical impact: The outcome may influence how AI model training data and usage are audited, affecting compliance and licensing strategies for AI product builders."
-            ],
-            "whatToTry": {
-              "description": "Monitor this case for disclosure requirements that could become industry standards; consider proactively documenting your own AI usage and training data sources to prepare for similar scrutiny.",
-              "note": "This is early-stage litigation, so avoid overreacting, but start building transparency practices now."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783263367851-f315sh",
-                "title": "Midjourney wants Hollywood studios to reveal the details of their AI usage",
-                "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-f315sh-0",
-                "label": "Midjourney",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-f315sh-1",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-f315sh-2",
-                "label": "Media",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 18:00:05 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783263367851-eqnps7",
-            "title": "Alibaba bans Claude Code as high-risk software",
-            "tldr": "Alibaba has reportedly classified Anthropic's Claude Code as high-risk, banning employees from using it. This signals growing corporate and geopolitical friction around AI coding tools, impacting how founders choose and deploy such tools in regulated environments.",
-            "whyItMatters": [
-              "Business impact: Founders building for enterprise or regulated markets must anticipate similar bans on external AI coding tools, potentially limiting developer productivity and forcing reliance on in-house or approved alternatives.",
-              "Technical impact: This highlights the need for AI coding tools to offer on-premise or air-gapped deployment options to comply with corporate security policies, especially in regions with strict data sovereignty laws."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's AI coding tool usage and evaluate whether your stack can be deployed in a self-hosted or compliant manner. Consider diversifying tooling to include open-source or region-approved alternatives (e.g., Codeium, Tabnine) to avoid sudden productivity disruptions.",
-              "note": "Start with a simple survey of which tools your engineers rely on and check their compliance with your target markets' regulations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783263367851-eqnps7",
-                "title": "Alibaba reportedly bans employees from using Claude Code",
-                "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-eqnps7-0",
-                "label": "Claude Code",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-eqnps7-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-eqnps7-2",
-                "label": "Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 16:32:08 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783263367851-u1wktg",
-            "title": "Mistral AI: The Open-Source Challenger to OpenAI",
-            "tldr": "Mistral AI, a well-funded startup founded in 2023, is positioning itself as a key open-source alternative to OpenAI, aiming to democratize frontier AI. This matters because it signals a growing ecosystem of competitive, accessible models for founders.",
-            "whyItMatters": [
-              "Business impact: Offers a viable, potentially cheaper alternative to proprietary models like GPT-4, reducing vendor lock-in and costs for AI startups.",
-              "Technical impact: Open-source models from Mistral allow for customization, fine-tuning, and on-premise deployment, giving founders more control over their AI stack."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Mistral's open-source models (e.g., Mistral 7B, Mixtral 8x7B) for your use case. Test their performance on a small prototype to compare cost, latency, and accuracy against OpenAI's models.",
-              "note": "Start with smaller models for cost efficiency; Mistral's models are particularly strong for multilingual and code generation tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783263367851-u1wktg",
-                "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
-                "url": "https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-u1wktg-0",
-                "label": "Mistral AI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-u1wktg-1",
-                "label": "Open-source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783263367851-u1wktg-2",
-                "label": "Competition",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 04 Jul 2026 15:51:32 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 6,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-05-evening",
-        "period": "evening",
-        "date": "2026-07-05",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Amazon Kills Mechanical Turk for New Customers: Data Pipeline Crisis.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783287215909-268zua",
-            "title": "Amazon Kills Mechanical Turk for New Customers: Data Pipeline Crisis",
-            "tldr": "Amazon is shutting down new customer sign-ups for Mechanical Turk, a key source of human-labeled training data for AI models. This signals a major shift in the data labeling landscape, forcing founders to find alternatives for human-in-the-loop workflows.",
-            "whyItMatters": [
-              "Business impact: Startups relying on MTurk for cheap, scalable human data labeling must urgently migrate to alternatives like Scale AI, Appen, or open-source tools, potentially increasing costs and slowing down model training pipelines.",
-              "Technical impact: The loss of MTurk's API-driven, pay-per-task model disrupts the ability to quickly source human feedback for RLHF, preference tuning, and edge-case validation, pushing teams toward synthetic data or internal labeling teams."
-            ],
-            "whatToTry": {
-              "description": "Immediately audit your data labeling pipeline for MTurk dependencies. Start evaluating alternatives: Scale AI for managed labeling, Prolific for higher-quality human input, or open-source tools like Label Studio for self-hosted workflows. Consider synthetic data generation (e.g., using GPT-4 or Claude) for tasks that don't require human judgment.",
-              "note": "MTurk's shutdown may be gradual—check if existing customers are grandfathered, but don't rely on it. Budget for 2-3x cost increases with alternative providers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783287215909-268zua",
-                "title": "Amazon will stop accepting new customers for Mechanical Turk",
-                "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783287215909-268zua-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783287215909-268zua-1",
-                "label": "Data Labeling",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783287215909-268zua-2",
-                "label": "Human-in-the-loop",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 05 Jul 2026 17:43:36 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 2,
         "isAvailable": true,
         "isRead": false
       }
