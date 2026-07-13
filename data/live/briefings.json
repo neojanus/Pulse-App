@@ -1,7 +1,435 @@
 [
   {
-    "date": "2026-07-12",
+    "date": "2026-07-13",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-13-morning",
+        "period": "morning",
+        "date": "2026-07-13",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: GATS: Zero-LLM-Call Planning Beats LATS & ReAct, KV-PRM: 5000x Faster Process Reward Modeling for Multi-Agent AI, CogniConsole: Externalizing LLM Control for Reliability.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1783939068559-5d55mi",
+            "title": "GATS: Zero-LLM-Call Planning Beats LATS & ReAct",
+            "tldr": "GATS achieves 100% success on complex agent planning tasks with zero LLM calls during inference, outperforming LATS (92%) and ReAct (64%) while eliminating stochastic behavior. This is a major breakthrough for cost-efficient, deterministic AI agents.",
+            "whyItMatters": [
+              "Eliminates LLM inference costs during planning, reducing per-task cost to near zero for structured environments",
+              "Deterministic plans with zero variance enable reliable, reproducible agent behavior critical for production systems"
+            ],
+            "whatToTry": {
+              "description": "If you're building agentic workflows (e.g., coding, web navigation), prototype a hybrid approach: use GATS's layered world model (symbolic + learned + LLM fallback) for planning, reserving LLM calls only for unknown actions. This can slash costs and improve reliability.",
+              "note": "GATS is research-stage; implement its UCB1 tree search with your own execution logs for immediate gains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-5d55mi",
+                "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning",
+                "url": "https://arxiv.org/abs/2607.08894",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-5d55mi-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-5d55mi-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068560-snwr46",
+            "title": "KV-PRM: 5000x Faster Process Reward Modeling for Multi-Agent AI",
+            "tldr": "KV-PRM eliminates the quadratic cost of process reward modeling by reusing KV caches from LLM generation, achieving up to 5000x FLOP reduction and 37x latency improvement. This makes test-time scaling practical for long-context multi-agent systems.",
+            "whyItMatters": [
+              "Enables real-time process reward feedback for long-horizon multi-agent tasks, unlocking more sophisticated agentic workflows without prohibitive compute costs.",
+              "Reduces memory footprint by 34x, allowing founders to deploy PRM-based TTS on smaller hardware or scale to larger agent teams."
+            ],
+            "whatToTry": {
+              "description": "If you're building multi-agent systems with test-time scaling (e.g., beam search, MCTS), prototype KV-PRM by extracting KV caches from your LLM's generation phase and using a single verify token for scoring. This can drastically cut inference costs for long trajectories.",
+              "note": "Requires access to KV cache from the generation model; ensure your LLM framework supports cache extraction (e.g., Hugging Face Transformers, vLLM)."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068560-snwr46",
+                "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+                "url": "https://arxiv.org/abs/2607.09153",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068560-snwr46-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068560-snwr46-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-m4psxb",
+            "title": "CogniConsole: Externalizing LLM Control for Reliability",
+            "tldr": "A new paper introduces CogniConsole, an architecture that externalizes inference-time control into a structured interface, showing that adding scaffolding reduces output variance and failures—challenging the notion that reliability depends solely on model capability.",
+            "whyItMatters": [
+              "Business impact: Founders can improve LLM product reliability without upgrading models, reducing costs and dependency on frontier models.",
+              "Technical impact: Provides a formal framework for designing control layers, enabling systematic debugging of context drift and constraint adherence."
+            ],
+            "whatToTry": {
+              "description": "Implement a structured scaffolding layer for your LLM interactions: define explicit task frames, context boundaries, and step-by-step coordination logic (e.g., using state machines or programmatic prompts) to reduce failure modes like context drift.",
+              "note": "Start with a simple multi-step task (e.g., data extraction or form filling) and compare failure rates with and without scaffolding."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-m4psxb",
+                "title": "CogniConsole: Externalizing Inference-Time Control as a Formal Abstraction for Reliable LLM Interactions",
+                "url": "https://arxiv.org/abs/2607.08774",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-m4psxb-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-m4psxb-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-gb5tml",
+            "title": "New Benchmark Tests AI Agents on Hours-Long Tasks",
+            "tldr": "Researchers released Long-Horizon-Terminal-Bench, a benchmark of 46 complex tasks requiring hours of execution and millions of tokens, with dense reward grading to measure partial progress. This reveals current agents' limitations in long-horizon planning and iterative debugging.",
+            "whyItMatters": [
+              "For founders building autonomous agents, this benchmark highlights the gap between current capabilities and real-world workflows that require sustained reasoning over hours.",
+              "The dense reward design enables more granular evaluation, which could accelerate development of agents for complex tasks like experiment reproduction and software engineering."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent on a subset of these tasks (e.g., software engineering or multimodal analysis) to identify weaknesses in long-context management and iterative debugging. Use the dense reward signals to pinpoint where your agent stalls.",
+              "note": "Start with tasks in your domain to minimize setup overhead; the benchmark's partial credit system helps you measure incremental improvements."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-gb5tml",
+                "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+                "url": "https://arxiv.org/abs/2607.08964",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-gb5tml-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-gb5tml-1",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-gb5tml-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-f6ql15",
+            "title": "AI-Assisted Lean Formalization: Turning LaTeX into Verified Code",
+            "tldr": "A new paper demonstrates a strategy game-like approach to formalizing mathematical proofs in Lean 4, using an AI agent directed by a mathematician. The case study—a complete formalization of the Vlasov equation—shows how AI can execute proof details while humans handle high-level direction, potentially accelerating the creation of verified math libraries.",
+            "whyItMatters": [
+              "For AI product builders: This workflow (human directs, AI executes) is a template for using LLMs to automate complex, structured tasks like code verification or documentation, reducing manual effort.",
+              "For technical founders: The approach of 'formalization as a game' could inspire new tools for verifying AI model outputs or ensuring code correctness, especially in safety-critical applications."
+            ],
+            "whatToTry": {
+              "description": "Experiment with using an LLM (e.g., GPT-4 or Claude) to assist in formalizing your own code or mathematical proofs in Lean 4. Start with a small theorem or function, provide high-level definitions and goals, and let the AI generate the Lean code. Iterate by reviewing and correcting errors, mimicking the 'human directs, AI executes' pattern.",
+              "note": "This requires familiarity with Lean 4 and formal verification. The paper's 'reuse' metric (self-contained layers) is a good benchmark for evaluating the AI's output quality."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-f6ql15",
+                "title": "A Formalization of the Mean-Field Derivation of the Vlasov Equation: AI-Assisted Lean Formalization as a Strategy Game",
+                "url": "https://arxiv.org/abs/2607.08986",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-f6ql15-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-f6ql15-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-f6ql15-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-tu0pa8",
+            "title": "ARCANA: Multi-Agent Framework for ARC-AGI-2 Reasoning",
+            "tldr": "ARCANA introduces a collaborative multi-agent system that decomposes abstract reasoning tasks into perception, hypothesis generation, execution, and reflection, improving solution quality on ARC-AGI-2 challenges. This matters for founders building AI systems that need structured reasoning and adaptive correction.",
+            "whyItMatters": [
+              "Demonstrates a practical architecture for multi-agent collaboration that can be adapted for complex problem-solving in AI products, such as automated code generation or data transformation.",
+              "Highlights the value of reflective refinement and symbolic execution, which can reduce errors in AI-driven workflows and improve reliability."
+            ],
+            "whatToTry": {
+              "description": "Consider implementing a similar multi-agent loop in your AI product: use separate agents for perception, hypothesis generation, execution, and reflection, with a shared memory (like a blackboard) to iteratively improve outputs. Start with a simple task like data cleaning or form filling to test the approach.",
+              "note": "Focus on defining clear agent roles and a feedback mechanism to avoid coordination overhead."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-tu0pa8",
+                "title": "ARCANA: A Reflective Multi-Agent Program Synthesis Framework for ARC-AGI-2 Reasoning",
+                "url": "https://arxiv.org/abs/2607.09059",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-tu0pa8-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-tu0pa8-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-qzn92z",
+            "title": "Neuro-Agentic Control: LLMs + Time-Series Models for Secure OT",
+            "tldr": "A new framework combines LLM planning with a time-series foundation model (TimesFM) to safely control industrial systems, using a 'Counterfactual Physics Injection' mechanism to reject hallucinated actions. Tested on water treatment data, it prevented 33% more breaches than baselines with zero unsafe actions executed.",
+            "whyItMatters": [
+              "For founders building AI agents that interact with physical systems (robotics, IoT, manufacturing), this provides a blueprint for safe closed-loop control using LLMs without hallucination risks.",
+              "The technique of using a pre-trained time-series model as a deterministic 'Sentinel' to validate LLM actions is a practical approach to deploy agentic AI in safety-critical environments."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an AI agent for industrial control or autonomous systems, prototype a similar dual-model architecture: pair an LLM planner (e.g., Gemini 2.5 Flash-Lite) with a time-series foundation model (like TimesFM) to simulate and validate actions before execution. Use counterfactual physics injection to reject unsafe proposals.",
+              "note": "Start with a simulated environment (e.g., SWaT dataset) to test the loop before real-world deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-qzn92z",
+                "title": "Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls",
+                "url": "https://arxiv.org/abs/2607.09076",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-qzn92z-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-qzn92z-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-qzn92z-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-lzy2lq",
+            "title": "Multi-Agent Debate Boosts Legal AI by 8%, But Watch for Over-Deliberation",
+            "tldr": "A new framework, L-MAD, shows that multi-agent debate improves legal reasoning accuracy by up to 8% over single agents, but reveals a critical trade-off: more agents reduce inconsistency, while longer discussions cause agents to reinforce each other's mistakes. This is a must-read for founders building collaborative AI systems for high-stakes domains.",
+            "whyItMatters": [
+              "For founders building AI for legal, compliance, or other regulated industries, this provides a validated method to improve accuracy by using multiple specialized agents, with clear limits on debate length to avoid error amplification.",
+              "The finding on 'over-deliberation drift' is a practical safety margin that can be directly applied to product design, preventing costly mistakes in high-stakes reasoning tasks."
+            ],
+            "whatToTry": {
+              "description": "Experiment with multi-agent debate in your own legal or structured reasoning tasks: assign distinct expert personas (e.g., 'contract analyst', 'statutory interpreter') to separate LLM instances, limit discussion rounds to 2-3 to avoid over-deliberation, and use majority voting or weighted aggregation to combine outputs.",
+              "note": "Start with 3-5 agents and test on a small set of your own data to measure accuracy gains before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-lzy2lq",
+                "title": "L-MAD: A Systematic Evaluation of Multi-Agent Debate Structures in Legal Reasoning",
+                "url": "https://arxiv.org/abs/2607.09099",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-lzy2lq-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-lzy2lq-1",
+                "label": "Legal AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-lzy2lq-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783939068559-xo09dv",
+            "title": "MedRealMM: Real-World Benchmark Reveals LLM Gaps in Online Medical Consults",
+            "tldr": "A new benchmark, MedRealMM, uses 5,620 real patient-doctor interactions from Chinese internet hospitals to evaluate LLMs on multimodal online medical consultation. It reveals that current frontier models still underperform human physicians, especially when handling medical images, highlighting a critical gap for AI health startups.",
+            "whyItMatters": [
+              "Business impact: For founders building AI-powered telemedicine or clinical decision support tools, this benchmark provides a realistic evaluation framework to test and improve their models, directly addressing the gap between synthetic benchmarks and real-world performance.",
+              "Technical impact: The Multimodal Clinical Challenge Point (MCCP) extraction method offers a new way to identify clinically demanding moments, enabling more targeted fine-tuning of multimodal LLMs for healthcare."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an AI for medical consultation, use MedRealMM's rubric-based evaluation approach to assess your model's next-response generation. Focus on integrating and testing with real patient-uploaded images (e.g., skin photos, X-rays) to improve clinical reliability, as the benchmark shows image information is critical.",
+              "note": "The benchmark is currently focused on Chinese medical consultations, so adapt the rubric and data for your target region and language."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783939068559-xo09dv",
+                "title": "MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation",
+                "url": "https://arxiv.org/abs/2607.09142",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-xo09dv-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-xo09dv-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783939068559-xo09dv-2",
+                "label": "healthcare",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48883275",
+            "title": "Claude Code wastes 33k tokens per prompt vs OpenCode's 7k",
+            "tldr": "A systematic study reveals Claude Code sends 33,000 tokens of overhead (system prompts, caches) before processing user prompts, compared to OpenCode's 7,000. This means Claude Code users burn ~5x more tokens per task, directly impacting costs for AI product builders.",
+            "whyItMatters": [
+              "For founders building AI products, token overhead directly translates to higher operational costs—Claude Code users may be paying 5x more per task than necessary, eating into margins.",
+              "Technical teams can optimize their own agentic coding tools by auditing system prompts and cache strategies, potentially saving significant inference costs."
+            ],
+            "whatToTry": {
+              "description": "Audit your own agentic coding tool's token usage by adding logging between the tool and the API endpoint. Compare system prompt sizes and cache hit rates. If using Claude Code, consider switching to OpenCode or customizing prompts to reduce overhead.",
+              "note": "This study used Anthropic's endpoint; results may vary with other providers or custom configurations."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48883275",
+                "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+                "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+                "domain": "systima.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48883275-0",
+                "label": "Claude Code",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-1",
+                "label": "OpenCode",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-2",
+                "label": "cost optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T18:25:51Z"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-12",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-12-evening",
@@ -305,7 +733,7 @@
   },
   {
     "date": "2026-07-11",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Jul 11",
     "briefings": [
       {
         "id": "briefing-2026-07-11-evening",
@@ -4457,855 +4885,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-06",
-    "displayDate": "Monday, Jul 6",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-06-morning",
-        "period": "morning",
-        "date": "2026-07-06",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Amazon Shuts Down Mechanical Turk to New Customers, LeRobot v0.6.0: New tools for robotics AI development, Hugging Face Revamps Kernels for Faster AI Inference.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783338352483-lsnkbt",
-            "title": "Amazon Shuts Down Mechanical Turk to New Customers",
-            "tldr": "Amazon is halting new customer sign-ups for Mechanical Turk, signaling the end of a key human-in-the-loop data labeling platform. This forces AI founders to urgently find alternatives for training data and model evaluation.",
-            "whyItMatters": [
-              "Business impact: Founders relying on MTurk for data labeling, RLHF, or model evaluation must migrate to other platforms like Scale AI, Surge AI, or open-source tools, potentially increasing costs or reducing data quality.",
-              "Technical impact: The loss of a cheap, scalable human workforce may slow down iterative model training and fine-tuning, especially for startups without in-house annotation teams."
-            ],
-            "whatToTry": {
-              "description": "Immediately audit your current use of MTurk for any AI pipeline (data labeling, preference ranking, safety checks). Start testing alternatives like Scale AI, Surge AI, or self-hosted solutions with platforms like Label Studio or Prodigy. Consider synthetic data generation or active learning to reduce human dependency.",
-              "note": "MTurk may still serve existing customers for a while, but don't rely on it for new projects. Budget for higher costs per annotation on professional platforms."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783338352483-lsnkbt",
-                "title": "Amazon will stop accepting new customers for Mechanical Turk",
-                "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783338352483-lsnkbt-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783338352483-lsnkbt-1",
-                "label": "Data Labeling",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783338352483-lsnkbt-2",
-                "label": "Human-in-the-loop",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 05 Jul 2026 17:43:36 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783338352641-m7s8ch",
-            "title": "LeRobot v0.6.0: New tools for robotics AI development",
-            "tldr": "Hugging Face released LeRobot v0.6.0, adding simulation, evaluation, and data visualization tools for robotics AI. This makes it easier to prototype and benchmark robot learning models.",
-            "whyItMatters": [
-              "Reduces friction for building and testing robot AI models with built-in simulation and evaluation pipelines.",
-              "Enables faster iteration cycles for founders developing robotics applications, from pick-and-place to complex manipulation."
-            ],
-            "whatToTry": {
-              "description": "Use LeRobot v0.6.0's new simulation environments to prototype your robot learning model before deploying on hardware. Start with the 'imagine' feature to generate synthetic data for training.",
-              "note": "Check the Hugging Face blog for setup guides and example scripts to get started quickly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783338352641-m7s8ch",
-                "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
-                "url": "https://huggingface.co/blog/lerobot-release-v060",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-m7s8ch-0",
-                "label": "LeRobot",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-m7s8ch-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-m7s8ch-2",
-                "label": "Simulation",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783338352641-hy8lpx",
-            "title": "Hugging Face Revamps Kernels for Faster AI Inference",
-            "tldr": "Hugging Face released major updates to its Kernels library, offering optimized CUDA kernels that speed up inference for popular models like Llama and Mistral by up to 2x, with easy integration via Transformers.",
-            "whyItMatters": [
-              "Reduces inference latency and cost for production AI products, enabling faster user experiences and lower cloud bills.",
-              "Simplifies access to cutting-edge kernel optimizations without requiring deep CUDA expertise, accelerating development cycles."
-            ],
-            "whatToTry": {
-              "description": "Update your Hugging Face Transformers library to the latest version and test the new kernels on your deployed models (e.g., Llama, Mistral) by enabling `use_kernels=True` in your pipeline or model configuration to benchmark latency improvements.",
-              "note": "Ensure your GPU drivers and CUDA toolkit are up-to-date for compatibility; start with a single model to validate performance gains before rolling out."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783338352641-hy8lpx",
-                "title": "🤗 Kernels: Major Updates",
-                "url": "https://huggingface.co/blog/revamped-kernels",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-hy8lpx-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-hy8lpx-1",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783338352641-hy8lpx-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 00:00:00 GMT"
-          }
-        ],
-        "totalReadTimeMinutes": 6,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-06-afternoon",
-        "period": "afternoon",
-        "date": "2026-07-06",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: LeRobot v0.6.0: New Tools for Robot Learning, Amazon Shuts Down Mechanical Turk to New Customers, Photoroom's Data Strategy: Lessons for AI Product Builders.",
-        "items": [
-          {
-            "id": "rss-hugging-face-blog-1783355633921-dwg8zp",
-            "title": "LeRobot v0.6.0: New Tools for Robot Learning",
-            "tldr": "Hugging Face released LeRobot v0.6.0, adding simulation-based evaluation and dataset improvement tools for robot learning, making it easier to test and refine policies before real-world deployment.",
-            "whyItMatters": [
-              "Business impact: Reduces cost and risk of physical robot testing by enabling simulation-based evaluation, accelerating development cycles for robotics startups.",
-              "Technical impact: Provides standardized benchmarks and dataset tools, lowering the barrier to entry for building and iterating on robot learning models."
-            ],
-            "whatToTry": {
-              "description": "If you're building robot learning models, integrate LeRobot's new evaluation pipeline into your workflow to test policies in simulation before deploying on hardware, and use the dataset improvement tools to clean and augment your training data.",
-              "note": "Start with the provided benchmarks to validate your model's performance against community standards."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783355633921-dwg8zp",
-                "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
-                "url": "https://huggingface.co/blog/lerobot-release-v060",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-dwg8zp-0",
-                "label": "LeRobot",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-dwg8zp-1",
-                "label": "Robot Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-dwg8zp-2",
-                "label": "Simulation",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783355633661-j3cvi7",
-            "title": "Amazon Shuts Down Mechanical Turk to New Customers",
-            "tldr": "Amazon is halting new customer sign-ups for Mechanical Turk, signaling the end of a key source of human-in-the-loop data for AI training and evaluation. This forces AI founders to urgently find alternative human annotation and RLHF platforms.",
-            "whyItMatters": [
-              "Business impact: Founders relying on MTurk for data labeling, RLHF, or model evaluation must migrate to alternatives like Scale AI, Surge AI, or open-source tools, potentially increasing costs and requiring new vendor relationships.",
-              "Technical impact: The loss of a widely used, low-cost human feedback platform may slow down fine-tuning and safety testing for AI products, pushing teams toward synthetic data or automated evaluation methods."
-            ],
-            "whatToTry": {
-              "description": "Immediately audit your current use of MTurk for any AI pipeline (data labeling, preference ranking, safety checks) and start piloting alternatives like Scale AI, Surge AI, or open-source platforms (e.g., Label Studio with custom crowdsourcing).",
-              "note": "Consider building in-house annotation workflows using smaller, specialized platforms to avoid single-vendor dependency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783355633661-j3cvi7",
-                "title": "Amazon will stop accepting new customers for Mechanical Turk",
-                "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-j3cvi7-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-j3cvi7-1",
-                "label": "Data Labeling",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-j3cvi7-2",
-                "label": "RLHF",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 05 Jul 2026 17:43:36 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783355633921-5kxaul",
-            "title": "Photoroom's Data Strategy: Lessons for AI Product Builders",
-            "tldr": "Photoroom shares its data strategy for training AI models, focusing on synthetic data generation, data curation, and iterative improvement—practical insights for founders building vision-based AI products.",
-            "whyItMatters": [
-              "Provides a blueprint for generating high-quality training data without relying on expensive or scarce real-world datasets, reducing costs and accelerating model development.",
-              "Demonstrates how to systematically improve model performance through data iteration, a key competitive advantage for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Implement a synthetic data pipeline using domain-specific augmentations (e.g., background replacement, object insertion) to bootstrap your training set, then validate with a small real-world sample to catch distribution shifts.",
-              "note": "Start with simple augmentations and gradually increase complexity to avoid overfitting to synthetic patterns."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783355633921-5kxaul",
-                "title": "PRX Part 4: Our Data Strategy",
-                "url": "https://huggingface.co/blog/Photoroom/prx-part4-data",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-5kxaul-0",
-                "label": "Data Strategy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-5kxaul-1",
-                "label": "Synthetic Data",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-5kxaul-2",
-                "label": "Photoroom",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 15:30:55 GMT"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783355633921-4ozf34",
-            "title": "Hugging Face Revamps Kernels for Faster AI Training",
-            "tldr": "Hugging Face released major updates to its kernel library, optimizing key operations like attention and normalization for NVIDIA GPUs, which can speed up model training and inference by up to 2x. This is a practical upgrade for founders building custom AI models.",
-            "whyItMatters": [
-              "Reduces training costs and time for custom models, directly impacting startup runway and iteration speed.",
-              "Enables faster inference, improving user experience for AI products in production."
-            ],
-            "whatToTry": {
-              "description": "If you're training or fine-tuning transformer models on NVIDIA GPUs, integrate the new Hugging Face kernels into your pipeline. Start by updating your Transformers library and enabling kernel optimizations via the `use_kernels=True` flag in your training scripts.",
-              "note": "Test on a small model first to ensure compatibility with your specific hardware and software stack."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783355633921-4ozf34",
-                "title": "🤗 Kernels: Major Updates",
-                "url": "https://huggingface.co/blog/revamped-kernels",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-4ozf34-0",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-4ozf34-1",
-                "label": "Kernels",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783355633921-4ozf34-2",
-                "label": "Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783355633661-tvmv7i",
-            "title": "Microsoft cuts 4,800 jobs: AI automation fears resurface",
-            "tldr": "Microsoft laid off ~4,800 employees, mainly in Xbox and commercial sales, as part of ongoing restructuring. This signals a broader trend of AI-driven workforce optimization, impacting how founders should think about scaling their teams and leveraging automation.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products should anticipate similar cost-cutting moves in enterprise clients, creating opportunities for AI sales automation tools.",
-              "Technical impact: The layoffs in commercial sales highlight the growing shift toward AI-powered sales and customer success platforms, accelerating demand for such solutions."
-            ],
-            "whatToTry": {
-              "description": "Audit your own team for repetitive sales tasks that could be automated with AI (e.g., lead qualification, follow-ups). Consider building or integrating AI sales assistants to reduce headcount dependency and improve efficiency.",
-              "note": "Focus on augmenting, not replacing, your sales team initially to maintain customer relationships."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783355633661-tvmv7i",
-                "title": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
-                "url": "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-tvmv7i-0",
-                "label": "Microsoft",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-tvmv7i-1",
-                "label": "AI automation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-tvmv7i-2",
-                "label": "Sales",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 15:32:43 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783355633661-pasty3",
-            "title": "Station F's F/ai accelerator targets AI startups in Europe",
-            "tldr": "Station F, the Paris startup hub, is launching a new edition of its F/ai accelerator program to attract and support promising AI startups, signaling Europe's growing focus on AI innovation.",
-            "whyItMatters": [
-              "Provides a structured path for AI founders to access mentorship, funding, and network in Europe",
-              "Highlights Paris as a competitive hub for AI talent and resources, potentially shifting focus from Silicon Valley"
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI startup in Europe, consider applying to Station F's F/ai accelerator for access to resources and visibility. Research their application criteria and deadlines now.",
-              "note": "Accelerator programs like this can offer crucial early-stage support but evaluate fit with your specific AI domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783355633661-pasty3",
-                "title": "Station F ramps up as a launchpad for Europe’s hottest AI startups",
-                "url": "https://techcrunch.com/2026/07/06/station-f-ramps-up-as-a-launchpad-for-europes-hottest-ai-startups/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-pasty3-0",
-                "label": "Station F",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-pasty3-1",
-                "label": "F/ai accelerator",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783355633661-pasty3-2",
-                "label": "AI startup ecosystem",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 13:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 12,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-06-evening",
-        "period": "evening",
-        "date": "2026-07-06",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: 2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts, Google's new privacy settings let it use your data for AI training, LeRobot v0.6.0: New tools to imagine, evaluate, and improve robot learning.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783374862872-w1uuqx",
-            "title": "2026 Tech Layoffs: AI Cited as Key Factor in Major Cuts",
-            "tldr": "TechCrunch tracks a growing list of major tech companies in 2026 that have cited AI as a reason for significant layoffs, signaling a structural shift where AI automation is directly replacing roles. This trend matters for founders as it validates AI's ROI but also signals market saturation and talent churn.",
-            "whyItMatters": [
-              "Business impact: Founders can leverage this trend to justify AI investments to investors and customers, but must also anticipate increased competition as laid-off talent starts new AI ventures.",
-              "Technical impact: The layoffs indicate that AI is now mature enough to automate core business functions, pushing founders to prioritize AI-native workflows over human-heavy ops."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's workflows to identify 2-3 roles or tasks that could be automated with current AI tools (e.g., customer support, data entry, content generation). Then, prototype an AI replacement using a low-cost API like OpenAI or Anthropic to test feasibility and cost savings.",
-              "note": "Focus on roles with high repeatability and low decision complexity to minimize risk and maximize ROI."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-w1uuqx",
-                "title": "Every major tech layoff in 2026 that has name-checked AI",
-                "url": "https://techcrunch.com/2026/07/06/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-w1uuqx-0",
-                "label": "AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-w1uuqx-1",
-                "label": "Layoffs",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-w1uuqx-2",
-                "label": "Industry Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 18:35:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-65dmuq",
-            "title": "Google's new privacy settings let it use your data for AI training",
-            "tldr": "Google updated its privacy policy to store more user data (images, files, audio, video) for AI model training. This matters because it signals a broader industry trend of leveraging user data for AI, and provides a clear opt-out path that founders should understand for compliance and user trust.",
-            "whyItMatters": [
-              "Founders building AI products must anticipate similar data usage policies from platforms and prepare for user pushback or opt-out requests.",
-              "Technical teams need to design systems that can handle opt-out requests and respect user data preferences, especially when training models on user-generated content."
-            ],
-            "whatToTry": {
-              "description": "Review your own AI product's data usage policy and ensure you have a clear, user-friendly opt-out mechanism. Consider implementing a data retention and deletion pipeline that respects user choices, similar to Google's approach.",
-              "note": "Start with a simple toggle in settings and a transparent explanation of how data is used for model training."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-65dmuq",
-                "title": "If you use Google, you’re training its AI. Here’s how to opt out.",
-                "url": "https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-65dmuq-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-65dmuq-1",
-                "label": "Data Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-65dmuq-2",
-                "label": "AI Training",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 17:04:58 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783374863157-0d9xrb",
-            "title": "LeRobot v0.6.0: New tools to imagine, evaluate, and improve robot learning",
-            "tldr": "Hugging Face released LeRobot v0.6.0, adding a 'Imagine' feature for generating robot trajectories from images, improved evaluation tools, and better dataset management. This makes it easier for founders to prototype and benchmark robot learning models.",
-            "whyItMatters": [
-              "Business impact: Reduces time and cost to prototype robot behaviors by enabling trajectory generation from images, accelerating product iteration.",
-              "Technical impact: New evaluation tools standardize benchmarking, helping teams compare models and datasets more reliably."
-            ],
-            "whatToTry": {
-              "description": "Try the new 'Imagine' feature to generate robot trajectories from a single image or video prompt, then use the improved evaluation suite to benchmark your model against existing datasets.",
-              "note": "Start with the provided example scripts in the repo to see how trajectory generation works with your own robot setup."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783374863157-0d9xrb",
-                "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
-                "url": "https://huggingface.co/blog/lerobot-release-v060",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-0d9xrb-0",
-                "label": "LeRobot",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-0d9xrb-1",
-                "label": "Robot Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-0d9xrb-2",
-                "label": "Hugging Face",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-znl2ye",
-            "title": "Vercel CEO: Split Models from Agents for Production AI",
-            "tldr": "Vercel CEO Guillermo Rauch argues that production AI systems should decouple models from agents to optimize price/performance, a key insight for founders building scalable AI products.",
-            "whyItMatters": [
-              "Business impact: Decoupling models from agents enables cost optimization and flexibility in choosing the best model for each task, reducing operational expenses.",
-              "Technical impact: Encourages modular architecture where agents orchestrate model calls, improving scalability, maintainability, and the ability to swap models without rewriting agent logic."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI stack: identify where models are tightly coupled with agent logic. Refactor to use a model abstraction layer (e.g., via API gateways or model routers) so you can switch models based on cost, latency, or performance needs.",
-              "note": "Start with a single high-cost workflow to test the decoupling before scaling across your system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-znl2ye",
-                "title": "Vercel CEO Guillermo Rauch on the fight to split off models from agents",
-                "url": "https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-znl2ye-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-znl2ye-1",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 19:49:10 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-e7oz3c",
-            "title": "Microsoft cuts 4,800 jobs: AI automation fears resurface",
-            "tldr": "Microsoft laid off ~4,800 employees, primarily in Xbox and commercial sales, as part of ongoing restructuring. This signals a shift toward AI-driven efficiency, impacting how founders should think about scaling teams and sales processes.",
-            "whyItMatters": [
-              "Business impact: Indicates that large tech companies are prioritizing AI automation over human roles in sales and operations, potentially reducing demand for traditional sales teams and increasing reliance on AI tools.",
-              "Technical impact: Suggests that AI models for sales automation (e.g., CRM integration, lead scoring) and content generation (e.g., for Xbox) are becoming more viable, opening opportunities for startups building AI sales agents or enterprise automation tools."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own sales and customer success workflows for AI automation opportunities. Consider testing AI-powered sales tools like Gong or Outreach with AI add-ons to reduce headcount costs, or build a custom AI agent for lead qualification using GPT-4 or Claude.",
-              "note": "Focus on high-volume, repetitive tasks first (e.g., email outreach, data entry) to maximize ROI and avoid over-automating complex human interactions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-e7oz3c",
-                "title": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
-                "url": "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-e7oz3c-0",
-                "label": "Microsoft",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-e7oz3c-1",
-                "label": "AI automation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-e7oz3c-2",
-                "label": "Sales",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 15:32:43 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783374863157-uo88df",
-            "title": "Photoroom's Data Strategy: Key Lessons for AI Founders",
-            "tldr": "Photoroom shares its data strategy for training AI models, covering data sourcing, curation, and synthetic data generation. This is a practical guide for founders building AI products on how to scale data pipelines efficiently.",
-            "whyItMatters": [
-              "Business impact: Offers a blueprint for building proprietary data moats, reducing reliance on third-party data, and improving model performance for specific use cases.",
-              "Technical impact: Details techniques for synthetic data generation and data filtering that can be directly applied to improve model accuracy and reduce training costs."
-            ],
-            "whatToTry": {
-              "description": "Audit your current data pipeline: identify gaps in data diversity and quality. Then, experiment with synthetic data generation (e.g., using diffusion models or LLMs) to augment your dataset for edge cases, following Photoroom's approach of iterative curation.",
-              "note": "Start small with a single use case to validate synthetic data quality before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783374863157-uo88df",
-                "title": "PRX Part 4: Our Data Strategy",
-                "url": "https://huggingface.co/blog/Photoroom/prx-part4-data",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-uo88df-0",
-                "label": "Data Strategy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-uo88df-1",
-                "label": "Synthetic Data",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-uo88df-2",
-                "label": "Photoroom",
-                "type": "tool"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 15:30:55 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-eyo2m6",
-            "title": "Reddit uses LLMs to fight AI spam it helped create",
-            "tldr": "Reddit is deploying LLMs to detect and remove AI-generated spam, a problem exacerbated by the same technology. This highlights a growing need for AI-native moderation tools.",
-            "whyItMatters": [
-              "For founders building AI products, this signals a market opportunity for AI-powered content moderation and anti-spam solutions tailored to LLM-generated content.",
-              "Technically, it underscores the arms race between generative AI and detection systems, pushing innovation in adversarial robustness and model-based filtering."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating LLM-based spam detection into your product, especially if user-generated content is core. Start with open-source detectors like GPTZero or build custom classifiers trained on synthetic spam patterns.",
-              "note": "Be mindful of false positives and user privacy; consider a human-in-the-loop approach for edge cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-eyo2m6",
-                "title": "Reddit is using LLMs to solve a problem LLMs largely created",
-                "url": "https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-eyo2m6-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-eyo2m6-1",
-                "label": "Content Moderation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-eyo2m6-2",
-                "label": "Anti-Spam",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 15:22:08 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-obhs9f",
-            "title": "Station F's F/ai Accelerator: New Launchpad for European AI Startups",
-            "tldr": "Station F, Europe's largest startup campus, is launching a new edition of its F/ai accelerator program to attract and support top AI startups, signaling a major push to become a key hub for AI innovation in Europe.",
-            "whyItMatters": [
-              "For founders building AI products, this offers a structured path to mentorship, funding, and European market access through a prestigious program.",
-              "It highlights the growing ecosystem support for AI startups in Europe, potentially reducing the need to relocate to Silicon Valley."
-            ],
-            "whatToTry": {
-              "description": "If you're an early-stage AI startup in Europe, consider applying to the F/ai accelerator at Station F for access to resources, network, and potential investment.",
-              "note": "Check application deadlines and eligibility criteria on Station F's website; competition is likely high."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-obhs9f",
-                "title": "Station F ramps up as a launchpad for Europe’s hottest AI startups",
-                "url": "https://techcrunch.com/2026/07/06/station-f-ramps-up-as-a-launchpad-for-europes-hottest-ai-startups/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-obhs9f-0",
-                "label": "Station F",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-obhs9f-1",
-                "label": "F/ai Accelerator",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-obhs9f-2",
-                "label": "European AI Ecosystem",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1783374863157-kq7wmo",
-            "title": "Hugging Face Revamps Kernels for Faster AI Inference",
-            "tldr": "Hugging Face has released major updates to its Kernels library, promising significant speed improvements for transformer model inference. This is directly actionable for founders deploying models in production.",
-            "whyItMatters": [
-              "Reduces inference latency and cost for production AI applications, enabling faster user experiences and lower cloud bills.",
-              "Simplifies optimization of transformer models without requiring deep CUDA expertise, lowering the barrier to high-performance deployment."
-            ],
-            "whatToTry": {
-              "description": "Evaluate the new Kernels in your inference pipeline by testing with your most-used transformer models (e.g., Llama, BERT). Compare latency and throughput against your current setup to quantify potential savings.",
-              "note": "Start with a single model variant to avoid over-engineering; the improvements are most pronounced for large batch sizes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1783374863157-kq7wmo",
-                "title": "🤗 Kernels: Major Updates",
-                "url": "https://huggingface.co/blog/revamped-kernels",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-kq7wmo-0",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1783374863157-kq7wmo-1",
-                "label": "Inference Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783374862872-iaeocx",
-            "title": "Siri Gets Customizable Pace & Expressivity in iOS 27 Beta",
-            "tldr": "Apple's latest iOS 27 beta lets users adjust Siri's speaking pace and expressivity, part of a broader generative AI overhaul. This signals a shift toward more natural, personalized voice interfaces that AI product builders should watch.",
-            "whyItMatters": [
-              "Business impact: Raises user expectations for voice AI personalization, pressuring competitors and creating opportunities for startups to offer similar customization in their own voice products.",
-              "Technical impact: Demonstrates Apple's investment in generative AI for voice, hinting at new APIs or frameworks for developers to integrate expressive, controllable speech synthesis."
-            ],
-            "whatToTry": {
-              "description": "Explore adding voice speed and expressivity controls to your AI product's voice interface. Test with a small user group to gauge demand for personalization beyond just tone or language.",
-              "note": "Start with simple sliders for pace and emotion (e.g., calm, excited) before building complex models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783374862872-iaeocx",
-                "title": "You can now customize Siri’s pace and expressivity in the latest iOS 27 beta",
-                "url": "https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-iaeocx-0",
-                "label": "Apple",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-iaeocx-1",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783374862872-iaeocx-2",
-                "label": "Generative AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 06 Jul 2026 19:01:59 +0000"
           }
         ],
         "totalReadTimeMinutes": 20,
