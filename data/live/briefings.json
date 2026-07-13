@@ -424,6 +424,433 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-07-13-afternoon",
+        "period": "afternoon",
+        "date": "2026-07-13",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: GATS: Zero-LLM-Call Agent Planning Beats LATS & ReAct, Anthropic localizes Claude pricing for India, its #2 market, CogniConsole: Control Layer Boosts LLM Reliability Beyond Scaling.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1783958524865-jzlrlz",
+            "title": "GATS: Zero-LLM-Call Agent Planning Beats LATS & ReAct",
+            "tldr": "GATS achieves 100% success on complex planning tasks with zero LLM calls during inference, outperforming LATS (92%) and ReAct (64%) while being deterministic and cheaper. This is a major breakthrough for building reliable, cost-effective AI agents.",
+            "whyItMatters": [
+              "Eliminates LLM inference costs during planning, enabling scalable agent deployment without per-task API expenses.",
+              "Deterministic planning with zero variance means predictable, debuggable agents—critical for production systems where reliability is paramount."
+            ],
+            "whatToTry": {
+              "description": "Evaluate GATS for your agent's planning layer, especially if you're building multi-step workflows (e.g., coding, web navigation). Replace LLM-heavy tree search (like LATS) with GATS's layered world model to cut costs and boost reliability. Start by modeling your environment's actions and execution logs to build L1 and L2 layers.",
+              "note": "GATS requires a structured world model; it's best suited for domains with well-defined actions and feedback loops, not open-ended creative tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524865-jzlrlz",
+                "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning",
+                "url": "https://arxiv.org/abs/2607.08894",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-jzlrlz-0",
+                "label": "GATS",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-jzlrlz-1",
+                "label": "Agent Planning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-jzlrlz-2",
+                "label": "LLM Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1783958524716-po8493",
+            "title": "Anthropic localizes Claude pricing for India, its #2 market",
+            "tldr": "Anthropic is rolling out Indian rupee-denominated subscription plans for Claude in India, its largest market after the US, signaling a strategic push to capture price-sensitive AI users and compete with local and global rivals.",
+            "whyItMatters": [
+              "Business impact: Enables Indian startups and enterprises to adopt Claude with predictable local pricing, potentially reducing costs and friction for AI product builders targeting the Indian market.",
+              "Technical impact: Localized pricing may lead to increased API usage and model fine-tuning from Indian developers, expanding the ecosystem and training data diversity."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products for the Indian market, evaluate Claude's new rupee pricing against local alternatives (e.g., OpenAI, Google, Indian LLMs) to optimize your cost structure. Consider integrating Claude for tasks like multilingual support or content generation where its safety and reasoning strengths align with local regulatory needs.",
+              "note": "Check if the pricing applies to API usage or only subscription plans; monitor for volume discounts or tiered pricing that could further reduce costs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1783958524716-po8493",
+                "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
+                "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1783958524716-po8493-0",
+                "label": "Anthropic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1783958524716-po8493-1",
+                "label": "Pricing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1783958524716-po8493-2",
+                "label": "India",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 15:34:59 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524865-7n4lhb",
+            "title": "CogniConsole: Control Layer Boosts LLM Reliability Beyond Scaling",
+            "tldr": "A new paper shows that adding structured control scaffolding at inference time dramatically reduces LLM output variance and failure rates, independent of model capability. This challenges the scaling-only mindset and offers a practical path to more reliable AI products.",
+            "whyItMatters": [
+              "Founders can improve product reliability without waiting for larger models or retraining, by designing better inference-time control layers.",
+              "The paper provides a formal abstraction (CogniConsole) that can be implemented as a tool or API, enabling more predictable LLM behavior in production."
+            ],
+            "whatToTry": {
+              "description": "Audit your current LLM pipeline for under-specified control: identify where context drift or constraint violations occur, then add structured scaffolding (e.g., programmatic coordination, bounded prompts) to reduce variance. Start with a single high-failure-rate task.",
+              "note": "Focus on tasks where context drift is common, like multi-step reasoning or long-form generation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524865-7n4lhb",
+                "title": "CogniConsole: Externalizing Inference-Time Control as a Formal Abstraction for Reliable LLM Interactions",
+                "url": "https://arxiv.org/abs/2607.08774",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-7n4lhb-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-7n4lhb-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524865-dkd8fg",
+            "title": "New Benchmark Tests AI Agents on Hours-Long Tasks",
+            "tldr": "Researchers released Long-Horizon-Terminal-Bench, a benchmark of 46 complex tasks (e.g., experiment reproduction, software engineering) that take minutes to hours and require hundreds of episodes. It uses dense rewards for partial progress, revealing that frontier models consume ~10M tokens per task—far more demanding than prior benchmarks.",
+            "whyItMatters": [
+              "For founders building autonomous agents, this benchmark highlights the massive compute and planning requirements for real-world tasks, informing product design and cost modeling.",
+              "The dense reward approach offers a better evaluation framework for agentic systems, which could influence how you measure and improve your own AI agents' long-horizon performance."
+            ],
+            "whatToTry": {
+              "description": "Use the benchmark's task categories (e.g., experiment reproduction, software engineering) to stress-test your own agent's long-horizon planning and debugging capabilities. Start by running a few tasks from the paper to gauge token consumption and failure modes.",
+              "note": "The benchmark is open-source; check the arXiv page for code and task details."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524865-dkd8fg",
+                "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+                "url": "https://arxiv.org/abs/2607.08964",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-dkd8fg-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-dkd8fg-1",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-dkd8fg-2",
+                "label": "Long-Horizon",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524866-2p03i1",
+            "title": "ARCANA: Multi-Agent Framework for ARC-AGI-2 Reasoning",
+            "tldr": "ARCANA introduces a collaborative multi-agent system that decomposes abstract reasoning tasks into perception, hypothesis generation, execution, and reflection, achieving efficient program synthesis under strict constraints. This matters for AI founders building systems that require structured reasoning and adaptive correction.",
+            "whyItMatters": [
+              "Demonstrates a practical architecture for multi-agent collaboration with a shared blackboard and meta-controller, which can be adapted for complex reasoning tasks in products.",
+              "Combines symbolic execution with neural guidance, offering a blueprint for building AI that can iteratively refine solutions from failures."
+            ],
+            "whatToTry": {
+              "description": "Experiment with a multi-agent loop for your AI product: separate perception, hypothesis generation, and verification into distinct agents that communicate via a shared state (e.g., a JSON object). Use a learned controller to schedule turns and incorporate failure feedback for iterative improvement.",
+              "note": "Start with a simple DSL for your domain to keep program search tractable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524866-2p03i1",
+                "title": "ARCANA: A Reflective Multi-Agent Program Synthesis Framework for ARC-AGI-2 Reasoning",
+                "url": "https://arxiv.org/abs/2607.09059",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-2p03i1-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-2p03i1-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524866-eanr00",
+            "title": "Neuro-Agentic Control: LLM + Time-Series Model for Safer OT Security",
+            "tldr": "A new framework combines LLMs (like Gemini 2.5 Flash-Lite) with a time-series foundation model (TimesFM) to autonomously defend industrial control systems, using a 'Counterfactual Physics Injection' mechanism to reject hallucinated actions. It outperformed LSTM and TCN baselines on the SWaT dataset, with zero unsafe actions executed.",
+            "whyItMatters": [
+              "For founders building AI for critical infrastructure (e.g., energy, water, manufacturing), this offers a blueprint to safely deploy LLMs in closed-loop control without safety risks.",
+              "The 'Counterfactual Physics Injection' technique is a novel approach to grounding LLM decisions in physics, which could be adapted for other high-stakes domains like autonomous vehicles or medical devices."
+            ],
+            "whatToTry": {
+              "description": "If you're developing AI for industrial IoT or OT security, prototype a similar dual-model architecture: pair an LLM planner (e.g., Gemini or GPT-4) with a pre-trained time-series foundation model (like TimesFM or Lag-Llama) and implement a simulation step to validate LLM-proposed actions before execution.",
+              "note": "Start with a small-scale simulation environment (e.g., SWaT dataset is publicly available) to test rejection rates and safety guarantees."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524866-eanr00",
+                "title": "Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls",
+                "url": "https://arxiv.org/abs/2607.09076",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-eanr00-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-eanr00-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-eanr00-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524866-3kt8yg",
+            "title": "MedRealMM: Real-World Multimodal Benchmark for Chinese Online Medical Consultations",
+            "tldr": "A new benchmark, MedRealMM, uses 5,620 de-identified real patient-doctor interactions from a Chinese internet hospital to evaluate LLMs in multimodal online medical consultations. It reveals that current frontier models still underperform compared to physicians, highlighting the critical need for image understanding in clinical AI.",
+            "whyItMatters": [
+              "Provides a realistic, high-signal evaluation framework for medical AI products, moving beyond synthetic benchmarks to real-world clinical scenarios.",
+              "Demonstrates that multimodal (text + image) capabilities are essential for reliable clinical performance, guiding product development priorities for health-tech startups."
+            ],
+            "whatToTry": {
+              "description": "If building a medical AI product, use MedRealMM's rubric and MCCP framework to design your own evaluation pipeline with real patient data, focusing on clinically demanding moments and rewarding safe, evidence-based responses.",
+              "note": "Ensure compliance with data privacy regulations when using de-identified patient data; consider partnering with hospitals for access."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524866-3kt8yg",
+                "title": "MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation",
+                "url": "https://arxiv.org/abs/2607.09142",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-3kt8yg-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-3kt8yg-1",
+                "label": "benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-3kt8yg-2",
+                "label": "healthcare",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524866-pq2qrx",
+            "title": "KV-PRM: 5000x Faster Process Reward Modeling for Multi-Agent Systems",
+            "tldr": "KV-PRM introduces a method to score multi-agent trajectories by reusing the KV cache from LLM generation, reducing computational cost from O(L^2) to O(L). This enables efficient test-time scaling for long-context scenarios, with up to 5000x fewer FLOPs and 37x lower latency, matching or outperforming text-based PRMs on math benchmarks.",
+            "whyItMatters": [
+              "For founders building multi-agent systems or reasoning-heavy AI products, this dramatically reduces the cost of process reward modeling, making test-time scaling feasible for long conversations or complex tasks.",
+              "Technically, it proves that KV cache contains more information than text for reward modeling, opening a new paradigm for efficient LLM evaluation and fine-tuning."
+            ],
+            "whatToTry": {
+              "description": "If you're using process reward models for multi-agent systems or chain-of-thought reasoning, explore integrating KV-PRM into your pipeline to reduce scoring costs. Start by testing on long-context tasks (e.g., multi-turn dialogues or complex math problems) to see latency and memory improvements.",
+              "note": "The paper provides a proof-of-concept; check if your LLM framework supports KV cache extraction for custom reward modeling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524866-pq2qrx",
+                "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+                "url": "https://arxiv.org/abs/2607.09153",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-pq2qrx-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-pq2qrx-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524866-pq2qrx-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48883275",
+            "title": "Claude Code burns 33k tokens before prompt; OpenCode uses 7k",
+            "tldr": "A systematic study reveals Claude Code wastes up to 33k tokens per request on system prompts and cache overhead vs OpenCode's 7k, directly impacting API costs for AI coding tools. Multiple HN discussions confirm this is a significant, actionable finding for founders building or using agentic coding tools.",
+            "whyItMatters": [
+              "Directly impacts cost efficiency: Claude Code's overhead can multiply API bills by 4-5x for heavy users, making it critical for founders to evaluate tooling costs.",
+              "Technical insight: Highlights how prompt engineering and cache strategy choices (e.g., system prompt length, context reuse) affect token burn, informing better tool design."
+            ],
+            "whatToTry": {
+              "description": "If you use Claude Code, audit your token usage by logging requests to the Anthropic endpoint for a week. Compare actual vs. expected tokens per task. If overhead is high, consider switching to OpenCode or optimizing your own tool's system prompts to reduce waste.",
+              "note": "This study used a specific setup; results may vary with different models or usage patterns. Always test in your own environment."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48883275",
+                "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+                "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+                "domain": "systima.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48883275-0",
+                "label": "Claude Code",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-1",
+                "label": "OpenCode",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48883275-2",
+                "label": "Token Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-12T18:25:51Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1783958524865-04qbqg",
+            "title": "New Framework: Adversarial Robustness as Lattice Traversal",
+            "tldr": "A new paper reduces adversarial robustness for MLPs to a lattice traversal problem, introducing both sound (no prediction change) and complete (prediction change guaranteed) interval certifications. This offers a rigorous path to certifiable AI safety, with surprising computational asymmetries between the two certification types.",
+            "whyItMatters": [
+              "For founders building safety-critical AI products (e.g., autonomous systems, medical diagnosis), this provides a formal method to certify model robustness, potentially reducing liability and improving trust.",
+              "The discovery that complete certifications are polynomial-time solvable while sound ones are intractable could shift research and tooling priorities toward complete certification approaches."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an MLP-based classifier for a safety-sensitive application, explore integrating formal verifiers (e.g., Marabou, ERAN) to compute interval certifications using the lattice traversal method. Start with complete certifications for efficiency, then layer sound certifications for critical inputs.",
+              "note": "This is theoretical; practical tooling may not yet exist. Monitor arXiv for follow-up implementations or open-source libraries."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1783958524865-04qbqg",
+                "title": "Interval Certifications for Multilayered Perceptrons via Lattice Traversal",
+                "url": "https://arxiv.org/abs/2607.08773",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-04qbqg-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1783958524865-04qbqg-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 13 Jul 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
