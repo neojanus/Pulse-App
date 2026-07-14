@@ -1,7 +1,440 @@
 [
   {
-    "date": "2026-07-13",
+    "date": "2026-07-14",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-14-morning",
+        "period": "morning",
+        "date": "2026-07-14",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: PixVerse raises $439M at $2B+ valuation for video AI, Prompt Formatting Can Flip AI Benchmarks: New Study, LLM Agent Relays: Structured Messages Work for Strong Models.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1784020843576-j6k2ch",
+            "title": "PixVerse raises $439M at $2B+ valuation for video AI",
+            "tldr": "Video-generation startup PixVerse raised $439M, pushing its valuation past $2B, signaling massive investor confidence in AI video and world models. The funding will fuel global expansion and product development.",
+            "whyItMatters": [
+              "Huge capital raise validates the market for AI video generation, likely accelerating competition and lowering costs for founders building video-based products.",
+              "Focus on world models suggests a shift from simple text-to-video to more sophisticated spatial reasoning, opening new use cases in gaming, simulation, and robotics."
+            ],
+            "whatToTry": {
+              "description": "Evaluate PixVerse's API or platform for integrating video generation into your product, especially if you need dynamic, AI-generated video content for marketing, training, or user interfaces.",
+              "note": "Start with their free tier or demo to test quality and latency before committing to paid plans."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1784020843576-j6k2ch",
+                "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
+                "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-j6k2ch-0",
+                "label": "PixVerse",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-j6k2ch-1",
+                "label": "Video Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-j6k2ch-2",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843806-2ejrke",
+            "title": "Prompt Formatting Can Flip AI Benchmarks: New Study",
+            "tldr": "A new study shows that minor formatting changes in prompts can alter model accuracy by over 30x, potentially flipping leaderboard rankings. This is crucial for founders building AI products that rely on consistent, parseable outputs.",
+            "whyItMatters": [
+              "Business impact: Your AI product's reliability may be fragile to prompt formatting changes, affecting user trust and output consistency.",
+              "Technical impact: Benchmarking without controlling for prompt wrappers is statistically fragile; you need to test multiple formats to get a true measure of model performance."
+            ],
+            "whatToTry": {
+              "description": "When evaluating models for your product, test each candidate with at least 3 different prompt wrappers (e.g., different delimiters, instruction placements) and track both accuracy and parseability. Use the Format Sensitivity Index (FSI) and Parseability Sensitivity Index (PSI) as metrics to select models that are robust to formatting changes.",
+              "note": "Focus on models with low FSI and PSI for structured-output tasks like JSON generation or API calls."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843806-2ejrke",
+                "title": "Format Sensitivity Index: Token-Controlled Prompt Wrapper Robustness and Schema Compliance in LLM Benchmarking",
+                "url": "https://arxiv.org/abs/2607.09665",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-2ejrke-0",
+                "label": "LLM Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-2ejrke-1",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-2ejrke-2",
+                "label": "Model Evaluation",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843806-emmz5z",
+            "title": "LLM Agent Relays: Structured Messages Work for Strong Models",
+            "tldr": "New research reveals that in multi-hop agent relays, structured message formats (JSON, triples) don't degrade accuracy for strong LLMs, but for weak models they cause a 8.7x wider recall spread. This challenges the 'telephone game' assumption and offers practical guidance for agent pipeline design.",
+            "whyItMatters": [
+              "For founders building multi-agent systems: strong models (e.g., GPT-4 class) can use structured formats without fidelity loss, enabling cost savings from shorter messages.",
+              "For teams using smaller models: format choice becomes critical—JSON with fixed keys resists drift better than free text, but rigid formats incur an encoding toll."
+            ],
+            "whatToTry": {
+              "description": "If your agent relay uses a strong model (e.g., GPT-4), switch to JSON or key-value formats to cut token costs without harming accuracy. For weak models, test both JSON with a fixed schema and free text with precision instructions to find the best trade-off for your specific hop count.",
+              "note": "The study used 6 hops; test with your actual relay depth to confirm effects."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843806-emmz5z",
+                "title": "Faithful, Not Corrective: Message-Format Effects in Multi-Hop Agent Relays Are Tier-Dependent",
+                "url": "https://arxiv.org/abs/2607.09678",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-emmz5z-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-emmz5z-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843807-td9lpe",
+            "title": "YUKTI: Robust Decision-Making with Uncertainty-Typed Propositions",
+            "tldr": "YUKTI introduces a new framework for converting natural language situations into robust, verifiable decisions by modeling coefficient uncertainty and using Assumption-Robust Pareto Frontiers, cutting regret by over 90% in tests. This matters for founders building AI that allocates real resources, as it directly addresses fragility in current LLM-based optimization pipelines.",
+            "whyItMatters": [
+              "Business impact: Enables AI systems to make safer, auditable decisions in regulated domains like healthcare, finance, and logistics, reducing risk of costly failures from overconfident point estimates.",
+              "Technical impact: Provides a principled method to handle uncertainty in autoformulation, with proven regret bounds and traceability, potentially becoming a new standard for robust AI planning."
+            ],
+            "whatToTry": {
+              "description": "Review your current AI decision pipeline for reliance on single-point objective coefficients. Consider integrating uncertainty quantification (e.g., distributional Pareto hand-offs) and resampling assumptions to test robustness, especially for high-stakes allocations.",
+              "note": "Start with a small-scale pilot on a non-critical decision to evaluate the overhead of multi-stage solvers and ARPF before full adoption."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843807-td9lpe",
+                "title": "YUKTI: From Natural-Language Situations to Robust, Verifiable Decisions An Uncertainty-Typed Proposition IR, Assumption-Robust Pareto Frontiers, and a Regret Certificate",
+                "url": "https://arxiv.org/abs/2607.09706",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-td9lpe-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-td9lpe-1",
+                "label": "research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-td9lpe-2",
+                "label": "decision-making",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843807-2ngrpy",
+            "title": "Execution-Gated Self-Distillation Boosts Code Gen 5x",
+            "tldr": "A new paper shows that using a deterministic, ungameable filter (whether generated code launches cleanly) for rejection-sampling self-distillation dramatically improves code generation quality, raising clean generation from 8.8% to 42.2% on unseen game families. This is a practical method for improving AI code generators without learned judges.",
+            "whyItMatters": [
+              "Business impact: Founders building AI code generation tools can use this execution-gated approach to significantly boost model performance on complex, multi-file projects without expensive human feedback or learned reward models.",
+              "Technical impact: Demonstrates that a simple, deterministic filter (strict-launch) is more effective than learned judges for self-improvement, and that verifier precision is critical—lenient filters erase gains entirely."
+            ],
+            "whatToTry": {
+              "description": "Implement a deterministic execution gate for your code generation pipeline: after generating a project, run it in a headless environment (e.g., headless Godot for games, or a sandboxed server for web apps) and only keep generations that launch cleanly. Use these successful samples to fine-tune your model via rejection-sampling self-distillation, iterating over multiple rounds.",
+              "note": "Ensure the filter is strict and ungameable—avoid lenient checks like BUILD-only, as they provide no signal. Start with a small model (e.g., 14B) and LoRA to keep costs low."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843807-2ngrpy",
+                "title": "The Verifier is the Curriculum: Execution-Gated Self-Distillation for Cross-Family Game Generation",
+                "url": "https://arxiv.org/abs/2607.09709",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-2ngrpy-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-2ngrpy-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-2ngrpy-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843807-eldzuc",
+            "title": "SLMs beat latency for edge control: 91.5% accuracy at 3.84s",
+            "tldr": "A new framework using a 1.5B-parameter SLM (Qwen2.5) with GRPO alignment and multi-agent self-correction achieves 91.5% action accuracy in closed-loop control at 3.84s latency, enabling reconfigurable autonomous control on edge devices without large cloud models.",
+            "whyItMatters": [
+              "Enables real-time AI control on edge hardware with low latency, critical for industrial IoT and robotics where cloud models are too slow or data-sensitive.",
+              "Demonstrates that small models can be retrained for control reasoning, reducing compute costs and opening up autonomous operation for resource-constrained environments."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current control pipeline for latency bottlenecks: if using large models for edge tasks, prototype with a 1.5B SLM like Qwen2.5 aligned via GRPO, paired with a digital twin validator for self-correction loops.",
+              "note": "Start with a simple simulation environment (e.g., thermal control) to test alignment and correction before moving to production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843807-eldzuc",
+                "title": "Closed-Loop Control with Rule-Aligned Small Language Models and Multi-Agent Self-Correction",
+                "url": "https://arxiv.org/abs/2607.09713",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-eldzuc-0",
+                "label": "Qwen2.5",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-eldzuc-1",
+                "label": "GRPO",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-eldzuc-2",
+                "label": "Edge AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843806-gy5onr",
+            "title": "Latent CoT Reasoning Mapped as Dynamical Systems",
+            "tldr": "A new paper models latent chain-of-thought reasoning as dynamical systems, revealing that CODI acts as a stable attractor while COCONUT is an unstable expanding system. This provides a framework to interpret and improve latent reasoning in AI models.",
+            "whyItMatters": [
+              "Business impact: Founders building reasoning-focused AI products can use these insights to debug and optimize latent reasoning, potentially reducing compute costs and improving reliability.",
+              "Technical impact: Offers a quantitative method (Lyapunov sensitivity, direction consistency) to evaluate and steer latent reasoning dynamics, enabling more predictable model behavior."
+            ],
+            "whatToTry": {
+              "description": "If you're using latent reasoning methods like CODI or COCONUT, apply the paper's dynamical systems analysis (e.g., measure step-to-step change and Lyapunov exponents) to diagnose stability issues in your own models. Use SIM-CoT supervision to tighten dynamics without altering the underlying system.",
+              "note": "The paper provides code and project pages—start by replicating their analysis on your model's latent traces to identify attractor vs. expanding behavior."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843806-gy5onr",
+                "title": "Interpreting Latent CoT Reasoning as Dynamical Systems",
+                "url": "https://arxiv.org/abs/2607.09698",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-gy5onr-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843806-gy5onr-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843807-4y5qj2",
+            "title": "AI prunes 95% of TSP edges, keeps 1% optimality gap",
+            "tldr": "A new learning-based graph sparsification method (GES) for Euclidean TSP can prune up to 95% of edges while maintaining solution quality within 1% of optimal, with strong generalization to benchmarks. This could significantly accelerate solving large-scale routing and logistics problems for AI products.",
+            "whyItMatters": [
+              "For founders building logistics, supply chain, or route optimization products, this technique can dramatically reduce compute costs and latency for solving large TSP instances, enabling real-time or near-real-time optimization.",
+              "The learning-based approach adapts to instance-specific structures, outperforming fixed heuristics, which means it can be integrated into existing solvers to boost performance without sacrificing accuracy."
+            ],
+            "whatToTry": {
+              "description": "Evaluate integrating GES as a preprocessing step in your TSP solver pipeline. Start by testing on your own large-scale Euclidean TSP datasets (e.g., delivery routes) to measure speedups and solution quality trade-offs. The paper suggests it works well with Concorde or LKH solvers.",
+              "note": "Focus on instances with >1000 nodes where pruning benefits are most pronounced; the method may overfit on small instances."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843807-4y5qj2",
+                "title": "GES-TSP: Graph Edge Sparsification for TSP",
+                "url": "https://arxiv.org/abs/2607.09708",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-4y5qj2-0",
+                "label": "TSP",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-4y5qj2-1",
+                "label": "Graph Sparsification",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843807-4y5qj2-2",
+                "label": "Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784020843808-u2boe1",
+            "title": "New Memory Architecture for Stable AI Coordination",
+            "tldr": "A new paper introduces Feedback-Coupled Memory Systems (FCMS) with a universal stability condition, showing that memory dissipation must outpace feedback gain for reliable multi-agent coordination. This could inform the design of more stable, self-organizing AI systems.",
+            "whyItMatters": [
+              "For founders building multi-agent AI systems, this provides a mathematical framework to ensure stability and avoid runaway feedback loops, which is critical for production deployments.",
+              "The non-Markovian environment model (CMGP) suggests a new way to design AI memory systems that can coherently respond to history without external forcing, potentially reducing engineering complexity."
+            ],
+            "whatToTry": {
+              "description": "If you're designing multi-agent AI systems, consider using the FCMS stability condition (4β² < 2ημγ²) as a heuristic to tune feedback gains and memory decay rates in your agent coordination loops. Start by modeling your agents' update rules as a decentralized price mechanism to test for self-reinforcing cascades.",
+              "note": "The paper uses theoretical and simulated results; real-world validation may require adapting the abstract operators to your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784020843808-u2boe1",
+                "title": "Feedback-Coupled Memory Systems in Continuous Time",
+                "url": "https://arxiv.org/abs/2607.09714",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784020843808-u2boe1-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784020843808-u2boe1-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1784020843576-yu2jr3",
+            "title": "Tech winners return to grind: FOMO drives AI comeback",
+            "tldr": "Successful tech founders and executives are returning to active work, driven by FOMO and the potential for massive wealth in AI's defining era. This signals a talent war and increased competition for AI startups.",
+            "whyItMatters": [
+              "Business impact: Expect heightened competition for AI talent, funding, and market share as experienced operators re-enter the fray, potentially disrupting existing startup dynamics.",
+              "Technical impact: These returnees bring deep resources and networks, accelerating AI product development and raising the bar for innovation, making it harder for new entrants to gain traction."
+            ],
+            "whatToTry": {
+              "description": "Assess your startup's competitive moat against experienced returnees. Identify unique advantages (e.g., niche data, specialized domain expertise) and double down on them. Consider strategic partnerships or talent acquisition to fortify your position.",
+              "note": "Focus on speed and execution—returnees may have capital but can lack agility. Move fast to secure early customer feedback and iterate."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1784020843576-yu2jr3",
+                "title": "Already rich, already successful, why the last wave of tech winners is grinding again",
+                "url": "https://techcrunch.com/2026/07/13/already-rich-already-successful-why-the-last-wave-of-tech-winners-is-grinding-again/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-yu2jr3-0",
+                "label": "Industry",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-yu2jr3-1",
+                "label": "Talent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784020843576-yu2jr3-2",
+                "label": "Competition",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 14 Jul 2026 02:46:42 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-13",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-13-morning",
@@ -1283,7 +1716,7 @@
   },
   {
     "date": "2026-07-12",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Jul 12",
     "briefings": [
       {
         "id": "briefing-2026-07-12-evening",
@@ -5296,449 +5729,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 08 Jul 2026 17:11:18 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-07",
-    "displayDate": "Tuesday, Jul 7",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-07-morning",
-        "period": "morning",
-        "date": "2026-07-07",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: First US autonomous ground vehicles deployed in Ukraine combat, iFLYTEK's Unified Omni Model for Embodied AI, REDI: Open-Source Framework Automates Scientific Data Prep for AI.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783420601823-cgg51c",
-            "title": "First US autonomous ground vehicles deployed in Ukraine combat",
-            "tldr": "Forterra has deployed over 100 autonomous ground vehicles in Ukraine, marking the first large-scale use of American self-driving military tech in active combat. This signals a major shift in defense AI and validates autonomous systems in high-stakes environments.",
-            "whyItMatters": [
-              "Business impact: Opens a new market for defense AI startups; founders can explore government contracts for autonomous systems in logistics, surveillance, and combat support.",
-              "Technical impact: Proves that autonomous navigation and decision-making can function under extreme conditions (jamming, rough terrain, real-time threats), accelerating R&D for civilian applications like off-road delivery or disaster response."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's robustness by stress-testing it against edge cases similar to combat scenarios—like sensor degradation, communication loss, or unpredictable environments. Consider partnering with defense or logistics firms to pilot autonomous systems in challenging conditions.",
-              "note": "Start with simulation environments that mimic high-interference or low-visibility settings before real-world deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783420601823-cgg51c",
-                "title": "The first American autonomous ground vehicles are fighting in Ukraine",
-                "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783420601823-cgg51c-0",
-                "label": "Autonomous Vehicles",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783420601823-cgg51c-1",
-                "label": "Defense AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783420601823-cgg51c-2",
-                "label": "Forterra",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 09:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-t0t0r8",
-            "title": "iFLYTEK's Unified Omni Model for Embodied AI",
-            "tldr": "iFLYTEK released a technical report on iFLYTEK-Embodied-Omni, a unified multimodal foundation model that jointly processes vision, language, and action for embodied agents. It uses a brain-cerebellum architecture to avoid cascading errors, combining visual-language reasoning, video generation, and action generation in a single framework, trained on a mix of human and robot data.",
-            "whyItMatters": [
-              "For founders building robotics or embodied AI products, this model reduces pipeline complexity and error propagation by unifying perception, prediction, and action into one model, potentially enabling more robust long-horizon task execution.",
-              "The approach of combining action-annotated and action-free data for training could lower the barrier for developing general-purpose embodied agents, as it leverages diverse data sources including human demonstrations."
-            ],
-            "whatToTry": {
-              "description": "If you're developing an embodied AI system, evaluate whether a unified multimodal architecture (like iFLYTEK's) could replace your current cascaded pipeline. Start by testing the model's video generation and action generation on your specific tasks using the shared multimodal self-attention mechanism to see if it reduces error accumulation.",
-              "note": "The model is still in research stage; consider replicating the data mixing strategy (action-annotated + action-free) to improve your own training datasets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-t0t0r8",
-                "title": "iFLYTEK-Embodied-Omni Technical Report",
-                "url": "https://arxiv.org/abs/2607.02542",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-t0t0r8-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-t0t0r8-1",
-                "label": "embodied AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-t0t0r8-2",
-                "label": "multimodal",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-439w5j",
-            "title": "REDI: Open-Source Framework Automates Scientific Data Prep for AI",
-            "tldr": "A new open-source framework, REDI, automates the five-stage pipeline of transforming raw scientific datasets into AI-ready training data, with built-in provenance tracking and agent-native deployment. This addresses a major bottleneck for founders building AI models in climate, proteomics, materials science, and fusion energy, and has demonstrated near-ideal scaling to 100 nodes on Frontier.",
-            "whyItMatters": [
-              "Business impact: Reduces time and cost of data preparation for scientific AI startups, enabling faster iteration and deployment of domain-specific models.",
-              "Technical impact: Provides a standardized, reproducible pipeline with instrumentation, making it easier to scale data readiness across diverse scientific domains and integrate with agent-based systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate REDI for your scientific AI project by cloning the repository and testing it on a small sample of your raw dataset. Focus on the ingest and preprocess stages to see how it handles your data format, then use the provenance tracking to identify I/O bottlenecks and optimize format selection.",
-              "note": "Start with a single domain (e.g., climate data) to minimize complexity, and leverage SetGo for FAIR compliance if you plan to publish datasets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-439w5j",
-                "title": "Automated Data Readiness for Scientific AI",
-                "url": "https://arxiv.org/abs/2607.02771",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-439w5j-0",
-                "label": "REDI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-439w5j-1",
-                "label": "Data Preparation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-439w5j-2",
-                "label": "Scientific AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-cd6mv3",
-            "title": "SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery",
-            "tldr": "A new paper introduces SwarmResearch, an orchestrator-subagent harness that uses a Shepherd Agent to steer multiple Search Agents in separate git branches, avoiding convergence on single approaches and achieving better solutions on 13/15 open-ended optimization tasks.",
-            "whyItMatters": [
-              "Improves AI agent efficiency for complex, open-ended coding tasks by preventing premature convergence on suboptimal solutions.",
-              "Demonstrates a scalable multi-agent architecture that adapts parallelism dynamically, potentially reducing compute costs while improving outcomes."
-            ],
-            "whatToTry": {
-              "description": "Implement a similar orchestrator-subagent pattern in your AI coding workflows: use a 'shepherd' agent to monitor multiple parallel agents working in isolated branches, periodically evaluating and recombining their best approaches to avoid local optima.",
-              "note": "Start with simple tasks like code optimization or bug fixing to test the pattern before scaling to complex projects."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-cd6mv3",
-                "title": "SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery",
-                "url": "https://arxiv.org/abs/2607.02807",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-cd6mv3-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-cd6mv3-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-cd6mv3-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-78vaiv",
-            "title": "MedCalc-Pro: LLM Agents Tackle Complex Medical Calculations",
-            "tldr": "A new benchmark and agent framework for LLMs in medical calculations, moving beyond single-calculator tasks to multi-calculator and nested scenarios, with a proposed method that outperforms existing models.",
-            "whyItMatters": [
-              "For founders building AI in healthcare, this highlights the need for multi-tool orchestration and error suppression in real-world clinical workflows, opening opportunities for agent-based solutions.",
-              "Technically, the structured validation and evidence review approach offers a blueprint for improving LLM reliability in high-stakes domains like medicine."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own medical AI agent against the MedCalc-Pro benchmark to identify gaps in multi-calculator and nested-calculator reasoning, then implement structured validation to reduce error propagation.",
-              "note": "The framework is generalizable; consider adapting it for other regulated industries requiring multi-step calculations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-78vaiv",
-                "title": "MedCalc-Pro: Solving Complex Medical Calculations with LLM Agents",
-                "url": "https://arxiv.org/abs/2607.02879",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-78vaiv-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-78vaiv-1",
-                "label": "benchmark",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-78vaiv-2",
-                "label": "healthcare",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-hne6lz",
-            "title": "Oyster-II: RL for Safer, More Helpful LLMs",
-            "tldr": "Oyster-II uses reinforcement learning to improve LLM safety alignment, moving beyond blanket refusals to constructive responses. It outperforms Qwen3-14B and matches Qwen3-Max on safety, addressing over-generalization issues in prior SFT-based methods.",
-            "whyItMatters": [
-              "For founders building AI products, this approach reduces the risk of LLMs refusing legitimate user queries, improving user experience and trust.",
-              "Technically, it demonstrates that RL-based alignment can achieve cross-scale safety performance comparable to much larger models, potentially reducing compute costs."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current LLM's refusal patterns on sensitive but legitimate queries (e.g., health, finance). If over-refusal is an issue, consider fine-tuning with a constructive safety dataset or experimenting with RL-based alignment techniques like those in Oyster-II.",
-              "note": "Start with small-scale tests on domain-specific queries before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-hne6lz",
-                "title": "Oyster-II: Reinforcement Learning for Constructive Safety Alignment in Large Language Models",
-                "url": "https://arxiv.org/abs/2607.02914",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-hne6lz-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-hne6lz-1",
-                "label": "safety alignment",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-som7b5",
-            "title": "VERITAS: AI tool automates scientific replication, boosts research integrity",
-            "tldr": "VERITAS is a new domain-agnostic AI framework that automates replication of scientific research by extracting claims, running experiments, and scoring reproducibility. It outperforms baselines across 65 papers in CS, medicine, and astrophysics, addressing a critical bottleneck in scientific integrity.",
-            "whyItMatters": [
-              "For founders building AI products in research or compliance, VERITAS demonstrates a scalable approach to automated verification, opening opportunities for tools that audit AI-generated outputs or validate scientific claims.",
-              "Technically, it shows how CLI coding agents can be generalized beyond benchmarks, reducing the cost and time of replication from months to hours, which could accelerate product development in regulated industries."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating VERITAS-like claim extraction and automated testing into your AI product pipeline. For example, if you build AI for scientific writing or code generation, consider adding a replication-check module that validates outputs against stated claims.",
-              "note": "Start with small-scale experiments on open-source papers to gauge accuracy before scaling to proprietary data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-som7b5",
-                "title": "VERITAS: Towards a General-Purpose Replication Tool for Scientific Research",
-                "url": "https://arxiv.org/abs/2607.02931",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-som7b5-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-som7b5-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-som7b5-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1783420601854-0gzkz7",
-            "title": "Erling Haaland AI Memes: How Fans Use Generative AI to Create Viral Content",
-            "tldr": "Fans are using generative AI tools to create and spread hyper-realistic, humorous videos and images of footballer Erling Haaland, demonstrating how AI is enabling new forms of user-generated content and viral internet culture.",
-            "whyItMatters": [
-              "Shows the growing ease and accessibility of generative AI for creating convincing, shareable media, which can be leveraged for marketing or brand engagement.",
-              "Highlights the challenge of distinguishing real from AI-generated content, a key concern for platforms and content authenticity."
-            ],
-            "whatToTry": {
-              "description": "Experiment with generative AI tools (like Runway, Midjourney, or DALL-E) to create short, engaging, and humorous brand-related content for social media. Test how your audience responds to AI-generated memes or videos to boost engagement.",
-              "note": "Ensure you have rights to any likenesses used and clearly label AI-generated content to maintain trust."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783420601854-0gzkz7",
-                "title": "Erling Haaland Is Everywhere at the World Cup. Most of It Is AI",
-                "url": "https://www.wired.com/story/erling-haaland-is-everywhere-at-the-world-cup-most-of-it-is-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783420601854-0gzkz7-0",
-                "label": "Generative AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783420601854-0gzkz7-1",
-                "label": "Content Creation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783420601854-0gzkz7-2",
-                "label": "Viral Marketing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-o6fyjy",
-            "title": "Internal Pluralism: Why AI Alignment Needs More Than Pairwise Comparisons",
-            "tldr": "A new paper reveals that pairwise comparisons—a common tool for learning human preferences in AI alignment—fail under internal pluralism, where individuals hold multiple conflicting priorities. Allowing indecision reduces queries and improves accuracy, challenging current RLHF practices.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products with human feedback loops (e.g., RLHF) may be using flawed methods that miss global preferences like fairness, leading to misaligned outputs and user distrust.",
-              "Technical impact: The paper provides a formal model showing that forced local comparisons can distort learning, and suggests allowing indecision as a more efficient alternative—potentially reducing data needs and improving model alignment."
-            ],
-            "whatToTry": {
-              "description": "Audit your preference collection pipeline: If you use pairwise comparisons for RLHF or user feedback, pilot a version that includes an 'undecided' or 'skip' option. Measure if this reduces the number of queries needed to converge on accurate preferences, especially for tasks involving fairness or trade-offs.",
-              "note": "This is early-stage research; test on small-scale user studies before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-o6fyjy",
-                "title": "Internal Pluralism and the Limits of Pairwise Comparisons",
-                "url": "https://arxiv.org/abs/2607.02672",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-o6fyjy-0",
-                "label": "RLHF",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-o6fyjy-1",
-                "label": "Alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-o6fyjy-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783420602043-tychzl",
-            "title": "ASK+ Boosts SLM Guidance in Partial Observability RL",
-            "tldr": "A new paper reveals that small language models (SLMs) can effectively guide reinforcement learning agents under partial observability when given trajectory-aware context and chain-of-thought reasoning, achieving up to 17% success gains over vanilla methods.",
-            "whyItMatters": [
-              "For founders building AI agents or robotics systems, this shows how to leverage small, cost-efficient models for decision-making in real-world scenarios with incomplete information, reducing reliance on expensive large models.",
-              "The insight that predictive entropy measures action uncertainty (not state uncertainty) enables practical uncertainty-gated assistance, making SLM integration viable for POMDPs common in autonomous systems."
-            ],
-            "whatToTry": {
-              "description": "When integrating SLMs into your agent pipeline, replace bare prompts with trajectory-aware context: include partial observations, action history, and visited states. Use structured chain-of-thought reasoning to convert the SLM from a passive checker into an active consultant, and gate its interventions on action uncertainty (predictive entropy) rather than state uncertainty.",
-              "note": "Start with a simple environment like DoorKey to test the approach before scaling to complex tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783420602043-tychzl",
-                "title": "ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability",
-                "url": "https://arxiv.org/abs/2607.02686",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-tychzl-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-tychzl-1",
-                "label": "reinforcement learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783420602043-tychzl-2",
-                "label": "partial observability",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 07 Jul 2026 00:00:00 -0400"
           }
         ],
         "totalReadTimeMinutes": 20,
