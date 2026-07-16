@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-16-morning",
+        "period": "morning",
+        "date": "2026-07-16",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: OriginBlame: Pinpoint Training Data for Precise Unlearning, New Test Reveals LLMs' 'Right Answer, Wrong Reasoning' in Chain-of-Thought, Self-Improving Agents: A Practical Framework for Founders.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1784194386642-d35rgf",
+            "title": "OriginBlame: Pinpoint Training Data for Precise Unlearning",
+            "tldr": "OriginBlame introduces record- and token-level data provenance for AI training datasets, enabling precise forget sets for unlearning without catastrophic over-deletion. This addresses a critical gap for compliance with data removal requests, with minimal throughput overhead.",
+            "whyItMatters": [
+              "Business impact: Enables compliance with data deletion regulations (e.g., GDPR, CCPA) without sacrificing model quality or requiring full retraining, reducing legal risk and operational cost.",
+              "Technical impact: Provides a practical tool for data provenance at granularity needed for effective unlearning, improving forget set accuracy by 42% over random baselines, which is essential for building trustworthy and auditable AI systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products that train on user-generated content, evaluate integrating a provenance tracking layer like OriginBlame into your data pipeline. Start by mapping your data preprocessing steps to propagate author identity, then test with a small subset to measure overhead and unlearning efficacy.",
+              "note": "The paper shows 1.3-19% throughput overhead depending on pipeline; plan for this in your infrastructure scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-d35rgf",
+                "title": "OriginBlame: Record- and Token-Level Data Provenance for AI Training Datasets",
+                "url": "https://arxiv.org/abs/2607.13037",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-d35rgf-0",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-d35rgf-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-3piwgy",
+            "title": "New Test Reveals LLMs' 'Right Answer, Wrong Reasoning' in Chain-of-Thought",
+            "tldr": "A new black-box audit method (interventional grounding audits) detects when LLM chain-of-thought reasoning doesn't genuinely depend on its premises, finding that 66% of correctly solved problems have flawed reasoning. This is critical for building trustworthy AI products.",
+            "whyItMatters": [
+              "For AI product builders: This method provides a practical way to audit your LLM's reasoning fidelity, catching 'right answer, wrong reasoning' issues that undermine trust in applications like legal, medical, or financial advice.",
+              "Technically: It offers a step-level, black-box test that outperforms self-consistency baselines (F1 0.806 vs 0.343), enabling better evaluation of CoT reliability without needing model internals."
+            ],
+            "whatToTry": {
+              "description": "Implement interventional grounding audits in your evaluation pipeline: for each premise in a CoT output, substitute a key predicate with a novel symbol (e.g., 'is_a' -> 'is_b'), re-run the model, and check if the conclusion changes. If not, the reasoning may be spurious. Use the provided GitHub repo for reproduction scripts.",
+              "note": "Start with formal, parsable benchmarks like ProntoQA; the method's scope is limited outside such structured domains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-3piwgy",
+                "title": "Interventional Grounding Audits: Black-Box Premise-Dependency Tests for LLM Chain-of-Thought via Predicate Substitution",
+                "url": "https://arxiv.org/abs/2607.13069",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-3piwgy-0",
+                "label": "GPT-4o",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-3piwgy-1",
+                "label": "Chain-of-Thought",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-3piwgy-2",
+                "label": "Evaluation",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-baech4",
+            "title": "Self-Improving Agents: A Practical Framework for Founders",
+            "tldr": "A new survey formalizes how AI agents can self-improve by updating model parameters or scaffold components (prompts, memory, tools) with minimal human input. This provides a structured roadmap for building autonomous systems that adapt from experience, directly relevant to founders deploying agentic products.",
+            "whyItMatters": [
+              "Business impact: Enables building agents that reduce maintenance overhead by self-correcting and adapting to new data, lowering operational costs and improving user retention.",
+              "Technical impact: Offers a clear framework (model + scaffold + update operator) to design self-improvement loops, helping teams avoid ad-hoc approaches and focus on controllable evolution."
+            ],
+            "whatToTry": {
+              "description": "Review the survey's taxonomy of update targets (model parameters vs. scaffold components) and signals (e.g., reward, human feedback, self-supervised). Start by implementing a simple scaffold update: log agent failures, then use an LLM to revise prompts or tool configurations automatically based on error patterns.",
+              "note": "Focus on scaffold updates first—they're easier to debug and require less compute than fine-tuning models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-baech4",
+                "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+                "url": "https://arxiv.org/abs/2607.13104",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-baech4-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-baech4-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-tbem12",
+            "title": "Oracle Agent Memory: 93.8% Accuracy with 10.7x Fewer Tokens",
+            "tldr": "Oracle released a database-native memory substrate for long-horizon AI agents, achieving 93.8% accuracy on LongMemEval while using 10.7x fewer tokens than flat-history baselines. This addresses a critical systems problem for enterprise AI agents: durable state management across sessions.",
+            "whyItMatters": [
+              "Business impact: Enables enterprise AI agents to retain user preferences, task state, and procedural knowledge across extended interactions, reducing token costs by 10x and improving reliability for production deployments.",
+              "Technical impact: Provides a reference architecture for agent memory with lifecycle management (ingestion, extraction, consolidation, retrieval, revision) and explicit scope control, which can be replicated with other databases."
+            ],
+            "whatToTry": {
+              "description": "If building long-horizon agents, evaluate your current memory approach against Oracle's lifecycle model. Consider implementing a database-native memory layer with explicit scope control (user/agent/thread) and memory-centric metrics (evidence retrieval, recall, latency) instead of relying solely on flat history or vector stores.",
+              "note": "Oracle's implementation is proprietary, but the architecture and evaluation methodology are open. You can replicate the pattern with PostgreSQL or other databases."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-tbem12",
+                "title": "Oracle Agent Memory as an Enterprise Memory Substrate for Long-Horizon AI Agents",
+                "url": "https://arxiv.org/abs/2607.13157",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-tbem12-0",
+                "label": "Oracle",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-tbem12-1",
+                "label": "Agent Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-tbem12-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-airoj9",
+            "title": "Mycelium: Active Shared Context Graphs for Human-AI Team Science",
+            "tldr": "A new system, Mycelium, creates active shared context graphs that automatically route insights between researchers and AI agents, turning local findings into team-wide actionable knowledge. This addresses the key challenge of scaling scientific collaboration beyond single-user AI co-scientists.",
+            "whyItMatters": [
+              "For founders building AI products for science or R&D, this introduces a new paradigm: networked intelligence that scales team cognition, not just model reasoning. It suggests a product opportunity for collaborative AI workspaces that go beyond chat-based copilots.",
+              "Technically, it frames networked intelligence as sparse conditional computation over distributed contexts, offering a computational blueprint for building multi-user, multi-agent systems that share and route knowledge dynamically."
+            ],
+            "whatToTry": {
+              "description": "Consider designing your AI product with a shared context graph that captures and routes insights between team members and agents. Start by identifying key decision points in your users' workflow where a finding from one context could inform another, then build a lightweight system to automatically surface relevant observations to the right person or agent.",
+              "note": "Focus on sparse routing to avoid information overload; not all context needs to be shared, only what is actionable for the next decision."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-airoj9",
+                "title": "Networked Intelligence: Active Shared Context Graphs for Human-AI Team Science",
+                "url": "https://arxiv.org/abs/2607.13220",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-airoj9-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-airoj9-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-airoj9-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1784194386454-u2oj81",
+            "title": "Applied Computing raises $20M for oil & gas AI model",
+            "tldr": "Applied Computing secured $20M Series A to develop a foundation model for oil, gas, and petrochemical plants, aiming to optimize operations across entire facilities. This signals growing vertical AI investment in heavy industry.",
+            "whyItMatters": [
+              "Business impact: Founders in industrial AI can benchmark against this funding round to validate market demand for domain-specific foundation models.",
+              "Technical impact: Indicates shift from narrow plant AI tools to holistic models that integrate multiple subsystems, potentially reducing integration costs for operators."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI product can be positioned as a 'plant-wide' solution by identifying key data silos (e.g., sensors, maintenance logs, supply chain) that a unified model could connect. Consider partnerships with industrial data platforms to accelerate data access.",
+              "note": "Focus on regulatory compliance and safety-critical validation, as heavy industry requires explainable AI and robust failure modes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1784194386454-u2oj81",
+                "title": "Applied Computing wants to give oil and gas operators an AI model for the entire plant",
+                "url": "https://techcrunch.com/2026/07/15/applied-computing-wants-to-give-oil-and-gas-operators-an-ai-model-for-the-entire-plant/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-u2oj81-0",
+                "label": "Applied Computing",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-u2oj81-1",
+                "label": "Industrial AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-u2oj81-2",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 04:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-8wwar3",
+            "title": "SPINE: Agentic AI Framework Bridges Robot Deployment Gap",
+            "tldr": "SPINE is an agentic framework that uses multi-agent workflows to debug and deploy bimanual robots, reducing the need for expert calibration. A novice using SPINE outperformed experts using Claude Code, achieving 100% operationalization success and faster setup times.",
+            "whyItMatters": [
+              "For founders building embodied AI products, SPINE dramatically lowers the barrier to deploying robots, enabling faster iteration and reducing reliance on scarce robotics experts.",
+              "The framework's platform-agnostic design (tested on DOBOT and AgileX arms) suggests it could be adapted to other robot types, accelerating time-to-market for physical AI systems."
+            ],
+            "whatToTry": {
+              "description": "If you're developing a bimanual robot product, explore SPINE's multi-agent workflow approach: implement a profile builder to auto-generate robot-specific calibration data and a debugger that cycles through diagnosis, repair, and validation. This structured pipeline can replace manual tuning and reduce deployment time by ~18%.",
+              "note": "SPINE is open-source (check arXiv for code links); start by integrating it with your existing ROS/CAN-based robot stack."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-8wwar3",
+                "title": "SPINE: Bridging the Cyber-Physical Gap with Agentic AI",
+                "url": "https://arxiv.org/abs/2607.13049",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-8wwar3-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-8wwar3-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-8wwar3-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-2c9azn",
+            "title": "Boosting SLMs for Molecular Property Prediction with Graph Tools",
+            "tldr": "A new framework, Context-Augmented Prompting, uses GNN tools to improve small language models' molecular property prediction by up to 74% on Tox21, bridging the gap between sequence and graph-based reasoning.",
+            "whyItMatters": [
+              "Enables SLMs to overcome structural blindness in molecular tasks, making them more viable for drug discovery and materials science without heavy compute.",
+              "Demonstrates a modular, agentic approach to augmenting LLMs with specialized tools, applicable beyond chemistry to other domains requiring structured data."
+            ],
+            "whatToTry": {
+              "description": "For AI founders building in drug discovery or materials informatics, integrate a GNN-based tool into your SLM pipeline to provide graph-derived context (e.g., subgraph SMILES) during inference. Test on your own molecular datasets to see if you can replicate the 25-74% accuracy gains.",
+              "note": "Start with a small GNN expert model to avoid latency; the paper's framework is modular, so you can swap in different GNNs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-2c9azn",
+                "title": "Improving Molecular Property Prediction in Small Language Models Using Graph-based Tools",
+                "url": "https://arxiv.org/abs/2607.13115",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-2c9azn-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-2c9azn-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-2c9azn-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784194386642-glwo4d",
+            "title": "DROPJ: Safe AI Agent Training via Human Preferences & World Models",
+            "tldr": "A new method (DROPJ) uses a learned world model and human preferences with justifications to safely train AI agents without a reward function, reducing computational cost and improving deployment safety.",
+            "whyItMatters": [
+              "Enables safe deployment of AI agents in safety-critical environments (e.g., robotics, autonomous systems) without needing a predefined reward function.",
+              "Reduces training computational cost by using simulated trajectories from human input, making it more accessible for startups with limited compute."
+            ],
+            "whatToTry": {
+              "description": "If building an AI agent for a safety-critical task, prototype DROPJ by collecting a small dataset of real-world trajectories, then have a human play in a learned simulator to generate preference pairs and justifications. Use these to train a reward model for model predictive control.",
+              "note": "Start with a simple environment (e.g., a grid world) to validate the approach before scaling to complex domains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784194386642-glwo4d",
+                "title": "Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models",
+                "url": "https://arxiv.org/abs/2607.13172",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-glwo4d-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-glwo4d-1",
+                "label": "reinforcement learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784194386642-glwo4d-2",
+                "label": "safety",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 16 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1784194386454-5xn8on",
+            "title": "Microsoft trains sales to push own AI over OpenAI, Anthropic",
+            "tldr": "Microsoft is reportedly training its sales team to position its in-house AI models as more efficient and cost-effective than OpenAI's and Anthropic's, signaling a strategic shift from partner to competitor in the AI model market.",
+            "whyItMatters": [
+              "For founders building on OpenAI or Anthropic: Microsoft's push could lead to pricing pressure or bundled discounts that make their models more attractive, potentially fragmenting the ecosystem and creating vendor lock-in risks.",
+              "For founders using Microsoft's cloud: This move may offer new cost-saving options with proprietary models, but also introduces uncertainty about long-term support for third-party models on Azure."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI model dependencies and consider diversifying your model stack. Test Microsoft's in-house models (like Phi-3 or future releases) against your current providers for cost and performance on your specific use cases. Start with a non-critical task to compare latency, accuracy, and pricing.",
+              "note": "Be cautious of switching entirely—monitor Microsoft's roadmap for model updates and ensure your architecture supports easy swapping between providers."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1784194386454-5xn8on",
+                "title": "Microsoft is reportedly training salespeople to talk down OpenAI and Anthropic",
+                "url": "https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-5xn8on-0",
+                "label": "Microsoft",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-5xn8on-1",
+                "label": "OpenAI",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-5xn8on-2",
+                "label": "Anthropic",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784194386454-5xn8on-3",
+                "label": "Industry dynamics",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 15 Jul 2026 23:59:44 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-15",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-15-morning",
@@ -1340,7 +1783,7 @@
   },
   {
     "date": "2026-07-14",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Jul 14",
     "briefings": [
       {
         "id": "briefing-2026-07-14-morning",
@@ -5314,1318 +5757,6 @@
           }
         ],
         "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-09",
-    "displayDate": "Thursday, Jul 9",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-09-morning",
-        "period": "morning",
-        "date": "2026-07-09",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Orchestration Design Cuts AI Token Costs 41% – New Research, AgentLens: New Benchmark Evaluates Full Coding Agent Trajectories, Theory Shows Why In-Context Search Beats Parallel Sampling.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1783593309586-642a83",
-            "title": "Orchestration Design Cuts AI Token Costs 41% – New Research",
-            "tldr": "A controlled study shows that swapping the orchestration layer alone reduces token usage by 38% and cost per task by 41% across six models, with quality parity. This challenges the 'token maxing' trend and highlights harness design as a key lever for cost-efficient agentic AI.",
-            "whyItMatters": [
-              "Business impact: Founders can slash AI operational costs by optimizing orchestration, not just models, improving unit economics for agentic products.",
-              "Technical impact: The 'harness leverage' effect means stronger models benefit more from good orchestration, guiding architecture decisions for multi-model systems."
-            ],
-            "whatToTry": {
-              "description": "Audit your current agent orchestration layer: measure tokens per task, cost per task, and wall-clock time. Then experiment with a harness that minimizes context bloat, reuses tool outputs, and sequences turns efficiently. Use the paper's methodology as a template for your own A/B tests.",
-              "note": "Focus on reducing redundant context and tool payloads; the harness design matters more than the model choice for cost efficiency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309586-642a83",
-                "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
-                "url": "https://arxiv.org/abs/2607.06906",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-642a83-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-642a83-1",
-                "label": "Orchestration",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-642a83-2",
-                "label": "Cost Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309585-7u9wma",
-            "title": "AgentLens: New Benchmark Evaluates Full Coding Agent Trajectories",
-            "tldr": "AgentLens is an open-source benchmark that evaluates coding agents on their entire trajectory—instruction following, tool use, error recovery, and communication—not just pass/fail. It pairs formal verification with LLM-written reviews, enabling founders to diagnose model behavior, compare agent versions, and catch regressions in nightly pipelines.",
-            "whyItMatters": [
-              "Business impact: Enables systematic regression testing and quality assurance for AI coding agents in production, reducing risk of deploying broken or unreliable agents.",
-              "Technical impact: Provides granular, interpretable feedback on agent behavior, helping teams iterate faster on agent design and prompt engineering."
-            ],
-            "whatToTry": {
-              "description": "Integrate AgentLens into your CI/CD pipeline to automatically evaluate your coding agent's trajectory after each update. Use the LLM-written reviews to pinpoint specific weaknesses (e.g., poor error recovery or tool misuse) and prioritize fixes.",
-              "note": "Start with the open-source repo at github.com/agent-lens/agent-lens-bench; adapt the benchmark tasks to match your agent's domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309585-7u9wma",
-                "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation",
-                "url": "https://arxiv.org/abs/2607.06624",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-7u9wma-0",
-                "label": "AgentLens",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-7u9wma-1",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-7u9wma-2",
-                "label": "Coding Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309585-i0o74m",
-            "title": "Theory Shows Why In-Context Search Beats Parallel Sampling",
-            "tldr": "A new paper proves that when self-reflection reliably localizes early mistakes, iterative in-context search yields exponential improvements over parallel sampling, offering a theoretical foundation for why chain-of-thought reasoning works and how to optimize it.",
-            "whyItMatters": [
-              "For founders building reasoning-heavy AI products (e.g., code generation, math solvers), this theory explains when to invest in iterative refinement loops vs. simple parallel sampling, directly impacting product architecture and cost.",
-              "The finding that cross-entropy training on search rollouts recovers optimal behavior with polynomial sample complexity provides a practical training recipe for improving model reasoning without expensive RL."
-            ],
-            "whatToTry": {
-              "description": "If your AI product involves multi-step reasoning, implement a reflection-driven search loop where the model critiques its own intermediate outputs before proceeding, rather than generating many independent solutions in parallel. Use the paper's insight to prioritize reliable mistake localization (e.g., via structured prompts) to maximize exponential gains.",
-              "note": "Start with small-scale experiments to validate that your model's self-reflections are accurate enough to localize errors; otherwise, parallel sampling may be more cost-effective."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309585-i0o74m",
-                "title": "When Does In-Context Search Help? A Sampling-Complexity Theory of Reflection-Driven Reasoning",
-                "url": "https://arxiv.org/abs/2607.06720",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-i0o74m-0",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-i0o74m-1",
-                "label": "In-Context Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-i0o74m-2",
-                "label": "Sampling Complexity",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309585-hxhodq",
-            "title": "Cheap Agent Harnesses Beat Frontier Models on ARC-AGI-1",
-            "tldr": "A new paper shows that clever agent architectures using open-weight DeepSeek V3.2 can achieve 67% accuracy on ARC-AGI-1 for under $0.63 per task, outperforming expensive frontier model approaches without any fine-tuning. This demonstrates that architectural innovation can dramatically reduce costs for abstract reasoning tasks.",
-            "whyItMatters": [
-              "Business impact: Founders can now solve complex reasoning tasks at a fraction of the cost of frontier models, enabling new product categories like automated puzzle-solving, code generation, or scientific discovery tools.",
-              "Technical impact: The Explorer-Definer Pipeline and Reflective Orchestrator patterns are reusable blueprints for building cost-effective agent systems that separate pattern discovery from synthesis, reducing reliance on expensive test-time compute."
-            ],
-            "whatToTry": {
-              "description": "Implement a two-stage agent pipeline for your own reasoning tasks: first, use an open-weight model (like DeepSeek V3.2) to explore and discover patterns from examples, then have a separate agent synthesize transformations. Add a reflective loop that autonomously tests new hypotheses when initial attempts fail.",
-              "note": "Start with simple tasks to validate the architecture before scaling; the paper's pass@2 metric suggests you may need to run multiple attempts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309585-hxhodq",
-                "title": "Cost-Effective Agent Harnesses for Abstract Reasoning and Generalization on ARC-AGI-1",
-                "url": "https://arxiv.org/abs/2607.06764",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-hxhodq-0",
-                "label": "DeepSeek V3.2",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-hxhodq-1",
-                "label": "ARC-AGI-1",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-hxhodq-2",
-                "label": "Agent Architecture",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309586-l7s6cr",
-            "title": "SageMath boosts LLM math agents by 9.7% on average",
-            "tldr": "A new paper shows that giving LLMs access to SageMath (a computer algebra system) improves math problem-solving by up to 27.8%, with open-weight models catching up to closed ones. This is a practical blueprint for building AI agents that combine reasoning with verifiable computational tools.",
-            "whyItMatters": [
-              "For founders building AI agents for STEM or research: integrating a CAS like SageMath can dramatically improve accuracy and reliability, especially for open-weight models, reducing dependency on expensive APIs.",
-              "The multi-step validation pipeline introduced in the paper offers a template for improving benchmark quality and agent evaluation, which is directly applicable to product testing."
-            ],
-            "whatToTry": {
-              "description": "Experiment with adding SageMath (or SymPy as a lightweight alternative) as a tool in your LLM agent's ReAct loop. Start by wrapping SageMath functions as callable tools that the LLM can invoke for symbolic computation, equation solving, or verification, and measure solve rate improvements on your own math-heavy tasks.",
-              "note": "SageMath is open-source and can be self-hosted; consider caching common computations to reduce latency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309586-l7s6cr",
-                "title": "Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics",
-                "url": "https://arxiv.org/abs/2607.06820",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-l7s6cr-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-l7s6cr-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-l7s6cr-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309586-y59n4i",
-            "title": "Large Behavior Model: AI That Predicts Customer Actions Like Never Before",
-            "tldr": "A new Large Behavior Model (LBM) learns customer decision-making from retail transactions, outperforming general LLMs on purchase prediction and basket completion. It combines behavioral profiles, retrieval-augmented generation, and RL for evidence-based decisions, offering a promptable digital twin for retail.",
-            "whyItMatters": [
-              "Business impact: Enables hyper-personalized recommendations, targeted promotions, and better customer retention by simulating real purchase behaviors, not just text patterns.",
-              "Technical impact: Introduces a novel Person-Environment formulation and training pipeline (continued pre-training + SFT + RL) that could be adapted for other behavioral domains like finance or healthcare."
-            ],
-            "whatToTry": {
-              "description": "If you build retail AI, prototype a customer behavior model using your transaction data. Start by verbalizing purchase histories into behavioral profiles, then fine-tune a small LLM with retrieval-augmented generation for purchase prediction. Use RL with verifiable rewards (e.g., purchase accuracy) to ground decisions in evidence, not generic priors.",
-              "note": "Focus on continued pre-training for generalization; retrieval during both training and inference boosts performance significantly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309586-y59n4i",
-                "title": "Large Behavior Model: A Promptable Digital Twin of the Retail Customer",
-                "url": "https://arxiv.org/abs/2607.06993",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-y59n4i-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-y59n4i-1",
-                "label": "retail",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-y59n4i-2",
-                "label": "customer behavior",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309586-w98yy5",
-            "title": "Social norms boost human-AI coordination 4x in dynamic tasks",
-            "tldr": "New research formalizes tacit social norms into three quantifiable principles (outcome predictability, value alignment, advantage awareness), enabling LLM agents to achieve 4x better coordination scores in dynamic interactions like pedestrian-vehicle scenarios, outperforming even human-human pairs by 43%.",
-            "whyItMatters": [
-              "For founders building AI agents that interact with humans in real-time (e.g., autonomous vehicles, robotics, customer service), this provides a concrete framework to improve naturalness and effectiveness beyond imitation learning.",
-              "Technical teams can now explicitly encode social norms as optimization targets, reducing the need for massive human demonstration datasets and enabling more robust coordination in unpredictable environments."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI agent's current coordination performance by testing it in a simplified interactive task (e.g., a 2D pedestrian crossing simulation) and compare against the three norm principles: outcome predictability (can the human predict the agent's next move?), value alignment (does the agent respect human preferences?), and advantage awareness (does the agent yield when the human has the right of way?).",
-              "note": "Start with a low-fidelity prototype to iterate quickly; the paper's platform is open-source and can be adapted for your domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309586-w98yy5",
-                "title": "Learning social norms enhances compatibility in dynamic human-AI coordination",
-                "url": "https://arxiv.org/abs/2607.07021",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-w98yy5-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-w98yy5-1",
-                "label": "Human-AI Interaction",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309586-w98yy5-2",
-                "label": "Coordination",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783593309437-mppsst",
-            "title": "Lovable eyes $13.2B valuation in new funding round",
-            "tldr": "Lovable, an AI-powered app builder, is reportedly raising $300M at a $13.2B valuation, led by Menlo Ventures. This signals massive investor confidence in no-code AI development tools, validating the market for AI-first product builders.",
-            "whyItMatters": [
-              "Business impact: Validates the market for AI-powered no-code platforms, potentially increasing competition and investor interest in similar tools. Founders building AI products should watch for shifts in developer tooling and low-code adoption.",
-              "Technical impact: Indicates that AI-driven app generation is becoming a mainstream approach, which may influence API availability, pricing, and integration standards for AI models used in such platforms."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Lovable's platform for rapid prototyping of your AI product's frontend or MVP. Consider how its capabilities could accelerate your go-to-market, but also assess the risk of vendor lock-in as the space consolidates.",
-              "note": "Start with a small, non-critical project to test integration and performance before committing to a full-scale build."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783593309437-mppsst",
-                "title": "Lovable reportedly in talks to double its valuation to $13.2B",
-                "url": "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-mppsst-0",
-                "label": "Lovable",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-mppsst-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-mppsst-2",
-                "label": "No-Code AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 08 Jul 2026 22:41:33 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783593309437-jh67an",
-            "title": "SpaceXAI drops Grok 4.5: cheaper, Opus-class alternative",
-            "tldr": "SpaceXAI released Grok 4.5, positioning it as a cost-efficient model rivaling top-tier systems like Opus, potentially disrupting pricing for AI builders.",
-            "whyItMatters": [
-              "Reduced inference costs could lower barriers for startups building AI products, enabling more experimentation and scaling.",
-              "Competition with Opus-class models may force price cuts across the industry, benefiting founders with tighter budgets."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Grok 4.5 for your use case by testing its API on a small batch of tasks to compare cost and performance against your current model.",
-              "note": "Start with non-critical workloads to assess reliability and latency before full integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783593309437-jh67an",
-                "title": "SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus-class model’",
-                "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-jh67an-0",
-                "label": "Grok 4.5",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-jh67an-1",
-                "label": "SpaceXAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783593309437-jh67an-2",
-                "label": "Cost efficiency",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 08 Jul 2026 19:30:16 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1783593309585-5cnmq4",
-            "title": "LLMs Boost Agent-Based Models for Real-Time Policy",
-            "tldr": "A new framework (HALE) uses LLMs to replace static priors in agent-based models, enabling adaptive simulations of human decision-making during epidemics. This bridges a key gap in ABM for policy makers.",
-            "whyItMatters": [
-              "Business impact: Founders building simulation tools for policy, public health, or urban planning can now offer adaptive, LLM-driven models that respond to real-world changes, increasing accuracy and value.",
-              "Technical impact: Demonstrates a scalable method to integrate LLM reasoning into ABM, opening avenues for hybrid AI systems that combine simulation with language-based decision prediction."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agent-based models for scenarios where human decisions change dynamically (e.g., market behavior, crisis response). Prototype integrating an LLM to replace static rules for decision-making in a small-scale simulation to test adaptability.",
-              "note": "Start with a simple domain like traffic or retail footfall to minimize complexity before scaling to epidemics or policy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783593309585-5cnmq4",
-                "title": "LLM-powered reasoning in agent-based modeling",
-                "url": "https://arxiv.org/abs/2607.06757",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-5cnmq4-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783593309585-5cnmq4-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-09-afternoon",
-        "period": "afternoon",
-        "date": "2026-07-09",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: AI IPOs to eclipse 25 years of tech exits, Ollama raises $65M: open-source AI tool hits 9M users, Orchestration cuts AI token costs 41%: new paper.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1783613461265-2ki45r",
-            "title": "AI IPOs to eclipse 25 years of tech exits",
-            "tldr": "Anthropic, OpenAI, and SpaceX IPOs are projected to generate more value than all U.S. VC-backed exits since 2000, signaling a massive liquidity event for AI founders and investors.",
-            "whyItMatters": [
-              "Business impact: Signals a historic liquidity wave for AI startups, potentially reshaping venture capital returns and founder exit strategies.",
-              "Technical impact: Validates that building foundational AI models and infrastructure can yield outsized returns, encouraging more investment in AI R&D."
-            ],
-            "whatToTry": {
-              "description": "Review your AI startup's exit strategy now—consider positioning for IPO readiness (e.g., financial audits, governance) to capitalize on the upcoming liquidity window, or explore secondary sales to lock in gains before the IPO wave.",
-              "note": "Focus on building defensible moats (e.g., proprietary data, model fine-tuning) to attract acquirers or IPO investors."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783613461265-2ki45r",
-                "title": "Anthropic, OpenAI, and SpaceX are bigger than the last 25 years of tech exits",
-                "url": "https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-2ki45r-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-2ki45r-1",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-2ki45r-2",
-                "label": "Industry Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 14:51:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783613461265-tolptx",
-            "title": "Ollama raises $65M: open-source AI tool hits 9M users",
-            "tldr": "Ollama, the open-source tool for running AI models locally, raised $65M led by Benchmark, reaching 9M users and massive GitHub traction. This signals strong demand for local AI deployment and validates the developer tooling market.",
-            "whyItMatters": [
-              "Business impact: Validates market for local AI tooling; founders building AI products should consider Ollama for easy local model testing and deployment, reducing cloud costs and latency.",
-              "Technical impact: Ollama simplifies running models like Llama, Mistral, and Gemma on consumer hardware, enabling rapid prototyping and edge AI use cases without GPU clusters."
-            ],
-            "whatToTry": {
-              "description": "Integrate Ollama into your development workflow to test models locally before deploying to production. Use it for rapid iteration on prompts, model selection, and offline inference to reduce cloud dependency.",
-              "note": "Start with the default models (e.g., Llama 3, Mistral) and benchmark performance on your hardware to gauge feasibility for your use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783613461265-tolptx",
-                "title": "Popular open source AI developer tool Ollama raises $65M, grows to nearly 9M users",
-                "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-tolptx-0",
-                "label": "Ollama",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-tolptx-1",
-                "label": "Local AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-tolptx-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461527-u8sc7w",
-            "title": "Orchestration cuts AI token costs 41%: new paper",
-            "tldr": "A controlled study shows that swapping the orchestration layer (harness) alone reduces token usage by 38% and cost per task by 41% across six models, with quality parity. This proves that agentic AI efficiency is more about system design than model choice.",
-            "whyItMatters": [
-              "For founders building AI products, this means focusing on orchestration design can dramatically reduce operational costs without sacrificing quality, offering a competitive edge independent of model selection.",
-              "The 'harness leverage' effect shows that stronger models benefit more from good orchestration, suggesting that investing in the harness amplifies returns from model improvements."
-            ],
-            "whatToTry": {
-              "description": "Audit your current agentic AI pipeline: measure tokens per task, cost per task, and wall-clock time. Then experiment with a different orchestration layer (e.g., Writer Agent Harness or a custom lightweight loop) on a subset of tasks to see if you can replicate similar efficiency gains.",
-              "note": "Start with your most expensive or slowest tasks to maximize impact; the paper's results are model-invariant, so this should work with any LLM."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461527-u8sc7w",
-                "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
-                "url": "https://arxiv.org/abs/2607.06906",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-u8sc7w-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-u8sc7w-1",
-                "label": "Orchestration",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-u8sc7w-2",
-                "label": "Cost Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461526-15a7vt",
-            "title": "AgentLens: New Benchmark Evaluates Full Coding Agent Trajectories",
-            "tldr": "AgentLens is an open-source benchmark that evaluates coding agents on their entire trajectory (instruction following, tool use, error recovery) rather than just pass/fail, enabling deeper diagnostics and regression testing for AI product builders.",
-            "whyItMatters": [
-              "Business impact: Enables teams to catch product regressions in nightly pipelines, improving agent reliability and user trust before deployment.",
-              "Technical impact: Provides actionable, readable reviews of agent behavior, helping founders debug and iterate on agent designs faster than binary pass/fail metrics."
-            ],
-            "whatToTry": {
-              "description": "Integrate AgentLens into your CI/CD pipeline to automatically evaluate your coding agent's trajectory after each update, using its LLM-written reviews to spot regressions in instruction following or error recovery.",
-              "note": "Start with the open-source repo at https://github.com/agent-lens/agent-lens-bench and customize the evaluation scenarios to match your product's use cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461526-15a7vt",
-                "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation",
-                "url": "https://arxiv.org/abs/2607.06624",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-15a7vt-0",
-                "label": "AgentLens",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-15a7vt-1",
-                "label": "Benchmarking",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-15a7vt-2",
-                "label": "Coding Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461526-jlcpev",
-            "title": "Why In-Context Search Beats Parallel Sampling: Theory of Reflection-Driven Reasoning",
-            "tldr": "A new theoretical paper proves that when self-reflection reliably identifies early mistakes, iterative in-context search yields exponential improvements over parallel sampling, requiring only polynomial attempts. This provides a rigorous foundation for why chain-of-thought and reflection-based reasoning work, with implications for designing more efficient inference strategies.",
-            "whyItMatters": [
-              "For founders building reasoning-heavy AI products (e.g., code generation, math solvers), this theory explains when to invest in iterative reflection loops vs. simple parallel sampling, potentially reducing inference costs by orders of magnitude.",
-              "The paper shows that cross-entropy training on search rollouts recovers optimal behavior, meaning you can train models to be better at self-correction with polynomial sample complexity—a practical path to improving reasoning without massive compute."
-            ],
-            "whatToTry": {
-              "description": "If your product uses LLMs for multi-step reasoning (e.g., code generation, analysis), experiment with adding a reflection step: after the model generates an initial answer, prompt it to critique and revise its own output. Use the theory's insight that this works best when the model can reliably localize early mistakes—so start with tasks where errors are detectable (e.g., syntax errors in code).",
-              "note": "The paper suggests that if reflection is weak, parallel sampling may be equally effective—so test both approaches on your specific use case to see which yields better accuracy per compute."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461526-jlcpev",
-                "title": "When Does In-Context Search Help? A Sampling-Complexity Theory of Reflection-Driven Reasoning",
-                "url": "https://arxiv.org/abs/2607.06720",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-jlcpev-0",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-jlcpev-1",
-                "label": "In-Context Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461526-jlcpev-2",
-                "label": "Sampling Complexity",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461527-ewbhph",
-            "title": "Cheap agent harness beats ARC-AGI without fine-tuning",
-            "tldr": "A new paper shows that a simple two-stage agent pipeline using DeepSeek V3.2 achieves 67.25% on ARC-AGI-1 for just $0.62 per task, without any benchmark-specific training or heavy compute. This proves architecture alone can unlock strong reasoning from open-weight models.",
-            "whyItMatters": [
-              "Founders can now achieve competitive abstract reasoning performance on ARC-like tasks without expensive fine-tuning or frontier model API costs, dramatically lowering the barrier for AI product development.",
-              "The explicit decomposition of pattern discovery and program synthesis into separate agent stages provides a reusable architectural pattern that can be applied to other reasoning-heavy problems."
-            ],
-            "whatToTry": {
-              "description": "Implement a two-stage agent pipeline for your own reasoning tasks: first, use an open-weight model (like DeepSeek V3.2) to explore and discover patterns in your data, then have a second stage synthesize executable transformations. Add a reflective loop that autonomously tests new hypotheses when initial attempts fail.",
-              "note": "Start with a small budget—this approach costs under $1 per task—and iterate on the pipeline's decomposition logic before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461527-ewbhph",
-                "title": "Cost-Effective Agent Harnesses for Abstract Reasoning and Generalization on ARC-AGI-1",
-                "url": "https://arxiv.org/abs/2607.06764",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-ewbhph-0",
-                "label": "DeepSeek V3.2",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-ewbhph-1",
-                "label": "ARC-AGI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-ewbhph-2",
-                "label": "Agent Pipeline",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461527-7fn7l6",
-            "title": "SageMath boosts LLM math agents by up to 27.8%",
-            "tldr": "A new paper shows that giving LLMs access to SageMath (a computer algebra system) improves math problem-solving by 9.7% on average, with open-weight models catching up to closed ones. GPT-5.5 hit 75.2% solve rate with lowest token usage.",
-            "whyItMatters": [
-              "For founders building AI agents that need reliable computation (e.g., scientific computing, engineering, finance), integrating a CAS like SageMath can dramatically boost accuracy and reduce hallucinations in math-heavy tasks.",
-              "The narrowing gap between open-weight and closed models suggests you can achieve competitive performance with cheaper, self-hosted models when augmented with verifiable tools."
-            ],
-            "whatToTry": {
-              "description": "If you're building an agent that handles math or symbolic computation, prototype a ReAct-style loop that calls SageMath (or SymPy) for verification. Start with Qwen 3.7-Max for cost efficiency, or GPT-5.5 for top accuracy. Use the paper's multi-step validation pipeline to clean your problem sets.",
-              "note": "SageMath is open-source and can be self-hosted, making it a low-risk addition to your stack."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461527-7fn7l6",
-                "title": "Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics",
-                "url": "https://arxiv.org/abs/2607.06820",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-7fn7l6-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-7fn7l6-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-7fn7l6-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783613461527-atyv27",
-            "title": "Large Behavior Model: AI That Predicts Customer Actions from Retail Data",
-            "tldr": "A new model, LBM, learns customer behavior from retail transactions, outperforming general LLMs on purchase prediction and basket completion. It uses retrieval-augmented generation and reinforcement learning for evidence-based decisions, offering a digital twin for retail.",
-            "whyItMatters": [
-              "Business impact: Enables more accurate customer targeting, promotion optimization, and basket completion predictions, directly improving revenue and marketing ROI for retail AI products.",
-              "Technical impact: Demonstrates a novel approach combining behavioral profiling, RAG, and RL for domain-specific decision-making, setting a new benchmark for specialized AI over general-purpose models."
-            ],
-            "whatToTry": {
-              "description": "If building retail AI, prototype a customer behavior model using historical transaction data with retrieval-augmented generation to ground predictions in real behavior, then fine-tune with reinforcement learning for evidence-based calibration.",
-              "note": "Start with a small dataset of purchase histories to test zero-shot transfer before scaling to larger retail domains."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783613461527-atyv27",
-                "title": "Large Behavior Model: A Promptable Digital Twin of the Retail Customer",
-                "url": "https://arxiv.org/abs/2607.06993",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-atyv27-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-atyv27-1",
-                "label": "retail",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783613461527-atyv27-2",
-                "label": "reinforcement learning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1783613461308-hl9m27",
-            "title": "1X Neo Robot Gets Freaky Fast Fingers for Home Chores",
-            "tldr": "1X has upgraded its Neo home robot with highly dexterous, tactile hands capable of fast, precise manipulation. This signals a leap in robotic dexterity that could accelerate the viability of general-purpose home robots, a key market for AI-powered hardware.",
-            "whyItMatters": [
-              "For founders building AI products in robotics or automation, this shows that tactile sensing and fast manipulation are becoming production-ready, opening new use cases in home and light industrial settings.",
-              "Technically, it demonstrates progress in combining reinforcement learning with soft robotics, which could lower the barrier for integrating dexterous manipulation into AI systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can leverage or integrate with dexterous robotic platforms like 1X Neo for tasks requiring fine motor skills (e.g., assembly, packaging, or home assistance). Consider prototyping with their API or SDK if available.",
-              "note": "Focus on high-value, repetitive tasks where human-like dexterity is a bottleneck, not just general automation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783613461308-hl9m27",
-                "title": "The 1X Neo Robot Has Freaky Fast Fingers",
-                "url": "https://www.wired.com/story/the-1x-neo-robot-has-freaky-fast-fingers/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783613461308-hl9m27-0",
-                "label": "1X Neo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783613461308-hl9m27-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783613461308-hl9m27-2",
-                "label": "Dexterous Manipulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 16:01:22 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783613461265-0vd3ln",
-            "title": "Character.AI launches interactive microdramas with chat-enabled characters",
-            "tldr": "Character.AI is producing its own microdramas where users can chat with characters, ask questions, and roleplay storylines—blending AI chat with serialized content. This signals a new content format for AI-native platforms.",
-            "whyItMatters": [
-              "Business impact: Opens a new revenue model for AI chat platforms through content production and user engagement, potentially competing with traditional streaming and interactive fiction.",
-              "Technical impact: Demonstrates how to integrate large language models with narrative design for dynamic, user-driven storytelling, which could inspire similar features in other AI products."
-            ],
-            "whatToTry": {
-              "description": "Explore creating interactive, chat-based narratives for your AI product—start by prototyping a short serialized story where users converse with characters to influence outcomes, using a simple LLM prompt chain.",
-              "note": "Focus on low-cost, high-engagement formats like microdramas (5-10 minute episodes) to test user retention before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783613461265-0vd3ln",
-                "title": "Character.AI enters the microdrama arena with its own productions, but there’s a twist",
-                "url": "https://techcrunch.com/2026/07/09/character-ai-enters-the-microdrama-arena-with-its-own-productions-but-with-a-twist/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-0vd3ln-0",
-                "label": "Character.AI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-0vd3ln-1",
-                "label": "Interactive storytelling",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783613461265-0vd3ln-2",
-                "label": "Content strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 13:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-09-evening",
-        "period": "evening",
-        "date": "2026-07-09",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: GPT-5.6 becomes default in Microsoft 365 Copilot, Meta launches Muse Spark 1.1 for enterprise AI coding, NYT: OpenAI hid evidence in ChatGPT copyright trial.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1783634169231-6x3wea",
-            "title": "GPT-5.6 becomes default in Microsoft 365 Copilot",
-            "tldr": "OpenAI's GPT-5.6 is now the preferred model for Microsoft 365 Copilot, enhancing AI capabilities across Word, Excel, PowerPoint, and more. This signals a major enterprise adoption milestone for the latest model.",
-            "whyItMatters": [
-              "Business impact: Enterprise users get immediate access to GPT-5.6's improved reasoning and generation, potentially raising productivity benchmarks and creating new opportunities for AI-powered workflows.",
-              "Technical impact: Developers building on Microsoft 365 Copilot can now leverage GPT-5.6's capabilities, which may include better context handling and output quality, influencing how AI features are integrated into office tools."
-            ],
-            "whatToTry": {
-              "description": "If you build AI products for enterprise, test your integrations with GPT-5.6 via Microsoft 365 Copilot APIs to see if output quality improves for document generation, data analysis, or presentation creation. Consider updating your prompts to leverage any new capabilities.",
-              "note": "Check OpenAI's documentation for GPT-5.6-specific changes, as model behavior may differ from previous versions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1783634169231-6x3wea",
-                "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
-                "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1783634169231-6x3wea-0",
-                "label": "GPT-5.6",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783634169231-6x3wea-1",
-                "label": "Microsoft 365 Copilot",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783634169231-6x3wea-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 13:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783634168828-hudl7q",
-            "title": "Meta launches Muse Spark 1.1 for enterprise AI coding",
-            "tldr": "Meta released Muse Spark 1.1, an AI coding tool targeting enterprise workloads like large code migrations and bug fixing, entering a competitive market dominated by GitHub Copilot and others.",
-            "whyItMatters": [
-              "Meta's entry validates the enterprise AI coding market, increasing competition and potentially driving down costs for founders building AI products.",
-              "Focus on large agentic workloads and code migrations signals a shift toward more complex automation, which could open new integration opportunities for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Muse Spark 1.1 for your codebase's large-scale refactoring or migration tasks, especially if you use Meta's tech stack (e.g., React, PyTorch). Compare its agentic capabilities against your current tools to see if it reduces manual effort.",
-              "note": "Start with a non-critical project to test reliability, as enterprise AI coding tools can still produce errors in complex migrations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783634168828-hudl7q",
-                "title": "Meta enters the crowded AI coding battle with Muse Spark 1.1",
-                "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-hudl7q-0",
-                "label": "Meta",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-hudl7q-1",
-                "label": "Muse Spark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-hudl7q-2",
-                "label": "AI coding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 19:40:45 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783634168828-a18wa4",
-            "title": "NYT: OpenAI hid evidence in ChatGPT copyright trial",
-            "tldr": "The New York Times and other publishers filed a motion for sanctions alleging OpenAI concealed tools and datasets that could identify copyrighted journalism in ChatGPT outputs, escalating the high-stakes copyright lawsuit.",
-            "whyItMatters": [
-              "Business impact: If sanctions are granted, OpenAI could face severe legal penalties, potentially forcing changes to training data practices and model outputs, affecting all AI products relying on similar data.",
-              "Technical impact: The hidden tools and datasets could reveal how copyrighted content is reproduced, setting a precedent for transparency and data provenance requirements in AI development."
-            ],
-            "whatToTry": {
-              "description": "Audit your training data sources and implement a system to track and filter copyrighted content, such as using content fingerprinting or opt-out lists, to preempt similar legal risks.",
-              "note": "Consider consulting with legal counsel on data provenance documentation to ensure compliance with evolving copyright laws."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783634168828-a18wa4",
-                "title": "New York Times says OpenAI hid evidence in ChatGPT copyright trial",
-                "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-a18wa4-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-a18wa4-1",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-a18wa4-2",
-                "label": "Copyright",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 19:05:58 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783634168828-vj5c8y",
-            "title": "Paris AI voice startup Gradium raises $100M seed from Nvidia",
-            "tldr": "Gradium, a Paris-based AI voice startup, raised a $100M seed round backed by Nvidia and is expanding to the Bay Area to compete for top AI talent, signaling major investor confidence in voice AI and a transatlantic talent war.",
-            "whyItMatters": [
-              "Business impact: Massive seed round shows investors are betting big on voice AI; founders should watch for increased competition in voice interfaces and potential talent drain from Europe to US.",
-              "Technical impact: Nvidia backing suggests Gradium may leverage specialized hardware for voice models, potentially raising the bar for latency and accuracy in voice AI products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your voice AI strategy: if you're building voice-enabled products, consider partnering with or monitoring Gradium's API offerings. Also, assess your talent acquisition plan for voice AI engineers, as competition for this niche is heating up globally.",
-              "note": "Seed-stage startups should prioritize unique voice use cases (e.g., multilingual, low-resource languages) to differentiate from well-funded players."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783634168828-vj5c8y",
-                "title": "Paris-based AI voice startup Gradium raises $100M seed, backed by Nvidia",
-                "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-vj5c8y-0",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-vj5c8y-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-vj5c8y-2",
-                "label": "Nvidia",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 18:34:35 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1783634168755-ips9mn",
-            "title": "Anthropic to Charge Usage-Based Fees for Claude Fable 5",
-            "tldr": "Anthropic is moving Claude's best consumer model to usage-based pricing, signaling a shift away from flat-rate subscriptions. This matters for founders building on AI APIs, as it may foreshadow similar pricing changes across the industry.",
-            "whyItMatters": [
-              "Business impact: Usage-based pricing increases costs for heavy users, potentially affecting margins for AI-powered products that rely on high-volume inference.",
-              "Technical impact: Founders must now design systems to optimize token usage and consider caching or batching to manage costs."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI usage patterns and estimate costs under usage-based pricing. Implement token tracking and set up cost alerts to avoid surprises.",
-              "note": "Consider negotiating volume discounts with providers early if you expect high usage."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783634168755-ips9mn",
-                "title": "Anthropic Wants You to Pay Up for Claude Fable 5",
-                "url": "https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783634168755-ips9mn-0",
-                "label": "Anthropic",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783634168755-ips9mn-1",
-                "label": "Pricing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783634168755-ips9mn-2",
-                "label": "Cost Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 18:30:00 +0000"
-          },
-          {
-            "id": "hn-48850414",
-            "title": "GLM 5.2 Matches Human Bookkeepers in Accuracy",
-            "tldr": "GLM 5.2 achieves near-human accuracy on a VAT bookkeeping benchmark, signaling a major leap in AI for accounting and finance automation.",
-            "whyItMatters": [
-              "Business impact: Reduces cost and error in bookkeeping, enabling startups to automate financial tasks with high confidence.",
-              "Technical impact: Demonstrates that open-source models can rival proprietary ones in specialized domains, lowering barriers for AI product builders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate GLM 5.2 for your own financial data processing tasks by testing it on a small set of invoices or receipts to compare accuracy against your current solution.",
-              "note": "Start with a controlled test to ensure compliance with local tax regulations before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48850414",
-                "title": "GLM 5.2 is nearly as accurate as a human book keeper",
-                "url": "https://toot-books.pages.dev/blog/glm-5-2-vat-benchmark",
-                "domain": "toot-books.pages.dev",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48850414-0",
-                "label": "GLM 5.2",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48850414-1",
-                "label": "Bookkeeping",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48850414-2",
-                "label": "Finance Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-09T18:29:41Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783634168828-3c9x38",
-            "title": "Can AI answer the $3 trillion question?",
-            "tldr": "TechCrunch reignites the AI ROI debate, framing it as a $3 trillion question about whether massive AI investments will pay off. This matters because it signals growing investor and founder scrutiny on measurable returns from AI products.",
-            "whyItMatters": [
-              "Founders must justify AI spend to investors and customers with clear ROI metrics, not just hype.",
-              "The debate pressures AI product builders to focus on revenue-generating or cost-saving applications over experimental features."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's current ROI by tracking at least one key metric (e.g., revenue lift, cost reduction, user retention) over the next quarter. Prepare a simple one-pager that ties AI features directly to business outcomes.",
-              "note": "Avoid vague metrics like 'engagement'—focus on hard numbers that investors care about."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783634168828-3c9x38",
-                "title": "Can AI answer the $3 trillion question?",
-                "url": "https://techcrunch.com/2026/07/09/can-ai-answer-the-3-trillion-question/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-3c9x38-0",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 21:47:50 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783634168828-28orpp",
-            "title": "Nvidia's Compute Marketplace Success Creates New Competition",
-            "tldr": "Nvidia's dominance in AI compute has created a lucrative market that others are now entering, potentially eroding its margins as simpler technologies and less specialized companies profit from the demand it built.",
-            "whyItMatters": [
-              "Founders building AI products may see more compute options and potentially lower costs as competitors emerge, but could face fragmentation in hardware compatibility.",
-              "The commoditization of AI compute could shift value from hardware to software and services, impacting how startups allocate resources."
-            ],
-            "whatToTry": {
-              "description": "Evaluate alternative compute providers (e.g., AMD, Intel, cloud custom chips) for your AI workloads to hedge against Nvidia dependency and potential price changes.",
-              "note": "Start with non-critical workloads to test performance and cost before full migration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783634168828-28orpp",
-                "title": "Nvidia is a victim of the compute marketplace it created",
-                "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-28orpp-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-28orpp-1",
-                "label": "Compute",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783634168828-28orpp-2",
-                "label": "Market Dynamics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 17:06:11 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1783634168755-6x2qj9",
-            "title": "1X Neo Robot Gets Freaky Fast Fingers for Home Chores",
-            "tldr": "1X has upgraded its Neo home robot with highly dexterous, tactile hands that move with surprising speed and precision, signaling a leap in soft robotics for domestic tasks.",
-            "whyItMatters": [
-              "Advances in tactile robotics could unlock new automation opportunities for AI-powered physical products in homes and light industrial settings.",
-              "Founders building AI agents for real-world interaction should watch for API or SDK access to such hardware for task-specific applications."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product could benefit from integrating with dexterous robotic platforms like Neo for tasks requiring fine motor skills (e.g., assembly, packaging, or home assistance). Start by prototyping with simulation tools or reaching out to 1X for developer access.",
-              "note": "Consider the cost and reliability trade-offs before committing to hardware integration."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783634168755-6x2qj9",
-                "title": "The 1X Neo Robot Has Freaky Fast Fingers",
-                "url": "https://www.wired.com/story/the-1x-neo-robot-has-freaky-fast-fingers/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783634168755-6x2qj9-0",
-                "label": "Tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783634168755-6x2qj9-1",
-                "label": "Topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 16:01:22 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1783634168755-9go7yp",
-            "title": "Estonia's AI 'Fuckup Finder' Spots Legal Errors Before They Cost Millions",
-            "tldr": "Estonia built an AI tool to detect drafting errors in legislation after a $28M mistake, showcasing a practical government use case for AI in legal automation and error prevention.",
-            "whyItMatters": [
-              "Demonstrates a high-ROI application of AI in legal and regulatory domains, relevant for founders building compliance or document review tools.",
-              "Highlights a trend of governments adopting AI for operational efficiency, opening B2G market opportunities for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Explore building or integrating AI-based contract or legal document review tools that flag ambiguous language, contradictions, or errors before finalization—targeting law firms, compliance teams, or government agencies.",
-              "note": "Focus on rule-based + LLM hybrid approaches for accuracy, as pure LLMs may hallucinate in legal contexts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783634168755-9go7yp",
-                "title": "The $28 Million Mistake That Inspired Estonia’s AI ‘Fuckup Finder’",
-                "url": "https://www.wired.com/story/the-28-million-dollar-mistake-that-inspired-estonias-ai-fuckup-finder/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783634168755-9go7yp-0",
-                "label": "AI in Government",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783634168755-9go7yp-1",
-                "label": "Legal Tech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783634168755-9go7yp-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 09 Jul 2026 10:01:30 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
