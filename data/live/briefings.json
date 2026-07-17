@@ -1,7 +1,465 @@
 [
   {
-    "date": "2026-07-16",
+    "date": "2026-07-17",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-17-morning",
+        "period": "morning",
+        "date": "2026-07-17",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Three-Level Learning Architecture for Autonomous UAV Swarms in SAR, LLM-T1D: Transparent Insulin Pump Control with RL + LLMs, AI Agents Build Bayesian Networks: New BBN Method.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1784280272721-cj7lax",
+            "title": "Three-Level Learning Architecture for Autonomous UAV Swarms in SAR",
+            "tldr": "A new paper proposes a hierarchical learning architecture for UAV swarms in search and rescue, integrating reflexes, skills, and reasoning with formal guarantees. This could enable more reliable and adaptive autonomous systems, relevant for founders building multi-agent AI or robotics products.",
+            "whyItMatters": [
+              "Provides a blueprint for building robust, multi-level AI systems that combine fast reflexes with strategic reasoning, reducing failure modes in critical applications.",
+              "Introduces formal contracts and guarantees (safety, liveness) that could accelerate regulatory approval and deployment of autonomous swarms in real-world scenarios."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current multi-agent system's architecture against the three-level hierarchy (reflexes, skills, reasoning). Consider adding a meta-cognition layer to monitor and switch strategies dynamically, especially if your system operates in unpredictable environments.",
+              "note": "The paper's formal contracts may be complex to implement; start with one level (e.g., behavior trees for coordination) and iterate."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272721-cj7lax",
+                "title": "Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue",
+                "url": "https://arxiv.org/abs/2607.14093",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-cj7lax-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-cj7lax-1",
+                "label": "Reinforcement Learning",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-cj7lax-2",
+                "label": "Robotics",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272722-mbv1zg",
+            "title": "LLM-T1D: Transparent Insulin Pump Control with RL + LLMs",
+            "tldr": "Researchers combined RL with fine-tuned LLaMA 3.1 and Qwen3 8B models to create an interpretable insulin pump controller that outperforms black-box RL systems, achieving 73.5% Time in Range on an FDA-approved simulator while explaining decisions in plain language.",
+            "whyItMatters": [
+              "Demonstrates a practical method for distilling RL policies into LLMs for safety-critical medical devices, enabling trust and regulatory approval.",
+              "Shows that LLMs can maintain formal safety verification against hallucinations, a key requirement for closed-loop systems in healthcare."
+            ],
+            "whatToTry": {
+              "description": "Explore using RL-to-LLM distillation for your own safety-critical AI products, especially in regulated industries like healthcare or autonomous systems. Start by training a high-performing RL agent, then fine-tune a small LLM (e.g., LLaMA 3.1 8B) on its decision traces with explanations, and implement formal verification to prevent hallucinations.",
+              "note": "The UVA/Padova simulator is FDA-approved for T1D research—consider similar domain-specific simulators for your use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272722-mbv1zg",
+                "title": "Interpretable Language Model for Closed-Loop Type 1 Diabetes Control",
+                "url": "https://arxiv.org/abs/2607.14126",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-mbv1zg-0",
+                "label": "LLaMA 3.1",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-mbv1zg-1",
+                "label": "Qwen3",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-mbv1zg-2",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-mbv1zg-3",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-mbv1zg-4",
+                "label": "Interpretability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272722-pblqwk",
+            "title": "AI Agents Build Bayesian Networks: New BBN Method",
+            "tldr": "A new methodology uses LLM-powered AI agents to construct Bayesian Belief Networks, combining expert judgment with data-driven learning. This approach, tested on healthcare decisions, reveals surprising causal insights (e.g., subjective norms outweigh self-efficacy), offering a practical way to build decision-support models without large datasets.",
+            "whyItMatters": [
+              "Enables founders to build robust decision-support systems for operational use cases (e.g., customer churn, risk assessment) without relying on scarce expert time or massive datasets.",
+              "Provides a scalable, reproducible method to uncover hidden causal relationships, improving model accuracy and strategic recommendations."
+            ],
+            "whatToTry": {
+              "description": "Implement a panel of AI agents (e.g., using GPT-4 or Claude) with diverse personas to estimate probabilities for your BBN. Use a trimmed-mean to aggregate responses, then validate against small real-world data. Start with a simple decision problem like predicting user adoption.",
+              "note": "Ensure personas are context-specific (e.g., 'optimistic marketer' vs 'risk-averse engineer') to capture diverse perspectives."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272722-pblqwk",
+                "title": "Human AI Construction of Bayesian Networks for Operational Decision Support -- A Virtual Survey Approach",
+                "url": "https://arxiv.org/abs/2607.14141",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-pblqwk-0",
+                "label": "Bayesian Networks",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-pblqwk-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-pblqwk-2",
+                "label": "Decision Support",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272722-fwlhup",
+            "title": "Capability Convergence: Hybrid Models Beat Pure Scale",
+            "tldr": "A new paper proposes the Capability Convergence Hypothesis (CCH), showing that under fixed inference budgets, hybrid models combining compressive state and verbatim-index channels achieve capabilities that pure scaling cannot. Pre-registered tests confirm a 'scissors gap' where adding a single attention layer to a state model slashes error from 0.994 to 0.000.",
+            "whyItMatters": [
+              "For founders building AI products, this suggests that hybrid architectures (e.g., Mamba + attention) can deliver superior performance without massive scaling, reducing compute costs and inference latency.",
+              "The paper identifies three resource walls (Shannon, horizon, circuit) that pure models hit, providing a theoretical framework to guide architecture choices for long-context or retrieval-heavy applications."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current model architecture for tasks requiring long-context or exact retrieval. Consider prototyping a hybrid design (e.g., combining a state-space model like Mamba with a sparse attention layer) to test if it outperforms a pure transformer or state model under your inference budget.",
+              "note": "Start with small-scale pre-registered tests to validate the 'scissors gap' in your domain before full deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272722-fwlhup",
+                "title": "Capability from Access Structure, Not Scale: Lower Bounds and Pre-Registered Tests for Hybrid Sequence Models",
+                "url": "https://arxiv.org/abs/2607.14144",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-fwlhup-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-fwlhup-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272722-88iktq",
+            "title": "ToolAnchor: Breaking AI Agent Tool Inertia with Counterfactual Context",
+            "tldr": "A new framework, ToolAnchor, solves the problem of AI agents failing to use new tools by injecting counterfactual contexts at critical decision points, enabling dynamic adaptation without retraining. This is a significant advancement for building flexible, long-horizon AI agents.",
+            "whyItMatters": [
+              "Business impact: Founders can now build AI agents that adapt to new tools on the fly, reducing the need for costly retraining and enabling faster product iteration with evolving tool ecosystems.",
+              "Technical impact: Provides a scalable reinforcement learning approach to overcome behavioral inertia in agents, bridging static post-training and dynamic adaptation for more robust tool-use capabilities."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI agents with tool-use capabilities, experiment with ToolAnchor's approach by identifying critical decision points in your agent's workflow and injecting counterfactual contexts (e.g., 'What if you had used tool X instead?') to guide it toward new tools. Use a teacher model to generate these contexts and validate with rollouts.",
+              "note": "Start with a small set of new tools and monitor for improved task completion rates; this method is designed for long-horizon tasks where inertia is most pronounced."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272722-88iktq",
+                "title": "ToolAnchor: Anchoring Counterfactual Context to Boost Agentic Tool-use Capability",
+                "url": "https://arxiv.org/abs/2607.14145",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-88iktq-0",
+                "label": "ToolAnchor",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-88iktq-1",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-88iktq-2",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48939662",
+            "title": "LM Studio Bionic: Open-Source Agent for Local Models",
+            "tldr": "LM Studio launched Bionic, an AI agent that runs open models locally, enabling autonomous task execution without cloud dependency. This matters for founders building privacy-sensitive or offline AI products.",
+            "whyItMatters": [
+              "Enables local AI agents for sensitive data workflows, reducing cloud costs and latency.",
+              "Democratizes agentic AI for open models, allowing rapid prototyping without API keys."
+            ],
+            "whatToTry": {
+              "description": "Download LM Studio Bionic and test it with a local open model (e.g., Llama 3) to automate a simple task like web scraping or file organization. Evaluate its reliability for your use case.",
+              "note": "Start with small, non-critical tasks to gauge performance and resource usage."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48939662",
+                "title": "LM Studio Bionic: the AI agent for open models",
+                "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+                "domain": "lmstudio.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48939662-0",
+                "label": "LM Studio",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-48939662-1",
+                "label": "Open Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-48939662-2",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-16T20:18:15Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272721-mzfhn4",
+            "title": "HG-RAG: Graph-Traversal RAG for Structured Knowledge",
+            "tldr": "A new framework, HG-RAG, enhances RAG by traversing hierarchical knowledge graphs instead of flat documents, outperforming dense retrieval on hierarchical and multi-hop reasoning tasks while reducing hallucinations.",
+            "whyItMatters": [
+              "Enables AI products to answer complex queries requiring relational or hierarchical reasoning (e.g., organizational charts, product catalogs) without hallucination.",
+              "Provides a practical method to integrate structured knowledge bases with LLMs, improving accuracy for domain-specific applications like enterprise search or legal analysis."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current RAG pipeline for queries that require hierarchical or multi-hop reasoning. If you use a flat vector store, consider prototyping HG-RAG by structuring your knowledge as a graph (e.g., using Neo4j) and implementing the three-step traversal (up, lateral, down) to feed context to your LLM.",
+              "note": "Start with small graphs (under 1000 nodes) to test performance gains before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272721-mzfhn4",
+                "title": "HG-RAG: Hierarchy-Guided Retrieval-Augmented Generation for Structured Knowledge Graphs",
+                "url": "https://arxiv.org/abs/2607.14095",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-mzfhn4-0",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-mzfhn4-1",
+                "label": "Knowledge Graphs",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-mzfhn4-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272721-rrz88g",
+            "title": "DialogueVPR: Conversational AI for Visual Place Recognition",
+            "tldr": "A new research paper introduces DialogueVPR, shifting visual place recognition from static one-shot retrieval to interactive, dialogue-driven reasoning. This could enable AI systems to clarify ambiguous location descriptions through conversation, with a new benchmark and open-source code available.",
+            "whyItMatters": [
+              "Enables more robust geo-localization for AI products by handling ambiguous or incomplete natural language descriptions through iterative questioning.",
+              "Introduces a reinforcement learning-based training method (GRPO) and task-specific metrics (DDI, PRG) that could be applied to other conversational AI tasks."
+            ],
+            "whatToTry": {
+              "description": "Explore the open-source code and model at https://github.com/Graysonggg/DlgPR to test dialogue-driven place recognition in your own applications, especially if you're building location-aware AI assistants or navigation tools.",
+              "note": "This is research-stage; consider it for prototyping or as inspiration for conversational retrieval systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272721-rrz88g",
+                "title": "DialogueVPR: Towards Conversational Visual Place Recognition",
+                "url": "https://arxiv.org/abs/2607.14115",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-rrz88g-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-rrz88g-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272721-rrz88g-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784280272722-m32kqv",
+            "title": "SLMs + Knowledge Graphs: 2x Reasoning Boost via Neuro-Symbolic Agents",
+            "tldr": "A new paper shows that grounding small language models (Gemma 3, Llama 3.2) with a knowledge graph agent (RGCN) yields 1.5-2x performance gains on multi-hop reasoning, but reveals critical fragility: extraction errors compound and noisy self-generated facts can degrade performance. This offers a practical roadmap for building cost-effective, reasoning-capable AI products.",
+            "whyItMatters": [
+              "Business impact: Enables cost-effective deployment of reasoning-capable AI without expensive LLMs, reducing inference costs and environmental footprint for startups.",
+              "Technical impact: Identifies key bottlenecks (extraction accuracy, sequential error compounding) that must be solved for reliable neuro-symbolic systems, guiding product architecture decisions."
+            ],
+            "whatToTry": {
+              "description": "For your AI product, prototype a hybrid agent that uses a small model (e.g., Gemma 3 4B) to extract structured facts from user input, then query a knowledge graph (like Neo4j or a simple RGCN) for multi-hop reasoning hints before generating the final answer. Start with a controlled domain (e.g., customer support tickets) to test extraction accuracy and error handling.",
+              "note": "Be aware of the 'distraction effect'—if your SLM generates noisy facts, consider adding a verification step (e.g., confidence threshold) before feeding them to the graph."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784280272722-m32kqv",
+                "title": "Enhancing Small Language Models Reasoning through Knowledge Graph Grounding",
+                "url": "https://arxiv.org/abs/2607.14149",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-m32kqv-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-m32kqv-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784280272722-m32kqv-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 17 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-48939524",
+            "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+            "tldr": "A viral HackerNews post compares two AI models (Claude Fable 5 and GPT-5.6 Sol) on creating a $100 music video, sparking debate on cost-efficiency and creative output for AI-generated media.",
+            "whyItMatters": [
+              "Demonstrates the practical cost and quality trade-offs between leading AI models for media production, crucial for founders building AI content tools.",
+              "Highlights the growing trend of AI-generated video and music, signaling new opportunities for startups in creative automation."
+            ],
+            "whatToTry": {
+              "description": "Run your own side-by-side test of Claude and GPT on a small creative project (e.g., a 30-second ad) to compare output quality, cost, and iteration speed. Use the results to decide which model to integrate into your product pipeline.",
+              "note": "Focus on consistency and editability, not just flashy results—production-ready output matters more than one-off demos."
+            },
+            "sources": [
+              {
+                "id": "src-hn-48939524",
+                "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+                "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+                "domain": "tryai.dev",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-48939524-0",
+                "label": "Claude Fable 5",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-48939524-1",
+                "label": "GPT-5.6 Sol",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-48939524-2",
+                "label": "AI video",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-48939524-3",
+                "label": "AI music",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-07-16T20:03:23Z"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-16",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-16-morning",
@@ -1318,7 +1776,7 @@
   },
   {
     "date": "2026-07-15",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Jul 15",
     "briefings": [
       {
         "id": "briefing-2026-07-15-morning",
@@ -5746,891 +6204,6 @@
           }
         ],
         "totalReadTimeMinutes": 10,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-10",
-    "displayDate": "Friday, Jul 10",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-10-morning",
-        "period": "morning",
-        "date": "2026-07-10",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Infinity-Parser2: Open-Source Document Parsing with RL, Context Graphs Enable Proactive Enterprise Agents, LLMs in Healthcare: New Survey Maps Clinical Reasoning Levels.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1783679482343-63qybe",
-            "title": "Infinity-Parser2: Open-Source Document Parsing with RL",
-            "tldr": "Infinity-Parser2 is a new multimodal model for document parsing that uses a synthetic data pipeline and multi-task reinforcement learning to achieve state-of-the-art results on benchmarks like olmOCR-Bench (87.6%) and ParseBench (74.3%), surpassing DeepSeek-OCR-2. It includes two variants (Flash for speed, Pro for precision) and an open-source 5M-sample bilingual dataset.",
-            "whyItMatters": [
-              "Business impact: Enables high-accuracy document parsing for AI products that need to extract structured data from PDFs, invoices, or forms, reducing reliance on costly manual annotation or closed-source APIs.",
-              "Technical impact: Introduces a verifiable multi-task RL approach that unifies eight objectives, offering a scalable framework for training models on diverse document types with limited real-world data."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Infinity-Parser2-Pro for your document-heavy workflows (e.g., data extraction from contracts or receipts) by testing it on your own sample documents against existing solutions like DeepSeek-OCR-2 or open-source parsers. Use the open-source Infinity-Doc2-5M dataset to fine-tune or augment your own models for bilingual (Chinese/English) tasks.",
-              "note": "Start with the Flash variant if latency is critical; the Pro variant is better for accuracy-sensitive applications like legal or financial document processing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-63qybe",
-                "title": "Infinity-Parser2 Technical Report",
-                "url": "https://arxiv.org/abs/2607.07836",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-63qybe-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-63qybe-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-63qybe-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482343-hrvkon",
-            "title": "Context Graphs Enable Proactive Enterprise Agents",
-            "tldr": "A new arXiv paper introduces Context Graphs, a live relational data structure that powers proactive AI agents—surfacing insights before users ask. With a Delta Detection Engine and Proactivity Scorer, it reduces mean time to surface from 47 minutes to under 30 seconds, achieving Precision@5 of 0.83. This shifts enterprise AI from reactive to proactive, a key capability for founders building autonomous agents.",
-            "whyItMatters": [
-              "Business impact: Enables AI agents to anticipate needs, reducing manual monitoring and accelerating decision-making in workflows like contract management, incident response, and sales pipeline hygiene.",
-              "Technical impact: Provides a concrete architecture (Context Graph + Delta Detection + Proactivity Scorer) that can be implemented with existing tools (NetworkX, Claude API), making proactive agents buildable today."
-            ],
-            "whatToTry": {
-              "description": "Implement a simple Context Graph for your product's key entities (e.g., customers, projects, tasks) using NetworkX. Set up a delta detection loop that monitors state changes (e.g., status updates, new comments) and use an LLM to rank and surface the top 5 most urgent insights to users via notifications or dashboards.",
-              "note": "Start with one use case (e.g., sales pipeline alerts) to validate before scaling. The paper's Python implementation is a ready reference."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-hrvkon",
-                "title": "Context Graphs for Proactive Enterprise Agents",
-                "url": "https://arxiv.org/abs/2607.07721",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-hrvkon-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-hrvkon-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-hrvkon-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482343-0hhz7t",
-            "title": "LLMs in Healthcare: New Survey Maps Clinical Reasoning Levels",
-            "tldr": "A comprehensive survey introduces a five-level competency scheme (from recall to dynamic case management) for evaluating LLMs in medical reasoning, benchmarking 18 models and revealing that specialist models excel at diagnosis while general models lead in decision support. This provides a practical framework for founders building clinical AI tools.",
-            "whyItMatters": [
-              "Business impact: Founders can use the five-level scheme to position their product's clinical maturity and identify gaps in the market, e.g., focusing on higher-level reasoning (case management) where competition is lower.",
-              "Technical impact: The benchmark dataset and model comparisons offer a clear baseline for evaluating and improving LLM performance on medical tasks, guiding model selection and fine-tuning strategies."
-            ],
-            "whatToTry": {
-              "description": "Review the survey's five-level competency scheme (knowledge recall, interpretation, diagnosis, treatment planning, dynamic case management) and map your AI product's current capabilities to these levels. Then, identify which level your target clinical workflow requires and prioritize model improvements or data collection for that level.",
-              "note": "The benchmark includes 18 models, so check which ones perform best at your target level—specialist models for diagnosis, general models for dialogue."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-0hhz7t",
-                "title": "Aligning Clinical Needs and AI Capabilities: A Survey on LLMs for Medical Reasoning",
-                "url": "https://arxiv.org/abs/2607.07761",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-0hhz7t-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-0hhz7t-1",
-                "label": "Healthcare",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-0hhz7t-2",
-                "label": "Benchmark",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482344-oz76vs",
-            "title": "Agentic RAG Outperforms LLMs for Straight-Through Underwriting",
-            "tldr": "A new arXiv paper shows that a multi-agent 'Agentic RAG' pipeline significantly outperforms single-LLM and naive RAG baselines for straight-through underwriting, especially in complex scenarios requiring multi-step reasoning and handling missing information. This is a practical blueprint for regulated AI workflows.",
-            "whyItMatters": [
-              "Business impact: Demonstrates a viable path to automating high-stakes, regulated decisions (e.g., insurance underwriting) with transparency and auditability, reducing manual effort and errors.",
-              "Technical impact: Provides a concrete architecture for combining retrieval, tool use, and reflection in multi-agent systems, which can be adapted to other document-heavy, rule-based domains."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own document-heavy decision workflows (e.g., loan approvals, claims processing) and prototype a multi-agent RAG pipeline that includes a retrieval agent, a rule-checking agent, and a reflection agent to handle missing or ambiguous data before making a final decision.",
-              "note": "Start with a small, well-defined use case to measure gains in accuracy and auditability before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482344-oz76vs",
-                "title": "Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting",
-                "url": "https://arxiv.org/abs/2607.07858",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-oz76vs-0",
-                "label": "Agentic RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-oz76vs-1",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-oz76vs-2",
-                "label": "Underwriting",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783679482096-49vwlk",
-            "title": "GPT-5.6 becomes preferred model for Microsoft Copilot 365",
-            "tldr": "OpenAI announced GPT-5.6 as the preferred model for Microsoft Copilot 365, reinforcing their partnership despite breakup rumors. This ensures continued access to cutting-edge AI for enterprise users and signals stability for founders building on OpenAI's ecosystem.",
-            "whyItMatters": [
-              "Business impact: Confirms ongoing partnership stability, reducing uncertainty for startups relying on OpenAI models via Microsoft's distribution channels.",
-              "Technical impact: GPT-5.6 likely brings improvements in reasoning, context handling, or cost efficiency, directly affecting product performance and pricing for AI builders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate GPT-5.6 for your product by testing its API (if available) or monitoring Copilot 365 updates for new features. Consider adjusting your model selection strategy to leverage potential performance gains or cost reductions.",
-              "note": "Check OpenAI's documentation for GPT-5.6 pricing and capabilities before migrating; early adopters may gain a competitive edge."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783679482096-49vwlk",
-                "title": "OpenAI says GPT 5.6 is the ‘preferred model’ for Microsoft Copilot 365 amid breakup chatter",
-                "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783679482096-49vwlk-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783679482096-49vwlk-1",
-                "label": "Microsoft Copilot",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783679482096-49vwlk-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:16:54 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1783679482689-l06fd8",
-            "title": "Deutsche Telekom goes AI-native with OpenAI: telco transformation playbook",
-            "tldr": "Deutsche Telekom is integrating OpenAI across customer service, employee workflows, network ops, and voice—showing how large telcos can become AI-native. This signals a major enterprise adoption trend for AI in regulated industries.",
-            "whyItMatters": [
-              "Business impact: Validates AI as a core operational layer for telecoms, opening a new vertical for AI product builders targeting telco clients.",
-              "Technical impact: Demonstrates practical use of OpenAI for real-time network operations and voice, pushing boundaries of latency and reliability in production."
-            ],
-            "whatToTry": {
-              "description": "Explore building AI solutions for telecom-specific pain points like network optimization, customer support automation, or voice interfaces—using this case as a reference for pitching to telco decision-makers.",
-              "note": "Focus on compliance and reliability; telcos require high uptime and data privacy, so emphasize these in your product design."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1783679482689-l06fd8",
-                "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-                "url": "https://openai.com/index/deutsche-telekom",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1783679482689-l06fd8-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783679482689-l06fd8-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783679482689-l06fd8-2",
-                "label": "Telecom",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 07:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482343-77je1a",
-            "title": "New Framework for Auditing AI-Human Communication Trust",
-            "tldr": "A new paper from ArXiv introduces 'Adversarial Social Epistemology' (ASE) to analyze how LLMs and humans can distort information in complex communication networks, offering a framework for auditing trust breaches. This is directly relevant for founders building AI products that rely on multi-agent or human-AI interactions.",
-            "whyItMatters": [
-              "Provides a structured way to identify and mitigate trust issues in AI systems that interact with humans or other AI agents, crucial for product reliability.",
-              "Offers a theoretical foundation for building audit tools that can detect manipulation or misinformation in AI-generated content, enhancing product safety."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's communication flows (e.g., chatbot responses, multi-agent outputs) using the ASE lens: map out inferential chains and identify points where trust could be subverted, then implement audit mechanisms to verify claims.",
-              "note": "Start with high-stakes interactions like customer support or financial advice where trust breaches are most damaging."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-77je1a",
-                "title": "Adversarial Social Epistemology for Assemblies of Humans and Large Language Models",
-                "url": "https://arxiv.org/abs/2607.07760",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-77je1a-0",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-77je1a-1",
-                "label": "Trust & Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-77je1a-2",
-                "label": "LLM",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482343-5hd1ph",
-            "title": "Alignment Plausibility: New Standard for Safe AI in Healthcare",
-            "tldr": "A new paper proposes 'alignment plausibility' as a regulatory construct for AI in healthcare, drawing an analogy to biological plausibility. It argues for a three-level alignment framework (value specification, training, oversight) to ensure LLMs are safe for mental health support, addressing subtle risks like dependency and boundary erosion.",
-            "whyItMatters": [
-              "For founders building AI health products, this provides a structured framework to argue for regulatory trust and safety, potentially reducing liability and speeding up approvals.",
-              "Technically, it shifts focus from reactive safety patches to proactive, multi-level alignment, which could influence how you design training and monitoring systems."
-            ],
-            "whatToTry": {
-              "description": "Review your AI health product's safety approach against the three levels: 1) Explicitly codify clinical values (e.g., from professional ethics guidelines) into your model's specification; 2) Embed these values through targeted training data and fine-tuning; 3) Set up deployment oversight to detect long-term drift, like dependency or boundary erosion, using clinical supervision analogies.",
-              "note": "Start with a small pilot for mental health features to test this framework before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-5hd1ph",
-                "title": "Alignment Plausibility: A New Standard for Assuring AI in Healthcare",
-                "url": "https://arxiv.org/abs/2607.07766",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-5hd1ph-0",
-                "label": "Alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-5hd1ph-1",
-                "label": "Healthcare",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-5hd1ph-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482343-jbsst0",
-            "title": "Idiobionics: Privacy Meets AI Prosthetics",
-            "tldr": "A new research paper introduces 'idiobionics' to study privacy risks in AI-powered bionic limbs, highlighting potential adversarial attacks that could exploit sensor data from these devices.",
-            "whyItMatters": [
-              "For founders building AI-integrated wearable robotics, this flags a critical but overlooked attack surface that could hinder adoption if unaddressed.",
-              "Opens a new niche for privacy-preserving AI techniques (e.g., on-device processing, differential privacy) in prosthetic control systems."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI-powered wearable or prosthetic product for sensor data leakage (e.g., EMG, accelerometer, camera feeds) and prototype a privacy layer using local inference or encryption to mitigate adversarial attacks.",
-              "note": "Start with a threat model focusing on side-channel attacks from motion or biometric data."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482343-jbsst0",
-                "title": "Idiobionics: The Unification of Privacy and Intelligent Robotic Prostheses",
-                "url": "https://arxiv.org/abs/2607.07775",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-jbsst0-0",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-jbsst0-1",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482343-jbsst0-2",
-                "label": "AI Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783679482344-m04d1n",
-            "title": "99% Accuracy: GNN for Real-Time Gesture Recognition via sEMG",
-            "tldr": "A new paper introduces a graph neural network (GNN) that achieves 99% accuracy in real-time hand gesture recognition from 8-channel sEMG signals, with a total latency of 48ms on an M1 Pro CPU. This outperforms state-of-the-art methods and is suitable for prosthetics and AR control.",
-            "whyItMatters": [
-              "For founders building AI-driven prosthetics or AR/VR interfaces, this demonstrates a practical, high-accuracy approach using graph networks to model muscle activation patterns, potentially enabling more natural and responsive control systems.",
-              "The 48ms latency on consumer hardware (M1 Pro) suggests this method could be deployed on edge devices, opening opportunities for real-time applications without cloud dependency."
-            ],
-            "whatToTry": {
-              "description": "If you're developing gesture-based interfaces, consider prototyping with graph neural networks on sEMG data. Start by replicating the paper's approach using a Myo armband (8 electrodes) and a GNN framework like PyTorch Geometric to see if the 99% accuracy holds for your use case.",
-              "note": "The study used only 8 healthy subjects; validate with diverse populations and noisy real-world conditions before production."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783679482344-m04d1n",
-                "title": "A Graph Neural Network Model for Real-Time Gesture Recognition Based on sEMG Signals",
-                "url": "https://arxiv.org/abs/2607.07850",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-m04d1n-0",
-                "label": "Graph Neural Network",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-m04d1n-1",
-                "label": "Gesture Recognition",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783679482344-m04d1n-2",
-                "label": "sEMG",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-10-evening",
-        "period": "evening",
-        "date": "2026-07-10",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: GPT-5.6 Sol Ultra Proves Major Math Conjecture, SK Hynix's $26.5B IPO: AI Chip Supply Chain Shifts to US, AI videos optimized to activate specific brain regions.",
-        "items": [
-          {
-            "id": "hn-48863490",
-            "title": "GPT-5.6 Sol Ultra Proves Major Math Conjecture",
-            "tldr": "OpenAI's GPT-5.6 Sol Ultra has produced a proof of the Cycle Double Cover Conjecture, a long-standing problem in graph theory. This marks a significant milestone in AI's ability to contribute to pure mathematics, with implications for AI reasoning and scientific discovery.",
-            "whyItMatters": [
-              "Demonstrates AI's capability to solve open mathematical problems, potentially accelerating research in fields like optimization and network theory.",
-              "Signals a leap in AI reasoning and proof generation, which could lead to new tools for verifying complex systems in AI products."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating AI-driven proof assistants or reasoning models into your product for tasks requiring logical verification, such as code correctness or formal verification of algorithms.",
-              "note": "Start with smaller, well-defined problems to assess reliability before scaling to complex conjectures."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48863490",
-                "title": "GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture [pdf]",
-                "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
-                "domain": "cdn.openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48863490-0",
-                "label": "GPT-5.6 Sol Ultra",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48863490-1",
-                "label": "Cycle Double Cover Conjecture",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48863490-2",
-                "label": "Mathematical Proof",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-10T18:29:19Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783719258364-bvgbk6",
-            "title": "SK Hynix's $26.5B IPO: AI Chip Supply Chain Shifts to US",
-            "tldr": "SK Hynix raised $26.5B in the largest foreign IPO in US history, signaling massive investor confidence in AI memory chips. The company is now urged to build US fabs, which could reshape AI hardware supply chains and reduce dependency on Asia.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products may see improved access to high-bandwidth memory (HBM) chips if US fabs are built, potentially lowering costs and lead times for AI infrastructure.",
-              "Technical impact: SK Hynix's HBM3E memory is critical for training large models; US production could accelerate innovation cycles and enable faster deployment of next-gen AI hardware."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI infrastructure supply chain: If you rely on HBM or GPU clusters, start conversations with SK Hynix or Samsung about early access to US-produced memory chips. Consider locking in contracts now to hedge against geopolitical risks.",
-              "note": "Monitor US fab announcements closely; early partnerships could give you a competitive edge in securing scarce AI hardware."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783719258364-bvgbk6",
-                "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
-                "url": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-bvgbk6-0",
-                "label": "SK Hynix",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-bvgbk6-1",
-                "label": "AI hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-bvgbk6-2",
-                "label": "Supply chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 17:17:12 +0000"
-          },
-          {
-            "id": "hn-48856904",
-            "title": "AI videos optimized to activate specific brain regions",
-            "tldr": "Researchers at EPFL developed an AI system that generates videos designed to maximally stimulate a target brain region, opening new frontiers in neuroscience and AI-driven content. This breakthrough has implications for neuromarketing, therapy, and personalized media.",
-            "whyItMatters": [
-              "Business impact: Enables hyper-personalized advertising and content that can directly influence viewer engagement by targeting specific neural responses, potentially revolutionizing marketing and media.",
-              "Technical impact: Demonstrates a novel application of generative AI combined with neuroscience, creating a feedback loop between AI content generation and brain activity measurement, which could lead to new AI training paradigms."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating brain-computer interface (BCI) data with generative AI models to create content that optimizes for user engagement or therapeutic outcomes. Start by reviewing the EPFL Nevo project's open-source tools and consider partnerships with neuroscience labs for pilot studies.",
-              "note": "This is early-stage research; focus on ethical implications and user consent before commercializing."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48856904",
-                "title": "AI-generated videos to maximally drive a target brain region",
-                "url": "https://nevo-project.epfl.ch/",
-                "domain": "nevo-project.epfl.ch",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48856904-0",
-                "label": "Generative AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48856904-1",
-                "label": "Neuroscience",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48856904-2",
-                "label": "Personalization",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-10T07:39:11Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1783719258458-33ocxx",
-            "title": "Context Graphs: From Reactive to Proactive Enterprise Agents",
-            "tldr": "A new arXiv paper proposes Context Graphs—live relational data structures that enable AI agents to proactively surface insights without waiting for human queries. With a Precision@5 of 0.83 and sub-30-second surfacing time, this could redefine enterprise agent workflows.",
-            "whyItMatters": [
-              "Shifts enterprise AI from query-response to proactive insight delivery, potentially increasing productivity by reducing mean time to surface from 47 minutes to under 30 seconds.",
-              "Provides a concrete, implementable architecture (using NetworkX and Claude API) that founders can adapt for their own products, especially in contract management, incident response, and sales pipeline optimization."
-            ],
-            "whatToTry": {
-              "description": "Experiment with building a simple context graph for your own enterprise use case (e.g., tracking contract milestones or engineering incidents) using NetworkX and an LLM API. Start by modeling key entities and their relationships, then implement a delta detection engine to monitor state changes and rank alerts.",
-              "note": "Focus on a single high-value domain first to validate precision and false positive rates before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783719258458-33ocxx",
-                "title": "Context Graphs for Proactive Enterprise Agents",
-                "url": "https://arxiv.org/abs/2607.07721",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-33ocxx-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-33ocxx-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-33ocxx-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1783719258364-0r8y5u",
-            "title": "Apple sues OpenAI over alleged trade secret theft",
-            "tldr": "Apple has filed a lawsuit against OpenAI, alleging that senior leadership, including a former employee, orchestrated the theft of trade secrets. This high-profile legal battle could reshape IP protection and talent mobility in AI.",
-            "whyItMatters": [
-              "Founders must reassess IP protection strategies and employee agreements to avoid similar litigation risks.",
-              "The case may set precedents for how trade secrets are defined and enforced in AI, impacting hiring and collaboration norms."
-            ],
-            "whatToTry": {
-              "description": "Review and tighten your employee non-disclosure and non-compete agreements, especially for senior roles with access to proprietary AI models or data. Consider implementing stricter access controls and exit interview protocols.",
-              "note": "Consult legal counsel to ensure compliance with local laws, as enforceability varies by jurisdiction."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1783719258364-0r8y5u",
-                "title": "Apple sues OpenAI over alleged trade secret theft",
-                "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-0r8y5u-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-0r8y5u-1",
-                "label": "IP",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1783719258364-0r8y5u-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 21:00:29 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1783719258735-ke5s23",
-            "title": "Deutsche Telekom goes AI-native with OpenAI: telco transformation blueprint",
-            "tldr": "Deutsche Telekom is integrating OpenAI across customer service, employee workflows, network ops, and voice—offering a real-world case study for AI-native enterprise transformation.",
-            "whyItMatters": [
-              "Shows how large enterprises can embed AI across core operations, not just chatbots—validating a multi-departmental AI strategy for founders targeting telcos or similar regulated industries.",
-              "Demonstrates OpenAI's enterprise traction beyond SaaS, signaling growing demand for custom AI integrations in infrastructure-heavy sectors."
-            ],
-            "whatToTry": {
-              "description": "Study Deutsche Telekom's approach to identify which operational areas (e.g., customer service, network monitoring) are ripe for AI in your target industry. Reach out to their AI team for partnership or case study insights.",
-              "note": "Focus on regulated industries where AI-native transformation is still nascent—telco, energy, healthcare."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1783719258735-ke5s23",
-                "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-                "url": "https://openai.com/index/deutsche-telekom",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1783719258735-ke5s23-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783719258735-ke5s23-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1783719258735-ke5s23-2",
-                "label": "Telecommunications",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 07:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1783719258458-b2ppf3",
-            "title": "Adversarial Social Epistemology for AI-Human Communication",
-            "tldr": "A new paper introduces adversarial social epistemology (ASE) to analyze how agents, including LLMs, can distort information in scaffolded communications, offering a framework for auditing trust breaches in AI systems.",
-            "whyItMatters": [
-              "Provides a theoretical lens for founders to understand and mitigate risks of LLMs being used to manipulate or mislead in multi-agent systems or public-facing AI products.",
-              "Offers practical machinery for auditing inferential chains, which can be applied to improve transparency and trustworthiness of AI-generated content in enterprise or consumer apps."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's communication pipelines for potential trust breaches by mapping out inferential chains (e.g., how user queries are processed through LLMs and external tools) and implement audit logs to track distortions or omissions.",
-              "note": "Focus on high-stakes applications like customer support or content generation where trust is critical."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783719258458-b2ppf3",
-                "title": "Adversarial Social Epistemology for Assemblies of Humans and Large Language Models",
-                "url": "https://arxiv.org/abs/2607.07760",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-b2ppf3-0",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-b2ppf3-1",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-b2ppf3-2",
-                "label": "Trust & Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783719258458-3lacdx",
-            "title": "New Survey Maps LLM Medical Reasoning: 5 Levels of Competency",
-            "tldr": "A comprehensive survey introduces a five-level competency scheme for medical LLMs (from recall to dynamic case management), benchmarks 18 models, and finds specialist models excel at diagnosis while general models lead in decision support. This provides a framework for founders to evaluate and position their AI in healthcare.",
-            "whyItMatters": [
-              "Business impact: Offers a clear framework to assess where your medical AI product fits in the clinical workflow, helping differentiate from competitors and target specific use cases.",
-              "Technical impact: Highlights that specialist models outperform in diagnosis but general models are better for dialogue—guiding model selection and fine-tuning strategies."
-            ],
-            "whatToTry": {
-              "description": "Use the five-level competency scheme (knowledge recall, comprehension, application, analysis, dynamic case management) to map your AI product's capabilities against clinical needs. Identify gaps and prioritize development on the level where your target users (e.g., triage nurses vs. specialists) need the most support.",
-              "note": "The benchmark dataset covers 18 models—consider testing your model against it to validate positioning."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783719258458-3lacdx",
-                "title": "Aligning Clinical Needs and AI Capabilities: A Survey on LLMs for Medical Reasoning",
-                "url": "https://arxiv.org/abs/2607.07761",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-3lacdx-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-3lacdx-1",
-                "label": "Healthcare",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-3lacdx-2",
-                "label": "Benchmark",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1783719258458-1sru5h",
-            "title": "Alignment Plausibility: New Standard for Safe AI in Healthcare",
-            "tldr": "A new paper proposes 'alignment plausibility' as a structured framework for ensuring LLMs in mental health are safe, drawing from clinical practice norms. It addresses reactive safety measures by advocating for explicit value specification, training, and oversight, offering a regulatory blueprint for founders building health AI.",
-            "whyItMatters": [
-              "Business impact: Founders can use this framework to preempt regulatory scrutiny and build trust with healthcare partners, reducing liability risks from subtle harms like dependency or boundary erosion.",
-              "Technical impact: Provides a concrete methodology for aligning models beyond surface-level safety, focusing on long-term deployment monitoring and value embedding during training."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI safety pipeline against the three levels: (1) document explicit clinical values (e.g., from APA guidelines), (2) integrate these into RLHF or fine-tuning, and (3) set up deployment monitoring for drift (e.g., user dependency metrics). Start with a pilot for mental health features.",
-              "note": "Focus on codifying values from established clinical ethics codes first, as this is the most actionable step for early-stage products."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1783719258458-1sru5h",
-                "title": "Alignment Plausibility: A New Standard for Assuring AI in Healthcare",
-                "url": "https://arxiv.org/abs/2607.07766",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-1sru5h-0",
-                "label": "Alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-1sru5h-1",
-                "label": "Healthcare",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1783719258458-1sru5h-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1783719258358-e3a81q",
-            "title": "Apple Sues OpenAI for Allegedly Stealing Hardware Secrets",
-            "tldr": "Apple has filed a lawsuit against OpenAI, accusing the company of encouraging former employees to bring confidential hardware IP, including presentations, prototypes, and supplier details. This legal battle highlights growing tensions over talent poaching and IP protection in AI.",
-            "whyItMatters": [
-              "Founders building AI products should be aware of the legal risks around hiring from competitors, especially regarding confidential information and non-disclosure agreements.",
-              "The case could set precedents for how courts handle IP theft in the AI industry, affecting talent mobility and competitive practices."
-            ],
-            "whatToTry": {
-              "description": "Review your company's hiring and onboarding processes to ensure new hires do not bring confidential materials from previous employers. Implement clear IP policies and training for employees to avoid legal exposure.",
-              "note": "Consider consulting with legal counsel to audit your IP protection practices, especially if you recruit from major tech companies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1783719258358-e3a81q",
-                "title": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
-                "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1783719258358-e3a81q-0",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1783719258358-e3a81q-1",
-                "label": "Legal",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 10 Jul 2026 20:44:05 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
       }
