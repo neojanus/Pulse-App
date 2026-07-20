@@ -434,6 +434,433 @@
         "totalReadTimeMinutes": 21,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-07-20-afternoon",
+        "period": "afternoon",
+        "date": "2026-07-20",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: GraphDx: Multi-Agent Framework Slashes Diagnostic Costs by 54%, Cura 1T: Healthcare LLM with Self-Evolution Loop, AnovaX: Open-Source Local Multi-Agent Voice Assistant with LLM Planning.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1784561111492-racgsf",
+            "title": "GraphDx: Multi-Agent Framework Slashes Diagnostic Costs by 54%",
+            "tldr": "GraphDx is a new multi-agent framework that combines LLMs with medical knowledge graphs to improve diagnostic accuracy from 50-68% to 79-93% while cutting test costs by 20-54%. This is a practical approach to making LLM-based diagnosis more economical and interpretable.",
+            "whyItMatters": [
+              "For founders building AI healthcare products, this framework demonstrates a clear path to reducing operational costs while improving accuracy—a key selling point for hospital adoption.",
+              "The knowledge graph + multi-agent architecture is a reusable pattern that can be applied to other cost-sensitive sequential decision-making domains (e.g., legal discovery, hardware troubleshooting)."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own sequential diagnosis or decision-making pipeline: identify where costs (time, money, resources) are highest, then prototype a knowledge graph that encodes cost attributes alongside relevance. Use a multi-agent setup where one agent handles language and another does deterministic scoring on the graph to reduce unnecessary steps.",
+              "note": "Start with a small domain-specific graph (e.g., 100-200 nodes) and test with open-source LLMs like Llama-3.3 to validate cost savings before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-racgsf",
+                "title": "GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis",
+                "url": "https://arxiv.org/abs/2607.15280",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-racgsf-0",
+                "label": "GraphDx",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-racgsf-1",
+                "label": "Multi-Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-racgsf-2",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-g813fa",
+            "title": "Cura 1T: Healthcare LLM with Self-Evolution Loop",
+            "tldr": "Cura 1T is a new healthcare-specialized LLM that uses a human-gated self-evolution loop to improve across patient consultation, clinical reasoning, and EHR tool use, outperforming frontier models on healthcare benchmarks while staying competitive on general reasoning.",
+            "whyItMatters": [
+              "For founders building healthcare AI, this demonstrates a viable approach to specialized model training that avoids catastrophic forgetting across diverse clinical tasks.",
+              "The self-evolution loop methodology offers a blueprint for creating domain-specific models that can adapt to new failure modes without generic data updates."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your healthcare AI product can benefit from a similar human-gated self-evolution loop: start by identifying the key failure modes in your current model across different tasks (e.g., consultation, diagnosis, EHR integration), then design a targeted data mixture from those failures to retrain iteratively.",
+              "note": "This approach requires careful curation of synthetic and real examples; consider using a small human-in-the-loop team to validate improvements."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-g813fa",
+                "title": "Cura 1T: Specialized Model for Agentic Healthcare",
+                "url": "https://arxiv.org/abs/2607.15314",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-g813fa-0",
+                "label": "Cura 1T",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-g813fa-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-g813fa-2",
+                "label": "Self-evolution",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-cq18kk",
+            "title": "AnovaX: Open-Source Local Multi-Agent Voice Assistant with LLM Planning",
+            "tldr": "AnovaX is a new local-first desktop voice assistant that runs entirely on your computer, using an LLM planner (Gemini) to orchestrate typed agents for app control, typing, browsing, and more. It features adaptive recovery, a safety layer, and remote phone control, offering a transparent, extensible alternative to cloud-based assistants.",
+            "whyItMatters": [
+              "Provides a blueprint for building local, privacy-preserving AI agents that can control desktop applications, reducing reliance on cloud APIs and fixed skill sets.",
+              "Demonstrates a practical architecture for multi-agent orchestration with typed executors, recovery loops, and speculative execution, which can be adapted for other AI product use cases."
+            ],
+            "whatToTry": {
+              "description": "Clone the AnovaX repository and experiment with its modular architecture. Start by running the basic voice assistant to see how the LLM planner generates JSON tool calls, then customize the agent classes (e.g., AppAgent, BrowserAgent) for your own desktop automation tasks.",
+              "note": "Focus on the adaptive recovery loop and safety layer—these are key differentiators for building reliable, production-ready agents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-cq18kk",
+                "title": "AnovaX: A Local, Multi-Agent Voice Assistant with LLM Planning, Typed Executors, and Adaptive Recovery",
+                "url": "https://arxiv.org/abs/2607.15367",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-cq18kk-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-cq18kk-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-cq18kk-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-5hzxmp",
+            "title": "Why AI Reviewers Fail: Critique Quality ≠ Better Math Reasoning",
+            "tldr": "A new study on multi-agent math reasoning reveals that having a highly precise reviewer (0.861 precision) doesn't guarantee better outcomes than a less precise one (0.644) if the critique isn't acted upon. This challenges the common hierarchical 'planner-executor-reviewer' design, showing that peer discussion outperforms it in hard problems, and forcing acknowledgment of feedback can actually hurt accuracy.",
+            "whyItMatters": [
+              "For founders building multi-agent systems: This shows that investing in a 'perfect' reviewer may be wasted if the system doesn't effectively integrate feedback into the next iteration. Consider simpler, more collaborative architectures like broadcast-style discussion for complex tasks.",
+              "Technically, the finding that critique uptake is separable from detection quality means you should measure not just how often your reviewer is right, but how often its feedback changes the output. This could lead to new evaluation metrics for agent workflows."
+            ],
+            "whatToTry": {
+              "description": "Audit your multi-agent system's feedback loop: Track the rate at which reviewer critiques actually change the next candidate output. If it's low, experiment with embedding reviewer guidance directly into the solver's working context (e.g., as a prompt prefix) rather than as a separate 'acknowledgment' step. Also, test replacing a hierarchical pipeline with a peer discussion round for hard problems.",
+              "note": "The study used math reasoning, but the principle likely applies to other domains like code generation or document analysis where iterative refinement is key."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-5hzxmp",
+                "title": "Precise but Uncoupled: Reviewer Precision Does Not Guarantee Critique Uptake in Multi-Agent Math Reasoning",
+                "url": "https://arxiv.org/abs/2607.15388",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-5hzxmp-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-5hzxmp-1",
+                "label": "AI Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-5hzxmp-2",
+                "label": "Model",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-r68xxe",
+            "title": "Explainable RL: Turning Black Box Policies into Prolog Programs",
+            "tldr": "A new paper shows how to convert deep reinforcement learning policies into executable Prolog programs that are readable, verifiable, and editable, with guarantees on performance and fidelity. This bridges the gap between opaque neural networks and transparent logic, enabling safer AI deployment.",
+            "whyItMatters": [
+              "For founders building AI in regulated industries (e.g., healthcare, finance, autonomous systems), this offers a path to explainable and certifiable decision-making without sacrificing performance.",
+              "The ability to edit the distilled logic program and certify improvements opens up new workflows for iterative model refinement and debugging, reducing reliance on black-box retraining."
+            ],
+            "whatToTry": {
+              "description": "If you're developing RL-based products, explore integrating Prolog-based explainability layers for critical decisions. Start by logging policy decisions and testing the distillation pipeline on a small-scale task to evaluate readability and performance trade-offs.",
+              "note": "The method currently works for finite MDPs and continuous observations with exponential cost in high dimensions—focus on low-dimensional or discrete action spaces first."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-r68xxe",
+                "title": "From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems",
+                "url": "https://arxiv.org/abs/2607.15459",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-r68xxe-0",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-r68xxe-1",
+                "label": "Explainable AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-r68xxe-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1784561111366-pha3q5",
+            "title": "YouTube cracks down on AI slop: new monetization rules",
+            "tldr": "YouTube updated its monetization policies to explicitly ban low-quality AI-generated and upsetting videos from earning ad revenue, signaling a crackdown on content farms and spammy AI content that could affect creators and tool builders.",
+            "whyItMatters": [
+              "Business impact: Founders building AI content generation tools must ensure their output meets YouTube's quality standards to avoid demonetization for clients or users.",
+              "Technical impact: AI video generators and automation platforms need to implement content quality checks and avoid producing 'slop' that violates these policies."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI content pipeline for low-quality or upsetting patterns (e.g., repetitive, misleading, or shock-value videos) and add moderation filters to comply with YouTube's updated rules before they are enforced.",
+              "note": "Focus on adding human review or automated quality scoring to flag potential violations early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1784561111366-pha3q5",
+                "title": "YouTube clarifies policies around AI slop and upsetting videos",
+                "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1784561111366-pha3q5-0",
+                "label": "topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1784561111366-pha3q5-1",
+                "label": "tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 15:23:06 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-36bzj9",
+            "title": "New Framework Makes LLM Causal Reasoning Auditable & Explicit",
+            "tldr": "A new paper introduces Causal-Audit, a framework that replaces opaque LLM causal reasoning with explicit, graph-based inference. It constructs a target-aware causal graph and aggregates evidence across paths, outperforming existing methods on benchmarks while providing auditable reasoning traces.",
+            "whyItMatters": [
+              "For founders building AI products that require explainable decisions (e.g., healthcare, finance, legal), this offers a path to move beyond black-box LLM reasoning to verifiable, auditable outputs.",
+              "The target-aware graph construction reduces noise and spurious correlations, potentially improving reliability in complex, intervention-based queries without fine-tuning."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current LLM-based reasoning pipeline for tasks involving causal or intervention-based questions. Consider prototyping a modular graph-based approach using the paper's four-stage framework (graph construction, path aggregation, etc.) to improve interpretability and robustness, especially in regulated domains.",
+              "note": "The framework is research-stage; expect implementation complexity and potential latency trade-offs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-36bzj9",
+                "title": "Causal-Audit: Explicit and Auditable Graph-based Reasoning via Target-Aware Causal Chain Construction",
+                "url": "https://arxiv.org/abs/2607.15281",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-36bzj9-0",
+                "label": "Causal Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-36bzj9-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-36bzj9-2",
+                "label": "Interpretability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-k45c3i",
+            "title": "New Benchmark Exposes AI's Limits on Construction Drawings",
+            "tldr": "DrawingVQA is the first benchmark testing MLLMs on real construction drawings, revealing a significant performance gap vs. experts, especially for deep reasoning. This matters for founders building AI for AEC (architecture, engineering, construction) as it highlights a concrete domain need.",
+            "whyItMatters": [
+              "Business impact: Identifies a clear market opportunity for domain-specific AI tools in the AEC industry, where current general MLLMs underperform on real-world engineering documents.",
+              "Technical impact: Provides a structured evaluation framework (3 reasoning depths, 7 engineering + 4 MLLM dimensions) to guide model development and fine-tuning for complex visual-textual reasoning."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for AEC, use the DrawingVQA benchmark (33 drawings, 92 Q&A pairs) to evaluate your model's performance on construction drawings. Focus on the 'domain-expert reasoning' depth to identify gaps and prioritize fine-tuning on symbolic notation, tabular data, and annotations.",
+              "note": "The benchmark is small but curated; consider augmenting with your own proprietary drawings for more robust evaluation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-k45c3i",
+                "title": "DrawingVQA: A Real-World Benchmark for Multi-Depth Visual-Textual Reasoning on Construction Drawings",
+                "url": "https://arxiv.org/abs/2607.15418",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-k45c3i-0",
+                "label": "DrawingVQA",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-k45c3i-1",
+                "label": "MLLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-k45c3i-2",
+                "label": "AEC",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-g75lsb",
+            "title": "Coding Agents: Executable Models, Simplification, Verification for ARC-AGI-3",
+            "tldr": "A new study systematically tests whether executable world models, scheduled simplification, and exact replay verification improve coding agents on ARC-AGI-3. Key finding: verification boosts performance most, but simpler textual agents can beat executable ones—insights for designing AI agents.",
+            "whyItMatters": [
+              "For founders building AI agents: shows that adding complex executable models isn't always better; simpler textual approaches can outperform, saving engineering time and cost.",
+              "Technical insight: verification (exact replay) consistently improves agent performance, suggesting a practical design pattern for debugging and reliability in agentic systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building a coding agent, test a lightweight textual baseline first before adding executable world models. Implement a verification step that replays and checks outputs against recorded observations to boost reliability.",
+              "note": "The study used GPT-5.4/5.5/5.6; results may vary with other models, but the pattern is worth validating on your own tasks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-g75lsb",
+                "title": "Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?",
+                "url": "https://arxiv.org/abs/2607.15439",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-g75lsb-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-g75lsb-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1784561111492-aiaii3",
+            "title": "MAR-12: Multi-angle reasoning for harmful meme detection",
+            "tldr": "A new framework, MAR-12, uses VLMs to analyze memes from 12 structured perspectives (humor/hate theories) with attention and prototype-based classification, achieving 80.3% humor and 75.9% hate detection accuracy—outperforming SOTA while providing explainable outputs.",
+            "whyItMatters": [
+              "For founders building content moderation or social media tools, this offers a more nuanced, explainable approach to detecting harmful memes that blend humor and hate, reducing false positives and improving trust.",
+              "Technically, the role-aware soft-gated attention and prototype-based classifier provide a template for building interpretable multimodal systems, which is critical for regulatory compliance and user transparency."
+            ],
+            "whatToTry": {
+              "description": "If you're developing a content moderation pipeline, prototype a multi-perspective analysis layer using a VLM (e.g., LLaVA or GPT-4V) to generate structured reasoning from humor and hate theories before classification. This can improve both accuracy and explainability for edge cases like sarcastic memes.",
+              "note": "Start with a small dataset of memes to test the 12-perspective approach; the paper's framework is research-grade but the concept is directly adaptable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1784561111492-aiaii3",
+                "title": "Beyond a Joke: Multi-Angle Reasoning for Detecting and Explaining Harmful Humor in Memes",
+                "url": "https://arxiv.org/abs/2607.15442",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-aiaii3-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1784561111492-aiaii3-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 20 Jul 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 21,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
