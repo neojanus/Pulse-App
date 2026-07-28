@@ -1,7 +1,435 @@
 [
   {
-    "date": "2026-07-27",
+    "date": "2026-07-28",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-07-28-morning",
+        "period": "morning",
+        "date": "2026-07-28",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: Small Model + Smart Workflow Beats Frontier LLMs in Medical Diagnosis, Programmatic judges: cheaper, faster, transparent AI eval, LLMs Flip Answers on Same Question: 23% Instability Found.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1785232865975-k6h6sl",
+            "title": "Small Model + Smart Workflow Beats Frontier LLMs in Medical Diagnosis",
+            "tldr": "A new paper shows that a 7B model with a structured 5-stage agentic workflow achieves 60% diagnostic accuracy, outperforming Claude and Gemini by 9+ points at 35-45% lower cost. This demonstrates that workflow design can dramatically boost small model performance, challenging the assumption that bigger models are always better.",
+            "whyItMatters": [
+              "For founders building AI products in regulated or high-stakes domains (healthcare, legal, finance), this proves that a small model with a well-designed agentic pipeline can outperform frontier models at a fraction of the cost and latency.",
+              "The 36-point accuracy gain from workflow alone (vs. the same model without it) shows that process constraints and structured reasoning can compensate for model size, enabling cost-effective, auditable AI systems."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI pipeline: break down your task into discrete stages (e.g., extraction, retrieval, reasoning, verification) and enforce structured outputs at each step. Start with a small, specialized model (like a 7B medical model) and add RAG and explicit evidence triangulation before considering a larger model.",
+              "note": "This approach works best for multi-step reasoning tasks where accuracy and auditability matter more than raw fluency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-k6h6sl",
+                "title": "DeepLens Diagnosis Agent: Agentic Workflow Design Lets a Small Reasoning Model Compete with Frontier LLMs",
+                "url": "https://arxiv.org/abs/2607.22555",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-k6h6sl-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-k6h6sl-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785232865975-kecywi",
+            "title": "Programmatic judges: cheaper, faster, transparent AI eval",
+            "tldr": "A new paper introduces PAJAMA, a system that distills LLM judge logic into small, transparent programs, matching 13B LLM performance at a fraction of cost and latency. This could revolutionize how AI products handle evaluation and reward signals.",
+            "whyItMatters": [
+              "Dramatically reduces evaluation costs (no per-sample API calls) and latency, enabling scalable, real-time quality checks for AI products.",
+              "Transparent, editable judges allow founders to inspect and customize evaluation criteria, improving reliability and debugging."
+            ],
+            "whatToTry": {
+              "description": "For AI product teams using LLM-as-a-judge for evaluation or RLHF reward modeling, experiment with distilling your judge logic into a committee of small programs using the PAJAMA approach. Start with a high-volume evaluation task to measure cost savings and accuracy trade-offs.",
+              "note": "The paper shows programmatic judges match 13B LLM performance; consider using them as a routing layer to escalate only low-confidence cases to an LLM."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-kecywi",
+                "title": "Codifying the Judge: Scalable Evaluation via Program Distillation",
+                "url": "https://arxiv.org/abs/2607.22561",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785232865975-kiw1bp",
+            "title": "LLMs Flip Answers on Same Question: 23% Instability Found",
+            "tldr": "A new study shows LLMs often give different answers to meaning-preserving paraphrases of the same question, with flip rates exceeding 23%. This reveals that standard accuracy metrics hide significant unreliability, but a simple self-paraphrasing trick can recover latent knowledge and improve performance.",
+            "whyItMatters": [
+              "For founders building AI products, this highlights a critical reliability gap: your app may give inconsistent answers to users asking the same thing in different ways, eroding trust and causing unpredictable behavior.",
+              "The self-paraphrasing strategy offers a low-cost, inference-time fix to boost consistency without retraining, making it immediately actionable for improving product robustness."
+            ],
+            "whatToTry": {
+              "description": "Implement a self-paraphrasing pipeline: for each user query, generate 2-3 paraphrases using the same LLM, run them all, and take the majority answer or the most confident one. This can reduce flip rates and surface correct answers that might otherwise be missed.",
+              "note": "Start with simple prompts like 'Rephrase the following question while keeping the meaning identical:' to avoid overcomplicating your system."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-kiw1bp",
+                "title": "Same Question, Different Answers: Evaluating LLM Reliability Beyond Accuracy",
+                "url": "https://arxiv.org/abs/2607.22554",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-0",
+                "label": "Reliability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785232865975-3qbxwp",
+            "title": "SF-AMS: Forget Smarter, Not Harder for LLM Agent Memory",
+            "tldr": "A new framework, SF-AMS, improves LLM agent memory by strategically forgetting irrelevant info, boosting multi-hop reasoning by up to 9.65 F1. This is a practical breakthrough for building reliable long-context agents.",
+            "whyItMatters": [
+              "Business impact: Enables more reliable AI agents for complex tasks like customer support, research, and automation, reducing errors from context overload.",
+              "Technical impact: Provides a drop-in memory management strategy that works across models (Qwen, GPT-4o-mini), making it easy to integrate into existing agent architectures."
+            ],
+            "whatToTry": {
+              "description": "Implement a utility-driven memory pruning mechanism in your agent: instead of using fixed decay or retrieval, score each memory unit by its usage redundancy and temporal relevance, and retain only the top-k most important ones for each reasoning step.",
+              "note": "Start with a simple scoring function (e.g., recency + frequency) and test on your specific multi-hop tasks before adopting the full composite scoring."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-3qbxwp",
+                "title": "SF-AMS: Strategic Forgetting for Structured Memory in LLM Agent",
+                "url": "https://arxiv.org/abs/2607.22562",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-3qbxwp-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-3qbxwp-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1785232865713-vmsg4x",
+            "title": "Nadella: Don't Bet Your Company on One AI Model",
+            "tldr": "Satya Nadella warns that companies relying on a single AI model without building their own models or using AI gateways to decouple prompts from the model risk failure. This underscores the strategic importance of model diversity and infrastructure abstraction for AI product builders.",
+            "whyItMatters": [
+              "Business impact: Founders must avoid vendor lock-in by designing AI stacks that support model switching, reducing risk from model changes, pricing shifts, or outages.",
+              "Technical impact: Implementing AI gateways (e.g., for prompt routing, caching, and fallback) becomes a core architectural decision, not an afterthought."
+            ],
+            "whatToTry": {
+              "description": "Audit your current AI stack: identify if you rely on a single model provider. Start prototyping with an AI gateway (like open-source options or cloud-native services) to abstract model calls, enabling easy swapping between models (e.g., GPT-4, Claude, Llama) and adding fallback logic.",
+              "note": "Even if you don't build your own model, a gateway layer gives you flexibility and resilience—critical as the AI landscape evolves rapidly."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1785232865713-vmsg4x",
+                "title": "Satya Nadella says companies that trust one AI for everything may not survive",
+                "url": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-vmsg4x-0",
+                "label": "Topic",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-vmsg4x-1",
+                "label": "Tool",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 27 Jul 2026 21:17:11 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1785232865713-quu1gr",
+            "title": "Claude shared chats leaked on Google: what founders must do now",
+            "tldr": "Anthropic's Claude share chat feature inadvertently exposed private conversations and artifacts to Google search indexing, potentially leaking sensitive data. This is a critical privacy warning for any founder using Claude for internal work.",
+            "whyItMatters": [
+              "Business impact: Shared chat URLs containing proprietary code, strategy, or customer data may be publicly searchable, risking IP theft and compliance violations.",
+              "Technical impact: Founders must immediately audit shared links, disable public sharing for sensitive projects, and implement stricter access controls."
+            ],
+            "whatToTry": {
+              "description": "Immediately review all Claude shared chat links in your workspace. Revoke any that are not essential, and ensure new shares are set to 'private' or require authentication. Also, check Google Search Console for indexed URLs containing your domain or project names.",
+              "note": "Consider using Claude's project-level permissions to limit sharing to team members only, and educate your team on the risks of public links."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1785232865713-quu1gr",
+                "title": "PSA: Your Claude shared chats and Artifacts may have ended up on Google",
+                "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-0",
+                "label": "Anthropic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-1",
+                "label": "Privacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-2",
+                "label": "Security",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 27 Jul 2026 20:19:42 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1785232865735-eg5nbj",
+            "title": "Hugging Face Deepfake Nudes Problem: What It Means for AI Devs",
+            "tldr": "Researchers found that top image editing models on Hugging Face can easily generate explicit deepfakes, with 1,000 prompts showing how users exploit them. This highlights urgent moderation and safety gaps for AI platforms.",
+            "whyItMatters": [
+              "Business impact: Founders building on open-source models face reputational and legal risks if their platforms enable nonconsensual deepfakes; proactive safety measures are now a competitive necessity.",
+              "Technical impact: The ease of misuse underscores the need for robust content filters, prompt monitoring, and model guardrails—expect stricter platform policies and compliance demands."
+            ],
+            "whatToTry": {
+              "description": "Audit your model's image generation pipeline for explicit content risks. Implement prompt-level filtering (e.g., block keywords, use safety classifiers) and add output moderation (e.g., NSFW detection APIs) before deployment.",
+              "note": "Consider using Hugging Face's own safety tools or third-party services like Azure Content Safety to reduce liability."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1785232865735-eg5nbj",
+                "title": "Hugging Face Has a Deepfake Nudes Problem",
+                "url": "https://www.wired.com/story/hugging-face-has-a-nonconsensual-deepfakes-problem/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-0",
+                "label": "Hugging Face",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-1",
+                "label": "Deepfakes",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-2",
+                "label": "Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 05:30:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1785232865713-0x4s55",
+            "title": "Cursor Targets India with Localized Pricing, Eyes SpaceX Deal",
+            "tldr": "Cursor, the AI coding assistant, is doubling down on India—its third-largest market—with localized pricing, local hiring, and enterprise sales expansion, signaling a strategic push ahead of its reported SpaceX acquisition.",
+            "whyItMatters": [
+              "For founders building AI products: India's developer market is massive and price-sensitive; localized pricing can unlock a high-growth user base and reduce churn.",
+              "Technical impact: Cursor's expansion suggests its AI models are optimized for diverse coding workflows, which could influence how other AI tools approach regional customization."
+            ],
+            "whatToTry": {
+              "description": "If you're targeting developers in emerging markets, consider offering tiered pricing or region-specific features (e.g., local language support, payment methods) to capture price-sensitive segments. Test this with a pilot in India or similar markets.",
+              "note": "Watch for Cursor's pricing details post-launch—they may set a benchmark for AI tool localization."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1785232865713-0x4s55",
+                "title": "Cursor makes its biggest India push yet ahead of SpaceX acquisition with localized pricing",
+                "url": "https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-0",
+                "label": "Cursor",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-1",
+                "label": "Pricing Strategy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-2",
+                "label": "India Market",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 04:30:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1785232865975-5vb89k",
+            "title": "C-VCE: Concept-Based Counterfactual Explanations for Vision Models",
+            "tldr": "A new diffusion framework, C-VCE, generates visual counterfactual explanations by embedding a classifier with a concept bottleneck layer, enabling human-interpretable edits without relying on fragile external classifiers. This makes it more robust and practical for safety-critical vision applications like medical imaging.",
+            "whyItMatters": [
+              "Business impact: Enables safer deployment of vision models in regulated industries (e.g., healthcare, autonomous driving) by providing interpretable, minimal edits that explain model decisions, reducing liability and improving trust.",
+              "Technical impact: Eliminates dependency on separate noise-robust classifiers, simplifying the pipeline and improving edit quality and proximity to original images, which is a key advancement for explainable AI."
+            ],
+            "whatToTry": {
+              "description": "If you're building vision AI for high-stakes domains, evaluate C-VCE for generating counterfactual explanations in your model validation pipeline. Start by testing on your own dataset to see if concept-based edits improve interpretability over existing methods like diffusion-based baselines.",
+              "note": "The paper uses CelebA; ensure your domain has well-defined semantic concepts for the bottleneck layer to be effective."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-5vb89k",
+                "title": "Concept-based Visual Counterfactual Explanations with Diffusion Models",
+                "url": "https://arxiv.org/abs/2607.22544",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-5vb89k-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-5vb89k-1",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785232865975-ad59wo",
+            "title": "MIITA: Memory-Based Continual Learning for Small Language Models",
+            "tldr": "MIITA introduces a memory-induced inference-time adaptation framework that enables small language models to learn continuously without catastrophic forgetting, using compact prototypes and gated hidden-state adjustments instead of parameter updates.",
+            "whyItMatters": [
+              "Enables resource-constrained SLMs to adapt to new tasks without forgetting, critical for edge deployments and real-time applications.",
+              "Avoids costly retraining or prompt engineering, offering a lightweight alternative for founders building adaptive AI products on limited hardware."
+            ],
+            "whatToTry": {
+              "description": "If you're deploying SLMs in production, consider implementing a memory buffer with correction-direction prototypes to handle domain shifts or new user intents without full model updates. Start with a small prototype store (e.g., 100 examples) and test on a single task sequence.",
+              "note": "MIITA requires supervised data for prototypes; ensure you have labeled examples for each new task or domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785232865975-ad59wo",
+                "title": "MIITA: Memory-Induced Inference-Time Adaptation for Continual Learning with Small Language Models",
+                "url": "https://arxiv.org/abs/2607.22556",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-0",
+                "label": "Continual Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-1",
+                "label": "Small Language Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-2",
+                "label": "Inference-Time Adaptation",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 20,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-07-27",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-07-27-morning",
@@ -1265,7 +1693,7 @@
   },
   {
     "date": "2026-07-26",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Jul 26",
     "briefings": [
       {
         "id": "briefing-2026-07-26-morning",
@@ -4290,876 +4718,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 22 Jul 2026 16:23:09 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-21",
-    "displayDate": "Tuesday, Jul 21",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-21-afternoon",
-        "period": "afternoon",
-        "date": "2026-07-21",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: PlanFlip: New Attack Breaks Multi-Agent LLM Systems via Planner Injection, Nvidia's Vera Rubin: Aiming to Own Every AI Data Center Chip, Deezer: 50%+ daily uploads are AI-generated – a signal for AI content detection.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1784647244947-dalasu",
-            "title": "PlanFlip: New Attack Breaks Multi-Agent LLM Systems via Planner Injection",
-            "tldr": "Researchers introduce PlanFlip, a framework of four prompt injection attacks targeting the planning phase of multi-agent LLM systems. Key finding: stronger models like GPT-5 are more vulnerable (68% attack success), while reasoning-augmented models like DeepSeek-R1 resist all attacks. This is critical for any founder building multi-agent architectures.",
-            "whyItMatters": [
-              "Multi-agent systems are a growing trend in AI products; this paper reveals a fundamental security flaw in the planning phase that can cascade to corrupt all downstream agents.",
-              "The finding that capability amplifies vulnerability (stronger models are more susceptible) challenges the assumption that using frontier models is safer, forcing a rethink of agent architecture security."
-            ],
-            "whatToTry": {
-              "description": "Audit your multi-agent system's planning phase: implement a GoalAnchorCheck (validate the planner's goal against the original user intent before execution) and CrossAgentConsensus (require multiple independent agents to agree on sub-task plans, especially if using same-backbone models).",
-              "note": "Avoid homogeneous pipelines (same model for planner and critic) as they exhibit a correlated-agent blind spot where attacks restructure plans without detection."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1784647244947-dalasu",
-                "title": "PlanFlip: Attacking Multi-Agent LLM Systems via Planning-Phase Prompt Injection",
-                "url": "https://arxiv.org/abs/2607.16199",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-dalasu-0",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-dalasu-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-dalasu-2",
-                "label": "Prompt Injection",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1784647244444-w53m9g",
-            "title": "Nvidia's Vera Rubin: Aiming to Own Every AI Data Center Chip",
-            "tldr": "Nvidia's Vera Rubin platform integrates CPUs and GPUs into a single system, signaling a strategic push to dominate all layers of AI infrastructure, from training to inference. This move could reshape the hardware landscape for AI startups, increasing dependency on Nvidia's ecosystem.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products may face higher costs and vendor lock-in as Nvidia consolidates hardware, potentially limiting flexibility in choosing compute resources.",
-              "Technical impact: The integration of CPUs and GPUs could simplify system design and reduce latency for AI workloads, but may also stifle innovation from competitors like AMD or Intel."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI infrastructure for dependency on Nvidia hardware. Consider diversifying compute resources by testing alternative chips (e.g., AMD Instinct, Intel Gaudi) or cloud providers offering non-Nvidia options to mitigate lock-in risk.",
-              "note": "Start with small-scale experiments to benchmark performance and cost for your specific AI models before committing to a multi-vendor strategy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1784647244444-w53m9g",
-                "title": "Nvidia Wants to Own Every Chip Inside AI Data Centers",
-                "url": "https://www.wired.com/story/nvidia-wants-to-own-every-chip-inside-an-ai-data-center/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1784647244444-w53m9g-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784647244444-w53m9g-1",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784647244444-w53m9g-2",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 15:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784647244544-ias66x",
-            "title": "Deezer: 50%+ daily uploads are AI-generated – a signal for AI content detection",
-            "tldr": "Deezer reports over 90,000 AI-generated tracks uploaded daily, making up more than half of new content. This underscores the urgent need for AI detection and content moderation tools, impacting platforms and creators.",
-            "whyItMatters": [
-              "Business impact: Founders building content platforms must prioritize AI detection to maintain trust, avoid copyright issues, and comply with emerging regulations.",
-              "Technical impact: The scale of AI-generated content creates opportunities for startups offering detection, watermarking, and attribution solutions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating AI content detection APIs (e.g., from companies like Hive or Originality.ai) into your product to filter or label AI-generated uploads, especially if you operate a UGC platform.",
-              "note": "Start with a small-scale test to measure accuracy and false positive rates before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784647244544-ias66x",
-                "title": "Music streamer Deezer says more than 50% of daily uploads are AI-generated",
-                "url": "https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-ias66x-0",
-                "label": "AI content detection",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-ias66x-1",
-                "label": "Content moderation",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-ias66x-2",
-                "label": "Music streaming",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 13:27:42 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784647244544-xxfidh",
-            "title": "Gritt exits stealth with $34M for construction robots",
-            "tldr": "Gritt raised $34M to deploy robots for solar plant construction, starting with heavy lifting and precision tasks, with plans to expand to general construction. This signals growing investor confidence in robotics for physical labor automation.",
-            "whyItMatters": [
-              "Business impact: Opens a new market for AI-powered robotics in construction, a sector with chronic labor shortages and high demand for renewable energy infrastructure.",
-              "Technical impact: Validates that complex, unstructured environments like construction sites can be automated, pushing the frontier of embodied AI and robot manipulation."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own product for opportunities in construction automation—consider partnerships with solar developers or construction firms to integrate AI for site monitoring, material handling, or design optimization.",
-              "note": "Start with a narrow use case (e.g., solar panel placement) to prove ROI before expanding to broader construction tasks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784647244544-xxfidh",
-                "title": "Gritt exits stealth with $32 million for robots to build solar plants — then, everything else",
-                "url": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-xxfidh-0",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-xxfidh-1",
-                "label": "Construction",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784647244544-xxfidh-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1784647244444-0y85ui",
-            "title": "Army Runs Out of AI Tokens: A Cautionary Tale for Founders",
-            "tldr": "The U.S. Army sent an email warning personnel they were rapidly depleting their AI tokens, highlighting the scalability and cost challenges of enterprise AI adoption. This signals a critical inflection point for founders building AI products: token management and cost control are now top-tier concerns.",
-            "whyItMatters": [
-              "Business impact: Token-based pricing models are becoming a bottleneck for large-scale AI deployment, forcing organizations to ration usage. Founders must design for cost efficiency or risk losing enterprise customers.",
-              "Technical impact: This underscores the need for smarter token optimization, caching, and model selection strategies to avoid service interruptions and budget overruns."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's token consumption patterns today. Implement usage dashboards and set hard caps per user or feature to prevent runaway costs. Consider offering tiered plans with token limits to align with enterprise budgets.",
-              "note": "Start with a simple token budget per API call and monitor weekly trends—this is a low-effort, high-impact fix."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1784647244444-0y85ui",
-                "title": "The Army Is Burning Through Its AI Tokens",
-                "url": "https://www.wired.com/story/the-army-is-burning-through-its-ai-tokens/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1784647244444-0y85ui-0",
-                "label": "Topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784647244444-0y85ui-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 09:30:00 +0000"
-          },
-          {
-            "id": "hn-48989701",
-            "title": "Qwen-Image-3.0: Authentic, Knowledge-Rich Image Generation",
-            "tldr": "Alibaba released Qwen-Image-3.0, a new image generation model emphasizing rich content, authentic details, and deep knowledge integration. The HackerNews discussion (382 points, 161 comments) signals strong community interest, likely due to its potential for more accurate and context-aware visual outputs compared to existing models.",
-            "whyItMatters": [
-              "For founders building AI products that require accurate visual content (e.g., e-commerce, education, marketing), this model could reduce hallucinations and improve detail fidelity, enabling more reliable image generation for customer-facing applications.",
-              "Technically, the 'deep knowledge' aspect suggests integration of structured knowledge bases, which could set a new standard for context-aware image generation, potentially lowering the need for manual prompt engineering and post-generation edits."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Qwen-Image-3.0 for your use case by testing its ability to generate images with specific, factual details (e.g., historical scenes, product specifications). Compare outputs against DALL-E 3 or Stable Diffusion on accuracy and richness. If it meets your quality bar, consider integrating it via API for tasks like automated ad creatives or educational illustrations.",
-              "note": "Check the official blog for API availability and pricing. Early adopters may get better performance as the model improves."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48989701",
-                "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
-                "url": "https://qwen.ai/blog?id=qwen-image-3.0",
-                "domain": "qwen.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48989701-0",
-                "label": "Qwen-Image-3.0",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48989701-1",
-                "label": "Image Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-48989701-2",
-                "label": "Alibaba",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-21T08:44:23Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1784647244946-076yiq",
-            "title": "RLHF Has a Rater State Bias Problem – Here’s How to Audit It",
-            "tldr": "A new paper identifies that RLHF preference data can encode rater stress or emotional state, introducing a structured bias that propagates into reward models and policies. The authors provide an audit framework with falsifiable predictions, making this a critical read for anyone building or fine-tuning models with human feedback.",
-            "whyItMatters": [
-              "Business impact: If your AI product relies on RLHF for alignment, undetected rater state bias can degrade model behavior over time, leading to inconsistent or unsafe outputs that erode user trust.",
-              "Technical impact: This paper offers a concrete audit protocol to detect and measure this bias, enabling teams to improve data quality and reward model robustness without starting from scratch."
-            ],
-            "whatToTry": {
-              "description": "Audit your existing RLHF preference dataset for rater state bias by analyzing temporal shifts in label distributions and lexical features (e.g., sentiment, urgency) across annotation sessions. Use the paper's five falsifiable predictions as a checklist to identify correlated shifts.",
-              "note": "Start with a small sample of your data to test the framework before scaling; the pilot study plan in the paper is designed for publicly available models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1784647244946-076yiq",
-                "title": "Rater State Bias in RLHF Preference Data: An Audit Framework",
-                "url": "https://arxiv.org/abs/2607.16195",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1784647244946-076yiq-0",
-                "label": "RLHF",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244946-076yiq-1",
-                "label": "Bias",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244946-076yiq-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1784647244947-i83j2c",
-            "title": "Deterministic Replay for AI Agents: Debugging Breakthrough",
-            "tldr": "A new open-source CLI tool, agrepl, enables deterministic replay of AI agent runs by intercepting all external interactions via a MITM proxy, achieving perfect replay fidelity and 98% latency reduction. This solves a critical debugging pain point for agent developers.",
-            "whyItMatters": [
-              "Eliminates non-determinism in agent debugging, allowing founders to reproduce and fix issues reliably instead of guessing from logs.",
-              "Reduces debugging time by orders of magnitude, accelerating iteration cycles for agent-based products."
-            ],
-            "whatToTry": {
-              "description": "Integrate agrepl into your agent development workflow to capture and replay agent runs. Start by running it alongside your agent to record traces, then use replay to isolate and fix bugs without relying on external APIs or network state.",
-              "note": "Requires Go runtime to build from source, but ships as a single static binary for easy deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1784647244947-i83j2c",
-                "title": "Deterministic Replay for AI Agent Systems",
-                "url": "https://arxiv.org/abs/2607.16200",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-i83j2c-0",
-                "label": "agrepl",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-i83j2c-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-i83j2c-2",
-                "label": "debugging",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1784647244947-vdeup0",
-            "title": "GOI: LLMs Auto-Discover Ontologies from Documents",
-            "tldr": "A new framework, Generative Ontology Induction (GOI), uses LLMs to automatically extract structured ontologies (entities, relationships, constraints) from document corpora, achieving 95-100% structural coverage across diverse domains. This eliminates manual schema engineering for AI systems.",
-            "whyItMatters": [
-              "Business impact: Reduces time and cost of building knowledge graphs or structured data pipelines for AI products, enabling rapid domain adaptation without predefined schemas.",
-              "Technical impact: Provides a domain-agnostic method to generate typed graphs (YAML/JSON) from unstructured text, improving downstream AI tasks like retrieval-augmented generation (RAG) or reasoning."
-            ],
-            "whatToTry": {
-              "description": "Test GOI on your own document corpus (e.g., customer support logs, legal contracts) to auto-generate a structured ontology. Use the output to enhance your AI product's knowledge base or schema for RAG pipelines.",
-              "note": "Start with a small, diverse set of documents to validate coverage; the paper shows high performance even on unfamiliar domains."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1784647244947-vdeup0",
-                "title": "Generative Ontology Induction: Domain-Agnostic Schema Discovery from Document Corpora Using Large Language Models",
-                "url": "https://arxiv.org/abs/2607.16201",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-vdeup0-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-vdeup0-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1784647244947-vdeup0-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1784647244444-dudr88",
-            "title": "Halliday G2 Glasses: Audio-Only AI for Meetings",
-            "tldr": "Halliday's G2 smart glasses use a microphone and AI to transcribe and summarize meetings, deliberately omitting a camera to avoid privacy concerns. This matters for founders building AI wearables or productivity tools, as it signals a viable market for audio-only, privacy-first AI assistants.",
-            "whyItMatters": [
-              "Business impact: Offers a new product category for AI-powered workplace tools that bypass video privacy issues, potentially accelerating adoption in corporate environments.",
-              "Technical impact: Demonstrates that on-device AI for real-time audio processing (transcription, summarization) is feasible in a wearable form factor, opening opportunities for similar integrations."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own product's privacy stance: If you're building an AI assistant or wearable, consider an audio-only approach to reduce friction and compliance risks. Test a prototype that focuses on meeting summarization without video to see if it gains traction in enterprise pilots.",
-              "note": "Focus on accuracy and latency—users will expect near-real-time summaries. Also, ensure compliance with local recording laws."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1784647244444-dudr88",
-                "title": "Halliday’s New Smart Glasses Skip the Camera",
-                "url": "https://www.wired.com/story/halliday-new-smart-glasses-skip-the-camera/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1784647244444-dudr88-0",
-                "label": "Halliday G2",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784647244444-dudr88-1",
-                "label": "AI wearables",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784647244444-dudr88-2",
-                "label": "Privacy-first AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 13:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-21-evening",
-        "period": "evening",
-        "date": "2026-07-21",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI admits its pre-release models caused Hugging Face breach, Google drops Gemini 3.6 Flash, Flash-Lite & Cyber models, Jack Dorsey launches Buzz: Slack rival for humans & AI agents.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1784669870941-s3t37z",
-            "title": "OpenAI admits its pre-release models caused Hugging Face breach",
-            "tldr": "OpenAI revealed that a Hugging Face breach was caused by internal testing of its own pre-release models, highlighting critical risks in model deployment and supply chain security for AI startups.",
-            "whyItMatters": [
-              "Business impact: Founders must reassess their model release protocols and third-party dependencies to avoid similar breaches that could compromise user trust and IP.",
-              "Technical impact: This underscores the need for robust sandboxing and access controls when testing pre-release models, as even major labs can leak sensitive assets."
-            ],
-            "whatToTry": {
-              "description": "Audit your current model deployment pipeline for any pre-release or internal models shared with external platforms like Hugging Face. Implement strict version control and access logs, and consider using private repositories or air-gapped environments for testing.",
-              "note": "Start with a simple inventory of all models uploaded to public hubs—remove any that are not production-ready."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784669870941-s3t37z",
-                "title": "OpenAI says Hugging Face was breached by its own pre-release models",
-                "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-s3t37z-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-s3t37z-1",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-s3t37z-2",
-                "label": "Security",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 20:56:55 +0000"
-          },
-          {
-            "id": "hn-48993414",
-            "title": "Google drops Gemini 3.6 Flash, Flash-Lite & Cyber models",
-            "tldr": "Google released three new Gemini models: 3.6 Flash (latest flagship), 3.5 Flash-Lite (cost-efficient), and 3.5 Flash Cyber (security-focused). This expands options for AI builders needing speed, cost savings, or enhanced safety.",
-            "whyItMatters": [
-              "Business impact: Flash-Lite offers a cheaper alternative for high-volume, latency-sensitive apps, potentially reducing inference costs significantly.",
-              "Technical impact: 3.6 Flash likely brings improved performance and capabilities, while Cyber model addresses security concerns for enterprise deployments."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Gemini 3.5 Flash-Lite for your production apps to cut costs without major quality loss. Test 3.6 Flash for new features or higher accuracy needs. Consider Cyber model for regulated or security-critical use cases.",
-              "note": "Check Google's pricing page for exact per-token costs; Flash-Lite may be ideal for chatbots or real-time features."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48993414",
-                "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48993414-0",
-                "label": "Gemini 3.6 Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48993414-1",
-                "label": "Gemini 3.5 Flash-Lite",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48993414-2",
-                "label": "Gemini 3.5 Flash Cyber",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-48993414-3",
-                "label": "Google AI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-21T15:17:16Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784669870941-wzzeci",
-            "title": "Jack Dorsey launches Buzz: Slack rival for humans & AI agents",
-            "tldr": "Jack Dorsey's new startup Buzz is a group chat platform designed for teams and their AI agents to collaborate in the same conversations, directly challenging Slack and signaling a shift toward agent-native work tools.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products now have a new platform to integrate agents into team workflows, potentially reducing friction in deploying AI assistants and creating new distribution channels for agent-based services.",
-              "Technical impact: Buzz's architecture likely requires APIs for agent participation, setting a precedent for how AI agents interact with human collaboration tools and influencing design patterns for multi-agent systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Buzz's API or beta program for integrating your AI agents into team chats. If available, test how your agents handle multi-turn conversations alongside humans to identify UX improvements for your own product.",
-              "note": "Monitor Buzz's developer documentation for agent-specific endpoints—early adopters may shape the platform's agent ecosystem."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784669870941-wzzeci",
-                "title": "Jack Dorsey is taking on Slack with Buzz, a group chat platform for teams and their AI agents",
-                "url": "https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-wzzeci-0",
-                "label": "Tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-wzzeci-1",
-                "label": "Topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 19:43:41 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784669870941-pmwje4",
-            "title": "Data centers to quadruple electricity use by 2035",
-            "tldr": "New data centers built through 2033 could consume as much electricity as India uses today, signaling a massive energy crunch for AI infrastructure.",
-            "whyItMatters": [
-              "Business impact: AI founders must factor rising energy costs and potential regulatory constraints into their scaling plans, as data center availability and pricing will become more volatile.",
-              "Technical impact: Energy-efficient model architectures, edge computing, and alternative cooling methods will become critical competitive advantages, not just nice-to-haves."
-            ],
-            "whatToTry": {
-              "description": "Audit your current and projected compute needs against energy consumption estimates. Start exploring partnerships with data centers that offer renewable energy options or invest in on-site power generation to hedge against future price spikes.",
-              "note": "Consider smaller, specialized models or distillation techniques to reduce inference energy costs without sacrificing performance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784669870941-pmwje4",
-                "title": "Data centers expected to use 4x more electricity by 2035",
-                "url": "https://techcrunch.com/2026/07/21/data-centers-expected-to-use-4x-more-electricity-by-2035/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-pmwje4-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-pmwje4-1",
-                "label": "Energy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 18:06:38 +0000"
-          },
-          {
-            "id": "hn-48995213",
-            "title": "Jack Dorsey launches Buzz: team chat + AI agents + Git hosting",
-            "tldr": "Jack Dorsey's new startup Buzz combines team chat, AI agents, and Git hosting into a single platform, aiming to streamline developer workflows. This signals a trend toward integrated, AI-native collaboration tools for builders.",
-            "whyItMatters": [
-              "Business impact: Could disrupt existing team chat and project management tools by offering a unified, AI-enhanced workspace, potentially reducing toolchain complexity for startups.",
-              "Technical impact: Integration of AI agents directly into chat and code hosting may enable new automation patterns (e.g., code review, deployment triggers) that change how teams build software."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Buzz as a potential all-in-one platform for your team. If you're building a developer tool, consider how integrating AI agents into existing workflows (like chat or Git) could differentiate your product.",
-              "note": "Early-stage product; monitor for API access and agent customization options before committing."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48995213",
-                "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
-                "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
-                "domain": "runtimewire.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48995213-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48995213-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-21T17:14:06Z"
-          },
-          {
-            "id": "rss-wired-ai-1784669870974-s7hv3q",
-            "title": "New Malware Targets AI Infrastructure, Steals Data & Logins",
-            "tldr": "A novel malware is exploiting blind spots in AI coding systems to steal credentials and data, with a 'death switch' that can destroy files and lock out legitimate users. This is a critical security alert for any team deploying AI models or tools.",
-            "whyItMatters": [
-              "Business impact: Immediate risk of data breaches, credential theft, and operational disruption for companies using AI infrastructure, potentially leading to loss of proprietary models or customer data.",
-              "Technical impact: Highlights a new attack vector in AI development pipelines (e.g., Jupyter notebooks, MLflow servers) that are often overlooked in standard security audits, requiring updated defense strategies."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI infrastructure for exposed endpoints (e.g., Jupyter, MLflow, Kubeflow) and implement network segmentation, strict access controls, and monitoring for unusual file modifications or login attempts. Consider using a security tool like Aqua Security or Sysdig to detect such malware.",
-              "note": "Focus on blind spots like unauthenticated APIs or shared development environments that attackers exploit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1784669870974-s7hv3q",
-                "title": "A Sneaky Hacking Tool Targeting AI Infrastructure Is Lurking in Victims’ Blind Spots",
-                "url": "https://www.wired.com/story/a-sneaky-hacking-tool-targeting-ai-infrastructure-is-lurking-in-victims-blind-spots/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1784669870974-s7hv3q-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784669870974-s7hv3q-1",
-                "label": "Malware",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1784669870974-s7hv3q-2",
-                "label": "AI Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 16:08:44 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784669870941-lnzdhg",
-            "title": "US threatens sanctions on Chinese AI models over IP theft",
-            "tldr": "Treasury Secretary Bessent signaled potential sanctions on Chinese open AI models for IP theft, escalating trade tensions and creating regulatory uncertainty for AI founders using or building on open-source models.",
-            "whyItMatters": [
-              "Founders relying on open-source Chinese models (e.g., DeepSeek, Qwen) face sudden compliance risks and potential supply chain disruptions if sanctions are enacted.",
-              "This signals a shift toward geopolitical AI regulation, forcing startups to diversify model sources and invest in IP due diligence to avoid legal exposure."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI model stack for any dependencies on Chinese-origin open models (e.g., training data, fine-tuning, inference). Map out alternative Western models (e.g., Llama, Mistral) and begin testing migration paths to reduce geopolitical risk.",
-              "note": "Consider legal counsel to review IP provenance of training data and model weights, especially if you're building a commercial product."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784669870941-lnzdhg",
-                "title": "US threatens sanctions against Chinese AI models over IP theft",
-                "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-lnzdhg-0",
-                "label": "Geopolitics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-lnzdhg-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-lnzdhg-2",
-                "label": "Open Source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 15:37:05 +0000"
-          },
-          {
-            "id": "hn-48997548",
-            "title": "OpenAI & Hugging Face Fix Security Flaw in Model Eval",
-            "tldr": "OpenAI and Hugging Face disclosed and resolved a security incident during a collaborative model evaluation, highlighting risks in shared AI development workflows. This matters for founders relying on third-party model evaluations or open-source integrations.",
-            "whyItMatters": [
-              "Business impact: Security incidents in model evaluation can compromise proprietary data or lead to reputational damage; founders must vet evaluation partners and implement safeguards.",
-              "Technical impact: The incident underscores the need for secure sandboxing and access controls when using external platforms like Hugging Face for model testing."
-            ],
-            "whatToTry": {
-              "description": "Review your model evaluation pipeline for security vulnerabilities: ensure sensitive data is anonymized, use isolated environments for third-party evaluations, and establish clear incident response protocols with partners.",
-              "note": "Consider adopting Hugging Face's security best practices or OpenAI's evaluation guidelines as a baseline."
-            },
-            "sources": [
-              {
-                "id": "src-hn-48997548",
-                "title": "OpenAI and Hugging Face address security incident during model evaluation",
-                "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-48997548-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48997548-1",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-48997548-2",
-                "label": "Security",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-21T20:09:52Z"
-          },
-          {
-            "id": "rss-hugging-face-blog-1784669871206-m0t5pj",
-            "title": "NVIDIA's Simulation Tools for Physical AI: A Founder's Guide",
-            "tldr": "NVIDIA and Hugging Face provide an overview of simulation platforms (Isaac Sim, MuJoCo, etc.) for training physical AI, highlighting trade-offs between fidelity and speed. This matters for founders building robotics, autonomous systems, or embodied AI.",
-            "whyItMatters": [
-              "Business impact: Choosing the right simulator can reduce development costs and time-to-market for physical AI products by 10x or more.",
-              "Technical impact: Understanding the fidelity-speed trade-off is critical for training robust models that transfer to real-world hardware."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your physical AI project's simulation needs: start with MuJoCo for fast prototyping (e.g., robot arm control) and upgrade to NVIDIA Isaac Sim for high-fidelity sensor simulation (e.g., autonomous driving). Run a small benchmark comparing both on your task to quantify the trade-off.",
-              "note": "Consider using domain randomization in any simulator to improve sim-to-real transfer."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1784669871206-m0t5pj",
-                "title": "The State of Simulation for Physical AI: An Overview",
-                "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1784669871206-m0t5pj-0",
-                "label": "NVIDIA Isaac Sim",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1784669871206-m0t5pj-1",
-                "label": "MuJoCo",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1784669871206-m0t5pj-2",
-                "label": "Physical AI",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 20:00:27 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1784669870941-l1qnr6",
-            "title": "AI blurs lines: Streaming apps become universal entertainment hubs",
-            "tldr": "AI is enabling streaming platforms like Spotify, Netflix, YouTube, and TikTok to merge music, video, podcasts, and audiobooks into single 'universal entertainment' apps, breaking down format silos and creating new opportunities for AI-native content creation and discovery.",
-            "whyItMatters": [
-              "Business impact: Founders building AI-powered content tools can target a unified platform market instead of niche formats, as platforms seek AI to generate and organize diverse content types.",
-              "Technical impact: AI models for content generation (e.g., text-to-audio, text-to-video) and recommendation systems become more valuable as platforms need to handle and cross-sell multiple media types seamlessly."
-            ],
-            "whatToTry": {
-              "description": "Explore building AI tools that generate or adapt content across formats (e.g., turning a podcast into a video summary or a music track into a visual story) to meet the growing demand from platforms looking to unify their offerings.",
-              "note": "Focus on APIs that integrate with major platforms' existing ecosystems for faster adoption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1784669870941-l1qnr6",
-                "title": "AI and the rise of the universal entertainment app",
-                "url": "https://techcrunch.com/2026/07/21/ai-and-the-rise-of-the-universal-entertainment-app/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-l1qnr6-0",
-                "label": "topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1784669870941-l1qnr6-1",
-                "label": "tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 21 Jul 2026 19:39:30 +0000"
           }
         ],
         "totalReadTimeMinutes": 20,
