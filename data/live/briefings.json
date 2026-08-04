@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-08-03",
+    "date": "2026-08-04",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-04-morning",
+        "period": "morning",
+        "date": "2026-08-04",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: AI vs AI: Benchmarking Autonomous Research Systems with LLM Reviewers, AI Pipeline Discovers Major Math Conjectures, Passes Lean 4 Checks, ThinkReset: New Technique to Beat Context Limits in Long Reasoning.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1785837913608-c5pvfe",
+            "title": "AI vs AI: Benchmarking Autonomous Research Systems with LLM Reviewers",
+            "tldr": "A new arXiv paper proposes an automated peer-review benchmark using frontier LLMs to evaluate AI Scientist systems. FARS papers scored 2x higher than Sakana, CycleResearcher, and Data-to-Paper, with strong reviewer agreement (Gemini & Claude ρ=0.907), suggesting LLM-based evaluation is reliable for comparing autonomous research quality.",
+            "whyItMatters": [
+              "Provides a standardized method to evaluate AI-generated research, enabling founders to benchmark their own systems against competitors.",
+              "Highlights FARS as a leading autonomous research platform, signaling a potential competitive threat or partnership opportunity."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI research or content generation tool, adopt a similar multi-LLM review protocol to evaluate output quality. Use at least two independent LLM reviewers (e.g., Gemini and Claude) to score outputs on originality, rigor, clarity, and significance, and compare against a baseline dataset.",
+              "note": "Be cautious: GPT-5.4 showed weaker agreement, so include multiple reviewers and validate with human spot-checks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-c5pvfe",
+                "title": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review",
+                "url": "https://arxiv.org/abs/2607.28631",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-c5pvfe-0",
+                "label": "AI Scientist",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-c5pvfe-1",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-c5pvfe-2",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-i3cafp",
+            "title": "AI Pipeline Discovers Major Math Conjectures, Passes Lean 4 Checks",
+            "tldr": "A new arXiv paper introduces a three-stage LLM pipeline that systematically generates and validates major mathematical conjectures, with 20/20 candidates passing Lean 4 formal checks. This marks a step toward AI-driven discovery of problems with high 'problem taste', potentially reshaping how mathematical research is conducted.",
+            "whyItMatters": [
+              "For AI founders in research tools: demonstrates a viable workflow for using LLMs to generate novel, high-value hypotheses in formal domains, which could be adapted to other scientific fields.",
+              "For technical teams: shows how to combine LLM generation with formal verification (Lean 4) to ensure reliability, a pattern applicable to any domain where correctness is critical."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating formal verification tools (like Lean 4) into your AI product's output validation pipeline, especially if you're building for scientific or technical domains. Start by testing your model's outputs against a formal checker to filter out invalid or trivial results.",
+              "note": "This approach is computationally intensive; consider using it for high-stakes outputs only."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-i3cafp",
+                "title": "LLM Framework for Discovering Major Mathematical Conjectures: AI's Quest for the Next Riemann Hypothesis",
+                "url": "https://arxiv.org/abs/2607.28632",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-i3cafp-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-i3cafp-1",
+                "label": "Lean 4",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-i3cafp-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-f9c2bo",
+            "title": "ThinkReset: New Technique to Beat Context Limits in Long Reasoning",
+            "tldr": "ThinkReset introduces a learnable intermediate interface that lets LLMs 'reset' their context window while preserving key reasoning state, improving success rates on long-horizon tasks under fixed context limits. This addresses a critical bottleneck for AI products that rely on extended reasoning.",
+            "whyItMatters": [
+              "Enables AI systems to handle longer, more complex tasks without hitting context window limits, directly improving product capabilities in areas like code generation, multi-step analysis, and agentic workflows.",
+              "Tackles the failure mode where models give premature guesses when context is nearly exhausted, potentially improving reliability and trustworthiness of AI outputs in production."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products that require long reasoning chains (e.g., code assistants, research tools), experiment with implementing a 'reset' mechanism that summarizes key intermediate states and restarts reasoning with that summary. Monitor success rates on your own benchmarks to see if it reduces errors from context overflow.",
+              "note": "This is a research paper, not yet a library. Consider prototyping with existing LLM APIs by manually crafting summaries at intervals."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-f9c2bo",
+                "title": "ThinkReset: Learnable Intermediate Interface Construction for Bounded-Context Long-Horizon Reasoning",
+                "url": "https://arxiv.org/abs/2607.28642",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-f9c2bo-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-f9c2bo-1",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-bjdgxv",
+            "title": "LLMs Not Yet Safe for Autonomous Clinical Triage: Key Gaps Identified",
+            "tldr": "A new arXiv perspective argues that LLMs, despite passing medical exams, are unsafe for autonomous triage due to a fundamental mismatch: they optimize for probable text, not for avoiding catastrophic misses in asymmetric-cost decisions. The paper highlights critical gaps in information gathering and escalation behavior.",
+            "whyItMatters": [
+              "For founders building clinical AI, this defines the safety bar and market opportunity: systems that address information gathering and escalation will differentiate.",
+              "Regulatory and liability risks are underscored, pushing the need for human-in-the-loop designs and rigorous evaluation frameworks."
+            ],
+            "whatToTry": {
+              "description": "Audit your clinical AI product against the paper's criteria: does it actively seek missing red flags, broaden differentials, and lower escalation thresholds? If not, prioritize adding these capabilities or clearly scope your product to avoid autonomous triage claims.",
+              "note": "Consider building evaluation sets that simulate incomplete patient histories and measure escalation accuracy, not just diagnostic accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-bjdgxv",
+                "title": "Reasoning in Real World Clinical Care: Why Large Language Models Are Not Yet Safe for Autonomous Clinical Decision Support",
+                "url": "https://arxiv.org/abs/2607.28677",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-bjdgxv-0",
+                "label": "Clinical AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-bjdgxv-1",
+                "label": "LLM Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-bjdgxv-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-yd2skr",
+            "title": "ViSAGE: Self-Correcting Memory for Long-Form Video Understanding",
+            "tldr": "ViSAGE is a new multimodal agentic memory framework that builds entity-centric, self-correcting memories for long-form video understanding, achieving 5.9% higher accuracy than baselines. It addresses entity confusion and hallucination in long-horizon reasoning.",
+            "whyItMatters": [
+              "For AI products dealing with video or multimodal data, this approach reduces hallucination and improves entity consistency, which is critical for reliable long-form analysis.",
+              "The self-correcting memory and multi-agent verification techniques can be adapted to other domains like document understanding or customer support, improving accuracy and trustworthiness."
+            ],
+            "whatToTry": {
+              "description": "If you're building multimodal agents that process long videos or documents, explore implementing entity-centric memory with cross-modal binding and bidirectional refinement. Also consider adding a verification step that allows the model to abstain when evidence is insufficient, reducing hallucinated outputs.",
+              "note": "Start with a small-scale prototype to measure the impact on your specific use case before full integration."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-yd2skr",
+                "title": "ViSAGE: Constructing Self-Correcting Memories for Long-Form Video Understanding",
+                "url": "https://arxiv.org/abs/2607.28678",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-yd2skr-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-yd2skr-1",
+                "label": "Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-yd2skr-2",
+                "label": "Multimodal",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1785837913166-tw95le",
+            "title": "Mistral's Open-Weight Models Gain Traction Amid US Tech Turmoil",
+            "tldr": "Wired reports that Mistral, a French AI lab, is well-positioned as open-weight models gain popularity following instability at US tech giants. This shift could accelerate adoption of alternatives to closed AI systems.",
+            "whyItMatters": [
+              "Business impact: Founders can leverage open-weight models to reduce dependency on US tech giants and avoid vendor lock-in, especially if they face regulatory or geopolitical risks.",
+              "Technical impact: Open-weight models like Mistral's offer more control, customization, and data privacy, enabling tailored AI solutions without relying on proprietary APIs."
+            ],
+            "whatToTry": {
+              "description": "Evaluate Mistral's open-weight models (e.g., Mistral Large or Mixtral) for your AI product to assess performance, cost, and flexibility compared to closed models. Run a proof-of-concept on a core use case to measure accuracy and latency.",
+              "note": "Consider compliance requirements and your team's ability to self-host or fine-tune these models."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1785837913166-tw95le",
+                "title": "Mistral Is in the Right Place at the Right Time",
+                "url": "https://www.wired.com/story/mistral-is-in-the-right-place-at-the-right-time/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1785837913166-tw95le-0",
+                "label": "Mistral",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1785837913166-tw95le-1",
+                "label": "Open-Weight Models",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1785837913166-tw95le-2",
+                "label": "AI Industry",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 09:21:11 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-2u8nuf",
+            "title": "OpenClaw + Ollama: Blueprint for Building Autonomous AI Agents",
+            "tldr": "A new arXiv paper proposes a layered architecture for agentic AI, using OpenClaw for orchestration and Ollama for inference, showing that capabilities like memory and tool use emerge from system integration. This offers a practical blueprint for founders building autonomous agents.",
+            "whyItMatters": [
+              "Provides a validated reference architecture for building scalable, autonomous AI agents, reducing design risk for founders.",
+              "Highlights that system-level integration (orchestration + inference) is key to unlocking advanced agent capabilities, not just the model choice."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agent stack against the proposed three-layer architecture (inference, orchestration, execution). Consider prototyping with OpenClaw for orchestration and Ollama for local inference to test how persistent memory and tool use improve your agent's performance.",
+              "note": "Start with a simple use case to measure the impact of architectural complexity before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-2u8nuf",
+                "title": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems",
+                "url": "https://arxiv.org/abs/2607.28629",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-2u8nuf-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-2u8nuf-1",
+                "label": "OpenClaw",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-2u8nuf-2",
+                "label": "Ollama",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-l2431u",
+            "title": "TAPR: AI Rewrites Your Prompts to Boost LLM Performance",
+            "tldr": "A new open-source model, TAPR, uses reinforcement learning to rewrite user prompts into task-optimized versions, improving LLM accuracy on benchmarks like Natural Questions and GSM8K. This could help founders build better AI products without requiring users to be prompt engineering experts.",
+            "whyItMatters": [
+              "Improves user experience by reducing the need for prompt engineering, making AI products more accessible to non-expert users.",
+              "Enables automatic prompt optimization, potentially increasing accuracy and reliability of AI applications across various tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate TAPR for your use case by running it on your own prompts and comparing LLM outputs with and without rewriting. If you're building a product that relies on user-generated prompts, consider integrating TAPR as a preprocessing step to enhance performance.",
+              "note": "TAPR is fine-tuned on Phi-4-mini-instruct, so it may be lightweight enough for real-time applications, but test latency and cost."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-l2431u",
+                "title": "TAPR: Enhancing LLM Performance with a Task-Aware Prompt Rewriter",
+                "url": "https://arxiv.org/abs/2607.28657",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-l2431u-0",
+                "label": "Prompt Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-l2431u-1",
+                "label": "TAPR",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-l2431u-2",
+                "label": "Open Source",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-kiz1ok",
+            "title": "Ontology-Guided KG Extraction Cuts Overhead 94%, Boosts Recall to 95%",
+            "tldr": "A production system uses a locally hosted Qwen3.5-9B model with ontology-guided prompts to build knowledge graphs from heterogeneous documents, cutting ontology overhead by ~94% and improving search recall from ~70% to 95%.",
+            "whyItMatters": [
+              "For founders building document intelligence or RAG pipelines, this shows a practical way to enforce consistent entity/relationship extraction without massive ontology engineering.",
+              "The deduplication and conflation handling addresses a common pain point in knowledge graph construction, reducing errors that can undermine downstream analytics."
+            ],
+            "whatToTry": {
+              "description": "If you're building a knowledge graph from unstructured docs, experiment with injecting a relevant ontology slice (retrieved via embedding similarity) into your LLM extraction prompt, and implement a deterministic deduplication pipeline before relying on model-based resolution.",
+              "note": "Start with a small ontology slice to measure overhead reduction and recall gains; the 94% overhead cut suggests static domain slices are wasteful."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-kiz1ok",
+                "title": "An Ontology-Guided, Deduplication-Aware Extraction Layer for Knowledge Graph Construction from Heterogeneous Documents",
+                "url": "https://arxiv.org/abs/2607.28662",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-kiz1ok-0",
+                "label": "Knowledge Graph",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-kiz1ok-1",
+                "label": "Qwen3.5-9B",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-kiz1ok-2",
+                "label": "Ontology-Guided Extraction",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1785837913608-4pawb8",
+            "title": "New Metric Reveals Hidden Reasoning Effort in LLMs",
+            "tldr": "Researchers propose SARE, a geometric framework that measures computational effort at each chain-of-thought step, revealing that incorrect reasoning paths show lower energy at critical junctions. This could enable better error detection and confidence scoring for AI products.",
+            "whyItMatters": [
+              "Enables more granular interpretability of LLM reasoning, potentially improving debugging and quality control in production systems.",
+              "SARE-based features outperform output-based confidence baselines, suggesting a new method for estimating model reliability without extra training."
+            ],
+            "whatToTry": {
+              "description": "If you're building with open-weight LLMs, experiment with SARE to identify low-energy steps in your model's chain-of-thought. Use it as a signal to flag potentially incorrect reasoning in your application, especially for multi-step tasks like math or logic.",
+              "note": "SARE requires access to hidden states, so it's best suited for self-hosted models or APIs that expose them."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1785837913608-4pawb8",
+                "title": "How Hard Does It Think? Analyzing Step-Aware Reasoning Energy in LLM Chain-of-Thought Trajectories",
+                "url": "https://arxiv.org/abs/2607.28674",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-4pawb8-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-4pawb8-1",
+                "label": "Interpretability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1785837913608-4pawb8-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 04 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-03-morning",
@@ -871,7 +1314,7 @@
   },
   {
     "date": "2026-08-02",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Aug 2",
     "briefings": [
       {
         "id": "briefing-2026-08-02-afternoon",
@@ -5033,861 +5476,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Wed, 29 Jul 2026 19:44:49 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-07-28",
-    "displayDate": "Tuesday, Jul 28",
-    "briefings": [
-      {
-        "id": "briefing-2026-07-28-morning",
-        "period": "morning",
-        "date": "2026-07-28",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Small Model + Smart Workflow Beats Frontier LLMs in Medical Diagnosis, Programmatic judges: cheaper, faster, transparent AI eval, LLMs Flip Answers on Same Question: 23% Instability Found.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1785232865975-k6h6sl",
-            "title": "Small Model + Smart Workflow Beats Frontier LLMs in Medical Diagnosis",
-            "tldr": "A new paper shows that a 7B model with a structured 5-stage agentic workflow achieves 60% diagnostic accuracy, outperforming Claude and Gemini by 9+ points at 35-45% lower cost. This demonstrates that workflow design can dramatically boost small model performance, challenging the assumption that bigger models are always better.",
-            "whyItMatters": [
-              "For founders building AI products in regulated or high-stakes domains (healthcare, legal, finance), this proves that a small model with a well-designed agentic pipeline can outperform frontier models at a fraction of the cost and latency.",
-              "The 36-point accuracy gain from workflow alone (vs. the same model without it) shows that process constraints and structured reasoning can compensate for model size, enabling cost-effective, auditable AI systems."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI pipeline: break down your task into discrete stages (e.g., extraction, retrieval, reasoning, verification) and enforce structured outputs at each step. Start with a small, specialized model (like a 7B medical model) and add RAG and explicit evidence triangulation before considering a larger model.",
-              "note": "This approach works best for multi-step reasoning tasks where accuracy and auditability matter more than raw fluency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-k6h6sl",
-                "title": "DeepLens Diagnosis Agent: Agentic Workflow Design Lets a Small Reasoning Model Compete with Frontier LLMs",
-                "url": "https://arxiv.org/abs/2607.22555",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-k6h6sl-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-k6h6sl-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1785232865975-kecywi",
-            "title": "Programmatic judges: cheaper, faster, transparent AI eval",
-            "tldr": "A new paper introduces PAJAMA, a system that distills LLM judge logic into small, transparent programs, matching 13B LLM performance at a fraction of cost and latency. This could revolutionize how AI products handle evaluation and reward signals.",
-            "whyItMatters": [
-              "Dramatically reduces evaluation costs (no per-sample API calls) and latency, enabling scalable, real-time quality checks for AI products.",
-              "Transparent, editable judges allow founders to inspect and customize evaluation criteria, improving reliability and debugging."
-            ],
-            "whatToTry": {
-              "description": "For AI product teams using LLM-as-a-judge for evaluation or RLHF reward modeling, experiment with distilling your judge logic into a committee of small programs using the PAJAMA approach. Start with a high-volume evaluation task to measure cost savings and accuracy trade-offs.",
-              "note": "The paper shows programmatic judges match 13B LLM performance; consider using them as a routing layer to escalate only low-confidence cases to an LLM."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-kecywi",
-                "title": "Codifying the Judge: Scalable Evaluation via Program Distillation",
-                "url": "https://arxiv.org/abs/2607.22561",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-1",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kecywi-2",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1785232865975-kiw1bp",
-            "title": "LLMs Flip Answers on Same Question: 23% Instability Found",
-            "tldr": "A new study shows LLMs often give different answers to meaning-preserving paraphrases of the same question, with flip rates exceeding 23%. This reveals that standard accuracy metrics hide significant unreliability, but a simple self-paraphrasing trick can recover latent knowledge and improve performance.",
-            "whyItMatters": [
-              "For founders building AI products, this highlights a critical reliability gap: your app may give inconsistent answers to users asking the same thing in different ways, eroding trust and causing unpredictable behavior.",
-              "The self-paraphrasing strategy offers a low-cost, inference-time fix to boost consistency without retraining, making it immediately actionable for improving product robustness."
-            ],
-            "whatToTry": {
-              "description": "Implement a self-paraphrasing pipeline: for each user query, generate 2-3 paraphrases using the same LLM, run them all, and take the majority answer or the most confident one. This can reduce flip rates and surface correct answers that might otherwise be missed.",
-              "note": "Start with simple prompts like 'Rephrase the following question while keeping the meaning identical:' to avoid overcomplicating your system."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-kiw1bp",
-                "title": "Same Question, Different Answers: Evaluating LLM Reliability Beyond Accuracy",
-                "url": "https://arxiv.org/abs/2607.22554",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-0",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-1",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-kiw1bp-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1785232865975-3qbxwp",
-            "title": "SF-AMS: Forget Smarter, Not Harder for LLM Agent Memory",
-            "tldr": "A new framework, SF-AMS, improves LLM agent memory by strategically forgetting irrelevant info, boosting multi-hop reasoning by up to 9.65 F1. This is a practical breakthrough for building reliable long-context agents.",
-            "whyItMatters": [
-              "Business impact: Enables more reliable AI agents for complex tasks like customer support, research, and automation, reducing errors from context overload.",
-              "Technical impact: Provides a drop-in memory management strategy that works across models (Qwen, GPT-4o-mini), making it easy to integrate into existing agent architectures."
-            ],
-            "whatToTry": {
-              "description": "Implement a utility-driven memory pruning mechanism in your agent: instead of using fixed decay or retrieval, score each memory unit by its usage redundancy and temporal relevance, and retain only the top-k most important ones for each reasoning step.",
-              "note": "Start with a simple scoring function (e.g., recency + frequency) and test on your specific multi-hop tasks before adopting the full composite scoring."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-3qbxwp",
-                "title": "SF-AMS: Strategic Forgetting for Structured Memory in LLM Agent",
-                "url": "https://arxiv.org/abs/2607.22562",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-3qbxwp-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-3qbxwp-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785232865713-vmsg4x",
-            "title": "Nadella: Don't Bet Your Company on One AI Model",
-            "tldr": "Satya Nadella warns that companies relying on a single AI model without building their own models or using AI gateways to decouple prompts from the model risk failure. This underscores the strategic importance of model diversity and infrastructure abstraction for AI product builders.",
-            "whyItMatters": [
-              "Business impact: Founders must avoid vendor lock-in by designing AI stacks that support model switching, reducing risk from model changes, pricing shifts, or outages.",
-              "Technical impact: Implementing AI gateways (e.g., for prompt routing, caching, and fallback) becomes a core architectural decision, not an afterthought."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI stack: identify if you rely on a single model provider. Start prototyping with an AI gateway (like open-source options or cloud-native services) to abstract model calls, enabling easy swapping between models (e.g., GPT-4, Claude, Llama) and adding fallback logic.",
-              "note": "Even if you don't build your own model, a gateway layer gives you flexibility and resilience—critical as the AI landscape evolves rapidly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785232865713-vmsg4x",
-                "title": "Satya Nadella says companies that trust one AI for everything may not survive",
-                "url": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-vmsg4x-0",
-                "label": "Topic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-vmsg4x-1",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 27 Jul 2026 21:17:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785232865713-quu1gr",
-            "title": "Claude shared chats leaked on Google: what founders must do now",
-            "tldr": "Anthropic's Claude share chat feature inadvertently exposed private conversations and artifacts to Google search indexing, potentially leaking sensitive data. This is a critical privacy warning for any founder using Claude for internal work.",
-            "whyItMatters": [
-              "Business impact: Shared chat URLs containing proprietary code, strategy, or customer data may be publicly searchable, risking IP theft and compliance violations.",
-              "Technical impact: Founders must immediately audit shared links, disable public sharing for sensitive projects, and implement stricter access controls."
-            ],
-            "whatToTry": {
-              "description": "Immediately review all Claude shared chat links in your workspace. Revoke any that are not essential, and ensure new shares are set to 'private' or require authentication. Also, check Google Search Console for indexed URLs containing your domain or project names.",
-              "note": "Consider using Claude's project-level permissions to limit sharing to team members only, and educate your team on the risks of public links."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785232865713-quu1gr",
-                "title": "PSA: Your Claude shared chats and Artifacts may have ended up on Google",
-                "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-1",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-quu1gr-2",
-                "label": "Security",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 27 Jul 2026 20:19:42 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1785232865735-eg5nbj",
-            "title": "Hugging Face Deepfake Nudes Problem: What It Means for AI Devs",
-            "tldr": "Researchers found that top image editing models on Hugging Face can easily generate explicit deepfakes, with 1,000 prompts showing how users exploit them. This highlights urgent moderation and safety gaps for AI platforms.",
-            "whyItMatters": [
-              "Business impact: Founders building on open-source models face reputational and legal risks if their platforms enable nonconsensual deepfakes; proactive safety measures are now a competitive necessity.",
-              "Technical impact: The ease of misuse underscores the need for robust content filters, prompt monitoring, and model guardrails—expect stricter platform policies and compliance demands."
-            ],
-            "whatToTry": {
-              "description": "Audit your model's image generation pipeline for explicit content risks. Implement prompt-level filtering (e.g., block keywords, use safety classifiers) and add output moderation (e.g., NSFW detection APIs) before deployment.",
-              "note": "Consider using Hugging Face's own safety tools or third-party services like Azure Content Safety to reduce liability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1785232865735-eg5nbj",
-                "title": "Hugging Face Has a Deepfake Nudes Problem",
-                "url": "https://www.wired.com/story/hugging-face-has-a-nonconsensual-deepfakes-problem/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-0",
-                "label": "Hugging Face",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-1",
-                "label": "Deepfakes",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1785232865735-eg5nbj-2",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 05:30:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785232865713-0x4s55",
-            "title": "Cursor Targets India with Localized Pricing, Eyes SpaceX Deal",
-            "tldr": "Cursor, the AI coding assistant, is doubling down on India—its third-largest market—with localized pricing, local hiring, and enterprise sales expansion, signaling a strategic push ahead of its reported SpaceX acquisition.",
-            "whyItMatters": [
-              "For founders building AI products: India's developer market is massive and price-sensitive; localized pricing can unlock a high-growth user base and reduce churn.",
-              "Technical impact: Cursor's expansion suggests its AI models are optimized for diverse coding workflows, which could influence how other AI tools approach regional customization."
-            ],
-            "whatToTry": {
-              "description": "If you're targeting developers in emerging markets, consider offering tiered pricing or region-specific features (e.g., local language support, payment methods) to capture price-sensitive segments. Test this with a pilot in India or similar markets.",
-              "note": "Watch for Cursor's pricing details post-launch—they may set a benchmark for AI tool localization."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785232865713-0x4s55",
-                "title": "Cursor makes its biggest India push yet ahead of SpaceX acquisition with localized pricing",
-                "url": "https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-0",
-                "label": "Cursor",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-1",
-                "label": "Pricing Strategy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785232865713-0x4s55-2",
-                "label": "India Market",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 04:30:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1785232865975-5vb89k",
-            "title": "C-VCE: Concept-Based Counterfactual Explanations for Vision Models",
-            "tldr": "A new diffusion framework, C-VCE, generates visual counterfactual explanations by embedding a classifier with a concept bottleneck layer, enabling human-interpretable edits without relying on fragile external classifiers. This makes it more robust and practical for safety-critical vision applications like medical imaging.",
-            "whyItMatters": [
-              "Business impact: Enables safer deployment of vision models in regulated industries (e.g., healthcare, autonomous driving) by providing interpretable, minimal edits that explain model decisions, reducing liability and improving trust.",
-              "Technical impact: Eliminates dependency on separate noise-robust classifiers, simplifying the pipeline and improving edit quality and proximity to original images, which is a key advancement for explainable AI."
-            ],
-            "whatToTry": {
-              "description": "If you're building vision AI for high-stakes domains, evaluate C-VCE for generating counterfactual explanations in your model validation pipeline. Start by testing on your own dataset to see if concept-based edits improve interpretability over existing methods like diffusion-based baselines.",
-              "note": "The paper uses CelebA; ensure your domain has well-defined semantic concepts for the bottleneck layer to be effective."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-5vb89k",
-                "title": "Concept-based Visual Counterfactual Explanations with Diffusion Models",
-                "url": "https://arxiv.org/abs/2607.22544",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-5vb89k-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-5vb89k-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1785232865975-ad59wo",
-            "title": "MIITA: Memory-Based Continual Learning for Small Language Models",
-            "tldr": "MIITA introduces a memory-induced inference-time adaptation framework that enables small language models to learn continuously without catastrophic forgetting, using compact prototypes and gated hidden-state adjustments instead of parameter updates.",
-            "whyItMatters": [
-              "Enables resource-constrained SLMs to adapt to new tasks without forgetting, critical for edge deployments and real-time applications.",
-              "Avoids costly retraining or prompt engineering, offering a lightweight alternative for founders building adaptive AI products on limited hardware."
-            ],
-            "whatToTry": {
-              "description": "If you're deploying SLMs in production, consider implementing a memory buffer with correction-direction prototypes to handle domain shifts or new user intents without full model updates. Start with a small prototype store (e.g., 100 examples) and test on a single task sequence.",
-              "note": "MIITA requires supervised data for prototypes; ensure you have labeled examples for each new task or domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1785232865975-ad59wo",
-                "title": "MIITA: Memory-Induced Inference-Time Adaptation for Continual Learning with Small Language Models",
-                "url": "https://arxiv.org/abs/2607.22556",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-0",
-                "label": "Continual Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-1",
-                "label": "Small Language Models",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1785232865975-ad59wo-2",
-                "label": "Inference-Time Adaptation",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-07-28-evening",
-        "period": "evening",
-        "date": "2026-07-28",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Gemini API Managed Agents: 3.6 Flash & Hooks for Production AI, Recursive Superintelligence inks $410M AWS compute deal for self-improving AI, Formally verified 3D CSG: Trust spec, not AI code.",
-        "items": [
-          {
-            "id": "rss-google-ai-blog-1785274632618-15jeks",
-            "title": "Gemini API Managed Agents: 3.6 Flash & Hooks for Production AI",
-            "tldr": "Google announces new Managed Agents capabilities in the Gemini API, including support for the 3.6 Flash model and hooks for building reliable, production-ready agents. This is a significant release for AI founders building agentic systems.",
-            "whyItMatters": [
-              "Business impact: Enables faster deployment of reliable AI agents with built-in hooks for monitoring, logging, and customization, reducing time-to-market for agent-based products.",
-              "Technical impact: The 3.6 Flash model offers improved performance and cost-efficiency, while hooks provide granular control over agent behavior, making it easier to build complex, multi-step workflows."
-            ],
-            "whatToTry": {
-              "description": "Evaluate the new Managed Agents with 3.6 Flash for your agentic workflows. Start by prototyping a customer support or data extraction agent using the hooks feature to add custom validation or logging. Test latency and cost against your current setup.",
-              "note": "Consider using hooks for error handling and retries to improve reliability in production."
-            },
-            "sources": [
-              {
-                "id": "src-rss-google-ai-blog-1785274632618-15jeks",
-                "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
-                "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
-                "domain": "blog.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-google-ai-blog-1785274632618-15jeks-0",
-                "label": "Gemini API",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1785274632618-15jeks-1",
-                "label": "3.6 Flash",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-google-ai-blog-1785274632618-15jeks-2",
-                "label": "Managed Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 16:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785274632280-woyffj",
-            "title": "Recursive Superintelligence inks $410M AWS compute deal for self-improving AI",
-            "tldr": "Recursive Superintelligence signed a $410 million compute deal with Amazon, signaling a massive bet on automated AI development where compute replaces traditional R&D headcount. This validates the trend of AI companies prioritizing compute over people for self-improving systems.",
-            "whyItMatters": [
-              "Business impact: Validates the 'compute-first' business model for AI startups, shifting capital from hiring to cloud infrastructure, which could reshape how founders allocate resources.",
-              "Technical impact: Accelerates the race toward recursive self-improvement in AI, potentially leading to faster capability jumps without proportional human effort."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own compute-to-headcount ratio. If building AI products, consider reallocating budget to secure long-term compute contracts (like AWS reserved instances) to automate more of your development pipeline, especially for model training and inference scaling.",
-              "note": "Start with a small pilot to measure ROI before committing to large deals; compute costs can spiral if not optimized."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785274632280-woyffj",
-                "title": "Recursive Superintelligence signs $410M compute deal with Amazon",
-                "url": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-woyffj-0",
-                "label": "Compute",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-woyffj-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-woyffj-2",
-                "label": "AWS",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 13:19:17 +0000"
-          },
-          {
-            "id": "hn-49083239",
-            "title": "Formally verified 3D CSG: Trust spec, not AI code",
-            "tldr": "A Lean 4 project proves mesh intersection correctness with a 93-line spec, while AI wrote 60k+ lines of proofs—showing a new paradigm for trusting AI-generated code via formal verification.",
-            "whyItMatters": [
-              "Enables safe use of AI-generated code in critical systems (e.g., CAD, robotics) by shifting trust to a concise spec and verifier, not the LLM.",
-              "Demonstrates a workflow where founders can leverage AI for complex implementations without sacrificing correctness, reducing review burden."
-            ],
-            "whatToTry": {
-              "description": "Explore using formal verification tools like Lean 4 to specify critical components of your AI-generated code, starting with small, well-defined functions (e.g., data transformations) to build trust in the pipeline.",
-              "note": "Start with a simple spec (under 100 lines) and let AI generate proofs; this approach is best for safety-critical or high-stakes modules."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49083239",
-                "title": "Show HN: Formally verified 3D CSG: Trust 93 lines spec, not 1000 lines AI code",
-                "url": "https://github.com/schildep/verified-3d-mesh-intersection",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49083239-0",
-                "label": "Lean 4",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49083239-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49083239-2",
-                "label": "AI Code Trust",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-28T13:07:14Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785274632280-qzqyub",
-            "title": "Bot-detection startup Spur raises $200M from Insight",
-            "tldr": "Spur Intelligence secured $200M from Insight Partners for its bot detection tech, signaling massive investor confidence in AI-driven cybersecurity and fraud prevention for AI products.",
-            "whyItMatters": [
-              "For founders building AI products, this validates the critical need for robust bot detection to protect APIs, user data, and model integrity from adversarial attacks.",
-              "The funding suggests a growing market for specialized AI security tools, potentially leading to new integrations or partnerships for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's vulnerability to bot traffic by auditing API endpoints and user authentication flows; consider integrating bot detection services like Spur or similar tools to safeguard against data scraping and abuse.",
-              "note": "Start with free tiers or trials of bot detection APIs to test effectiveness before committing to enterprise solutions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785274632280-qzqyub",
-                "title": "Bot-detection startup Spur nabs $200M from Insight",
-                "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-qzqyub-0",
-                "label": "Cybersecurity",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-qzqyub-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-qzqyub-2",
-                "label": "Bot Detection",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 21:29:34 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785274632280-uxy1h0",
-            "title": "Sam Altman signals AI slowdown after security scare",
-            "tldr": "Sam Altman publicly shifts stance on AI development speed, citing a visceral security incident. This signals potential regulatory shifts and slower release cycles, impacting product planning for AI founders.",
-            "whyItMatters": [
-              "Business impact: Expect tighter regulations and slower model releases, affecting go-to-market strategies and compliance costs.",
-              "Technical impact: May lead to more safety-focused development, requiring founders to prioritize robustness and security in their AI products."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's security and safety measures now. Proactively implement guardrails and document compliance to prepare for potential regulatory changes.",
-              "note": "Consider joining industry safety forums to stay ahead of emerging standards."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785274632280-uxy1h0",
-                "title": "Sam Altman is ready to decelerate",
-                "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-uxy1h0-0",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 20:17:08 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1785274633090-w0e22j",
-            "title": "AI Coding Agents Transform Scientific Computing",
-            "tldr": "OpenAI's field report reveals how AI coding agents are accelerating scientific computing in genomics and other fields, enabling faster software development and discovery. This signals a major shift in how scientists build and use computational tools.",
-            "whyItMatters": [
-              "Business impact: Founders can leverage AI agents to automate and speed up scientific software development, reducing time-to-insight for research-heavy products.",
-              "Technical impact: Demonstrates that AI agents can handle complex, domain-specific coding tasks, opening new opportunities for AI-driven R&D platforms."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current scientific computing workflows and identify repetitive or complex coding tasks (e.g., data pipeline setup, simulation configuration) that could be automated with AI coding agents. Start with a small pilot in one research area to measure productivity gains.",
-              "note": "Focus on tasks with clear success metrics, like time saved per analysis or reduction in manual errors."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1785274633090-w0e22j",
-                "title": "Scientific computing in the age of agentic AI",
-                "url": "https://openai.com/index/scientific-computing-agentic-ai",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1785274633090-w0e22j-0",
-                "label": "OpenAI",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1785274633090-w0e22j-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1785274633090-w0e22j-2",
-                "label": "Scientific Computing",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 17:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785274632280-q76hnn",
-            "title": "Data centers face power cuts on US grid to prevent blackouts",
-            "tldr": "Grid operators on the largest US grid may temporarily cut power to data centers to prevent blackouts, highlighting the strain of rapid data center construction on energy infrastructure. This signals a critical operational risk for AI founders relying on consistent compute.",
-            "whyItMatters": [
-              "Business impact: AI product uptime and reliability could be threatened by forced power interruptions, affecting customer trust and SLAs.",
-              "Technical impact: Founders must rethink infrastructure strategies, including geographic diversification, on-premise backups, or negotiating priority power agreements."
-            ],
-            "whatToTry": {
-              "description": "Audit your current cloud and data center providers' energy resilience plans. Consider diversifying compute across regions with more stable grids or exploring edge computing to reduce dependency on centralized data centers.",
-              "note": "Start conversations with providers about their backup power and load-shedding policies now, before this becomes a crisis."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785274632280-q76hnn",
-                "title": "Data centers may face temporary power cuts to prevent blackouts on largest US grid",
-                "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-q76hnn-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-q76hnn-1",
-                "label": "Energy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-q76hnn-2",
-                "label": "Risk Management",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 15:42:26 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1785274632280-egb9r8",
-            "title": "Fish Audio raises $52M seed for AI voice models",
-            "tldr": "Fish Audio raised $52M seed round, with 8M users and $21M ARR, signaling strong market demand for AI voice models in creator and enterprise applications.",
-            "whyItMatters": [
-              "Indicates a growing market for AI voice synthesis, presenting opportunities for founders to integrate voice features into their products.",
-              "Highlights the viability of open-source AI voice models as a business model, which could lower barriers for startups building voice-enabled apps."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Fish Audio's open-source voice models for potential integration into your product to add natural voice capabilities without heavy upfront investment.",
-              "note": "Consider the trade-offs between using their hosted version for ease vs. self-hosting for data control."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1785274632280-egb9r8",
-                "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
-                "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-egb9r8-0",
-                "label": "Fish Audio",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-egb9r8-1",
-                "label": "AI voice models",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1785274632280-egb9r8-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 14:00:00 +0000"
-          },
-          {
-            "id": "rss-hugging-face-blog-1785274632454-6c96hh",
-            "title": "OlmoEarth: Geospatial AI at Planetary Scale",
-            "tldr": "Allen AI released OlmoEarth, an open platform for geospatial inference using AI models, enabling founders to analyze satellite imagery and geospatial data at scale without building custom infrastructure.",
-            "whyItMatters": [
-              "Business impact: Opens up geospatial AI for startups in agriculture, logistics, climate, and urban planning without massive compute investment.",
-              "Technical impact: Provides pre-built infrastructure for running vision models on satellite data, reducing time to market for geospatial applications."
-            ],
-            "whatToTry": {
-              "description": "Explore OlmoEarth's API or open-source tools to prototype a geospatial inference pipeline for your domain (e.g., crop health monitoring, infrastructure mapping). Start with their sample notebooks on Hugging Face.",
-              "note": "Check the platform's data licensing and model compatibility for your use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1785274632454-6c96hh",
-                "title": "The OlmoEarth Platform: Geospatial inference at planetary scale",
-                "url": "https://huggingface.co/blog/allenai/olmoearth-infrastructure",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1785274632454-6c96hh-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1785274632454-6c96hh-1",
-                "label": "geospatial AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1785274632454-6c96hh-2",
-                "label": "open source",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 28 Jul 2026 16:27:42 GMT"
-          },
-          {
-            "id": "hn-49085909",
-            "title": "DeltaNet: Linear Attention Variants for Efficient AI",
-            "tldr": "A detailed walkthrough of the DeltaNet family of linear attention mechanisms, gaining traction on HackerNews. This matters because it offers a path to reduce the quadratic complexity of standard attention, enabling longer context windows and lower inference costs for AI products.",
-            "whyItMatters": [
-              "Business impact: Lower compute costs for inference and training, enabling more affordable AI products with longer context handling.",
-              "Technical impact: Linear attention variants like DeltaNet can scale to much longer sequences without the O(n^2) memory and compute overhead, unlocking new use cases like processing entire documents or long-form video."
-            ],
-            "whatToTry": {
-              "description": "Evaluate DeltaNet or similar linear attention mechanisms (e.g., Mamba, Linear Transformer) for your next model iteration. Start by benchmarking against your current attention-based model on a long-context task (e.g., document summarization or codebase analysis) to measure speed and memory improvements.",
-              "note": "Linear attention may trade off some accuracy on very short sequences; test on your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49085909",
-                "title": "A walk through of the DeltaNet family of linear attention variants",
-                "url": "https://blog.doubleword.ai/you-could-have-come-up-with-kimi-delta-attention",
-                "domain": "blog.doubleword.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49085909-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49085909-1",
-                "label": "topic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-07-28T16:02:07Z"
           }
         ],
         "totalReadTimeMinutes": 20,
