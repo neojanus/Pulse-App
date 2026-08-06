@@ -434,6 +434,428 @@
         "totalReadTimeMinutes": 24,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-08-06-afternoon",
+        "period": "afternoon",
+        "date": "2026-08-06",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Mirendil lands $100M+ Google Cloud deal for self-improving AI, Self-Verifying Agent Architecture Eliminates Goal Abandonment, FinPerMA: New Benchmark Exposes LLM Memory Gaps in Finance.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1786030695368-0knmne",
+            "title": "Mirendil lands $100M+ Google Cloud deal for self-improving AI",
+            "tldr": "Mirendil, an AI research startup, has secured a $100M+ partnership with Google Cloud to scale compute for self-improving AI systems aimed at accelerating scientific discovery. This signals major investment in autonomous AI research and cloud infrastructure.",
+            "whyItMatters": [
+              "High-value cloud deals like this indicate growing demand for specialized compute in AI research, potentially affecting pricing and availability for other startups.",
+              "Self-improving AI is a frontier area; this funding could accelerate breakthroughs that may soon become available as APIs or tools for founders."
+            ],
+            "whatToTry": {
+              "description": "Monitor Mirendil's research outputs and any APIs they release. Consider how self-improving AI could be applied to your own product for faster iteration or data analysis.",
+              "note": "Keep an eye on Google Cloud's AI-optimized offerings; they may become more competitive or feature-rich due to this partnership."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1786030695368-0knmne",
+                "title": "Exclusive: Mirendil inks $100M+ Google Cloud deal to scale self-improving AI",
+                "url": "https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-0knmne-0",
+                "label": "Google Cloud",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-0knmne-1",
+                "label": "Self-improving AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-0knmne-2",
+                "label": "Compute",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 13:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1786030695527-boxppy",
+            "title": "Self-Verifying Agent Architecture Eliminates Goal Abandonment",
+            "tldr": "A new arXiv paper introduces an agent instrument where a deterministic Executive owns belief and an LLM only files proposals, with pre-registered predictions verified by code. This structural verification invalidates flawed runs and cleanly shows that ablating the commitment mechanism causes goal abandonment to jump from 0.00 to 1.00, while binding errors stay flat—offering a robust way to test long-horizon agents.",
+            "whyItMatters": [
+              "Provides a verification framework that catches real defects in agent runs, reducing risk of silent failures in production AI systems.",
+              "Demonstrates a clean experimental method for isolating failure modes in long-horizon agents, which is critical for building reliable autonomous systems."
+            ],
+            "whatToTry": {
+              "description": "Adopt a similar architecture for your long-horizon agents: separate a deterministic controller (Executive) from the LLM, require the LLM to submit typed proposals with pre-registered predictions, and verify those predictions against observations using code. This makes verification structural and helps identify where commitment or binding mechanisms fail.",
+              "note": "Start with a simple use case like a multi-step task agent, and track invalidation rates to catch defects early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786030695527-boxppy",
+                "title": "The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents",
+                "url": "https://arxiv.org/abs/2608.04066",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-boxppy-0",
+                "label": "Agent Architecture",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-boxppy-1",
+                "label": "Verification",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-boxppy-2",
+                "label": "Long-Horizon Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786030695528-sausrq",
+            "title": "FinPerMA: New Benchmark Exposes LLM Memory Gaps in Finance",
+            "tldr": "A new benchmark, FinPerMA, tests whether LLM agents can maintain personalized user models over long financial horizons. Results show even top models score below 50%, with summary-based memory losing key preference signals—highlighting a critical weakness for AI assistants in high-stakes domains.",
+            "whyItMatters": [
+              "For founders building AI financial advisors or personal assistants, this reveals a concrete failure mode: memory systems that preserve facts but lose user preferences, especially after major events.",
+              "The benchmark provides a rigorous evaluation framework to test and improve your own agent's memory, potentially differentiating your product in a market where trust and accuracy are paramount."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own LLM agent's memory using the FinPerMA benchmark (available on arXiv) to identify whether your memory system retains preference signals after user shocks. If it fails, consider augmenting summary-based memory with event-triggered updates or hybrid retrieval that prioritizes recent preference-relevant interactions.",
+              "note": "The paper shows simple retrieval can outperform purpose-built memory systems, so start with a baseline retrieval approach before investing in complex memory architectures."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786030695528-sausrq",
+                "title": "FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents",
+                "url": "https://arxiv.org/abs/2608.04095",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-sausrq-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-sausrq-1",
+                "label": "Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-sausrq-2",
+                "label": "Finance",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786030695528-cn5j0d",
+            "title": "MatrAIx: Simulate 8.3B Personas for AI Product Testing",
+            "tldr": "MatrAIx introduces a population-scale simulated-user evaluation infrastructure with 8.3 billion persona records and a 1M-persona coreset, enabling AI product testing across diverse user behaviors. It's a trending research breakthrough for scalable, human-like evaluation.",
+            "whyItMatters": [
+              "Replaces costly and slow human evaluation with scalable, diverse simulated users, accelerating product iteration.",
+              "Captures nuanced user behaviors (e.g., price sensitivity, AI failure tolerance) that offline benchmarks miss, improving product-market fit."
+            ],
+            "whatToTry": {
+              "description": "Explore the MatrAIx coreset and playground to simulate user feedback for your AI product. Start by testing your chatbot or web app with the 1M persona coreset across the 25+ domains to identify preference variations and edge cases.",
+              "note": "The paper mentions 18,189 trials with Claude and GPT models; consider using similar LLMs for consistency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786030695528-cn5j0d",
+                "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+                "url": "https://arxiv.org/abs/2608.04205",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-cn5j0d-0",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-cn5j0d-1",
+                "label": "Simulation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695528-cn5j0d-2",
+                "label": "Persona",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1786030695368-5qdpbr",
+            "title": "Ex-Spotify team raises $10M to bring music-grade AI recommendations to e-commerce",
+            "tldr": "A startup founded by ex-Spotify employees raised $10M to apply Spotify's recommendation AI to e-commerce, predicting shopper preferences in real time. This signals a trend of proven recommendation models entering new verticals.",
+            "whyItMatters": [
+              "For e-commerce founders, this could disrupt the status quo of recommendation engines, raising user expectations for personalization.",
+              "For AI product builders, it demonstrates the value of adapting proven algorithms from one domain to another, potentially reducing R&D risk."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current recommendation approach: if you're using simple collaborative filtering or rule-based systems, consider exploring sequence-based models (like transformers) that can predict next-purchase behavior. Start by auditing your user interaction data to see if you have enough signal to train such models.",
+              "note": "Don't rush to rebuild—first run a small-scale experiment to measure potential lift in conversion or engagement."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1786030695368-5qdpbr",
+                "title": "Ex-Spotify employees raise $10M to bring the AI behind its recommendations to e-commerce",
+                "url": "https://techcrunch.com/2026/08/06/ex-spotify-employees-raise-10m-to-bring-the-ai-behind-its-recommendations-to-e-commerce/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-5qdpbr-0",
+                "label": "Recommendation Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-5qdpbr-1",
+                "label": "E-commerce",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 13:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1786030695368-v02te3",
+            "title": "Google Maps evolves into an agentic assistant for real-world tasks",
+            "tldr": "Google Maps is adding agentic features that let users order food and book hotels directly, signaling a shift from navigation to task completion. This move highlights the growing trend of AI agents embedded in everyday apps.",
+            "whyItMatters": [
+              "For founders building AI products, this signals a major platform shift: AI agents are moving into mainstream consumer apps, creating new expectations for seamless task automation.",
+              "It opens opportunities for startups to integrate with or build complementary services around Maps' agentic capabilities, such as local commerce or travel tech."
+            ],
+            "whatToTry": {
+              "description": "Evaluate how your AI product can leverage or integrate with Google Maps' new agentic features. For example, if you're in travel or food tech, explore partnerships or API integrations to offer end-to-end booking experiences. If you're building agent frameworks, study the UX patterns Google uses to handle multi-step tasks and consider applying similar designs to your own products.",
+              "note": "Keep an eye on user privacy and consent—agentic actions require clear user confirmation to build trust."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1786030695368-v02te3",
+                "title": "Google Maps adds agentic features, including food ordering and hotel bookings",
+                "url": "https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-v02te3-0",
+                "label": "Google Maps",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-v02te3-1",
+                "label": "AI agents",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 12:30:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1786030695368-4m450c",
+            "title": "Omilia raises $67M to scale AI customer support platform",
+            "tldr": "Omilia, an AI customer support platform, raised $67M in Series B, growing ARR 10x to $60M since 2020, signaling strong market demand for AI-driven customer service.",
+            "whyItMatters": [
+              "Validates the market for AI customer support solutions, indicating growing enterprise adoption.",
+              "Shows that AI support platforms can achieve significant revenue growth, making this a competitive space for founders."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's positioning in the customer support vertical. Consider how you can differentiate from well-funded players like Omilia by focusing on niche use cases or superior integration capabilities.",
+              "note": "Monitor Omilia's product roadmap and pricing to identify gaps you can exploit."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1786030695368-4m450c",
+                "title": "Omilia raises $67M to scale its customer support platform",
+                "url": "https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-4m450c-0",
+                "label": "Customer Support",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1786030695368-4m450c-1",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 12:00:00 +0000"
+          },
+          {
+            "id": "hn-49195468",
+            "title": "Humans Miss 1 in 3 Threats When Approving AI Agent Commands",
+            "tldr": "A study across 40k game runs found that human reviewers missed 33% of threats when approving AI agent commands, highlighting the inadequacy of manual approval for AI safety.",
+            "whyItMatters": [
+              "For founders building AI agents, this underscores that human-in-the-loop approval is not a reliable safety net, pushing the need for automated guardrails.",
+              "It signals a market opportunity for AI safety tools that can detect threats in real-time, as manual review is proven insufficient."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI agent's command approval workflow: if you rely on human review, consider implementing automated threat detection or sandboxing for high-risk actions, and run internal tests to measure your own miss rate.",
+              "note": "Start with a small pilot to quantify the risk in your specific use case before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49195468",
+                "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
+                "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+                "domain": "scalex.dev",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49195468-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49195468-1",
+                "label": "AI Agents",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-08-06T11:58:07Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1786030695527-xqssw2",
+            "title": "MCTS-Report: AI Generates Multimodal Reports from Tables",
+            "tldr": "A new framework uses Monte Carlo Tree Search to generate professional reports with charts and text from tabular data, improving factual accuracy and coherence. It introduces MMRBench benchmark for evaluation.",
+            "whyItMatters": [
+              "Enables AI products to automate data analysis and report generation, saving time for analysts and businesses.",
+              "Improves reliability of AI-generated reports by enforcing factual consistency via SQL checks, reducing hallucination risks."
+            ],
+            "whatToTry": {
+              "description": "If you're building data intelligence tools, explore integrating MCTS-based planning into your report generation pipeline to handle complex, multi-step tasks with better coherence. Start by testing on your own tabular datasets to see if it improves factual accuracy and narrative flow.",
+              "note": "Consider the computational overhead of MCTS; it may be heavy for real-time applications."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786030695527-xqssw2",
+                "title": "Monte Carlo Tree Search for Table-to-Multimodal Report Generation",
+                "url": "https://arxiv.org/abs/2608.04071",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-xqssw2-0",
+                "label": "MCTS",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-xqssw2-1",
+                "label": "Report Generation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-xqssw2-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786030695527-91unax",
+            "title": "FinProBench: Grounding Financial AI Agents in Real Professional Rubrics",
+            "tldr": "New benchmark and pipeline (RGRC) derive evaluation rubrics from actual practitioner deliverables, showing that prompt-only rubrics fail for specialized financial roles (78% vs 99% accuracy) but work for conventional ones. This offers a method to build more reliable AI agents for niche financial tasks.",
+            "whyItMatters": [
+              "For founders building financial AI agents, this highlights the risk of relying on generic prompts for specialized roles—your agent may underperform without domain-grounded evaluation criteria.",
+              "The RGRC pipeline provides a reusable approach to create role-specific benchmarks, enabling better product validation and quality assurance for niche financial workflows."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an AI agent for a specialized financial role (e.g., compliance analyst, M&A advisor), collect real deliverables from practitioners in that role and use them to build a custom evaluation rubric. Test your agent against this rubric to identify gaps that generic benchmarks miss.",
+              "note": "Start with 5-10 deliverables to prototype the rubric; focus on roles where your agent's performance is critical and where standard benchmarks may not reflect real-world standards."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786030695527-91unax",
+                "title": "FinProBench: Evaluating Financial AI Agents with Role-Grounded Rubrics Derived from Professional Deliverables",
+                "url": "https://arxiv.org/abs/2608.04077",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-91unax-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-91unax-1",
+                "label": "Financial AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786030695527-91unax-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 06 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
