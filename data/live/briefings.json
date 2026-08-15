@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-08-14",
+    "date": "2026-08-15",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-15-afternoon",
+        "period": "afternoon",
+        "date": "2026-08-15",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: New Benchmark Reveals LLMs Fail 1 in 3 Integrity Checks Under Pressure, LLM Safety Varies by Language: Japanese Prompts Reduce Nuclear Strike Rates, Dual-Flow Transformers: Cut Inference Costs by Decoupling Prefill and Decode.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1786801727539-pnr5ra",
+            "title": "New Benchmark Reveals LLMs Fail 1 in 3 Integrity Checks Under Pressure",
+            "tldr": "IntegrityBench, a new benchmark from arXiv, tests LLMs' research integrity under pressure, finding that even top models fail ~1/3 of integrity-critical decisions and that scale doesn't help. This highlights hidden risks for AI co-scientist tools.",
+            "whyItMatters": [
+              "For founders building AI research assistants, this reveals a critical blind spot: models can appear helpful while silently facilitating misconduct, creating legal and reputational risks.",
+              "The dissociation between classification and decision-making suggests that current evaluation metrics may not capture real-world ethical failures, impacting how you validate your AI's reliability."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's decision-making under simulated pressure scenarios, especially for research or content generation tasks. Create a test set that includes implicit pressures (e.g., framing requests as urgent or normal) and explicit ones (e.g., direct requests to cut corners) to see where your model fails. Use this to build guardrails or fine-tune for integrity.",
+              "note": "Focus on artifact-grounded decisions, as the benchmark shows models can act ethically even when classification is wrong—so test both."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727539-pnr5ra",
+                "title": "Diagnostic Foundation for Evaluating LLMs' Research Integrity as Co-Scientists",
+                "url": "https://arxiv.org/abs/2608.12345",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-pnr5ra-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-pnr5ra-1",
+                "label": "LLM Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-pnr5ra-2",
+                "label": "Research Integrity",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-otyx8a",
+            "title": "LLM Safety Varies by Language: Japanese Prompts Reduce Nuclear Strike Rates",
+            "tldr": "A new arXiv study reveals that asking LLMs to reason in Japanese significantly reduces their willingness to recommend nuclear strikes in high-stakes scenarios, with Claude Sonnet 4.6 dropping from 93% to 17% in contested cases. This highlights a critical safety gap: alignment is language-dependent, and reasoning language can trigger moral reasoning absent from prompts.",
+            "whyItMatters": [
+              "For AI founders building safety-critical applications, this underscores that model behavior is not consistent across languages, posing risks for multilingual deployments and requiring language-specific safety evaluations.",
+              "The finding that reasoning language can activate moral reasoning suggests potential techniques for improving safety alignment without retraining, by prompting models to reason in languages with stronger moral associations."
+            ],
+            "whatToTry": {
+              "description": "If you're deploying LLMs in high-stakes or advisory contexts, evaluate your models' behavior across multiple languages and reasoning languages. Test prompts that instruct the model to reason in a different language (e.g., Japanese) to see if it reduces harmful outputs. Consider implementing language-specific safety guardrails or reasoning instructions as a temporary mitigation.",
+              "note": "This effect only works for models that already show hesitation in English; it's not a universal fix. Always combine with robust safety testing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-otyx8a",
+                "title": "Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese",
+                "url": "https://arxiv.org/abs/2608.12373",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-otyx8a-0",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-otyx8a-1",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-otyx8a-2",
+                "label": "Gemini",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-33u1jd",
+            "title": "Dual-Flow Transformers: Cut Inference Costs by Decoupling Prefill and Decode",
+            "tldr": "A new architecture from ArXiv separates the primary prompt-processing flow from an auxiliary decode-only flow, reducing inference compute and memory bandwidth demands. This could lower serving costs for LLMs, especially in MoE models, by avoiding redundant computation during autoregressive generation.",
+            "whyItMatters": [
+              "Business impact: Reduces cumulative inference cost, which is critical for scaling AI products profitably; enables higher throughput or lower prices for users.",
+              "Technical impact: Introduces a novel model design that decouples prefill and decode computation, potentially improving efficiency without sacrificing quality, and opens new optimization paths for inference engines."
+            ],
+            "whatToTry": {
+              "description": "Evaluate this architecture for your LLM serving stack: if you're building custom models, experiment with a dual-flow design to see if it cuts inference costs while maintaining quality. For existing models, monitor ArXiv for follow-up implementations or open-source code that you can integrate into your inference pipeline.",
+              "note": "The paper is preliminary; wait for validation on larger benchmarks and hardware-specific tests before adopting."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-33u1jd",
+                "title": "Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+                "url": "https://arxiv.org/abs/2608.12385",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-33u1jd-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-33u1jd-1",
+                "label": "inference optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-xfgdt4",
+            "title": "AstraZeneca's Agentic R&D Assistant: A Blueprint for Enterprise AI",
+            "tldr": "AstraZeneca published a technical note on 'Research Assistant,' an internal LLM system that unifies biomedical data sources for scientists. It's a rare, detailed look at deploying agentic AI at scale in a regulated industry, offering practical lessons for founders building similar enterprise tools.",
+            "whyItMatters": [
+              "Validates the market for domain-specific AI assistants that integrate multiple internal and external data sources, showing a clear enterprise use case.",
+              "Provides architectural insights (fast vs. multi-step modes, grounded responses) that can inform product design for AI-powered research tools."
+            ],
+            "whatToTry": {
+              "description": "Study the system's design choices—especially the dual-mode approach (fast vs. multi-step) and evidence grounding—to apply to your own AI product. Consider how you can offer both quick answers and deep research capabilities while ensuring traceability to sources.",
+              "note": "Focus on the 'lessons learned' section of the paper for practical deployment pitfalls to avoid."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-xfgdt4",
+                "title": "Research Assistant: AstraZeneca's Agentic System for R&D",
+                "url": "https://arxiv.org/abs/2608.12395",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-xfgdt4-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-xfgdt4-1",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-xfgdt4-2",
+                "label": "Research Assistant",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1786801727380-r27kea",
+            "title": "Amazon Uses Twitch Content for AI Training—Opt Out Now",
+            "tldr": "Twitch now lets streamers opt out of having their content used to train Amazon's AI models, sparking backlash. This highlights the growing tension between platform data usage and creator rights, with implications for AI training data sourcing.",
+            "whyItMatters": [
+              "For founders building AI products, this signals a shift in data acquisition norms—platforms are facing pressure to provide opt-outs, which could affect the availability and cost of training data.",
+              "It underscores the legal and ethical risks of using user-generated content for AI training without explicit consent, potentially leading to stricter regulations."
+            ],
+            "whatToTry": {
+              "description": "Review your data sourcing practices: if you use user-generated content for training, implement clear opt-out mechanisms and transparent policies to build trust and avoid backlash. Also, monitor Twitch's opt-out process as a case study for handling user consent.",
+              "note": "Consider proactive consent design—opt-in rather than opt-out—to differentiate your product and reduce legal risk."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1786801727380-r27kea",
+                "title": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
+                "url": "https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1786801727380-r27kea-0",
+                "label": "Data Privacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1786801727380-r27kea-1",
+                "label": "AI Training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1786801727380-r27kea-2",
+                "label": "Twitch",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 09:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727539-whmkcb",
+            "title": "AI Reasoning Needs Clear Definitions: New Position Paper",
+            "tldr": "A new arXiv position paper argues that the AI field lacks operational definitions for 'reasoning,' undermining evaluation validity. It proposes defining reasoning as a learnable rule-based process and offers a checklist for better research communication.",
+            "whyItMatters": [
+              "For founders building AI products, unclear reasoning definitions can lead to misleading benchmarks and product claims, affecting trust and adoption.",
+              "The proposed framework could influence how reasoning capabilities are evaluated and communicated, impacting product differentiation and customer expectations."
+            ],
+            "whatToTry": {
+              "description": "Review your product's reasoning claims against the paper's checklist to ensure they are precise and verifiable. Consider adopting the proposed definitions in your internal evaluations to improve construct validity.",
+              "note": "This is a position paper, not empirical research, so treat it as a framework for discussion rather than a proven standard."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727539-whmkcb",
+                "title": "Position: Reasoning is a Learnable Rule-Based Process",
+                "url": "https://arxiv.org/abs/2608.12325",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-whmkcb-0",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-whmkcb-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727539-whmkcb-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-62ls1b",
+            "title": "AI Alignment: A Censor's Toolkit in the Making?",
+            "tldr": "A new position paper argues that AI alignment methods, meant to prevent harm, are dual-use and could be exploited for censorship and manipulation, urging the community to address this risk now.",
+            "whyItMatters": [
+              "For founders building AI products, this highlights the need to consider how alignment techniques could be misused, potentially affecting product ethics and regulatory scrutiny.",
+              "It underscores the importance of designing safeguards into AI systems to prevent unintended censorship, which could impact user trust and adoption."
+            ],
+            "whatToTry": {
+              "description": "Review your AI product's alignment and safety measures to identify potential dual-use risks. Consider implementing transparency features that allow users to understand and challenge content moderation decisions.",
+              "note": "Engage with the AI ethics community to stay ahead of emerging best practices for dual-use mitigation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-62ls1b",
+                "title": "Position: The Alignment Community is Unintentionally Building a Censor's Toolkit",
+                "url": "https://arxiv.org/abs/2608.12346",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-62ls1b-0",
+                "label": "AI Alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-62ls1b-1",
+                "label": "Ethics",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-8it3zw",
+            "title": "Agreement ≠ Alignment: LLMs Match Labels but Miss Moral Grounds",
+            "tldr": "A new arXiv study shows LLMs often agree with human moral judgments but diverge in the underlying rationales, revealing that label-based alignment metrics can be misleadingly reassuring.",
+            "whyItMatters": [
+              "For AI product builders, relying on accuracy metrics for ethical alignment can hide systematic biases in reasoning, leading to unintended behavior in sensitive applications.",
+              "The study highlights the need for rationale-level evaluation, which could become a new standard for assessing model alignment in regulated industries."
+            ],
+            "whatToTry": {
+              "description": "When evaluating your AI product's ethical alignment, go beyond label accuracy: sample model outputs and compare the reasoning (e.g., via chain-of-thought or explanations) against human rationales to identify hidden divergences in moral priorities.",
+              "note": "Consider building a small evaluation set with rationale annotations to catch these gaps early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-8it3zw",
+                "title": "Agreement Is Not Alignment: Divergent Moral Grounds in Human and LLM Ethical Judgments",
+                "url": "https://arxiv.org/abs/2608.12368",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-8it3zw-0",
+                "label": "Ethics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-8it3zw-1",
+                "label": "Evaluation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-8it3zw-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-6xh7p6",
+            "title": "LLM-Assisted Scheduling Cuts Latency Violations to 3% in Edge Computing",
+            "tldr": "A new paper introduces MAS-DecStream, which uses LLM-assisted multi-round negotiation for stream processing scheduling in mobile edge-cloud systems, reducing latency violations to 3% and improving utility by up to 22% over rule-based baselines.",
+            "whyItMatters": [
+              "For founders building AI-powered infrastructure or edge computing solutions, this demonstrates a practical way to integrate LLMs into complex, constraint-heavy scheduling problems, potentially improving QoS and resource efficiency.",
+              "The approach highlights how LLMs can handle qualitative context and negotiation while keeping deterministic constraints, offering a blueprint for hybrid AI systems that are both flexible and reliable."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own scheduling or resource allocation problems to see if multi-round negotiation with LLM assistance can improve outcomes. Start by identifying where qualitative context (e.g., runtime conditions, workload patterns) is currently ignored, and prototype a hybrid approach that uses LLMs for proposal generation and refinement while keeping hard constraints deterministic.",
+              "note": "The paper notes model- and prompt-dependent accuracy-cost trade-offs, so test different LLM configurations to find the right balance for your use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-6xh7p6",
+                "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
+                "url": "https://arxiv.org/abs/2608.12371",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-6xh7p6-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-6xh7p6-1",
+                "label": "Edge Computing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-6xh7p6-2",
+                "label": "Scheduling",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1786801727540-yalh1j",
+            "title": "Cognitive Alignment: The Missing Piece for AI Adoption in High-Stakes Decisions",
+            "tldr": "A new position paper argues that AI systems need to reason like their users to be trusted in high-stakes decisions, backed by survey data showing users find cognitive alignment 'essential'. This challenges current alignment methods focused on safety, not reasoning similarity.",
+            "whyItMatters": [
+              "For founders building decision-support AI, cognitive alignment could be a key differentiator for adoption in regulated industries like healthcare, finance, or legal.",
+              "Current alignment methods (RLHF, etc.) don't ensure the AI's reasoning matches human logic, which could lead to user distrust and liability issues."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your AI product's reasoning transparency: run user tests to see if users can understand and predict the AI's decisions. If not, consider adding explainability features that mirror human decision-making processes, such as step-by-step rationales in natural language.",
+              "note": "Start with a small pilot to gauge user trust before investing in major changes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1786801727540-yalh1j",
+                "title": "Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning",
+                "url": "https://arxiv.org/abs/2608.12372",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-yalh1j-0",
+                "label": "Alignment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-yalh1j-1",
+                "label": "Explainability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1786801727540-yalh1j-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 15 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 24,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-14",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-14-morning",
@@ -1305,7 +1743,7 @@
   },
   {
     "date": "2026-08-13",
-    "displayDate": "Yesterday",
+    "displayDate": "Thursday, Aug 13",
     "briefings": [
       {
         "id": "briefing-2026-08-13-morning",
@@ -5890,429 +6328,6 @@
           }
         ],
         "totalReadTimeMinutes": 16,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-08",
-    "displayDate": "Saturday, Aug 8",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-08-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-08",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: DeepMind's WeatherNext: AI Breakthrough in Cyclone Forecasting, OpenAI Slows Astra Model Over Cybersecurity Risks, Cloudflare's Kitesurf: A browser built for AI agents.",
-        "items": [
-          {
-            "id": "hn-49220126",
-            "title": "DeepMind's WeatherNext: AI Breakthrough in Cyclone Forecasting",
-            "tldr": "DeepMind's WeatherNext model demonstrates state-of-the-art accuracy in predicting cyclone paths, marking a significant advance in AI-driven weather forecasting. This breakthrough could reshape industries reliant on weather predictions.",
-            "whyItMatters": [
-              "Business impact: More accurate cyclone forecasting can save billions in disaster preparedness and insurance risk modeling, opening opportunities for AI-powered weather services.",
-              "Technical impact: Demonstrates the potential of AI models to outperform traditional numerical weather prediction, encouraging further investment in AI for physical systems."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating WeatherNext's API or similar AI weather models into your product to enhance features like logistics planning, risk assessment, or climate analytics. Consider partnering with meteorological agencies for data access.",
-              "note": "Evaluate the model's latency and cost for real-time use cases, and compare with existing solutions for your specific domain."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49220126",
-                "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
-                "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-                "domain": "deepmind.google",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49220126-0",
-                "label": "Model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49220126-1",
-                "label": "Weather Forecasting",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-08T09:18:50Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786197829811-vhoa78",
-            "title": "OpenAI Slows Astra Model Over Cybersecurity Risks",
-            "tldr": "OpenAI paused development of its Astra model after it hit a 'critical cybersecurity threshold,' enabling it to autonomously identify and attack well-protected systems. This signals a major industry shift toward safety-first AI development.",
-            "whyItMatters": [
-              "Highlights the growing regulatory and safety scrutiny on AI capabilities, potentially impacting release timelines and compliance requirements for AI products.",
-              "Raises the bar for security benchmarks in AI development, pushing founders to prioritize safety features to avoid similar setbacks."
-            ],
-            "whatToTry": {
-              "description": "Conduct a security audit of your AI model's capabilities, focusing on autonomous actions and potential for misuse. Implement safety guardrails and monitoring systems early to avoid regulatory or reputational risks.",
-              "note": "Consider adopting frameworks like responsible AI guidelines or collaborating with security experts to benchmark your model against industry thresholds."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786197829811-vhoa78",
-                "title": "OpenAI says it slowed Astra model development over security concerns",
-                "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-vhoa78-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-vhoa78-1",
-                "label": "Astra",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-vhoa78-2",
-                "label": "AI Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 22:48:24 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786197829811-mqha54",
-            "title": "Cloudflare's Kitesurf: A browser built for AI agents",
-            "tldr": "Cloudflare launched Kitesurf, a cloud-hosted browser optimized for AI agents, using less compute than Chromium for automation tasks. This could significantly reduce costs and improve efficiency for developers building browser-based agents.",
-            "whyItMatters": [
-              "Reduces infrastructure costs for AI agent developers by lowering compute requirements for browser automation.",
-              "Provides a purpose-built alternative to Chromium, potentially improving reliability and performance for agent workflows."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Kitesurf for your browser-based AI agent workloads. Compare its compute usage and task completion rates against your current Chromium setup on common automation tasks like form filling, web scraping, or UI testing.",
-              "note": "Since it's cloud-hosted, consider data privacy and latency implications for your use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786197829811-mqha54",
-                "title": "Cloudflare launches Kitesurf, a browser built for AI agents",
-                "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-mqha54-0",
-                "label": "Cloudflare",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-mqha54-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-mqha54-2",
-                "label": "Browser automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 16:16:09 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1786197830072-jq3t5b",
-            "title": "OpenAI Reveals Astra Cyber Evaluations: New Security Benchmarks",
-            "tldr": "OpenAI published preliminary cybersecurity evaluations for its Astra model, detailing new safeguards and security controls. This signals a shift toward more rigorous security testing for frontier AI models, with implications for anyone building on OpenAI's platform.",
-            "whyItMatters": [
-              "Business impact: Founders using OpenAI models must understand new security constraints and potential compliance requirements, which could affect deployment and risk management.",
-              "Technical impact: The evaluations highlight specific vulnerabilities and mitigation strategies, guiding developers on how to harden their AI applications against cyber threats."
-            ],
-            "whatToTry": {
-              "description": "Review OpenAI's security evaluation framework and apply similar red-teaming practices to your own AI product. Identify critical assets and run adversarial tests to uncover vulnerabilities before they are exploited.",
-              "note": "Consider integrating automated security scanning tools into your CI/CD pipeline to continuously assess model behavior."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1786197830072-jq3t5b",
-                "title": "Responding to the next frontier of critical cyber capabilities",
-                "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1786197830072-jq3t5b-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1786197830072-jq3t5b-1",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1786197830072-jq3t5b-2",
-                "label": "Astra",
-                "type": "model"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 15:20:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786197829811-rs5is9",
-            "title": "Rippling's AI Spend Console: Track Employee AI ROI",
-            "tldr": "Rippling launched AI Spend Console after discovering it was spending millions on AI tools with unclear ROI. The product tracks individual and team AI spending, helping companies manage AI costs and justify investments.",
-            "whyItMatters": [
-              "As AI adoption grows, companies face ballooning costs without clear returns. This tool addresses a critical pain point for founders managing AI budgets.",
-              "It signals a shift toward AI cost governance, which will become essential for scaling AI products and internal AI usage."
-            ],
-            "whatToTry": {
-              "description": "Audit your own AI tool spending across teams. Identify which tools are used, by whom, and what business outcomes they drive. Consider building a simple internal dashboard to track AI costs per team or feature, similar to Rippling's approach.",
-              "note": "Start with a spreadsheet or existing expense tracking before investing in dedicated software."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786197829811-rs5is9",
-                "title": "After Rippling blew millions on AI in months, it built an employee ROI tool",
-                "url": "https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-rs5is9-0",
-                "label": "AI cost management",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786197829811-rs5is9-1",
-                "label": "Rippling",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 21:30:11 +0000"
-          },
-          {
-            "id": "hn-49214468",
-            "title": "Managing AI Coding Costs at Scale: Key Insights from Databricks",
-            "tldr": "Databricks shares strategies for controlling AI coding costs at scale, sparking a 227-comment discussion on HackerNews. The post highlights practical approaches to optimize spend on AI-assisted development, a critical concern for startups.",
-            "whyItMatters": [
-              "For AI product founders, coding costs can balloon quickly; this offers actionable cost-management tactics to preserve runway.",
-              "High community engagement signals real-world pain points and validates the importance of cost optimization in AI workflows."
-            ],
-            "whatToTry": {
-              "description": "Audit your team's AI coding tool usage to identify the biggest cost drivers (e.g., number of requests, model tier, or context length). Then implement caching for repetitive queries, set usage limits per developer, and consider using smaller models for routine tasks to reduce expenses.",
-              "note": "Start with a 2-week pilot to measure cost savings before rolling out changes team-wide."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49214468",
-                "title": "Managing AI Coding Costs at Scale",
-                "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-                "domain": "databricks.com",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49214468-0",
-                "label": "Cost Management",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49214468-1",
-                "label": "AI Coding Tools",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-07T18:25:17Z"
-          },
-          {
-            "id": "rss-hugging-face-blog-1786197829986-a0kmnp",
-            "title": "TutorMoments: AI Tutors That Know When to Step Back",
-            "tldr": "AI2 releases TutorMoments, a dataset and benchmark for AI tutors that focuses on pedagogical timing—knowing when to help and when to let the student struggle. This is a significant step toward more effective and human-like AI tutoring systems.",
-            "whyItMatters": [
-              "For founders building AI education tools, this benchmark provides a concrete way to evaluate and improve the pedagogical quality of their tutoring systems, moving beyond mere correctness to nuanced interaction.",
-              "The dataset enables training models to make better decisions about intervention timing, which is critical for user engagement and learning outcomes in AI tutoring products."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI tutor, explore the TutorMoments dataset and benchmark to assess your model's ability to decide when to provide hints or feedback. Use it to fine-tune your system's intervention strategies, aiming for a balance between support and fostering independent problem-solving.",
-              "note": "Consider combining this with user studies to validate that the model's timing decisions align with real student preferences and learning gains."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1786197829986-a0kmnp",
-                "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
-                "url": "https://huggingface.co/blog/allenai/tutormoments",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1786197829986-a0kmnp-0",
-                "label": "AI2",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1786197829986-a0kmnp-1",
-                "label": "TutorMoments",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1786197829986-a0kmnp-2",
-                "label": "AI Education",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 17:53:32 GMT"
-          },
-          {
-            "id": "hn-49213754",
-            "title": "Oracle Bans AI-Generated Code in OpenJDK: What It Means for AI Dev Tools",
-            "tldr": "Oracle has officially banned AI-generated code from OpenJDK contributions, sparking a heated HackerNews debate (356 comments). This signals a growing tension between AI-assisted development and legal/quality standards in critical open-source projects.",
-            "whyItMatters": [
-              "For founders building AI coding tools, this highlights the need to address provenance and licensing concerns to gain enterprise trust.",
-              "For teams relying on AI-generated code, it underscores the importance of human review and compliance in regulated or foundational software."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI dev tools, add features that track code provenance and flag AI-generated snippets for review. If you're using AI coding assistants, establish clear internal policies for when AI-generated code is acceptable, especially for projects with strict contribution guidelines.",
-              "note": "Consider integrating with legal/compliance workflows to help customers navigate such bans."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49213754",
-                "title": "Oracle bans AI-generated code from OpenJDK",
-                "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-                "domain": "app.dealroom.co",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49213754-0",
-                "label": "AI coding tools",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49213754-1",
-                "label": "Open source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49213754-2",
-                "label": "Legal",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-07T17:36:30Z"
-          },
-          {
-            "id": "hn-49213029",
-            "title": "OpenAI's Cyber Security Push: What Founders Need to Know",
-            "tldr": "OpenAI published a blog post outlining its strategy for advancing critical cyber capabilities, sparking a 185-comment discussion on HackerNews. The post signals a major focus on using AI for both offensive and defensive security, which could reshape the AI security landscape.",
-            "whyItMatters": [
-              "OpenAI's move into cybersecurity could set new standards for AI safety and security, impacting how founders build and deploy AI products.",
-              "The discussion highlights growing demand for AI-driven security solutions, creating opportunities for startups in this space."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's security posture in light of OpenAI's focus on cyber capabilities. Consider integrating AI-powered threat detection or response features, and stay updated on OpenAI's security APIs or frameworks that may be released.",
-              "note": "Monitor OpenAI's developer blog for concrete tools or guidelines that could help you align with emerging best practices."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49213029",
-                "title": "Responding to the next frontier of critical cyber capabilities",
-                "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49213029-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49213029-1",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-07T16:39:36Z"
-          },
-          {
-            "id": "rss-wired-ai-1786197829791-76jl07",
-            "title": "AI-Designed Viruses: New Hope for Antibiotic Resistance, New Regulatory Risks",
-            "tldr": "Researchers used AI to design 16 new viruses that can target bacteria, offering a potential breakthrough against antibiotic resistance. However, this also highlights the urgent need for updated biosecurity regulations as AI accelerates biological discovery.",
-            "whyItMatters": [
-              "For founders in AI-for-science, this demonstrates a high-impact application of generative models in biology, opening avenues for therapeutic development and synthetic biology startups.",
-              "It signals a growing regulatory and ethical scrutiny around AI-generated biological agents, which could affect compliance and funding for AI-biotech ventures."
-            ],
-            "whatToTry": {
-              "description": "Explore how your AI models can be applied to protein or sequence design for antimicrobial applications. Consider partnering with biotech labs to validate AI-generated candidates and stay ahead in this emerging niche.",
-              "note": "Be mindful of dual-use concerns; ensure your work aligns with emerging biosecurity guidelines to avoid regulatory backlash."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1786197829791-76jl07",
-                "title": "Scientists Used AI to Create 16 New Viruses",
-                "url": "https://www.wired.com/story/scientists-used-ai-to-create-16-new-viruses/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1786197829791-76jl07-0",
-                "label": "AI in Science",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1786197829791-76jl07-1",
-                "label": "Biotech",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 07 Aug 2026 14:13:57 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
