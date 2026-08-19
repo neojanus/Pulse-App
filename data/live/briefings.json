@@ -1,7 +1,430 @@
 [
   {
-    "date": "2026-08-18",
+    "date": "2026-08-19",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-19-morning",
+        "period": "morning",
+        "date": "2026-08-19",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: GxP-Agent: DAG-based LLM system achieves 100% accuracy in clinical trial data generation, Aegis: Runtime Governance for Agentic AI — Model Proposes, Trusted Runtime Decides, New AI Paradigm Automates Problem Discovery in Math Research.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1787126318718-n6sof3",
+            "title": "GxP-Agent: DAG-based LLM system achieves 100% accuracy in clinical trial data generation",
+            "tldr": "A new multi-agent system encodes regulatory process order as a DAG to reliably generate CDISC-compliant datasets, achieving 100% structural match where all single-agent and flat multi-agent LLM approaches fail (0%). This breakthrough could accelerate regulatory submissions and is covered by ArXiv research.",
+            "whyItMatters": [
+              "For AI founders in healthtech: demonstrates a practical pattern to make LLMs reliable for regulated, high-stakes tasks by embedding domain process knowledge into the system architecture.",
+              "For AI infrastructure builders: shows that graph-based orchestration can unlock value from weaker models (GPT-4.1 jumps from 0% to 59.2% accuracy), reducing dependency on frontier models."
+            ],
+            "whatToTry": {
+              "description": "If you're building LLM agents for regulated or complex workflows, prototype a DAG-based orchestration layer that encodes the required process steps as nodes with validation gates and conditional retries. Start with a small domain (e.g., 5-10 steps) and compare against flat multi-agent approaches to measure reliability gains.",
+              "note": "Focus on encoding domain constraints explicitly—the paper shows that process topology, not just better prompts, is the key to reliability."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-n6sof3",
+                "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
+                "url": "https://arxiv.org/abs/2608.16890",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-n6sof3-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-n6sof3-1",
+                "label": "Tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-n6sof3-2",
+                "label": "Topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-9u1mim",
+            "title": "Aegis: Runtime Governance for Agentic AI — Model Proposes, Trusted Runtime Decides",
+            "tldr": "A new arXiv paper introduces Aegis, a runtime governance system that treats AI model outputs as action proposals and mediates them through a trusted decision layer before tool execution, achieving zero risky side-effects in sandbox tests. This addresses the critical gap in agentic AI safety beyond prompt-level controls.",
+            "whyItMatters": [
+              "For founders building agentic AI products, this provides a concrete architecture for enforcing safety and compliance at the execution boundary, reducing risk of harmful side-effects and liability.",
+              "The fail-closed and provenance-resolved approach offers a blueprint for building trust and auditability into AI systems, which is essential for enterprise adoption and regulatory compliance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agentic AI stack: if you rely only on prompt-level safety, consider implementing a runtime governance layer that intercepts tool calls, applies policy checks, and fails closed on uncertainty. Start with a sandbox environment to test policy enforcement without disrupting production.",
+              "note": "The paper's results are from a sandbox corpus; validate the approach on your own use cases before full deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-9u1mim",
+                "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+                "url": "https://arxiv.org/abs/2608.16891",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-9u1mim-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-9u1mim-1",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-9u1mim-2",
+                "label": "Runtime Governance",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-ta9w4v",
+            "title": "New AI Paradigm Automates Problem Discovery in Math Research",
+            "tldr": "A new paper introduces FAR, a pipeline that automates the search for open mathematical problems from literature, reducing human bottleneck in AI-assisted discovery. This could reshape how AI tools are used in research workflows.",
+            "whyItMatters": [
+              "For founders building AI research tools, this demonstrates a scalable model for automating problem discovery, not just solution generation, opening new product opportunities.",
+              "Highlights the shift from single-problem prompts to research-direction-based interaction, which could influence how AI systems are designed for scientific domains."
+            ],
+            "whatToTry": {
+              "description": "Explore building a similar literature-to-review pipeline for your domain: use embeddings to search papers, extract candidate problems, and apply automated filtering to surface high-quality, open questions for human review.",
+              "note": "Start with a small corpus and focus on well-posedness filtering to avoid wasting expert time."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-ta9w4v",
+                "title": "The Problem Is the Problem: Towards Scalable Mathematical Discovery",
+                "url": "https://arxiv.org/abs/2608.16977",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ta9w4v-0",
+                "label": "AI for Math",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ta9w4v-1",
+                "label": "Research Workflow",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-ga7e2j",
+            "title": "KernelArc: Multi-Agent Framework Tops GPU Kernel Optimization",
+            "tldr": "KernelArc, a new multi-agent framework for autonomous GPU kernel optimization, achieves top rankings on SOL-ExecBench tasks by coordinating strategy-specialized agents. This signals a shift toward AI-driven performance engineering for AI infrastructure.",
+            "whyItMatters": [
+              "For AI founders building on GPUs, this could reduce the cost and time of optimizing kernels, making AI products more efficient and competitive.",
+              "The framework's success suggests that multi-agent approaches can outperform single-agent optimization, opening new possibilities for automated performance tuning."
+            ],
+            "whatToTry": {
+              "description": "If you're developing AI models that rely on custom kernels (e.g., attention mechanisms, MoE layers), explore multi-agent optimization frameworks like KernelArc to automate kernel tuning. Start by benchmarking your current kernels on representative workloads and consider integrating such frameworks into your build pipeline.",
+              "note": "KernelArc is research-stage; evaluate its applicability to your specific hardware and workloads before adoption."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-ga7e2j",
+                "title": "KernelArc: A Multi-Agent Framework for GPU Kernel Optimization",
+                "url": "https://arxiv.org/abs/2608.17071",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ga7e2j-0",
+                "label": "GPU Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ga7e2j-1",
+                "label": "Multi-Agent Framework",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318719-2cx82a",
+            "title": "New metric predicts when hidden-state selection beats voting in LLMs",
+            "tldr": "A new paper introduces CASE, a method that uses hidden states to select the best LLM answer, and decodability, a metric that predicts when this outperforms majority voting. It improves accuracy by up to 19 points on medium-difficulty questions.",
+            "whyItMatters": [
+              "Improves test-time inference without retraining, directly boosting answer quality for AI products.",
+              "Provides a reliable way to decide between voting and hidden-state selection, saving compute and improving reliability."
+            ],
+            "whatToTry": {
+              "description": "If you use majority voting for LLM outputs, experiment with a linear probe on answer-token hidden states to score candidates. Use the decodability metric to evaluate if this approach will beat voting on your specific tasks before full deployment.",
+              "note": "Be aware of question-identity leakage; use grouped evaluation to avoid overestimating probe accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318719-2cx82a",
+                "title": "A decodability criterion predicts when hidden-state selection beats majority voting in large language models",
+                "url": "https://arxiv.org/abs/2608.17124",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318719-2cx82a-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318719-2cx82a-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318719-2cx82a-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49354949",
+            "title": "Cerebras CS-4: Massive AI Chip for Training Giants",
+            "tldr": "Cerebras unveiled CS-4, its next-gen wafer-scale AI chip, sparking significant discussion on HackerNews. The system targets training of massive models with unprecedented memory and compute density, potentially reshaping hardware choices for AI startups.",
+            "whyItMatters": [
+              "Business impact: Offers an alternative to GPU clusters for training large models, potentially reducing costs and time-to-market for AI products.",
+              "Technical impact: Wafer-scale integration enables faster training of models that exceed typical GPU memory limits, enabling new research and product capabilities."
+            ],
+            "whatToTry": {
+              "description": "Evaluate CS-4 for your training workloads, especially if you're hitting GPU memory limits or need faster iteration on large models. Request access or benchmark against your current infrastructure to assess performance and cost benefits.",
+              "note": "Consider the ecosystem maturity and software support before committing; check if your existing codebase is compatible."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49354949",
+                "title": "Cerebras CS-4",
+                "url": "https://www.cerebras.ai/cs4",
+                "domain": "cerebras.ai",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49354949-0",
+                "label": "Cerebras",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49354949-1",
+                "label": "Hardware",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-08-19T00:28:18Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-aj42al",
+            "title": "Reasoning Effort: The Hidden Cost in AI API Contracts",
+            "tldr": "A new arXiv study reveals that specifying 'high reasoning effort' in API calls can increase costs by ~$0.01 per call without a statistically significant accuracy boost, highlighting the need for founders to treat reasoning effort as a separate contract term.",
+            "whyItMatters": [
+              "Business impact: Directly affects unit economics for AI products; optimizing reasoning effort can reduce costs without sacrificing quality.",
+              "Technical impact: Shows that model behavior varies with reasoning-effort parameters, requiring careful testing and configuration."
+            ],
+            "whatToTry": {
+              "description": "Run A/B tests on your own workloads comparing explicit high reasoning effort vs. default settings. Measure both cost and accuracy on a representative sample to determine if the extra expense is justified for your use case.",
+              "note": "The study found no significant accuracy difference, but your domain may differ. Also check if your provider supports granular reasoning-effort controls."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-aj42al",
+                "title": "The Price of Thinking: Reasoning Effort as a Model-Specific API Contract",
+                "url": "https://arxiv.org/abs/2608.16956",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-aj42al-0",
+                "label": "API",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-aj42al-1",
+                "label": "Cost Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-ry5ovy",
+            "title": "FedPref: Federated Learning for Radiology Report Extraction",
+            "tldr": "New research introduces FedPref, a federated learning method that lets hospitals with uneven data collaborate on structured radiology report extraction without sharing raw data, improving F1 by up to 9.10 points at data-poor sites.",
+            "whyItMatters": [
+              "Enables AI products in regulated industries (healthcare, finance) to train on distributed data without centralizing sensitive information, unlocking new markets.",
+              "Shows that compact models (Qwen3-8B) can achieve competitive performance via federated preference learning, reducing infrastructure costs for multi-tenant AI systems."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for healthcare or other privacy-sensitive domains, explore implementing a federated preference learning pipeline using frozen public LLMs (like Qwen3-8B) to generate candidate extractions, local ranking, and adapter training. Start with a small pilot across simulated sites to measure gains.",
+              "note": "Consider using heterogeneous teacher models to avoid collapse and improve robustness, as shown in the paper."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-ry5ovy",
+                "title": "FedPref: Federated Preference Learning for Structured Radiology Report Extraction",
+                "url": "https://arxiv.org/abs/2608.16971",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ry5ovy-0",
+                "label": "Federated Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ry5ovy-1",
+                "label": "Qwen3-8B",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-ry5ovy-2",
+                "label": "Radiology Report Extraction",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-712d56",
+            "title": "SkillEffect: Memory-Bounded Agent Tools for Reliable AI",
+            "tldr": "A new runtime, SkillEffect, enforces memory limits on AI agent tool calls by checking and bounding resource usage before execution, reducing peak memory and improving completion rates under fixed caps.",
+            "whyItMatters": [
+              "Prevents out-of-memory crashes in production AI agents, increasing reliability and reducing infrastructure costs.",
+              "Enables safer deployment of agent tools in memory-constrained environments, such as edge devices or serverless functions."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent tool interfaces for potential memory overuse. Consider implementing a similar checked-lowering pattern: define resource bounds for each tool, validate inputs before execution, and use bounded execution to prevent exceeding memory limits.",
+              "note": "Start with your most memory-intensive tools (e.g., those processing large files) to see immediate benefits."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-712d56",
+                "title": "SkillEffect: Checked Lowering for Memory-Bounded Agent Tools",
+                "url": "https://arxiv.org/abs/2608.17007",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-712d56-0",
+                "label": "Tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-712d56-1",
+                "label": "AI Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787126318718-adyvrt",
+            "title": "Memory vs. Signaling: New Frontier for Efficient AI Communication",
+            "tldr": "A new arXiv paper introduces the 'remembering-signaling frontier,' a framework for optimizing how AI agents balance internal memory and peer communication under resource constraints. Early experiments suggest that when history reduces task loss more, agents need less communication, offering a practical lens for designing efficient multi-agent systems.",
+            "whyItMatters": [
+              "For founders building multi-agent AI systems, this framework provides a principled way to allocate compute and bandwidth between memory and communication, potentially reducing costs and latency.",
+              "The findings could inform the design of more efficient collaborative AI, where agents learn when to rely on context vs. ask peers, improving scalability and robustness."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your multi-agent system's communication overhead by measuring how much task-relevant information is already available in each agent's history. Implement a simple heuristic: if an agent's past context provides high predictive power for the current task, reduce its message frequency and rely more on local memory. Use referential games or similar tasks to empirically map your own remembering-signaling frontier and identify optimal trade-offs.",
+              "note": "Start with a small pilot to measure the loss reduction from history before adjusting communication rates; the paper's hypothesis suggests that higher history utility should correlate with lower communication needs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787126318718-adyvrt",
+                "title": "Memory Is Communication: The Frontier Between Remembering and Signaling",
+                "url": "https://arxiv.org/abs/2608.17053",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-adyvrt-0",
+                "label": "Multi-agent systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-adyvrt-1",
+                "label": "Communication efficiency",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787126318718-adyvrt-2",
+                "label": "Memory",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-18-morning",
@@ -424,7 +847,7 @@
   },
   {
     "date": "2026-08-17",
-    "displayDate": "Yesterday",
+    "displayDate": "Monday, Aug 17",
     "briefings": [
       {
         "id": "briefing-2026-08-17-afternoon",
@@ -4852,856 +5275,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Thu, 13 Aug 2026 15:30:52 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-12",
-    "displayDate": "Wednesday, Aug 12",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-12-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-12",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Blacksmith's valuation soars 10x to $550M as AI coding fuels testing demand, AEROBAT: Automating Behavioral Research on AI Agents, LFM2.5-VL-3B: Edge Vision Model Boasts Speed and Efficiency.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1786545230118-lidouy",
-            "title": "Blacksmith's valuation soars 10x to $550M as AI coding fuels testing demand",
-            "tldr": "AI code-testing startup Blacksmith's valuation jumped nearly 10x to $550M in under a year, with revenue growing over 10x, highlighting the booming demand for AI-powered software validation as AI coding tools proliferate.",
-            "whyItMatters": [
-              "Signals a high-growth market for AI-powered testing and validation tools, presenting opportunities for founders to build complementary products or integrate testing into their AI workflows.",
-              "Indicates that investors are heavily funding AI infrastructure around code generation, validating the need for robust quality assurance in AI-driven development."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's testing and validation pipeline. If you're building AI coding tools, consider integrating automated testing and validation features to differentiate and capture enterprise trust. If you're a founder in the AI space, explore partnerships or acquisitions with testing startups to enhance your offering.",
-              "note": "Focus on real-world reliability and edge cases, as AI-generated code often requires more rigorous validation than human-written code."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786545230118-lidouy",
-                "title": "AI code-testing startup Blacksmith’s valuation jumps almost 10x in less than a year",
-                "url": "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-lidouy-0",
-                "label": "AI testing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-lidouy-1",
-                "label": "Startup funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-lidouy-2",
-                "label": "Software validation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1786545230373-h326gn",
-            "title": "AEROBAT: Automating Behavioral Research on AI Agents",
-            "tldr": "A new multi-agent system, AEROBAT, automates the full pipeline of behavioral scientific research on AI agents—from hypothesis generation to report writing—demonstrating scalability with 79 hypotheses and 23,512 simulation rounds, and uncovering novel insights.",
-            "whyItMatters": [
-              "Enables rapid, systematic evaluation of AI agent behaviors, reducing manual effort and accelerating safety and alignment research.",
-              "Provides a scalable framework for testing agent behavior in complex environments, which is critical for deploying agents in production."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI agents, consider integrating automated behavioral testing pipelines like AEROBAT into your development workflow to systematically evaluate agent behavior across diverse scenarios, catching unintended behaviors early.",
-              "note": "Start with a few target behaviors and scale up; validate automated findings with manual spot-checks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786545230373-h326gn",
-                "title": "Automating and Scaling Behavioral Scientific Research on AI Agents",
-                "url": "https://arxiv.org/abs/2608.10030",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-h326gn-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-h326gn-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-h326gn-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-hugging-face-blog-1786545230229-p3ve3u",
-            "title": "LFM2.5-VL-3B: Edge Vision Model Boasts Speed and Efficiency",
-            "tldr": "Liquid AI released LFM2.5-VL-3B, a 3B parameter vision-language model optimized for edge devices, claiming faster inference and better vision performance than larger models. This is significant for founders building on-device AI applications.",
-            "whyItMatters": [
-              "Enables real-time vision AI on edge devices, reducing cloud dependency and latency for products like smart cameras and AR.",
-              "3B size makes it feasible to run on consumer hardware, potentially lowering infrastructure costs for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Evaluate LFM2.5-VL-3B for your edge use case by testing it on your target hardware (e.g., Jetson, Raspberry Pi) against your current model, focusing on latency and accuracy for your specific vision tasks.",
-              "note": "Check if the model's license and performance meet your production requirements before committing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-hugging-face-blog-1786545230229-p3ve3u",
-                "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge",
-                "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
-                "domain": "huggingface.co",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-hugging-face-blog-1786545230229-p3ve3u-0",
-                "label": "LFM2.5-VL-3B",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-hugging-face-blog-1786545230229-p3ve3u-1",
-                "label": "Edge AI",
-                "type": "topic"
-              }
-            ],
-            "category": "tools",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 14:00:51 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1786545230160-7ekj7i",
-            "title": "AI Newsrooms Beat Mainstream Media to Breaking Stories",
-            "tldr": "An AI-powered newsroom scooped major outlets, including WIRED, on an OpenAI hacking story, signaling a shift in how breaking news is reported and consumed.",
-            "whyItMatters": [
-              "For founders building AI products, this demonstrates AI's capability to autonomously gather and report news, opening opportunities for automated content generation and real-time intelligence.",
-              "It highlights the competitive pressure on traditional media and the need for AI-native approaches to information delivery, which could disrupt existing business models."
-            ],
-            "whatToTry": {
-              "description": "Evaluate how your AI product can leverage automated news aggregation and reporting to provide real-time insights to users, especially in niche or fast-moving domains like tech and finance.",
-              "note": "Ensure accuracy and editorial oversight to maintain trust, as AI-generated news can face credibility challenges."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1786545230160-7ekj7i",
-                "title": "Oh Lord, AI Reporters Are Actually Breaking Big News",
-                "url": "https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1786545230160-7ekj7i-0",
-                "label": "AI News",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1786545230160-7ekj7i-1",
-                "label": "Automation",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 10:30:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1786545230315-poc3bk",
-            "title": "Enterprises Shift from AI Assistants to Autonomous Agents",
-            "tldr": "OpenAI's research shows enterprises are moving from using AI for assistance to deploying agentic AI for execution, with frontier firms leading in adoption and seeing significant productivity gains.",
-            "whyItMatters": [
-              "Indicates a market shift toward autonomous AI agents, creating opportunities for startups to build specialized agent solutions.",
-              "Highlights that early adopters gain competitive advantages, suggesting urgency for founders to integrate agentic AI into their products."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your product roadmap for opportunities to move from AI-assisted features to autonomous agent capabilities. Identify tasks that can be fully automated and consider building or integrating agentic workflows to deliver higher value to users.",
-              "note": "Focus on high-frequency, well-defined tasks where reliability can be ensured."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1786545230315-poc3bk",
-                "title": "From assistance to execution: How enterprises put AI to work",
-                "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1786545230315-poc3bk-0",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1786545230315-poc3bk-1",
-                "label": "Enterprise",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1786545230315-poc3bk-2",
-                "label": "OpenAI",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 06:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1786545230373-gp28a1",
-            "title": "LLM Co-Pilots Cut Crop Production Cycle by 35% in Closed-Loop Ag",
-            "tldr": "A new arXiv paper demonstrates LLMs autonomously controlling vertical farm microclimates via sensor data, reducing production cycles by 35% and optimizing energy use—a major step toward AI-driven biological experimentation.",
-            "whyItMatters": [
-              "Shows LLMs moving beyond analysis to autonomous control in physical systems, opening opportunities for AI-native agtech and bio-experimentation products.",
-              "Validates closed-loop LLM architectures that can optimize complex, multi-variable environments—a blueprint for other industries like biotech or climate control."
-            ],
-            "whatToTry": {
-              "description": "Explore integrating LLM agents with sensor-actuator loops in your own domain. Start by mapping your existing sensor data to actionable control parameters, then prototype a minimal closed-loop system where the LLM adjusts one variable (e.g., lighting) based on real-time telemetry. Measure cycle time or efficiency gains against a baseline.",
-              "note": "Ensure you have robust safety guardrails and fallback mechanisms before full autonomy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786545230373-gp28a1",
-                "title": "Closed-Loop LLM Co-Pilots for Digital Agriculture",
-                "url": "https://arxiv.org/abs/2608.09949",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-gp28a1-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-gp28a1-1",
-                "label": "AgTech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-gp28a1-2",
-                "label": "Autonomous Systems",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786545230373-tbnkrb",
-            "title": "New Study: AI Model Training Emissions Outweigh Accuracy Gains",
-            "tldr": "A comprehensive review and empirical study on ArXiv reveals that training deep learning models is the primary source of carbon emissions, and that more complex architectures don't always yield proportional accuracy improvements, urging founders to balance performance with sustainability.",
-            "whyItMatters": [
-              "Business impact: Reducing model complexity can cut compute costs and carbon footprint, improving operational efficiency and ESG compliance.",
-              "Technical impact: Guides model selection and training strategies to optimize for both accuracy and environmental impact."
-            ],
-            "whatToTry": {
-              "description": "Audit your current model training pipeline using carbon measurement tools (e.g., CodeCarbon, ML CO2 Impact) to identify emission hotspots. Then, experiment with simpler architectures or early stopping to see if you can maintain accuracy with lower emissions.",
-              "note": "Consider using pre-trained models or fine-tuning instead of training from scratch to further reduce footprint."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786545230373-tbnkrb",
-                "title": "Towards Sustainable Artificial Intelligence: A Comprehensive Review and Comparative Analysis of Deep Learning Models' Carbon Footprint",
-                "url": "https://arxiv.org/abs/2608.09998",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-tbnkrb-0",
-                "label": "Green AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-tbnkrb-1",
-                "label": "Carbon Footprint",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-tbnkrb-2",
-                "label": "Deep Learning",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786545230373-niq72e",
-            "title": "ReCBM: Uncertainty-Gated Reasoning for More Robust Concept Bottleneck Models",
-            "tldr": "A new framework, ReCBM, enhances Concept Bottleneck Models by using uncertainty to gate relational reasoning between concepts, improving robustness to missing or corrupted concept labels and enabling more reliable interventions.",
-            "whyItMatters": [
-              "Improves reliability of interpretable AI systems, which is critical for regulated industries and user trust.",
-              "Enables better handling of noisy concept annotations, reducing the need for perfect labels in production."
-            ],
-            "whatToTry": {
-              "description": "If you build interpretable models using concept bottlenecks, experiment with adding uncertainty-gated relational reasoning to your pipeline. Start by defining semantic relations (co-occurrence, implication, exclusion) between your concepts and use predicted uncertainty to modulate their contribution during inference.",
-              "note": "This can help when your concept labels are noisy or incomplete, but requires careful design of relation graphs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786545230373-niq72e",
-                "title": "ReCBM: Uncertainty-Gated Relational Reasoning for Concept Bottleneck Models",
-                "url": "https://arxiv.org/abs/2608.10004",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-niq72e-0",
-                "label": "Model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-niq72e-1",
-                "label": "Interpretability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786545230373-niq72e-2",
-                "label": "Uncertainty",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786545230118-chgvmg",
-            "title": "Google's Pixel 11 & Gemini Updates: What AI Founders Should Know",
-            "tldr": "Google's Made by Google 2026 event unveiled the Pixel 11 lineup, an AirTag competitor, and new Gemini features. While consumer-focused, the Gemini updates signal shifts in on-device AI capabilities that could impact AI product development.",
-            "whyItMatters": [
-              "New Gemini features may introduce APIs or capabilities that developers can integrate into their products.",
-              "On-device AI advancements in Pixel 11 could set new benchmarks for mobile AI performance, affecting how founders optimize their models for edge devices."
-            ],
-            "whatToTry": {
-              "description": "Monitor Google's developer blog and Gemini API documentation for any newly announced features or capabilities from the event. Evaluate if any align with your product roadmap and consider prototyping with them.",
-              "note": "Focus on the Gemini updates rather than the hardware, as the software features are more directly actionable for AI product builders."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786545230118-chgvmg",
-                "title": "Google unveils Pixel 11 lineup, new AirTag rival, and Gemini features at Made by Google 2026",
-                "url": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-chgvmg-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-chgvmg-1",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786545230118-chgvmg-2",
-                "label": "On-device AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 14:20:33 +0000"
-          },
-          {
-            "id": "hn-49270022",
-            "title": "What Math Are LLMs Actually Good At? A Founder's Guide",
-            "tldr": "A detailed analysis by mathematician Timothy Gowers, sparking discussion on HackerNews, explores the types of mathematical problems LLMs can solve and where they fail, offering practical insights for founders building math-heavy AI products.",
-            "whyItMatters": [
-              "Helps founders set realistic expectations for LLM capabilities in math-related features, avoiding overpromising to users.",
-              "Informs technical decisions on when to use LLMs vs. traditional solvers or hybrid approaches for mathematical tasks."
-            ],
-            "whatToTry": {
-              "description": "Review your product's math-related use cases and categorize them into 'LLM-friendly' (e.g., pattern recognition, step-by-step reasoning with clear structure) and 'LLM-weak' (e.g., exact arithmetic, complex proofs). For weak areas, consider integrating symbolic computation tools or external solvers to augment LLM outputs.",
-              "note": "Test your specific math tasks with multiple LLMs to find the best fit, as performance varies by model and prompt design."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49270022",
-                "title": "What sort of maths are LLMs good at?",
-                "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
-                "domain": "gowers.wordpress.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49270022-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49270022-1",
-                "label": "Mathematics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-12T10:04:25Z"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-08-12-evening",
-        "period": "evening",
-        "date": "2026-08-12",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Amazon to Train AI on Twitch Streams by Default, Opt-Out Only, Cognition in talks to raise at $40B, signaling AI coding market surge, Thrive Holdings Raises $2B to Push AI in Enterprise.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1786569161795-j091tj",
-            "title": "Amazon to Train AI on Twitch Streams by Default, Opt-Out Only",
-            "tldr": "Amazon will use Twitch streamers' content to train its AI models by default, with an opt-out option. The Twitch CPO admitted that opt-in would lead to low participation, sparking backlash from creators. Multiple outlets are covering this as a major industry shift in data consent.",
-            "whyItMatters": [
-              "Sets a precedent for default-opt-in data usage in AI training, affecting creator livelihoods and content ownership.",
-              "Highlights the tension between AI development needs and individual rights, influencing future regulations and platform policies."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products that use user-generated content, proactively implement opt-in consent mechanisms and transparent data usage policies. This builds trust and avoids regulatory backlash, even if it reduces training data volume.",
-              "note": "Consider offering incentives for opt-in, such as revenue sharing or exclusive features, to encourage participation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786569161795-j091tj",
-                "title": "Amazon will train on Twitch streamers’ content by default, unless they opt out",
-                "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-j091tj-0",
-                "label": "Amazon",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-j091tj-1",
-                "label": "Twitch",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-j091tj-2",
-                "label": "Data Consent",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 20:10:40 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786569161795-5plhlm",
-            "title": "Cognition in talks to raise at $40B, signaling AI coding market surge",
-            "tldr": "AI coding startup Cognition is reportedly in talks to raise a new round at a $40B valuation, just months after its $1B raise at $26B. This rapid valuation jump underscores the intense investor appetite for AI coding tools and the competitive pressure in the space.",
-            "whyItMatters": [
-              "For founders building AI coding tools, this signals a booming market with high valuations, attracting more competition and talent.",
-              "The valuation surge indicates that investors see AI coding as a critical application area, potentially leading to more funding and resources for the entire ecosystem."
-            ],
-            "whatToTry": {
-              "description": "Reassess your product roadmap and go-to-market strategy in light of the AI coding boom. Consider how you can differentiate your offering from well-funded competitors like Cognition, and explore partnerships or integrations that leverage the growing demand for AI-assisted development.",
-              "note": "Focus on niche use cases or developer experience to stand out, as the market is becoming crowded."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786569161795-5plhlm",
-                "title": "AI coding startup Cognition reportedly already in talks to raise at $40B valuation",
-                "url": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-5plhlm-0",
-                "label": "AI coding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-5plhlm-1",
-                "label": "Cognition",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-5plhlm-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 18:19:12 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786569161795-uesfnc",
-            "title": "Thrive Holdings Raises $2B to Push AI in Enterprise",
-            "tldr": "Thrive Holdings, backed by OpenAI, secured $2B at a $12B valuation from SoftBank and others, signaling major investor confidence in AI-driven enterprise transformation.",
-            "whyItMatters": [
-              "Validates the enterprise AI market, potentially accelerating adoption and competition.",
-              "Indicates a shift toward AI-first enterprise solutions, creating opportunities for startups to partner or compete."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your enterprise AI positioning: assess how your product can integrate with or differentiate from Thrive's offerings, and consider strategic partnerships or niche focus areas.",
-              "note": "Monitor Thrive's go-to-market strategy to identify gaps you can exploit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786569161795-uesfnc",
-                "title": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
-                "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-uesfnc-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-uesfnc-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 17:41:29 +0000"
-          },
-          {
-            "id": "hn-49274600",
-            "title": "DeepSeek V4 Pro 0813 Drops: HackerNews Buzz Signals Major Model Release",
-            "tldr": "DeepSeek V4 Pro 0813 has been released, generating significant traction on HackerNews (573 points, 202 comments). This signals a major model update that could impact cost-performance benchmarks for AI founders.",
-            "whyItMatters": [
-              "Potential for improved performance and efficiency, affecting model choice and cost structures for AI products.",
-              "Indicates a competitive shift in the open-source/API model landscape, possibly pressuring other providers."
-            ],
-            "whatToTry": {
-              "description": "Evaluate DeepSeek V4 Pro 0813 on your specific use cases by running side-by-side benchmarks against your current model. Compare latency, output quality, and cost per token to see if it offers a better trade-off for your product.",
-              "note": "Check the OpenRouter page for pricing and rate limits, and monitor community feedback for any known issues."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49274600",
-                "title": "DeepSeek V4 Pro 0813",
-                "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-                "domain": "openrouter.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49274600-0",
-                "label": "DeepSeek",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49274600-1",
-                "label": "Model Release",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-12T16:04:50Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786569161795-8v0kx6",
-            "title": "Lovable hits $13.3B valuation with $400M raise",
-            "tldr": "AI app builder Lovable raised $400M at a $13.3B valuation, following $500M ARR in June. This signals massive investor confidence in AI-powered development tools, validating the market for no-code/low-code AI app generation.",
-            "whyItMatters": [
-              "Validates the market for AI app builders, indicating strong demand and potential for competitors or adjacent tools.",
-              "Shows that AI development tools can achieve hypergrowth, attracting more talent and capital to the space."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Lovable's platform to understand its capabilities and identify gaps you can address in your own AI product, or consider integrating similar AI app generation features to stay competitive.",
-              "note": "Focus on differentiation—speed, customization, or enterprise features—to stand out."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786569161795-8v0kx6",
-                "title": "Lovable confirms new $13.3B valuation, raises another $400M",
-                "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-8v0kx6-0",
-                "label": "Lovable",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-8v0kx6-1",
-                "label": "AI Development",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-8v0kx6-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 16:04:27 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1786569161931-8r69sw",
-            "title": "White House to Expand AI Policy to Cover Open Models",
-            "tldr": "The White House plans to update its AI framework to include open models, signaling a shift toward regulating AI systems that were previously unregulated. This could impact how founders distribute and use open-source AI.",
-            "whyItMatters": [
-              "Business impact: New regulations on open models could affect how AI products are built, distributed, and monetized, especially for startups relying on open-source components.",
-              "Technical impact: Compliance requirements may necessitate changes in model development, documentation, and deployment practices."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's use of open models and assess potential regulatory exposure. Stay informed on the updated framework and consider implementing transparency measures (e.g., model cards, usage monitoring) proactively.",
-              "note": "This is early-stage news; avoid overreacting but start preparing for possible compliance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1786569161931-8r69sw",
-                "title": "The White House Is Going to Expand Its AI Policy",
-                "url": "https://www.wired.com/story/the-white-house-is-going-to-expand-its-ai-policy/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1786569161931-8r69sw-0",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1786569161931-8r69sw-1",
-                "label": "Open Models",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 21:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1786569161795-4jw8he",
-            "title": "AI Pioneers Push Back on Overregulation: Open Source Wins?",
-            "tldr": "At Ai4, Hinton, Fei-Fei Li, and Ng debated AI regulation and open source, arguing against excessive restrictions to maintain US competitiveness against China. This signals a shift in the safety debate toward balanced openness.",
-            "whyItMatters": [
-              "Business impact: Founders building on open-source models may face fewer regulatory hurdles, but must prepare for potential export controls or compliance requirements.",
-              "Technical impact: Open-source AI innovation could accelerate, but safety concerns may lead to targeted restrictions on high-risk applications."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's regulatory exposure: assess whether your use case could be deemed high-risk, and consider building with open-source models to stay agile while monitoring policy shifts.",
-              "note": "Keep an eye on US-China tech policy; changes could affect supply chains or model access."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786569161795-4jw8he",
-                "title": "As AI safety concerns mount, three pioneers make the case for staying open",
-                "url": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-4jw8he-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-4jw8he-1",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786569161795-4jw8he-2",
-                "label": "AI Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 17:51:00 +0000"
-          },
-          {
-            "id": "hn-49275385",
-            "title": "Grok 4.6 Hits 61 on AI Index: What It Means for Builders",
-            "tldr": "xAI's Grok 4.6 scores 61 on the Artificial Analysis Intelligence Index, a composite benchmark, sparking community debate on HackerNews. This signals a competitive shift in model capabilities, relevant for founders evaluating model choices.",
-            "whyItMatters": [
-              "Business impact: Indicates a new competitive option for AI product builders, potentially affecting cost/performance trade-offs and vendor selection.",
-              "Technical impact: Provides a data point on model intelligence, useful for benchmarking against other models and informing architecture decisions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Grok 4.6 against your current model on your specific use cases, using the Artificial Analysis Intelligence Index as a starting point. Run your own benchmarks to see if it improves quality or reduces latency/cost for your product.",
-              "note": "Benchmark scores are not definitive; always test on your own data and tasks."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49275385",
-                "title": "Grok 4.6 scores 61 on the Artificial Analysis Intelligence Index",
-                "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
-                "domain": "artificialanalysis.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49275385-0",
-                "label": "Grok 4.6",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49275385-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49275385-2",
-                "label": "Model Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-12T16:54:25Z"
-          },
-          {
-            "id": "hn-49272569",
-            "title": "Mass Scans Spoof AI Bots: New Threat to AI Product Security",
-            "tldr": "Attackers are spoofing AI crawler user agents (like ClaudeBot) to run mass vulnerability scans, potentially tricking security teams and causing reputational risk. This is a growing industry concern for AI product builders.",
-            "whyItMatters": [
-              "Business impact: If your AI product relies on web scraping or has public endpoints, spoofed AI bot traffic can lead to false security alerts, wasted resources, or even legal liability if you block legitimate AI bots.",
-              "Technical impact: Your security monitoring may be fooled by spoofed user agents, leading to misconfigured defenses or overlooked real threats."
-            ],
-            "whatToTry": {
-              "description": "Review your server logs and security filters to verify that you are not blindly trusting AI bot user agents. Implement additional verification (e.g., reverse DNS, IP allowlists, or token-based authentication) for any AI crawler traffic before granting access or triggering alerts.",
-              "note": "Consider updating your robots.txt and WAF rules to be more strict about which user agents are allowed, and monitor for unusual scan patterns."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49272569",
-                "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
-                "url": "https://knownagents.com/insights",
-                "domain": "knownagents.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49272569-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49272569-1",
-                "label": "AI Bots",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-12T14:02:46Z"
-          },
-          {
-            "id": "rss-wired-ai-1786569161931-r4s61v",
-            "title": "Rogue AI Agents Aren't Evil—They're Just Overzealous",
-            "tldr": "A Wired analysis argues that AI agents that 'go rogue' are often just misaligned with user intent, not malicious. This reframes AI safety as a design challenge for founders building autonomous systems.",
-            "whyItMatters": [
-              "Highlights the need for robust intent alignment and guardrails in AI agent products to prevent costly failures.",
-              "Shifts the narrative from fear to engineering, encouraging proactive safety design rather than reactive fixes."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI agent's decision-making process for scenarios where it might over-optimize for a single instruction. Implement explicit constraint-checking and human-in-the-loop approval for high-impact actions.",
-              "note": "Consider using red-teaming exercises to simulate edge cases where the agent might misinterpret user intent."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1786569161931-r4s61v",
-                "title": "Rogue AI Agents Aren’t Evil. They’re Just Eager to Please",
-                "url": "https://www.wired.com/story/rogue-ai-is-just-misunderstood/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1786569161931-r4s61v-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1786569161931-r4s61v-1",
-                "label": "AI Agents",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 12 Aug 2026 18:45:00 +0000"
           }
         ],
         "totalReadTimeMinutes": 20,
