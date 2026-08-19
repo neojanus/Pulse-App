@@ -419,6 +419,443 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-08-19-afternoon",
+        "period": "afternoon",
+        "date": "2026-08-19",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: GxP-Agent: DAG-based LLM system achieves 100% accuracy in clinical trial programming, Aegis: Runtime Guardrails for Agentic AI Actions, Reasoning Effort as API Contract: Pay More, Not Smarter?.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1787148213329-cyvts8",
+            "title": "GxP-Agent: DAG-based LLM system achieves 100% accuracy in clinical trial programming",
+            "tldr": "A new multi-agent system encodes regulatory process order as a DAG to reliably generate CDISC-compliant datasets, achieving 100% structural match where all single-agent and flat multi-agent approaches fail completely. This is a breakthrough for applying LLMs in regulated industries.",
+            "whyItMatters": [
+              "For founders building AI in regulated domains (healthcare, finance, legal), this demonstrates that encoding domain process knowledge as graph topology can overcome LLM reliability issues, opening up new product opportunities.",
+              "The approach enables weaker models to perform well (GPT-4.1 jumps from 0% to 59.2% with DAG), potentially reducing inference costs and dependency on frontier models."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for regulated workflows, experiment with decomposing monolithic tasks into a DAG of domain-specific nodes, each with validation gates and conditional retry. Start by mapping your process's regulatory or compliance steps into a graph, then assign specialized agents to each node with context-specific prompts.",
+              "note": "The paper shows that even with strong models, flat multi-agent approaches fail; the DAG topology is the key differentiator. Consider using open-source models with DAG to cut costs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-cyvts8",
+                "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
+                "url": "https://arxiv.org/abs/2608.16890",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-cyvts8-0",
+                "label": "Multi-agent systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-cyvts8-1",
+                "label": "Clinical trials",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-cyvts8-2",
+                "label": "LLM reliability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-mhlxbl",
+            "title": "Aegis: Runtime Guardrails for Agentic AI Actions",
+            "tldr": "A new research paper introduces Aegis, a runtime governance system that treats AI model outputs as action proposals, mediating them through a trusted decision layer before tool execution. In sandbox tests, it eliminated risky side-effects, offering a practical approach to enforcing safety boundaries beyond prompt-level controls.",
+            "whyItMatters": [
+              "For founders building agentic AI products, this addresses the critical gap between prompt-based safety and actual execution safety, reducing risk of harmful tool actions.",
+              "Aegis's fail-closed and provenance-tracking design could become a reference architecture for compliance and auditability, which is essential for enterprise adoption."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agentic AI stack: if you rely only on prompt-level safety, prototype a runtime mediation layer that intercepts tool calls, validates them against policy, and fails closed on uncertainty. Consider implementing provenance tracking for all actions to enable audits.",
+              "note": "Start with a sandbox environment to test the approach before production deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-mhlxbl",
+                "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+                "url": "https://arxiv.org/abs/2608.16891",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-mhlxbl-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-mhlxbl-1",
+                "label": "Runtime Governance",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-mhlxbl-2",
+                "label": "Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-w0k25f",
+            "title": "Reasoning Effort as API Contract: Pay More, Not Smarter?",
+            "tldr": "A preregistered study on Anthropic's Sonnet 5 shows that explicitly requesting high reasoning effort costs ~$0.01 more per call but yields no statistically significant accuracy gain on AIME 2026 problems, highlighting that reasoning-effort parameters are model-specific contracts with unclear ROI.",
+            "whyItMatters": [
+              "Business impact: Founders can optimize API costs by testing whether reasoning-effort parameters actually improve accuracy for their use cases, avoiding unnecessary spend.",
+              "Technical impact: Reasoning-effort semantics vary by model and provider, so relying on a single parameter setting may lead to inconsistent performance across models."
+            ],
+            "whatToTry": {
+              "description": "Run a small A/B test on your own tasks: compare your current model's default reasoning effort vs. explicit high effort on a sample of representative prompts, measuring both accuracy and cost per successful outcome. Use the results to decide if paying extra for reasoning effort is justified.",
+              "note": "The study's confidence interval allows up to a 4.67 percentage point gain, so your results may differ; test with your own data."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-w0k25f",
+                "title": "The Price of Thinking: Reasoning Effort as a Model-Specific API Contract",
+                "url": "https://arxiv.org/abs/2608.16956",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-w0k25f-0",
+                "label": "Reasoning Effort",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-w0k25f-1",
+                "label": "API",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-w0k25f-2",
+                "label": "Anthropic",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-ujy5jz",
+            "title": "FedPref: Federated Learning for Radiology Report Extraction",
+            "tldr": "New research introduces FedPref, a federated learning method that lets hospitals train structured radiology report extraction models without sharing patient data. It improves worst-site F1 by 9.10 points over isolated training, making it a promising approach for privacy-preserving collaboration in healthcare AI.",
+            "whyItMatters": [
+              "Enables AI startups to build models on sensitive medical data across institutions without data sharing, unlocking larger training pools while maintaining compliance.",
+              "Shows that compact adapters (Qwen3-8B) can achieve strong performance, reducing computational costs for deployment in resource-constrained settings."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for healthcare or other privacy-sensitive domains, explore federated learning with preference-based optimization. Start by simulating heterogeneous data distributions across clients and test whether a small adapter model can match centralized performance while preserving privacy.",
+              "note": "Consider using a teacher pool of diverse models to avoid collapse and improve robustness, as demonstrated in the paper."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-ujy5jz",
+                "title": "FedPref: Federated Preference Learning for Structured Radiology Report Extraction",
+                "url": "https://arxiv.org/abs/2608.16971",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-ujy5jz-0",
+                "label": "Federated Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-ujy5jz-1",
+                "label": "Qwen3",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-ujy5jz-2",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-7rnu00",
+            "title": "FAR: AI Pipeline Automates Problem Discovery for Math Research",
+            "tldr": "A new arXiv paper introduces FAR, a literature-to-review cascade that automates the search for mathematical problems, filtering thousands of papers to surface high-value conjectures. This shifts human effort from problem selection to review, addressing a key bottleneck in AI-assisted research.",
+            "whyItMatters": [
+              "For AI founders building research tools, this demonstrates a scalable approach to automating the early stages of scientific discovery, potentially opening new markets for AI-driven research assistants.",
+              "Technically, it combines search, recommendation, and automated reasoning to triage problems, offering a blueprint for similar pipelines in other scientific domains."
+            ],
+            "whatToTry": {
+              "description": "Consider building a similar 'find, attempt, recommend' pipeline for your domain (e.g., code review, drug discovery). Start by curating a corpus of papers or problems, then use LLMs to extract candidate problems, filter for well-posedness, and rank by potential impact. Focus human review only on the top few.",
+              "note": "The paper's pilot used combinatorics, but the approach is domain-agnostic. Ensure you have a clear filtering criteria to avoid overwhelming reviewers."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-7rnu00",
+                "title": "The Problem Is the Problem: Towards Scalable Mathematical Discovery",
+                "url": "https://arxiv.org/abs/2608.16977",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-7rnu00-0",
+                "label": "AI for Science",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-7rnu00-1",
+                "label": "Research Automation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-7rnu00-2",
+                "label": "Mathematical Discovery",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-s7mi2e",
+            "title": "KernelArc: Multi-Agent Framework Tops GPU Kernel Benchmarks",
+            "tldr": "KernelArc, a multi-agent framework for autonomous GPU kernel optimization, achieves top rankings on SOL-ExecBench for H100/B200, showing that shared multi-agent search can outperform single-agent methods in finding stronger kernel implementations.",
+            "whyItMatters": [
+              "For founders building AI infrastructure: automated kernel optimization can reduce engineering time and improve performance for custom workloads, especially for MoE and attention layers.",
+              "The framework's approach to coordination (conclusions-only shared memory, deterministic benchmark guard) offers a blueprint for building robust multi-agent systems for code optimization."
+            ],
+            "whatToTry": {
+              "description": "Evaluate KernelArc's methodology for your own kernel optimization needs. If you're developing custom CUDA kernels or optimizing inference for MoE/attention, consider implementing a multi-agent search with read-only shared state and plateau-triggered drafting to broaden exploration within a fixed candidate budget.",
+              "note": "Start with small, representative workloads to validate the approach before scaling to full production kernels."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-s7mi2e",
+                "title": "KernelArc: A Multi-Agent Framework for GPU Kernel Optimization",
+                "url": "https://arxiv.org/abs/2608.17071",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-s7mi2e-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-s7mi2e-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-s7mi2e-2",
+                "label": "GPU optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-276beh",
+            "title": "New metric predicts when hidden-state selection beats majority voting in LLMs",
+            "tldr": "A new paper introduces CASE, a method that uses hidden states to select the best LLM answer, and decodability, a metric that predicts when this approach outperforms majority voting. It improves accuracy by up to 19 points on hard questions, offering a practical way to boost test-time performance.",
+            "whyItMatters": [
+              "Improves LLM accuracy on difficult questions without retraining, directly enhancing product quality.",
+              "Provides a reliable metric to decide when to use hidden-state selection vs. voting, saving compute and avoiding performance degradation."
+            ],
+            "whatToTry": {
+              "description": "If you're using majority voting for LLM inference, experiment with a linear probe on answer-token hidden states to score candidates. Use the decodability metric to evaluate if this approach will beat voting on your specific tasks before full deployment.",
+              "note": "Be aware of question-identity leakage in probes; use grouped evaluation to get accurate estimates."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-276beh",
+                "title": "A decodability criterion predicts when hidden-state selection beats majority voting in large language models",
+                "url": "https://arxiv.org/abs/2608.17124",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-276beh-0",
+                "label": "LLM",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-276beh-1",
+                "label": "Test-time compute",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-276beh-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-hugging-face-blog-1787148213385-8f9wpb",
+            "title": "LFM2.5 Q4_0 Checkpoints: Quantization-Aware Distillation",
+            "tldr": "Liquid AI released Q4_0 quantized checkpoints for LFM2.5, trained with quantization-aware distillation to preserve quality. This offers a practical path to smaller, faster models without major accuracy loss.",
+            "whyItMatters": [
+              "Enables deployment of high-quality models on edge devices and cost-efficient inference, reducing infrastructure overhead for AI products.",
+              "Demonstrates a training technique (QAD) that can be adopted to create custom quantized models with better performance than post-training quantization."
+            ],
+            "whatToTry": {
+              "description": "Evaluate the LFM2.5 Q4_0 checkpoints for your use case, comparing quality and latency against the full-precision version. If you're building with other models, consider applying quantization-aware distillation to your own fine-tuning pipeline to achieve similar efficiency gains.",
+              "note": "Check the specific hardware requirements and benchmark results on the Hugging Face page to ensure compatibility with your deployment stack."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1787148213385-8f9wpb",
+                "title": "LFM2.5 Q4\\_0 Checkpoints from Quantization-Aware Distillation",
+                "url": "https://huggingface.co/blog/LiquidAI/qad",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1787148213385-8f9wpb-0",
+                "label": "Liquid AI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1787148213385-8f9wpb-1",
+                "label": "Quantization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1787148213385-8f9wpb-2",
+                "label": "LFM2.5",
+                "type": "model"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 13:48:49 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-zp6zmb",
+            "title": "SkillEffect: Memory-Bounded Tool Execution for AI Agents",
+            "tldr": "A new runtime, SkillEffect, enforces memory limits on agent tool calls by checking and bounding resource usage before execution, reducing peak memory and improving completion rates under fixed caps. This addresses a critical failure mode for AI agents handling large inputs.",
+            "whyItMatters": [
+              "Prevents out-of-memory crashes in production agent systems, improving reliability and user trust.",
+              "Enables agents to handle larger datasets and more complex workflows without infrastructure upgrades."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent's tool calls for memory risks by profiling peak usage on large inputs. Consider implementing a similar checked-lowering pattern: validate resource bounds before execution and use streaming or bounded-heap algorithms where possible.",
+              "note": "Start with your most data-heavy tools (e.g., file parsing, database queries) to see immediate gains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-zp6zmb",
+                "title": "SkillEffect: Checked Lowering for Memory-Bounded Agent Tools",
+                "url": "https://arxiv.org/abs/2608.17007",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-zp6zmb-0",
+                "label": "Agent Tools",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-zp6zmb-1",
+                "label": "Memory Management",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-zp6zmb-2",
+                "label": "Runtime",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787148213329-m92jlu",
+            "title": "DiSCO: Black-Box Defense Against NSFW Image Generation",
+            "tldr": "New research introduces DiSCO, a zero-shot, black-box defense that neutralizes NSFW prompts for text-to-image models by optimizing prompt suffixes via contrastive scoring, reducing attack success rates by up to 37.7% without model access.",
+            "whyItMatters": [
+              "For founders building AI image generation products, this offers a plug-and-play safety layer that works with any API, addressing a critical compliance and brand risk.",
+              "Technically, it solves the 'benign adversarial' problem where safe-looking prompts trigger harmful outputs, which existing defenses miss."
+            ],
+            "whatToTry": {
+              "description": "Evaluate DiSCO as a pre-processing step in your image generation pipeline: test it against your current model's API to measure reduction in NSFW outputs while preserving image quality.",
+              "note": "Since it's research, wait for an official implementation or prototype it based on the paper's approach."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787148213329-m92jlu",
+                "title": "DiSCO: Defending text-to-image generation through distribution-guided contrastive prompt optimization",
+                "url": "https://arxiv.org/abs/2608.17067",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-m92jlu-0",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787148213329-m92jlu-1",
+                "label": "Text-to-Image",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 19 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 27,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
