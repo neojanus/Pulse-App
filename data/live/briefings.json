@@ -856,6 +856,433 @@
         "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-08-21-evening",
+        "period": "evening",
+        "date": "2026-08-21",
+        "scheduledTime": "20:30",
+        "executiveSummary": "Today's highlights: Nvidia: The Harness, Not the Model, Is the Real Hero for AI Agents, Active Inference Framework Optimizes Context Acquisition for AI Agents, Outcome Monitors: Catching Silent AI Tool Failures.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1787345345803-dt3ozj",
+            "title": "Nvidia: The Harness, Not the Model, Is the Real Hero for AI Agents",
+            "tldr": "Nvidia research reveals that fine-tuning the 'harness'—the orchestration layer around an AI agent—can dramatically improve performance and prevent failures, even when the underlying model is weak. This shifts focus from model quality to system design.",
+            "whyItMatters": [
+              "Business impact: Founders can build reliable AI products with smaller, cheaper models by investing in harness engineering, reducing inference costs and dependency on frontier models.",
+              "Technical impact: The harness—prompting, tool use, memory, and control flow—becomes a first-class optimization target, opening new avenues for differentiation and IP."
+            ],
+            "whatToTry": {
+              "description": "Audit your current agent architecture: identify where failures occur (e.g., tool selection, context handling) and experiment with fine-tuning the harness components—like decision policies or memory retrieval—rather than swapping in a larger model. Measure performance gains on your key tasks.",
+              "note": "Start with a small set of failure cases; harness tuning can be iterative and may require custom evaluation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1787345345803-dt3ozj",
+                "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
+                "url": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-0",
+                "label": "Nvidia",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-2",
+                "label": "Harness",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 19:43:39 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346088-j5ghv2",
+            "title": "Active Inference Framework Optimizes Context Acquisition for AI Agents",
+            "tldr": "A new arXiv paper proposes using active inference to decide when AI agents should ask clarifying questions, retrieve context, or act, balancing information gain against token costs. This model-agnostic framework could reduce wasted tokens and improve agent efficiency in interactive tasks.",
+            "whyItMatters": [
+              "Directly addresses token efficiency and user experience for AI agents, a key cost and satisfaction factor for founders.",
+              "Provides a principled method to optimize context acquisition, potentially improving agent performance on complex tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent's current context-acquisition strategy: identify scenarios where it defaults or asks too many questions. Consider implementing a simple heuristic based on expected information gain per token cost to decide when to ask for clarification or retrieve additional context.",
+              "note": "Start with a small set of common user intents to measure impact before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346088-j5ghv2",
+                "title": "Active Inference as Context Acquisition for AI Agents",
+                "url": "https://arxiv.org/abs/2608.19202",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-0",
+                "label": "Active Inference",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-2",
+                "label": "Token Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346088-9ez5kl",
+            "title": "Outcome Monitors: Catching Silent AI Tool Failures",
+            "tldr": "New research introduces Outcome Monitors that detect silent tool failures (e.g., cached error pages, negative prices) in AI agents, boosting task completion rates by up to 17 points across multiple benchmarks. This is a practical safety mechanism for production AI systems.",
+            "whyItMatters": [
+              "Prevents AI agents from acting on corrupted data, reducing costly errors in production.",
+              "Provides a lightweight, model-agnostic safety layer that can be added to existing agent pipelines."
+            ],
+            "whatToTry": {
+              "description": "Implement outcome contracts for your AI agent's critical tool calls: define expected output schemas or invariants, and add a monitor that flags violations and triggers recovery actions (e.g., retry, fallback, or alert).",
+              "note": "Start with high-risk tools like payment or data retrieval; the paper shows recovery tool lists are key to the gain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346088-9ez5kl",
+                "title": "Outcome Monitors: Recovery Affordances for Silent Tool Failures",
+                "url": "https://arxiv.org/abs/2608.19303",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-1",
+                "label": "Reliability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346089-timlwo",
+            "title": "Symposium: Auditable Trails for AI Scientist Communities",
+            "tldr": "A new framework, Symposium, provides immutable, auditable records for AI agent-driven research, enabling trust and reproducibility in scientific communities. This addresses a critical gap for founders building multi-agent systems where accountability is key.",
+            "whyItMatters": [
+              "For AI product founders, this introduces a pattern for logging and verifying agent actions, which is essential for building trust in autonomous systems, especially in regulated or scientific domains.",
+              "Technically, it offers a practical implementation for separating durable history from agent operations, enabling diverse AI systems to collaborate while maintaining a verifiable record."
+            ],
+            "whatToTry": {
+              "description": "If you're building multi-agent systems, explore Symposium's open-source implementation to see how it structures claims, evidence citations, and assumptions. Consider adopting similar audit trails for your agents to enhance transparency and user trust.",
+              "note": "Start by reviewing the provided documentation and prompt components to quickly prototype a community with auditable agent activity."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346089-timlwo",
+                "title": "Symposium: Trust via Auditable Records for Communities of AI Scientist Agents",
+                "url": "https://arxiv.org/abs/2608.19511",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346089-timlwo-0",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346089-timlwo-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49389565",
+            "title": "AI Homework Boost, Exam Drop: Study Reveals Learning Trap",
+            "tldr": "A study shows that students using AI for homework saw higher scores, but their exam scores dropped, suggesting over-reliance on AI undermines deep learning. This is a critical signal for founders building AI education tools.",
+            "whyItMatters": [
+              "For AI education products: highlights the risk of tools that provide answers without fostering understanding, potentially leading to negative long-term outcomes and reputational damage.",
+              "For AI product design: underscores the need to build features that encourage active learning and knowledge retention, not just task completion."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI tools for education or productivity, audit your product for 'answer-giving' vs 'scaffolding' behavior. Implement features that prompt users to attempt problems first, provide hints, and explain reasoning to ensure learning transfer.",
+              "note": "Consider adding spaced repetition or retrieval practice to reinforce long-term retention."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49389565",
+                "title": "AI boosted homework scores, then exam scores dropped: Study",
+                "url": "https://canews24.online/?p=71",
+                "domain": "canews24.online",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49389565-0",
+                "label": "Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49389565-1",
+                "label": "AI Ethics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49389565-2",
+                "label": "Product Design",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-08-21T15:25:42Z"
+          },
+          {
+            "id": "rss-techcrunch-ai-1787345345803-g3udty",
+            "title": "Starcloud raises $250M for orbital data centers as launch capacity tightens",
+            "tldr": "Starcloud secured $250M to build orbital data centers, signaling a race for space-based compute as launch options become scarce. This move could reshape AI infrastructure for edge and latency-sensitive workloads.",
+            "whyItMatters": [
+              "Business impact: Opens new frontier for AI compute, potentially reducing reliance on terrestrial data centers and offering unique value propositions for global, low-latency AI services.",
+              "Technical impact: Orbital data centers could enable ultra-low-latency AI inference for remote regions and bypass terrestrial network bottlenecks, but face significant technical challenges in power, cooling, and maintenance."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI product could benefit from space-based compute for latency-critical or globally distributed use cases. Monitor Starcloud's progress and consider partnerships for future edge AI deployments.",
+              "note": "Given launch constraints, focus on hybrid architectures that can leverage both terrestrial and orbital resources as the ecosystem matures."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1787345345803-g3udty",
+                "title": "Starcloud raises $250 million for orbital data centers as launch options dry up",
+                "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-g3udty-0",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-g3udty-1",
+                "label": "Edge Computing",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 14:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346088-rwb9yu",
+            "title": "Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership",
+            "tldr": "A new arXiv paper introduces 'bounded sovereignty'—the partial access deployers have over AI models they don't own—and quantifies the 'control tax' paid to compensate for missing access. This is crucial for regulated companies using frontier APIs, as it maps which safety protocols are actually feasible.",
+            "whyItMatters": [
+              "For founders building on top of frontier APIs, this framework helps identify which control measures are viable and what hidden costs (contracts, audits, reduced scope) to budget for.",
+              "It provides a structured way to negotiate with model providers for better access (e.g., logs, gateways) to meet regulatory requirements."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI stack against the four-layer access typology (data, model, infrastructure, interaction). Identify which layers you lack full access to, then estimate your 'sovereignty discount cost'—the extra spend on contracts, audits, or scope reductions. Use this to prioritize which access improvements to negotiate with your provider.",
+              "note": "The paper's experiment is synthetic, so treat the cost estimates as directional, not precise."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346088-rwb9yu",
+                "title": "Bounded Sovereignty and the Control Tax: Pricing AI Oversight When the Deployer Does Not Own the Model",
+                "url": "https://arxiv.org/abs/2608.19216",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-0",
+                "label": "AI Control",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-1",
+                "label": "Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-2",
+                "label": "API",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346088-f7c4u2",
+            "title": "LLMs for Air Traffic Control: Promising but Prompt-Sensitive",
+            "tldr": "A new arXiv study tests LLMs for generating air traffic control communications, finding that lighter prompts outperform heavily scripted ones, which collapse due to error accumulation. This highlights the importance of prompt design and context handling in safety-critical dialogue systems.",
+            "whyItMatters": [
+              "For founders building AI in regulated industries, this shows that over-constraining prompts can backfire, emphasizing the need for balanced prompt engineering and robust context management.",
+              "The research validates LLM-as-judge for evaluating domain-specific outputs, offering a cost-effective alternative to human experts for quality assessment in niche applications."
+            ],
+            "whatToTry": {
+              "description": "If you're building dialogue systems for specialized domains, experiment with multiple prompt structures of varying constraint levels. Use a pilot-in-the-loop approach to iteratively refine prompts, and consider injecting ground-truth history to prevent error accumulation in multi-turn interactions.",
+              "note": "Be cautious with heavily scripted prompts; they may degrade performance over long conversations. Validate your evaluation metrics against human expert annotations to ensure reliability."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346088-f7c4u2",
+                "title": "Air Traffic Control Using Large Language Models: Prompt Engineering, Architecture, and Evaluation",
+                "url": "https://arxiv.org/abs/2608.19299",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-1",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-2",
+                "label": "Air Traffic Control",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787345346089-pz3tzl",
+            "title": "R2-OPD: Filtering Distillation Rewards to Boost Reasoning",
+            "tldr": "A new paper introduces R2-OPD, a method that filters on-policy distillation rewards when they conflict with actual reasoning progress, improving reasoning performance in language models.",
+            "whyItMatters": [
+              "Improves reasoning capabilities of LLMs, which is critical for AI products that require logical inference or problem-solving.",
+              "Offers a more efficient post-training approach by reducing noise in teacher feedback, potentially lowering training costs."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning a model with on-policy distillation, consider implementing a reward filtering mechanism that compares teacher rewards with an independent progress metric, and suppress rewards when they disagree. This can help your model learn more robust reasoning.",
+              "note": "Start with a small-scale experiment to measure the impact on your specific tasks before full deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787345346089-pz3tzl",
+                "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
+                "url": "https://arxiv.org/abs/2608.19408",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787345346089-pz3tzl-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787345346089-pz3tzl-1",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1787345345803-l7zk8w",
+            "title": "DOJ Probes a16z Board Seats: VC Antitrust Risk Emerges",
+            "tldr": "The DOJ is investigating Andreessen Horowitz for potential antitrust violations due to partners sitting on boards of competing portfolio companies (Databricks and Fivetran), reviving a 112-year-old law rarely applied to VCs. This signals increased regulatory scrutiny on VC board practices.",
+            "whyItMatters": [
+              "Business impact: Founders may face new governance constraints as VCs become more cautious about board overlaps, potentially affecting fundraising and board composition.",
+              "Technical impact: AI startups often rely on VCs for strategic guidance; increased scrutiny could slow down board-level decision-making and access to expertise."
+            ],
+            "whatToTry": {
+              "description": "Review your current board composition for potential conflicts, especially if you have investors with multiple portfolio companies in similar AI/data spaces. Document the rationale for board appointments and ensure clear separation of duties to mitigate antitrust risks.",
+              "note": "This is a proactive step to prepare for potential regulatory inquiries and investor due diligence."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1787345345803-l7zk8w",
+                "title": "The DOJ is investigating a16z. What does this mean for venture capital?",
+                "url": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-0",
+                "label": "Venture Capital",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-1",
+                "label": "Antitrust",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-2",
+                "label": "Governance",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 21 Aug 2026 14:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
