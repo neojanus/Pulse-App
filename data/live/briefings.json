@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-08-23",
+    "date": "2026-08-24",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-24-morning",
+        "period": "morning",
+        "date": "2026-08-24",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: SDAD: The New Spec-Driven Paradigm for AI-Native Software Development, Memory-Primed Agent Spawning: PAO Boosts Coding Agents with Persistent Context, New Defense Against Semantic Camouflage: Early Layers Reveal Harm.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1787558945315-6gof7f",
+            "title": "SDAD: The New Spec-Driven Paradigm for AI-Native Software Development",
+            "tldr": "A new arXiv paper formalizes Spec-Driven Agentic Development (SDAD), a methodology that combines up-front specification with autonomous AI agents and multi-agent verification. It provides a blueprint for AI-native SDLC, including metrics like Ambiguity Tax and staged migration, signaling a shift toward spec quality as the key driver for agentic coding.",
+            "whyItMatters": [
+              "For founders building AI coding tools, this defines a new workflow paradigm that could become the standard, influencing product requirements and integration strategies.",
+              "The paper introduces quantitative governance metrics (e.g., Spec Fidelity, TCI_agentic) that can be used to measure and improve agent performance, offering a framework for product differentiation."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI coding workflows against the SDAD framework: identify where you can improve specification quality (e.g., using structured FRDs) and consider implementing multi-agent verification with human sign-off to increase reliability and trust.",
+              "note": "Start with a pilot project to measure the impact of spec fidelity on agent output quality."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-6gof7f",
+                "title": "SDAD: Spec-Driven Agentic Development for the AI-Native SDLC",
+                "url": "https://arxiv.org/abs/2608.20341",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-6gof7f-0",
+                "label": "SDLC",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-6gof7f-1",
+                "label": "Agentic Development",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-6gof7f-2",
+                "label": "AI Coding",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-8l7lyt",
+            "title": "Memory-Primed Agent Spawning: PAO Boosts Coding Agents with Persistent Context",
+            "tldr": "A new arXiv paper introduces PrimeAgentOrchestrator (PAO), a system that pre-loads Claude Code sessions with memories from PostgreSQL and Cloudflare Workers, enabling coding agents to retain context across sessions. This addresses a critical pain point for AI product builders: the loss of accumulated knowledge in agent workflows.",
+            "whyItMatters": [
+              "For founders building AI agents, this solves the cold-start problem, making agents more efficient and reducing redundant work, which directly impacts productivity and user satisfaction.",
+              "The system's architecture—using heterogeneous memory backends and filesystem injection—offers a practical blueprint for integrating persistent memory into existing agent tools without building a unified database."
+            ],
+            "whatToTry": {
+              "description": "If you use Claude Code or similar coding agents, prototype a lightweight memory layer by storing session summaries in a PostgreSQL database and a semantic index (e.g., Cloudflare Workers). At the start of each session, retrieve relevant memories and inject them into the agent's context via a startup file or configuration auto-read, mimicking PAO's approach.",
+              "note": "Start with a simple keyword-based retrieval before adding semantic search to avoid over-engineering."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-8l7lyt",
+                "title": "PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure",
+                "url": "https://arxiv.org/abs/2608.20342",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-8l7lyt-0",
+                "label": "Agent Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-8l7lyt-1",
+                "label": "Claude Code",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-8l7lyt-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-q0ypip",
+            "title": "New Defense Against Semantic Camouflage: Early Layers Reveal Harm",
+            "tldr": "A new paper shows that LLM safety alignment is superficial, leaving models vulnerable to 'semantic camouflage' attacks. The proposed Latent Intent Verification (LIV) defense detects harmful intent in early layers, outperforming standard guardrails by 20-50%.",
+            "whyItMatters": [
+              "For founders building AI products, this highlights a critical security vulnerability that could lead to harmful outputs, reputational damage, and regulatory issues.",
+              "The proposed defense offers a practical, lightweight method to improve safety without major architectural changes, potentially reducing the risk of jailbreaks and adversarial attacks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current safety guardrails against semantic camouflage attacks. Consider implementing a probing classifier on early-layer activations (around 15-20% depth) to detect harmful intent before it gets contextualized into safe narratives.",
+              "note": "The paper shows this works on small models; test on your specific model size and domain to validate effectiveness."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-q0ypip",
+                "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+                "url": "https://arxiv.org/abs/2608.20378",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-q0ypip-0",
+                "label": "LLM Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-q0ypip-1",
+                "label": "Adversarial Attacks",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-q0ypip-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-z4vri5",
+            "title": "Nexus: Cutting Tool-Call Latency for Agentic LLMs",
+            "tldr": "Nexus, a new system from ArXiv, decouples tool routing from schema prefill to cut TTFT by up to 1.7x for agentic LLMs using MCP, even with 250+ tools. It uses an INT8 semantic lookaside buffer and compressed tool signatures, with a KV-cache splicing fallback that guarantees output fidelity.",
+            "whyItMatters": [
+              "For founders building agentic AI products, this directly addresses the growing pain point of tool-call latency as tool registries expand, enabling faster, more scalable agents.",
+              "The depth-independent routing approach means performance stays consistent as you add tools, avoiding context window overflow and reducing compute costs by ~80% on main-context tokens."
+            ],
+            "whatToTry": {
+              "description": "If you're building an agent with MCP, prototype a lightweight retrieval-based tool router that uses compressed tool descriptions (e.g., 20 tokens) instead of full schemas for prefill. Measure TTFT and token savings with a registry of 50+ tools.",
+              "note": "Consider using an INT8 quantized embedding model for the lookaside buffer to keep memory overhead low."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-z4vri5",
+                "title": "Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory",
+                "url": "https://arxiv.org/abs/2608.20397",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-z4vri5-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-z4vri5-1",
+                "label": "Tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-z4vri5-2",
+                "label": "Agentic AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-o36v0t",
+            "title": "Agentic Memory Fails Before Retrieval: New Fix Boosts Retention 30x",
+            "tldr": "New research identifies a pre-retrieval failure mode in agentic memory systems: structurally indirect prerequisite eviction, where key context is discarded under budget pressure. A simple one-hop graph-aware rule (DSGC) improves full-chain retention from 0.03 to 0.90, offering a practical fix for AI agents that lose critical context.",
+            "whyItMatters": [
+              "For founders building AI agents with long-term memory, this reveals a hidden failure point that can cause agents to 'forget' prerequisite information, leading to incorrect outputs or hallucinations.",
+              "The proposed DSGC rule is lightweight and can be integrated into existing memory systems without major architectural changes, improving reliability and user trust."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent's memory eviction policy: check if any discarded chunks are prerequisites for future queries. Implement a simple one-hop graph-aware rule that retains chunks with strong dependencies to the current query context, even if they score low on lexical similarity.",
+              "note": "The paper's benchmark and diagnostics are released; use them to reproduce the failure and test the fix in your own setup."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-o36v0t",
+                "title": "When Retrieval Fails Before It Begins: Structurally Indirect Prerequisite Eviction as a Retention Failure in Agentic Memory",
+                "url": "https://arxiv.org/abs/2608.20400",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-o36v0t-0",
+                "label": "Agentic Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-o36v0t-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-o36v0t-2",
+                "label": "DSGC",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-xqhaiw",
+            "title": "Multimodal Agentic Frameworks: New Survey Maps the Frontier",
+            "tldr": "A new arXiv survey systematically analyzes how multimodality is transforming agentic frameworks, covering perception, reasoning, planning, memory, and action. It provides a taxonomy of integration architectures and reviews applications in robotics, web navigation, and video understanding—essential reading for founders building multimodal AI agents.",
+            "whyItMatters": [
+              "Provides a structured overview of design patterns (delegated, late-fusion, early-fusion) for integrating multiple modalities, helping founders make informed architectural choices.",
+              "Highlights emerging application areas like GUI/web navigation and long-form video understanding, revealing market opportunities for agentic products."
+            ],
+            "whatToTry": {
+              "description": "Read the survey to identify which multimodal integration architecture (delegated, late-fusion, early-fusion) best fits your use case, then prototype with a small pilot to validate performance gains before scaling.",
+              "note": "Focus on the sections covering your target domain (e.g., robotics, web navigation) to extract actionable design patterns."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-xqhaiw",
+                "title": "A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications",
+                "url": "https://arxiv.org/abs/2608.20379",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-xqhaiw-0",
+                "label": "Multimodal Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-xqhaiw-1",
+                "label": "Survey",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-eab17s",
+            "title": "Tree Ensembles Beat Transformers for Interpretable Multimodal AI",
+            "tldr": "A new arXiv paper introduces tree-based ensembles (LDT, LDF, LDAB) that outperform Transformers in multimodal affect classification while providing human-understandable explanations, with F1 gains of 4.3% and accuracy gains of 3.0%.",
+            "whyItMatters": [
+              "For founders building trust-sensitive AI (e.g., clinical, education), this offers a viable alternative to black-box Transformers, enabling regulatory compliance and user trust.",
+              "The novel feature importance metric improves detection of rare indicators, which is critical for applications like early warning systems or anomaly detection."
+            ],
+            "whatToTry": {
+              "description": "Evaluate tree-based ensembles (like LightGBM or XGBoost with linear leaves) on your multimodal data, especially if you need interpretable outputs. Compare their performance against your current Transformer baseline on both accuracy and explainability metrics.",
+              "note": "Consider using the modified feature importance approach to reduce negative class bias when detecting rare events."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-eab17s",
+                "title": "Interpretable Multimodal Classification with Linear Discriminant Tree Ensembles",
+                "url": "https://arxiv.org/abs/2608.20384",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-eab17s-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-eab17s-1",
+                "label": "Multimodal",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-eab17s-2",
+                "label": "Interpretability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-fm9h1z",
+            "title": "How Skill Representation in Prompts Affects Agent Retrieval",
+            "tldr": "A case study from Tinycloud, a multimodal video agent, reveals that how skills are represented in the system prompt significantly impacts selection accuracy. Full autoloading of skills led to perfect task selection, while default settings caused misrouting due to lexical collisions, highlighting the importance of prompt design for agent reliability.",
+            "whyItMatters": [
+              "For founders building AI agents, this shows that skill discovery and routing can be optimized by carefully designing prompt exposure, potentially reducing errors and improving user experience without complex embedding systems.",
+              "The findings suggest that in-context selection at small scale can inform scalable retrieval strategies, offering a cost-effective way to test and refine skill routing before investing in large-scale embedding infrastructure."
+            ],
+            "whatToTry": {
+              "description": "Audit your agent's system prompt to ensure that autoloaded skills (full instructions) are prioritized for critical tasks, and consider using one-line listings for less frequent skills to avoid lexical collisions that misroute tasks.",
+              "note": "Run a small ablation study with your own tasks to compare all-on, default, and all-off exposure regimes to identify where misrouting occurs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-fm9h1z",
+                "title": "Representation Affects Retrieval: A Case Study of Skill Discovery and Routing in a Multimodal Agent Harness",
+                "url": "https://arxiv.org/abs/2608.20389",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-fm9h1z-0",
+                "label": "Agent Harness",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-fm9h1z-1",
+                "label": "Skill Retrieval",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-fm9h1z-2",
+                "label": "Prompt Design",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-g2xcm0",
+            "title": "Slow AI: Design Principles for Sustainable Generative Systems",
+            "tldr": "A new position paper from arXiv proposes five design principles (restraint, sufficiency, selectivity, material visibility, friction) to embed environmental sustainability into generative AI, challenging the maximalist defaults of current systems.",
+            "whyItMatters": [
+              "Offers a framework for differentiating products by sustainability, which is becoming a key differentiator for enterprise customers and regulators.",
+              "Challenges the 'more is better' approach, suggesting that deliberate friction can improve user trust and long-term engagement."
+            ],
+            "whatToTry": {
+              "description": "Audit your product's default behaviors against the five principles: identify where you can add 'friction as affordance' (e.g., confirm before generating large outputs) or 'selectivity over retention' (e.g., delete unused data). Consider implementing one principle as a pilot feature to test user response.",
+              "note": "Start with 'material visibility'—show users the energy/cost of each generation to build transparency and trust."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-g2xcm0",
+                "title": "Environmental Slow AI: Design Principles for Generative Systems",
+                "url": "https://arxiv.org/abs/2608.20398",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-g2xcm0-0",
+                "label": "Sustainability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-g2xcm0-1",
+                "label": "Design Principles",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-g2xcm0-2",
+                "label": "Generative AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787558945315-tykpe5",
+            "title": "New Framework for World Models: Environment, Agent, and Joint Systems",
+            "tldr": "A new arXiv paper proposes a formal distinction in world models based on which channel they model (environment, agent, or joint), introducing canonical predictive models via computational mechanics. This could lead to more efficient and accurate world models for AI agents.",
+            "whyItMatters": [
+              "Provides a theoretical foundation for building more sample-efficient reinforcement learning agents by modeling the right channel.",
+              "Could inspire new architectures for world models that are finite and tractable even in complex environments."
+            ],
+            "whatToTry": {
+              "description": "If you're building RL agents, review your current world model's assumptions: are you modeling the environment, the agent, or the joint process? Consider whether a support-restricted model (induced by the actual interaction) could reduce state space and improve learning efficiency.",
+              "note": "This is theoretical; wait for practical implementations before adopting."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787558945315-tykpe5",
+                "title": "World models of environment, agent and joint agent-environment systems",
+                "url": "https://arxiv.org/abs/2608.20401",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-tykpe5-0",
+                "label": "World Models",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-tykpe5-1",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787558945315-tykpe5-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 24 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 24,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-23",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-23-morning",
@@ -469,7 +912,7 @@
   },
   {
     "date": "2026-08-22",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Aug 22",
     "briefings": [
       {
         "id": "briefing-2026-08-22-morning",
@@ -4974,439 +5417,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-17",
-    "displayDate": "Monday, Aug 17",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-17-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-17",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Wispr raises $280M at $2B valuation, expands beyond dictation, OpenAI's 'Defender's Window': How AI is Reshaping Cybersecurity, RubricForge: AI Judges That Stop Over-Crediting Failures.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1786975098622-3zr3p5",
-            "title": "Wispr raises $280M at $2B valuation, expands beyond dictation",
-            "tldr": "Wispr, known for its AI dictation tool, raised $280M at a $2B valuation, signaling strong investor confidence in AI-powered voice interfaces and a strategic pivot to broader applications.",
-            "whyItMatters": [
-              "Indicates growing market demand for AI voice interaction beyond simple dictation, opening opportunities for founders to build specialized voice-first products.",
-              "High funding validates the viability of AI-native productivity tools, potentially attracting more talent and competition in the space."
-            ],
-            "whatToTry": {
-              "description": "Evaluate how your AI product can integrate voice input or voice-driven workflows, especially for niche verticals like healthcare, legal, or developer tools, to capitalize on the shift toward multimodal interfaces.",
-              "note": "Focus on solving a specific pain point where voice is faster or more convenient than typing, rather than adding voice as a gimmick."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1786975098622-3zr3p5",
-                "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
-                "url": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1786975098622-3zr3p5-0",
-                "label": "Voice AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786975098622-3zr3p5-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1786975098622-3zr3p5-2",
-                "label": "Productivity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 13:10:05 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1786975098965-cfaveu",
-            "title": "OpenAI's 'Defender's Window': How AI is Reshaping Cybersecurity",
-            "tldr": "OpenAI published a strategic post on how AI is changing the cybersecurity landscape, emphasizing the 'defender's window'—the limited time defenders have to adapt before attackers exploit AI. It outlines OpenAI's own defense measures and offers guidance for security teams.",
-            "whyItMatters": [
-              "For founders building AI products, this signals a growing need to integrate AI-driven security measures into their offerings to stay ahead of AI-powered threats.",
-              "It highlights the urgency of adopting AI for defensive purposes, as attackers are already leveraging AI to automate and scale attacks."
-            ],
-            "whatToTry": {
-              "description": "Review your product's security posture with an AI-first lens: identify areas where AI can automate threat detection or response, and consider implementing AI-based security tools (e.g., anomaly detection, automated incident response) to close the 'defender's window'.",
-              "note": "Start with a small pilot to measure effectiveness before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1786975098965-cfaveu",
-                "title": "The Defender’s Window",
-                "url": "https://openai.com/index/the-defenders-window",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1786975098965-cfaveu-0",
-                "label": "Cybersecurity",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1786975098965-cfaveu-1",
-                "label": "OpenAI",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 05:30:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-l456nr",
-            "title": "RubricForge: AI Judges That Stop Over-Crediting Failures",
-            "tldr": "New research introduces RubricForge, a method that automatically generates human-readable judging rubrics from labeled trajectories, reducing over-crediting of failed agent runs by half compared to generic judges, though raw accuracy gains are modest.",
-            "whyItMatters": [
-              "For founders building agent evaluation pipelines, this offers a cost-effective way to align LLM judges with true outcomes without fine-tuning, improving trust in automated evaluations.",
-              "The technique enables more reliable agent benchmarking, which is critical for product development and customer confidence in AI agents."
-            ],
-            "whatToTry": {
-              "description": "If you use LLM-as-a-judge for evaluating your agents, experiment with generating rubrics from a small set of ground-truth-labeled trajectories (e.g., 100-200 examples) using reflective evolution, then apply the frozen rubric to new evaluations. This can reduce false positives in your eval pipeline.",
-              "note": "The paper shows the main benefit is faithfulness (fewer over-credits), not raw accuracy, so use it when you care about catching failures, not just overall scores."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-l456nr",
-                "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
-                "url": "https://arxiv.org/abs/2608.13564",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-l456nr-0",
-                "label": "LLM-as-a-judge",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-l456nr-1",
-                "label": "Agent Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-l456nr-2",
-                "label": "RubricForge",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-r4pojl",
-            "title": "MoE Layer Sensitivity: Late Layers Tolerate Aggressive Pruning",
-            "tldr": "A new study on Qwen3.6-35B-A3B reveals that in MoE models, early and middle layers are fragile to expert masking, while late layers (especially 35-39) can be aggressively pruned with minimal quality loss. This challenges uniform compression approaches and offers a practical path to efficient MoE deployment.",
-            "whyItMatters": [
-              "For founders building on MoE models, this enables targeted model compression, reducing inference costs without significant quality degradation.",
-              "The depth-dependent sensitivity insight can guide fine-tuning and pruning strategies, potentially leading to faster and cheaper serving of large MoE models."
-            ],
-            "whatToTry": {
-              "description": "If you're deploying a MoE model, run a similar layer-wise sensitivity analysis on your own model and benchmark. Focus on masking experts in the last 10-15% of layers first, as they are most tolerant. Use a held-out validation set to measure quality tradeoffs.",
-              "note": "The study used code translation tasks; validate on your specific domain to ensure similar patterns hold."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-r4pojl",
-                "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
-                "url": "https://arxiv.org/abs/2608.13565",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-r4pojl-0",
-                "label": "MoE",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-r4pojl-1",
-                "label": "Model Compression",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-r4pojl-2",
-                "label": "Qwen",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-h951z1",
-            "title": "LLMs Mirror Brain's Modular Architecture, Study Finds",
-            "tldr": "A new arXiv study shows that LLMs develop modular neural organization similar to the human brain, with distinct neuron clusters for language, reasoning, and social/physical reasoning. This suggests modularity may be a fundamental property of intelligent systems, with implications for model interpretability and architecture design.",
-            "whyItMatters": [
-              "For founders building AI products, this research could inform more interpretable and controllable model architectures, potentially leading to modular AI systems that are easier to debug and fine-tune for specific domains.",
-              "Understanding that LLMs naturally separate cognitive functions could enable targeted interventions—like adjusting specific modules without retraining the whole model—reducing costs and improving performance on niche tasks."
-            ],
-            "whatToTry": {
-              "description": "If you're building on top of LLMs, consider experimenting with modular fine-tuning approaches: identify which neuron clusters activate for your domain-specific tasks and fine-tune only those regions, potentially improving efficiency and reducing catastrophic forgetting.",
-              "note": "This is early-stage research; validate on your own use cases before relying on it."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-h951z1",
-                "title": "Modular Cognitive Architecture Emerges in Large Language Models",
-                "url": "https://arxiv.org/abs/2608.13567",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-h951z1-0",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-h951z1-1",
-                "label": "Model Interpretability",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-37cny4",
-            "title": "New LLM Serving Trace Reveals Workload Evolution Patterns",
-            "tldr": "A new arXiv paper presents a one-year production trace from Chutes, offering unprecedented insights into how LLM serving workloads evolve, including caching and load-balancing patterns. This is the first longitudinal study of its kind, with the full trace to be released.",
-            "whyItMatters": [
-              "For founders building LLM infrastructure, this trace provides realistic data to benchmark and optimize serving systems, potentially reducing costs and improving performance.",
-              "Understanding workload evolution helps in designing better caching and load-balancing strategies, which are critical for scaling AI products efficiently."
-            ],
-            "whatToTry": {
-              "description": "If you're building or operating an LLM serving stack, download the released trace (once available) and use it to simulate and test your caching and load-balancing algorithms against real-world patterns. This can help you identify bottlenecks and optimize resource allocation.",
-              "note": "Keep an eye on the arXiv paper for the trace release link; it may require signing up or contacting the authors."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-37cny4",
-                "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
-                "url": "https://arxiv.org/abs/2608.13573",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-37cny4-0",
-                "label": "LLM Serving",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-37cny4-1",
-                "label": "Workload Analysis",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-37cny4-2",
-                "label": "Caching",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-bzmfyl",
-            "title": "Agentao: A Governed Local-First Runtime for Safer Tool-Using LLM Agents",
-            "tldr": "Agentao introduces a runtime that separates agent action proposals from host-authorized execution, adding permissions, audit trails, and protocol boundaries to make LLM agents more governable and inspectable. This addresses critical risks like prompt injection and tool poisoning for production deployments.",
-            "whyItMatters": [
-              "Business impact: Reduces risk of deploying autonomous agents in production by providing explicit governance and auditability, which is crucial for enterprise adoption and compliance.",
-              "Technical impact: Offers a reference architecture for building agent runtimes with permission-mediated tool access and replayable execution traces, improving debugging and security."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Agentao's open-source runtime for your agent stack. Start by integrating it into a sandboxed environment to test its permission system and execution traces. Use its structured event interface to audit agent actions and identify potential prompt injection or tool poisoning vectors in your current setup.",
-              "note": "Agentao does not guarantee formal safety, so combine it with additional security layers like input sanitization and human-in-the-loop for high-stakes actions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-bzmfyl",
-                "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
-                "url": "https://arxiv.org/abs/2608.13574",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-bzmfyl-0",
-                "label": "Agent Runtime",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-bzmfyl-1",
-                "label": "AI Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-bzmfyl-2",
-                "label": "LLM Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-2vgjp5",
-            "title": "Rethink AI Evaluation: Focus on Human-AI Teams, Not Replacement",
-            "tldr": "A new position paper argues that AI evaluation should shift from measuring autonomous superhuman performance to assessing human-AI team effectiveness, aiming to build complementary systems that improve societal outcomes.",
-            "whyItMatters": [
-              "Shifts product development focus from full automation to collaborative tools, opening new market opportunities for augmentation rather than replacement.",
-              "Encourages designing AI systems that integrate with human workflows, potentially increasing adoption and trust in enterprise settings."
-            ],
-            "whatToTry": {
-              "description": "Reassess your product's evaluation metrics: include human-in-the-loop scenarios and measure team performance (e.g., time-to-task, error reduction) alongside standalone AI accuracy. Consider piloting collaborative features that augment human decision-making.",
-              "note": "This aligns with emerging trends in 'human-centered AI' and could differentiate your product in markets where trust and oversight are critical."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-2vgjp5",
-                "title": "AI Evaluation Should Work With Humans",
-                "url": "https://arxiv.org/abs/2608.13577",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-2vgjp5-0",
-                "label": "AI Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-2vgjp5-1",
-                "label": "Human-AI Collaboration",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-wz4zt3",
-            "title": "Stable Miscalibration: Why LLMs Confidently Repeat Wrong Answers",
-            "tldr": "New research reveals that some high-confidence LLM errors are 'stable miscalibrations'—locally robust under perturbations—challenging the assumption that confident mistakes are always fragile. This suggests prompt-based interventions like self-critique can stabilize internal representations but don't guarantee calibration, with implications for building reliable AI products.",
-            "whyItMatters": [
-              "For founders building AI products, this means high-confidence errors may persist even with small input variations, undermining trust in applications like customer support or medical advice where wrong answers are costly.",
-              "The finding that self-critique reduces hidden-state sensitivity but not calibration suggests that current prompt-based safety techniques may not fully address reliability, pushing founders to invest in better calibration methods."
-            ],
-            "whatToTry": {
-              "description": "Audit your model's high-confidence errors by creating a small benchmark of factual questions with known answers. For each question, run the model multiple times with slight rephrasings or perturbations (e.g., synonym swaps, punctuation changes). Identify cases where the model is confidently wrong across all variations—these are stable miscalibrations. Then, test whether adding a self-critique step (e.g., 'Review your answer for accuracy before responding') reduces these errors, and measure if it actually improves calibration or just changes confidence levels.",
-              "note": "Focus on domains where errors are most costly for your product; this audit can help prioritize where to invest in fine-tuning or additional guardrails."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-wz4zt3",
-                "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
-                "url": "https://arxiv.org/abs/2608.13591",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-wz4zt3-0",
-                "label": "LLM Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-wz4zt3-1",
-                "label": "Calibration",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-wz4zt3-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1786975098853-lurpit",
-            "title": "New Metric Measures AI Agent Consistency Across Tasks",
-            "tldr": "Researchers introduce the Behavioral Consistency Metric (BCM) to quantify how consistently language model agents behave across tasks, revealing that cross-task consistency is distinct from within-task reproducibility and not correlated with success rate. This offers a new process-level reliability signal for evaluating AI agents.",
-            "whyItMatters": [
-              "For founders building AI agents, this metric provides a way to evaluate and differentiate their products beyond success rate, potentially uncovering hidden reliability issues that affect user trust and adoption.",
-              "The finding that consistency is independent of success rate suggests that current evaluation practices may miss critical quality dimensions, impacting how AI products are benchmarked and improved."
-            ],
-            "whatToTry": {
-              "description": "Consider implementing a similar consistency metric in your own agent evaluation pipeline. Start by logging execution traces (e.g., tool calls, reasoning steps) for your agent across a variety of tasks, then use feature attribution (like SHAP) to create behavior vectors and compute pairwise similarity. This can help you identify if your agent is globally fragmented, even if it performs well on individual tasks.",
-              "note": "The paper shows that consistency can diverge from success rate, so this metric can reveal hidden weaknesses that outcome-based metrics miss."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1786975098853-lurpit",
-                "title": "Measuring Cross-Task Behavioral Consistency in Language Model Agents",
-                "url": "https://arxiv.org/abs/2608.13598",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-lurpit-0",
-                "label": "Agent Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-lurpit-1",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1786975098853-lurpit-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 00:00:00 -0400"
           }
         ],
         "totalReadTimeMinutes": 23,
