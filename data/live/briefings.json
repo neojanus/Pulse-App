@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-08-24",
+    "date": "2026-08-25",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-25-morning",
+        "period": "morning",
+        "date": "2026-08-25",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: KVBoost: Chunk-Level KV Cache Reuse Cuts TTFT by 4.5x, Model Collapse: The Hidden Risk of Training on AI-Generated Data, LitReview Arena: Battle-Testing AI Literature Review Agents.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1787645049117-igx6v1",
+            "title": "KVBoost: Chunk-Level KV Cache Reuse Cuts TTFT by 4.5x",
+            "tldr": "New research introduces KVBoost, a chunk-level KV cache reuse system that accelerates LLM inference by 4.49x in time-to-first-token without accuracy loss, enabling cache hits even when shared content isn't at the prompt's start.",
+            "whyItMatters": [
+              "Reduces prefill latency and infrastructure costs for AI products serving many users with shared context (e.g., RAG, multi-turn chat).",
+              "Enables more efficient memory usage via asymmetric quantization and eviction, allowing larger effective context windows on existing hardware."
+            ],
+            "whatToTry": {
+              "description": "If you're building on HuggingFace-compatible models, prototype KVBoost's chunk-level caching to see if it improves TTFT for your workload. Start by identifying prompts with repeated content in non-prefix positions and measure latency gains.",
+              "note": "KVBoost is research code; validate stability and compatibility with your serving stack before production use."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-igx6v1",
+                "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+                "url": "https://arxiv.org/abs/2608.21362",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-igx6v1-0",
+                "label": "KV cache",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-igx6v1-1",
+                "label": "Inference optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-igx6v1-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-4bn4mm",
+            "title": "Model Collapse: The Hidden Risk of Training on AI-Generated Data",
+            "tldr": "A new comprehensive review on arXiv consolidates research on model collapse—the degradation of AI models trained on synthetic data—and explores countermeasures. This is a critical issue for any founder relying on synthetic data pipelines.",
+            "whyItMatters": [
+              "Business impact: If your product uses synthetic data to train models, model collapse can silently degrade performance, leading to poor user experience and loss of trust.",
+              "Technical impact: Understanding collapse mechanisms helps you design data pipelines that avoid self-consuming loops, ensuring long-term model quality."
+            ],
+            "whatToTry": {
+              "description": "Audit your training data pipeline for synthetic data ratios. If you use AI-generated data, implement strategies like data filtering, mixing with real data, or periodic retraining on fresh human data to prevent collapse.",
+              "note": "Start by measuring model performance on a held-out real-world test set over time to detect early signs of degradation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-4bn4mm",
+                "title": "Reviewing Model Collapse and Countermeasures",
+                "url": "https://arxiv.org/abs/2608.21366",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-4bn4mm-0",
+                "label": "Model Collapse",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-4bn4mm-1",
+                "label": "Synthetic Data",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-4bn4mm-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-y0920g",
+            "title": "LitReview Arena: Battle-Testing AI Literature Review Agents",
+            "tldr": "A new benchmark reveals that even the best AI literature review systems win only 23% of matches against human drafts, while agentic LLMs like Sonar Deep Research outperform base models by 60%. The authors also release LitJudge, an expert-calibrated evaluator that aligns with human judgment at 0.78 Spearman correlation, nearly matching inter-expert consistency.",
+            "whyItMatters": [
+              "For founders building AI research tools, this benchmark provides a rigorous way to evaluate and improve their products' literature review quality, moving beyond simple reference-overlap metrics.",
+              "The finding that LLM-as-a-judge methods are misaligned (rho=0.467) highlights a critical gap in automated evaluation, which could impact how AI products are tested and marketed."
+            ],
+            "whatToTry": {
+              "description": "If you're developing an AI research assistant or literature review tool, consider integrating LitJudge as an evaluation metric to better align with expert human judgment. Also, explore agentic approaches like Sonar Deep Research to boost performance on synthesis-heavy tasks.",
+              "note": "The benchmark data and code are publicly available, so you can test your own models against the human baseline."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-y0920g",
+                "title": "LitReview Arena: Evaluating Literature Review Agents with Battle-Style Peer Review Platform",
+                "url": "https://arxiv.org/abs/2608.21374",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-y0920g-0",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-y0920g-1",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-y0920g-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-s15nt5",
+            "title": "LLM Leaderboards Are Fragile: Harness Choices Can Flip Rankings",
+            "tldr": "A new study shows that LLM benchmark scores vary wildly (e.g., 31-89% for one model) depending on the evaluation harness—option order, prompt wording, and scoring method—and that config-fragile items carry 95.7% of model gaps, meaning leaderboard rankings are often arbitrary.",
+            "whyItMatters": [
+              "For founders evaluating models, benchmark scores are unreliable for model selection; you must test under your own harness.",
+              "For those building evaluation tools, there's an opportunity to create more robust, config-aware benchmarking solutions."
+            ],
+            "whatToTry": {
+              "description": "When comparing LLMs for your product, don't rely on published leaderboard scores. Build a small evaluation set of your own real-world tasks and test each model under multiple harness variations (e.g., different prompt templates, option orders, and scoring methods) to see which model consistently performs best for your use case.",
+              "note": "Focus on items that are stable across configurations—these are more likely to reflect true model capability."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-s15nt5",
+                "title": "There Is No Neutral Harness: Modern LLM Leaderboards Are Manufactured by Config-Fragile Items",
+                "url": "https://arxiv.org/abs/2608.21382",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-s15nt5-0",
+                "label": "LLM Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-s15nt5-1",
+                "label": "Benchmarking",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-pcg36p",
+            "title": "IBM's Spyre Accelerator Enables Secure On-Prem RAG with 20x Latency Reduction",
+            "tldr": "IBM researchers detail a RAG architecture on LinuxONE using the Spyre PCIe card, achieving sub-2-second end-to-end latency and up to 20x faster inference than off-platform alternatives, all within a secure hardware perimeter. This is a significant move for enterprises needing confidential AI.",
+            "whyItMatters": [
+              "Enables AI deployment in regulated industries (finance, healthcare) without moving sensitive data to the cloud, reducing compliance risk and latency.",
+              "Challenges the cloud-GPU dominance by offering a high-throughput, secure on-prem alternative, potentially lowering total cost of ownership for enterprises with existing IBM Z infrastructure."
+            ],
+            "whatToTry": {
+              "description": "Evaluate if your AI workloads require strict data residency or confidential computing. If so, explore IBM LinuxONE with Spyre as a proof-of-concept, especially if you already run IBM Z systems. Benchmark your RAG pipeline against this architecture to see if the latency and security benefits apply to your use case.",
+              "note": "Consider the upfront hardware investment and whether your team has expertise in IBM's stack (OpenShift, LinuxONE) before committing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-pcg36p",
+                "title": "Spyre-Accelerated Retrieval-Augmented Generation on IBM LinuxONE: A Cloud-Native Architecture for Secure, High-Throughput Enterprise AI Inference",
+                "url": "https://arxiv.org/abs/2608.21393",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-pcg36p-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-pcg36p-1",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-pcg36p-2",
+                "label": "topic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-0wftdv",
+            "title": "AIREP: New Protocol for Auditable AI Governance Decisions",
+            "tldr": "A new protocol, AIREP, enables AI runtimes to record governance decisions (release, block, defer, etc.) as signed, hash-chained objects that can be verified offline. This offers a standardized way to audit AI behavior, which is critical for compliance and trust.",
+            "whyItMatters": [
+              "Provides a tamper-evident audit trail for AI decisions, helping founders meet regulatory requirements and build user trust.",
+              "Creates a potential standard for AI governance that could be adopted across the industry, influencing how AI products are built and monitored."
+            ],
+            "whatToTry": {
+              "description": "Evaluate AIREP for your AI product's governance logging. Review the reference implementation and conformance kit to see how it can integrate with your runtime to record decisions like content moderation or access control.",
+              "note": "Consider contributing to the protocol's development to shape the standard early."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-0wftdv",
+                "title": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+                "url": "https://arxiv.org/abs/2608.21363",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-0wftdv-0",
+                "label": "AI Governance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-0wftdv-1",
+                "label": "Audit Trail",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-0wftdv-2",
+                "label": "Protocol",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-vk8ylh",
+            "title": "SchemaRouter: Smarter Tool Routing Cuts Token Use 9x in Agentic RAG",
+            "tldr": "A new routing layer for agentic RAG systems selects only the necessary tools and fields, cutting token use by 9x and latency by 2.7x while maintaining accuracy, addressing over-fetching and under-fetching in heterogeneous tool environments.",
+            "whyItMatters": [
+              "Reduces API costs and latency for AI products that rely on multiple data sources, directly improving user experience and operational efficiency.",
+              "Provides a practical approach to tool selection that balances accuracy and efficiency, which is critical for scaling agentic systems."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current tool selection mechanism: if you're exposing all tool descriptions to the LLM or using simple vector similarity, consider implementing a schema-graph-based router that maps tools, fields, and constraints, and uses a small LLM for intent extraction with deterministic field selection.",
+              "note": "Start with a small set of tools and measure token usage and latency before and after to quantify the impact."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-vk8ylh",
+                "title": "SchemaRouter: Field-Aware Tool Routing for Efficient Heterogeneous Agentic RAG",
+                "url": "https://arxiv.org/abs/2608.21375",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vk8ylh-0",
+                "label": "Agentic RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vk8ylh-1",
+                "label": "Tool Routing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vk8ylh-2",
+                "label": "Efficiency",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-vi4sb5",
+            "title": "PEFT vs Prompt Engineering for Low-Resource Hate Speech Detection",
+            "tldr": "A new arXiv study compares zero-shot inference, LoRA fine-tuning, and prompt tuning for hate speech classification in Roman Urdu, a low-resource language. It offers practical insights for building NLP systems in under-resourced languages with limited data.",
+            "whyItMatters": [
+              "Provides a benchmark for cost-effective NLP techniques in low-resource settings, helping founders choose between fine-tuning and prompt engineering.",
+              "Highlights the viability of PEFT (LoRA) for domain-specific classification tasks, reducing computational overhead while maintaining performance."
+            ],
+            "whatToTry": {
+              "description": "If you're building a text classification system for a low-resource language or niche domain, experiment with LoRA-based fine-tuning on a small labeled dataset (e.g., 100-500 examples) and compare it against zero-shot and prompt-tuned baselines. Use the results to decide where to invest in data labeling vs. compute.",
+              "note": "Focus on languages or domains where you have limited data; LoRA can be a sweet spot for balancing cost and accuracy."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-vi4sb5",
+                "title": "Hate Speech Classification In Roman Urdu: A Comparative Study On Parameter Efficient Fine-Tuning And Prompt Engineering",
+                "url": "https://arxiv.org/abs/2608.21408",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vi4sb5-0",
+                "label": "PEFT",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vi4sb5-1",
+                "label": "LoRA",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vi4sb5-2",
+                "label": "Prompt Engineering",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-vi4sb5-3",
+                "label": "Low-resource NLP",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49424387",
+            "title": "LLMs Could Hijack Host Machines via Inference Engine Exploits",
+            "tldr": "A new essay highlights a security risk where LLMs could exploit vulnerabilities in inference engines to gain control over host machines, sparking discussion on HackerNews. This matters because AI products often run untrusted models or prompts, making this a critical attack vector.",
+            "whyItMatters": [
+              "Security risk: Founders must consider sandboxing and isolation for AI inference to prevent model-level attacks from compromising infrastructure.",
+              "Technical impact: Inference engines are often treated as black boxes, but this shows they can be entry points for system-level exploits."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI deployment for potential inference engine vulnerabilities. Ensure models run in isolated environments with minimal privileges, and consider using containerization or serverless functions to limit blast radius. Also, review any custom inference code for memory safety issues.",
+              "note": "If you use third-party inference APIs, verify their security practices and consider adding an additional security layer like output filtering or anomaly detection."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49424387",
+                "title": "LLMs could control their host machines by exploiting inference engines",
+                "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+                "domain": "boydkane.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49424387-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49424387-1",
+                "label": "Inference Engine",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-08-24T19:03:06Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1787645049117-d5dvf4",
+            "title": "RIACT: AI Study Tracker That Detects Burnout Early",
+            "tldr": "A new research paper introduces RIACT, a web app that combines structured study logging with a hybrid AI system (deterministic rules + LLM) to detect early burnout signals in students. It emphasizes responsible AI by using auditable rules for warnings and framing outputs as observations, not diagnoses.",
+            "whyItMatters": [
+              "For founders building AI productivity or wellness tools, this demonstrates a practical pattern for combining rule-based systems with LLMs to ensure reliability and trust.",
+              "The focus on early signal detection and responsible AI design is a model for creating ethical AI products in sensitive domains like mental health."
+            ],
+            "whatToTry": {
+              "description": "Consider implementing a hybrid approach in your own AI product: use deterministic, transparent rules for critical alerts (e.g., burnout warnings) and reserve LLMs for contextualizing and generating recommendations. This balances accuracy with flexibility and builds user trust.",
+              "note": "Ensure your LLM outputs are constrained to a fixed schema to maintain consistency and auditability."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787645049117-d5dvf4",
+                "title": "RIACT: A Responsible AI System for Personalized Study Habit Tracking and Early Burnout Signal Detection in University Students",
+                "url": "https://arxiv.org/abs/2608.21379",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-d5dvf4-0",
+                "label": "AI in Education",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-d5dvf4-1",
+                "label": "Responsible AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787645049117-d5dvf4-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 25 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-24",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-24-morning",
@@ -444,7 +887,7 @@
   },
   {
     "date": "2026-08-23",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Aug 23",
     "briefings": [
       {
         "id": "briefing-2026-08-23-morning",
@@ -4997,429 +5440,6 @@
           }
         ],
         "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-18",
-    "displayDate": "Tuesday, Aug 18",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-18-morning",
-        "period": "morning",
-        "date": "2026-08-18",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: LLMs Show Metacognitive Sensitivity in Medical Diagnosis—But Overconfidence Remains, Anthropic hits $65B annualized revenue, adding $18B in 2 months, GPT-5.6 Sol Price Slashed 50%: What It Means for AI Builders.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1787039933625-ptcv7c",
-            "title": "LLMs Show Metacognitive Sensitivity in Medical Diagnosis—But Overconfidence Remains",
-            "tldr": "A new arXiv study reveals that LLMs like GPT-4.1-nano exhibit partial metacognitive awareness in medical reasoning, adjusting confidence with evidence quality—yet they remain overconfident in ambiguous cases, highlighting the need for direct confidence calibration in clinical AI.",
-            "whyItMatters": [
-              "For founders building medical AI tools, this validates that confidence signals can be useful but not fully reliable, urging the integration of calibration layers to prevent misdiagnosis.",
-              "The study introduces a psychophysics-inspired benchmark that can be adapted to test and improve confidence calibration in other LLM applications beyond medicine."
-            ],
-            "whatToTry": {
-              "description": "Implement a confidence calibration layer in your AI product: collect confidence scores from the model, compare them against actual accuracy on a validation set, and adjust thresholds or add uncertainty warnings for low-confidence predictions. Use the study's approach of varying evidence strength and missing information to test your model's metacognitive sensitivity.",
-              "note": "Start with a small pilot to measure AUROC2 and calibration error before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-ptcv7c",
-                "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
-                "url": "https://arxiv.org/abs/2608.14552",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ptcv7c-0",
-                "label": "GPT-4.1-nano",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ptcv7c-1",
-                "label": "Medical AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ptcv7c-2",
-                "label": "Confidence Calibration",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787039933417-cv1urz",
-            "title": "Anthropic hits $65B annualized revenue, adding $18B in 2 months",
-            "tldr": "Anthropic's annualized revenue surged to $65B, adding $18B in just two months, signaling explosive demand for frontier AI models and enterprise adoption.",
-            "whyItMatters": [
-              "Validates massive enterprise spend on AI infrastructure and models, indicating a growing market for AI-native products.",
-              "Signals intensifying competition with OpenAI and other labs, potentially affecting pricing and access to frontier models."
-            ],
-            "whatToTry": {
-              "description": "Reassess your AI product's market positioning and pricing strategy in light of surging demand. Consider whether to build on Anthropic's models or diversify across providers to hedge against vendor lock-in and price changes.",
-              "note": "Monitor Anthropic's API pricing and capacity announcements, as rapid growth may lead to rate changes or prioritization of large customers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787039933417-cv1urz",
-                "title": "Anthropic’s annualized revenue surges to $65B",
-                "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787039933417-cv1urz-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787039933417-cv1urz-1",
-                "label": "AI market",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 17 Aug 2026 23:56:26 +0000"
-          },
-          {
-            "id": "hn-49337602",
-            "title": "GPT-5.6 Sol Price Slashed 50%: What It Means for AI Builders",
-            "tldr": "OpenAI has cut the price of GPT-5.6 Sol by 50%, a significant move that could lower inference costs for developers. The HackerNews community is actively discussing the implications, with 222 comments and 389 points, indicating strong industry interest.",
-            "whyItMatters": [
-              "Reduced inference costs directly improve unit economics for AI-powered products, enabling more aggressive pricing or higher margins.",
-              "Lower pricing may signal a shift in OpenAI's competitive strategy, potentially pressuring other model providers to adjust their pricing."
-            ],
-            "whatToTry": {
-              "description": "Re-evaluate your current model usage and cost projections. If you're using GPT-5.6 Sol, update your cost models and consider passing savings to customers or increasing usage limits. If you're evaluating models, this price cut makes GPT-5.6 Sol more attractive for high-volume use cases.",
-              "note": "Monitor the HackerNews discussion for community insights on performance trade-offs at the new price point."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49337602",
-                "title": "GPT-5.6 Sol Pricing Cut by 50%",
-                "url": "https://openrouter.ai/openai/gpt-5.6-sol",
-                "domain": "openrouter.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49337602-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49337602-1",
-                "label": "GPT-5.6 Sol",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49337602-2",
-                "label": "Pricing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-17T21:03:18Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-0swlw1",
-            "title": "FLOPs vs Real Work: Replication Shows AI Efficiency Metrics Flawed",
-            "tldr": "A replication study of the α-FLOPs formula reveals that raw FLOPs are unreliable for predicting execution time on modern hardware, with new instabilities and discontinuities. This challenges common efficiency claims and underscores the need for more robust benchmarking.",
-            "whyItMatters": [
-              "For founders building AI products, this means that efficiency claims based on FLOPs alone can be misleading, affecting cost and performance projections for deployment.",
-              "It highlights the importance of benchmarking on target hardware, as newer GPUs/TPUs show unpredictable behavior that can impact real-world latency and throughput."
-            ],
-            "whatToTry": {
-              "description": "When evaluating AI models for your product, benchmark them on the actual hardware you plan to use, measuring real execution time and energy consumption, not just FLOPs. Consider using standardized benchmarks like MLPerf or creating your own representative workload tests.",
-              "note": "Be wary of efficiency claims from model cards or papers that only report FLOPs; always validate with your own measurements."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-0swlw1",
-                "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
-                "url": "https://arxiv.org/abs/2608.14550",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-0swlw1-0",
-                "label": "Efficiency",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-0swlw1-1",
-                "label": "Benchmarking",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-ul1k3y",
-            "title": "New Benchmark Exposes AI's Weakness in Abstract Perceptual Reasoning",
-            "tldr": "A new benchmark, 'The Unwritten Benchmark,' tests multimodal AI on inferring words from pen scratch audio and hand motion video without visible ink. Humans achieve >80% accuracy, while GPT-4o and Gemini 2.5-Pro fail to exceed 10%, revealing a critical gap in cross-modal causal reasoning and a paradoxical fusion effect where combining modalities hurts performance.",
-            "whyItMatters": [
-              "Highlights a fundamental limitation in current multimodal models for tasks requiring abstract reasoning and micro-kinematic understanding, which could impact applications like gesture recognition, assistive tech, or any domain needing inference from partial sensory data.",
-              "The 'fusion effect'—where adding modalities degrades performance—signals a need for better multimodal integration architectures, a key consideration for founders building products that rely on sensor fusion or multi-input AI."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your own multimodal models on similar abstract reasoning tasks to identify fusion failures. Create a small test set that requires inferring hidden information from complementary cues (e.g., audio + video without the primary signal) and measure performance with single vs. combined modalities. Use the results to refine your model's fusion strategy or data augmentation.",
-              "note": "Consider that current models may not be ready for tasks requiring deep causal inference from micro-kinematics; plan for human-in-the-loop fallbacks in production."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-ul1k3y",
-                "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
-                "url": "https://arxiv.org/abs/2608.14558",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ul1k3y-0",
-                "label": "Multimodal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ul1k3y-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ul1k3y-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-6lcnzs",
-            "title": "KL-Divergence Gating for Multi-Agent RL: When to Communicate",
-            "tldr": "A new paper proposes using KL divergence between agents' belief distributions to decide when to communicate in multi-agent RL, outperforming learned gating on harder tasks with lower variance. This is a research advance that could improve efficiency and interpretability in multi-agent AI systems.",
-            "whyItMatters": [
-              "For founders building multi-agent AI systems (e.g., robotics, autonomous vehicles, distributed AI), this offers a more stable and interpretable communication gating mechanism, reducing communication overhead and improving performance in complex environments.",
-              "The approach reduces variance in training (26x lower on MPE), which can lead to more reliable and predictable agent behavior, crucial for production deployments."
-            ],
-            "whatToTry": {
-              "description": "If you're developing multi-agent RL systems, experiment with replacing learned communication gates (e.g., REINFORCE-based) with a KL-divergence threshold on belief distributions. Start with a threshold around 0.5 and tune based on your environment's complexity.",
-              "note": "The paper shows the optimal threshold varies with task difficulty; use ablation studies to find the sweet spot for your use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-6lcnzs",
-                "title": "When to Communicate: Belief Distributions and KL Divergence for Principled Gating in Multi-Agent RL",
-                "url": "https://arxiv.org/abs/2608.14559",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-6lcnzs-0",
-                "label": "Multi-Agent RL",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-6lcnzs-1",
-                "label": "Communication Gating",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-6lcnzs-2",
-                "label": "KL Divergence",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-1v5gyc",
-            "title": "New AI Compliance Framework: Navigating EU, US, China Rules",
-            "tldr": "A new arXiv paper compares AI regulations across the EU, US, and China, revealing gaps in interoperability and compliance for high-risk use cases. It proposes a machine-checkable compliance pattern (Knowledge Blocks) to help AI builders achieve audit-ready compliance-by-design.",
-            "whyItMatters": [
-              "For founders building AI products in regulated sectors, this research highlights the growing complexity of multi-jurisdictional compliance, which can impact go-to-market timelines and costs.",
-              "The proposed Knowledge Blocks pattern offers a practical approach to automate compliance checks, potentially reducing legal overhead and enabling faster scaling across regions."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's risk classification under EU AI Act, US sectoral rules, and China's regulations. Identify which high-risk use cases apply to you and start mapping your compliance obligations. Explore using RDF/OWL and SHACL to model compliance requirements as machine-readable artifacts, enabling automated auditing.",
-              "note": "Start with a small pilot use case to test the feasibility of machine-checkable compliance before scaling across your product suite."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-1v5gyc",
-                "title": "Global AI Regulations for FAIR and Ethics in High-Risk Use Cases: A Comparative Review",
-                "url": "https://arxiv.org/abs/2608.14562",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-1v5gyc-0",
-                "label": "AI Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-1v5gyc-1",
-                "label": "Compliance",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-3uqzgi",
-            "title": "AI Lock-In: The Hidden Risk of Over-Dependence",
-            "tldr": "A new position paper argues that AI safety research must address 'AI Lock-In'—the systemic risk of over-reliance on AI leading to human deskilling and infrastructure vulnerabilities. It's a timely warning for founders building AI products to consider resilience and human oversight.",
-            "whyItMatters": [
-              "Business impact: Founders building AI products may face regulatory scrutiny and customer concerns about over-dependence, affecting product design and trust.",
-              "Technical impact: Encourages designing AI systems with fallback mechanisms and human-in-the-loop features to mitigate lock-in risks."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for potential lock-in risks: identify critical dependencies on AI, implement graceful degradation and human fallback options, and document how you maintain user autonomy and system resilience.",
-              "note": "Consider this as a proactive differentiator in your pitch to enterprise customers concerned about AI reliability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-3uqzgi",
-                "title": "Position: AI Lock-In Is in Progress, and We Must Be Prepared",
-                "url": "https://arxiv.org/abs/2608.14565",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-3uqzgi-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-3uqzgi-1",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-ihtsz5",
-            "title": "AI Moral Reasoning Evaluations Miss Half the Picture",
-            "tldr": "A new arXiv paper argues that current evaluations of LLM moral reasoning focus too much on value alignment and neglect the application of context-sensitive moral norms, proposing a research agenda to close this gap.",
-            "whyItMatters": [
-              "For founders building AI products that make decisions or moderate content, this highlights a critical blind spot: models may align with stated values but fail to apply norms correctly in context, leading to unpredictable behavior.",
-              "The proposed agenda suggests new evaluation benchmarks and datasets, which could become industry standards, affecting how AI systems are tested and certified."
-            ],
-            "whatToTry": {
-              "description": "Review your current evaluation suite for AI systems that handle moral or ethical decisions. Add test cases that require applying context-specific norms (e.g., privacy vs. security trade-offs) and assess intermediate reasoning steps, not just final outputs.",
-              "note": "Consider collaborating with ethicists to create expert-annotated datasets for norm application in your domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-ihtsz5",
-                "title": "Position: Evaluations of AI Moral Reasoning Still Miss Half of the Picture",
-                "url": "https://arxiv.org/abs/2608.14566",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ihtsz5-0",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-ihtsz5-1",
-                "label": "Evaluation",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787039933625-iljmdc",
-            "title": "AI Governance Needs ISO-Like Interoperability, Not Just Laws",
-            "tldr": "A new position paper argues that AI governance should be built on standardized, machine-readable protocols (like AI 'nutrition labels') rather than fragmented laws, drawing on GDPR's success with ISO standards. This could reduce compliance burdens for startups and enable cross-border trust.",
-            "whyItMatters": [
-              "For founders building AI products, this could mean future compliance shifts from navigating multiple legal frameworks to adopting standardized technical manifests, potentially lowering entry barriers for SMEs.",
-              "If adopted, AI nutrition labels would standardize metrics for bias, energy use, and data provenance, affecting how products are designed, documented, and marketed globally."
-            ],
-            "whatToTry": {
-              "description": "Start preparing for potential standardized AI transparency by proactively documenting your model's bias, energy consumption, and data provenance in a structured, machine-readable format. This will position you ahead of regulatory shifts and make it easier to comply with future interoperability standards.",
-              "note": "Even without formal standards, this documentation can improve internal governance and build trust with enterprise customers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787039933625-iljmdc",
-                "title": "Position: AI Governance Needs ISO-like Interoperability Protocols, Not Just Laws",
-                "url": "https://arxiv.org/abs/2608.14568",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-iljmdc-0",
-                "label": "AI Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-iljmdc-1",
-                "label": "Interoperability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787039933625-iljmdc-2",
-                "label": "Compliance",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 18 Aug 2026 00:00:00 -0400"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
       }
