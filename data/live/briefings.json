@@ -1,7 +1,450 @@
 [
   {
-    "date": "2026-08-27",
+    "date": "2026-08-28",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-08-28-morning",
+        "period": "morning",
+        "date": "2026-08-28",
+        "scheduledTime": "07:30",
+        "executiveSummary": "Today's highlights: PICasso: AI Framework Turns LLMs into Silicon Photonics Designers, Open-source model gateway: route to best model per request, Large Models Set to Revolutionize Battery Health Management.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1787891106894-d3ibuf",
+            "title": "PICasso: AI Framework Turns LLMs into Silicon Photonics Designers",
+            "tldr": "PICasso is a new AI framework that uses LLMs to automatically design silicon photonic circuits from natural language, achieving up to 92.7% structural and 52% functional specification success, while reducing insertion loss by 1.74 dB. This marks a significant step toward practical AI-driven hardware design.",
+            "whyItMatters": [
+              "For founders building AI products in hardware design, this demonstrates a viable path to automate complex, multi-step engineering workflows, potentially reducing design cycles from months to days.",
+              "The framework's success highlights the importance of integrating domain-specific constraints and simulation feedback into LLM pipelines, a pattern that can be applied to other engineering domains."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating structured intermediate representations (like YAML) and simulation feedback into your LLM-based design tools. For hardware or systems design, consider building a similar pipeline that validates LLM outputs against physical constraints and iteratively optimizes based on simulation results.",
+              "note": "Start with a small set of design tasks to benchmark the improvement over vanilla LLM generation, and focus on tasks where simulation is fast enough for iterative optimization."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-d3ibuf",
+                "title": "PICasso: An AI-Enabled Design Framework for Autonomous Optimization of Silicon Photonic Devices",
+                "url": "https://arxiv.org/abs/2608.26113",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-d3ibuf-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-d3ibuf-1",
+                "label": "Hardware Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-d3ibuf-2",
+                "label": "Framework",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49471407",
+            "title": "Open-source model gateway: route to best model per request",
+            "tldr": "Experiential Labs launched an open-source model gateway that routes each request to the optimal model (self-hosted, frontier, or open-source) using OTel traces and simulation, with no markup. It's gaining traction on HN as a cost-saving alternative to closed gateways.",
+            "whyItMatters": [
+              "Reduces LLM costs by optimizing model selection per request, potentially saving 10-30% on inference spend.",
+              "Provides a unified interface for managing multiple providers, simplifying infrastructure and reducing vendor lock-in."
+            ],
+            "whatToTry": {
+              "description": "Evaluate the gateway by deploying it on your own infrastructure (it's Rust-native, <1ms overhead) and test routing a sample of your production traffic. Use the OTel traces to see if the nearest-neighbor classifier improves cost/quality trade-offs for your use cases.",
+              "note": "Start with a small subset of requests to validate the routing decisions before full rollout."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49471407",
+                "title": "Show HN: We built open OpenRouter that turns usage into a better model",
+                "url": "https://github.com/experientiallabs/experiential",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49471407-0",
+                "label": "tool",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49471407-1",
+                "label": "model routing",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-08-27T21:18:35Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-jm40bc",
+            "title": "Large Models Set to Revolutionize Battery Health Management",
+            "tldr": "A new arXiv review surveys how large models (Transformers, self-supervised learning) can overcome key bottlenecks in battery prognostics, offering a roadmap for AI-driven battery management.",
+            "whyItMatters": [
+              "For founders building battery or energy AI products, this signals a shift toward foundation models that can generalize across battery types and reduce reliance on scarce run-to-failure data.",
+              "Technical impact: Large models with PEFT and multimodal data can improve prediction accuracy and interpretability, enabling more reliable and safer battery operations."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating pre-trained Transformer models into your battery health monitoring pipeline, using self-supervised pre-training on large unlabeled datasets and fine-tuning with PEFT for specific battery chemistries.",
+              "note": "Start with a pilot on a small dataset to validate performance gains before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-jm40bc",
+                "title": "Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap",
+                "url": "https://arxiv.org/abs/2608.26111",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jm40bc-0",
+                "label": "Large Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jm40bc-1",
+                "label": "Battery Prognostics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jm40bc-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-3zvkgt",
+            "title": "CIFQA: Multi-Agent Framework Boosts Financial QA Accuracy to 95%",
+            "tldr": "A new arXiv paper introduces CIFQA, a deterministic tool-grounded multi-agent LLM framework that achieves 95.54% accuracy on calculation-intensive financial queries, outperforming direct LLM baselines by separating language understanding from numerical execution.",
+            "whyItMatters": [
+              "For founders building AI products in finance, this demonstrates a practical architecture to reduce hallucination in numerical reasoning, which is a critical pain point for customer-facing financial tools.",
+              "The framework's use of deterministic Python tools for calculations suggests a hybrid approach that can be replicated in other domains requiring exact computations, improving reliability and trust."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current LLM-based financial QA system against CIFQA's architecture: break down the pipeline into specialized agents (query interpretation, routing, parameter extraction, computation planning, response generation) and offload all numerical calculations to deterministic Python functions. Test with a small set of calculation-heavy queries to measure accuracy gains.",
+              "note": "Start with a narrow domain (e.g., fixed deposits) to validate the approach before scaling to more complex financial products."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-3zvkgt",
+                "title": "CIFQA: A Deterministic Tool-Grounded Multi-Agent LLM Framework for Financial Query Answering",
+                "url": "https://arxiv.org/abs/2608.26114",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-3zvkgt-0",
+                "label": "Multi-Agent Framework",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-3zvkgt-1",
+                "label": "Financial AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-3zvkgt-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-jrlt4v",
+            "title": "AI Agent Discovers and Controls Self-Organizing Patterns in Lenia",
+            "tldr": "Researchers introduce CARL, an autotelic RL agent that discovers and steers solitons in Lenia, a cellular automaton, enabling zero-shot generalization and human-guided control. This closed-loop approach could inspire new methods for exploring and controlling complex systems in AI research.",
+            "whyItMatters": [
+              "For founders building AI products, this demonstrates a novel framework for autonomous discovery and control of complex systems, which could be applied to optimization, simulation, or generative design.",
+              "The closed-loop, goal-conditioned policy approach offers a blueprint for creating AI agents that can interact with and manipulate dynamic environments in real-time, opening up new product possibilities."
+            ],
+            "whatToTry": {
+              "description": "Explore applying autotelic reinforcement learning to your own complex system simulations (e.g., fluid dynamics, traffic flow, or financial markets) to enable autonomous discovery and control. Start by defining a goal space and implementing a goal-conditioned policy that can intervene with minimal perturbations.",
+              "note": "Consider using Lenia or similar cellular automata as a sandbox to prototype this approach before scaling to more complex domains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-jrlt4v",
+                "title": "The Artificial Experimentalist: Discovery and Control of Self-Organizing Phenomena with Autotelic Reinforcement Learning",
+                "url": "https://arxiv.org/abs/2608.26116",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jrlt4v-0",
+                "label": "Autotelic RL",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jrlt4v-1",
+                "label": "Lenia",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-jrlt4v-2",
+                "label": "Complex Systems",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-ug4vpj",
+            "title": "The Accuracy-Efficiency Paradox: When Smarter Models Waste More Energy",
+            "tldr": "A new arXiv paper reveals that high-accuracy on-device energy forecasting models can cause a net energy deficit due to inference costs and battery aging, proposing a Total Cost of Ownership framework to minimize net loss.",
+            "whyItMatters": [
+              "Challenges the assumption that more accurate models are always better for edge AI, impacting product design decisions for battery-powered devices.",
+              "Introduces a framework that accounts for battery degradation as energy loss, which could influence how founders evaluate model trade-offs in energy-constrained applications."
+            ],
+            "whatToTry": {
+              "description": "For any on-device AI product, evaluate the total energy impact of your model by measuring not just inference energy but also battery aging effects. Consider using simpler models if the energy saved by higher accuracy is outweighed by the operational energy cost.",
+              "note": "Especially relevant for mission-critical edge environments like military or IoT devices where energy efficiency is paramount."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-ug4vpj",
+                "title": "The Accuracy-Efficiency Paradox Quantifying Net Energy Loss in on-Device Energy Forecasting",
+                "url": "https://arxiv.org/abs/2608.26134",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-ug4vpj-0",
+                "label": "Edge AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-ug4vpj-1",
+                "label": "Energy Efficiency",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-ug4vpj-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106895-63lm66",
+            "title": "LLMs for Systematic Reviews: 81% Accuracy, But Hallucination Risks Loom",
+            "tldr": "A new arXiv study shows LLMs (GPT-4.1, GPT-5.0) can extract data from 536 papers with ~80% accuracy, but field-level accuracy varies wildly (32-100%), and low inter-LLM agreement signals hallucinations—a key insight for AI product builders.",
+            "whyItMatters": [
+              "For founders building AI-powered research tools, this validates LLM-based data extraction but highlights the need for confidence scoring and human-in-the-loop workflows.",
+              "The finding that LLM agreement correlates with quality offers a practical method to detect hallucinations in automated pipelines, which can be applied to other domains like legal or medical document processing."
+            ],
+            "whatToTry": {
+              "description": "If you're building an LLM-based extraction tool, implement a multi-model agreement check: run the same extraction task with two different LLMs (e.g., GPT-4.1 and Claude) and flag low-agreement outputs for human review. This can reduce hallucination risk without full manual verification.",
+              "note": "Start with a small pilot dataset to calibrate agreement thresholds for your specific domain."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106895-63lm66",
+                "title": "Leveraging Large Language Models for Systematic Literature Review of Disease Spread Models",
+                "url": "https://arxiv.org/abs/2608.26150",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106895-63lm66-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106895-63lm66-1",
+                "label": "Research Automation",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106895-63lm66-2",
+                "label": "Hallucination Detection",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1787891106818-xepf62",
+            "title": "Judge Blocks Pentagon's 'Illegal' Blacklist of Anthropic",
+            "tldr": "A federal judge ruled the DoD's designation of Anthropic as a national security risk was 'illegal and baseless,' blocking the blacklist. This is a significant legal win for AI companies facing government scrutiny.",
+            "whyItMatters": [
+              "Business impact: Reduces regulatory risk for AI startups, especially those with government contracts or ambitions, by setting a legal precedent against arbitrary security designations.",
+              "Technical impact: Ensures AI research and development at Anthropic can continue without supply-chain restrictions, preserving access to critical compute and tools."
+            ],
+            "whatToTry": {
+              "description": "Review your company's government-facing risk posture and ensure you have legal counsel familiar with national security regulations. If you're pursuing government contracts, proactively document your compliance and security measures to preempt similar challenges.",
+              "note": "This ruling may embolden other AI companies to challenge similar designations, so stay informed on legal precedents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1787891106818-xepf62",
+                "title": "A Judge Has Blocked the Pentagon’s Attempt to Blacklist Anthropic",
+                "url": "https://www.wired.com/story/a-judge-has-blocked-the-pentagons-attempt-to-blacklist-anthropic/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1787891106818-xepf62-0",
+                "label": "Anthropic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1787891106818-xepf62-1",
+                "label": "Regulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1787891106818-xepf62-2",
+                "label": "Government",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 03:04:14 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-n1i9v8",
+            "title": "EduRiskX: Neuro-Symbolic AI for Early Academic Risk Prediction",
+            "tldr": "A new framework combines a temporal Transformer with F-Logic reasoning to predict student dropout risk early (average week 9) with high accuracy (F1 0.894) and interpretability, addressing the black-box problem in edtech.",
+            "whyItMatters": [
+              "For founders building AI products in education, this demonstrates a practical hybrid approach that improves early intervention timing and trustworthiness, key for adoption in schools.",
+              "The fusion of neural and symbolic methods offers a blueprint for making AI predictions more explainable, which is critical in regulated or high-stakes domains."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current predictive models for early detection capability and interpretability. If you're in edtech, consider prototyping a similar neuro-symbolic fusion: use a temporal model for risk scores and add rule-based logic grounded in domain theories to generate explanations. Test on your own data to see if early detection improves.",
+              "note": "The paper uses OULAD dataset; your data may have different patterns, so validate the approach with your own longitudinal student activity data."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-n1i9v8",
+                "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
+                "url": "https://arxiv.org/abs/2608.26107",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-n1i9v8-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-n1i9v8-1",
+                "label": "EdTech",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-n1i9v8-2",
+                "label": "Interpretability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1787891106894-yew0rv",
+            "title": "Agentic LLM Pipelines vs Standalone for ICU Mortality Explanations",
+            "tldr": "A feasibility study compares standalone LLM explanations to a four-step agentic pipeline for ICU mortality predictions, finding the agentic approach improves safety-relevant grounding and specificity but reduces alignment with feature attributions. This highlights trade-offs for AI founders building explainable systems in high-stakes domains.",
+            "whyItMatters": [
+              "For founders building clinical AI tools, this study provides evidence that agentic pipelines can reduce outcome leakage and improve guideline grounding, which is critical for regulatory approval and clinician trust.",
+              "The reduced SHAP alignment in agentic pipelines suggests a need for hybrid approaches that combine attribution checks with narrative generation, informing product design for explainability features."
+            ],
+            "whatToTry": {
+              "description": "If you're building an explainable AI system for high-stakes decisions, experiment with a multi-step agentic pipeline that separates data interpretation, guideline checking, and final explanation. Pair it with feature-attribution validation to ensure safety and alignment.",
+              "note": "Consider using a small validation set to measure both narrative quality and attribution consistency, as this study did."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1787891106894-yew0rv",
+                "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
+                "url": "https://arxiv.org/abs/2608.26109",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-yew0rv-0",
+                "label": "Agentic Pipeline",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-yew0rv-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1787891106894-yew0rv-2",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 28 Aug 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 22,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-08-27",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-08-27-evening",
@@ -414,7 +857,7 @@
   },
   {
     "date": "2026-08-26",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Aug 26",
     "briefings": [
       {
         "id": "briefing-2026-08-26-afternoon",
@@ -3736,1293 +4179,6 @@
           }
         ],
         "totalReadTimeMinutes": 12,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-21",
-    "displayDate": "Friday, Aug 21",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-21-morning",
-        "period": "morning",
-        "date": "2026-08-21",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Active Inference Framework Optimizes Context Acquisition for AI Agents, Outcome Monitors: Detect Silent AI Tool Failures and Boost Task Completion, Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1787299343794-o23scz",
-            "title": "Active Inference Framework Optimizes Context Acquisition for AI Agents",
-            "tldr": "A new arXiv paper proposes using active inference to help AI agents decide when to ask clarifying questions, retrieve context, or proceed with defaults, balancing information gain against token costs. This could significantly reduce wasted tokens and improve agent efficiency.",
-            "whyItMatters": [
-              "Reduces token waste and API costs by making context acquisition decisions more intelligent, directly impacting operational expenses for AI products.",
-              "Provides a model-agnostic design principle that can be integrated into any agent's context layer, improving reliability and user experience."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your agent's current context acquisition strategy: identify where it defaults, asks questions, or retrieves data. Consider implementing a simple cost-benefit heuristic that estimates the expected information gain of a clarifying question or retrieval call versus the token cost, and set a threshold to trigger these actions only when beneficial.",
-              "note": "Start with a small set of common user intents to calibrate the threshold, then expand."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-o23scz",
-                "title": "Active Inference as Context Acquisition for AI Agents",
-                "url": "https://arxiv.org/abs/2608.19202",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-o23scz-0",
-                "label": "Active Inference",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-o23scz-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-o23scz-2",
-                "label": "Token Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787299343794-s8w2qo",
-            "title": "Outcome Monitors: Detect Silent AI Tool Failures and Boost Task Completion",
-            "tldr": "New research introduces Outcome Monitors that catch silent tool failures (e.g., cached errors, negative prices) in AI agents, improving task completion rates by up to 17 percentage points across multiple benchmarks. This addresses a critical blind spot where agents consume incorrect data as fact.",
-            "whyItMatters": [
-              "For founders building AI agents, silent failures can lead to costly errors in production; this provides a practical mechanism to detect and recover from them.",
-              "The approach is model-agnostic and works across provider families, making it a potential drop-in safety layer for any agentic system."
-            ],
-            "whatToTry": {
-              "description": "Implement a lightweight outcome monitor in your agent pipeline: define outcome contracts (e.g., expected data types, ranges, or schema) for tool calls, and on violation, preserve the result but flag it and provide recovery actions (e.g., retry with a different tool or fallback). Start with public schemas or mined contracts from your own traces.",
-              "note": "The research shows that including a recovery-tool list is crucial for gains; without it, the effect disappears. Also, detection outside the mined vocabulary is limited, so focus on high-frequency failure modes first."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-s8w2qo",
-                "title": "Outcome Monitors: Recovery Affordances for Silent Tool Failures",
-                "url": "https://arxiv.org/abs/2608.19303",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-s8w2qo-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-s8w2qo-1",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-s8w2qo-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787299343794-sowppr",
-            "title": "Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership",
-            "tldr": "A new arXiv paper introduces 'bounded sovereignty' to quantify the 'control tax'—the extra cost of ensuring AI safety when deployers don't own the model. It provides a framework to decide which control protocols are feasible based on access to data, model, infrastructure, and logs, with a synthetic experiment showing that complete logs and pre-execution gateways are critical.",
-            "whyItMatters": [
-              "For founders building on frontier APIs, this framework helps estimate hidden compliance and safety costs, influencing pricing and architecture decisions.",
-              "It offers a structured way to negotiate contracts and design systems that meet regulatory requirements even without full model access."
-            ],
-            "whatToTry": {
-              "description": "Use the four-layer access typology to audit your own AI stack: list what you can access (data, model, infra, logs) and identify gaps. Then, for each gap, estimate the 'sovereignty discount cost'—what you spend on contracts, audits, or reduced scope. This will reveal where to invest in better logging or gateway controls to lower your control tax.",
-              "note": "The paper's experiment is synthetic, so treat its quantitative results as illustrative, not empirical proof."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-sowppr",
-                "title": "Bounded Sovereignty and the Control Tax: Pricing AI Oversight When the Deployer Does Not Own the Model",
-                "url": "https://arxiv.org/abs/2608.19216",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-sowppr-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-sowppr-1",
-                "label": "Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-sowppr-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787299343794-f05jbm",
-            "title": "R2-OPD: Filtering Distillation Rewards to Boost Reasoning",
-            "tldr": "A new paper introduces R2-OPD, a method that filters on-policy distillation rewards by comparing teacher-derived rewards with independent reasoning progress estimates, improving reasoning performance in language models.",
-            "whyItMatters": [
-              "Improves post-training efficiency by reducing conflicting supervision, leading to better reasoning capabilities in models.",
-              "Provides a practical technique for founders to enhance their models' reasoning without requiring new data or architectures."
-            ],
-            "whatToTry": {
-              "description": "If you use on-policy distillation for post-training, implement a reward filtering step that compares teacher rewards with a separate progress metric (e.g., self-consistency or verifier scores) and downweight samples where they disagree.",
-              "note": "Start with a small validation set to tune the filtering threshold and measure reasoning improvements."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-f05jbm",
-                "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
-                "url": "https://arxiv.org/abs/2608.19408",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-f05jbm-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-f05jbm-1",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787299343794-ilw2mm",
-            "title": "Symposium: Auditable Trails for AI Scientist Communities",
-            "tldr": "A new framework, Symposium, provides immutable, auditable records of AI agent research activity, enabling trust and reproducibility in scientific communities. This matters as AI agents increasingly collaborate on research, and founders building AI tools for science can leverage this to enhance credibility.",
-            "whyItMatters": [
-              "Enables trust and reproducibility in AI-driven research, critical for adoption in scientific and regulated industries.",
-              "Provides a foundation for building multi-agent research platforms that require transparent decision trails."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Symposium's open-source implementation to see how you can integrate auditable logging into your AI agent workflows, especially if you're building tools for scientific or regulated domains.",
-              "note": "Consider using it as a reference for designing your own audit trails, even if you don't adopt the framework directly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-ilw2mm",
-                "title": "Symposium: Trust via Auditable Records for Communities of AI Scientist Agents",
-                "url": "https://arxiv.org/abs/2608.19511",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-ilw2mm-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-ilw2mm-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-ilw2mm-2",
-                "label": "Framework",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787299343794-5qs5ew",
-            "title": "Adaptive Compression for Edge RAG: Cut Costs Without Losing Quality",
-            "tldr": "New research from ArXiv shows that fixed-rate context compression in edge RAG is suboptimal. Telemetry-informed adaptive compression can balance latency, energy, and quality, with generation consuming ~90% of resources for 7B-8B models.",
-            "whyItMatters": [
-              "For founders building on-device AI: reduces inference costs and latency, enabling more efficient edge deployments.",
-              "Technical: introduces adaptive compression as a runtime control, improving RAG efficiency without sacrificing answer quality."
-            ],
-            "whatToTry": {
-              "description": "If you're deploying RAG on edge devices, experiment with dynamic compression rates based on real-time device telemetry (e.g., battery, load) and workload characteristics. Start by profiling your generation vs. compression overhead to find the sweet spot.",
-              "note": "Consider using LLMLingua-2 as a baseline compressor and test with your own models and datasets."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787299343794-5qs5ew",
-                "title": "From Retrieved Context to Runtime Control: Adaptive Compression for Edge-based RAG",
-                "url": "https://arxiv.org/abs/2608.19535",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-5qs5ew-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-5qs5ew-1",
-                "label": "Edge AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787299343794-5qs5ew-2",
-                "label": "Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-49383326",
-            "title": "Codex on AWS Bedrock bug triggers 10x charges — check your bill",
-            "tldr": "A bug in OpenAI's Codex when used on AWS Bedrock is causing users to be charged 10x the expected amount, as reported on HackerNews. This is a critical billing issue for any founder using Codex via Bedrock, with immediate financial implications.",
-            "whyItMatters": [
-              "Unexpected 10x charges can severely impact startup burn rate and cash flow, especially for AI-heavy workloads.",
-              "This highlights the risks of relying on third-party integrations for AI tools, where billing bugs can go unnoticed until invoices arrive."
-            ],
-            "whatToTry": {
-              "description": "If you use Codex on AWS Bedrock, immediately audit your recent usage and billing statements for anomalies. Set up billing alerts and monitor usage closely. Consider switching to direct OpenAI API or other providers until the bug is resolved, and file a support ticket with AWS/OpenAI to dispute any overcharges.",
-              "note": "Check the GitHub issue for updates and workarounds from the community."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49383326",
-                "title": "Codex on AWS bedrock bug causing 10x charges",
-                "url": "https://github.com/openai/codex/issues/37674",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49383326-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49383326-1",
-                "label": "AWS Bedrock",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49383326-2",
-                "label": "Billing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-21T03:17:43Z"
-          },
-          {
-            "id": "hn-49382041",
-            "title": "EU: AI-Generated Content Lacks Copyright Protection",
-            "tldr": "A recent EU ruling clarifies that AI-generated works are not protected by copyright, sparking debate on HackerNews. This impacts founders' IP strategies and content monetization.",
-            "whyItMatters": [
-              "Business impact: AI-generated content may be freely usable by competitors, undermining differentiation and revenue models.",
-              "Technical impact: Need to design AI systems that incorporate significant human authorship to secure copyright."
-            ],
-            "whatToTry": {
-              "description": "Review your content generation workflows to ensure meaningful human input and document the creative process. Consider alternative IP protections like trade secrets or branding.",
-              "note": "The ruling is EU-specific; check local laws in other markets."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49382041",
-                "title": "Copyright does not protect AI-generated content in EU",
-                "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-                "domain": "mathstodon.xyz",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49382041-0",
-                "label": "Copyright",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49382041-1",
-                "label": "EU Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-21T00:15:12Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787299343714-49cj0p",
-            "title": "Micro1 Hits $500M Run Rate: AI Data Boom Accelerates",
-            "tldr": "AI data startup Micro1 has reached a $500M gross run rate, highlighting the explosive demand for high-quality training data as AI models scale. This signals a major market opportunity for data-centric AI infrastructure.",
-            "whyItMatters": [
-              "Business impact: Validates the data supply chain as a critical bottleneck and lucrative market for AI founders, with potential for high-margin data services.",
-              "Technical impact: Emphasizes the need for innovative data curation, synthesis, and labeling solutions to keep pace with model training demands."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's data strategy: consider building proprietary data moats or partnering with data vendors to secure high-quality training data, as demand is outpacing supply.",
-              "note": "Focus on data quality and domain specificity to differentiate from generic data providers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787299343714-49cj0p",
-                "title": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
-                "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787299343714-49cj0p-0",
-                "label": "Data Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787299343714-49cj0p-1",
-                "label": "AI Training",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:13:44 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1787299343742-e3gdmx",
-            "title": "Greater Manchester Defies Palantir: A Lesson in AI Procurement",
-            "tldr": "Amid UK government pressure to adopt Palantir's health data platform, Greater Manchester is pushing back, arguing for local, public-sector-led AI solutions. This signals a growing trend of resistance to big tech contracts in public services.",
-            "whyItMatters": [
-              "For founders selling AI to public sector, this highlights the importance of local trust and data governance over pure technical capability.",
-              "Shows a market shift where governments and regions may prefer smaller, more transparent vendors over established giants."
-            ],
-            "whatToTry": {
-              "description": "If you're targeting public sector clients, develop a clear data governance and local benefit narrative. Emphasize how your solution can be tailored to regional needs and comply with local data protection standards. Consider partnering with local institutions to build credibility.",
-              "note": "Public sector procurement is heavily influenced by political and social factors; be prepared to address ethical concerns proactively."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1787299343742-e3gdmx",
-                "title": "The Single English County Saying No to Palantir",
-                "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1787299343742-e3gdmx-0",
-                "label": "Palantir",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1787299343742-e3gdmx-1",
-                "label": "Public Sector AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1787299343742-e3gdmx-2",
-                "label": "Data Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 06:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-08-21-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-21",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Active Inference Framework Optimizes Context Acquisition for AI Agents, Starcloud raises $250M for orbital data centers as launch capacity tightens, Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1787321059654-w0jy1w",
-            "title": "Active Inference Framework Optimizes Context Acquisition for AI Agents",
-            "tldr": "A new arXiv paper proposes using active inference to decide when AI agents should ask clarifying questions, retrieve data, or proceed with defaults, balancing information gain against token costs. This could significantly improve efficiency and user experience for interactive AI products.",
-            "whyItMatters": [
-              "Reduces token waste and latency by optimizing when to ask or act, directly impacting operational costs for AI products.",
-              "Provides a principled, model-agnostic method for designing the context-acquisition layer, improving agent reliability and user satisfaction."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your agent's current clarification and retrieval logic. Consider implementing a simple expected information gain heuristic (normalized by token cost) to decide when to ask a clarifying question versus proceed with a default assumption. Start with a small set of common ambiguous scenarios and measure cost savings and user satisfaction.",
-              "note": "The paper's OQA framework uses exact posteriors; for practical use, you may need to approximate with your LLM's confidence scores."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059654-w0jy1w",
-                "title": "Active Inference as Context Acquisition for AI Agents",
-                "url": "https://arxiv.org/abs/2608.19202",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059654-w0jy1w-0",
-                "label": "Active Inference",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059654-w0jy1w-1",
-                "label": "AI Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787321059566-i14t2p",
-            "title": "Starcloud raises $250M for orbital data centers as launch capacity tightens",
-            "tldr": "Starcloud secured $250M to build orbital data centers, signaling a race for space-based compute as launch options become scarce. This move highlights the growing demand for off-planet AI infrastructure.",
-            "whyItMatters": [
-              "Business impact: Creates new competition for terrestrial data centers and could shift AI workload distribution, affecting cost and latency for global AI services.",
-              "Technical impact: Orbital data centers offer unique advantages like solar power and low-latency access to space assets, but face challenges in cooling, connectivity, and maintenance."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI infrastructure strategy: consider how space-based compute could complement or disrupt your current cloud setup, and monitor launch costs and availability for potential future partnerships.",
-              "note": "For most founders, this is a long-term trend; focus on near-term cloud cost optimization while keeping an eye on space compute developments."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787321059566-i14t2p",
-                "title": "Starcloud raises $250 million for orbital data centers as launch options dry up",
-                "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787321059566-i14t2p-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787321059566-i14t2p-1",
-                "label": "Data Centers",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 14:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-isqvge",
-            "title": "Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership",
-            "tldr": "A new arXiv paper introduces 'bounded sovereignty' to quantify the 'control tax'—the extra cost of ensuring AI safety when you don't own the model. It provides a framework for founders to assess which control protocols are feasible via APIs and how to budget for access gaps.",
-            "whyItMatters": [
-              "For founders building on frontier APIs, this framework helps identify which safety controls are actually executable and what they cost, influencing product design and vendor negotiations.",
-              "It provides a structured way to communicate oversight limitations to enterprise customers or regulators, potentially becoming a competitive differentiator in regulated industries."
-            ],
-            "whatToTry": {
-              "description": "Map your AI stack against the paper's four-layer access typology (data, model, infrastructure, interaction). Identify which layers you fully control and which are restricted by your API provider. Use this to estimate your 'sovereignty discount cost' and decide whether to invest in compensating controls (e.g., pre-execution gateways, audit logs) or negotiate for better access in your vendor contracts.",
-              "note": "The paper's experiment is synthetic, so treat the quantitative results as illustrative, not empirical proof."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-isqvge",
-                "title": "Bounded Sovereignty and the Control Tax: Pricing AI Oversight When the Deployer Does Not Own the Model",
-                "url": "https://arxiv.org/abs/2608.19216",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-isqvge-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-isqvge-1",
-                "label": "Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-isqvge-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-vs3fp8",
-            "title": "LLMs for Air Traffic Control: Prompt Design Insights",
-            "tldr": "A new arXiv study evaluates LLMs for generating air traffic control communications, finding that lighter prompts outperform heavily scripted ones, and that in-context examples boost performance. This offers practical guidance for building robust dialogue systems in safety-critical domains.",
-            "whyItMatters": [
-              "For founders building AI in regulated or safety-critical industries, this research highlights the trade-off between prompt constraint and model flexibility, informing design choices for their own systems.",
-              "The finding that error accumulation in multi-turn dialogues can be mitigated by injecting correct history suggests architectural patterns for maintaining coherence in long conversations."
-            ],
-            "whatToTry": {
-              "description": "When designing multi-turn dialogue systems, experiment with minimal prompt constraints and provide a worked example in-context. Also, consider injecting ground-truth history periodically to prevent error accumulation, especially in high-stakes applications.",
-              "note": "Test with multiple LLMs and use LLM-as-judge validated against human annotations to evaluate output quality."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-vs3fp8",
-                "title": "Air Traffic Control Using Large Language Models: Prompt Engineering, Architecture, and Evaluation",
-                "url": "https://arxiv.org/abs/2608.19299",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-vs3fp8-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-vs3fp8-1",
-                "label": "Prompt Engineering",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-vs3fp8-2",
-                "label": "Air Traffic Control",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-ti6bzx",
-            "title": "Outcome Monitors: Detect Silent AI Tool Failures and Boost Task Completion",
-            "tldr": "New research introduces Outcome Monitors that detect silent tool failures (e.g., cached errors, negative prices) in AI agents, improving task completion rates by up to 17 points in benchmarks. Multiple sources are covering this as a significant step toward reliable agentic systems.",
-            "whyItMatters": [
-              "Business impact: Reduces costly errors in AI agents handling critical operations like pricing or data retrieval, increasing trust and reliability for production deployments.",
-              "Technical impact: Provides a practical method to catch failures that current agents miss, improving robustness without requiring model retraining."
-            ],
-            "whatToTry": {
-              "description": "Implement a lightweight outcome monitor that checks tool outputs against expected contracts (e.g., schemas or historical patterns) and triggers recovery actions when violations are detected. Start with high-risk tools like pricing or database queries.",
-              "note": "Focus on recovery tools first; the research shows they drive most of the gain. Extending detection beyond known patterns remains a challenge."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-ti6bzx",
-                "title": "Outcome Monitors: Recovery Affordances for Silent Tool Failures",
-                "url": "https://arxiv.org/abs/2608.19303",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-ti6bzx-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-ti6bzx-1",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-ti6bzx-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-rba3of",
-            "title": "R2-OPD: Filtering Distillation Rewards to Boost Reasoning",
-            "tldr": "A new paper introduces R2-OPD, a method that filters on-policy distillation rewards based on reasoning progress, improving reasoning performance over standard OPD. This addresses a key flaw in current distillation methods used for post-training LLMs.",
-            "whyItMatters": [
-              "Improves reasoning capabilities of LLMs, which is critical for AI products requiring complex problem-solving.",
-              "Offers a more efficient post-training approach, potentially reducing the need for massive human-annotated reasoning data."
-            ],
-            "whatToTry": {
-              "description": "If you're using on-policy distillation to fine-tune models for reasoning tasks, implement a reward filtering mechanism that compares teacher rewards with an independent progress metric (e.g., self-consistency or verifier scores) and down-weights conflicting signals.",
-              "note": "Start with a small dataset to validate the ranking disagreement threshold before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-rba3of",
-                "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
-                "url": "https://arxiv.org/abs/2608.19408",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-rba3of-0",
-                "label": "Distillation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-rba3of-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-rba3of-2",
-                "label": "LLM",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-na63x3",
-            "title": "Symposium: Auditable Trails for AI Scientist Communities",
-            "tldr": "A new framework, Symposium, provides immutable, auditable records for AI agents in research communities, enabling trust and reproducibility. It separates the community's history from the agents, allowing diverse AI systems to collaborate transparently.",
-            "whyItMatters": [
-              "For founders building AI research tools, this addresses the critical need for trust and reproducibility in multi-agent systems, potentially becoming a standard for compliance and audit.",
-              "Technically, it offers a practical implementation for recording agent actions, which can be integrated into products to provide verifiable evidence of AI-driven decisions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Symposium's framework for your AI product to add auditable logging of agent actions, especially if you serve scientific or regulated industries. Start by reviewing the provided implementation and documentation to see how it can be adapted to your use case.",
-              "note": "Consider the overhead of maintaining immutable logs and whether your users require this level of transparency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-na63x3",
-                "title": "Symposium: Trust via Auditable Records for Communities of AI Scientist Agents",
-                "url": "https://arxiv.org/abs/2608.19511",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-na63x3-0",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-na63x3-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-na63x3-2",
-                "label": "Tool",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787321059655-0jn6zq",
-            "title": "Adaptive Compression for Edge RAG: Cut Costs Without Killing Quality",
-            "tldr": "New research shows that fixed-rate context compression in edge RAG misses energy savings or hurts quality. Telemetry-informed adaptive compression, based on live device state, can optimize the tradeoff, with generation consuming ~90% of latency and energy for 7B-8B models.",
-            "whyItMatters": [
-              "For founders building on-device AI: reducing KV-cache and memory traffic directly cuts latency and energy costs, enabling more efficient edge deployments.",
-              "Adaptive compression can improve user experience by maintaining response quality while extending device battery life, a key differentiator for mobile or IoT products."
-            ],
-            "whatToTry": {
-              "description": "If you're deploying RAG on edge devices, experiment with dynamic compression rates that adjust based on real-time device metrics (e.g., battery level, thermal state, current workload). Start by profiling your model's generation vs. compression costs on your target hardware, then implement a simple policy that increases compression when device resources are constrained and decreases it when quality is critical.",
-              "note": "Be cautious: overly aggressive compression can degrade answer accuracy. Test with your specific datasets to find the sweet spot."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787321059655-0jn6zq",
-                "title": "From Retrieved Context to Runtime Control: Adaptive Compression for Edge-based RAG",
-                "url": "https://arxiv.org/abs/2608.19535",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-0jn6zq-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-0jn6zq-1",
-                "label": "Edge AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787321059655-0jn6zq-2",
-                "label": "Context Compression",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-49383326",
-            "title": "Codex on AWS Bedrock bug triggers 10x charges—founders beware",
-            "tldr": "A bug in OpenAI's Codex when used via AWS Bedrock is causing users to be billed 10x the expected amount, sparking a HackerNews discussion. This is a critical cost-control warning for founders relying on Bedrock for AI coding agents.",
-            "whyItMatters": [
-              "Unexpected 10x charges can severely impact startup burn rate and cash flow, especially for AI-heavy products.",
-              "Highlights reliability risks of using third-party AI services through cloud marketplaces, affecting cost predictability and trust."
-            ],
-            "whatToTry": {
-              "description": "Audit your AWS Bedrock usage logs and billing reports immediately to detect any anomalous charges. Set up billing alerts and budget thresholds to catch overages early. If you use Codex via Bedrock, consider switching to direct API calls or other providers until the bug is resolved, and monitor the GitHub issue for updates.",
-              "note": "Check the GitHub issue #37674 for workarounds and community insights before making changes."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49383326",
-                "title": "Codex on AWS bedrock bug causing 10x charges",
-                "url": "https://github.com/openai/codex/issues/37674",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49383326-0",
-                "label": "OpenAI Codex",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49383326-1",
-                "label": "AWS Bedrock",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49383326-2",
-                "label": "Cost Management",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-21T03:17:43Z"
-          },
-          {
-            "id": "hn-49382041",
-            "title": "EU: AI-Generated Content Lacks Copyright Protection",
-            "tldr": "A HackerNews discussion highlights that under EU law, AI-generated content without human authorship is not protected by copyright, creating legal uncertainty for AI product founders. This is a trending topic with 195 comments, indicating significant industry concern.",
-            "whyItMatters": [
-              "Business impact: Founders building AI content generation tools may face challenges in monetizing outputs, as competitors can freely copy AI-generated works without legal recourse.",
-              "Technical impact: Products relying on AI-generated code, images, or text may need to incorporate human authorship elements to secure copyright, affecting workflow design."
-            ],
-            "whatToTry": {
-              "description": "Review your AI product's output generation process to ensure meaningful human input or curation is involved, which can help establish copyright protection under EU law. Consult with a legal expert to assess your specific use case and jurisdiction.",
-              "note": "Consider adding human review or editing steps to your pipeline to strengthen copyright claims."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49382041",
-                "title": "Copyright does not protect AI-generated content in EU",
-                "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-                "domain": "mathstodon.xyz",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49382041-0",
-                "label": "Legal",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49382041-1",
-                "label": "AI Content",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-21T00:15:12Z"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-08-21-evening",
-        "period": "evening",
-        "date": "2026-08-21",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Nvidia: The Harness, Not the Model, Is the Real Hero for AI Agents, Active Inference Framework Optimizes Context Acquisition for AI Agents, Outcome Monitors: Catching Silent AI Tool Failures.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1787345345803-dt3ozj",
-            "title": "Nvidia: The Harness, Not the Model, Is the Real Hero for AI Agents",
-            "tldr": "Nvidia research reveals that fine-tuning the 'harness'—the orchestration layer around an AI agent—can dramatically improve performance and prevent failures, even when the underlying model is weak. This shifts focus from model quality to system design.",
-            "whyItMatters": [
-              "Business impact: Founders can build reliable AI products with smaller, cheaper models by investing in harness engineering, reducing inference costs and dependency on frontier models.",
-              "Technical impact: The harness—prompting, tool use, memory, and control flow—becomes a first-class optimization target, opening new avenues for differentiation and IP."
-            ],
-            "whatToTry": {
-              "description": "Audit your current agent architecture: identify where failures occur (e.g., tool selection, context handling) and experiment with fine-tuning the harness components—like decision policies or memory retrieval—rather than swapping in a larger model. Measure performance gains on your key tasks.",
-              "note": "Start with a small set of failure cases; harness tuning can be iterative and may require custom evaluation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787345345803-dt3ozj",
-                "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
-                "url": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-dt3ozj-2",
-                "label": "Harness",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 19:43:39 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346088-j5ghv2",
-            "title": "Active Inference Framework Optimizes Context Acquisition for AI Agents",
-            "tldr": "A new arXiv paper proposes using active inference to decide when AI agents should ask clarifying questions, retrieve context, or act, balancing information gain against token costs. This model-agnostic framework could reduce wasted tokens and improve agent efficiency in interactive tasks.",
-            "whyItMatters": [
-              "Directly addresses token efficiency and user experience for AI agents, a key cost and satisfaction factor for founders.",
-              "Provides a principled method to optimize context acquisition, potentially improving agent performance on complex tasks."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your agent's current context-acquisition strategy: identify scenarios where it defaults or asks too many questions. Consider implementing a simple heuristic based on expected information gain per token cost to decide when to ask for clarification or retrieve additional context.",
-              "note": "Start with a small set of common user intents to measure impact before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346088-j5ghv2",
-                "title": "Active Inference as Context Acquisition for AI Agents",
-                "url": "https://arxiv.org/abs/2608.19202",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-0",
-                "label": "Active Inference",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-j5ghv2-2",
-                "label": "Token Efficiency",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346088-9ez5kl",
-            "title": "Outcome Monitors: Catching Silent AI Tool Failures",
-            "tldr": "New research introduces Outcome Monitors that detect silent tool failures (e.g., cached error pages, negative prices) in AI agents, boosting task completion rates by up to 17 points across multiple benchmarks. This is a practical safety mechanism for production AI systems.",
-            "whyItMatters": [
-              "Prevents AI agents from acting on corrupted data, reducing costly errors in production.",
-              "Provides a lightweight, model-agnostic safety layer that can be added to existing agent pipelines."
-            ],
-            "whatToTry": {
-              "description": "Implement outcome contracts for your AI agent's critical tool calls: define expected output schemas or invariants, and add a monitor that flags violations and triggers recovery actions (e.g., retry, fallback, or alert).",
-              "note": "Start with high-risk tools like payment or data retrieval; the paper shows recovery tool lists are key to the gain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346088-9ez5kl",
-                "title": "Outcome Monitors: Recovery Affordances for Silent Tool Failures",
-                "url": "https://arxiv.org/abs/2608.19303",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-1",
-                "label": "Reliability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-9ez5kl-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346089-timlwo",
-            "title": "Symposium: Auditable Trails for AI Scientist Communities",
-            "tldr": "A new framework, Symposium, provides immutable, auditable records for AI agent-driven research, enabling trust and reproducibility in scientific communities. This addresses a critical gap for founders building multi-agent systems where accountability is key.",
-            "whyItMatters": [
-              "For AI product founders, this introduces a pattern for logging and verifying agent actions, which is essential for building trust in autonomous systems, especially in regulated or scientific domains.",
-              "Technically, it offers a practical implementation for separating durable history from agent operations, enabling diverse AI systems to collaborate while maintaining a verifiable record."
-            ],
-            "whatToTry": {
-              "description": "If you're building multi-agent systems, explore Symposium's open-source implementation to see how it structures claims, evidence citations, and assumptions. Consider adopting similar audit trails for your agents to enhance transparency and user trust.",
-              "note": "Start by reviewing the provided documentation and prompt components to quickly prototype a community with auditable agent activity."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346089-timlwo",
-                "title": "Symposium: Trust via Auditable Records for Communities of AI Scientist Agents",
-                "url": "https://arxiv.org/abs/2608.19511",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346089-timlwo-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346089-timlwo-1",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-49389565",
-            "title": "AI Homework Boost, Exam Drop: Study Reveals Learning Trap",
-            "tldr": "A study shows that students using AI for homework saw higher scores, but their exam scores dropped, suggesting over-reliance on AI undermines deep learning. This is a critical signal for founders building AI education tools.",
-            "whyItMatters": [
-              "For AI education products: highlights the risk of tools that provide answers without fostering understanding, potentially leading to negative long-term outcomes and reputational damage.",
-              "For AI product design: underscores the need to build features that encourage active learning and knowledge retention, not just task completion."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI tools for education or productivity, audit your product for 'answer-giving' vs 'scaffolding' behavior. Implement features that prompt users to attempt problems first, provide hints, and explain reasoning to ensure learning transfer.",
-              "note": "Consider adding spaced repetition or retrieval practice to reinforce long-term retention."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49389565",
-                "title": "AI boosted homework scores, then exam scores dropped: Study",
-                "url": "https://canews24.online/?p=71",
-                "domain": "canews24.online",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49389565-0",
-                "label": "Education",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49389565-1",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49389565-2",
-                "label": "Product Design",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-21T15:25:42Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787345345803-g3udty",
-            "title": "Starcloud raises $250M for orbital data centers as launch capacity tightens",
-            "tldr": "Starcloud secured $250M to build orbital data centers, signaling a race for space-based compute as launch options become scarce. This move could reshape AI infrastructure for edge and latency-sensitive workloads.",
-            "whyItMatters": [
-              "Business impact: Opens new frontier for AI compute, potentially reducing reliance on terrestrial data centers and offering unique value propositions for global, low-latency AI services.",
-              "Technical impact: Orbital data centers could enable ultra-low-latency AI inference for remote regions and bypass terrestrial network bottlenecks, but face significant technical challenges in power, cooling, and maintenance."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product could benefit from space-based compute for latency-critical or globally distributed use cases. Monitor Starcloud's progress and consider partnerships for future edge AI deployments.",
-              "note": "Given launch constraints, focus on hybrid architectures that can leverage both terrestrial and orbital resources as the ecosystem matures."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787345345803-g3udty",
-                "title": "Starcloud raises $250 million for orbital data centers as launch options dry up",
-                "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-g3udty-0",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-g3udty-1",
-                "label": "Edge Computing",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 14:00:00 +0000"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346088-rwb9yu",
-            "title": "Bounded Sovereignty: The Hidden Cost of AI Oversight Without Model Ownership",
-            "tldr": "A new arXiv paper introduces 'bounded sovereignty'—the partial access deployers have over AI models they don't own—and quantifies the 'control tax' paid to compensate for missing access. This is crucial for regulated companies using frontier APIs, as it maps which safety protocols are actually feasible.",
-            "whyItMatters": [
-              "For founders building on top of frontier APIs, this framework helps identify which control measures are viable and what hidden costs (contracts, audits, reduced scope) to budget for.",
-              "It provides a structured way to negotiate with model providers for better access (e.g., logs, gateways) to meet regulatory requirements."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI stack against the four-layer access typology (data, model, infrastructure, interaction). Identify which layers you lack full access to, then estimate your 'sovereignty discount cost'—the extra spend on contracts, audits, or scope reductions. Use this to prioritize which access improvements to negotiate with your provider.",
-              "note": "The paper's experiment is synthetic, so treat the cost estimates as directional, not precise."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346088-rwb9yu",
-                "title": "Bounded Sovereignty and the Control Tax: Pricing AI Oversight When the Deployer Does Not Own the Model",
-                "url": "https://arxiv.org/abs/2608.19216",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-0",
-                "label": "AI Control",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-1",
-                "label": "Governance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-rwb9yu-2",
-                "label": "API",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346088-f7c4u2",
-            "title": "LLMs for Air Traffic Control: Promising but Prompt-Sensitive",
-            "tldr": "A new arXiv study tests LLMs for generating air traffic control communications, finding that lighter prompts outperform heavily scripted ones, which collapse due to error accumulation. This highlights the importance of prompt design and context handling in safety-critical dialogue systems.",
-            "whyItMatters": [
-              "For founders building AI in regulated industries, this shows that over-constraining prompts can backfire, emphasizing the need for balanced prompt engineering and robust context management.",
-              "The research validates LLM-as-judge for evaluating domain-specific outputs, offering a cost-effective alternative to human experts for quality assessment in niche applications."
-            ],
-            "whatToTry": {
-              "description": "If you're building dialogue systems for specialized domains, experiment with multiple prompt structures of varying constraint levels. Use a pilot-in-the-loop approach to iteratively refine prompts, and consider injecting ground-truth history to prevent error accumulation in multi-turn interactions.",
-              "note": "Be cautious with heavily scripted prompts; they may degrade performance over long conversations. Validate your evaluation metrics against human expert annotations to ensure reliability."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346088-f7c4u2",
-                "title": "Air Traffic Control Using Large Language Models: Prompt Engineering, Architecture, and Evaluation",
-                "url": "https://arxiv.org/abs/2608.19299",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-1",
-                "label": "Prompt Engineering",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346088-f7c4u2-2",
-                "label": "Air Traffic Control",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787345346089-pz3tzl",
-            "title": "R2-OPD: Filtering Distillation Rewards to Boost Reasoning",
-            "tldr": "A new paper introduces R2-OPD, a method that filters on-policy distillation rewards when they conflict with actual reasoning progress, improving reasoning performance in language models.",
-            "whyItMatters": [
-              "Improves reasoning capabilities of LLMs, which is critical for AI products that require logical inference or problem-solving.",
-              "Offers a more efficient post-training approach by reducing noise in teacher feedback, potentially lowering training costs."
-            ],
-            "whatToTry": {
-              "description": "If you're fine-tuning a model with on-policy distillation, consider implementing a reward filtering mechanism that compares teacher rewards with an independent progress metric, and suppress rewards when they disagree. This can help your model learn more robust reasoning.",
-              "note": "Start with a small-scale experiment to measure the impact on your specific tasks before full deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787345346089-pz3tzl",
-                "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
-                "url": "https://arxiv.org/abs/2608.19408",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787345346089-pz3tzl-0",
-                "label": "Model",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787345346089-pz3tzl-1",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787345345803-l7zk8w",
-            "title": "DOJ Probes a16z Board Seats: VC Antitrust Risk Emerges",
-            "tldr": "The DOJ is investigating Andreessen Horowitz for potential antitrust violations due to partners sitting on boards of competing portfolio companies (Databricks and Fivetran), reviving a 112-year-old law rarely applied to VCs. This signals increased regulatory scrutiny on VC board practices.",
-            "whyItMatters": [
-              "Business impact: Founders may face new governance constraints as VCs become more cautious about board overlaps, potentially affecting fundraising and board composition.",
-              "Technical impact: AI startups often rely on VCs for strategic guidance; increased scrutiny could slow down board-level decision-making and access to expertise."
-            ],
-            "whatToTry": {
-              "description": "Review your current board composition for potential conflicts, especially if you have investors with multiple portfolio companies in similar AI/data spaces. Document the rationale for board appointments and ensure clear separation of duties to mitigate antitrust risks.",
-              "note": "This is a proactive step to prepare for potential regulatory inquiries and investor due diligence."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787345345803-l7zk8w",
-                "title": "The DOJ is investigating a16z. What does this mean for venture capital?",
-                "url": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-0",
-                "label": "Venture Capital",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-1",
-                "label": "Antitrust",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787345345803-l7zk8w-2",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 21 Aug 2026 14:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
         "isAvailable": true,
         "isRead": false
       }
