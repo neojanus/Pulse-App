@@ -1,7 +1,435 @@
 [
   {
-    "date": "2026-09-01",
+    "date": "2026-09-02",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-02-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-02",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: AfterQuery hits $3.2B in 5 months, YC's fastest unicorn, LLMs Can Track State Across 196 Tool Calls—MD5 Test Shows Surprising Reliability, OpenAgentFlow: Unified Safety Layer for Multi-Agent Systems.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1788351010291-oc9o97",
+            "title": "AfterQuery hits $3.2B in 5 months, YC's fastest unicorn",
+            "tldr": "AI model-training startup AfterQuery raised a round valuing it at $3.2B, just five months after its $30M Series A at $300M. This marks Y Combinator's fastest-ever unicorn and signals intense investor demand for AI infrastructure.",
+            "whyItMatters": [
+              "Signals a frothy funding environment for AI infrastructure startups, potentially inflating valuations and competition for talent and capital.",
+              "Highlights the strategic importance of model training efficiency, a key pain point for AI founders building compute-heavy products."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own AI product's training efficiency and cost structure. If you're building on top of large models, consider whether you can leverage techniques like fine-tuning or distillation to reduce compute needs, and monitor AfterQuery's offerings for potential cost savings.",
+              "note": "The rapid valuation growth may be driven by hype; focus on tangible performance benefits before committing."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1788351010291-oc9o97",
+                "title": "AfterQuery reportedly becomes Y Combinator’s fastest-ever unicorn, now valued at $3.2B",
+                "url": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1788351010291-oc9o97-0",
+                "label": "AI Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1788351010291-oc9o97-1",
+                "label": "Funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 01 Sep 2026 22:08:24 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-ciq2ss",
+            "title": "LLMs Can Track State Across 196 Tool Calls—MD5 Test Shows Surprising Reliability",
+            "tldr": "A new arXiv paper tests whether LLMs can carry exact state across long sequences of dependent tool calls by having them compute MD5 step-by-step. gpt-oss-120b succeeded on a majority of runs, revealing that state tracking is a distinct, measurable capability—and a potential bottleneck for agentic systems.",
+            "whyItMatters": [
+              "For founders building multi-step AI agents, this isolates state-tracking failures from instruction-following errors, helping you debug and improve agent reliability.",
+              "The finding that a small active-parameter model can handle 196 dependent calls suggests that current models may be more capable than benchmarks imply—but also that error cascades remain a key risk to design around."
+            ],
+            "whatToTry": {
+              "description": "Design your agent's tool-call sequences to minimize state carried in context: offload intermediate state to external memory or structured outputs, and add checkpoints to verify state at each step. Use this MD5-style task as a diagnostic to measure your model's pure state-tracking ability.",
+              "note": "Even if your model passes standard benchmarks, test it on a long chain of dependent calls with no shortcuts to see where it actually fails."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-ciq2ss",
+                "title": "Long-Horizon State Tracking in LLMs: Executing MD5 through a Deep Sequence of Dependent Tool Calls",
+                "url": "https://arxiv.org/abs/2609.00012",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-ciq2ss-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-ciq2ss-1",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-ciq2ss-2",
+                "label": "State Tracking",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-sfhexf",
+            "title": "OpenAgentFlow: Unified Safety Layer for Multi-Agent Systems",
+            "tldr": "New research introduces OpenAgentFlow, an architecture that enforces safety at the action-commit boundary across heterogeneous AI agents, achieving 94% accuracy and 95.3% attack block rate on Android. This addresses the fragmented safety problem in multi-agent fleets, a critical concern for founders building agentic products.",
+            "whyItMatters": [
+              "For founders orchestrating multiple AI agents, this provides a blueprint for system-wide safety governance, reducing risk of unintended actions and enabling policy updates without redeploying agents.",
+              "Technically, it normalizes diverse action types into a unified stream, simplifying auditability and compliance—key for enterprise adoption."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current agent architecture: if you're building multi-agent systems, consider implementing a centralized policy enforcement point that intercepts all agent actions before execution. Start by defining a common event schema for different action types (API calls, tool invocations, GUI actions) and route them through a single governance layer.",
+              "note": "Even a lightweight version can improve safety and make it easier to iterate on policies without modifying agent code."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-sfhexf",
+                "title": "OpenAgentFlow: Enabling System-Wide Safety Boundaries for Heterogeneous AI Agent Fleets",
+                "url": "https://arxiv.org/abs/2609.00015",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-sfhexf-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-sfhexf-1",
+                "label": "Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-sfhexf-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-zdsv2c",
+            "title": "UI-Venus-2: Open-Source GUI Agent for Real-World Automation",
+            "tldr": "UI-Venus-2 is a new open-source foundation GUI agent that unifies mobile, web, and desktop automation with a closed-loop reasoning-action framework. It scales environments, tasks, and verification to bridge the gap from benchmarks to real-world deployment, making it a significant step for AI agents that interact with digital interfaces.",
+            "whyItMatters": [
+              "For founders building automation tools, UI-Venus-2 offers a robust, open-source alternative to proprietary GUI agents, reducing development time and cost.",
+              "Its focus on reliable verification and safety-aware mechanisms addresses key barriers to deploying agents in production, potentially accelerating adoption of AI-driven workflow automation."
+            ],
+            "whatToTry": {
+              "description": "Evaluate UI-Venus-2 as a foundation for your own GUI automation product. Test it on your most common user workflows across mobile, web, and desktop to see if its unified approach reduces integration complexity. If you're building an agent, consider adopting its trace-level and sample-level verification methods to improve your RL training signals.",
+              "note": "Since it's open-source, you can fine-tune it for your specific domain, but be mindful of the computational resources required for training and inference."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-zdsv2c",
+                "title": "UI-Venus-2 Technical Report",
+                "url": "https://arxiv.org/abs/2609.00028",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-zdsv2c-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-zdsv2c-1",
+                "label": "GUI agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-zdsv2c-2",
+                "label": "automation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-1er1ui",
+            "title": "EULER: Multi-Agent AI for Mathematical Discovery with Cross-Domain Bridges",
+            "tldr": "A new multi-agent system, EULER, automates mathematical discovery by transferring problems across domains, achieving 10 proofs and 3 refutations on 120 recent conjectures. This demonstrates AI's potential to accelerate research in combinatorics and beyond.",
+            "whyItMatters": [
+              "For AI founders, this shows a viable path to building tools that assist researchers in math and science, opening markets in academic and R&D sectors.",
+              "Technically, EULER's 'bridge' concept and stress-testing mechanism offer a novel approach to multi-agent collaboration, improving reliability and reducing false conclusions."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating EULER's bridge-based multi-agent framework into your AI product for problem-solving or research assistance. Consider how cross-domain knowledge transfer could enhance your system's capabilities, especially in fields like drug discovery or materials science where domain transfer is key.",
+              "note": "The paper highlights that domain distance isn't a reliable predictor of success; focus on executable operation gain and valid return paths."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-1er1ui",
+                "title": "EULER: Exploring Underused Links with Evidence-Checked Return for Multi-Agent Mathematical Discovery",
+                "url": "https://arxiv.org/abs/2609.00032",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-1er1ui-0",
+                "label": "Multi-Agent Systems",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-1er1ui-1",
+                "label": "Mathematical Discovery",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-1er1ui-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-t3c287",
+            "title": "New SLM Framework Detects Elder Financial Scams in Real-Time",
+            "tldr": "Researchers propose a turn-based risk assessment framework using fine-tuned small language models (Phi-4, LLaMA-3.2, DeepSeek-R1, Qwen3) to detect financial scams targeting elders across conversational turns, enabling dynamic monitoring on resource-constrained devices.",
+            "whyItMatters": [
+              "For founders building AI safety or fraud detection tools, this offers a practical approach to incremental risk assessment in multi-turn conversations, which is more realistic than single-message classification.",
+              "The use of small language models (SLMs) makes it feasible to deploy scam detection on mobile or edge devices, opening opportunities for real-time protection in consumer apps or call centers."
+            ],
+            "whatToTry": {
+              "description": "Explore integrating turn-based risk scoring into your product by fine-tuning a small language model (e.g., Phi-4 or LLaMA-3.2) on multi-turn dialogue data with cumulative risk labels. Start with a prototype that re-evaluates risk after each user message and triggers alerts when thresholds are crossed.",
+              "note": "Consider building your own dataset with annotated risk levels and rationales to improve explainability, as the paper highlights the importance of safety recommendations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-t3c287",
+                "title": "Incremental Risk Assessment of Progressive Elder Financial Scams via Instruction-Tuned Small Language Models",
+                "url": "https://arxiv.org/abs/2609.00005",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-t3c287-0",
+                "label": "Small Language Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-t3c287-1",
+                "label": "Fraud Detection",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010603-mo1nvk",
+            "title": "SCAFFOLD: New Dataset for Diagram Understanding in CS Papers",
+            "tldr": "SCAFFOLD is a new large-scale dataset of computer science research figures with diagram QA and chain-of-thought reasoning traces, designed to train vision-language models to understand complex diagrams. It includes 157K pairs from arXiv papers, with baseline experiments on Qwen2.5-VL-3B-Instruct.",
+            "whyItMatters": [
+              "Enables training VLMs to reason about technical diagrams, a critical capability for AI-powered research assistants and document understanding tools.",
+              "Provides a structured resource for building domain-specific QA systems for scientific literature, potentially improving retrieval and summarization in research workflows."
+            ],
+            "whatToTry": {
+              "description": "If you're building document understanding or research assistant tools, explore the SCAFFOLD dataset (available on GitHub) to fine-tune a vision-language model like Qwen2.5-VL for diagram QA tasks. Use the smaller 12K subset for initial experiments to assess performance gains on your use case.",
+              "note": "Consider combining SCAFFOLD with your own data for better generalization to non-CS domains."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010603-mo1nvk",
+                "title": "SCAFFOLD: A Large-Scale Structured Dataset of Computer Science Research Figures with Diagram QA and Chain-of-Thought Reasoning Traces",
+                "url": "https://arxiv.org/abs/2609.00018",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-mo1nvk-0",
+                "label": "Dataset",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-mo1nvk-1",
+                "label": "Vision-Language Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010603-mo1nvk-2",
+                "label": "Diagram QA",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1788351010291-9xtq2c",
+            "title": "OpenAI Hit with 30 New Lawsuits Over Tumbler Ridge Shooting",
+            "tldr": "Edelson PC files 30 additional lawsuits against OpenAI, escalating claims to aiding and abetting and naming Chris Lehane, though evidence remains unconfirmed. This signals growing legal risk for AI companies over content moderation and model behavior.",
+            "whyItMatters": [
+              "Legal precedent: Escalating claims could set a precedent for AI platform liability in real-world harms, affecting how founders structure their companies and insurance.",
+              "Reputational risk: Naming executives like Chris Lehane highlights personal accountability, which may impact hiring and investor confidence in AI startups."
+            ],
+            "whatToTry": {
+              "description": "Review your AI product's content moderation and safety policies, and consult legal counsel to assess potential liability exposure. Consider implementing stricter usage monitoring and clear disclaimers to mitigate risks.",
+              "note": "Even if claims seem speculative, proactive safety measures can strengthen your defense and reduce reputational damage."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1788351010291-9xtq2c",
+                "title": "OpenAI faces 30 more lawsuits tied to Tumbler Ridge shooting",
+                "url": "https://techcrunch.com/2026/09/02/openai-faces-30-more-lawsuits-tied-to-tumbler-ridge-shooting/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1788351010291-9xtq2c-0",
+                "label": "Legal",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1788351010291-9xtq2c-1",
+                "label": "OpenAI",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 12:09:42 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1788351010330-2g101g",
+            "title": "Pangram: The AI Detection Standard—But Can You Trust It?",
+            "tldr": "Wired reports that Pangram has become the go-to AI detection tool in publishing, but its reliability is questioned, highlighting the risks of false positives for writers and the broader implications for AI-generated content moderation.",
+            "whyItMatters": [
+              "For founders building AI writing tools, Pangram's dominance could shape content policies and affect user trust if false positives penalize legitimate AI-assisted work.",
+              "The debate underscores the need for transparent detection methods and the potential for adversarial impacts on AI content creators."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI writing or content tools, proactively test your outputs against Pangram and other detectors to understand false-positive rates. Consider implementing 'human-in-the-loop' review or disclosure features to mitigate risks for your users.",
+              "note": "Stay updated on detection technology evolution to adapt your product's positioning."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1788351010330-2g101g",
+                "title": "Pangram Has Emerged as the Gold Standard of AI Detection. Should You Trust It?",
+                "url": "https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1788351010330-2g101g-0",
+                "label": "AI Detection",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1788351010330-2g101g-1",
+                "label": "Pangram",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1788351010602-11uldl",
+            "title": "HyperWorld: Better State Serialization Boosts World Models for Text Agents",
+            "tldr": "New research shows that structuring state descriptions as entity-centered hyperedges (grouping related facts) improves learned world models for language agents, especially for smaller models and out-of-distribution generalization, leading to better planning success.",
+            "whyItMatters": [
+              "For founders building text-based AI agents (e.g., game NPCs, simulation tools), this suggests a simple way to improve model performance without scaling up: format state observations as hyperedges rather than plain text.",
+              "The finding that hyperedge serialization helps most for 0.5B-1.5B models is crucial for cost-sensitive startups that rely on smaller, faster models."
+            ],
+            "whatToTry": {
+              "description": "If you're training or fine-tuning a language model for a text environment (like a game or simulation), try restructuring your state representations into entity-centered hyperedge units—group all facts related to an entity and its relations into a single block—instead of using raw text or independent sentences. Test this on your own data to see if it improves action prediction and planning accuracy, especially for out-of-distribution scenarios.",
+              "note": "This is a research finding, not a production-ready library. Start with a small experiment to validate the benefit for your specific use case."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788351010602-11uldl",
+                "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+                "url": "https://arxiv.org/abs/2609.00002",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788351010602-11uldl-0",
+                "label": "World Models",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010602-11uldl-1",
+                "label": "State Serialization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788351010602-11uldl-2",
+                "label": "Language Agents",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 02 Sep 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 23,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-01-afternoon",
@@ -871,7 +1299,7 @@
   },
   {
     "date": "2026-08-31",
-    "displayDate": "Yesterday",
+    "displayDate": "Monday, Aug 31",
     "briefings": [
       {
         "id": "briefing-2026-08-31-afternoon",
@@ -4208,439 +4636,6 @@
           }
         ],
         "totalReadTimeMinutes": 19,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-26",
-    "displayDate": "Wednesday, Aug 26",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-26-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-26",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Arga raises $10M to improve enterprise AI agent training, Qwen3.8-Flash-Next: New Architecture for Ultimate Cost-Efficiency, Z.ai's Ox Alpha: New GLM Model with Open Weights to Rival DeepSeek.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1787753338699-6fw1g1",
-            "title": "Arga raises $10M to improve enterprise AI agent training",
-            "tldr": "Arga Labs, a startup building a better way to train enterprise AI agents, has raised $10M in seed funding led by General Catalyst. This signals growing investor interest in specialized agent training infrastructure.",
-            "whyItMatters": [
-              "Indicates a shift toward specialized training solutions for enterprise AI agents, which could reduce reliance on generic fine-tuning approaches.",
-              "New funding may accelerate development of tools that make agent training more efficient, potentially lowering barriers for AI product builders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current agent training pipeline: if you're using generic fine-tuning, explore specialized training platforms or frameworks that focus on enterprise-specific tasks like tool use, safety, and domain adaptation.",
-              "note": "Keep an eye on Arga's product launch for potential integration or benchmarking opportunities."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787753338699-6fw1g1",
-                "title": "Arga Labs is building a better way to train enterprise AI agents",
-                "url": "https://techcrunch.com/2026/08/26/arga-is-building-a-better-way-to-train-enterprise-ai-agents/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-6fw1g1-0",
-                "label": "tool",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-6fw1g1-1",
-                "label": "funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 12:55:28 +0000"
-          },
-          {
-            "id": "hn-49448210",
-            "title": "Qwen3.8-Flash-Next: New Architecture for Ultimate Cost-Efficiency",
-            "tldr": "Alibaba's Qwen team released Qwen3.8-Flash-Next, a new model architecture focused on extreme cost-efficiency, sparking significant discussion on HackerNews. This signals a shift toward cheaper inference, which is critical for AI product margins.",
-            "whyItMatters": [
-              "Reduces inference costs, directly improving unit economics for AI startups and enabling more aggressive pricing strategies.",
-              "New architecture may set a benchmark for efficiency, pushing competitors to innovate on cost, benefiting all builders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Qwen3.8-Flash-Next for your inference workloads, especially if you're cost-sensitive. Run benchmarks against your current model to measure cost per token and latency. If it meets quality needs, consider switching to lower your operational costs.",
-              "note": "Check the model's licensing and API availability; also test on your specific use cases to ensure quality parity."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49448210",
-                "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
-                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-                "domain": "qwen.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49448210-0",
-                "label": "Qwen",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49448210-1",
-                "label": "Cost-efficiency",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49448210-2",
-                "label": "Architecture",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-26T12:52:12Z"
-          },
-          {
-            "id": "hn-49446422",
-            "title": "Z.ai's Ox Alpha: New GLM Model with Open Weights to Rival DeepSeek",
-            "tldr": "Z.ai confirms its stealth model Ox Alpha is part of the GLM series and will release its weights, positioning it as a strong competitor to DeepSeek. This move signals a major open-source AI push from China, with broad industry implications.",
-            "whyItMatters": [
-              "Open-weight release gives founders a powerful, potentially cost-effective alternative to proprietary models, reducing dependency on major US providers.",
-              "GLM-series models have shown competitive performance; Ox Alpha could set new benchmarks for open-source AI, impacting model selection and fine-tuning strategies."
-            ],
-            "whatToTry": {
-              "description": "Monitor Z.ai's official channels for the weight release and evaluate Ox Alpha's performance on your specific use cases, comparing it against DeepSeek and other open models for cost and quality trade-offs.",
-              "note": "Consider testing it in a sandbox environment first to assess integration and licensing before committing to production."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49446422",
-                "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
-                "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
-                "domain": "bloomberg.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49446422-0",
-                "label": "GLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49446422-1",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49446422-2",
-                "label": "Z.ai",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-26T10:04:55Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1787753338796-01pagv",
-            "title": "RENDER: How Memory Format Skews LLM Evaluation Results",
-            "tldr": "New research shows that the format of memory/RAG context (e.g., summaries vs. raw logs) dramatically impacts LLM performance, with up to 72.6-point accuracy swings. This is a must-know for founders building memory features.",
-            "whyItMatters": [
-              "Business impact: Your product's memory design choices (summary vs. raw) can make or break user-perceived intelligence; optimizing format could be a cheap win.",
-              "Technical impact: Evaluation benchmarks that ignore format may mislead you; you need to test across formats to ensure robust performance."
-            ],
-            "whatToTry": {
-              "description": "Audit your memory/RAG pipeline: test your model on the same conversation history rendered as raw dialogue, summaries, and typed records. Measure accuracy differences and consider switching to the best-performing format for your use case.",
-              "note": "Start with a small sample (e.g., 100 questions) to see if format effects are significant for your model."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787753338796-01pagv",
-                "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
-                "url": "https://arxiv.org/abs/2608.23568",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-01pagv-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-01pagv-1",
-                "label": "Memory",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-01pagv-2",
-                "label": "Evaluation",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787753338796-n2hdwb",
-            "title": "ESQ-Bench: New Oracle-First NL2SQL Benchmark Exposes Silent Semantic Divergence",
-            "tldr": "Researchers released ESQ-Bench, a multi-tier enterprise NL2SQL benchmark with Oracle, PostgreSQL, MySQL, and SQL Server schemas, revealing that top models like GPT-4o and Claude Sonnet 4.6 degrade significantly on complex enterprise schemas, with silent semantic divergence rates up to 99% among execution-passing queries. Multiple major outlets are covering this as it challenges the reliability of NL2SQL models in production.",
-            "whyItMatters": [
-              "For founders building NL2SQL products, this benchmark highlights that current models may produce wrong results even when execution succeeds, undermining trust in enterprise deployments.",
-              "The benchmark provides a standardized way to evaluate dialect generalization and semantic correctness, which is critical for choosing models and setting customer expectations."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your NL2SQL pipeline using ESQ-Bench's methodology: test on enterprise-like schemas with identical data across multiple SQL dialects, and measure silent divergence (queries that execute but return wrong results) in addition to execution accuracy. Use this to identify failure modes and improve your system's robustness.",
-              "note": "Consider incorporating schema-linked prompting and tiered complexity testing into your evaluation suite to catch semantic issues early."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787753338796-n2hdwb",
-                "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
-                "url": "https://arxiv.org/abs/2608.23569",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-n2hdwb-0",
-                "label": "NL2SQL",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-n2hdwb-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-n2hdwb-2",
-                "label": "GPT-4o",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-n2hdwb-3",
-                "label": "Claude Sonnet 4.6",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1787753338796-0qdvvv",
-            "title": "TRACE: Smarter LLM Agents for Multi-Objective Materials Discovery",
-            "tldr": "A new framework, TRACE, improves LLM agents for materials discovery by using edit transitions as feedback, boosting hit rates from 18.13% to 25.96% over the SOTA baseline.",
-            "whyItMatters": [
-              "For founders building AI-driven discovery tools, this shows a path to more efficient use of costly evaluations, reducing time and resources needed for R&D.",
-              "The concept of transition-aware feedback can be applied beyond materials to any multi-objective optimization problem, enhancing agent performance in complex search spaces."
-            ],
-            "whatToTry": {
-              "description": "If you're building LLM agents for scientific discovery or optimization, consider implementing a transition-aware feedback loop: log each edit as a parent-child transition with property deltas, aggregate this evidence to estimate reusable edit effects, and rank future edits by their predicted impact on constraint violations.",
-              "note": "Start with a small set of objectives to validate the approach before scaling to more complex problems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1787753338796-0qdvvv",
-                "title": "TRACE: Transition-Aware Residual Control for Multi-Objective Materials Discovery",
-                "url": "https://arxiv.org/abs/2608.23631",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-0qdvvv-0",
-                "label": "LLM Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-0qdvvv-1",
-                "label": "Materials Discovery",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1787753338796-0qdvvv-2",
-                "label": "Multi-Objective Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787753338699-wmnag6",
-            "title": "Robot Brain Builders Move Beyond GPT-2 Era",
-            "tldr": "TechCrunch reports that the robotics AI industry is transitioning from early-stage models (the 'GPT-2 era') to more advanced brain architectures, signaling a maturation that could accelerate the deployment of capable robots in real-world applications.",
-            "whyItMatters": [
-              "For founders building AI products, this shift indicates a growing market for specialized robotics AI solutions, creating opportunities for startups to offer novel approaches.",
-              "Technically, the move beyond GPT-2-level models means more sophisticated reasoning and adaptability in robots, which could unlock new use cases in automation and physical AI."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your current AI models against the latest robotics benchmarks and consider integrating more advanced architectures (e.g., multimodal transformers or world models) if you're building for physical applications. Stay updated on emerging robotics AI frameworks and APIs.",
-              "note": "Focus on practical improvements in real-world performance rather than chasing hype."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787753338699-wmnag6",
-                "title": "Robot brain builders are pushing out of their GPT-2 era",
-                "url": "https://techcrunch.com/2026/08/26/robot-brain-builders-are-pushing-out-of-their-gpt-2-era/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-wmnag6-0",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-wmnag6-1",
-                "label": "AI Models",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 13:30:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787753338699-nrii39",
-            "title": "QueryStory's $6M Seed: Making AI Queries Coherent and Trustworthy",
-            "tldr": "QueryStory emerged from stealth with $6M in seed funding to apply LLMs and cybersecurity expertise to improve AI query coherence, addressing a critical trust gap in AI outputs.",
-            "whyItMatters": [
-              "For founders building AI products, this signals a growing market for trust and explainability layers, which could become essential for enterprise adoption.",
-              "The use of cybersecurity techniques to validate AI responses suggests a new approach to mitigating hallucination risks, potentially influencing best practices."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's query coherence and trustworthiness. Consider implementing validation layers or explainability features to increase user confidence, especially if you target enterprise clients.",
-              "note": "Keep an eye on QueryStory's approach as a potential benchmark or integration partner."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787753338699-nrii39",
-                "title": "QueryStory wants you to believe what AI is telling you",
-                "url": "https://techcrunch.com/2026/08/26/querystory-wants-you-to-believe-what-ai-is-telling-you/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-nrii39-0",
-                "label": "Trust",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-nrii39-1",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-nrii39-2",
-                "label": "Cybersecurity",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 13:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787753338699-tpbx4z",
-            "title": "Legato exits stealth with $12M for AI hearing glasses",
-            "tldr": "Legato emerged from stealth with $12M funding to launch Legato Frames, AI-powered hearing glasses that integrate hearing assistance into eyewear arms, signaling a new wave of discreet assistive tech.",
-            "whyItMatters": [
-              "Opens a new market for AI-powered wearables in assistive health, potentially disrupting traditional hearing aids.",
-              "Demonstrates a practical application of edge AI for real-time audio processing in consumer devices."
-            ],
-            "whatToTry": {
-              "description": "Explore partnerships or integrations with hearing-aid tech for your AI product, or analyze the market for niche wearable AI applications that solve accessibility issues.",
-              "note": "Consider the regulatory landscape for medical devices if you enter this space."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787753338699-tpbx4z",
-                "title": "Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses",
-                "url": "https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-tpbx4z-0",
-                "label": "Wearables",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-tpbx4z-1",
-                "label": "AI Audio",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 12:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1787753338699-4hugjt",
-            "title": "Runable raises $21M to help AI agents grow businesses, not just build them",
-            "tldr": "Runable, an AI agent platform, raised $21M to expand from business-building to growth automation. With 60-70% of its 1T+ token usage from paying customers, it signals strong product-market fit in the AI agent space.",
-            "whyItMatters": [
-              "Validates demand for AI agents that go beyond MVP creation to handle ongoing business operations and growth tasks.",
-              "Indicates a shift in AI agent use cases from development to operational, opening new market opportunities for founders."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's roadmap to include growth-oriented features (e.g., automated marketing, customer retention) that address the full business lifecycle, not just initial setup.",
-              "note": "Focus on measurable outcomes like token usage or retention to prove value to investors."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1787753338699-4hugjt",
-                "title": "Runable hits $21M to bet AI agents can go from building businesses to growing them",
-                "url": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-4hugjt-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1787753338699-4hugjt-1",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 26 Aug 2026 11:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
         "isAvailable": true,
         "isRead": false
       }
