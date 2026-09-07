@@ -1,7 +1,445 @@
 [
   {
-    "date": "2026-09-06",
+    "date": "2026-09-07",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-07-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-07",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: EXAONE Finance: Linear-Time Foundation Model for Financial Forecasting, Harbor Adapters & Harbor-Index: 80+ Benchmarks for Agentic AI Evaluation, Iris Search Agents: New SOTA via SFT-RL Climbing.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1788788089185-rdbzeu",
+            "title": "EXAONE Finance: Linear-Time Foundation Model for Financial Forecasting",
+            "tldr": "LG AI Research released EXAONE Finance, a financial time-series foundation model that uses an attention-free architecture (convolution + MLP) to handle long, multi-channel, and intermittently missing financial data, achieving strong zero-shot performance on the FinVerse benchmark across asset classes.",
+            "whyItMatters": [
+              "For founders building financial AI products, this model offers a more efficient and robust alternative to general-purpose TSFMs, potentially reducing compute costs and improving accuracy on real-world financial data with missing values.",
+              "The attention-free design (linear-time complexity) enables scaling to longer sequences and more variates, which is critical for high-frequency trading or multi-asset portfolio analysis."
+            ],
+            "whatToTry": {
+              "description": "Evaluate EXAONE Finance on your own financial forecasting tasks (e.g., stock price prediction, volatility forecasting) by testing its zero-shot performance against your current models. If you handle missing data, compare its robustness using your historical datasets with gaps.",
+              "note": "Check if the model weights are publicly available on Hugging Face or LG's repository; if not, consider replicating the architecture for your custom training."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089185-rdbzeu",
+                "title": "EXAONE Forecast for Finance",
+                "url": "https://arxiv.org/abs/2609.04239",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089185-rdbzeu-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089185-rdbzeu-1",
+                "label": "Finance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089185-rdbzeu-2",
+                "label": "Time Series",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-soc2j4",
+            "title": "Harbor Adapters & Harbor-Index: 80+ Benchmarks for Agentic AI Evaluation",
+            "tldr": "New open-source infrastructure (Harbor Adapters) ports 80+ agentic benchmarks to a unified interface, plus Harbor-Index, a curated 82-task meta-dataset for affordable yet challenging evaluation. Large-scale tests across 8 models reveal GPT-5.5+Codex tops out at 28% pass rate, highlighting the difficulty of current agentic tasks.",
+            "whyItMatters": [
+              "Business impact: Standardized evaluation infrastructure reduces the cost and complexity of benchmarking agents, enabling faster iteration and more reliable product comparisons.",
+              "Technical impact: Harbor-Index provides a practical, affordable benchmark suite that still challenges state-of-the-art models, helping teams identify real capability gaps and failure modes."
+            ],
+            "whatToTry": {
+              "description": "Adopt Harbor Adapters to evaluate your agent against a diverse set of 80+ benchmarks without building custom harnesses. Start with Harbor-Index (82 tasks) for a quick yet rigorous capability assessment, and use the released results to benchmark your model against GPT-5.5 and others.",
+              "note": "Check the open-source artifacts for parity experiments to ensure your agent's harness aligns with the reference implementations."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-soc2j4",
+                "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+                "url": "https://arxiv.org/abs/2609.04298",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-soc2j4-0",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-soc2j4-1",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-soc2j4-2",
+                "label": "Open Source",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-kbeqny",
+            "title": "Iris Search Agents: New SOTA via SFT-RL Climbing",
+            "tldr": "Iris-mini and Iris-pro are new search agents (35B and 397B) that achieve state-of-the-art results using a novel 'SFT-RL climbing' training method, which alternates supervised fine-tuning and reinforcement learning with live search. This signals a shift in how to train AI agents for complex web tasks.",
+            "whyItMatters": [
+              "For founders building search or research tools, this demonstrates a practical recipe for training agents that can handle multi-hop reasoning and live tool use, potentially leading to more capable products.",
+              "The method of reverse-constructing tasks from web hyperlinks and filtering for questions that require evidence could inspire new data generation strategies for training AI systems."
+            ],
+            "whatToTry": {
+              "description": "If you're training AI agents for search or research, experiment with a similar SFT-RL climbing approach: alternate between supervised fine-tuning on filtered trajectories and reinforcement learning against live search, using a judge model to filter rollouts. Start with a small-scale prototype to see if it improves your agent's performance on multi-step tasks.",
+              "note": "This requires significant compute and infrastructure, so consider starting with a smaller model or using cloud resources."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-kbeqny",
+                "title": "Iris: Climbing to the Search Frontier",
+                "url": "https://arxiv.org/abs/2609.04304",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-kbeqny-0",
+                "label": "model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-kbeqny-1",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-nxdbnt",
+            "title": "Capability Paradox: Smarter LLMs Can Make Systems Riskier",
+            "tldr": "A new arXiv paper shows that as LLMs get more capable, they behave more similarly, creating correlated actions that increase systemic risk in applications like financial markets. This challenges the assumption that better models always lead to better outcomes.",
+            "whyItMatters": [
+              "For founders building AI agents that operate in markets or other multi-agent environments, this research highlights a hidden risk: deploying the same frontier model across many agents can amplify systemic failures, especially under shared misinformation.",
+              "It suggests that model diversity and ensemble design may be as important as raw capability for system reliability, impacting architecture choices and risk management strategies."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI system for correlation risk: if you deploy multiple agents or models, test how they behave under identical inputs and edge cases. Consider mixing models from different providers or fine-tuning variants to reduce correlated failures, especially in high-stakes domains like trading or moderation.",
+              "note": "Start with a simple simulation or red-team exercise to measure behavioral similarity before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-nxdbnt",
+                "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
+                "url": "https://arxiv.org/abs/2609.04373",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-nxdbnt-0",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-nxdbnt-1",
+                "label": "LLM Agents",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-nxdbnt-2",
+                "label": "Risk Management",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-q2xu1f",
+            "title": "AI Recruitment Evolves: From Matching to Agentic Workflows",
+            "tldr": "A new systematized review on arXiv traces AI recruitment's shift from simple matching models to multi-stage, agentic workflows, highlighting persistent evaluation gaps in fairness, privacy, and utility. This synthesis is crucial for founders building AI hiring tools to understand the state of the art and regulatory pressures.",
+            "whyItMatters": [
+              "For founders building AI recruitment products, this review maps the competitive landscape from basic matching to agentic systems, revealing opportunities to differentiate with compound workflows that handle evidence retrieval and candidate comparison.",
+              "The identified evaluation gaps (e.g., no joint assessment of utility, fairness, privacy, security) signal a need for more robust, transparent evaluation frameworks, which could become a market differentiator and preempt regulatory scrutiny."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI recruitment pipeline against the three transitions outlined in the review (similarity to suitability, model to compound workflow, offline prediction to evidence-aligned evaluation). Identify where you can add agentic capabilities like evidence retrieval or automated handoff, and design evaluation metrics that jointly measure utility, fairness, privacy, and security to address the gaps highlighted.",
+              "note": "Focus on building explainable, multi-stage workflows that can justify decisions with evidence, as this aligns with emerging governance trends."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-q2xu1f",
+                "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+                "url": "https://arxiv.org/abs/2609.04286",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-q2xu1f-0",
+                "label": "AI Recruitment",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-q2xu1f-1",
+                "label": "Agentic Workflows",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-q2xu1f-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-wgifyv",
+            "title": "New Test-Time Method Boosts LLM Explanation Faithfulness",
+            "tldr": "Researchers introduce a test-time approach to improve LLM explanation faithfulness by removing unmentioned concepts from inputs and re-querying the model, addressing incompleteness in explanations without needing model weights or training.",
+            "whyItMatters": [
+              "For founders building AI products that rely on LLM reasoning, this offers a practical way to improve trustworthiness of explanations without costly fine-tuning.",
+              "The method is model-agnostic and can be applied at inference time, making it easy to integrate into existing pipelines to enhance auditability and compliance."
+            ],
+            "whatToTry": {
+              "description": "Implement a two-step inference process: first, ask the model for an answer and explanation; then, remove from the input any concepts not mentioned in the explanation and re-query the model to see if the answer changes. If it does, the explanation was incomplete. Use this as a signal to refine prompts or flag low-faithfulness outputs.",
+              "note": "This is a lightweight heuristic; test on your own datasets to measure impact on accuracy and latency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-wgifyv",
+                "title": "A Removal Based Approach to Improve LLM Faithfulness at Test-Time",
+                "url": "https://arxiv.org/abs/2609.04343",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-wgifyv-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-wgifyv-1",
+                "label": "Faithfulness",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-wgifyv-2",
+                "label": "Explainability",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-kjvuhf",
+            "title": "Corporate Language Model: Turning Tacit Enterprise Knowledge into Executable AI",
+            "tldr": "A new arXiv paper proposes the Corporate Language Model (CLM), an architecture that combines LLMs with knowledge graphs and skill graphs to capture tacit knowledge, ground it in firm-specific ontologies, and enable auditable, governed execution. This addresses a key gap in enterprise AI: moving from generic chatbots to actionable, sovereign intelligence.",
+            "whyItMatters": [
+              "For founders building enterprise AI, this framework offers a blueprint for creating systems that go beyond RAG to encode company-specific decision-making and execution logic, potentially increasing stickiness and value.",
+              "The emphasis on sovereignty, auditability, and human oversight aligns with growing regulatory and governance demands, making CLM-based products more enterprise-ready."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your current AI product against the CLM pillars: Does it capture tacit knowledge? Is it grounded in a firm-specific ontology? Can it execute actions with audit trails? Consider prototyping a 'Skill Graph' to map reusable tactics and personas, enabling compositional explainability.",
+              "note": "Start small: pick one functional area (e.g., sales) and model its knowledge as a graph to test feasibility before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-kjvuhf",
+                "title": "Corporate Language Model (CLM): Transforming Tacit and Fragmented Enterprise Knowledge into a Sovereign, Auditable, and Executable Corporate Intelligence Layer",
+                "url": "https://arxiv.org/abs/2609.04377",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-kjvuhf-0",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-kjvuhf-1",
+                "label": "Knowledge Graph",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-kjvuhf-2",
+                "label": "Neurosymbolic",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-hyfkrj",
+            "title": "New Benchmark Puts a Price on LLM Agents' Moral Choices",
+            "tldr": "HarvestBench is a new benchmark that tests whether LLM agents will pay to avoid killing animals in a farm simulation, revealing huge variance in moral behavior across models—kill rates range from 0.4% to 98.8%—and showing that price sensitivity and moral choices are not correlated with model capability.",
+            "whyItMatters": [
+              "For founders building autonomous agents, this highlights that model choice can have significant ethical and reputational implications, especially in real-world applications like robotics or decision-making systems where side effects matter.",
+              "The benchmark introduces a novel evaluation dimension (pricing side effects) that could become a standard for assessing agent alignment, influencing how you select and fine-tune models for your products."
+            ],
+            "whatToTry": {
+              "description": "When choosing an LLM for agent-based products, run your own side-effect cost-benefit tests similar to HarvestBench to understand how different models handle trade-offs. For example, simulate scenarios where the agent must choose between efficiency and avoiding negative side effects, and measure the consistency of their choices across price points.",
+              "note": "Consider that models like GPT-4o-mini showed high kill rates; you may need to add explicit ethical constraints or fine-tuning to align behavior with your product's values."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-hyfkrj",
+                "title": "HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals",
+                "url": "https://arxiv.org/abs/2609.04444",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-hyfkrj-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-hyfkrj-1",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-hyfkrj-2",
+                "label": "AI Ethics",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1788788089186-va3ehg",
+            "title": "New Benchmark Reveals LLMs Can't Build Reliable Hardware Performance Models",
+            "tldr": "PerfReasoning, a new benchmark from ArXiv, tests LLMs on hardware performance reasoning and model generation. While top models score over 90% on reasoning Q&A, all but one fail at generating accurate analytical performance models (average <15%), exposing a critical gap for AI-driven hardware design.",
+            "whyItMatters": [
+              "For founders building AI-assisted hardware design or optimization tools, this shows current LLMs are unreliable for generating performance models, indicating a need for specialized fine-tuning or hybrid approaches.",
+              "The benchmark's finding that task-specific RL can boost a 4B model's reasoning by 15.7 points suggests a viable path to improve model performance for niche technical domains."
+            ],
+            "whatToTry": {
+              "description": "If you're developing AI tools for hardware or systems optimization, evaluate your LLM against PerfReasoning to identify weaknesses. Consider investing in task-specific reinforcement learning rather than relying on prompting tricks, as the benchmark shows self-revision prompting is ineffective.",
+              "note": "The benchmark will be publicly released, so you can use it to guide model selection and fine-tuning strategies."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1788788089186-va3ehg",
+                "title": "PerfReasoning: How Well Do LLMs Reason on Hardware Performance?",
+                "url": "https://arxiv.org/abs/2609.04476",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-va3ehg-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-va3ehg-1",
+                "label": "Hardware Performance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1788788089186-va3ehg-2",
+                "label": "LLM Reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 07 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49588080",
+            "title": "OpenAI's 'Alien Mind' Sparks Debate: What It Means for AI Founders",
+            "tldr": "OpenAI published a piece titled 'An Alien Mind' that has ignited a 400-comment discussion on HackerNews, touching on the nature of AI cognition and its implications for product development. The buzz signals a shift in how AI capabilities are perceived, making it a must-read for founders.",
+            "whyItMatters": [
+              "Business impact: The discourse around AI's 'alien' nature could influence customer expectations and trust, affecting how founders position their AI products.",
+              "Technical impact: Insights into AI's non-human reasoning may guide founders in designing more effective human-AI interaction patterns."
+            ],
+            "whatToTry": {
+              "description": "Read the original piece and the HackerNews thread to extract key themes. Then, evaluate your own product's UX: consider how you can better communicate AI's limitations and unique reasoning to users, building trust and setting realistic expectations.",
+              "note": "Use the discussion to identify common misconceptions about AI that your product could address."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49588080",
+                "title": "An Alien Mind",
+                "url": "https://openai.com/index/an-alien-mind/",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49588080-0",
+                "label": "OpenAI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49588080-1",
+                "label": "AI Cognition",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-06T16:27:05Z"
+          }
+        ],
+        "totalReadTimeMinutes": 27,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-06",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-06-morning",
@@ -600,7 +1038,7 @@
   },
   {
     "date": "2026-09-05",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Sep 5",
     "briefings": [
       {
         "id": "briefing-2026-09-05-morning",
@@ -5184,737 +5622,6 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Tue, 01 Sep 2026 17:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-08-31",
-    "displayDate": "Monday, Aug 31",
-    "briefings": [
-      {
-        "id": "briefing-2026-08-31-afternoon",
-        "period": "afternoon",
-        "date": "2026-08-31",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: ChatGPT Ads Hits $1B Run Rate, Expanding AI Access, US Barriers on Drones & Robots: China's Scale Wins Elsewhere, Continuous Diffusion LMs: A New Paradigm for Generative AI?.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1788189185436-5l1ifr",
-            "title": "ChatGPT Ads Hits $1B Run Rate, Expanding AI Access",
-            "tldr": "OpenAI's ChatGPT Ads has reached a $1 billion annualized revenue run rate and is expanding globally, signaling a major monetization milestone that could fund broader access to AI tools.",
-            "whyItMatters": [
-              "Validates advertising as a sustainable business model for AI platforms, potentially lowering costs for end users and developers.",
-              "Indicates a growing ecosystem where third-party ads can reach AI users, creating new distribution channels for AI products."
-            ],
-            "whatToTry": {
-              "description": "Explore advertising on ChatGPT as a new customer acquisition channel for your AI product, especially if you target consumer or SMB audiences. Monitor OpenAI's ad platform for self-serve options and consider allocating a small test budget to measure ROI.",
-              "note": "Ad inventory may be limited initially; focus on high-intent placements and track conversion metrics closely."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1788189185436-5l1ifr",
-                "title": "A milestone in expanding access to AI",
-                "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1788189185436-5l1ifr-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788189185436-5l1ifr-1",
-                "label": "Advertising",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788189185436-5l1ifr-2",
-                "label": "Monetization",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 04:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788189185192-aplss1",
-            "title": "US Barriers on Drones & Robots: China's Scale Wins Elsewhere",
-            "tldr": "The U.S. is restricting foreign-made drones and robots, but China's manufacturing scale will likely shift the global market to other regions, impacting supply chains and competitive dynamics for AI hardware startups.",
-            "whyItMatters": [
-              "Business impact: Founders relying on Chinese hardware may face supply chain disruptions or need to pivot to alternative suppliers, affecting cost and time-to-market.",
-              "Technical impact: AI products integrating drones or robots may need to adapt to different hardware ecosystems as the market fragments."
-            ],
-            "whatToTry": {
-              "description": "Audit your hardware supply chain for dependencies on Chinese-made drones or robots. Identify alternative suppliers in Southeast Asia or Europe, and consider designing your AI stack to be hardware-agnostic to mitigate geopolitical risks.",
-              "note": "Start with a risk assessment of your current components and lead times."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788189185192-aplss1",
-                "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
-                "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-aplss1-0",
-                "label": "Drones",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-aplss1-1",
-                "label": "Robotics",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-aplss1-2",
-                "label": "Supply Chain",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 02:34:00 +0000"
-          },
-          {
-            "id": "hn-49502611",
-            "title": "Continuous Diffusion LMs: A New Paradigm for Generative AI?",
-            "tldr": "A detailed technical post on Continuous Diffusion Language Models (CDLMs) is gaining traction on HackerNews, sparking discussion about their potential to rival autoregressive models in text generation, with implications for efficiency and controllability.",
-            "whyItMatters": [
-              "Could offer a more efficient alternative to autoregressive generation, reducing inference costs for high-throughput applications.",
-              "Enables finer-grained control over text generation (e.g., style, length, content) which is valuable for product differentiation."
-            ],
-            "whatToTry": {
-              "description": "Evaluate CDLMs for your use case by prototyping with open-source implementations (if available) or monitoring the research space for release of pre-trained models. Consider testing them for tasks that benefit from non-sequential generation, like text infilling or style transfer.",
-              "note": "CDLMs are still in early research; expect trade-offs in quality vs. speed compared to established models like GPT-4."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49502611",
-                "title": "Continuous Diffusion Language Models (CDLM's)",
-                "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
-                "domain": "sander.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49502611-0",
-                "label": "model",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49502611-1",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-30T20:46:53Z"
-          },
-          {
-            "id": "rss-wired-ai-1788189185445-fwodvm",
-            "title": "98% of Claims Adjusters Hate AI: What Founders Must Know",
-            "tldr": "A Wired analysis of Glassdoor reviews reveals that 98% of claims adjusters mentioning AI have negative sentiments, highlighting deep distrust and fear of AI replacing their jobs. This signals a critical adoption barrier for AI in insurance and other legacy industries.",
-            "whyItMatters": [
-              "For founders building AI for insurance or similar regulated industries, this indicates that end-user resistance is a major risk to adoption and ROI.",
-              "The negative sentiment suggests that AI solutions must be designed to augment, not replace, human workers, and must include change management strategies."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for insurance or other traditional sectors, conduct user research with frontline workers (like claims adjusters) to understand their fears and pain points. Design your product to be a copilot that assists them, not a replacement, and include transparent communication about how AI will change their role.",
-              "note": "Consider offering training and feedback loops to build trust and demonstrate that AI is a tool, not a threat."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1788189185445-fwodvm",
-                "title": "You Know Who Really Hates AI? Insurance Claims Adjusters",
-                "url": "https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1788189185445-fwodvm-0",
-                "label": "Insurance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1788189185445-fwodvm-1",
-                "label": "Adoption",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1788189185445-fwodvm-2",
-                "label": "AI in Enterprise",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 10:30:00 +0000"
-          },
-          {
-            "id": "hn-49505310",
-            "title": "OpenClaw 2.0: Accidental Release Sparks Community Buzz",
-            "tldr": "OpenClaw 2.0 was accidentally released, generating significant discussion on HackerNews (152 comments, 129 points). The accidental nature of the release suggests potential instability or undocumented changes, but the community interest indicates it's a notable tool for AI developers.",
-            "whyItMatters": [
-              "For founders building AI products, an accidental major release could signal breaking changes or new features that affect integrations and workflows.",
-              "The high engagement on HackerNews suggests OpenClaw is a widely used tool, and staying updated on its evolution is crucial for maintaining competitive advantage."
-            ],
-            "whatToTry": {
-              "description": "Review the OpenClaw 2.0 changelog and migration guide immediately to identify any breaking changes or new capabilities. Test your existing integrations in a staging environment before upgrading production systems.",
-              "note": "Given the accidental nature, expect potential bugs or incomplete documentation; monitor the project's GitHub issues for community-reported problems."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49505310",
-                "title": "OpenClaw 2.0, Accidentally",
-                "url": "https://openclaw.ai/blog/openclaw-2-accidentally",
-                "domain": "openclaw.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49505310-0",
-                "label": "OpenClaw",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49505310-1",
-                "label": "Release",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-31T03:38:02Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788189185192-v5mgob",
-            "title": "Circleback adds free tier to lure AI notetaker users",
-            "tldr": "AI meeting notetaker Circleback introduces a free tier and new pricing from $14/month to boost adoption, signaling a competitive push in the AI meeting tools space.",
-            "whyItMatters": [
-              "Indicates a trend of AI productivity tools using freemium models to acquire users, which could affect market competition and pricing strategies.",
-              "For founders, it highlights the importance of pricing strategy in AI SaaS to drive adoption and retention."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's pricing model: consider adding a free tier or usage-based pricing to lower barriers for early adopters, and analyze competitors' pricing moves to stay competitive.",
-              "note": "Ensure the free tier has clear upgrade triggers to convert users to paid plans."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788189185192-v5mgob",
-                "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
-                "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-v5mgob-0",
-                "label": "Circleback",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-v5mgob-1",
-                "label": "Pricing strategy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 1,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 12:56:46 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788189185192-p75k8n",
-            "title": "Musk's Gas Turbine Bet: Speed vs. Pollution",
-            "tldr": "Elon Musk's SpaceX foundry will cast turbine blades in-house, cutting gas turbine deployment time by 18 months, but this accelerates reliance on a fuel source facing lawsuits and health concerns.",
-            "whyItMatters": [
-              "Signals a shift in energy infrastructure that could affect power costs and reliability for AI data centers, which are energy-intensive.",
-              "Highlights the tension between rapid AI infrastructure scaling and environmental/regulatory risks that founders must navigate."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's energy footprint and consider diversifying power sources or investing in efficiency to mitigate potential regulatory and reputational risks tied to fossil fuels.",
-              "note": "Monitor local energy policies and public sentiment, as they can impact your supply chain and operating costs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788189185192-p75k8n",
-                "title": "Musk’s faster path to more gas turbines comes with pollution problem",
-                "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-p75k8n-0",
-                "label": "Energy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788189185192-p75k8n-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 30 Aug 2026 16:54:25 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 13,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-08-31-evening",
-        "period": "evening",
-        "date": "2026-08-31",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Nvidia's $3.5B MediaTek Bet: Countering Big Tech's Custom AI Chips, Pentagon Adds ChatGPT & Grok to AI Portal, Blue Voice raises $6M to bring legal AI to police officers.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1788220725978-69fr1f",
-            "title": "Nvidia's $3.5B MediaTek Bet: Countering Big Tech's Custom AI Chips",
-            "tldr": "Nvidia invests $3.5B in MediaTek to secure its role in AI infrastructure as hyperscalers develop in-house chips, signaling a strategic shift toward partnerships and diversified offerings.",
-            "whyItMatters": [
-              "For AI founders, this could mean more competitive pricing and availability of Nvidia-based hardware as Nvidia fights to retain market share against custom silicon.",
-              "It signals a trend toward specialized AI hardware partnerships, potentially leading to more diverse and cost-effective compute options for startups."
-            ],
-            "whatToTry": {
-              "description": "Monitor Nvidia's partnership announcements and consider diversifying your AI infrastructure strategy by evaluating alternatives like custom silicon or other chip vendors to reduce dependency on a single supplier.",
-              "note": "Keep an eye on how this investment affects Nvidia's product roadmap and pricing in the next 12 months."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-69fr1f",
-                "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
-                "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-69fr1f-0",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-69fr1f-1",
-                "label": "MediaTek",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-69fr1f-2",
-                "label": "AI Chips",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 15:15:25 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788220725978-z6gzc8",
-            "title": "Pentagon Adds ChatGPT & Grok to AI Portal",
-            "tldr": "The Pentagon is integrating OpenAI's ChatGPT and xAI's Grok into its central AI tool portal, alongside Google's Gemini, marking a significant adoption of commercial AI models for defense applications.",
-            "whyItMatters": [
-              "Signals growing acceptance of commercial AI in government, opening potential enterprise and defense market opportunities for AI startups.",
-              "Highlights the need for robust security, compliance, and customization when deploying AI in regulated environments."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products, consider tailoring your offerings for government or enterprise clients by emphasizing security, compliance, and on-premise deployment options. Explore partnerships or certifications that align with defense requirements.",
-              "note": "Focus on data privacy and auditability to stand out in this market."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-z6gzc8",
-                "title": "The Pentagon now has its own version of ChatGPT and Grok",
-                "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-z6gzc8-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-z6gzc8-1",
-                "label": "Grok",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-z6gzc8-2",
-                "label": "Government AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 20:13:45 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788220725978-vet8a0",
-            "title": "Blue Voice raises $6M to bring legal AI to police officers",
-            "tldr": "Blue Voice, founded by a Harvard Law dropout, raised $6M to build a specialized AI assistant for police, trained on department-specific laws and protocols. This signals a growing trend of vertical AI solutions for public safety.",
-            "whyItMatters": [
-              "Demonstrates market opportunity for domain-specific AI assistants beyond general-purpose tools, especially in regulated industries.",
-              "Highlights the need for AI trained on proprietary, non-public data to deliver real value in niche verticals."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if your AI product can leverage proprietary or domain-specific data (e.g., internal policies, regulations) to create a defensible moat. Consider targeting underserved verticals like public safety, healthcare compliance, or legal services.",
-              "note": "Focus on data acquisition and partnerships early to build a unique training set."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-vet8a0",
-                "title": "Harvard Law dropout raises $6M for Blue Voice to build a ‘Harvey for police officers’",
-                "url": "https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-vet8a0-0",
-                "label": "Vertical AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-vet8a0-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-vet8a0-2",
-                "label": "Public Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 18:35:11 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788220725978-hn3rld",
-            "title": "Clipto hits $250M valuation with AI video search",
-            "tldr": "Clipto, an AI-powered video search startup, reached $15M ARR and profitability, then raised $15M at a $250M valuation, showing strong market demand for AI media indexing.",
-            "whyItMatters": [
-              "Validates the market for AI-powered video search and indexing, a key component for media and enterprise workflows.",
-              "Demonstrates that profitable AI startups can command high valuations, signaling investor confidence in applied AI solutions."
-            ],
-            "whatToTry": {
-              "description": "Evaluate integrating AI video search capabilities into your product roadmap, especially if you handle large media libraries. Consider partnering with or building similar technology to enhance content discoverability.",
-              "note": "Focus on niche verticals (e.g., security, marketing) to differentiate from general-purpose solutions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-hn3rld",
-                "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
-                "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-hn3rld-0",
-                "label": "AI video search",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-hn3rld-1",
-                "label": "Clipto",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 16:00:00 +0000"
-          },
-          {
-            "id": "hn-49508982",
-            "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
-            "tldr": "Apple is facing unexpected supply shortages for Mac Mini and Mac Studio due to surging demand from AI developers and researchers, highlighting the growing need for local AI compute.",
-            "whyItMatters": [
-              "Indicates a shift toward on-premise AI inference and development, which could affect cloud AI spending and infrastructure decisions.",
-              "Signals a market opportunity for AI-optimized local hardware and software tooling."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product's dependency on cloud APIs vs. local inference. Consider offering on-premise or edge deployment options to meet demand from developers who prefer local compute for privacy, cost, or latency reasons.",
-              "note": "Apple's supply constraints may create short-term opportunities for alternative hardware or cloud providers."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49508982",
-                "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
-                "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
-                "domain": "macrumors.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49508982-0",
-                "label": "Apple",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49508982-1",
-                "label": "AI compute",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-08-31T12:41:22Z"
-          },
-          {
-            "id": "rss-openai-blog-1788220726258-v7jdv9",
-            "title": "Polimill leverages OpenAI models to modernize Japan's public sector AI",
-            "tldr": "Polimill, a Japanese startup, is using OpenAI's GPT and Codex to build AI infrastructure for municipalities, enabling efficient search and use of administrative knowledge. This marks a significant step in public sector AI adoption.",
-            "whyItMatters": [
-              "Shows a real-world enterprise use case for OpenAI models in government, indicating a growing market for AI in public administration.",
-              "Demonstrates how Codex can accelerate development for domain-specific AI applications, reducing time-to-market for civic tech."
-            ],
-            "whatToTry": {
-              "description": "Explore how your AI product can address similar knowledge management challenges in regulated or data-heavy sectors by leveraging foundation models and automated coding tools.",
-              "note": "Consider compliance and data privacy requirements when deploying AI in public sector contexts."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1788220726258-v7jdv9",
-                "title": "Polimill builds Japan's next-generation public AI infrastructure",
-                "url": "https://openai.com/index/polimill",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1788220726258-v7jdv9-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788220726258-v7jdv9-1",
-                "label": "GPT",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788220726258-v7jdv9-2",
-                "label": "Codex",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788220726258-v7jdv9-3",
-                "label": "Public Sector",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 07:00:00 GMT"
-          },
-          {
-            "id": "rss-openai-blog-1788220726258-30f2tb",
-            "title": "ChatGPT Ads Hits $1B Run Rate, Expanding AI Access",
-            "tldr": "OpenAI's ChatGPT Ads has reached a $1 billion annualized revenue run rate and is expanding globally, signaling a major monetization milestone that could fund broader free access to AI tools.",
-            "whyItMatters": [
-              "For founders building AI products, this validates advertising as a viable business model for AI services, potentially reshaping how AI tools are priced and distributed.",
-              "The expansion of free and affordable AI access could increase competition and user expectations, pushing startups to differentiate on value rather than just access."
-            ],
-            "whatToTry": {
-              "description": "Evaluate whether an ad-supported tier could complement your AI product's pricing strategy, especially if you're targeting consumer or SMB markets. Consider piloting a freemium model with ads to grow user base while maintaining a premium subscription tier.",
-              "note": "Watch for user tolerance and regulatory concerns around ads in AI interfaces."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1788220726258-30f2tb",
-                "title": "A milestone in expanding access to AI",
-                "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1788220726258-30f2tb-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1788220726258-30f2tb-1",
-                "label": "Monetization",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 04:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788220725978-gl4skf",
-            "title": "US Drone/Robot Barriers: China's Scale Shifts Competition",
-            "tldr": "The U.S. is restricting foreign drones and robots, but China's manufacturing scale will push competition to other markets, affecting global supply chains and AI hardware availability.",
-            "whyItMatters": [
-              "Founders relying on drones or robots may face supply chain disruptions or higher costs if they depend on Chinese hardware, prompting a need for alternative sourcing or design adjustments.",
-              "The shift of competition to other regions could open new markets or partnerships for AI products that integrate with non-Chinese hardware."
-            ],
-            "whatToTry": {
-              "description": "Audit your hardware supply chain for dependencies on Chinese-made drones or robots. Identify alternative suppliers in the U.S., Europe, or other regions, and consider designing your AI software to be hardware-agnostic to mitigate risks.",
-              "note": "Monitor policy updates closely, as regulations may evolve and create new opportunities or constraints."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-gl4skf",
-                "title": "The US is building barriers around drones and robots, but China has scale to get around them",
-                "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-gl4skf-0",
-                "label": "Hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-gl4skf-1",
-                "label": "Supply Chain",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-gl4skf-2",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 02:34:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1788220725978-l1kbbw",
-            "title": "Instagram Cracks Down on Undisclosed AI Influencers",
-            "tldr": "Instagram is limiting the reach of AI profiles that don't disclose their synthetic nature, responding to growing backlash against AI influencers. This signals a broader platform shift toward transparency that AI product builders must heed.",
-            "whyItMatters": [
-              "For founders building AI personas or synthetic media, this is a direct regulatory signal: platforms are enforcing disclosure, which could affect distribution and monetization strategies.",
-              "It highlights the need for built-in transparency features (e.g., labeling) to future-proof AI products against platform policy changes."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for any user-facing AI-generated content (profiles, avatars, chatbots) and implement clear disclosure mechanisms (e.g., badges, labels) proactively. This aligns with emerging platform norms and reduces risk of shadowbanning or removal.",
-              "note": "Consider adding disclosure as a default setting, not an opt-in, to build trust and avoid regulatory friction."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1788220725978-l1kbbw",
-                "title": "Instagram puts new limits on undisclosed AI profiles",
-                "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-l1kbbw-0",
-                "label": "AI influencers",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-l1kbbw-1",
-                "label": "Platform policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1788220725978-l1kbbw-2",
-                "label": "Transparency",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 19:16:59 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1788220726026-ea91gl",
-            "title": "98% of Claims Adjusters Hate AI: What Founders Must Know",
-            "tldr": "A Wired analysis of Glassdoor reviews reveals that 98% of claims adjusters mentioning AI view it negatively, highlighting deep distrust and fear of job displacement in the insurance industry. This signals a critical adoption barrier for AI tools in regulated, human-centric sectors.",
-            "whyItMatters": [
-              "Business impact: Founders selling AI to insurance or similar industries face significant user resistance; ignoring this can lead to failed deployments and reputational damage.",
-              "Technical impact: AI tools must be designed to augment rather than replace human roles, with transparent workflows and clear human oversight to build trust."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for insurance or other professional services, conduct user research with frontline workers (e.g., adjusters) to identify their pain points and fears. Design your product to assist, not automate, their decisions—emphasize human-in-the-loop features and provide training that positions AI as a tool to reduce mundane tasks, not as a replacement.",
-              "note": "Consider piloting with a small group of skeptical users to gather feedback and iterate on trust-building features."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1788220726026-ea91gl",
-                "title": "You Know Who Really Hates AI? Insurance Claims Adjusters",
-                "url": "https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1788220726026-ea91gl-0",
-                "label": "Insurance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1788220726026-ea91gl-1",
-                "label": "AI Adoption",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1788220726026-ea91gl-2",
-                "label": "Human-in-the-loop",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 31 Aug 2026 10:30:00 +0000"
           }
         ],
         "totalReadTimeMinutes": 20,
