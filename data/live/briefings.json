@@ -8,42 +8,43 @@
         "period": "afternoon",
         "date": "2026-09-11",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: State-Path Tool Menus Boost Agent Success to 89.8%, New Method Predicts AI Agent Success from Internal States, OpenDiscoveryTrace: Audit AI Scientist Reasoning, Not Just Results.",
+        "executiveSummary": "Today's highlights: Subagents Beat Agent Skills for Long-Horizon Tasks, Study Finds, OpenAI Scales Storage to 1B Users: Lessons for Your AI Backend, New Dataset Exposes AI Agent Reasoning Gaps Hidden by Output-Only Evals.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1789128944103-viyk2p",
-            "title": "State-Path Tool Menus Boost Agent Success to 89.8%",
-            "tldr": "New research introduces State-Path Tool Menus, a method that orders tool subsets by execution dependencies, raising online success on ToolBench from 0.737 to 0.898 without changing the agent. This directly addresses the bottleneck of tool selection in large libraries for multi-step tasks.",
+            "id": "rss-arxiv-ai-1789146215078-ucu2hr",
+            "title": "Subagents Beat Agent Skills for Long-Horizon Tasks, Study Finds",
+            "tldr": "New arXiv research shows that invoking reusable skill packages as subagents—rather than loading their instructions into the main context—outperforms agent-skill execution on long-horizon tasks, provided skills expose clear input-output contracts. The tradeoff is extra token overhead for coordination.",
             "whyItMatters": [
-              "Business impact: More reliable agents mean fewer failed tasks, higher user trust, and lower support costs for AI products.",
-              "Technical impact: Provides a plug-and-play improvement for tool-using agents, reducing the need for massive context windows or fine-tuning."
+              "Architecture choice: How you invoke reusable knowledge (subagent vs. in-context skill) materially affects agent reliability as task horizons grow.",
+              "Context degradation is a real bottleneck—fresh context windows per subtask can preserve reasoning quality where monolithic context fails.",
+              "Clear input-output contracts become a design requirement for reusable skills, not just a nice-to-have."
             ],
             "whatToTry": {
-              "description": "Integrate the State-Path Tool Menu into your agent's tool selection pipeline. Start by cloning the GitHub repo and testing it on your own tool library. If you can't integrate directly, experiment with ordering tools by dependency (producers before consumers) in your prompts.",
-              "note": "The method was evaluated on ToolBench; results may vary with different tool sets. Consider A/B testing against your current retrieval method."
+              "description": "Audit your agent's reusable skills: for each one, define an explicit input-output contract and test invoking it as a subagent with a fresh context window instead of loading its instructions into the main agent's context. Compare success rates and token costs on your longest-horizon tasks.",
+              "note": "Expect higher token overhead from inter-agent coordination—measure whether the reliability gain justifies the cost for your use case."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944103-viyk2p",
-                "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
-                "url": "https://arxiv.org/abs/2609.09395",
+                "id": "src-rss-arxiv-ai-1789146215078-ucu2hr",
+                "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+                "url": "https://arxiv.org/abs/2609.09233",
                 "domain": "arxiv.org",
                 "type": "paper"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-viyk2p-0",
+                "id": "tag-rss-arxiv-ai-1789146215078-ucu2hr-0",
                 "label": "Agents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-viyk2p-1",
-                "label": "Tool Use",
+                "id": "tag-rss-arxiv-ai-1789146215078-ucu2hr-1",
+                "label": "Subagents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-viyk2p-2",
+                "id": "tag-rss-arxiv-ai-1789146215078-ucu2hr-2",
                 "label": "Research",
                 "type": "topic"
               }
@@ -54,64 +55,64 @@
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1789128944103-9wms5g",
-            "title": "New Method Predicts AI Agent Success from Internal States",
-            "tldr": "Researchers introduce Latent Trajectory Dynamics (LTD) and Action Representation Probe (ARP) to calibrate agent confidence by analyzing internal model representations, outperforming surface-level baselines across multiple benchmarks and models. This enables zero-overhead reliability monitoring for agentic systems.",
+            "id": "rss-openai-blog-1789146215054-lr8kz4",
+            "title": "OpenAI Scales Storage to 1B Users: Lessons for Your AI Backend",
+            "tldr": "OpenAI detailed how it evolved its internal storage system, Habitat, from a Python library into a globally distributed platform handling 22 million requests per second for over 1 billion ChatGPT users.",
             "whyItMatters": [
-              "Enables real-time confidence estimation for AI agents without extra computation, improving safety in critical applications.",
-              "Provides a method to detect potential failures in multi-turn agent workflows, reducing deployment risks.",
-              "Could become a standard for agent monitoring, influencing how developers build and trust autonomous systems."
+              "Provides a rare look at the infrastructure challenges behind a hyper-scale AI product, offering a blueprint for scaling your own backend.",
+              "Highlights the importance of storage architecture in delivering low-latency, reliable AI experiences at global scale."
             ],
             "whatToTry": {
-              "description": "Experiment with the LTD and ARP techniques in your own agentic pipelines by extracting residual-stream representations and training a probe to predict task success. Start with a small benchmark like SQL or Bash tasks to validate the approach.",
-              "note": "You'll need access to model internals; consider using open-weight models like Qwen or DeepSeek for easier implementation."
+              "description": "Read the OpenAI engineering blog post and identify one architectural pattern (e.g., sharding, caching, replication) that you can test in a staging environment to improve your own application's scalability.",
+              "note": "Focus on principles, not exact implementations, as your scale and constraints differ."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944103-9wms5g",
-                "title": "Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations",
-                "url": "https://arxiv.org/abs/2609.09448",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-openai-blog-1789146215054-lr8kz4",
+                "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+                "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+                "domain": "openai.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-9wms5g-0",
-                "label": "Agents",
+                "id": "tag-rss-openai-blog-1789146215054-lr8kz4-0",
+                "label": "Infrastructure",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-9wms5g-1",
-                "label": "Calibration",
+                "id": "tag-rss-openai-blog-1789146215054-lr8kz4-1",
+                "label": "Scaling",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-9wms5g-2",
-                "label": "Research",
+                "id": "tag-rss-openai-blog-1789146215054-lr8kz4-2",
+                "label": "OpenAI",
                 "type": "topic"
               }
             ],
-            "category": "research",
+            "category": "releases",
             "readTimeMinutes": 3,
             "isRead": false,
-            "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Fri, 11 Sep 2026 10:00:00 GMT"
           },
           {
-            "id": "rss-arxiv-ai-1789128944102-q9dh4h",
-            "title": "OpenDiscoveryTrace: Audit AI Scientist Reasoning, Not Just Results",
-            "tldr": "A new arXiv dataset releases 558 full process traces of AI scientific agents across 7 models and 124 tasks, showing that output-only benchmarks hide critical behavioral differences—like Claude Opus 4.6 making 30x more errors than GPT-5.4 despite similar success rates.",
+            "id": "rss-arxiv-ai-1789146215078-4iarwh",
+            "title": "New Dataset Exposes AI Agent Reasoning Gaps Hidden by Output-Only Evals",
+            "tldr": "OpenDiscoveryTrace releases 558 full reasoning traces from AI scientific agents across 7 models, revealing that frontier models with similar success rates (84-89%) differ wildly in error rates—Claude Opus 4.6 makes 30x more errors than GPT-5.4. This shows output-only benchmarks miss critical behavioral differences.",
             "whyItMatters": [
-              "Process-level evaluation can reveal hidden failure modes and reliability gaps that final-output metrics miss, directly impacting how you choose and deploy models for complex agentic workflows.",
-              "Provides a public, structured dataset for building better evaluation and debugging tools for AI agents, reducing the cost of diagnosing why an agent fails."
+              "Output-only evals can mask dangerous failure modes—models that 'guess right' look identical to models that reason correctly, creating hidden reliability risks in production",
+              "Process traces enable targeted debugging and model selection based on error patterns, not just final accuracy, which matters for high-stakes agent deployments",
+              "The dataset provides a blueprint for building process-level observability into your own AI agent pipelines"
             ],
             "whatToTry": {
-              "description": "Download the OpenDiscoveryTrace dataset and analyze the error patterns of the models you use. Compare self-reported confidence against actual errors to calibrate trust in agent outputs.",
-              "note": "The dataset covers scientific tasks, but the trace structure (thoughts, tool calls, errors, confidence) is generalizable to other agentic domains."
+              "description": "Instrument your AI agent workflows to log structured step-by-step traces (thoughts, tool calls, errors, confidence) and analyze error rates and revision patterns across models—not just final task success. Use the OpenDiscoveryTrace schema as a starting template.",
+              "note": "Start with a small pilot on 10-20 tasks to identify which models produce cleaner reasoning before scaling up."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944102-q9dh4h",
+                "id": "src-rss-arxiv-ai-1789146215078-4iarwh",
                 "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
                 "url": "https://arxiv.org/abs/2609.09203",
                 "domain": "arxiv.org",
@@ -120,18 +121,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944102-q9dh4h-0",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789128944102-q9dh4h-1",
+                "id": "tag-rss-arxiv-ai-1789146215078-4iarwh-0",
                 "label": "AI Agents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944102-q9dh4h-2",
-                "label": "Dataset",
+                "id": "tag-rss-arxiv-ai-1789146215078-4iarwh-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789146215078-4iarwh-2",
+                "label": "OpenDiscoveryTrace",
                 "type": "tool"
               }
             ],
@@ -141,41 +142,40 @@
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1789128944102-xqs5yo",
-            "title": "Subagents Beat Agent Skills for Long-Horizon Tasks, Study Finds",
-            "tldr": "A new arXiv paper shows that executing reusable skill packages as subagents—spawning fresh context windows per subtask—outperforms loading skill instructions into the main agent's context, especially as task horizons grow and context degrades. The benefit depends on clear input-output contracts and procedural instructions, at the cost of extra coordination tokens.",
+            "id": "rss-arxiv-ai-1789146215078-qnjqrp",
+            "title": "State-Path Tool Menus Boost Agent Success from 0.737 to 0.898",
+            "tldr": "A new arXiv paper introduces State-Path Tool Menu, a method that selects a short, ordered subset of tools for an agent before execution, improving online success on ToolBench from 0.737 to 0.898 without changing the agent. It addresses the problem of large tool libraries where relevant final actions are surfaced but prerequisite tools are omitted or delayed.",
             "whyItMatters": [
-              "Architectural guidance for multi-step agent systems: context isolation via subagents can improve reliability on long tasks.",
-              "Suggests a design pattern for reusable knowledge: package skills with explicit contracts and invoke them as subagents rather than injecting instructions.",
-              "Highlights a tradeoff between reasoning quality and communication overhead that founders must balance in production agents."
+              "Business impact: Companies building AI agents with large tool libraries can achieve significantly higher task success rates without retraining or modifying the underlying agent, reducing development costs and improving user experience.",
+              "Technical impact: The state-path approach treats tool selection as an execution prior, ordering producers before consumers, which outperforms retrieval, reranking, generation, and routing baselines and scales better with more tools."
             ],
             "whatToTry": {
-              "description": "If you're building agents with reusable skills, refactor one high-value skill into a subagent with a clear input-output contract and test it on a long-horizon task against your current context-loading approach. Measure both task success and token overhead.",
-              "note": "Start with skills that have well-defined inputs and outputs; ambiguous skills may not benefit as much."
+              "description": "If you're building an agent with a large tool library, experiment with a state-path-based tool menu constructor. Start by analyzing your agent's successful execution traces to identify recurring tool sequences and dependencies, then implement a retriever and reranker to present a short ordered menu of tools before each step. Test on your own benchmarks to measure success rate improvements.",
+              "note": "The paper's code is available at https://github.com/Met2348/State-Path, so you can adapt it directly. Focus on tasks that require multi-step tool use where prerequisite tools are often missed."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944102-xqs5yo",
-                "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
-                "url": "https://arxiv.org/abs/2609.09233",
+                "id": "src-rss-arxiv-ai-1789146215078-qnjqrp",
+                "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
+                "url": "https://arxiv.org/abs/2609.09395",
                 "domain": "arxiv.org",
                 "type": "paper"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944102-xqs5yo-0",
+                "id": "tag-rss-arxiv-ai-1789146215078-qnjqrp-0",
                 "label": "Agents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944102-xqs5yo-1",
-                "label": "Research",
+                "id": "tag-rss-arxiv-ai-1789146215078-qnjqrp-1",
+                "label": "Tool Use",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944102-xqs5yo-2",
-                "label": "Subagents",
+                "id": "tag-rss-arxiv-ai-1789146215078-qnjqrp-2",
+                "label": "Research",
                 "type": "topic"
               }
             ],
@@ -185,20 +185,107 @@
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1789128944103-svdgci",
-            "title": "Multi-Agent GeoAI Routes Arctic Ships Around Ecosystems",
-            "tldr": "Researchers released an open-source multi-agent GeoAI system for Arctic eco-navigation that balances safety, fuel, sea ice, sensitive habitats, and community impact, with humans keeping final say on value tradeoffs.",
+            "id": "hn-49656496",
+            "title": "AI's Hidden Cost: Less Collaborative Research?",
+            "tldr": "A HackerNews discussion with 261 comments and 306 points explores how AI, like Waymo's effect on driving, may be reducing collaboration in research. This trend could impact how AI products are developed and shared.",
             "whyItMatters": [
-              "Demonstrates a reusable pattern for multi-objective, human-in-the-loop agent orchestration that applies to logistics, supply chain, and any domain with competing constraints.",
-              "Open code and project page give founders a concrete reference architecture for combining geospatial data pipelines with specialized coordinating agents."
+              "Business impact: Reduced collaboration could slow innovation and increase duplication of effort in AI research, affecting product development timelines.",
+              "Technical impact: AI tools may centralize knowledge, making it harder for smaller teams to compete and potentially leading to less diverse solutions."
             ],
             "whatToTry": {
-              "description": "Clone the Arctic Eco-Navigation Agent repo and study how it splits geospatial data acquisition, route generation, and skyline-based decision support across specialized agents. Then map that same decomposition onto your own multi-criteria planning problem, such as delivery routing, cloud region selection, or resource scheduling, and prototype one agent per criterion with a human review step before final decisions.",
-              "note": "The skyline-based decision support is the interesting part: it surfaces Pareto-optimal options instead of collapsing tradeoffs into a single score, which is often what users actually want."
+              "description": "Evaluate your team's collaboration practices: are you using AI to augment or replace human interaction? Consider implementing regular knowledge-sharing sessions and open documentation to maintain collaborative culture.",
+              "note": "Balance AI efficiency with human collaboration to avoid silos."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944103-svdgci",
+                "id": "src-hn-49656496",
+                "title": "The Waymo effect: how AI is quietly making research less collaborative",
+                "url": "https://www.researchagenda.news/articles/the-waymo-effect.html",
+                "domain": "researchagenda.news",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49656496-0",
+                "label": "AI research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49656496-1",
+                "label": "collaboration",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49656496-2",
+                "label": "industry trend",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-11T11:17:50Z"
+          },
+          {
+            "id": "hn-49656471",
+            "title": "RTK Token Savings Claims Challenged by Cost Benchmarks",
+            "tldr": "A HackerNews discussion highlights skepticism around RTK's reported token savings, with independent cost benchmarks showing different results. This matters for founders evaluating token-reduction tools for AI coding workflows.",
+            "whyItMatters": [
+              "Token costs directly impact AI product margins, so misleading savings claims can lead to poor tooling decisions.",
+              "Independent benchmarks help founders separate real efficiency gains from marketing hype."
+            ],
+            "whatToTry": {
+              "description": "Before adopting any token-saving tool like RTK, run your own cost benchmark on a representative sample of your AI coding tasks. Compare actual token usage and API costs with and without the tool.",
+              "note": "Focus on end-to-end cost, not just token counts, since some tools may add overhead elsewhere."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49656471",
+                "title": "RTK reports token savings, but our cost benchmarks disagree",
+                "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
+                "domain": "quesma.com",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49656471-0",
+                "label": "AI coding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49656471-1",
+                "label": "cost optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49656471-2",
+                "label": "RTK",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-11T11:15:13Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1789146215078-k3bfmu",
+            "title": "Multi-Agent GeoAI System Plans Arctic Routes With Ecological Constraints",
+            "tldr": "Researchers released an open-source human-in-the-loop multi-agent system that generates Arctic shipping routes balancing safety, fuel, sensitive habitats, and community impact. It's a concrete blueprint for multi-objective agent orchestration with real-world constraints.",
+            "whyItMatters": [
+              "Demonstrates a production-ready pattern for coordinating specialized agents (data acquisition, route generation, decision support) around a multi-objective problem — directly transferable to logistics, supply chain, and resource planning products.",
+              "Skyline-based decision support keeps humans in control of value judgments, a useful UX pattern for AI products in regulated or high-stakes domains where full autonomy is a liability.",
+              "Open-source code and project page lower the barrier to adapting the architecture for other geospatial or constraint-heavy planning use cases."
+            ],
+            "whatToTry": {
+              "description": "Clone the GitHub repo and study how the agents divide responsibilities and how the skyline decision layer surfaces trade-offs to the human operator. Then sketch how the same orchestration pattern could apply to a planning problem in your own domain — for example, multi-criteria routing, scheduling, or resource allocation — and prototype a minimal version with two or three specialized agents.",
+              "note": "The domain is niche (Arctic navigation), so focus on the architecture and decision-support pattern rather than the specific ecological criteria."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789146215078-k3bfmu",
                 "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
                 "url": "https://arxiv.org/abs/2609.09374",
                 "domain": "arxiv.org",
@@ -207,17 +294,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-svdgci-0",
+                "id": "tag-rss-arxiv-ai-1789146215078-k3bfmu-0",
                 "label": "Multi-Agent Systems",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-svdgci-1",
+                "id": "tag-rss-arxiv-ai-1789146215078-k3bfmu-1",
                 "label": "GeoAI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-svdgci-2",
+                "id": "tag-rss-arxiv-ai-1789146215078-k3bfmu-2",
                 "label": "Open Source",
                 "type": "tool"
               }
@@ -228,64 +315,20 @@
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1789128944103-bfgsck",
-            "title": "Active Learning Cuts Critical-Materials Recovery Experiments by 3x",
-            "tldr": "PNNL researchers applied decision-focused active learning to autonomous selective precipitation for rare-earth recovery, finding optimal enrichment in 16-24 experiments versus 48 for nonadaptive methods. The approach frames experiment selection as minimizing downstream Bayes risk rather than just maximizing information gain.",
+            "id": "rss-arxiv-ai-1789146215079-u1pg98",
+            "title": "Valerant: Training-Free World Model Generates Navigable 3D Game Maps",
+            "tldr": "Researchers introduce Valerant, a training-free framework that turns a pretrained action-conditioned world model into a 3D game map generator by combining visual rollouts with SLAM-based spatial reconstruction and exploration-driven action selection.",
             "whyItMatters": [
-              "Active learning can dramatically reduce experimental costs in materials discovery and process optimization - a pattern applicable to any domain where each experiment is expensive",
-              "The decision-focused framing (minimizing Bayes risk over downstream decisions) is a more practical objective than pure information gain for real-world industrial applications",
-              "Rare-earth recovery is a strategically critical supply chain problem, making efficiency gains here economically and geopolitically significant"
+              "Enables automatic generation of persistent, navigable 3D environments from a single image, potentially reducing manual level design costs for game developers.",
+              "Demonstrates a practical way to leverage existing world models for spatial reasoning without additional training, opening doors for AI-driven content creation in gaming and simulation."
             ],
             "whatToTry": {
-              "description": "If you're building AI for scientific experimentation or process optimization, consider reframing your acquisition function from 'maximize information gain' to 'minimize expected downstream decision loss.' This paper shows that decision-focused active learning can match or beat information-theoretic approaches while being more aligned with business objectives. Review your current experiment-selection logic and ask: what decision does this experiment actually inform, and how would that decision change under different outcomes?",
-              "note": "The benchmark is retrospective and conditional on fitted models, so real-world gains may differ. Validate on your own domain before committing."
+              "description": "If you're building AI for game development or simulation, explore integrating action-conditioned world models with SLAM techniques to generate interactive 3D spaces from minimal input. Start by prototyping with open-source world models and SLAM libraries to test feasibility for your use case.",
+              "note": "The approach is training-free but may require significant compute for inference; evaluate latency and quality trade-offs."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944103-bfgsck",
-                "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
-                "url": "https://arxiv.org/abs/2609.09413",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789128944103-bfgsck-0",
-                "label": "Active Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789128944103-bfgsck-1",
-                "label": "Materials Discovery",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789128944103-bfgsck-2",
-                "label": "Bayesian Optimization",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789128944103-egrml7",
-            "title": "Valerant: Training-Free 3D Game Map Generation via World Models",
-            "tldr": "Researchers present Valerant, a training-free framework that turns a pretrained action-conditioned world model into a 3D game map generator by combining predictive video rollouts with SLAM-based spatial reconstruction and exploration-driven action selection.",
-            "whyItMatters": [
-              "Enables rapid, low-cost generation of navigable 3D game environments from a single image, potentially disrupting game development and simulation pipelines.",
-              "Demonstrates a practical way to instantiate persistent 3D geometry from 2D world models without additional training, advancing embodied AI and world model research."
-            ],
-            "whatToTry": {
-              "description": "If you work with world models or game AI, experiment with combining a pretrained action-conditioned video model with a SLAM system to reconstruct 3D maps from generated rollouts. Start with a simple 2D game environment to validate the pipeline before scaling to 3D.",
-              "note": "The approach is training-free but may require careful tuning of the exploration policy and SLAM parameters for stable results."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789128944103-egrml7",
+                "id": "src-rss-arxiv-ai-1789146215079-u1pg98",
                 "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
                 "url": "https://arxiv.org/abs/2609.09418",
                 "domain": "arxiv.org",
@@ -294,19 +337,19 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-egrml7-0",
+                "id": "tag-rss-arxiv-ai-1789146215079-u1pg98-0",
                 "label": "World Models",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-egrml7-1",
-                "label": "Game AI",
+                "id": "tag-rss-arxiv-ai-1789146215079-u1pg98-1",
+                "label": "3D Generation",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-egrml7-2",
-                "label": "SLAM",
-                "type": "tool"
+                "id": "tag-rss-arxiv-ai-1789146215079-u1pg98-2",
+                "label": "Game Development",
+                "type": "topic"
               }
             ],
             "category": "research",
@@ -315,41 +358,84 @@
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
           },
           {
-            "id": "rss-arxiv-ai-1789128944103-dn9iyo",
-            "title": "LLMs as Judges for XAI Explanation Quality",
-            "tldr": "Researchers introduce XAI-Arena, an LLM-as-a-judge framework that evaluates explainable AI (XAI) explanations across eight dimensions, showing strong correlation with human ratings (Spearman's rho=.693). This offers a scalable, reproducible way to compare XAI methods without relying solely on subjective human judgment.",
+            "id": "rss-techcrunch-ai-1789146214773-d5bvp1",
+            "title": "Nscale Taps Ex-OpenAI Exec Fidji Simo for Board Ahead of IPO",
+            "tldr": "AI cloud provider Nscale has added Fidji Simo, OpenAI's former No. 2 exec who took Instacart public in 2023, to its board as it prepares for a potential IPO. The move signals Nscale is positioning itself as a serious infrastructure player in the AI compute race.",
             "whyItMatters": [
-              "Enables faster, cheaper, and more consistent evaluation of XAI methods, accelerating research and development in explainable AI.",
-              "Provides a standardized framework that could become a benchmark for comparing XAI explanations, influencing which methods gain adoption.",
-              "Demonstrates LLMs' potential as evaluators beyond text generation, opening doors for automated assessment in other subjective domains."
+              "AI infrastructure companies are maturing fast — Nscale's IPO prep shows the compute layer is consolidating into public-market-grade businesses, which could mean more stable, scalable GPU capacity options for AI startups.",
+              "Simo's dual experience scaling OpenAI and leading a public offering suggests Nscale is prioritizing both AI-native strategy and financial discipline, a combo that could make it a stronger long-term vendor than pure-play GPU resellers."
             ],
             "whatToTry": {
-              "description": "If you're building or using XAI methods, consider integrating LLM-based evaluation into your pipeline to quickly compare explanation quality across different models or datasets. Start by defining key dimensions relevant to your use case (e.g., clarity, actionability) and prompt an LLM to rate explanations, then validate against a small set of human ratings.",
-              "note": "LLM judgments may have biases; always calibrate with human evaluation for critical applications."
+              "description": "If you're evaluating AI infrastructure vendors, add Nscale to your shortlist and watch for their IPO filing (S-1) in the coming months. The filing will reveal pricing, customer concentration, and capacity commitments — data you can use to negotiate better terms or hedge against dependency on a single cloud provider.",
+              "note": "IPO prep doesn't guarantee a listing; treat this as a signal to monitor, not a reason to switch vendors yet."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789128944103-dn9iyo",
-                "title": "XAI-Arena: Can LLMs Assess the Quality of XAI Explanations?",
-                "url": "https://arxiv.org/abs/2609.09428",
+                "id": "src-rss-techcrunch-ai-1789146214773-d5bvp1",
+                "title": "Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO",
+                "url": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789146214773-d5bvp1-0",
+                "label": "AI Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789146214773-d5bvp1-1",
+                "label": "Industry Moves",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789146214773-d5bvp1-2",
+                "label": "Nscale",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 11 Sep 2026 16:46:25 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1789146215078-2ggi4m",
+            "title": "Active Learning Cuts Critical-Materials Recovery Experiments by 3x",
+            "tldr": "PNNL researchers applied decision-focused active learning to autonomous selective precipitation for rare-earth recovery, finding optimal enrichment in 16-24 experiments versus 48 for non-adaptive methods. The approach selects experiments by expected reduction in downstream Bayes risk.",
+            "whyItMatters": [
+              "Demonstrates active learning can dramatically reduce experimental costs in physical/chemical domains, not just digital ones",
+              "The decision-focused framing (optimizing for downstream process decisions rather than pure prediction) is a transferable pattern for any AI-guided optimization product",
+              "Critical materials recovery is a strategic industry - efficiency gains here have outsized economic and geopolitical value"
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for scientific or industrial optimization, study the 'expected reduction in downstream Bayes risk' acquisition function. Instead of selecting experiments that maximize information gain or model accuracy, select the ones that most reduce uncertainty about the final decision you'll make. This reframing often produces better real-world outcomes with fewer iterations.",
+              "note": "The paper is a retrospective benchmark on historical data, not a live deployment - treat the 3x efficiency claim as promising but unvalidated in production settings."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789146215078-2ggi4m",
+                "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
+                "url": "https://arxiv.org/abs/2609.09413",
                 "domain": "arxiv.org",
                 "type": "paper"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-dn9iyo-0",
-                "label": "XAI",
+                "id": "tag-rss-arxiv-ai-1789146215078-2ggi4m-0",
+                "label": "Active Learning",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-dn9iyo-1",
-                "label": "LLM evaluation",
+                "id": "tag-rss-arxiv-ai-1789146215078-2ggi4m-1",
+                "label": "Bayesian Optimization",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789128944103-dn9iyo-2",
-                "label": "research",
+                "id": "tag-rss-arxiv-ai-1789146215078-2ggi4m-2",
+                "label": "Scientific ML",
                 "type": "topic"
               }
             ],
@@ -357,92 +443,6 @@
             "readTimeMinutes": 3,
             "isRead": false,
             "publishedAt": "Fri, 11 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1789128943816-pvodvn",
-            "title": "OpenAI Explores Legal Path for Coordinated AI Slowdown",
-            "tldr": "OpenAI is investigating whether antitrust laws would permit a coordinated slowdown in AI development, as industry leaders grow concerned about safety risks and potential regulatory hurdles.",
-            "whyItMatters": [
-              "Regulatory uncertainty could shape future AI development pace and competitive dynamics.",
-              "Founders may need to anticipate legal constraints on collaboration or slowdowns, affecting strategy and risk management."
-            ],
-            "whatToTry": {
-              "description": "Monitor regulatory discussions around AI and antitrust, and consider how potential slowdowns could impact your product roadmap or partnership strategies.",
-              "note": "Engage with legal experts to understand implications for your specific use case."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789128943816-pvodvn",
-                "title": "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal",
-                "url": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789128943816-pvodvn-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789128943816-pvodvn-1",
-                "label": "Antitrust",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789128943816-pvodvn-2",
-                "label": "AI Regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 23:28:42 +0000"
-          },
-          {
-            "id": "hn-49651372",
-            "title": "System76's Thelio Mira AI: 192GB GPU Memory Linux Workstation",
-            "tldr": "System76 launches Thelio Mira AI, a Linux workstation with up to 192GB GPU memory, targeting AI developers who need high VRAM for training and inference.",
-            "whyItMatters": [
-              "Enables running large language models (e.g., Llama 3 70B) locally without cloud costs, improving data privacy and reducing latency.",
-              "Provides a Linux-native alternative to Mac and Windows workstations, potentially streamlining AI development workflows."
-            ],
-            "whatToTry": {
-              "description": "Evaluate if local AI training is feasible for your team by comparing the cost of this workstation against cloud GPU instances over 6-12 months. Consider factors like data sensitivity, model size, and utilization rate.",
-              "note": "Check compatibility with your preferred ML frameworks and whether the GPU memory is sufficient for your target models."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49651372",
-                "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
-                "url": "https://system76.com/workstations/thelio-mira-ai",
-                "domain": "system76.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49651372-0",
-                "label": "hardware",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49651372-1",
-                "label": "Linux",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49651372-2",
-                "label": "GPU",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-10T23:10:06Z"
           }
         ],
         "totalReadTimeMinutes": 28,
