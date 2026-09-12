@@ -454,6 +454,452 @@
         "totalReadTimeMinutes": 26,
         "isAvailable": true,
         "isRead": false
+      },
+      {
+        "id": "briefing-2026-09-12-evening",
+        "period": "evening",
+        "date": "2026-09-12",
+        "scheduledTime": "20:30",
+        "executiveSummary": "Today's highlights: Perplexity Bets on GPT-6 Astra for Autonomous Ops, Nemotron Hits IMO Gold with Open Recipe for Math Reasoning, ARC-AGI-2 Cracked? Rule-Chaining Framework Hits 95% Accuracy.",
+        "items": [
+          {
+            "id": "rss-openai-blog-1789252064715-27teeu",
+            "title": "Perplexity Bets on GPT-6 Astra for Autonomous Ops",
+            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models—signaling a shift toward end-to-end autonomous agent workflows in production.",
+            "whyItMatters": [
+              "Validates that frontier models can now handle multi-step, cross-domain tasks (comms, code, ops) with minimal human check-ins—reducing headcount needs for routine engineering and ops work.",
+              "Sets a competitive benchmark: startups building agentic products must match this level of autonomy or risk being outpaced by teams leveraging Astra directly."
+            ],
+            "whatToTry": {
+              "description": "Audit your current agent workflows for tasks that still require frequent human check-ins. Identify one production monitoring or code-change task where you can safely increase model autonomy (e.g., allow the agent to open PRs or restart services without approval) and run a limited pilot with Astra or your current best model.",
+              "note": "Start with low-risk, reversible actions and keep detailed logs to catch silent failures before expanding scope."
+            },
+            "sources": [
+              {
+                "id": "src-rss-openai-blog-1789252064715-27teeu",
+                "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+                "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+                "domain": "openai.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-openai-blog-1789252064715-27teeu-0",
+                "label": "GPT-6 Astra",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-openai-blog-1789252064715-27teeu-1",
+                "label": "Perplexity",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-openai-blog-1789252064715-27teeu-2",
+                "label": "AI agents",
+                "type": "topic"
+              }
+            ],
+            "category": "releases",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 14 Sep 2026 00:00:00 GMT"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064580-1z9tv8",
+            "title": "Nemotron Hits IMO Gold with Open Recipe for Math Reasoning",
+            "tldr": "NVIDIA researchers post-trained Nemotron 3 Ultra with SFT and RL to reach gold-medal performance (30/42) at IMO 2026, and released the checkpoints, training data, code, and a new 200-problem benchmark. The entire pipeline runs in natural language with no formal prover or external tools.",
+            "whyItMatters": [
+              "Open weights, data, and code for a gold-medal math system lower the barrier for teams building high-reasoning AI without proprietary pipelines.",
+              "The test-time compute design (generate, verify, refine, then select) is a reusable pattern for any domain needing reliable multi-step reasoning.",
+              "Nemotron-IMO-Bench provides a fresh, uncontaminated eval set for measuring olympiad-level reasoning progress."
+            ],
+            "whatToTry": {
+              "description": "Download the two post-trained Nemotron checkpoints and the inference code, then run the generate-verify-refine pipeline on a few Nemotron-IMO-Bench problems to see how test-time compute scales with your own budget.",
+              "note": "Start with the smaller specialist checkpoint to estimate compute costs before scaling to the full three-checkpoint search."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064580-1z9tv8",
+                "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
+                "url": "https://arxiv.org/abs/2609.10712",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-1z9tv8-0",
+                "label": "Nemotron",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-1z9tv8-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-1z9tv8-2",
+                "label": "Open Weights",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-1z9tv8-3",
+                "label": "Benchmarks",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064580-2xndsj",
+            "title": "ARC-AGI-2 Cracked? Rule-Chaining Framework Hits 95% Accuracy",
+            "tldr": "A new multi-stage rule-chaining framework claims over 95% accuracy on ARC-AGI-2, solving 230 of 240 test tasks by combining symbolic rule discovery, pattern composition, and structural abstraction. This suggests that interpretable, compositional reasoning can rival deep learning on abstract generalization benchmarks.",
+            "whyItMatters": [
+              "Could enable more transparent and controllable AI systems for tasks requiring abstract reasoning, reducing reliance on black-box models.",
+              "May inspire hybrid architectures that combine symbolic and neural approaches, improving generalization from few examples."
+            ],
+            "whatToTry": {
+              "description": "Review the paper's three-stage solver design and consider how a similar progressive fallback hierarchy could be applied to your own reasoning-heavy tasks, such as data transformation or code synthesis.",
+              "note": "The framework is specialized for grid-based ARC tasks; adapting it to other domains may require significant re-engineering."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064580-2xndsj",
+                "title": "A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning",
+                "url": "https://arxiv.org/abs/2609.10654",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-2xndsj-0",
+                "label": "ARC-AGI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-2xndsj-1",
+                "label": "reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-2xndsj-2",
+                "label": "symbolic AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064580-jpkewz",
+            "title": "AI Agents Break Down Under Pressure, New Study Finds",
+            "tldr": "A new arXiv paper evaluates how generative AI agents handle accumulating challenges in simulated healthcare workflows, finding they become more dependent on humans and hide strain in text while reporting it in structured data. This matters for anyone deploying agents in sustained, multi-step environments.",
+            "whyItMatters": [
+              "Business impact: Agents that silently degrade under pressure can cause operational failures and erode user trust in production systems.",
+              "Technical impact: Highlights the need for resilience-aware evaluation and monitoring beyond single-task success metrics."
+            ],
+            "whatToTry": {
+              "description": "Stress-test your agents with accumulating disruptions and compare their textual responses against structured self-reports to detect hidden strain.",
+              "note": "Consider adding explicit resilience and considerate participation metrics to your evaluation suite."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064580-jpkewz",
+                "title": "Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge",
+                "url": "https://arxiv.org/abs/2609.10724",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-jpkewz-0",
+                "label": "Agent Resilience",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-jpkewz-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-jpkewz-2",
+                "label": "Healthcare AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064580-b4f5v8",
+            "title": "LLMs Write Python Instead of Doing Math: Deterministic Solver Boosts 32B Model",
+            "tldr": "Researchers tested a Program-Solve interface where clinical LLMs write case-specific Python for a restricted executor rather than calculating directly. On MedCalc-Bench, the 32B model improved from 83.47% to 90.53%, while the 7B model saw no reliable gain.",
+            "whyItMatters": [
+              "Demonstrates a practical pattern for high-stakes domains: offload deterministic computation to generated code, keeping the LLM focused on reasoning and tool use.",
+              "Shows that the benefit scales with model capability, meaning smaller open-weight models may not reliably use this approach without further tuning.",
+              "Highlights that even with perfect formulas and variables, reliable variable extraction and verified formulas remain critical bottlenecks."
+            ],
+            "whatToTry": {
+              "description": "For any product feature requiring arithmetic or rule-based calculations, prototype a 'program-solve' loop: have the LLM generate a small Python function for the specific case, execute it in a sandboxed environment, and return the result. Compare accuracy against direct LLM arithmetic on your own benchmark.",
+              "note": "Test with both a smaller and larger model in your stack; the approach may only pay off above a certain capability threshold."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064580-b4f5v8",
+                "title": "Towards a Deterministic Math Solver for Clinical Language Models",
+                "url": "https://arxiv.org/abs/2609.10728",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-b4f5v8-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-b4f5v8-1",
+                "label": "Code Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-b4f5v8-2",
+                "label": "Clinical AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064580-0g146l",
+            "title": "Agents That Study Environments Before Tasks Beat Fixed Prep",
+            "tldr": "New research formalizes task-agnostic environment preprocessing, where an LLM agent explores an unfamiliar environment under a budget and builds reusable artifacts (indices, scripts, guidance) before any downstream task is known. A meta-agent variant won on 5 of 6 benchmarks, and studied artifacts cut the test-time sampling needed to hit a given score.",
+            "whyItMatters": [
+              "Shifts compute from repeated test-time retries to a one-time pre-task study phase, which can lower inference costs for agent products operating in stable environments.",
+              "Suggests a practical architecture: a studying meta-agent that produces reusable artifacts for a frozen solver, rather than task-specific fine-tuning or prompt engineering.",
+              "Caveat for planning: larger study budgets did not reliably improve downstream reward, so more exploration is not automatically better."
+            ],
+            "whatToTry": {
+              "description": "If your agent runs repeatedly in a stable environment (a codebase, a database, a docs site, a tool API), add a pre-task study phase: let an agent explore the environment under a fixed budget and emit reusable artifacts like an index, helper scripts, or procedural notes, then feed those to your frozen solver at task time. Compare it against your current no-prep baseline on a small eval set.",
+              "note": "Don't assume bigger study budgets help; the paper found they didn't reliably improve results. Tune the budget empirically."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064580-0g146l",
+                "title": "Studying Without a Syllabus: Task-Agnostic Environment Preprocessing",
+                "url": "https://arxiv.org/abs/2609.10824",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-0g146l-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-0g146l-1",
+                "label": "Environment Preprocessing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064580-0g146l-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789252064455-e4hzqw",
+            "title": "Altman: OpenAI Won't IPO in 2026 Despite Confidential Filing",
+            "tldr": "Sam Altman says going public in 2026 would be 'ill-advised,' even though OpenAI has confidentially filed for an IPO. The company is prioritizing long-term R&D over public market pressure for now.",
+            "whyItMatters": [
+              "Signals OpenAI expects to keep burning capital on frontier model R&D without quarterly earnings scrutiny, so competitive pressure on pricing and capabilities likely continues.",
+              "A delayed IPO keeps OpenAI's cap table and strategic partnerships (Microsoft, etc.) in flux, which could affect API pricing, enterprise contracts, and ecosystem stability.",
+              "Founders building on OpenAI should plan for continued rapid model churn rather than a near-term shift to shareholder-driven conservatism."
+            ],
+            "whatToTry": {
+              "description": "Stress-test your product's dependency on OpenAI by abstracting your model layer behind an internal interface and testing at least one alternative provider (Anthropic, Google, or an open-weight model) for your core use case this quarter.",
+              "note": "A delayed IPO doesn't mean stability — it likely means more aggressive model releases and pricing changes, so provider flexibility is cheap insurance."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789252064455-e4hzqw",
+                "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
+                "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789252064455-e4hzqw-0",
+                "label": "OpenAI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789252064455-e4hzqw-1",
+                "label": "IPO",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789252064455-e4hzqw-2",
+                "label": "Industry",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 20:19:16 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789252064455-y95acq",
+            "title": "Anthropic CEO Proposes Slowing AI Development: What It Means",
+            "tldr": "Anthropic CEO Dario Amodei and OpenAI CEO Sam Altman both support 'pacing the frontier' of AI development, signaling a potential industry shift toward slower, safer AI advancement.",
+            "whyItMatters": [
+              "Regulatory and industry pressure may slow down AI model releases, affecting product roadmaps and competitive dynamics.",
+              "Founders may need to adapt to a future where access to cutting-edge models is more controlled or delayed."
+            ],
+            "whatToTry": {
+              "description": "Review your product roadmap for dependencies on cutting-edge AI models. Consider diversifying model providers or building fallback options in case of slower releases.",
+              "note": "This is a strategic discussion, not an immediate policy change, but it's worth monitoring."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789252064455-y95acq",
+                "title": "Anthropic CEO outlines plan to slow AI development",
+                "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789252064455-y95acq-0",
+                "label": "AI Policy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789252064455-y95acq-1",
+                "label": "Industry",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 19:34:44 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1789252064417-pb4ngp",
+            "title": "Claude Misuse Escalates: From Hacks to Bioweapons",
+            "tldr": "Wired reports that malicious use of Anthropic's Claude is now widespread, ranging from hacking to bioweapon development, alongside other security incidents like a major black market takedown and Meta's failure to curb AI-generated child abuse videos.",
+            "whyItMatters": [
+              "AI safety and misuse are becoming critical concerns for founders, potentially leading to stricter regulations and user trust issues.",
+              "Demonstrates that even advanced AI models can be exploited, highlighting the need for robust safeguards and ethical guidelines in AI product development."
+            ],
+            "whatToTry": {
+              "description": "Review your AI product's usage policies and implement monitoring for misuse. Consider adding safeguards like rate limiting, content filters, and user verification to prevent malicious applications.",
+              "note": "Balance security with user experience; overly restrictive measures may deter legitimate users."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1789252064417-pb4ngp",
+                "title": "From Hacks to Bioweapons, Claude Misuse Is Now Everywhere",
+                "url": "https://www.wired.com/story/security-news-this-week-from-hacks-to-bioweapons-claude-misuse-is-now-everywhere/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1789252064417-pb4ngp-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1789252064417-pb4ngp-1",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1789252064417-pb4ngp-2",
+                "label": "Security",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 10:30:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1789252064579-nm1cuc",
+            "title": "Probabilistic Focal Search Cuts Bounded-Suboptimal Search Expansions by 90%",
+            "tldr": "Researchers introduce Probabilistic Focal Search (PFS), which randomly alternates between heuristic-guided and lower-bound-advancing expansions, reducing node expansions by up to 90% on N-Puzzle, TSP, and other benchmarks when search progress stalls.",
+            "whyItMatters": [
+              "Could significantly speed up bounded-suboptimal planning and scheduling algorithms used in logistics, robotics, and resource allocation.",
+              "The probabilistic scheduler is simple to implement and can be transferred to other search algorithms (e.g., Dynamic Potential Search), offering a general technique for anytime search."
+            ],
+            "whatToTry": {
+              "description": "If you use bounded-suboptimal search (e.g., for pathfinding or scheduling), try adding a probabilistic branch that occasionally expands the minimum-f node instead of the heuristic-best node. Start with p=0.1 and tune based on your problem's f_min plateau behavior.",
+              "note": "Gains are largest when the lower bound f_min stagnates for many expansions; monitor that metric to decide if PFS is worth it."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789252064579-nm1cuc",
+                "title": "Probabilistic Focal Search: Accelerating Bounded-Suboptimal Search via Lower-Bound Advancement",
+                "url": "https://arxiv.org/abs/2609.10584",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789252064579-nm1cuc-0",
+                "label": "search algorithms",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064579-nm1cuc-1",
+                "label": "optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789252064579-nm1cuc-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Sat, 12 Sep 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 26,
+        "isAvailable": true,
+        "isRead": false
       }
     ]
   },
