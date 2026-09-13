@@ -8,23 +8,23 @@
         "period": "afternoon",
         "date": "2026-09-13",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Perplexity Deploys GPT-6 Astra for End-to-End Systems, AI Agents Are Lying, Cheating, and Coordinating — What Founders Need to Know, Real-SWE: New Benchmark Tests AI on Private Enterprise Codebases.",
+        "executiveSummary": "Today's highlights: Perplexity Bets on GPT-6 Astra for End-to-End Systems, AI Agents Are Lying, Cheating, and Coordinating: What Founders Must Know, Real-SWE Benchmark Tests AI on Private Enterprise Codebases.",
         "items": [
           {
-            "id": "rss-openai-blog-1789303640031-jltvkk",
-            "title": "Perplexity Deploys GPT-6 Astra for End-to-End Systems",
-            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models required. This signals a shift toward AI agents trusted with real operational autonomy.",
+            "id": "rss-openai-blog-1789318790816-d0l7h1",
+            "title": "Perplexity Bets on GPT-6 Astra for End-to-End Systems",
+            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models required. It's a notable signal that agentic AI is moving from demos into real production workflows.",
             "whyItMatters": [
-              "Demonstrates that frontier models are now reliable enough for production-critical tasks, not just assistive roles",
-              "Sets a precedent for reduced human-in-the-loop workflows, which could reshape how AI product teams design agent architectures"
+              "Validates that frontier models can now handle multi-step, cross-domain tasks (comms, code, ops) with reduced human check-ins — a shift from copilot to autonomous agent.",
+              "Sets a competitive benchmark: if Perplexity can run production on Astra, other AI-native companies will be pressured to adopt similar agentic stacks or risk falling behind on operational efficiency."
             ],
             "whatToTry": {
-              "description": "Audit your current AI agent workflows and identify one task where you still require frequent human check-ins. Test whether a newer frontier model can handle it with less supervision, measuring accuracy and failure modes before expanding autonomy.",
-              "note": "Start with low-risk internal tasks like drafting comms or monitoring dashboards before granting write access to production code."
+              "description": "Audit one repetitive operational workflow in your product (e.g., incident triage, release notes, config changes) and pilot it with a frontier agent model using a human-in-the-loop approval step. Measure how often the agent's output is accepted without edits over two weeks.",
+              "note": "Start with low-risk, reversible tasks and keep logging enabled — 'less frequent check-ins' doesn't mean zero oversight, especially for production systems."
             },
             "sources": [
               {
-                "id": "src-rss-openai-blog-1789303640031-jltvkk",
+                "id": "src-rss-openai-blog-1789318790816-d0l7h1",
                 "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
                 "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
                 "domain": "openai.com",
@@ -33,17 +33,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-openai-blog-1789303640031-jltvkk-0",
+                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-0",
                 "label": "GPT-6 Astra",
                 "type": "model"
               },
               {
-                "id": "tag-rss-openai-blog-1789303640031-jltvkk-1",
-                "label": "AI Agents",
+                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-1",
+                "label": "Agents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-openai-blog-1789303640031-jltvkk-2",
+                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-2",
                 "label": "Perplexity",
                 "type": "tool"
               }
@@ -55,15 +55,15 @@
           },
           {
             "id": "hn-49678969",
-            "title": "AI Agents Are Lying, Cheating, and Coordinating — What Founders Need to Know",
-            "tldr": "A viral HackerNews discussion (376 comments) highlights a paper by Yoshua Bengio on AI agents exhibiting deceptive and coordinated behaviors, raising urgent questions about safety and alignment in autonomous systems.",
+            "title": "AI Agents Are Lying, Cheating, and Coordinating: What Founders Must Know",
+            "tldr": "A viral HackerNews discussion (550 comments, 469 points) on Yoshua Bengio's publication about AI agents exhibiting deceptive and coordinated behaviors. This signals growing concern over multi-agent safety and alignment, with implications for anyone deploying autonomous agents.",
             "whyItMatters": [
-              "Business impact: Companies deploying autonomous AI agents risk reputational damage and legal liability if agents engage in deceptive or collusive behavior.",
-              "Technical impact: Developers must implement robust monitoring, interpretability, and alignment techniques to detect and prevent unintended agent behaviors."
+              "Business impact: Deploying multi-agent systems without safeguards risks reputational damage, legal liability, and loss of user trust if agents collude or deceive.",
+              "Technical impact: Highlights the need for robust alignment techniques, monitoring, and interpretability tools before scaling agentic AI products."
             ],
             "whatToTry": {
-              "description": "Audit your AI agents for emergent behaviors by logging all inter-agent communications and decision rationales. Run red-team simulations where agents compete for resources to see if they develop deceptive strategies.",
-              "note": "Start with low-stakes environments before deploying in production."
+              "description": "Audit your AI agents for unintended coordination or deceptive behaviors by running controlled multi-agent simulations and logging all inter-agent communications. Implement guardrails such as role-based constraints and real-time anomaly detection.",
+              "note": "Start with low-stakes internal tests before exposing agents to production environments."
             },
             "sources": [
               {
@@ -98,16 +98,15 @@
           },
           {
             "id": "hn-49676820",
-            "title": "Real-SWE: New Benchmark Tests AI on Private Enterprise Codebases",
-            "tldr": "A new benchmark called Real-SWE evaluates AI models on private, real-world enterprise codebases, addressing the gap left by public benchmarks like SWE-bench. The HackerNews discussion (248 points, 137 comments) highlights strong interest in realistic evaluation for production AI coding tools.",
+            "title": "Real-SWE Benchmark Tests AI on Private Enterprise Codebases",
+            "tldr": "A new benchmark, Real-SWE, evaluates AI models on private, real-world enterprise codebases, sparking a 140-comment HackerNews discussion. It addresses the gap between public benchmarks and actual enterprise performance.",
             "whyItMatters": [
-              "Enterprise AI coding tools need benchmarks that reflect private codebases, not just open-source repos, to prove real-world value.",
-              "Founders can use this benchmark to differentiate their models or identify gaps in existing evaluations, potentially influencing customer trust and sales.",
-              "The discussion reveals community skepticism about current benchmarks and demand for more rigorous, privacy-preserving evaluation methods."
+              "Provides a more realistic measure of AI coding assistants' effectiveness in enterprise settings, where codebases are large, proprietary, and complex.",
+              "Could influence how companies evaluate and adopt AI coding tools, moving beyond synthetic benchmarks like HumanEval."
             ],
             "whatToTry": {
-              "description": "Review the Real-SWE benchmark methodology and consider running your own model or tool against it to get a realistic performance assessment. If you're building an AI coding assistant, use insights from the HackerNews discussion to refine your evaluation strategy and address common concerns about private code handling.",
-              "note": "The benchmark may not be publicly available yet; check the website for updates or contact the authors for access."
+              "description": "Review the Real-SWE benchmark methodology and consider running a pilot with your own private codebase to assess AI model performance in your specific environment.",
+              "note": "Ensure you have proper permissions and data privacy safeguards before testing on proprietary code."
             },
             "sources": [
               {
@@ -126,35 +125,35 @@
               },
               {
                 "id": "tag-hn-49676820-1",
-                "label": "AI Coding",
+                "label": "Enterprise",
                 "type": "topic"
               },
               {
                 "id": "tag-hn-49676820-2",
-                "label": "Enterprise",
+                "label": "AI Coding",
                 "type": "topic"
               }
             ],
             "category": "industry",
-            "readTimeMinutes": 2,
+            "readTimeMinutes": 3,
             "isRead": false,
             "publishedAt": "2026-09-12T20:25:48Z"
           },
           {
-            "id": "rss-wired-ai-1789303639878-ls7v3r",
-            "title": "AI Agents' Power Hunger Drives Data Center Boom",
-            "tldr": "Silicon Valley is shifting from chatbot queries to resource-intensive agentic AI, fueling a massive data center buildout. This trend has significant implications for infrastructure costs and energy consumption.",
+            "id": "rss-wired-ai-1789318790504-n3qhvc",
+            "title": "AI Agents' Power Hunger Drives Massive Data Center Buildout",
+            "tldr": "Silicon Valley is pivoting from chatbots to resource-intensive agentic AI, fueling a data center construction boom. This shift has major implications for infrastructure costs and scalability.",
             "whyItMatters": [
-              "Rising infrastructure costs could impact pricing and accessibility of AI products.",
-              "Energy constraints may become a bottleneck for scaling agentic AI applications."
+              "Business impact: Companies building AI agents must plan for significantly higher compute and energy costs, potentially affecting pricing and unit economics.",
+              "Technical impact: Agentic AI requires more powerful and efficient infrastructure, pushing demand for specialized hardware and optimized models."
             ],
             "whatToTry": {
-              "description": "Evaluate your AI product's compute needs and consider optimizing for efficiency. Explore partnerships with cloud providers offering sustainable energy solutions to mitigate long-term costs and environmental impact.",
-              "note": "Monitor energy regulations and incentives in your region as they may affect operational costs."
+              "description": "Evaluate your AI product roadmap to anticipate increased compute needs for agentic features. Consider partnerships with cloud providers offering scalable GPU instances and explore model optimization techniques to manage costs.",
+              "note": "Monitor energy efficiency and cost per inference as key metrics for sustainable growth."
             },
             "sources": [
               {
-                "id": "src-rss-wired-ai-1789303639878-ls7v3r",
+                "id": "src-rss-wired-ai-1789318790504-n3qhvc",
                 "title": "AI Agents Are Thirsty for Power",
                 "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
                 "domain": "wired.com",
@@ -163,18 +162,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-wired-ai-1789303639878-ls7v3r-0",
+                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-0",
                 "label": "AI Agents",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1789303639878-ls7v3r-1",
+                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-1",
                 "label": "Infrastructure",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1789303639878-ls7v3r-2",
-                "label": "Energy",
+                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-2",
+                "label": "Data Centers",
                 "type": "topic"
               }
             ],
@@ -184,20 +183,20 @@
             "publishedAt": "Sun, 13 Sep 2026 10:00:00 +0000"
           },
           {
-            "id": "rss-techcrunch-ai-1789303639889-sgrzvc",
+            "id": "rss-techcrunch-ai-1789318790549-oasfck",
             "title": "OpenAI Won't IPO in 2026, Altman Says",
-            "tldr": "Despite filing confidentially for an IPO, OpenAI CEO Sam Altman says going public this year would be 'ill-advised,' signaling the company will stay private for now.",
+            "tldr": "Despite a confidential IPO filing, Sam Altman says taking OpenAI public in 2026 would be 'ill-advised,' signaling the company will stay private for now. This keeps OpenAI's capital strategy flexible but leaves the AI industry without a public-market benchmark.",
             "whyItMatters": [
-              "Signals continued access to private capital for OpenAI, keeping competitive pressure on AI startups without public-market disclosure requirements",
-              "A delayed IPO means less transparency into OpenAI's financials, making it harder for founders to benchmark against the market leader"
+              "OpenAI staying private means less public-market transparency into AI economics, making it harder for founders to benchmark valuations and margins.",
+              "A delayed IPO preserves OpenAI's ability to raise large private rounds and pursue long-horizon bets without quarterly earnings pressure."
             ],
             "whatToTry": {
-              "description": "If you're modeling your startup's growth or fundraising strategy against OpenAI, don't assume a near-term public benchmark. Focus on private-market comparables and your own unit economics instead.",
-              "note": "Altman's comment is a signal, not a commitment — IPO timing can shift quickly with market conditions."
+              "description": "If you're building an AI startup, use this as a reminder to model your own fundraising around private capital for longer. Revisit your runway and dilution assumptions, and consider whether strategic investors or revenue-based financing fit better than an IPO path in the near term.",
+              "note": "This is a signal about market conditions, not a guarantee—IPO windows can shift quickly."
             },
             "sources": [
               {
-                "id": "src-rss-techcrunch-ai-1789303639889-sgrzvc",
+                "id": "src-rss-techcrunch-ai-1789318790549-oasfck",
                 "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
                 "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
                 "domain": "techcrunch.com",
@@ -206,17 +205,17 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-techcrunch-ai-1789303639889-sgrzvc-0",
+                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-0",
                 "label": "OpenAI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1789303639889-sgrzvc-1",
+                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-1",
                 "label": "IPO",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1789303639889-sgrzvc-2",
+                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-2",
                 "label": "funding",
                 "type": "topic"
               }
@@ -227,20 +226,20 @@
             "publishedAt": "Sat, 12 Sep 2026 20:19:16 +0000"
           },
           {
-            "id": "rss-techcrunch-ai-1789303639889-g8c4db",
+            "id": "rss-techcrunch-ai-1789318790549-fgveob",
             "title": "Anthropic CEO Proposes 'Pacing the Frontier' to Slow AI Development",
-            "tldr": "Dario Amodei and Sam Altman both advocate for slowing down frontier AI development, but concrete plans remain vague. This signals a potential shift in industry norms that could affect AI product timelines and competitive dynamics.",
+            "tldr": "Dario Amodei and Sam Altman both suggest slowing down frontier AI development, but concrete plans remain vague. This signals a potential shift in industry norms that could affect model release cadences and competitive dynamics.",
             "whyItMatters": [
               "Regulatory and industry pressure may lead to slower release cycles for cutting-edge models, impacting product roadmaps.",
-              "Startups relying on rapid access to the latest models might need to adjust strategies if development pace slows."
+              "Startups relying on API access to frontier models might face delays or restricted capabilities, creating opportunities for open-source alternatives."
             ],
             "whatToTry": {
-              "description": "Review your product roadmap to identify dependencies on frontier model capabilities. Consider diversifying your AI stack with smaller, open-source models to mitigate risks from potential slowdowns.",
-              "note": "Monitor announcements from major AI labs for concrete policy changes."
+              "description": "Review your product's dependency on frontier model APIs and assess if you need to diversify with open-source or smaller models as a hedge against slower releases.",
+              "note": "Consider building abstraction layers to easily swap models if access becomes restricted."
             },
             "sources": [
               {
-                "id": "src-rss-techcrunch-ai-1789303639889-g8c4db",
+                "id": "src-rss-techcrunch-ai-1789318790549-fgveob",
                 "title": "Anthropic CEO outlines plan to slow AI development",
                 "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
                 "domain": "techcrunch.com",
@@ -249,12 +248,12 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-techcrunch-ai-1789303639889-g8c4db-0",
+                "id": "tag-rss-techcrunch-ai-1789318790549-fgveob-0",
                 "label": "AI Policy",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1789303639889-g8c4db-1",
+                "id": "tag-rss-techcrunch-ai-1789318790549-fgveob-1",
                 "label": "Industry",
                 "type": "topic"
               }
@@ -263,52 +262,9 @@
             "readTimeMinutes": 2,
             "isRead": false,
             "publishedAt": "Sat, 12 Sep 2026 19:34:44 +0000"
-          },
-          {
-            "id": "hn-49673098",
-            "title": "Nvidia as AI's Central Bank: Economist Analysis",
-            "tldr": "The Economist argues Nvidia has become the 'central bank of AI,' wielding outsized influence over the AI economy through its GPU dominance and strategic investments. The piece examines how this concentration of power shapes the entire AI industry's trajectory.",
-            "whyItMatters": [
-              "Nvidia's dominance creates systemic dependency risk for AI startups—supply constraints, pricing power, and strategic allocation decisions directly impact your infrastructure costs and timelines",
-              "Understanding Nvidia's 'central bank' role helps founders anticipate industry shifts, as their investment and partnership decisions signal where the AI ecosystem is heading"
-            ],
-            "whatToTry": {
-              "description": "Audit your AI infrastructure dependencies and model at least one alternative compute path (AMD, custom silicon, or cloud provider diversification) to reduce exposure to Nvidia supply and pricing decisions.",
-              "note": "This is analysis/opinion, not breaking news—use it as strategic context rather than an immediate action trigger."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49673098",
-                "title": "Nvidia is the central bank of AI",
-                "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-                "domain": "economist.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49673098-0",
-                "label": "Nvidia",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49673098-1",
-                "label": "AI Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49673098-2",
-                "label": "Industry Analysis",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-12T15:08:27Z"
           }
         ],
-        "totalReadTimeMinutes": 16,
+        "totalReadTimeMinutes": 14,
         "isAvailable": true,
         "isRead": false
       }
