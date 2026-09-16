@@ -8,160 +8,320 @@
         "period": "afternoon",
         "date": "2026-09-16",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Mistral and Mozilla Partner for Private Multilingual AI Browsing, KV Cache Tiering: 73x More Sessions, But Placement Policy Barely Matters, Metacognitive Steering Lets You Control AI's Scientific Judgment.",
+        "executiveSummary": "Today's highlights: Google Home Opens MCP Server: AI Agents Can Control Smart Devices, OpenAI Enters Advertising with Sponsored Agents and Commerce Integrations, OpenAI Expands ChatGPT Ads with Sponsored Agents.",
         "items": [
           {
-            "id": "hn-49723408",
-            "title": "Mistral and Mozilla Partner for Private Multilingual AI Browsing",
-            "tldr": "Mistral AI and Mozilla announced a partnership to integrate private, multilingual AI capabilities into browsing, sparking discussion on Hacker News with 151 points and 37 comments.",
+            "id": "rss-techcrunch-ai-1789580400259-xiue0m",
+            "title": "Google Home Opens MCP Server: AI Agents Can Control Smart Devices",
+            "tldr": "Google launched early access to an MCP server for Google Home, letting AI agents like Claude and ChatGPT control connected devices, review camera summaries, and access smart home activity via natural language.",
             "whyItMatters": [
-              "Could enable privacy-focused AI features in Firefox, potentially increasing user trust and adoption.",
-              "Highlights growing trend of on-device or private AI, relevant for founders building privacy-centric products.",
-              "Multilingual support opens opportunities for global user bases without compromising data privacy."
+              "Opens a new integration surface for AI products to act on physical environments, enabling agentic smart home apps and services.",
+              "Validates MCP as a standard for agent-to-device communication, potentially accelerating adoption across other IoT platforms."
             ],
             "whatToTry": {
-              "description": "Explore Mistral's API for multilingual and privacy-preserving AI features, and consider how similar integrations could enhance your own product's user experience.",
-              "note": "Monitor Mozilla's implementation details for insights on balancing AI utility with user privacy."
+              "description": "Sign up for the Google Home MCP early access and prototype a simple agent workflow that uses natural language to query camera summaries or control lights, then evaluate latency and reliability for your use case.",
+              "note": "Early access may have limited device support and API rate limits; test with non-critical devices first."
             },
             "sources": [
               {
-                "id": "src-hn-49723408",
-                "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-                "url": "https://mistral.ai/news/mistral-x-mozilla/",
-                "domain": "mistral.ai",
+                "id": "src-rss-techcrunch-ai-1789580400259-xiue0m",
+                "title": "Your AI agents can now control your Google Home devices",
+                "url": "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/",
+                "domain": "techcrunch.com",
                 "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-hn-49723408-0",
-                "label": "Mistral",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49723408-1",
-                "label": "Mozilla",
+                "id": "tag-rss-techcrunch-ai-1789580400259-xiue0m-0",
+                "label": "MCP",
                 "type": "tool"
               },
               {
-                "id": "tag-hn-49723408-2",
-                "label": "Privacy",
+                "id": "tag-rss-techcrunch-ai-1789580400259-xiue0m-1",
+                "label": "Google Home",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400259-xiue0m-2",
+                "label": "AI Agents",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "2026-09-16T08:08:57Z"
+            "publishedAt": "Wed, 16 Sep 2026 17:00:00 +0000"
           },
           {
-            "id": "rss-arxiv-ai-1789562413574-j7avc4",
-            "title": "KV Cache Tiering: 73x More Sessions, But Placement Policy Barely Matters",
-            "tldr": "A new arXiv study simulates KV cache placement across GPU HBM, CPU DRAM, and SSD for long-lived sessions, finding that tiering yields 73x more concurrent sessions and 62x lower cost per session, but the gains come from tier capacities, not placement policy. Recency minimizes migration traffic for chat, while reuse frequency wins for agents and document QA.",
+            "id": "rss-openai-blog-1789580400589-dblf86",
+            "title": "OpenAI Enters Advertising with Sponsored Agents and Commerce Integrations",
+            "tldr": "OpenAI announced AI-powered advertising experiences including Sponsored Agents, marketer tools, and integrations with HubSpot and Shopify, signaling a major push into adtech and conversational commerce.",
             "whyItMatters": [
-              "Business impact: Tiering can drastically reduce cost per session, enabling more concurrent users on existing GPUs and improving unit economics for long-context AI products.",
-              "Technical impact: Placement policy has minimal effect on throughput in compute-bound decode; it mainly affects PCIe migration traffic and time to first token, so simple recency may suffice for chat.",
-              "Research impact: The study debunks the effectiveness of predicted reuse policies, showing they can be byte-identical to recency, and highlights that a genuine EWMA predictor still underperforms reuse frequency."
+              "Opens a new monetization channel for AI platforms and creates fresh demand for adtech and commerce integrations.",
+              "Sponsored Agents could change how users discover products inside AI assistants, disrupting traditional search and display advertising.",
+              "HubSpot and Shopify integrations lower the barrier for SMBs to run AI-driven campaigns and automate sales funnels."
             ],
             "whatToTry": {
-              "description": "If you're building long-lived chat or agent sessions, implement a tiered KV cache using GPU HBM, CPU DRAM, and SSD. Start with a simple recency-based eviction policy for chat workloads, and switch to reuse-frequency-based placement for agent loops and document QA. Measure PCIe migration traffic and time to first token to validate improvements.",
-              "note": "The study is simulation-based; real-world performance may vary with hardware and workload specifics. Test with your own traces before committing to a policy."
+              "description": "If you're building an AI product with commerce or marketing use cases, evaluate how Sponsored Agents and the HubSpot/Shopify integrations could fit into your roadmap. Prototype a conversational ad or product discovery flow using OpenAI's APIs to test user engagement and conversion.",
+              "note": "Monitor OpenAI's documentation for API access and pricing details before committing to a full integration."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789562413574-j7avc4",
-                "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
-                "url": "https://arxiv.org/abs/2609.16215",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-openai-blog-1789580400589-dblf86",
+                "title": "Reimagining advertising with AI",
+                "url": "https://openai.com/index/reimagining-advertising-with-ai",
+                "domain": "openai.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-j7avc4-0",
-                "label": "KV Cache",
+                "id": "tag-rss-openai-blog-1789580400589-dblf86-0",
+                "label": "OpenAI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-openai-blog-1789580400589-dblf86-1",
+                "label": "Advertising",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-j7avc4-1",
-                "label": "Memory Tiering",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-j7avc4-2",
-                "label": "LLM Inference",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-j7avc4-3",
-                "label": "Research",
+                "id": "tag-rss-openai-blog-1789580400589-dblf86-2",
+                "label": "Commerce",
                 "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "releases",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Wed, 16 Sep 2026 13:00:00 GMT"
           },
           {
-            "id": "rss-arxiv-ai-1789562413574-zy58aa",
-            "title": "Metacognitive Steering Lets You Control AI's Scientific Judgment",
-            "tldr": "Researchers discovered a low-dimensional control structure inside a trillion-parameter model (Kimi 2.6) that governs shifts between exploration, execution, and critical reassessment. Their inference-time controller, Metacognitive Steering, steers these cognitive regimes without retraining, and was used in Columbus-1 to find eight reproducible BlueZ vulnerabilities.",
+            "id": "hn-49727041",
+            "title": "OpenAI Expands ChatGPT Ads with Sponsored Agents",
+            "tldr": "OpenAI is rolling out Sponsored Agents within ChatGPT, turning the assistant into an ad platform. This opens a new monetization channel but may shift user trust and competitive dynamics for AI products.",
             "whyItMatters": [
-              "Enables inference-time control of agent behavior (explore vs. exploit vs. reassess) without fine-tuning, potentially reducing compute costs for long-horizon tasks.",
-              "Could improve autonomous research agents by making them more disciplined and evidence-responsive, directly impacting AI-driven discovery pipelines.",
-              "Opens a new axis for product differentiation: dynamic cognitive regime steering as a feature for complex reasoning agents."
+              "New distribution channel for AI products to reach users via sponsored placements",
+              "Could pressure other AI assistants to adopt similar ad models, changing user expectations"
             ],
             "whatToTry": {
-              "description": "Experiment with inference-time steering vectors or activation interventions on your own models to control exploration vs. exploitation. Start by logging internal activations during tasks that require both, then try simple linear probes to identify a control direction.",
-              "note": "This is early research; the control surface may be model-specific. Begin with small-scale experiments before integrating into production."
+              "description": "Monitor OpenAI's Sponsored Agents rollout and evaluate if your product could benefit from sponsored placements. Start by reviewing OpenAI's advertising guidelines and consider a small test budget to measure conversion.",
+              "note": "Early adoption may offer lower costs but higher risk as the format is unproven."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789562413574-zy58aa",
-                "title": "Metacognitive Steering: Learning the Structure of Scientific Judgment",
-                "url": "https://arxiv.org/abs/2609.16245",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-hn-49727041",
+                "title": "OpenAI expands ChatGPT ads with Sponsored Agents",
+                "url": "https://openai.com/index/reimagining-advertising-with-ai/",
+                "domain": "openai.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-zy58aa-0",
-                "label": "Metacognitive Steering",
+                "id": "tag-hn-49727041-0",
+                "label": "OpenAI",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49727041-1",
+                "label": "Advertising",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-zy58aa-1",
-                "label": "Kimi 2.6",
+                "id": "tag-hn-49727041-2",
+                "label": "Monetization",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-16T13:51:15Z"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789580400260-h0f93b",
+            "title": "Anthropic Merges Claude Chat and Cowork Into One Interface",
+            "tldr": "Anthropic is combining its Claude chat experience with Cowork into a single unified interface, initially rolling out to Pro and Max subscribers. This signals a push toward consolidating conversational AI and collaborative work tools for paying users.",
+            "whyItMatters": [
+              "Consolidating chat and work collaboration could increase stickiness for Anthropic's paid tiers, raising the bar for competing AI productivity suites.",
+              "Founders building on or alongside Claude should watch for API/UX changes and potential new integration points as the interface evolves."
+            ],
+            "whatToTry": {
+              "description": "If you're on a Claude Pro or Max plan, test the merged interface to see how chat and Cowork workflows interact, and note any changes in latency, context handling, or collaboration features that could affect your product's integration.",
+              "note": "Feature availability may vary by region and plan; check Anthropic's release notes for exact rollout details."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789580400260-h0f93b",
+                "title": "Anthropic merges Claude chat and Cowork in one interface",
+                "url": "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-h0f93b-0",
+                "label": "Anthropic",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-h0f93b-1",
+                "label": "Claude",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-zy58aa-2",
-                "label": "Autonomous Research",
+                "id": "tag-rss-techcrunch-ai-1789580400260-h0f93b-2",
+                "label": "Product Update",
                 "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "industry",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Wed, 16 Sep 2026 16:30:00 +0000"
           },
           {
-            "id": "rss-techcrunch-ai-1789562413320-6sbru0",
-            "title": "Amazon Launches Alexa+ in India with Hindi Support",
-            "tldr": "Amazon is rolling out Alexa+ in India with Hindi language support, opening early access to all customers. This marks a major push into multilingual voice AI for the world's largest population.",
+            "id": "rss-techcrunch-ai-1789580400260-dl2cbj",
+            "title": "SK Hynix Eyes Intel US Fabs for AI Memory Production",
+            "tldr": "SK Hynix is reportedly in early talks with Intel to build memory chips in the US, though no plans are finalized. The move could reshape AI hardware supply chains and reduce reliance on Asian manufacturing.",
             "whyItMatters": [
-              "Opens a massive new market for voice AI products and skills, with Hindi serving over 600M speakers",
-              "Signals that multilingual support is becoming table stakes for AI assistants, raising the bar for startups targeting non-English markets"
+              "US-based memory production could ease supply constraints and geopolitical risks for AI hardware, potentially stabilizing costs for GPUs and accelerators.",
+              "Intel's foundry business gains a major partner, signaling a shift in the semiconductor landscape that may affect pricing and availability of AI chips."
             ],
             "whatToTry": {
-              "description": "If you're building voice or conversational AI, test your product's Hindi and Hinglish handling now. Consider adding Hindi language support or a localized version to capture demand in India's fast-growing AI market.",
-              "note": "Early access may have limited features; monitor Amazon's developer documentation for Alexa+ API updates."
+              "description": "Monitor SK Hynix and Intel announcements for concrete timelines and capacity details. If you're planning long-term AI infrastructure, start modeling scenarios where US-made memory reduces lead times and tariff exposure.",
+              "note": "Talks are early and unconfirmed; avoid making immediate purchasing decisions based on this news."
             },
             "sources": [
               {
-                "id": "src-rss-techcrunch-ai-1789562413320-6sbru0",
+                "id": "src-rss-techcrunch-ai-1789580400260-dl2cbj",
+                "title": "SK Hynix reportedly in talks with Intel to build memory chips in US",
+                "url": "https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-dl2cbj-0",
+                "label": "Hardware",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-dl2cbj-1",
+                "label": "Supply Chain",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-dl2cbj-2",
+                "label": "Intel",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 16 Sep 2026 13:23:02 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789580400260-ir3nhh",
+            "title": "Ex-Infosys Chief's AI Startup Raises $53M, Lands Enterprise Deals",
+            "tldr": "A Palo Alto AI startup founded by former Infosys CEO has added $53M to its seed round just weeks after its initial raise, claiming multiple seven-figure enterprise contracts within months of launch.",
+            "whyItMatters": [
+              "Signals strong investor appetite for enterprise AI startups with experienced leadership, even at early stages",
+              "Demonstrates that enterprise buyers are moving quickly to sign large AI contracts, validating go-to-market for B2B AI products"
+            ],
+            "whatToTry": {
+              "description": "Study the enterprise sales playbook of this startup: identify how they secured seven-figure contracts so quickly, and consider whether a similar founder-led or credibility-driven sales motion could accelerate your own enterprise pipeline.",
+              "note": "Enterprise deals often hinge on trust and track record; if you lack a marquee founder, invest in design partners and case studies to build equivalent credibility."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789580400260-ir3nhh",
+                "title": "Former Infosys chief’s AI startup nabs another $53M",
+                "url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-ir3nhh-0",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-ir3nhh-1",
+                "label": "Enterprise AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789580400260-ir3nhh-2",
+                "label": "Startups",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Wed, 16 Sep 2026 13:00:00 +0000"
+          },
+          {
+            "id": "hn-49725800",
+            "title": "DeepSeek v4.1 Flash Touted as Top Hacking Model on HackerNews",
+            "tldr": "A HackerNews discussion highlights DeepSeek v4.1 Flash as the best model for hacking tasks, based on a blog post from Enclave.ai. This signals growing recognition of DeepSeek's capabilities in security and code exploitation.",
+            "whyItMatters": [
+              "Security-focused AI models can automate vulnerability discovery and exploitation, impacting cybersecurity defenses.",
+              "DeepSeek's strong performance in hacking tasks may attract more developers to its platform, influencing AI tooling choices."
+            ],
+            "whatToTry": {
+              "description": "Evaluate DeepSeek v4.1 Flash for security testing or code review tasks in your development pipeline. Compare its performance against other models on your specific use cases.",
+              "note": "Ensure ethical use and compliance with security policies; avoid using for malicious purposes."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49725800",
+                "title": "DeepSeek v4.1 Flash Is Now Our Best Hacking Model",
+                "url": "https://enclave.ai/blog/deepseek-v41-flash-is-now-our-best-hacking-model",
+                "domain": "enclave.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49725800-0",
+                "label": "DeepSeek",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-49725800-1",
+                "label": "Security",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-16T12:19:55Z"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789580400260-m6re9j",
+            "title": "Amazon Launches Alexa+ in India with Hindi Support",
+            "tldr": "Amazon has launched Alexa+ in India, offering Hindi language support and early access to all customers. This move expands Amazon's AI assistant to a massive new market and highlights the growing importance of multilingual voice AI.",
+            "whyItMatters": [
+              "Opens up the large Indian market for voice AI products, creating new opportunities for developers building Alexa skills or integrating with Alexa+.",
+              "Demonstrates the demand for localized AI assistants, signaling a trend toward multilingual support in AI products."
+            ],
+            "whatToTry": {
+              "description": "If you're building voice-enabled AI products, consider adding Hindi or other regional language support to tap into the Indian market. Experiment with Amazon's Alexa Skills Kit to integrate with Alexa+ and reach early adopters.",
+              "note": "Early access may have limited features; monitor feedback and iterate quickly."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789580400260-m6re9j",
                 "title": "Amazon launches Alexa+ in India with Hindi support",
                 "url": "https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/",
                 "domain": "techcrunch.com",
@@ -170,18 +330,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-techcrunch-ai-1789562413320-6sbru0-0",
+                "id": "tag-rss-techcrunch-ai-1789580400260-m6re9j-0",
                 "label": "Alexa+",
                 "type": "tool"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1789562413320-6sbru0-1",
-                "label": "Multilingual AI",
+                "id": "tag-rss-techcrunch-ai-1789580400260-m6re9j-1",
+                "label": "Voice AI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1789562413320-6sbru0-2",
-                "label": "Voice Assistants",
+                "id": "tag-rss-techcrunch-ai-1789580400260-m6re9j-2",
+                "label": "Multilingual",
                 "type": "topic"
               }
             ],
@@ -191,268 +351,93 @@
             "publishedAt": "Wed, 16 Sep 2026 10:34:47 +0000"
           },
           {
-            "id": "rss-arxiv-ai-1789562413574-tsq70i",
-            "title": "Fisher Information Pruning Outperforms Magnitude Pruning",
-            "tldr": "A new pruning method uses geodesic distance in Fisher information space to determine which parameters to remove, beating traditional magnitude pruning on both fully-connected networks and vision transformers across all tested pruning ratios.",
+            "id": "rss-wired-ai-1789580400397-uzvsxx",
+            "title": "China Rejects Silicon Valley's AI Slowdown Call",
+            "tldr": "The US and China agree on AI risks but remain divided on regulation, with Beijing skeptical of any deal that preserves US tech dominance. This geopolitical standoff could lead to fragmented AI governance and market access challenges.",
             "whyItMatters": [
-              "Enables more efficient model compression, reducing inference costs and memory footprint for deployed AI products",
-              "Provides a principled geometric framework that could be extended to other compression techniques like quantization",
-              "Demonstrates consistent gains across architectures and datasets, suggesting broad applicability"
+              "Business impact: Founders may face divergent AI regulations in the US and China, complicating global go-to-market strategies and compliance.",
+              "Technical impact: A lack of international coordination could slow safety research and lead to incompatible AI standards, affecting model deployment and data sharing."
             ],
             "whatToTry": {
-              "description": "If you're deploying models to resource-constrained environments, experiment with Fisher information-based pruning as an alternative to standard magnitude pruning. Start by implementing the local Fisher approximation on a small model to see if it improves accuracy at high sparsity levels.",
-              "note": "The full geodesic method may be computationally intensive; the paper also presents efficient intermediate approximations that maintain near-optimal performance."
+              "description": "Assess your product's exposure to US-China regulatory divergence. If you operate in both markets, start scenario planning for compliance with potential separate AI rules. Consider diversifying your tech stack to avoid dependency on a single ecosystem.",
+              "note": "Monitor policy announcements from both governments; early adaptation can be a competitive advantage."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789562413574-tsq70i",
-                "title": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
-                "url": "https://arxiv.org/abs/2609.16129",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-wired-ai-1789580400397-uzvsxx",
+                "title": "China Isn’t Buying Silicon Valley’s Call for an AI Slowdown",
+                "url": "https://www.wired.com/story/china-isnt-buying-silicon-valley-call-for-ai-slowdown/",
+                "domain": "wired.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-tsq70i-0",
-                "label": "Pruning",
+                "id": "tag-rss-wired-ai-1789580400397-uzvsxx-0",
+                "label": "AI Regulation",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-tsq70i-1",
-                "label": "Model Compression",
+                "id": "tag-rss-wired-ai-1789580400397-uzvsxx-1",
+                "label": "Geopolitics",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-tsq70i-2",
-                "label": "Research",
+                "id": "tag-rss-wired-ai-1789580400397-uzvsxx-2",
+                "label": "Industry",
                 "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "industry",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Wed, 16 Sep 2026 09:30:00 +0000"
           },
           {
-            "id": "rss-arxiv-ai-1789562413574-a2do1b",
-            "title": "Frozen-Base Error Correction: Fix LLM Mistakes Without Retraining",
-            "tldr": "A new paper introduces CRN v2, a lightweight logit-level correction module that fixes 53% of errors in a frozen Gemma model without degrading base capabilities, unlike LoRA which causes 30-75% capability loss.",
+            "id": "rss-openai-blog-1789580400589-2n45qs",
+            "title": "OpenAI & AARP Launch ChatGPT Workshops for Older Adults",
+            "tldr": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
             "whyItMatters": [
-              "Enables targeted error correction in production LLMs without expensive retraining or catastrophic forgetting",
-              "Provides a practical alternative to fine-tuning for domain-specific fixes, preserving general capabilities"
+              "Signals OpenAI's push to expand AI literacy and adoption among a demographic often overlooked by tech products, potentially opening new market segments.",
+              "Highlights the growing need for safety and education around AI, which could influence product design and onboarding for non-technical users."
             ],
             "whatToTry": {
-              "description": "Experiment with a small correction module on top of a frozen LLM for your specific error patterns. Start by collecting error-correction pairs from your domain, then train a lightweight module (e.g., 1-5% of base model size) using SFT followed by DPO, while monitoring capability benchmarks to ensure no degradation.",
-              "note": "The KL preservation term is critical; don't skip it or correction performance drops significantly."
+              "description": "Consider how your product's onboarding and safety features could be adapted for older or less technical users. Run a small usability test with a non-technical demographic to identify friction points.",
+              "note": "Focus on clear language, simple UI, and built-in safeguards to build trust."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789562413574-a2do1b",
-                "title": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
-                "url": "https://arxiv.org/abs/2609.16145",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-openai-blog-1789580400589-2n45qs",
+                "title": "Helping older adults use AI in everyday life",
+                "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+                "domain": "openai.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789562413574-a2do1b-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-a2do1b-1",
-                "label": "Fine-tuning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-a2do1b-2",
-                "label": "Error Correction",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789562413574-yh6kci",
-            "title": "GNN+PPO Model Computes Evacuation Routes in 14ms on CPU",
-            "tldr": "Researchers propose GPEvac, a graph neural network combined with PPO that generates adaptive evacuation routes during shooting events, outperforming baselines across diverse building layouts while running in 14.73 ms on local CPU hardware.",
-            "whyItMatters": [
-              "Demonstrates that graph-based RL policies can generalize across different topologies without retraining, a pattern applicable to other spatial decision-making products.",
-              "Real-time inference on CPU (14 ms) makes edge deployment feasible for safety and robotics applications without expensive GPUs.",
-              "The edge-first message-passing with a virtual global node is a reusable architectural trick for any graph-structured control problem."
-            ],
-            "whatToTry": {
-              "description": "If you're building any system that makes decisions over spatial graphs (robotics, logistics, network routing), test whether adding a learnable virtual global node to your GNN improves cross-layout generalization. Start by replicating the edge-first sequential message-passing scheme on a small graph task you already have.",
-              "note": "The paper is simulation-only; real-world adversarial dynamics may differ significantly. Treat the 14 ms claim as hardware-dependent."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789562413574-yh6kci",
-                "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
-                "url": "https://arxiv.org/abs/2609.16163",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-yh6kci-0",
-                "label": "GNN",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-yh6kci-1",
-                "label": "Reinforcement Learning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-yh6kci-2",
-                "label": "Edge AI",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789562413574-1kfyul",
-            "title": "AI Wargames Are Dangerous Without Auditable Safety Cases",
-            "tldr": "A new arXiv position paper argues that LM-enabled strategic wargames should not inform planning, doctrine, or policy without an auditable safety case, and identifies five failure modes where model language shapes both intent and simulated reality.",
-            "whyItMatters": [
-              "Founders building agentic simulations or decision-support tools face a clear governance warning: open-ended LM roles can launder decisions and obscure adjudication, creating liability and trust risks.",
-              "The paper provides a concrete failure taxonomy (decision laundering, adjudication opacity, role collapse, escalation-through-adjudication, failure of strategic imagination) that can be used as a design checklist for high-stakes agent products."
-            ],
-            "whatToTry": {
-              "description": "If you build multi-agent or simulation products, add an 'auditable safety case' layer: log every model-generated action and adjudication decision with provenance, and run adversarial stress tests that specifically probe the five failure modes before any output is used in real planning.",
-              "note": "Ordinary benchmarks won't catch these failures; treat wargame-style stress tests as a diagnostic, not a safety guarantee."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789562413574-1kfyul",
-                "title": "Position: AI Is Not Ready for Strategic Conflicts",
-                "url": "https://arxiv.org/abs/2609.16189",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-1kfyul-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-1kfyul-1",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-1kfyul-2",
-                "label": "Simulation",
+                "id": "tag-rss-openai-blog-1789580400589-2n45qs-0",
+                "label": "OpenAI",
                 "type": "tool"
+              },
+              {
+                "id": "tag-rss-openai-blog-1789580400589-2n45qs-1",
+                "label": "AI literacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-openai-blog-1789580400589-2n45qs-2",
+                "label": "accessibility",
+                "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "releases",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789562413574-da18a4",
-            "title": "Calibrated Router Boosts LLM Serving Goodput by 3.5%",
-            "tldr": "A new study shows that a router calibrated with hardware-specific constants can improve goodput in disaggregated LLM serving by up to 3.5% over round robin and reduce tail latency by 40%. The approach uses exact prompt length, predicted output length, KV cache pressure, and SLO class to route requests.",
-            "whyItMatters": [
-              "Business impact: Higher goodput and lower tail latency can reduce serving costs and improve user experience, especially for bursty workloads.",
-              "Technical impact: Demonstrates that hardware calibration is crucial for routing policies; simulator-derived constants lose most benefits, highlighting the need for real-world tuning."
-            ],
-            "whatToTry": {
-              "description": "If you operate a disaggregated LLM serving system, consider implementing a routing policy that estimates completion time per instance using prompt length, predicted output length, KV cache pressure, and SLO class. Calibrate the constants on your actual hardware rather than relying on simulator defaults.",
-              "note": "Benefits are most significant with larger decode pools and heterogeneous traffic; for small pools (3 instances), simple queue-based routing may suffice."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789562413574-da18a4",
-                "title": "Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving",
-                "url": "https://arxiv.org/abs/2609.16206",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-da18a4-0",
-                "label": "LLM serving",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-da18a4-1",
-                "label": "routing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-da18a4-2",
-                "label": "vLLM",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789562413574-vt7sxt",
-            "title": "AI Biosecurity Risks: Digital Uplift Outpaces Physical Barriers",
-            "tldr": "A new arXiv review maps how AI capabilities—LLMs, biological foundation models, and agentic labs—create biosecurity risks, finding that AI uplift is currently stronger for digital tasks (e.g., in-silico design and screening evasion) than physical wet-lab execution, where tacit knowledge remains a barrier.",
-            "whyItMatters": [
-              "Founders building bio-AI tools may face increasing regulatory scrutiny and governance requirements around dual-use capabilities.",
-              "Understanding where AI provides real uplift (digital vs. physical) helps prioritize safety investments and risk assessments.",
-              "Alignment techniques from general-purpose models may not transfer to biological models, creating a new technical challenge for safe AI development."
-            ],
-            "whatToTry": {
-              "description": "If you work on bio-AI or agentic lab systems, review the paper's threat pathway taxonomy and assess which stages of your product could be misused. Consider implementing defense-in-depth safeguards such as access controls, usage monitoring, and screening for dangerous requests.",
-              "note": "Focus first on digital capabilities like sequence design or protocol generation, as these currently pose the highest uplift risk."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789562413574-vt7sxt",
-                "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
-                "url": "https://arxiv.org/abs/2609.16213",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-vt7sxt-0",
-                "label": "Biosecurity",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-vt7sxt-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789562413574-vt7sxt-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 16 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Wed, 16 Sep 2026 16:00:00 GMT"
           }
         ],
-        "totalReadTimeMinutes": 28,
+        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
