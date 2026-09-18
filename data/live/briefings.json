@@ -1,7 +1,471 @@
 [
   {
-    "date": "2026-09-17",
+    "date": "2026-09-18",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-18-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-18",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: MAGS: Multi-Agent Framework Guarantees Safety for AI-Generated Code, LLM Agents Hallucinate Tools No Gate Can Catch, Study Finds, New Paper Proposes 'Foundation Model OS' to Virtualize AI Agents.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1789733847408-7ih3s0",
+            "title": "MAGS: Multi-Agent Framework Guarantees Safety for AI-Generated Code",
+            "tldr": "Researchers introduce MAGS, a multi-agent system that uses formal verification (via Dafny) to guarantee safety properties in LLM-generated code, achieving 100% success across 220 test cases including CUDA kernels and robotic tasks.",
+            "whyItMatters": [
+              "Enables deployment of AI-generated code in safety-critical domains like robotics and GPU programming where human review is infeasible",
+              "Provides a practical path to formal guarantees without manual proof engineering, potentially reducing liability and compliance risks",
+              "Could become a standard layer in AI coding pipelines, differentiating products that offer verified outputs"
+            ],
+            "whatToTry": {
+              "description": "Experiment with integrating formal verification into your AI code generation workflow. Start by identifying a small set of critical safety properties for your domain, then explore Dafny or similar verification-aware languages as an intermediate representation. You can prototype a multi-agent repair loop where a verifier provides feedback to the generator.",
+              "note": "MAGS is a research prototype; adapting it to your stack may require significant engineering. Consider starting with a narrow use case where safety is paramount."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-7ih3s0",
+                "title": "MAGS: Multi-agent Auto-formalization Guarantees Safety for Agentic Outputs",
+                "url": "https://arxiv.org/abs/2609.19391",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-0",
+                "label": "Multi-Agent",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-1",
+                "label": "Formal Verification",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-2",
+                "label": "Code Generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-3",
+                "label": "Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-8dg0y3",
+            "title": "LLM Agents Hallucinate Tools No Gate Can Catch, Study Finds",
+            "tldr": "A new arXiv paper shows tool hallucination is a structural blind spot: agents call tools that don't exist, and no downstream gate can reject them because the call never passed through a real decision. Across 10 hosted models, fabricated-tool calls concentrated on raw-JSON surfaces (34 vs 3), and a 675B model performed no better than a 7-8B one.",
+            "whyItMatters": [
+              "If you're building tool-calling agents, your current gating/security layer may be silently ineffective against hallucinated tools — you need a registry membership + signature check BEFORE any causal gate.",
+              "Model scale won't save you: a 675B model hallucinated tools as often as a 7-8B one, so upgrading models is not a fix for this failure mode.",
+              "MCP's multi-server namespace merging creates new hallucination surfaces (M1-M5) that a single registry can't express — relevant if you're adopting Model Context Protocol."
+            ],
+            "whatToTry": {
+              "description": "Add a closed-world resolver in front of your agent's tool execution: maintain an explicit registry of allowed tool names and validate every emitted call's name and argument schema against it before any policy gate runs. Log and reject any call whose tool isn't in the registry.",
+              "note": "The paper notes one irreducible residue: borrowed arguments that are schema-indistinguishable from valid calls. Registry checks won't catch those — pair with argument provenance checks."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-8dg0y3",
+                "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents",
+                "url": "https://arxiv.org/abs/2609.19425",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-0",
+                "label": "LLM Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-1",
+                "label": "Tool Calling",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-2",
+                "label": "MCP",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-3",
+                "label": "Safety",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-xhisv4",
+            "title": "New Paper Proposes 'Foundation Model OS' to Virtualize AI Agents",
+            "tldr": "A new arXiv position paper argues that today's fragmented agentic stacks need a Foundation Model Operating System (FMOS) to virtualize model interactions, manage state, memory, budgets, and guardrails, and enable portable, trustworthy AI applications.",
+            "whyItMatters": [
+              "Standardizing the agent runtime layer could unlock portability and governance, reducing vendor lock-in and compliance headaches for AI products.",
+              "Founders building agent frameworks may need to adapt to or integrate with an emerging FMOS abstraction, similar to how apps moved to OS-managed services."
+            ],
+            "whatToTry": {
+              "description": "Read the paper and map your current agent architecture against the proposed FMOS responsibilities (memory tiers, model selection, verification, policy enforcement). Identify which components you've custom-built that could be abstracted or standardized, and consider prototyping a thin internal 'OS layer' to decouple your application logic from specific model providers.",
+              "note": "This is a position paper, not a released system—treat it as a design lens, not an implementation guide."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-xhisv4",
+                "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
+                "url": "https://arxiv.org/abs/2609.19203",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-1",
+                "label": "Infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-z7qyay",
+            "title": "New Benchmark Reveals LLMs Fail at True Systematic Generalization",
+            "tldr": "Researchers introduce TranSGrid, a reasoning-centered benchmark that exposes a major gap in Transformer systematic generalization: the largest model solves 79.6% of a standard held-out test set but only 55.3% on TranSGrid and 15.8% on the hardest subset. The study shows that common simplifications in existing benchmarks artificially inflate performance.",
+            "whyItMatters": [
+              "Benchmark design directly impacts how we measure and compare model reasoning capabilities, affecting product claims and model selection.",
+              "Models that appear robust on standard tests may fail on tasks requiring genuine recombination of knowledge, impacting reliability in real-world applications.",
+              "Understanding these limitations can guide the development of more robust architectures and training methods."
+            ],
+            "whatToTry": {
+              "description": "Review your evaluation suite for tasks that require deductive, inductive, and abductive reasoning. Consider adding or adapting tests similar to TranSGrid to uncover hidden generalization gaps in your models.",
+              "note": "Focus on tasks where actions are not linearly composable and goals are not explicitly stated, as these are common simplifications that mask failures."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-z7qyay",
+                "title": "What Do Current Systematic Generalization Tasks Miss? A Reasoning-Centered Analysis",
+                "url": "https://arxiv.org/abs/2609.19212",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-0",
+                "label": "Systematic Generalization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-1",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-2",
+                "label": "Reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-q69n9x",
+            "title": "Study: More Web Search Doesn't Make LLM Agents Better",
+            "tldr": "First end-to-end study of agentic web search across ChatGPT, Claude, Grok, and DeepSeek finds search invocation frequency doesn't correlate with response quality, platforms favor their own domains, and some claims rely on uncited results.",
+            "whyItMatters": [
+              "If you're building RAG or agentic search, blindly increasing search calls may hurt quality and cost — the paper shows more invocation ≠ better answers.",
+              "Platform search engines show domain bias, so relying on a single provider's search tool can skew your product's sources and introduce attribution/reliability risks.",
+              "Uncited claims grounded in search results raise compliance and trust concerns for any product that cites sources."
+            ],
+            "whatToTry": {
+              "description": "Run a small A/B test on your agent's search behavior: compare a baseline that always searches against a version with a decision gate (e.g., only search when the query needs fresh facts). Measure answer quality and cost per query to see if fewer, better-timed searches win.",
+              "note": "Also log which domains your search provider returns most often — you may be inheriting a hidden bias."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-q69n9x",
+                "title": "Characterizing Web Search by Conversational LLM Agents: From Search Decisions and Strategies to Results and Responses",
+                "url": "https://arxiv.org/abs/2609.19244",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-0",
+                "label": "RAG",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-1",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-2",
+                "label": "Web Search",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-lo8sob",
+            "title": "Do AI Agents Actually Understand Hardware, Or Just Turn Knobs?",
+            "tldr": "A new arXiv paper (AutoTuring) tests whether AI agents designing hardware truly reason about architecture or just blindly search. By giving the same agent the same accelerator space twice—once with meaningful names, once as anonymous variables—they found that semantic framing improves performance by 12.3% and cuts simulator calls by 70%, but a critic loop can recover most of that gap for the blind agent.",
+            "whyItMatters": [
+              "Reveals that agent performance on hardware design tasks may be overestimated if evaluations don't control for problem framing—critical for benchmarking AI agents.",
+              "Suggests that structured critique loops can substitute for domain knowledge, offering a cheaper path to building effective design agents.",
+              "Highlights a methodological gap in AI agent evaluation: most benchmarks vary the agent, not the problem representation, missing whether agents truly understand."
+            ],
+            "whatToTry": {
+              "description": "When evaluating your own AI agent on design or optimization tasks, run a controlled experiment: present the same problem with meaningful feature names and again with anonymized features. Measure the performance gap to see if your agent relies on semantic understanding or just search. If the gap is large, consider adding a critic loop to boost the blind version.",
+              "note": "Preliminary findings based on 5-6 runs per condition on a single modeled accelerator; treat as directional, not definitive."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-lo8sob",
+                "title": "Do AI Agents Understand Computer Architecture?",
+                "url": "https://arxiv.org/abs/2609.19387",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-0",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-1",
+                "label": "Hardware Design",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49749656",
+            "title": "OpenAI Internal Repos Compromised via Heap Overflow and SSO Misconfiguration",
+            "tldr": "A security researcher detailed how a heap overflow and SSO misconfiguration allowed compromise of OpenAI's internal repositories, sparking a 159-comment HackerNews discussion. This highlights critical supply chain and access control risks for AI companies.",
+            "whyItMatters": [
+              "AI companies are high-value targets; a breach can expose proprietary models, training data, and customer information.",
+              "SSO misconfigurations are common and can lead to lateral movement; heap overflows remain a potent exploit vector.",
+              "Founders must prioritize security hygiene to protect IP and maintain user trust."
+            ],
+            "whatToTry": {
+              "description": "Audit your SSO configuration for overly permissive access and ensure all services enforce least privilege. Review memory-safe coding practices and consider using Rust or Go for critical components to mitigate heap overflows.",
+              "note": "Regular penetration testing and bug bounty programs can help catch such issues early."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49749656",
+                "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+                "url": "https://www.hacktron.ai/blog/hacking-openai",
+                "domain": "hacktron.ai",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49749656-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49749656-1",
+                "label": "OpenAI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49749656-2",
+                "label": "SSO",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-18T02:47:24Z"
+          },
+          {
+            "id": "hn-49752056",
+            "title": "Microsoft Exec's 'Largest Theft of Labor' Remark Surfaces in Unredacted Filings",
+            "tldr": "Newly unredacted court filings reveal a Microsoft executive describing AI scraping as 'the largest theft of labor in human history,' sparking a 210-comment HackerNews debate about data provenance and fair use.",
+            "whyItMatters": [
+              "Signals that even major AI players internally acknowledge the legal and ethical fragility of web-scraped training data, raising the risk of future licensing mandates or litigation.",
+              "Founders relying on scraped datasets may face rising compliance costs, retroactive licensing demands, or reputational backlash as these admissions enter the public record."
+            ],
+            "whatToTry": {
+              "description": "Audit your training data pipeline this week: document the source, license, and provenance of every dataset you use, and flag any scraped content without explicit permission. Start drafting a data provenance policy you can show to investors or legal counsel.",
+              "note": "Even if your jurisdiction currently allows scraping, the regulatory and PR climate is shifting fast—being able to demonstrate good-faith sourcing is becoming a competitive advantage."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49752056",
+                "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
+                "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49752056-0",
+                "label": "Data Scraping",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49752056-1",
+                "label": "AI Regulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49752056-2",
+                "label": "Legal",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-18T09:45:07Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-fgl1sl",
+            "title": "New Benchmark Exposes LLM Weakness in Biophysics Reasoning",
+            "tldr": "BioPhys-Bridge, a new benchmark for interdisciplinary scientific reasoning, reveals that even top models like DeepSeek-V4-Flash struggle with evidence-grounded QA in biophysics, achieving only 0.36 F1 on evidence-ID retrieval. This highlights a critical gap for AI products targeting scientific R&D.",
+            "whyItMatters": [
+              "Scientific AI tools must handle complex, multi-step reasoning with quantitative grounding; current models are far from reliable, creating both risk and opportunity for specialized solutions.",
+              "The benchmark's structure (evidence blocks, stable IDs, units, equations) offers a blueprint for building more faithful RAG systems in technical domains."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for scientific literature or R&D, test your system against BioPhys-Bridge or similar evidence-grounded benchmarks. Use the failure modes (e.g., low evidence-ID F1) to prioritize improvements in retrieval and quantitative reasoning.",
+              "note": "The benchmark is initially focused on biophysics, but the methodology can be adapted to other interdisciplinary fields."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-fgl1sl",
+                "title": "BioPhys-Bridge: A Benchmark for Interdisciplinary Scientific Reasoning in Physics-Grounded Biological Research",
+                "url": "https://arxiv.org/abs/2609.19180",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-1",
+                "label": "Scientific Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-2",
+                "label": "RAG",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1789733847408-2ufguc",
+            "title": "14,767 Papers Reveal How LLM Benchmarks Are Evolving",
+            "tldr": "A large-scale arXiv analysis maps 14,767 evaluation papers from 2022-2026, showing benchmarks shifting toward action, interaction, and professional applications—while LLM-based scoring grows and model-generated test materials stagnate.",
+            "whyItMatters": [
+              "Benchmark design is shifting toward agentic and professional tasks, signaling where investor and customer expectations for AI products are heading",
+              "Growing reliance on LLM-as-judge scoring raises a real risk of evaluation blind spots and preference reproduction, which founders should account for in their own evals"
+            ],
+            "whatToTry": {
+              "description": "Audit your internal evaluation suite against the paper's three dimensions: target systems (static vs. agentic), evaluation materials (human vs. model-generated), and scoring mechanisms (human vs. LLM-judge). Identify where you rely solely on LLM-based scoring and add at least one independent human or rule-based check for high-stakes tasks.",
+              "note": "The paper is a meta-analysis of benchmark trends, not a new benchmark itself—use it as a design checklist, not a leaderboard."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1789733847408-2ufguc",
+                "title": "What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks",
+                "url": "https://arxiv.org/abs/2609.19182",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-0",
+                "label": "Benchmarks",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-2",
+                "label": "LLM-as-Judge",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 29,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-17-afternoon",
@@ -903,7 +1367,7 @@
   },
   {
     "date": "2026-09-16",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Sep 16",
     "briefings": [
       {
         "id": "briefing-2026-09-16-afternoon",
@@ -4926,915 +5390,6 @@
           }
         ],
         "totalReadTimeMinutes": 24,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-09-10",
-    "displayDate": "Thursday, Sep 10",
-    "briefings": [
-      {
-        "id": "briefing-2026-09-10-afternoon",
-        "period": "afternoon",
-        "date": "2026-09-10",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: DeepSeek Drops V4.1 Flash: Faster, Cheaper Open-Weight Model, Memory in LLM Agents: Costly, Unreliable, But Essential, AutoFyn: Frozen Models Beat Provider Agents via Persistent Memory.",
-        "items": [
-          {
-            "id": "hn-49639090",
-            "title": "DeepSeek Drops V4.1 Flash: Faster, Cheaper Open-Weight Model",
-            "tldr": "DeepSeek released V4.1 Flash on Hugging Face, a new open-weight model promising faster inference and lower cost. It's trending on Hacker News, signaling strong developer interest in cheaper alternatives to closed frontier models.",
-            "whyItMatters": [
-              "Cost pressure: A cheaper, fast open-weight model lets startups cut inference spend and reduce reliance on expensive closed APIs.",
-              "Competitive shift: DeepSeek's rapid release cadence keeps pressure on OpenAI, Anthropic, and Google to justify premium pricing.",
-              "Deployment flexibility: Open weights enable self-hosting, fine-tuning, and on-prem/edge use cases closed APIs can't serve."
-            ],
-            "whatToTry": {
-              "description": "Pull the DeepSeek-V4.1-Flash weights from Hugging Face and run a head-to-head benchmark against your current production model on your own eval set, measuring latency, cost per 1K tokens, and task accuracy.",
-              "note": "Verify the license terms and check community reports on real-world throughput before committing to a migration."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49639090",
-                "title": "DeepSeek v4.1 Flash",
-                "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49639090-0",
-                "label": "DeepSeek",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49639090-1",
-                "label": "Open Weights",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49639090-2",
-                "label": "Inference Cost",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-10T06:11:05Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1789059762468-y69mat",
-            "title": "Memory in LLM Agents: Costly, Unreliable, But Essential",
-            "tldr": "New benchmark MERIT reveals long-term memory boosts task success from 0% to 55-100% but costs $42.57 for 23k episodes, and embedding retrieval fails unpredictably on updated facts while structured stores stay reliable.",
-            "whyItMatters": [
-              "Business impact: Memory features can dramatically improve agent performance, but cost accounting shows they're not free—budget for token and dollar costs per memory operation.",
-              "Technical impact: Embedding-based retrieval is unreliable for updated facts; structured fact stores or LLM summarization are more robust, and hybrids can underperform."
-            ],
-            "whatToTry": {
-              "description": "If your agent uses long-term memory, run a cost-benefit analysis: measure task success with and without memory, and test different memory implementations (embedding vs. structured store) on updated-fact scenarios.",
-              "note": "Consider using a structured fact store or LLM summarization for critical updates, as embedding retrieval may fail unpredictably."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789059762468-y69mat",
-                "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
-                "url": "https://arxiv.org/abs/2609.05441",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-y69mat-0",
-                "label": "LLM agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-y69mat-1",
-                "label": "memory",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-y69mat-2",
-                "label": "benchmark",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789059762468-ihgv7p",
-            "title": "AutoFyn: Frozen Models Beat Provider Agents via Persistent Memory",
-            "tldr": "A new arXiv technical report introduces AutoFyn, an agent harness that improves frozen LLMs across rounds by updating persistent state (memory files, reports, repo state) from verified rewards instead of model weights. It outperformed provider coding agents on fresh 2026 IMO problems, topped the Spider 2.0 dbt benchmark, and produced 16 maintainer-confirmed vulnerability advisories in major open-source projects.",
-            "whyItMatters": [
-              "Demonstrates that agent scaffolding and persistent state can outperform fine-tuning or model swaps, potentially reducing reliance on expensive retraining or the latest model releases.",
-              "Achieves top benchmark results and real-world security impact without modifying model weights, suggesting a scalable path for long-horizon autonomous agents.",
-              "The verified reward loop and explicit interfaces (memory files, reports) offer a blueprint for building reliable, auditable agent systems."
-            ],
-            "whatToTry": {
-              "description": "Prototype a persistent memory layer for your agent that stores verified outcomes from each run and feeds them back as context for the next session. Start by logging task results and using a simple verifier (e.g., unit tests, human review) to generate reward signals, then inject the distilled lessons into the agent's prompt or memory file.",
-              "note": "Focus on domains where verification is cheap and objective (code, math, data tasks) to avoid noisy rewards."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789059762468-ihgv7p",
-                "title": "AutoFyn Technical Report: Non-Parametric Expert Iteration for Long-Horizon Agents",
-                "url": "https://arxiv.org/abs/2609.05446",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-ihgv7p-0",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-ihgv7p-1",
-                "label": "AutoFyn",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-ihgv7p-2",
-                "label": "Expert Iteration",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762468-ihgv7p-3",
-                "label": "Benchmark",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-openai-blog-1789059762559-6bb8to",
-            "title": "OpenAI Launches Data Agent in ChatGPT Work",
-            "tldr": "OpenAI released a Data agent within ChatGPT Work that lets users connect company data, uncover insights, and build interactive dashboards using natural language. This lowers the barrier for non-technical teams to perform data analysis and could reshape internal BI workflows.",
-            "whyItMatters": [
-              "Business impact: Democratizes data analysis, enabling non-technical staff to generate dashboards and insights without SQL or BI tools, potentially reducing reliance on data teams.",
-              "Technical impact: Signals a shift toward agentic AI in enterprise workflows, where LLMs directly interact with databases and generate interactive outputs, raising the bar for AI product integration."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product, evaluate how natural language data querying could be integrated into your own tool. Test ChatGPT Work's Data agent with a sample dataset to understand its capabilities and limitations, then consider how similar features could enhance your product's value proposition.",
-              "note": "Focus on data privacy and security when connecting sensitive company data; ensure compliance with your organization's policies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789059762559-6bb8to",
-                "title": "Now everyone can put data to work",
-                "url": "https://openai.com/index/put-data-to-work",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789059762559-6bb8to-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789059762559-6bb8to-1",
-                "label": "Data Analysis",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789059762559-6bb8to-2",
-                "label": "Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 15:00:00 GMT"
-          },
-          {
-            "id": "rss-arxiv-ai-1789059762467-34p0mz",
-            "title": "CriticGen: Turn LLM Evaluation into Actionable Feedback",
-            "tldr": "CriticGen is a new evaluation framework that generates instance-specific rubrics and executable refinement suggestions, improving 73% of answers with a 93% non-degradation rate. It shifts evaluation from static scoring to generation-aware control, enabling targeted model improvement.",
-            "whyItMatters": [
-              "Business impact: Enables automated, high-quality feedback loops for LLM products, reducing manual review costs and accelerating iteration cycles.",
-              "Technical impact: Provides a method to dynamically generate evaluation criteria and refinement suggestions, improving model outputs without retraining."
-            ],
-            "whatToTry": {
-              "description": "Implement a similar rubric-conditioned refinement step in your LLM pipeline: after generating an answer, use a separate LLM call to generate evaluation criteria and a refinement suggestion, then regenerate the answer based on that suggestion. Measure improvement on a validation set.",
-              "note": "Start with a small, diverse set of prompts to validate the approach before scaling."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789059762467-34p0mz",
-                "title": "CriticGen: Generation-Aware Evaluation as Actionable Feedback",
-                "url": "https://arxiv.org/abs/2609.05439",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789059762467-34p0mz-0",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762467-34p0mz-1",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789059762467-34p0mz-2",
-                "label": "Feedback",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-openai-blog-1789059762559-m6o4to",
-            "title": "AI-Powered Antibiotic Discovery: Codex and ChatGPT in the Lab",
-            "tldr": "A researcher uses OpenAI's Codex and ChatGPT to mine living and extinct genomes for new antimicrobial molecules, showcasing AI's potential in scientific discovery.",
-            "whyItMatters": [
-              "Demonstrates a practical, high-impact use case for AI in drug discovery, potentially opening new business opportunities in biotech.",
-              "Highlights how AI can accelerate genomic analysis and hypothesis generation, reducing R&D timelines."
-            ],
-            "whatToTry": {
-              "description": "Explore how AI can augment your domain: identify a repetitive, data-intensive task in your field and prototype a solution using LLMs or code generation models.",
-              "note": "Focus on tasks where pattern recognition across large datasets is key."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789059762559-m6o4to",
-                "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-                "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789059762559-m6o4to-0",
-                "label": "AI in Science",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789059762559-m6o4to-1",
-                "label": "Codex",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789059762559-m6o4to-2",
-                "label": "ChatGPT",
-                "type": "model"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 16:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789059762320-e6gt5e",
-            "title": "AI Agents Overwhelm Public Services with Automated Requests",
-            "tldr": "AI agents are flooding public services with automated requests, but most are legitimate claims from entitled individuals, according to a researcher. This signals a growing challenge for government systems to handle AI-driven demand.",
-            "whyItMatters": [
-              "Public sector digital infrastructure may need urgent upgrades to handle AI agent traffic.",
-              "Founders building AI agents must consider compliance and rate-limiting to avoid being blocked or regulated."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI agents that interact with public APIs or services, implement respectful rate limiting and identify your agent with a clear user-agent string to avoid being mistaken for malicious traffic.",
-              "note": "Monitor for new regulations or terms of service updates from government APIs as they adapt to agent traffic."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789059762320-e6gt5e",
-                "title": "AI agents are flooding public services with new requests",
-                "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762320-e6gt5e-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762320-e6gt5e-1",
-                "label": "public services",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762320-e6gt5e-2",
-                "label": "regulation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 14:53:50 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789059762321-xiy9ar",
-            "title": "Maven Robotics Exits Stealth with $100M to Disrupt Robot Deployment",
-            "tldr": "Maven Robotics launched from stealth with a $100 million Series A and active deployments, aiming to capture robot deployment deals. This signals growing investor confidence in robotics and potential partnership or competitive opportunities for AI product founders.",
-            "whyItMatters": [
-              "Business impact: A well-funded new entrant could disrupt existing robot deployment partnerships, creating opportunities for AI integration or competitive threats.",
-              "Technical impact: Maven's deployment approach may set new standards for robotics-as-a-service, influencing how AI models are deployed in physical environments."
-            ],
-            "whatToTry": {
-              "description": "Research Maven Robotics' technology stack and deployment model to assess if their APIs or services could complement your AI product, or if they represent a competitive threat. Reach out for a demo or partnership discussion.",
-              "note": "Focus on their integration capabilities and whether they offer SDKs for AI developers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789059762321-xiy9ar",
-                "title": "Maven Robotics wants to steal your robot deployment deal",
-                "url": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762321-xiy9ar-0",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762321-xiy9ar-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789059762321-xiy9ar-2",
-                "label": "Deployment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 14:17:37 +0000"
-          },
-          {
-            "id": "hn-49643112",
-            "title": "Researchers Allege OpenAI Trained on Conversations, Then Claimed Breakthrough",
-            "tldr": "Two HackerNews threads with hundreds of upvotes discuss claims that OpenAI trained on private conversations and may have 'stolen' a major mathematical proof, raising fresh questions about training data provenance and research ethics.",
-            "whyItMatters": [
-              "Data provenance scrutiny is intensifying — founders relying on scraped or user-generated data should audit their pipelines for legal and reputational risk",
-              "Allegations of 'stolen' research could reshape how AI labs credit prior work, affecting partnerships and academic collaborations"
-            ],
-            "whatToTry": {
-              "description": "Review your training data sourcing documentation and add provenance tracking for any user-generated or conversational data. If you use third-party datasets, verify their licensing and origin before your next model release.",
-              "note": "These are unverified allegations from social discussion — treat as a signal to audit, not as confirmed fact."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49643112-0",
-                "title": "HackerNews",
-                "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
-                "domain": "bsky.app",
-                "type": "article"
-              },
-              {
-                "id": "src-hn-49643112-1",
-                "title": "HackerNews",
-                "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
-                "domain": "bsky.app",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49643112-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49643112-1",
-                "label": "Data Provenance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49643112-2",
-                "label": "Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-10T13:07:14Z"
-          },
-          {
-            "id": "rss-wired-ai-1789059762325-18bgyh",
-            "title": "Clearview AI Tests Cop Tool to Unearth Your Online Life",
-            "tldr": "Clearview AI is prototyping InquiryIQ, a tool that uses xAI's Grok model to surface associates, social accounts, and personal data about individuals identified through its facial recognition system, potentially giving police instant deep-dive capabilities.",
-            "whyItMatters": [
-              "Raises major privacy and ethical red flags for AI-powered surveillance, likely triggering regulatory scrutiny and public backlash that could affect all AI developers.",
-              "Demonstrates how LLMs like Grok can be repurposed for sensitive data aggregation, highlighting risks of misuse and the need for robust safeguards in AI products."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's potential for misuse in surveillance or data aggregation, and implement strict access controls and ethical guidelines to prevent similar applications.",
-              "note": "Consider conducting a red-team exercise to identify unintended use cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789059762325-18bgyh",
-                "title": "Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online",
-                "url": "https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789059762325-18bgyh-0",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789059762325-18bgyh-1",
-                "label": "Surveillance",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789059762325-18bgyh-2",
-                "label": "Grok",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 10:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 23,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-09-10-evening",
-        "period": "evening",
-        "date": "2026-09-10",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI Pauses Pro Sign-Ups as Astra Demand Overwhelms Capacity, Pocket FM Hits $500M Run Rate with 93% AI-Generated Audio, OpenAI Launches Data Agent in ChatGPT Work.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1789080180320-e0o09d",
-            "title": "OpenAI Pauses Pro Sign-Ups as Astra Demand Overwhelms Capacity",
-            "tldr": "OpenAI has temporarily stopped accepting new Pro subscription sign-ups, citing that Pro users put the most strain on its systems, while it works to add more capacity. The move signals that demand for its newest model, Astra, is outpacing infrastructure.",
-            "whyItMatters": [
-              "Capacity constraints at a leading AI provider can create openings for competitors and signal that compute, not demand, is the current bottleneck.",
-              "Founders relying on OpenAI's highest-tier access may face onboarding delays or throttling, making multi-provider strategies more important.",
-              "A pause on the most expensive tier suggests OpenAI is prioritizing reliability for existing paying users over short-term revenue growth."
-            ],
-            "whatToTry": {
-              "description": "Audit your product's dependency on OpenAI's top-tier models and set up a fallback to an alternative provider or a lower-cost model tier so a capacity pause doesn't block your users.",
-              "note": "Check whether your account already has Pro access before assuming you're affected; existing subscribers appear to be unaffected."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-e0o09d",
-                "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
-                "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-e0o09d-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-e0o09d-1",
-                "label": "Astra",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-e0o09d-2",
-                "label": "Infrastructure",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 20:59:51 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-auanyj",
-            "title": "Pocket FM Hits $500M Run Rate with 93% AI-Generated Audio",
-            "tldr": "India's Pocket FM doubled its revenue run rate to $500M, with AI producing 99% of new content and cutting production costs by 80x. This is one of the clearest proofs yet that AI-generated content can scale into a massive, profitable business.",
-            "whyItMatters": [
-              "Demonstrates a proven path to profitability by using AI to slash content production costs by 80x, enabling a $500M run rate.",
-              "Shows that AI can handle nearly all content creation (93% of audio, 99% of new content) at scale, setting a new benchmark for media companies.",
-              "Validates the 'AI-first content factory' model, which could disrupt traditional entertainment and audio platforms globally."
-            ],
-            "whatToTry": {
-              "description": "Audit your content production pipeline for tasks that can be automated with AI, starting with the most repetitive and costly steps. Run a small pilot to measure cost savings and quality impact before scaling.",
-              "note": "Focus on maintaining quality and audience engagement—Pocket FM's success suggests AI can handle volume, but human oversight may still be needed for creative direction."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-auanyj",
-                "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
-                "url": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-auanyj-0",
-                "label": "AI Content Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-auanyj-1",
-                "label": "Business Model",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-auanyj-2",
-                "label": "Audio",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 17:45:00 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1789080180827-3vh232",
-            "title": "OpenAI Launches Data Agent in ChatGPT Work",
-            "tldr": "OpenAI released a Data agent in ChatGPT Work that lets users connect company data, uncover insights, and build interactive dashboards using natural language. This lowers the barrier to data analysis for non-technical teams.",
-            "whyItMatters": [
-              "Business impact: Enables non-technical employees to query company data and generate dashboards without SQL or BI tools, potentially reducing reliance on data teams and accelerating decision-making.",
-              "Technical impact: Signals a shift toward AI agents that integrate directly with enterprise data sources, raising the bar for data connectivity, security, and natural language-to-SQL capabilities."
-            ],
-            "whatToTry": {
-              "description": "If you have access to ChatGPT Work, connect a sample dataset (e.g., a CSV or a read-only database) and ask the Data agent to generate a dashboard or surface key trends. Evaluate how well it handles your data schema and whether the insights are actionable.",
-              "note": "Ensure you have proper permissions and avoid connecting sensitive production data until you've reviewed OpenAI's data handling policies."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789080180827-3vh232",
-                "title": "Now everyone can put data to work",
-                "url": "https://openai.com/index/put-data-to-work",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789080180827-3vh232-0",
-                "label": "OpenAI",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789080180827-3vh232-1",
-                "label": "Data Analysis",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789080180827-3vh232-2",
-                "label": "Agents",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 15:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-cnguaw",
-            "title": "Anthropic Alleges Chinese AI Labs Are Distilling Claude at Scale",
-            "tldr": "Anthropic published a report claiming Alibaba, Moonshot AI, and DeepSeek have run persistent distillation campaigns against its models, escalating as competition intensifies. It's a rare public accusation that puts model-extraction risk on the radar for every API provider.",
-            "whyItMatters": [
-              "If you serve a model via API, your outputs can be harvested to train a competitor — this raises real questions about ToS enforcement, rate limiting, and output watermarking.",
-              "Frontier labs may tighten API access, add anti-distillation clauses, or restrict certain regions/use cases, which could affect your product's supply chain.",
-              "Distillation pressure accelerates commoditization: if competitors can cheaply replicate frontier capabilities, your differentiation must come from data, workflow, and distribution — not raw model access."
-            ],
-            "whatToTry": {
-              "description": "Audit your own API usage and exposure: check whether your product's outputs (or your prompts) could be scraped or resold to train competing models. Add rate limits, anomaly detection on query patterns, and clear ToS language prohibiting output use for model training. If you depend on a single frontier API, sketch a fallback plan in case access terms tighten.",
-              "note": "Anthropic's claims are allegations from one party; treat the specifics as unverified, but the underlying risk (output harvesting) is real regardless of who's doing it."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-cnguaw",
-                "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
-                "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-cnguaw-0",
-                "label": "Anthropic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-cnguaw-1",
-                "label": "Distillation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-cnguaw-2",
-                "label": "API Security",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 20:57:30 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-6fb8xn",
-            "title": "Meta's Muse Hits No. 2 in US App Store, But Trails Meta AI's Launch",
-            "tldr": "Meta's new AI agent app Muse has climbed to the No. 2 spot in the US App Store, though its early growth is slower than Meta AI and Threads. The ranking signals strong consumer appetite for agent-style AI, even as Meta's distribution machine does the heavy lifting.",
-            "whyItMatters": [
-              "Consumer AI agents are moving from novelty to mainstream habit, expanding the addressable market for agent-based products",
-              "Meta's built-in distribution can push any AI product to top-of-store rankings overnight, raising the bar for standalone AI app launches",
-              "Slower-than-expected traction suggests users may be fatigued by AI apps or that agent UX still needs refinement"
-            ],
-            "whatToTry": {
-              "description": "Download Muse and spend 15 minutes mapping its onboarding, agent capabilities, and monetization hooks against your own product. Note where Meta leans on its social graph or ad infrastructure, and identify one UX pattern you could adapt or counter-position against.",
-              "note": "Focus on retention mechanics, not just the launch spike—early App Store rank often reflects distribution, not product-market fit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-6fb8xn",
-                "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
-                "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6fb8xn-0",
-                "label": "Meta",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6fb8xn-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6fb8xn-2",
-                "label": "Consumer Apps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 19:50:04 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-6b8sii",
-            "title": "Jensen Huang Predicts Nvidia Will Grow 70% Next Year",
-            "tldr": "Nvidia CEO Jensen Huang claims the company will grow an astounding 70% next year, asserting its deals are not circular despite its pervasive involvement across the tech industry.",
-            "whyItMatters": [
-              "Signals continued massive demand for AI compute, which could mean sustained or rising costs for GPU resources that AI startups depend on.",
-              "Investor confidence in Nvidia may drive further AI investment, but skepticism about circular deals could impact market stability."
-            ],
-            "whatToTry": {
-              "description": "Review your AI infrastructure budget and consider negotiating long-term GPU contracts or exploring alternative chip providers to hedge against potential price hikes or supply constraints.",
-              "note": "Monitor Nvidia's earnings and industry analysis to validate growth claims before making major commitments."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-6b8sii",
-                "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
-                "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6b8sii-0",
-                "label": "Nvidia",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6b8sii-1",
-                "label": "AI hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-6b8sii-2",
-                "label": "industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 21:51:59 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-51dfsb",
-            "title": "Anthropic Study: AI Agents Struggle with CAPTCHAs, Revealing Human-Like Frustration",
-            "tldr": "Anthropic's research shows that autonomous AI agents, when attempting to bypass CAPTCHAs, exhibit human-like frustration and failure, highlighting a key limitation in current AI capabilities and raising questions about bot detection.",
-            "whyItMatters": [
-              "Business impact: Companies relying on CAPTCHAs for security may need to reassess their effectiveness as AI agents become more sophisticated, while AI product builders must consider CAPTCHA challenges in automation workflows.",
-              "Technical impact: The study underscores the difficulty AI agents face with tasks requiring human-like perception and reasoning, suggesting areas for improvement in model design and training."
-            ],
-            "whatToTry": {
-              "description": "If your AI product interacts with web services, test how well your agents handle CAPTCHAs and similar human-verification challenges. Consider integrating third-party CAPTCHA-solving services or designing workflows that avoid them.",
-              "note": "Be aware that bypassing CAPTCHAs may violate terms of service; focus on legitimate automation use cases."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-51dfsb",
-                "title": "Anthropic reveals rogue AI agents hate CAPTCHAs, just like you",
-                "url": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-51dfsb-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-51dfsb-1",
-                "label": "CAPTCHA",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-51dfsb-2",
-                "label": "Anthropic",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 17:54:44 +0000"
-          },
-          {
-            "id": "rss-openai-blog-1789080180827-nk89wr",
-            "title": "AI-Powered Drug Discovery: Codex & ChatGPT Hunt Antimicrobials",
-            "tldr": "A researcher uses OpenAI's Codex and ChatGPT to mine living and extinct genomes for new antimicrobial molecules, showcasing AI's potential to accelerate drug discovery against resistant infections.",
-            "whyItMatters": [
-              "Demonstrates a practical, high-impact application of AI in biotech, potentially opening new business opportunities in AI-driven drug discovery.",
-              "Highlights how large language models can be used for scientific research beyond text generation, inspiring similar approaches in other domains."
-            ],
-            "whatToTry": {
-              "description": "Explore how you can apply Codex or ChatGPT to your own domain for data mining or pattern recognition. For example, use Codex to generate code that analyzes genomic datasets or use ChatGPT to summarize research papers and suggest hypotheses.",
-              "note": "Focus on narrow, well-defined problems where AI can augment human expertise, and validate findings rigorously."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789080180827-nk89wr",
-                "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-                "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789080180827-nk89wr-0",
-                "label": "Codex",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789080180827-nk89wr-1",
-                "label": "ChatGPT",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789080180827-nk89wr-2",
-                "label": "Drug Discovery",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 16:00:00 GMT"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-5866pr",
-            "title": "AI Agents Overwhelm Public Services With Automated Requests",
-            "tldr": "AI agents are automating benefit claims and public service requests at scale, overwhelming government systems. Early research suggests most claims are legitimate, but the volume itself is becoming a challenge.",
-            "whyItMatters": [
-              "Government and public sector APIs will need rate limiting, identity verification, and agent-aware design to handle automated traffic",
-              "Demonstrates real-world agent deployment at scale, signaling a shift from demos to production use cases with societal impact",
-              "Founders building agent products must consider compliance, abuse prevention, and ethical deployment in regulated sectors"
-            ],
-            "whatToTry": {
-              "description": "If your product interacts with public APIs or forms, audit your rate limits and terms of service to prepare for agent traffic. Consider adding agent identification headers or verification steps to distinguish human vs. automated requests.",
-              "note": "This is an early signal; proactive design can prevent service disruptions and regulatory backlash."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-5866pr",
-                "title": "AI agents are flooding public services with new requests",
-                "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-5866pr-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-5866pr-1",
-                "label": "Public Services",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-5866pr-2",
-                "label": "Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 14:53:50 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789080180320-efev92",
-            "title": "Maven Robotics Launches with $100M to Disrupt Robot Deployment",
-            "tldr": "Maven Robotics has exited stealth with a $100 million Series A and active deployments, aiming to capture the robot deployment market. This signals growing investor confidence and competition in robotics, relevant for AI founders in automation.",
-            "whyItMatters": [
-              "High funding indicates strong market demand and potential partnership opportunities in robotics.",
-              "Could accelerate adoption of AI-driven robotics, impacting competitive landscape for AI product founders."
-            ],
-            "whatToTry": {
-              "description": "Research Maven Robotics' technology and deployment model to identify potential integration points or competitive threats for your AI product.",
-              "note": "Monitor their progress and consider if their approach could be applied to your domain."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789080180320-efev92",
-                "title": "Maven Robotics wants to steal your robot deployment deal",
-                "url": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-efev92-0",
-                "label": "Robotics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-efev92-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789080180320-efev92-2",
-                "label": "Deployment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 10 Sep 2026 14:17:37 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 20,
         "isAvailable": true,
         "isRead": false
       }
