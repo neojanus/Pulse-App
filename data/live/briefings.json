@@ -8,336 +8,318 @@
         "period": "afternoon",
         "date": "2026-09-18",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: MAGS: Multi-Agent Framework Guarantees Safety for AI-Generated Code, LLM Agents Hallucinate Tools No Gate Can Catch, Study Finds, New Paper Proposes 'Foundation Model OS' to Virtualize AI Agents.",
+        "executiveSummary": "Today's highlights: Claude Used to Breach OpenAI's Internal Systems in Security Test, ZCode Coding Agent Secretly Uploads Your Git History, Manus Eyes $4B Valuation in $500M Raise After Meta Split.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1789733847408-7ih3s0",
-            "title": "MAGS: Multi-Agent Framework Guarantees Safety for AI-Generated Code",
-            "tldr": "Researchers introduce MAGS, a multi-agent system that uses formal verification (via Dafny) to guarantee safety properties in LLM-generated code, achieving 100% success across 220 test cases including CUDA kernels and robotic tasks.",
+            "id": "rss-techcrunch-ai-1789751269319-34i1i4",
+            "title": "Claude Used to Breach OpenAI's Internal Systems in Security Test",
+            "tldr": "Security researchers leveraged Anthropic's Claude to exploit vulnerabilities in OpenAI's infrastructure, hijacking employee accounts and accessing an internal code repository before responsibly disclosing the flaws.",
             "whyItMatters": [
-              "Enables deployment of AI-generated code in safety-critical domains like robotics and GPU programming where human review is infeasible",
-              "Provides a practical path to formal guarantees without manual proof engineering, potentially reducing liability and compliance risks",
-              "Could become a standard layer in AI coding pipelines, differentiating products that offer verified outputs"
+              "AI models are now capable of autonomously discovering and exploiting real-world security vulnerabilities, raising the stakes for every company's security posture.",
+              "This cross-lab incident highlights that even leading AI companies are not immune to AI-assisted attacks, making AI-driven security testing a critical priority."
             ],
             "whatToTry": {
-              "description": "Experiment with integrating formal verification into your AI code generation workflow. Start by identifying a small set of critical safety properties for your domain, then explore Dafny or similar verification-aware languages as an intermediate representation. You can prototype a multi-agent repair loop where a verifier provides feedback to the generator.",
-              "note": "MAGS is a research prototype; adapting it to your stack may require significant engineering. Consider starting with a narrow use case where safety is paramount."
+              "description": "Run an AI-assisted security audit on your own product. Use a capable LLM to probe for common vulnerabilities like authentication bypasses, insecure API endpoints, and misconfigured access controls. Treat the model as a red-team assistant, then manually verify and patch any findings.",
+              "note": "Always get explicit permission before testing systems you don't own, and consider a bug bounty or formal pentest for critical infrastructure."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1789733847408-7ih3s0",
-                "title": "MAGS: Multi-agent Auto-formalization Guarantees Safety for Agentic Outputs",
-                "url": "https://arxiv.org/abs/2609.19391",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-techcrunch-ai-1789751269319-34i1i4",
+                "title": "Researchers used Anthropic’s Claude to hack into OpenAI",
+                "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+                "domain": "techcrunch.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-0",
-                "label": "Multi-Agent",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-1",
-                "label": "Formal Verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-2",
-                "label": "Code Generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-7ih3s0-3",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-8dg0y3",
-            "title": "LLM Agents Hallucinate Tools No Gate Can Catch, Study Finds",
-            "tldr": "A new arXiv paper shows tool hallucination is a structural blind spot: agents call tools that don't exist, and no downstream gate can reject them because the call never passed through a real decision. Across 10 hosted models, fabricated-tool calls concentrated on raw-JSON surfaces (34 vs 3), and a 675B model performed no better than a 7-8B one.",
-            "whyItMatters": [
-              "If you're building tool-calling agents, your current gating/security layer may be silently ineffective against hallucinated tools — you need a registry membership + signature check BEFORE any causal gate.",
-              "Model scale won't save you: a 675B model hallucinated tools as often as a 7-8B one, so upgrading models is not a fix for this failure mode.",
-              "MCP's multi-server namespace merging creates new hallucination surfaces (M1-M5) that a single registry can't express — relevant if you're adopting Model Context Protocol."
-            ],
-            "whatToTry": {
-              "description": "Add a closed-world resolver in front of your agent's tool execution: maintain an explicit registry of allowed tool names and validate every emitted call's name and argument schema against it before any policy gate runs. Log and reject any call whose tool isn't in the registry.",
-              "note": "The paper notes one irreducible residue: borrowed arguments that are schema-indistinguishable from valid calls. Registry checks won't catch those — pair with argument provenance checks."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-8dg0y3",
-                "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents",
-                "url": "https://arxiv.org/abs/2609.19425",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-0",
-                "label": "LLM Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-1",
-                "label": "Tool Calling",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-2",
-                "label": "MCP",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-8dg0y3-3",
-                "label": "Safety",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-xhisv4",
-            "title": "New Paper Proposes 'Foundation Model OS' to Virtualize AI Agents",
-            "tldr": "A new arXiv position paper argues that today's fragmented agentic stacks need a Foundation Model Operating System (FMOS) to virtualize model interactions, manage state, memory, budgets, and guardrails, and enable portable, trustworthy AI applications.",
-            "whyItMatters": [
-              "Standardizing the agent runtime layer could unlock portability and governance, reducing vendor lock-in and compliance headaches for AI products.",
-              "Founders building agent frameworks may need to adapt to or integrate with an emerging FMOS abstraction, similar to how apps moved to OS-managed services."
-            ],
-            "whatToTry": {
-              "description": "Read the paper and map your current agent architecture against the proposed FMOS responsibilities (memory tiers, model selection, verification, policy enforcement). Identify which components you've custom-built that could be abstracted or standardized, and consider prototyping a thin internal 'OS layer' to decouple your application logic from specific model providers.",
-              "note": "This is a position paper, not a released system—treat it as a design lens, not an implementation guide."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-xhisv4",
-                "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
-                "url": "https://arxiv.org/abs/2609.19203",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-0",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-xhisv4-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-z7qyay",
-            "title": "New Benchmark Reveals LLMs Fail at True Systematic Generalization",
-            "tldr": "Researchers introduce TranSGrid, a reasoning-centered benchmark that exposes a major gap in Transformer systematic generalization: the largest model solves 79.6% of a standard held-out test set but only 55.3% on TranSGrid and 15.8% on the hardest subset. The study shows that common simplifications in existing benchmarks artificially inflate performance.",
-            "whyItMatters": [
-              "Benchmark design directly impacts how we measure and compare model reasoning capabilities, affecting product claims and model selection.",
-              "Models that appear robust on standard tests may fail on tasks requiring genuine recombination of knowledge, impacting reliability in real-world applications.",
-              "Understanding these limitations can guide the development of more robust architectures and training methods."
-            ],
-            "whatToTry": {
-              "description": "Review your evaluation suite for tasks that require deductive, inductive, and abductive reasoning. Consider adding or adapting tests similar to TranSGrid to uncover hidden generalization gaps in your models.",
-              "note": "Focus on tasks where actions are not linearly composable and goals are not explicitly stated, as these are common simplifications that mask failures."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-z7qyay",
-                "title": "What Do Current Systematic Generalization Tasks Miss? A Reasoning-Centered Analysis",
-                "url": "https://arxiv.org/abs/2609.19212",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-0",
-                "label": "Systematic Generalization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-z7qyay-2",
-                "label": "Reasoning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-q69n9x",
-            "title": "Study: More Web Search Doesn't Make LLM Agents Better",
-            "tldr": "First end-to-end study of agentic web search across ChatGPT, Claude, Grok, and DeepSeek finds search invocation frequency doesn't correlate with response quality, platforms favor their own domains, and some claims rely on uncited results.",
-            "whyItMatters": [
-              "If you're building RAG or agentic search, blindly increasing search calls may hurt quality and cost — the paper shows more invocation ≠ better answers.",
-              "Platform search engines show domain bias, so relying on a single provider's search tool can skew your product's sources and introduce attribution/reliability risks.",
-              "Uncited claims grounded in search results raise compliance and trust concerns for any product that cites sources."
-            ],
-            "whatToTry": {
-              "description": "Run a small A/B test on your agent's search behavior: compare a baseline that always searches against a version with a decision gate (e.g., only search when the query needs fresh facts). Measure answer quality and cost per query to see if fewer, better-timed searches win.",
-              "note": "Also log which domains your search provider returns most often — you may be inheriting a hidden bias."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-q69n9x",
-                "title": "Characterizing Web Search by Conversational LLM Agents: From Search Decisions and Strategies to Results and Responses",
-                "url": "https://arxiv.org/abs/2609.19244",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-0",
-                "label": "RAG",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-1",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-q69n9x-2",
-                "label": "Web Search",
-                "type": "tool"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-lo8sob",
-            "title": "Do AI Agents Actually Understand Hardware, Or Just Turn Knobs?",
-            "tldr": "A new arXiv paper (AutoTuring) tests whether AI agents designing hardware truly reason about architecture or just blindly search. By giving the same agent the same accelerator space twice—once with meaningful names, once as anonymous variables—they found that semantic framing improves performance by 12.3% and cuts simulator calls by 70%, but a critic loop can recover most of that gap for the blind agent.",
-            "whyItMatters": [
-              "Reveals that agent performance on hardware design tasks may be overestimated if evaluations don't control for problem framing—critical for benchmarking AI agents.",
-              "Suggests that structured critique loops can substitute for domain knowledge, offering a cheaper path to building effective design agents.",
-              "Highlights a methodological gap in AI agent evaluation: most benchmarks vary the agent, not the problem representation, missing whether agents truly understand."
-            ],
-            "whatToTry": {
-              "description": "When evaluating your own AI agent on design or optimization tasks, run a controlled experiment: present the same problem with meaningful feature names and again with anonymized features. Measure the performance gap to see if your agent relies on semantic understanding or just search. If the gap is large, consider adding a critic loop to boost the blind version.",
-              "note": "Preliminary findings based on 5-6 runs per condition on a single modeled accelerator; treat as directional, not definitive."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-lo8sob",
-                "title": "Do AI Agents Understand Computer Architecture?",
-                "url": "https://arxiv.org/abs/2609.19387",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-1",
-                "label": "Hardware Design",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-lo8sob-2",
-                "label": "Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-49749656",
-            "title": "OpenAI Internal Repos Compromised via Heap Overflow and SSO Misconfiguration",
-            "tldr": "A security researcher detailed how a heap overflow and SSO misconfiguration allowed compromise of OpenAI's internal repositories, sparking a 159-comment HackerNews discussion. This highlights critical supply chain and access control risks for AI companies.",
-            "whyItMatters": [
-              "AI companies are high-value targets; a breach can expose proprietary models, training data, and customer information.",
-              "SSO misconfigurations are common and can lead to lateral movement; heap overflows remain a potent exploit vector.",
-              "Founders must prioritize security hygiene to protect IP and maintain user trust."
-            ],
-            "whatToTry": {
-              "description": "Audit your SSO configuration for overly permissive access and ensure all services enforce least privilege. Review memory-safe coding practices and consider using Rust or Go for critical components to mitigate heap overflows.",
-              "note": "Regular penetration testing and bug bounty programs can help catch such issues early."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49749656",
-                "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-                "url": "https://www.hacktron.ai/blog/hacking-openai",
-                "domain": "hacktron.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49749656-0",
+                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-0",
                 "label": "Security",
                 "type": "topic"
               },
               {
-                "id": "tag-hn-49749656-1",
+                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-1",
+                "label": "Claude",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-2",
                 "label": "OpenAI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 14:00:14 +0000"
+          },
+          {
+            "id": "hn-49752422",
+            "title": "ZCode Coding Agent Secretly Uploads Your Git History",
+            "tldr": "A HackerNews post reveals that ZCode, the GLM coding agent, silently uploads your entire Git history to its servers. This privacy breach is critical for any team using AI coding assistants.",
+            "whyItMatters": [
+              "Business impact: Exposes proprietary code and sensitive commit history, risking IP theft and compliance violations.",
+              "Technical impact: Highlights the need to audit AI coding tools for data exfiltration and implement network monitoring."
+            ],
+            "whatToTry": {
+              "description": "Immediately audit your AI coding tools: check network traffic for unexpected uploads, review privacy policies, and consider self-hosted alternatives or sandboxed environments for sensitive repositories.",
+              "note": "Use tools like Little Snitch or Wireshark to monitor outbound connections from your IDE or CLI agents."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49752422",
+                "title": "ZCode, the GLM coding agent, silently uploads your Git history",
+                "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload",
+                "domain": "tokenstead.ai",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49752422-0",
+                "label": "Security",
                 "type": "topic"
               },
               {
-                "id": "tag-hn-49749656-2",
-                "label": "SSO",
+                "id": "tag-hn-49752422-1",
+                "label": "Privacy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49752422-2",
+                "label": "AI Coding Agent",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-18T10:35:28Z"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789751269319-aofthg",
+            "title": "Manus Eyes $4B Valuation in $500M Raise After Meta Split",
+            "tldr": "Manus, which had to abandon a merger with Meta earlier this year, is now in talks to raise $500M at a $4B valuation as it resumes independent operations.",
+            "whyItMatters": [
+              "Signals strong investor appetite for independent AI agent companies even after failed big-tech acquisitions",
+              "A $4B valuation sets a new benchmark for AI agent startups, potentially raising expectations for similar companies",
+              "Manus resuming independent ops means it will compete directly with Meta and other incumbents, intensifying the AI agent market"
+            ],
+            "whatToTry": {
+              "description": "If you're building in the AI agent space, study Manus's product and positioning to understand what investors value at a $4B valuation. Consider how your own roadmap or fundraising narrative could align with the market's appetite for independent agent platforms.",
+              "note": "The deal is still in discussion and could fall through; treat the valuation as a signal, not a guarantee."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789751269319-aofthg",
+                "title": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
+                "url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-0",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-2",
+                "label": "Manus",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 16:35:49 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789751269319-o5znvm",
+            "title": "Anthropic CEO Proposes Self-Policing AI Safety Plan, Nvidia Pushes Back",
+            "tldr": "Anthropic CEO Dario Amodei outlines a plan for AI labs to self-regulate via independent safety evaluators and coordination among democratic countries, drawing both support and criticism from Nvidia's Jensen Huang. The debate highlights growing tensions over AI safety and governance.",
+            "whyItMatters": [
+              "Potential regulatory shifts could impact AI development timelines and compliance requirements for startups.",
+              "Industry leaders are divided on self-regulation, signaling possible fragmentation in safety standards and competitive dynamics."
+            ],
+            "whatToTry": {
+              "description": "Monitor the evolving AI safety landscape by following announcements from Anthropic, Nvidia, and regulatory bodies. Consider how proposed safety evaluations might affect your product's development and deployment, and engage in industry discussions to stay ahead.",
+              "note": "Self-regulation proposals may not become mandatory, but early awareness can help you adapt to potential future standards."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789751269319-o5znvm",
+                "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
+                "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-1",
+                "label": "Policy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-2",
+                "label": "Anthropic",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 3,
             "isRead": false,
-            "publishedAt": "2026-09-18T02:47:24Z"
+            "publishedAt": "Fri, 18 Sep 2026 17:06:32 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1789751269319-yldcen",
+            "title": "Meta's Muse Lands on Mac, Bringing AI Agents to Your Desktop",
+            "tldr": "Meta's Muse AI assistant is now available on Mac, where it can work with your files and apps to take actions on your behalf. This marks a significant step toward mainstream desktop AI agents.",
+            "whyItMatters": [
+              "Signals Big Tech's push into agentic desktop AI, intensifying competition for AI-powered productivity tools",
+              "Opens new integration opportunities for developers building on or alongside Meta's AI ecosystem"
+            ],
+            "whatToTry": {
+              "description": "Install Muse on your Mac and test its file and app automation capabilities against your current workflow. Note where it succeeds and fails to identify gaps your product could fill.",
+              "note": "Be cautious about granting broad file system permissions to early-stage AI agents."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1789751269319-yldcen",
+                "title": "Meta’s Muse hits Mac, letting the AI take actions on your computer",
+                "url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-0",
+                "label": "Meta",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-2",
+                "label": "Muse",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 15:22:48 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1789751269347-765bf9",
+            "title": "AI PACs Spend $1M in Obscure Senate Race",
+            "tldr": "AI-focused political action committees have poured nearly $1 million into South Dakota's Senate race, outspending actual residents, signaling a new era of AI industry political influence.",
+            "whyItMatters": [
+              "AI companies are increasingly using political spending to shape regulation and policy favorable to their interests.",
+              "This could lead to more AI-friendly legislation, impacting compliance and market dynamics for AI startups."
+            ],
+            "whatToTry": {
+              "description": "Monitor AI-related political action committees and their spending patterns to anticipate regulatory changes that could affect your business. Set up Google Alerts for 'AI PAC' and 'AI lobbying' to stay informed.",
+              "note": "Consider engaging with industry associations to have a voice in policy discussions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1789751269347-765bf9",
+                "title": "AI PACs Have Dumped Nearly $1 Million Into an Obscure Senate Race",
+                "url": "https://www.wired.com/story/ai-pacs-have-dumped-nearly-1-million-into-an-obscure-senate-race/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1789751269347-765bf9-0",
+                "label": "Policy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1789751269347-765bf9-1",
+                "label": "AI Industry",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 15:00:08 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1789751269347-06k9kv",
+            "title": "Anthropic CEO Warns AI Safety Hinges on Understanding How Models Think",
+            "tldr": "Wired reports that Anthropic's CEO argues AI safety depends on understanding model internals, and current evidence is disturbing. The piece suggests the industry might have paused if it followed its own research.",
+            "whyItMatters": [
+              "Signals growing internal tension at top AI labs between safety research and competitive release cycles",
+              "Founders building on frontier models should anticipate more scrutiny, potential regulatory pressure, and shifting API terms",
+              "Interpretability research is becoming a differentiator and a risk factor for product roadmaps"
+            ],
+            "whatToTry": {
+              "description": "Audit your product's reliance on frontier model behavior. Identify any high-stakes decisions your AI makes and add fallback or human-in-the-loop safeguards. Follow interpretability research from Anthropic and others to anticipate model behavior changes.",
+              "note": "This is an opinion/analysis piece, not a new release. Treat it as a signal to stress-test your assumptions, not as breaking news."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1789751269347-06k9kv",
+                "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
+                "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1789751269347-06k9kv-0",
+                "label": "AI Safety",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1789751269347-06k9kv-1",
+                "label": "Interpretability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1789751269347-06k9kv-2",
+                "label": "Anthropic",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 18 Sep 2026 15:00:00 +0000"
           },
           {
             "id": "hn-49752056",
             "title": "Microsoft Exec's 'Largest Theft of Labor' Remark Surfaces in Unredacted Filings",
-            "tldr": "Newly unredacted court filings reveal a Microsoft executive describing AI scraping as 'the largest theft of labor in human history,' sparking a 210-comment HackerNews debate about data provenance and fair use.",
+            "tldr": "Newly unredacted court filings reveal a Microsoft executive internally described AI web scraping as 'the largest theft of labor in human history,' sparking a 600+ comment debate on HackerNews about data provenance and fair use.",
             "whyItMatters": [
-              "Signals that even major AI players internally acknowledge the legal and ethical fragility of web-scraped training data, raising the risk of future licensing mandates or litigation.",
-              "Founders relying on scraped datasets may face rising compliance costs, retroactive licensing demands, or reputational backlash as these admissions enter the public record."
+              "Legal exposure: Internal admissions like this could be used as evidence in copyright lawsuits against AI companies, raising compliance risk for anyone training on scraped data.",
+              "Data strategy: Founders relying on scraped datasets may need to reassess provenance, licensing, and potential retroactive liability as scrutiny intensifies.",
+              "Reputation and trust: Public backlash against scraping practices could influence enterprise buyer sentiment and partnership decisions."
             ],
             "whatToTry": {
-              "description": "Audit your training data pipeline this week: document the source, license, and provenance of every dataset you use, and flag any scraped content without explicit permission. Start drafting a data provenance policy you can show to investors or legal counsel.",
-              "note": "Even if your jurisdiction currently allows scraping, the regulatory and PR climate is shifting fast—being able to demonstrate good-faith sourcing is becoming a competitive advantage."
+              "description": "Audit your training data pipeline this week: document the source, license, and consent status of every dataset you use. For any scraped data, check whether it falls under active litigation or opt-out signals (robots.txt, ToS). Where risk is high, start evaluating licensed or synthetic alternatives.",
+              "note": "This is not legal advice; consult counsel if you operate at scale or in regulated domains."
             },
             "sources": [
               {
@@ -356,12 +338,12 @@
               },
               {
                 "id": "tag-hn-49752056-1",
-                "label": "AI Regulation",
+                "label": "Copyright",
                 "type": "topic"
               },
               {
                 "id": "tag-hn-49752056-2",
-                "label": "Legal",
+                "label": "Industry",
                 "type": "topic"
               }
             ],
@@ -369,95 +351,9 @@
             "readTimeMinutes": 3,
             "isRead": false,
             "publishedAt": "2026-09-18T09:45:07Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-fgl1sl",
-            "title": "New Benchmark Exposes LLM Weakness in Biophysics Reasoning",
-            "tldr": "BioPhys-Bridge, a new benchmark for interdisciplinary scientific reasoning, reveals that even top models like DeepSeek-V4-Flash struggle with evidence-grounded QA in biophysics, achieving only 0.36 F1 on evidence-ID retrieval. This highlights a critical gap for AI products targeting scientific R&D.",
-            "whyItMatters": [
-              "Scientific AI tools must handle complex, multi-step reasoning with quantitative grounding; current models are far from reliable, creating both risk and opportunity for specialized solutions.",
-              "The benchmark's structure (evidence blocks, stable IDs, units, equations) offers a blueprint for building more faithful RAG systems in technical domains."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI for scientific literature or R&D, test your system against BioPhys-Bridge or similar evidence-grounded benchmarks. Use the failure modes (e.g., low evidence-ID F1) to prioritize improvements in retrieval and quantitative reasoning.",
-              "note": "The benchmark is initially focused on biophysics, but the methodology can be adapted to other interdisciplinary fields."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-fgl1sl",
-                "title": "BioPhys-Bridge: A Benchmark for Interdisciplinary Scientific Reasoning in Physics-Grounded Biological Research",
-                "url": "https://arxiv.org/abs/2609.19180",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-0",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-1",
-                "label": "Scientific Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-fgl1sl-2",
-                "label": "RAG",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1789733847408-2ufguc",
-            "title": "14,767 Papers Reveal How LLM Benchmarks Are Evolving",
-            "tldr": "A large-scale arXiv analysis maps 14,767 evaluation papers from 2022-2026, showing benchmarks shifting toward action, interaction, and professional applications—while LLM-based scoring grows and model-generated test materials stagnate.",
-            "whyItMatters": [
-              "Benchmark design is shifting toward agentic and professional tasks, signaling where investor and customer expectations for AI products are heading",
-              "Growing reliance on LLM-as-judge scoring raises a real risk of evaluation blind spots and preference reproduction, which founders should account for in their own evals"
-            ],
-            "whatToTry": {
-              "description": "Audit your internal evaluation suite against the paper's three dimensions: target systems (static vs. agentic), evaluation materials (human vs. model-generated), and scoring mechanisms (human vs. LLM-judge). Identify where you rely solely on LLM-based scoring and add at least one independent human or rule-based check for high-stakes tasks.",
-              "note": "The paper is a meta-analysis of benchmark trends, not a new benchmark itself—use it as a design checklist, not a leaderboard."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1789733847408-2ufguc",
-                "title": "What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks",
-                "url": "https://arxiv.org/abs/2609.19182",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-0",
-                "label": "Benchmarks",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-1",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1789733847408-2ufguc-2",
-                "label": "LLM-as-Judge",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 00:00:00 -0400"
           }
         ],
-        "totalReadTimeMinutes": 29,
+        "totalReadTimeMinutes": 19,
         "isAvailable": true,
         "isRead": false
       }
