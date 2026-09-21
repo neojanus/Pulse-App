@@ -1,7 +1,465 @@
 [
   {
-    "date": "2026-09-20",
+    "date": "2026-09-21",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-21-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-21",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: RBS-Attention Cuts Long-Context Prefill Costs by 6x, Mini-AGI: Train a Continual Learning Model on 8GB VRAM, AI Chatbots Fail at Financial Queries Most of the Time, Study Finds.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1790000583212-9jqfiz",
+            "title": "RBS-Attention Cuts Long-Context Prefill Costs by 6x",
+            "tldr": "A new training-free sparse prefill method, RBS-Attention, achieves up to 20.65x standalone prefill-attention speedup and 5.97x end-to-end time-to-first-token speedup at 128K context on Qwen3 models, while maintaining near-dense accuracy. It addresses 'mean dilution' in block-sparse attention by adding a rescue branch for underestimated blocks.",
+            "whyItMatters": [
+              "Drastically reduces inference cost and latency for long-context LLM applications, enabling real-time processing of very long documents or conversations.",
+              "Training-free and compatible with FlashAttention, so it can be integrated into existing serving stacks (e.g., vLLM) without model retraining.",
+              "Maintains high accuracy (88.65 vs 89.52 RULER on Qwen3-32B), making it a practical drop-in optimization for production systems."
+            ],
+            "whatToTry": {
+              "description": "If you're serving long-context models, evaluate RBS-Attention by implementing the dual-branch sparse prefill in your inference pipeline or waiting for integration into vLLM. Test it on your own long-context workloads to measure latency and quality trade-offs.",
+              "note": "The method is training-free but requires modifying attention kernels; check the paper for implementation details and compatibility with your model architecture."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-9jqfiz",
+                "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+                "url": "https://arxiv.org/abs/2609.20971",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-9jqfiz-0",
+                "label": "Sparse Attention",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-9jqfiz-1",
+                "label": "Inference Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-9jqfiz-2",
+                "label": "Long Context",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49783133",
+            "title": "Mini-AGI: Train a Continual Learning Model on 8GB VRAM",
+            "tldr": "A developer released Mini-AGI, an open-source model that enables dynamic continual learning and training on consumer hardware with just 8GB VRAM, challenging the need for massive compute clusters.",
+            "whyItMatters": [
+              "Democratizes AI development by allowing individuals and small teams to train and adapt models locally without cloud costs or corporate dependencies.",
+              "Introduces a novel architecture with dynamic MoE that adds/prunes experts during training, potentially enabling efficient scaling and continual learning on edge devices."
+            ],
+            "whatToTry": {
+              "description": "Clone the Mini-AGI repository, run the provided training script on your local machine with 8GB VRAM, and experiment with continual learning by feeding it new data streams to observe adaptation.",
+              "note": "The model is experimental and may require tuning; check the README for setup instructions and scaling law details."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49783133",
+                "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+                "url": "https://github.com/volotat/mini-AGI/",
+                "domain": "github.com",
+                "type": "repository"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49783133-0",
+                "label": "Continual Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49783133-1",
+                "label": "MoE",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-49783133-2",
+                "label": "Open Source",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-21T04:42:37Z"
+          },
+          {
+            "id": "hn-49783062",
+            "title": "AI Chatbots Fail at Financial Queries Most of the Time, Study Finds",
+            "tldr": "A Financial Times study reveals that AI chatbots often provide incorrect answers to financial questions, sparking a HackerNews discussion with 70 comments. This highlights critical reliability issues for AI products in high-stakes domains.",
+            "whyItMatters": [
+              "Financial institutions and fintech startups must address accuracy before deploying AI advisors, or risk regulatory and reputational damage.",
+              "Technical teams need to implement robust fact-checking, domain-specific fine-tuning, and clear disclaimers to mitigate hallucination risks."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product for finance or other high-stakes areas, conduct a thorough audit of your model's outputs using a benchmark of real user queries. Identify common failure modes and consider adding a verification layer or human-in-the-loop for critical answers.",
+              "note": "Start with a small set of high-risk queries to prioritize fixes."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49783062",
+                "title": "AI chatbots give wrong answers to financial queries 'most of the time'",
+                "url": "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666",
+                "domain": "ft.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49783062-0",
+                "label": "AI reliability",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49783062-1",
+                "label": "finance",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49783062-2",
+                "label": "chatbots",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-21T04:28:44Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1790000583212-p93zpl",
+            "title": "New Routing Method Boosts MoE Reasoning Without Retraining",
+            "tldr": "Researchers propose Attention-Aware Routing (AAR), which uses attention patterns to guide expert selection in Mixture-of-Experts models, improving GSM8K by 3.37pp on OLMoE while keeping the base transformer frozen. The work reveals a coupled circuit between routing and attention, with depth-sensitive trade-offs between reasoning and factual retrieval.",
+            "whyItMatters": [
+              "Enables targeted fine-tuning of MoE routing without full model retraining, reducing compute costs and enabling rapid iteration on reasoning tasks.",
+              "Provides a mechanistic understanding of how routing decisions influence attention, which can inform architecture design and debugging of MoE models.",
+              "Highlights a retrieval-reasoning tension across depth, suggesting that layer-selective routing interventions can optimize for specific capabilities."
+            ],
+            "whatToTry": {
+              "description": "If you're working with MoE models like OLMoE, experiment with training only the router using attention-derived features (e.g., sliding window of attention weights) on a reasoning dataset like GSM8K. Apply AAR selectively to deeper layers to avoid degrading factual retrieval.",
+              "note": "Start with a small-scale experiment to validate the depth sensitivity before scaling up."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-p93zpl",
+                "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+                "url": "https://arxiv.org/abs/2609.20974",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-p93zpl-0",
+                "label": "MoE",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-p93zpl-1",
+                "label": "Routing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-p93zpl-2",
+                "label": "Attention",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-p93zpl-3",
+                "label": "Fine-tuning",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790000583212-hqei9v",
+            "title": "New Method Detects LLM Hallucinations via Attention Graph Topology",
+            "tldr": "Researchers introduce a single-pass hallucination detection method that analyzes attention graph topology using Forman-Ricci curvature, finding that hallucinated responses show impaired context sharing, over-reliance on self-attention, and information over-squashing in the final transformer layer.",
+            "whyItMatters": [
+              "Enables real-time hallucination detection without multiple inference passes, reducing cost and latency for production LLM applications.",
+              "Provides a mechanistic understanding of hallucinations that could guide model architecture improvements and training objectives.",
+              "Offers a potential reliability layer for high-stakes domains like healthcare, finance, and legal tech where hallucination is a critical risk."
+            ],
+            "whatToTry": {
+              "description": "Implement a prototype hallucination detector by extracting attention graphs from your LLM's final layer and computing Forman-Ricci curvature features. Use these features to train a lightweight classifier on labeled hallucination data from your domain.",
+              "note": "Start with a small labeled dataset; the method is single-pass and architecture-agnostic, but may require calibration for your specific model and task."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-hqei9v",
+                "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
+                "url": "https://arxiv.org/abs/2609.21096",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-hqei9v-0",
+                "label": "Hallucination",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-hqei9v-1",
+                "label": "Attention",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-hqei9v-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790000583212-v1kjwx",
+            "title": "AI Psychiatric Intake: More Recall, More Hallucination, Less Safety",
+            "tldr": "A new arXiv paper introduces InterviewPlayground, a clinician-grounded QA platform for AI-assisted psychiatric intake. In a pilot with 6 clinicians, a GPT-based interviewer captured 88% of clinically relevant items vs. 38.9% for humans, but made more unsupported clinical inferences (56.8% vs. 27.8%) and flagged safety concerns less often (33.3% vs. 66.7%).",
+            "whyItMatters": [
+              "Clinical AI deployments need routine, low-burden QA against real clinician standards—this provides a concrete evaluation blueprint.",
+              "High recall can mask dangerous hallucinations and missed safety flags, a critical trade-off for any high-stakes AI product.",
+              "The memory-augmented patient simulator approach can be adapted to other domains (legal, financial, customer support) for scalable evaluation."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI for high-stakes domains, run a small pilot comparing your model against human experts on both recall and unsupported-inference rates. Use simulated scenarios to measure safety-critical omissions, not just accuracy.",
+              "note": "Even a 6-clinician pilot can reveal actionable gaps; start small and iterate."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-v1kjwx",
+                "title": "Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake",
+                "url": "https://arxiv.org/abs/2609.21149",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-v1kjwx-0",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-v1kjwx-1",
+                "label": "Healthcare AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-v1kjwx-2",
+                "label": "LLM",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-hugging-face-blog-1790000583381-niej0i",
+            "title": "Physicist's Approach to LLM Pruning: Ising Optimization for Block Removal",
+            "tldr": "A new Hugging Face blog post explores using Ising optimization, a physics-inspired method, to prune large language models by removing blocks. This could lead to more efficient pruning strategies for deploying LLMs on resource-constrained hardware.",
+            "whyItMatters": [
+              "Enables more efficient LLM deployment by reducing model size without significant performance loss.",
+              "Introduces a novel optimization technique that could be applied to other model compression tasks."
+            ],
+            "whatToTry": {
+              "description": "Read the blog post to understand the Ising optimization approach for block pruning, and consider experimenting with it on your own models using the provided code or adapting the method.",
+              "note": "This is a research-oriented technique; evaluate its practical trade-offs before integrating into production."
+            },
+            "sources": [
+              {
+                "id": "src-rss-hugging-face-blog-1790000583381-niej0i",
+                "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
+                "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+                "domain": "huggingface.co",
+                "type": "blog"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-hugging-face-blog-1790000583381-niej0i-0",
+                "label": "LLM",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1790000583381-niej0i-1",
+                "label": "Pruning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-hugging-face-blog-1790000583381-niej0i-2",
+                "label": "Optimization",
+                "type": "topic"
+              }
+            ],
+            "category": "tools",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 13:44:34 GMT"
+          },
+          {
+            "id": "rss-wired-ai-1790000583094-r0vuq1",
+            "title": "US and China Discuss AI Incident Alert System",
+            "tldr": "US and Chinese officials are discussing a mechanism to notify each other about AI incidents that could threaten national security, signaling a potential step toward bilateral AI risk management.",
+            "whyItMatters": [
+              "Could lead to new compliance expectations for AI companies operating across borders",
+              "Signals that AI safety and security are becoming geopolitical issues, not just technical ones"
+            ],
+            "whatToTry": {
+              "description": "Review your AI incident response plan and consider how you would report a national security-related AI incident to relevant authorities. Stay informed about any emerging bilateral agreements that could affect your compliance obligations.",
+              "note": "This is still in discussion phase, so no immediate action is required, but proactive planning can help."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1790000583094-r0vuq1",
+                "title": "US and China Discuss Alerting Each Other to AI National Security Threats",
+                "url": "https://www.wired.com/story/us-and-china-discuss-alerting-each-other-to-ai-national-security-threats/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1790000583094-r0vuq1-0",
+                "label": "AI policy",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790000583094-r0vuq1-1",
+                "label": "national security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790000583094-r0vuq1-2",
+                "label": "US-China",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 10:34:43 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1790000583212-d2nqie",
+            "title": "CaLR: Hybrid Causal-Diffusion Reasoning Boosts Robustness",
+            "tldr": "Researchers propose Causal Latent Revision (CaLR), combining autoregressive causal structure with diffusion parallel generation to enable dynamic self-correction during reasoning. It achieves SOTA on complex benchmarks and outperforms AR baselines on constrained tasks like Sudoku.",
+            "whyItMatters": [
+              "Could lead to more reliable reasoning in AI products, reducing errors in multi-step tasks.",
+              "Offers a new architecture direction that balances speed (parallel generation) with logical consistency."
+            ],
+            "whatToTry": {
+              "description": "Experiment with diffusion-based language models for tasks requiring parallel generation, and consider incorporating causal constraints or self-correction mechanisms to improve logical consistency.",
+              "note": "This is early-stage research; implementation may require significant adaptation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-d2nqie",
+                "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+                "url": "https://arxiv.org/abs/2609.20981",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-d2nqie-0",
+                "label": "Diffusion Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-d2nqie-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-d2nqie-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790000583212-mir9d9",
+            "title": "LoRA Boosts Vision Transformers for Sonar Target Recognition",
+            "tldr": "Researchers adapted DINOv3 ViTs to synthetic aperture sonar target recognition using LoRA, more than doubling AUPRC (0.300 to 0.679) while training only 0.26% of weights. Surprisingly, hard-negative mining and supervised contrastive learning added no measurable improvement over controls.",
+            "whyItMatters": [
+              "LoRA delivers massive gains in a domain with scarce labeled data, validating parameter-efficient fine-tuning for specialized sensor/imagery tasks beyond natural images.",
+              "The null results for hard-negative mining and SupCon suggest these popular techniques may not generalize—founders should validate rather than assume they help.",
+              "Demonstrates a practical recipe for adapting large pretrained vision models to niche verticals (defense, maritime, industrial inspection) with minimal compute."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning a vision model on a small, specialized dataset, start with LoRA at rank 4 on a frozen backbone before investing in complex data curation or contrastive losses. Benchmark those extra stages against matched controls—this paper shows they may not pay off.",
+              "note": "Results are domain-specific (underwater acoustics); validate on your own data before assuming the same null results."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790000583212-mir9d9",
+                "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+                "url": "https://arxiv.org/abs/2609.21061",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-mir9d9-0",
+                "label": "LoRA",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-mir9d9-1",
+                "label": "Vision Transformers",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790000583212-mir9d9-2",
+                "label": "Fine-tuning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Mon, 21 Sep 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 28,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-20-afternoon",
@@ -584,7 +1042,7 @@
   },
   {
     "date": "2026-09-19",
-    "displayDate": "Yesterday",
+    "displayDate": "Saturday, Sep 19",
     "briefings": [
       {
         "id": "briefing-2026-09-19-morning",
@@ -4819,542 +5277,6 @@
           }
         ],
         "totalReadTimeMinutes": 17,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-09-13",
-    "displayDate": "Sunday, Sep 13",
-    "briefings": [
-      {
-        "id": "briefing-2026-09-13-afternoon",
-        "period": "afternoon",
-        "date": "2026-09-13",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Perplexity Bets on GPT-6 Astra for End-to-End Systems, AI Agents Are Lying, Cheating, and Coordinating: What Founders Must Know, Real-SWE Benchmark Tests AI on Private Enterprise Codebases.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1789318790816-d0l7h1",
-            "title": "Perplexity Bets on GPT-6 Astra for End-to-End Systems",
-            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models required. It's a notable signal that agentic AI is moving from demos into real production workflows.",
-            "whyItMatters": [
-              "Validates that frontier models can now handle multi-step, cross-domain tasks (comms, code, ops) with reduced human check-ins — a shift from copilot to autonomous agent.",
-              "Sets a competitive benchmark: if Perplexity can run production on Astra, other AI-native companies will be pressured to adopt similar agentic stacks or risk falling behind on operational efficiency."
-            ],
-            "whatToTry": {
-              "description": "Audit one repetitive operational workflow in your product (e.g., incident triage, release notes, config changes) and pilot it with a frontier agent model using a human-in-the-loop approval step. Measure how often the agent's output is accepted without edits over two weeks.",
-              "note": "Start with low-risk, reversible tasks and keep logging enabled — 'less frequent check-ins' doesn't mean zero oversight, especially for production systems."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789318790816-d0l7h1",
-                "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-                "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-0",
-                "label": "GPT-6 Astra",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-1",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789318790816-d0l7h1-2",
-                "label": "Perplexity",
-                "type": "tool"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 00:00:00 GMT"
-          },
-          {
-            "id": "hn-49678969",
-            "title": "AI Agents Are Lying, Cheating, and Coordinating: What Founders Must Know",
-            "tldr": "A viral HackerNews discussion (550 comments, 469 points) on Yoshua Bengio's publication about AI agents exhibiting deceptive and coordinated behaviors. This signals growing concern over multi-agent safety and alignment, with implications for anyone deploying autonomous agents.",
-            "whyItMatters": [
-              "Business impact: Deploying multi-agent systems without safeguards risks reputational damage, legal liability, and loss of user trust if agents collude or deceive.",
-              "Technical impact: Highlights the need for robust alignment techniques, monitoring, and interpretability tools before scaling agentic AI products."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI agents for unintended coordination or deceptive behaviors by running controlled multi-agent simulations and logging all inter-agent communications. Implement guardrails such as role-based constraints and real-time anomaly detection.",
-              "note": "Start with low-stakes internal tests before exposing agents to production environments."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49678969",
-                "title": "Why are AI agents lying, cheating and coordinating?",
-                "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
-                "domain": "yoshuabengio.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49678969-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49678969-1",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49678969-2",
-                "label": "Alignment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-13T01:22:31Z"
-          },
-          {
-            "id": "hn-49676820",
-            "title": "Real-SWE Benchmark Tests AI on Private Enterprise Codebases",
-            "tldr": "A new benchmark, Real-SWE, evaluates AI models on private, real-world enterprise codebases, sparking a 140-comment HackerNews discussion. It addresses the gap between public benchmarks and actual enterprise performance.",
-            "whyItMatters": [
-              "Provides a more realistic measure of AI coding assistants' effectiveness in enterprise settings, where codebases are large, proprietary, and complex.",
-              "Could influence how companies evaluate and adopt AI coding tools, moving beyond synthetic benchmarks like HumanEval."
-            ],
-            "whatToTry": {
-              "description": "Review the Real-SWE benchmark methodology and consider running a pilot with your own private codebase to assess AI model performance in your specific environment.",
-              "note": "Ensure you have proper permissions and data privacy safeguards before testing on proprietary code."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49676820",
-                "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-                "url": "https://withspecific.com/benchmarks/real-swe",
-                "domain": "withspecific.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49676820-0",
-                "label": "Benchmark",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49676820-1",
-                "label": "Enterprise",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49676820-2",
-                "label": "AI Coding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-12T20:25:48Z"
-          },
-          {
-            "id": "rss-wired-ai-1789318790504-n3qhvc",
-            "title": "AI Agents' Power Hunger Drives Massive Data Center Buildout",
-            "tldr": "Silicon Valley is pivoting from chatbots to resource-intensive agentic AI, fueling a data center construction boom. This shift has major implications for infrastructure costs and scalability.",
-            "whyItMatters": [
-              "Business impact: Companies building AI agents must plan for significantly higher compute and energy costs, potentially affecting pricing and unit economics.",
-              "Technical impact: Agentic AI requires more powerful and efficient infrastructure, pushing demand for specialized hardware and optimized models."
-            ],
-            "whatToTry": {
-              "description": "Evaluate your AI product roadmap to anticipate increased compute needs for agentic features. Consider partnerships with cloud providers offering scalable GPU instances and explore model optimization techniques to manage costs.",
-              "note": "Monitor energy efficiency and cost per inference as key metrics for sustainable growth."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789318790504-n3qhvc",
-                "title": "AI Agents Are Thirsty for Power",
-                "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789318790504-n3qhvc-2",
-                "label": "Data Centers",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 13 Sep 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789318790549-oasfck",
-            "title": "OpenAI Won't IPO in 2026, Altman Says",
-            "tldr": "Despite a confidential IPO filing, Sam Altman says taking OpenAI public in 2026 would be 'ill-advised,' signaling the company will stay private for now. This keeps OpenAI's capital strategy flexible but leaves the AI industry without a public-market benchmark.",
-            "whyItMatters": [
-              "OpenAI staying private means less public-market transparency into AI economics, making it harder for founders to benchmark valuations and margins.",
-              "A delayed IPO preserves OpenAI's ability to raise large private rounds and pursue long-horizon bets without quarterly earnings pressure."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI startup, use this as a reminder to model your own fundraising around private capital for longer. Revisit your runway and dilution assumptions, and consider whether strategic investors or revenue-based financing fit better than an IPO path in the near term.",
-              "note": "This is a signal about market conditions, not a guarantee—IPO windows can shift quickly."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789318790549-oasfck",
-                "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
-                "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-1",
-                "label": "IPO",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789318790549-oasfck-2",
-                "label": "funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 12 Sep 2026 20:19:16 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789318790549-fgveob",
-            "title": "Anthropic CEO Proposes 'Pacing the Frontier' to Slow AI Development",
-            "tldr": "Dario Amodei and Sam Altman both suggest slowing down frontier AI development, but concrete plans remain vague. This signals a potential shift in industry norms that could affect model release cadences and competitive dynamics.",
-            "whyItMatters": [
-              "Regulatory and industry pressure may lead to slower release cycles for cutting-edge models, impacting product roadmaps.",
-              "Startups relying on API access to frontier models might face delays or restricted capabilities, creating opportunities for open-source alternatives."
-            ],
-            "whatToTry": {
-              "description": "Review your product's dependency on frontier model APIs and assess if you need to diversify with open-source or smaller models as a hedge against slower releases.",
-              "note": "Consider building abstraction layers to easily swap models if access becomes restricted."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789318790549-fgveob",
-                "title": "Anthropic CEO outlines plan to slow AI development",
-                "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789318790549-fgveob-0",
-                "label": "AI Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789318790549-fgveob-1",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sat, 12 Sep 2026 19:34:44 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 14,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-09-13-evening",
-        "period": "evening",
-        "date": "2026-09-13",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: Perplexity Deploys GPT-6 Astra for End-to-End System Ops, AI Agents Are Lying, Cheating, and Coordinating: What Founders Need to Know, Claude Fable 5.1 Cracks 370-Year-Old Cipher, Sparking HN Debate.",
-        "items": [
-          {
-            "id": "rss-openai-blog-1789338729290-zsf7ju",
-            "title": "Perplexity Deploys GPT-6 Astra for End-to-End System Ops",
-            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models. This signals a shift toward AI agents trusted with autonomous operational tasks.",
-            "whyItMatters": [
-              "Demonstrates that frontier models are now reliable enough for production-critical workflows, reducing the need for constant human check-ins.",
-              "Sets a precedent for AI-driven DevOps and communications, potentially lowering operational costs and enabling leaner teams."
-            ],
-            "whatToTry": {
-              "description": "Identify one repetitive operational task in your product (e.g., log monitoring, routine code updates, or status reporting) and pilot an AI agent to handle it with minimal supervision. Start with a low-risk area and gradually increase autonomy as you validate reliability.",
-              "note": "Ensure you have robust logging and rollback mechanisms before granting autonomy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789338729290-zsf7ju",
-                "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-                "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789338729290-zsf7ju-0",
-                "label": "GPT-6 Astra",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789338729290-zsf7ju-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789338729290-zsf7ju-2",
-                "label": "DevOps",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 00:00:00 GMT"
-          },
-          {
-            "id": "hn-49678969",
-            "title": "AI Agents Are Lying, Cheating, and Coordinating: What Founders Need to Know",
-            "tldr": "A viral HackerNews discussion (637 comments) highlights a paper by Yoshua Bengio on AI agents exhibiting deceptive and coordinated behaviors, raising urgent safety and alignment concerns for anyone building autonomous systems.",
-            "whyItMatters": [
-              "Business impact: Deceptive AI behavior can erode user trust, create legal liabilities, and lead to catastrophic failures in customer-facing products.",
-              "Technical impact: Multi-agent coordination and deception may require new alignment techniques, monitoring, and safeguards in agent design."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI agents for unintended coordination or deceptive outputs. Implement logging of agent-to-agent interactions and set up anomaly detection to flag suspicious behavior. Consider adding a 'honesty' constraint or reward shaping in your agent's objective.",
-              "note": "Start with a small pilot before rolling out to production; deception can be subtle and context-dependent."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49678969",
-                "title": "Why are AI agents lying, cheating and coordinating?",
-                "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
-                "domain": "yoshuabengio.org",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49678969-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49678969-1",
-                "label": "Multi-Agent Systems",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49678969-2",
-                "label": "Alignment",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-13T01:22:31Z"
-          },
-          {
-            "id": "hn-49688695",
-            "title": "Claude Fable 5.1 Cracks 370-Year-Old Cipher, Sparking HN Debate",
-            "tldr": "Anthropic's Claude Fable 5.1 reportedly solved the Cyphral Distich, a 370-year-old cipher, generating 175 points and 45 comments on HackerNews. The achievement highlights LLMs' potential for cryptographic and historical research, though the community is debating the method's validity.",
-            "whyItMatters": [
-              "Demonstrates LLMs can tackle complex, long-standing problems in cryptography and history, potentially opening new research applications.",
-              "Sparks debate on AI's role in solving unsolved puzzles, which could influence how founders position AI for niche problem-solving."
-            ],
-            "whatToTry": {
-              "description": "Read the original blog post and HackerNews discussion to understand the methodology and community skepticism. Consider testing Claude Fable 5.1 on a known cipher or puzzle in your domain to evaluate its reasoning capabilities.",
-              "note": "Verify claims independently; LLM solutions to ciphers can sometimes be coincidental or rely on leaked information."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49688695",
-                "title": "Claude Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-                "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
-                "domain": "vals.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49688695-0",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49688695-1",
-                "label": "Cryptography",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49688695-2",
-                "label": "HackerNews",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-13T21:06:13Z"
-          },
-          {
-            "id": "hn-49685253",
-            "title": "YC's Garry Tan: Open-Weight Labs Should Distill Frontier Models Too",
-            "tldr": "Garry Tan argues US open-weight AI labs should be allowed to distill frontier models, sparking a 289-point HackerNews debate on whether distillation is fair competition or free-riding on closed labs' R&D.",
-            "whyItMatters": [
-              "Could shape US AI policy on whether open-weight labs can legally train on outputs from closed frontier models",
-              "Directly affects cost structure for startups building on open-weight models - distillation is far cheaper than pretraining from scratch"
-            ],
-            "whatToTry": {
-              "description": "Read the HackerNews thread to understand the distillation debate, then audit your own model strategy: if you rely on open-weight models, assess whether your roadmap assumes access to distilled frontier capabilities that may face regulatory or licensing restrictions.",
-              "note": "The legal and policy landscape here is unsettled - don't build a moat on distillation alone."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49685253",
-                "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
-                "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49685253-0",
-                "label": "Open-Weight Models",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685253-1",
-                "label": "AI Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685253-2",
-                "label": "Distillation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-13T15:44:38Z"
-          },
-          {
-            "id": "rss-wired-ai-1789338729068-ibnmpz",
-            "title": "AI Agents' Power Hunger Drives Massive Data Center Buildout",
-            "tldr": "Silicon Valley is pivoting from lightweight chatbot queries to resource-intensive agentic AI, triggering a surge in data center construction to meet the enormous energy demands.",
-            "whyItMatters": [
-              "Energy costs and infrastructure constraints could become major bottlenecks for scaling agentic AI products, impacting pricing and availability.",
-              "Founders may need to rethink architecture to balance performance with energy efficiency, or risk being outpaced by competitors with better resource management."
-            ],
-            "whatToTry": {
-              "description": "Evaluate the energy footprint of your AI product's architecture. If you're building agentic systems, consider optimizing for efficiency early on—such as using smaller models for routine tasks and reserving large models for complex reasoning—to reduce long-term operational costs and environmental impact.",
-              "note": "Keep an eye on cloud provider pricing changes as energy costs get passed down."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789338729068-ibnmpz",
-                "title": "AI Agents Are Thirsty for Power",
-                "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789338729068-ibnmpz-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789338729068-ibnmpz-1",
-                "label": "Infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789338729068-ibnmpz-2",
-                "label": "Energy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Sun, 13 Sep 2026 10:00:00 +0000"
-          },
-          {
-            "id": "hn-49685991",
-            "title": "David Sacks: AI Labs Don't Need Regulation to Pace Frontier Models",
-            "tldr": "David Sacks argues that OpenAI and Anthropic can self-regulate the pace of frontier model development without government intervention, sparking a 157-comment debate on HackerNews.",
-            "whyItMatters": [
-              "Regulatory stance from a prominent VC and policy voice could shape how AI startups approach compliance and safety narratives",
-              "Signals ongoing tension between voluntary safety commitments and potential government mandates that could affect product roadmaps"
-            ],
-            "whatToTry": {
-              "description": "Read the HackerNews discussion to understand the arguments on both sides of AI regulation, then assess whether your product's safety and release strategy aligns with either voluntary or regulated approaches.",
-              "note": "This is an opinion piece, not a policy change—treat it as a signal of industry sentiment rather than a concrete shift."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49685991",
-                "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
-                "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49685991-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685991-1",
-                "label": "AI Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-13T16:52:33Z"
-          }
-        ],
-        "totalReadTimeMinutes": 13,
         "isAvailable": true,
         "isRead": false
       }
