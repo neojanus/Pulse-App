@@ -8,110 +8,282 @@
         "period": "afternoon",
         "date": "2026-09-22",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: RBS-Attention Cuts Long-Context Prefill Costs by 6x, New Method Detects LLM Hallucinations via Attention Topology, Nscale's IPO Tests Wall Street's Appetite for Concentrated AI Bets.",
+        "executiveSummary": "Today's highlights: Anthropic Launches Opus 5.5: Cheaper, Stronger, Fable-Level, GPT-6 Astra Cracks 20-Year-Old Enigma Message, Rabbit Pivots from Hardware to AI Agent App OS3.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1790080921951-108toi",
-            "title": "RBS-Attention Cuts Long-Context Prefill Costs by 6x",
-            "tldr": "A new training-free sparse-prefill method, RBS-Attention, achieves up to 20.65x standalone prefill-attention speedup and 5.97x end-to-end time-to-first-token speedup at 128K context on Qwen3-30B, while maintaining near-dense accuracy (88.65 vs 89.52 on RULER).",
+            "id": "rss-techcrunch-ai-1790098832037-k9o3za",
+            "title": "Anthropic Launches Opus 5.5: Cheaper, Stronger, Fable-Level",
+            "tldr": "Anthropic released Opus 5.5, claiming it's their strongest model yet, with lower pricing and performance matching Fable. This could shift the cost-performance calculus for AI product builders.",
             "whyItMatters": [
-              "Drastically reduces inference cost and latency for long-context LLM applications, making them more economically viable.",
-              "Training-free and compatible with FlashAttention, so it can be integrated into existing serving stacks without retraining."
+              "Lower prices reduce operational costs for AI-powered products, improving margins.",
+              "Fable-level performance means better accuracy and capabilities for complex tasks, enabling new features."
             ],
             "whatToTry": {
-              "description": "If you're serving long-context models, evaluate RBS-Attention by implementing the dual-branch block selection in your inference pipeline or testing the provided code (if available) to measure speed and quality trade-offs on your workload.",
-              "note": "Check compatibility with your current attention kernel and model architecture; the method is training-free but may require custom kernel support."
+              "description": "Benchmark Opus 5.5 against your current model on your specific use case to evaluate cost savings and performance gains. Update your model routing or fallback strategies if it outperforms.",
+              "note": "Check Anthropic's pricing page for exact rates and compare with your current provider."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1790080921951-108toi",
-                "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-                "url": "https://arxiv.org/abs/2609.20971",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-rss-techcrunch-ai-1790098832037-k9o3za",
+                "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+                "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+                "domain": "techcrunch.com",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1790080921951-108toi-0",
-                "label": "LLM",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-108toi-1",
-                "label": "Inference Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-108toi-2",
-                "label": "Sparse Attention",
+                "id": "tag-rss-techcrunch-ai-1790098832037-k9o3za-0",
+                "label": "Anthropic",
                 "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832037-k9o3za-1",
+                "label": "Opus 5.5",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832037-k9o3za-2",
+                "label": "Pricing",
+                "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "industry",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Tue, 22 Sep 2026 16:30:07 +0000"
           },
           {
-            "id": "rss-arxiv-ai-1790080921951-ep5lvc",
-            "title": "New Method Detects LLM Hallucinations via Attention Topology",
-            "tldr": "Researchers introduce a single-pass hallucination detection method that analyzes attention graph topology using Forman-Ricci curvature, consistently outperforming existing baselines across multiple LLMs and benchmarks.",
+            "id": "hn-49801324",
+            "title": "GPT-6 Astra Cracks 20-Year-Old Enigma Message",
+            "tldr": "OpenAI's GPT-6 Astra solved an Enigma-encrypted message that had resisted cryptanalysis since 2005, sparking a 278-comment HackerNews discussion. This showcases LLMs' potential for complex pattern recognition and historical codebreaking.",
             "whyItMatters": [
-              "Enables real-time hallucination detection without multiple generations, reducing cost and latency for production AI products",
-              "Provides deeper understanding of why hallucinations occur—impaired context sharing and over-squashing in final layers—which can guide model architecture improvements"
+              "Demonstrates LLMs can tackle problems requiring deep reasoning and pattern recognition, opening doors to new applications in security, research, and data analysis.",
+              "High community engagement signals strong interest in advanced AI capabilities, which could influence investor and customer perceptions of AI's problem-solving power."
             ],
             "whatToTry": {
-              "description": "If you're building LLM applications, explore integrating attention-based hallucination detection into your pipeline. Start by logging attention patterns from your model's final layer and look for signs of over-reliance on self-attention or diffused context retrieval. This could serve as a lightweight guardrail before returning responses to users.",
-              "note": "The method requires access to attention weights, so it's best suited for open-source or self-hosted models where you can inspect internals."
+              "description": "Explore how LLMs can be applied to your domain's hard problems by testing them on tasks that require multi-step reasoning or pattern detection, such as anomaly detection in logs or deciphering obfuscated data.",
+              "note": "Start with well-defined, verifiable problems to benchmark performance before integrating into production."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1790080921951-ep5lvc",
-                "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-                "url": "https://arxiv.org/abs/2609.21096",
-                "domain": "arxiv.org",
-                "type": "paper"
+                "id": "src-hn-49801324",
+                "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+                "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+                "domain": "cryptocellar.org",
+                "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-0",
-                "label": "Hallucination",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-1",
-                "label": "LLM",
+                "id": "tag-hn-49801324-0",
+                "label": "GPT-6",
                 "type": "model"
               },
               {
-                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-2",
-                "label": "Research",
+                "id": "tag-hn-49801324-1",
+                "label": "Cryptanalysis",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49801324-2",
+                "label": "LLM",
                 "type": "topic"
               }
             ],
-            "category": "research",
-            "readTimeMinutes": 3,
+            "category": "industry",
+            "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+            "publishedAt": "2026-09-22T13:52:15Z"
           },
           {
-            "id": "rss-techcrunch-ai-1790080921805-m4bjpc",
-            "title": "Nscale's IPO Tests Wall Street's Appetite for Concentrated AI Bets",
-            "tldr": "British AI data center developer Nscale is going public, but its revenue is heavily concentrated on Microsoft and Anthropic, making it a bellwether for investor tolerance of AI infrastructure risk.",
+            "id": "rss-wired-ai-1790098832047-07u0o2",
+            "title": "Rabbit Pivots from Hardware to AI Agent App OS3",
+            "tldr": "Rabbit, known for its R1 AI hardware, is launching OS3, a cross-platform AI agent app that runs on existing devices. This marks a strategic shift from dedicated hardware to software-based agents.",
             "whyItMatters": [
-              "Signals whether public markets will fund the next wave of AI infrastructure buildout despite customer concentration risk.",
-              "A successful IPO could unlock more capital for AI data center startups; a weak one could chill the sector.",
-              "Highlights the dependency of AI infrastructure providers on a handful of hyperscalers and model labs."
+              "Validates the trend of AI agents moving to software platforms, reducing hardware dependency and increasing accessibility.",
+              "Could intensify competition in the AI assistant space, challenging existing apps like ChatGPT and Google Assistant."
             ],
             "whatToTry": {
-              "description": "If you're building AI infrastructure or selling to hyperscalers, use this IPO as a benchmark for how investors value concentrated revenue. Review your own customer concentration and consider diversifying or building multi-year contracts before your next fundraise.",
-              "note": "Watch the IPO pricing and first-day trading for signals on broader AI infrastructure sentiment."
+              "description": "Monitor Rabbit's OS3 launch and consider how a cross-platform agent could integrate with your product. Evaluate if building a similar agent or partnering with existing ones fits your roadmap.",
+              "note": "Rabbit's previous hardware faced criticism; their software pivot may address usability issues, but execution remains key."
             },
             "sources": [
               {
-                "id": "src-rss-techcrunch-ai-1790080921805-m4bjpc",
+                "id": "src-rss-wired-ai-1790098832047-07u0o2",
+                "title": "Rabbit Is Back, This Time With an AI Agent App",
+                "url": "https://www.wired.com/story/rabbit-r1-os3-jesse-lyu/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1790098832047-07u0o2-0",
+                "label": "AI agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790098832047-07u0o2-1",
+                "label": "Rabbit",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790098832047-07u0o2-2",
+                "label": "cross-platform",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 16:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1790098832037-3bayjr",
+            "title": "AstroForge Puts Transformer AI in Command of Spacecraft",
+            "tldr": "AstroForge's Autonomy-1 mission will use a small transformer-based AI model to autonomously control a space probe, marking a notable step toward AI-driven spacecraft operations.",
+            "whyItMatters": [
+              "Demonstrates growing real-world deployment of transformer models in high-stakes, resource-constrained environments beyond typical cloud/consumer applications.",
+              "Signals a market shift toward autonomous edge AI systems where latency, bandwidth, and human oversight are limited—relevant for founders building AI for robotics, defense, or remote operations."
+            ],
+            "whatToTry": {
+              "description": "Explore how small transformer models can be optimized for edge deployment in your own product by testing quantization and pruning techniques on a lightweight model for a constrained hardware target.",
+              "note": "Focus on inference latency and power budgets, not just accuracy—space and edge environments punish inefficiency."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1790098832037-3bayjr",
+                "title": "AstroForge is putting AI in command of its next spacecraft",
+                "url": "https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832037-3bayjr-0",
+                "label": "Edge AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832037-3bayjr-1",
+                "label": "Transformers",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832037-3bayjr-2",
+                "label": "Autonomy",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 15:00:00 +0000"
+          },
+          {
+            "id": "hn-49801329",
+            "title": "Drop: Rootless Linux Sandbox with gVisor for Secure Dev Environments",
+            "tldr": "Drop is a new tool that creates isolated, rootless Linux sandboxes using namespaces and optional gVisor, providing enforced isolation for running untrusted code without the overhead of VMs or containers.",
+            "whyItMatters": [
+              "Enhances security when testing third-party dependencies or AI models, reducing risk of system compromise.",
+              "Offers a lightweight alternative to containers/VMs for local development, preserving productivity with access to host configs.",
+              "gVisor integration adds kernel-level protection, useful for running untrusted AI-generated code."
+            ],
+            "whatToTry": {
+              "description": "Try Drop to sandbox a potentially risky dependency or AI model. Install via the provided script, create an environment, and run your code within it to test isolation.",
+              "note": "Check compatibility with your OS and kernel; gVisor support may require additional setup."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49801329",
+                "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support",
+                "url": "https://droprun.sh/",
+                "domain": "droprun.sh",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49801329-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49801329-1",
+                "label": "Sandbox",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49801329-2",
+                "label": "gVisor",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-22T13:52:47Z"
+          },
+          {
+            "id": "rss-wired-ai-1790098832047-2uq0yl",
+            "title": "Rat Brain AI Models Hit AWS: Biological Computing Goes Mainstream",
+            "tldr": "The Biological Computing Company is bringing its rat-brain-based AI tools to Amazon Web Services, signaling a major step for the once-fringe field of biological computing that aims to merge living neurons with code.",
+            "whyItMatters": [
+              "Biological computing could offer radically lower energy consumption and novel learning capabilities compared to silicon-based AI, potentially disrupting current hardware paradigms.",
+              "AWS integration means founders can experiment with these tools without building their own bio-lab infrastructure, opening new possibilities for AI products."
+            ],
+            "whatToTry": {
+              "description": "Explore The Biological Computing Company's offerings on AWS Marketplace to understand their capabilities and consider if biological computing could complement your existing AI stack for specific use cases like low-power inference or adaptive learning.",
+              "note": "This technology is still emerging; evaluate maturity and scalability before integrating into production systems."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1790098832047-2uq0yl",
+                "title": "AI Models Built From Rat Brains Just Got Closer to Reality",
+                "url": "https://www.wired.com/story/ai-models-built-from-rat-brains-are-about-to-become-a-reality/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1790098832047-2uq0yl-0",
+                "label": "Biological Computing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790098832047-2uq0yl-1",
+                "label": "AWS",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790098832047-2uq0yl-2",
+                "label": "AI Models",
+                "type": "model"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 13:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1790098832038-tifod5",
+            "title": "Nscale IPO Tests Wall Street's Appetite for Concentrated AI Bets",
+            "tldr": "British AI data center developer Nscale is going public, but its revenue is heavily concentrated in just two customers: Microsoft and Anthropic. The IPO will gauge whether public markets will reward or punish extreme customer concentration in AI infrastructure.",
+            "whyItMatters": [
+              "Signals how public markets value AI infrastructure companies with risky customer concentration, which could affect fundraising and exit strategies for similar startups.",
+              "Highlights the growing power of a few tech giants as anchor customers in the AI compute supply chain, creating both opportunity and dependency for infrastructure providers."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI infrastructure or data center services, assess your own customer concentration risk. Diversify your pipeline or build switching costs before seeking funding, as investors may scrutinize this metric heavily after Nscale's IPO.",
+              "note": "Watch the IPO pricing and first-day trading as a real-time signal of market sentiment toward concentrated AI bets."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1790098832038-tifod5",
                 "title": "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again",
                 "url": "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/",
                 "domain": "techcrunch.com",
@@ -120,18 +292,18 @@
             ],
             "tags": [
               {
-                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-0",
-                "label": "AI infrastructure",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-1",
+                "id": "tag-rss-techcrunch-ai-1790098832038-tifod5-0",
                 "label": "IPO",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-2",
-                "label": "funding",
+                "id": "tag-rss-techcrunch-ai-1790098832038-tifod5-1",
+                "label": "AI infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790098832038-tifod5-2",
+                "label": "market trends",
                 "type": "topic"
               }
             ],
@@ -141,322 +313,93 @@
             "publishedAt": "Tue, 22 Sep 2026 12:23:05 +0000"
           },
           {
-            "id": "rss-wired-ai-1790080921816-5tsbow",
-            "title": "Cisco Talos Uncovers AI-Orchestrated Malware Command System",
-            "tldr": "Cisco Talos researchers built a framework to detect malware that uses AI chatbots and discovered an autonomous command system where AI coordinates attacks without human input. This signals a new frontier in cybersecurity threats that AI product builders must consider.",
+            "id": "hn-49802161",
+            "title": "OpenAI Poised to Fast-Follow Jev, HN Discussion Suggests",
+            "tldr": "A HackerNews thread with 109 comments debates whether OpenAI will quickly copy Jev's approach, highlighting the ongoing dynamic between AI giants and startups.",
             "whyItMatters": [
-              "AI-powered malware can operate autonomously, making attacks faster and harder to trace, which increases risk for any company deploying AI systems.",
-              "Defenders now need AI-aware security tools; this framework could become a standard for detecting AI-integrated threats, creating new opportunities for security startups."
+              "Startups building novel AI features must anticipate fast-following by incumbents like OpenAI.",
+              "OpenAI's ability to rapidly integrate new capabilities can disrupt niche players overnight."
             ],
             "whatToTry": {
-              "description": "Audit your AI product's API usage and access controls to ensure they can't be exploited by malicious actors to orchestrate attacks. Implement rate limiting, anomaly detection, and strict authentication for any AI service endpoints.",
-              "note": "Consider using Cisco Talos's detection framework as a reference for building your own security monitoring."
+              "description": "Review your product's core differentiator and assess how easily it could be replicated by a large model provider. Consider building moats through proprietary data, community, or deep integrations.",
+              "note": "Focus on speed and customer lock-in to stay ahead."
             },
             "sources": [
               {
-                "id": "src-rss-wired-ai-1790080921816-5tsbow",
-                "title": "A New Tool Found Malware That’s Guided by an AI Hive Mind—No Humans in Sight",
-                "url": "https://www.wired.com/story/a-tool-for-tracking-ai-integrated-malware-uncovered-an-autonomous-command-system/",
-                "domain": "wired.com",
-                "type": "article"
+                "id": "src-hn-49802161",
+                "title": "OpenAI is well positioned to fast-follow Jev",
+                "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+                "domain": "arcturus-labs.com",
+                "type": "blog"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-wired-ai-1790080921816-5tsbow-0",
-                "label": "Security",
+                "id": "tag-hn-49802161-0",
+                "label": "OpenAI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1790080921816-5tsbow-1",
-                "label": "AI Malware",
+                "id": "tag-hn-49802161-1",
+                "label": "Startups",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1790080921816-5tsbow-2",
-                "label": "Cisco Talos",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 10:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1790080921816-vex85s",
-            "title": "AI Model Reconstructs Ancient Greek Papyrus Fragments",
-            "tldr": "Researchers have developed a large language model that fills in missing text in ancient Greek papyrus fragments, potentially unlocking new historical insights.",
-            "whyItMatters": [
-              "Demonstrates LLMs' potential in specialized domains like digital humanities, opening new markets for AI tools.",
-              "Showcases a novel application of text infilling that could inspire similar solutions for other fragmented or incomplete datasets."
-            ],
-            "whatToTry": {
-              "description": "Explore how text infilling models can be adapted to your domain. Consider if your product deals with incomplete data—could a fine-tuned LLM fill gaps and provide value?",
-              "note": "Focus on domains with structured but incomplete data, such as legal documents, medical records, or historical archives."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1790080921816-vex85s",
-                "title": "A New Chatbot Wants to Unlock the Secrets in Tattered Ancient Greek Records",
-                "url": "https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1790080921816-vex85s-0",
-                "label": "LLM",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1790080921816-vex85s-1",
-                "label": "Digital Humanities",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1790080921816-vex85s-2",
-                "label": "Text Infilling",
+                "id": "tag-hn-49802161-2",
+                "label": "Competition",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 09:30:00 +0000"
+            "publishedAt": "2026-09-22T14:42:59Z"
           },
           {
-            "id": "hn-49797323",
-            "title": "Can gzip be a language model? HN debates compression as AI",
-            "tldr": "A HackerNews post exploring whether gzip compression can function as a language model sparked 80 comments, while a separate thread on Grok 4.7 drew 494 comments. The gzip discussion highlights ongoing interest in compression-based approaches to language modeling.",
+            "id": "rss-techcrunch-ai-1790098832038-5t7wip",
+            "title": "Data Center Backlash Grows: What It Means for AI Founders",
+            "tldr": "TechCrunch reports on two years of contentious AI data center debates in Pennsylvania, highlighting how local opposition is becoming a major hurdle for AI infrastructure expansion.",
             "whyItMatters": [
-              "Compression-based language models could offer a radically simpler, more efficient alternative to neural networks for certain tasks.",
-              "The high engagement suggests the AI community is actively questioning fundamental assumptions about what constitutes a language model."
+              "Rising local resistance can delay or block data center projects, increasing costs and uncertainty for AI compute capacity.",
+              "Founders relying on cloud providers may face higher prices or limited availability as infrastructure growth slows."
             ],
             "whatToTry": {
-              "description": "Read the original gzip-LM post and the HN discussion to understand the theoretical basis and practical limitations. Consider experimenting with gzip or other compression algorithms as baselines for text generation or classification tasks in your own projects.",
-              "note": "While gzip-based models are unlikely to replace transformers for complex tasks, they can serve as surprisingly strong baselines for simple sequence prediction or anomaly detection."
+              "description": "Assess your AI product's compute dependencies and explore alternative providers or regions less affected by local opposition. Consider advocating for community-friendly data center policies through industry groups.",
+              "note": "Monitor local news in key data center hubs for early signs of regulatory changes."
             },
             "sources": [
               {
-                "id": "src-hn-49797323-0",
-                "title": "HackerNews",
-                "url": "https://nathan.rs/posts/gzip-lm/",
-                "domain": "nathan.rs",
-                "type": "article"
-              },
-              {
-                "id": "src-hn-49797323-1",
-                "title": "HackerNews",
-                "url": "https://nathan.rs/posts/gzip-lm/",
-                "domain": "nathan.rs",
+                "id": "src-rss-techcrunch-ai-1790098832038-5t7wip",
+                "title": "Everyone can find a reason to dislike data center construction",
+                "url": "https://techcrunch.com/2026/09/22/everyone-can-find-a-reason-to-dislike-data-center-construction/",
+                "domain": "techcrunch.com",
                 "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-hn-49797323-0",
-                "label": "Compression",
+                "id": "tag-rss-techcrunch-ai-1790098832038-5t7wip-0",
+                "label": "Infrastructure",
                 "type": "topic"
               },
               {
-                "id": "tag-hn-49797323-1",
-                "label": "Language Models",
+                "id": "tag-rss-techcrunch-ai-1790098832038-5t7wip-1",
+                "label": "Policy",
                 "type": "topic"
               },
               {
-                "id": "tag-hn-49797323-2",
-                "label": "HackerNews",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-22T06:08:39Z"
-          },
-          {
-            "id": "hn-49796660",
-            "title": "MiMo-v2.6-Pro: New Model Analysis on Intelligence, Performance, and Price",
-            "tldr": "Artificial Analysis published an analysis of MiMo-v2.6-Pro, sparking a 101-point HackerNews discussion with 34 comments. The model's benchmark scores and pricing could offer a new option for cost-sensitive AI applications.",
-            "whyItMatters": [
-              "May provide a cost-effective alternative to current models, reducing inference costs for startups.",
-              "Benchmark results could influence model selection for tasks requiring specific capabilities."
-            ],
-            "whatToTry": {
-              "description": "Review the analysis on Artificial Analysis to compare MiMo-v2.6-Pro's performance and pricing against your current models. If it fits, run a small pilot to test its suitability for your use case.",
-              "note": "Check the HackerNews discussion for practical insights from early users."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49796660",
-                "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
-                "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
-                "domain": "artificialanalysis.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49796660-0",
-                "label": "MiMo-v2.6-Pro",
-                "type": "model"
-              },
-              {
-                "id": "tag-hn-49796660-1",
-                "label": "benchmark",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49796660-2",
-                "label": "pricing",
+                "id": "tag-rss-techcrunch-ai-1790098832038-5t7wip-2",
+                "label": "AI Industry",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "2026-09-22T04:02:09Z"
-          },
-          {
-            "id": "rss-arxiv-ai-1790080921951-7a6u58",
-            "title": "Attention-Aware Routing Boosts MoE Reasoning Without Touching the Base Model",
-            "tldr": "A new arXiv paper introduces Attention-Aware Routing (AAR), which feeds attention-weight statistics into a frozen Mixture-of-Experts router, improving GSM8K by +3.37pp on OLMoE and revealing a coupled routing-attention circuit that is depth-sensitive.",
-            "whyItMatters": [
-              "Cheap fine-tuning: only routing parameters are trained while the base transformer stays frozen, making it a low-cost way to specialize MoE models for reasoning tasks.",
-              "Architectural insight: routing changes propagate through the residual stream to reshape attention sinks, suggesting MoE routing is a more powerful control knob than previously thought.",
-              "Depth matters: applying AAR indiscriminately can hurt factual retrieval, so layer-selective routing is needed to balance retrieval vs. reasoning."
-            ],
-            "whatToTry": {
-              "description": "If you are fine-tuning an open MoE model like OLMoE or Mixtral, experiment with training only the router using attention-derived features (e.g., sliding-window attention weight statistics) instead of full-model SFT. Start by applying AAR only to deeper layers to preserve factual retrieval.",
-              "note": "The paper reports gains on GSM8K but warns of a retrieval-reasoning tradeoff across depth; validate on your own retrieval-heavy tasks before broad deployment."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1790080921951-7a6u58",
-                "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-                "url": "https://arxiv.org/abs/2609.20974",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-0",
-                "label": "MoE",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-1",
-                "label": "Routing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-2",
-                "label": "Fine-tuning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-3",
-                "label": "OLMoE",
-                "type": "model"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1790080921951-r1mhd6",
-            "title": "CaLR: Hybrid AR-Diffusion Reasoning with Causal Latent Revision",
-            "tldr": "Researchers propose CaLR, a framework that combines autoregressive and diffusion language models by using a causal topology matrix and implicit differentiation to enable gradient-guided self-correction during parallel generation, achieving SOTA on reasoning benchmarks like Sudoku.",
-            "whyItMatters": [
-              "Could lead to more robust reasoning in AI models, reducing errors in complex tasks like logic puzzles and planning.",
-              "Offers a new direction for model architecture that balances parallel generation speed with logical consistency."
-            ],
-            "whatToTry": {
-              "description": "Experiment with diffusion language models for reasoning tasks by incorporating causal constraints or gradient-based revision mechanisms. Start by reviewing the CaLR paper and considering how to adapt similar ideas to your own models.",
-              "note": "This is early-stage research; practical implementation may require significant engineering effort."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1790080921951-r1mhd6",
-                "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
-                "url": "https://arxiv.org/abs/2609.20981",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-0",
-                "label": "Diffusion Models",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-1",
-                "label": "Reasoning",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1790080921951-cirw8r",
-            "title": "LoRA Boosts Vision Transformers for Underwater Sonar Recognition",
-            "tldr": "Researchers adapted DINOv3 ViTs to synthetic aperture sonar target recognition using LoRA, more than doubling AUPRC (0.300 to 0.679) while training only 0.26% of weights. Surprisingly, hard-negative mining and supervised contrastive learning added no measurable benefit.",
-            "whyItMatters": [
-              "Parameter-efficient fine-tuning (LoRA) can unlock strong performance in niche domains with scarce labeled data, a common challenge for AI product founders.",
-              "The null results for complex refinement stages suggest that simpler, cheaper adaptation may be sufficient, saving engineering effort and compute.",
-              "Demonstrates that large pretrained vision models can transfer to highly specialized sensor data (underwater acoustics) with minimal tuning."
-            ],
-            "whatToTry": {
-              "description": "If you're fine-tuning a vision model on a small, domain-specific dataset, start with LoRA on a frozen backbone before investing in complex data mining or contrastive learning pipelines. Test rank 4 or similar low-rank configurations to see if they deliver most of the performance gain.",
-              "note": "Results are specific to SAS imagery; validate on your own data, but the principle of trying parameter-efficient methods first is broadly applicable."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1790080921951-cirw8r",
-                "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-                "url": "https://arxiv.org/abs/2609.21061",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-0",
-                "label": "LoRA",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-1",
-                "label": "Vision Transformers",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-2",
-                "label": "Fine-tuning",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+            "publishedAt": "Tue, 22 Sep 2026 13:00:00 +0000"
           }
         ],
-        "totalReadTimeMinutes": 25,
+        "totalReadTimeMinutes": 19,
         "isAvailable": true,
         "isRead": false
       }
