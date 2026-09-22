@@ -1,7 +1,470 @@
 [
   {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-22-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-22",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: RBS-Attention Cuts Long-Context Prefill Costs by 6x, New Method Detects LLM Hallucinations via Attention Topology, Nscale's IPO Tests Wall Street's Appetite for Concentrated AI Bets.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1790080921951-108toi",
+            "title": "RBS-Attention Cuts Long-Context Prefill Costs by 6x",
+            "tldr": "A new training-free sparse-prefill method, RBS-Attention, achieves up to 20.65x standalone prefill-attention speedup and 5.97x end-to-end time-to-first-token speedup at 128K context on Qwen3-30B, while maintaining near-dense accuracy (88.65 vs 89.52 on RULER).",
+            "whyItMatters": [
+              "Drastically reduces inference cost and latency for long-context LLM applications, making them more economically viable.",
+              "Training-free and compatible with FlashAttention, so it can be integrated into existing serving stacks without retraining."
+            ],
+            "whatToTry": {
+              "description": "If you're serving long-context models, evaluate RBS-Attention by implementing the dual-branch block selection in your inference pipeline or testing the provided code (if available) to measure speed and quality trade-offs on your workload.",
+              "note": "Check compatibility with your current attention kernel and model architecture; the method is training-free but may require custom kernel support."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790080921951-108toi",
+                "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+                "url": "https://arxiv.org/abs/2609.20971",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-108toi-0",
+                "label": "LLM",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-108toi-1",
+                "label": "Inference Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-108toi-2",
+                "label": "Sparse Attention",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790080921951-ep5lvc",
+            "title": "New Method Detects LLM Hallucinations via Attention Topology",
+            "tldr": "Researchers introduce a single-pass hallucination detection method that analyzes attention graph topology using Forman-Ricci curvature, consistently outperforming existing baselines across multiple LLMs and benchmarks.",
+            "whyItMatters": [
+              "Enables real-time hallucination detection without multiple generations, reducing cost and latency for production AI products",
+              "Provides deeper understanding of why hallucinations occur—impaired context sharing and over-squashing in final layers—which can guide model architecture improvements"
+            ],
+            "whatToTry": {
+              "description": "If you're building LLM applications, explore integrating attention-based hallucination detection into your pipeline. Start by logging attention patterns from your model's final layer and look for signs of over-reliance on self-attention or diffused context retrieval. This could serve as a lightweight guardrail before returning responses to users.",
+              "note": "The method requires access to attention weights, so it's best suited for open-source or self-hosted models where you can inspect internals."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790080921951-ep5lvc",
+                "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
+                "url": "https://arxiv.org/abs/2609.21096",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-0",
+                "label": "Hallucination",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-ep5lvc-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1790080921805-m4bjpc",
+            "title": "Nscale's IPO Tests Wall Street's Appetite for Concentrated AI Bets",
+            "tldr": "British AI data center developer Nscale is going public, but its revenue is heavily concentrated on Microsoft and Anthropic, making it a bellwether for investor tolerance of AI infrastructure risk.",
+            "whyItMatters": [
+              "Signals whether public markets will fund the next wave of AI infrastructure buildout despite customer concentration risk.",
+              "A successful IPO could unlock more capital for AI data center startups; a weak one could chill the sector.",
+              "Highlights the dependency of AI infrastructure providers on a handful of hyperscalers and model labs."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI infrastructure or selling to hyperscalers, use this IPO as a benchmark for how investors value concentrated revenue. Review your own customer concentration and consider diversifying or building multi-year contracts before your next fundraise.",
+              "note": "Watch the IPO pricing and first-day trading for signals on broader AI infrastructure sentiment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1790080921805-m4bjpc",
+                "title": "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again",
+                "url": "https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-0",
+                "label": "AI infrastructure",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-1",
+                "label": "IPO",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790080921805-m4bjpc-2",
+                "label": "funding",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 12:23:05 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1790080921816-5tsbow",
+            "title": "Cisco Talos Uncovers AI-Orchestrated Malware Command System",
+            "tldr": "Cisco Talos researchers built a framework to detect malware that uses AI chatbots and discovered an autonomous command system where AI coordinates attacks without human input. This signals a new frontier in cybersecurity threats that AI product builders must consider.",
+            "whyItMatters": [
+              "AI-powered malware can operate autonomously, making attacks faster and harder to trace, which increases risk for any company deploying AI systems.",
+              "Defenders now need AI-aware security tools; this framework could become a standard for detecting AI-integrated threats, creating new opportunities for security startups."
+            ],
+            "whatToTry": {
+              "description": "Audit your AI product's API usage and access controls to ensure they can't be exploited by malicious actors to orchestrate attacks. Implement rate limiting, anomaly detection, and strict authentication for any AI service endpoints.",
+              "note": "Consider using Cisco Talos's detection framework as a reference for building your own security monitoring."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1790080921816-5tsbow",
+                "title": "A New Tool Found Malware That’s Guided by an AI Hive Mind—No Humans in Sight",
+                "url": "https://www.wired.com/story/a-tool-for-tracking-ai-integrated-malware-uncovered-an-autonomous-command-system/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1790080921816-5tsbow-0",
+                "label": "Security",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790080921816-5tsbow-1",
+                "label": "AI Malware",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790080921816-5tsbow-2",
+                "label": "Cisco Talos",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 10:00:00 +0000"
+          },
+          {
+            "id": "rss-wired-ai-1790080921816-vex85s",
+            "title": "AI Model Reconstructs Ancient Greek Papyrus Fragments",
+            "tldr": "Researchers have developed a large language model that fills in missing text in ancient Greek papyrus fragments, potentially unlocking new historical insights.",
+            "whyItMatters": [
+              "Demonstrates LLMs' potential in specialized domains like digital humanities, opening new markets for AI tools.",
+              "Showcases a novel application of text infilling that could inspire similar solutions for other fragmented or incomplete datasets."
+            ],
+            "whatToTry": {
+              "description": "Explore how text infilling models can be adapted to your domain. Consider if your product deals with incomplete data—could a fine-tuned LLM fill gaps and provide value?",
+              "note": "Focus on domains with structured but incomplete data, such as legal documents, medical records, or historical archives."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1790080921816-vex85s",
+                "title": "A New Chatbot Wants to Unlock the Secrets in Tattered Ancient Greek Records",
+                "url": "https://www.wired.com/story/apollo-ai-model-ancient-greek-secrets-papyrus/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1790080921816-vex85s-0",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790080921816-vex85s-1",
+                "label": "Digital Humanities",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1790080921816-vex85s-2",
+                "label": "Text Infilling",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 09:30:00 +0000"
+          },
+          {
+            "id": "hn-49797323",
+            "title": "Can gzip be a language model? HN debates compression as AI",
+            "tldr": "A HackerNews post exploring whether gzip compression can function as a language model sparked 80 comments, while a separate thread on Grok 4.7 drew 494 comments. The gzip discussion highlights ongoing interest in compression-based approaches to language modeling.",
+            "whyItMatters": [
+              "Compression-based language models could offer a radically simpler, more efficient alternative to neural networks for certain tasks.",
+              "The high engagement suggests the AI community is actively questioning fundamental assumptions about what constitutes a language model."
+            ],
+            "whatToTry": {
+              "description": "Read the original gzip-LM post and the HN discussion to understand the theoretical basis and practical limitations. Consider experimenting with gzip or other compression algorithms as baselines for text generation or classification tasks in your own projects.",
+              "note": "While gzip-based models are unlikely to replace transformers for complex tasks, they can serve as surprisingly strong baselines for simple sequence prediction or anomaly detection."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49797323-0",
+                "title": "HackerNews",
+                "url": "https://nathan.rs/posts/gzip-lm/",
+                "domain": "nathan.rs",
+                "type": "article"
+              },
+              {
+                "id": "src-hn-49797323-1",
+                "title": "HackerNews",
+                "url": "https://nathan.rs/posts/gzip-lm/",
+                "domain": "nathan.rs",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49797323-0",
+                "label": "Compression",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49797323-1",
+                "label": "Language Models",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49797323-2",
+                "label": "HackerNews",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "2026-09-22T06:08:39Z"
+          },
+          {
+            "id": "hn-49796660",
+            "title": "MiMo-v2.6-Pro: New Model Analysis on Intelligence, Performance, and Price",
+            "tldr": "Artificial Analysis published an analysis of MiMo-v2.6-Pro, sparking a 101-point HackerNews discussion with 34 comments. The model's benchmark scores and pricing could offer a new option for cost-sensitive AI applications.",
+            "whyItMatters": [
+              "May provide a cost-effective alternative to current models, reducing inference costs for startups.",
+              "Benchmark results could influence model selection for tasks requiring specific capabilities."
+            ],
+            "whatToTry": {
+              "description": "Review the analysis on Artificial Analysis to compare MiMo-v2.6-Pro's performance and pricing against your current models. If it fits, run a small pilot to test its suitability for your use case.",
+              "note": "Check the HackerNews discussion for practical insights from early users."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49796660",
+                "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
+                "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+                "domain": "artificialanalysis.ai",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49796660-0",
+                "label": "MiMo-v2.6-Pro",
+                "type": "model"
+              },
+              {
+                "id": "tag-hn-49796660-1",
+                "label": "benchmark",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49796660-2",
+                "label": "pricing",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-22T04:02:09Z"
+          },
+          {
+            "id": "rss-arxiv-ai-1790080921951-7a6u58",
+            "title": "Attention-Aware Routing Boosts MoE Reasoning Without Touching the Base Model",
+            "tldr": "A new arXiv paper introduces Attention-Aware Routing (AAR), which feeds attention-weight statistics into a frozen Mixture-of-Experts router, improving GSM8K by +3.37pp on OLMoE and revealing a coupled routing-attention circuit that is depth-sensitive.",
+            "whyItMatters": [
+              "Cheap fine-tuning: only routing parameters are trained while the base transformer stays frozen, making it a low-cost way to specialize MoE models for reasoning tasks.",
+              "Architectural insight: routing changes propagate through the residual stream to reshape attention sinks, suggesting MoE routing is a more powerful control knob than previously thought.",
+              "Depth matters: applying AAR indiscriminately can hurt factual retrieval, so layer-selective routing is needed to balance retrieval vs. reasoning."
+            ],
+            "whatToTry": {
+              "description": "If you are fine-tuning an open MoE model like OLMoE or Mixtral, experiment with training only the router using attention-derived features (e.g., sliding-window attention weight statistics) instead of full-model SFT. Start by applying AAR only to deeper layers to preserve factual retrieval.",
+              "note": "The paper reports gains on GSM8K but warns of a retrieval-reasoning tradeoff across depth; validate on your own retrieval-heavy tasks before broad deployment."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790080921951-7a6u58",
+                "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+                "url": "https://arxiv.org/abs/2609.20974",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-0",
+                "label": "MoE",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-1",
+                "label": "Routing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-2",
+                "label": "Fine-tuning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-7a6u58-3",
+                "label": "OLMoE",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790080921951-r1mhd6",
+            "title": "CaLR: Hybrid AR-Diffusion Reasoning with Causal Latent Revision",
+            "tldr": "Researchers propose CaLR, a framework that combines autoregressive and diffusion language models by using a causal topology matrix and implicit differentiation to enable gradient-guided self-correction during parallel generation, achieving SOTA on reasoning benchmarks like Sudoku.",
+            "whyItMatters": [
+              "Could lead to more robust reasoning in AI models, reducing errors in complex tasks like logic puzzles and planning.",
+              "Offers a new direction for model architecture that balances parallel generation speed with logical consistency."
+            ],
+            "whatToTry": {
+              "description": "Experiment with diffusion language models for reasoning tasks by incorporating causal constraints or gradient-based revision mechanisms. Start by reviewing the CaLR paper and considering how to adapt similar ideas to your own models.",
+              "note": "This is early-stage research; practical implementation may require significant engineering effort."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790080921951-r1mhd6",
+                "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+                "url": "https://arxiv.org/abs/2609.20981",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-0",
+                "label": "Diffusion Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-1",
+                "label": "Reasoning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-r1mhd6-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790080921951-cirw8r",
+            "title": "LoRA Boosts Vision Transformers for Underwater Sonar Recognition",
+            "tldr": "Researchers adapted DINOv3 ViTs to synthetic aperture sonar target recognition using LoRA, more than doubling AUPRC (0.300 to 0.679) while training only 0.26% of weights. Surprisingly, hard-negative mining and supervised contrastive learning added no measurable benefit.",
+            "whyItMatters": [
+              "Parameter-efficient fine-tuning (LoRA) can unlock strong performance in niche domains with scarce labeled data, a common challenge for AI product founders.",
+              "The null results for complex refinement stages suggest that simpler, cheaper adaptation may be sufficient, saving engineering effort and compute.",
+              "Demonstrates that large pretrained vision models can transfer to highly specialized sensor data (underwater acoustics) with minimal tuning."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning a vision model on a small, domain-specific dataset, start with LoRA on a frozen backbone before investing in complex data mining or contrastive learning pipelines. Test rank 4 or similar low-rank configurations to see if they deliver most of the performance gain.",
+              "note": "Results are specific to SAS imagery; validate on your own data, but the principle of trying parameter-efficient methods first is broadly applicable."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790080921951-cirw8r",
+                "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+                "url": "https://arxiv.org/abs/2609.21061",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-0",
+                "label": "LoRA",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-1",
+                "label": "Vision Transformers",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790080921951-cirw8r-2",
+                "label": "Fine-tuning",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Tue, 22 Sep 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 25,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-21-afternoon",
@@ -908,7 +1371,7 @@
   },
   {
     "date": "2026-09-20",
-    "displayDate": "Yesterday",
+    "displayDate": "Sunday, Sep 20",
     "briefings": [
       {
         "id": "briefing-2026-09-20-afternoon",
@@ -4924,808 +5387,6 @@
           }
         ],
         "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-09-14",
-    "displayDate": "Monday, Sep 14",
-    "briefings": [
-      {
-        "id": "briefing-2026-09-14-afternoon",
-        "period": "afternoon",
-        "date": "2026-09-14",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Apple's Siri May Let You Swap in Claude or ChatGPT, Code Reveals, Perplexity Deploys GPT-6 Astra for End-to-End Systems, AI Leaders Push for Slowdown as Trump Team Resists Regulation.",
-        "items": [
-          {
-            "id": "hn-49695409",
-            "title": "Apple's Siri May Let You Swap in Claude or ChatGPT, Code Reveals",
-            "tldr": "Code discovered in Apple's Siri suggests users could replace the default AI with third-party models like Claude or ChatGPT. This signals a major shift toward open AI integration on iOS, potentially reshaping how AI assistants compete.",
-            "whyItMatters": [
-              "Business impact: Opens a new distribution channel for AI providers to reach over a billion Apple users, intensifying competition among model makers.",
-              "Technical impact: Developers may soon build or integrate custom AI assistants directly into Siri, enabling personalized, model-agnostic experiences."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product, start exploring how your model or assistant could integrate with Siri via Apple's potential APIs. Monitor Apple's developer documentation and WWDC announcements for official support.",
-              "note": "This is based on leaked code, not an official announcement—wait for confirmation before investing heavily."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49695409",
-                "title": "Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows",
-                "url": "https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/",
-                "domain": "macrumors.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49695409-0",
-                "label": "Apple",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49695409-1",
-                "label": "Siri",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49695409-2",
-                "label": "AI assistants",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-14T12:01:32Z"
-          },
-          {
-            "id": "rss-openai-blog-1789395391712-906rzp",
-            "title": "Perplexity Deploys GPT-6 Astra for End-to-End Systems",
-            "tldr": "Perplexity is using OpenAI's GPT-6 Astra to write communications, modify software, and monitor production systems with far less human oversight than earlier models. This signals a major leap in autonomous agent reliability for real-world ops.",
-            "whyItMatters": [
-              "Demonstrates that frontier models can now handle multi-step, high-stakes production tasks with reduced human check-ins, potentially cutting operational costs and enabling leaner teams.",
-              "Sets a new benchmark for AI agent trustworthiness in production environments, which could accelerate adoption of autonomous systems across industries."
-            ],
-            "whatToTry": {
-              "description": "Audit your current AI-assisted workflows to identify tasks where human oversight is still frequent. Pilot GPT-6 Astra (or equivalent) on one low-risk production monitoring or code-change task, and measure how often human intervention is actually needed.",
-              "note": "Start with non-critical systems and maintain logging to catch failures early."
-            },
-            "sources": [
-              {
-                "id": "src-rss-openai-blog-1789395391712-906rzp",
-                "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-                "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-                "domain": "openai.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-openai-blog-1789395391712-906rzp-0",
-                "label": "GPT-6 Astra",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789395391712-906rzp-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-openai-blog-1789395391712-906rzp-2",
-                "label": "production systems",
-                "type": "topic"
-              }
-            ],
-            "category": "releases",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 00:00:00 GMT"
-          },
-          {
-            "id": "rss-wired-ai-1789395391469-29faf7",
-            "title": "AI Leaders Push for Slowdown as Trump Team Resists Regulation",
-            "tldr": "Sam Altman, Elon Musk, and Dario Amodei are calling for restraint in AI development, while Trump's team insists the industry should self-regulate to maintain US competitiveness against China.",
-            "whyItMatters": [
-              "Potential regulatory shifts could impact AI development timelines and compliance costs for startups.",
-              "Political pressure may accelerate or hinder AI innovation depending on how self-regulation plays out."
-            ],
-            "whatToTry": {
-              "description": "Monitor policy announcements from the Trump administration and industry groups to anticipate regulatory changes. Engage with industry associations to stay informed and contribute to self-regulatory frameworks.",
-              "note": "Focus on how these debates might affect your product's compliance and market positioning."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789395391469-29faf7",
-                "title": "AI Leaders Are Calling for a Slowdown. Trump’s Team Says It’s on Them",
-                "url": "https://www.wired.com/story/ai-leaders-are-calling-for-a-slowdown-trumps-team-says-its-on-them/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789395391469-29faf7-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789395391469-29faf7-1",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 11:00:00 +0000"
-          },
-          {
-            "id": "hn-49688695",
-            "title": "AI Model Fable 5.1 Cracks 370-Year-Old Cipher, Sparks HN Debate",
-            "tldr": "Fable 5.1, an AI model, reportedly solved the Cyphral Distich, a 370-year-old cipher, generating 507 comments and 1109 points on HackerNews. The achievement highlights AI's growing capability in cryptanalysis and historical puzzle-solving, though the community is actively debating the methodology and significance.",
-            "whyItMatters": [
-              "Demonstrates AI's potential to tackle complex, long-standing problems in cryptography and historical research, opening new avenues for AI-assisted discovery.",
-              "The intense HackerNews discussion (507 comments) indicates strong community interest and skepticism, which could influence how AI achievements are perceived and validated."
-            ],
-            "whatToTry": {
-              "description": "Read the original blog post and the HackerNews discussion to understand the technical approach and community critiques. Consider how similar AI techniques could be applied to unsolved problems in your domain, such as code deobfuscation or data pattern recognition.",
-              "note": "Be cautious of overhyping; verify the claims independently and look for peer review or replication."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49688695",
-                "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-                "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
-                "domain": "vals.ai",
-                "type": "blog"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49688695-0",
-                "label": "AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49688695-1",
-                "label": "cryptography",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49688695-2",
-                "label": "Fable 5.1",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-13T21:06:13Z"
-          },
-          {
-            "id": "hn-49685991",
-            "title": "David Sacks: AI Labs Don't Need Regulation to Pace Frontier Models",
-            "tldr": "David Sacks argues that OpenAI and Anthropic don't need government regulation to pace frontier model development, sparking a 234-comment debate on HackerNews about AI safety and regulatory capture.",
-            "whyItMatters": [
-              "Regulatory stance from a prominent tech figure could influence policy direction and investor sentiment around AI safety compliance.",
-              "If self-pacing is sufficient, startups may face fewer compliance burdens but also less clarity on safety standards."
-            ],
-            "whatToTry": {
-              "description": "Read the HackerNews discussion to understand the arguments for and against AI regulation, then assess how potential policy shifts could affect your product roadmap and compliance strategy.",
-              "note": "Focus on comments from industry practitioners for practical insights."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49685991",
-                "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
-                "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
-                "domain": "twitter.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49685991-0",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685991-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685991-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-13T16:52:33Z"
-          },
-          {
-            "id": "hn-49685253",
-            "title": "Garry Tan: US Open-Weight Labs Should Distill Frontier Models Too",
-            "tldr": "Y Combinator's Garry Tan argues that US open-weight AI labs should be allowed to distill frontier models, sparking a 219-comment HackerNews debate on AI competition and open-source strategy.",
-            "whyItMatters": [
-              "Could shape policy and norms around model distillation, affecting how open-weight startups build competitive products.",
-              "Signals growing pressure to treat open-weight AI as a strategic asset in the US-China AI race."
-            ],
-            "whatToTry": {
-              "description": "Read the HackerNews thread and TechCrunch article to understand the arguments, then assess whether distillation could be a viable strategy for your own model development or product roadmap.",
-              "note": "Distillation may raise legal and ethical questions depending on model licenses and terms of service."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49685253",
-                "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
-                "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49685253-0",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685253-1",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49685253-2",
-                "label": "Distillation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-13T15:44:38Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789395391402-vq3gwd",
-            "title": "Ex-Spotify Exec's Vinyl Bar Startup Bets on No-Prompt Music Apps",
-            "tldr": "A former Spotify executive launched a startup behind a Shibuya vinyl bar, releasing experimental 'singles' that let users participate in music-making without AI prompting. It's a contrarian bet that fun, hands-on music experiences beat prompt-based AI tools.",
-            "whyItMatters": [
-              "Signals a counter-trend: some builders are deliberately avoiding AI prompting in favor of tactile, participatory UX, which could differentiate consumer products in a crowded AI market.",
-              "Offers a case study in experimental release formats ('singles') as a growth and engagement strategy for music/creator apps."
-            ],
-            "whatToTry": {
-              "description": "Audit one of your product's core flows and ask whether removing an AI prompt would make it more fun or intuitive. Prototype a no-prompt, interaction-first version and test it with a small group of users.",
-              "note": "Not every product benefits from removing AI—focus on experiences where discovery and play matter more than efficiency."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789395391402-vq3gwd",
-                "title": "A Vinyl Bar in Shibuya is a startup offering fun music apps without any AI prompting",
-                "url": "https://techcrunch.com/2026/09/14/a-vinyl-bar-in-shibuya-is-a-startup-offering-fun-music-apps-without-any-ai-prompting/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789395391402-vq3gwd-0",
-                "label": "Consumer Apps",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789395391402-vq3gwd-1",
-                "label": "Music Tech",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789395391402-vq3gwd-2",
-                "label": "UX",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 13:55:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789395391469-smn3x4",
-            "title": "Deepfake Abuse Hits 100+ European Politicians, Mostly Women",
-            "tldr": "An analysis of 160 deepfake websites found sexually explicit content targeting over 100 politicians across 22 European countries, with nearly all victims being women. This highlights the growing misuse of generative AI for harassment and the urgent need for content moderation and detection tools.",
-            "whyItMatters": [
-              "Regulatory pressure on AI-generated content is likely to increase, affecting how AI products handle user-generated media.",
-              "Trust and safety features become a competitive differentiator, especially for platforms hosting user content.",
-              "Detection and watermarking technologies for deepfakes will see rising demand from platforms and governments."
-            ],
-            "whatToTry": {
-              "description": "Audit your product's content moderation pipeline for AI-generated media. If you allow user uploads, consider integrating deepfake detection APIs or building a reporting flow specifically for synthetic media. Stay informed about upcoming regulations like the EU AI Act's transparency requirements.",
-              "note": "Detection is an arms race; combine automated tools with human review for high-risk content."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789395391469-smn3x4",
-                "title": "Sexually Explicit Deepfake Sites Target 100-Plus Politicians in Europe",
-                "url": "https://www.wired.com/story/sexually-explicit-deepfake-sites-target-100-plus-politicians-in-europe/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789395391469-smn3x4-0",
-                "label": "Deepfakes",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789395391469-smn3x4-1",
-                "label": "Content Moderation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789395391469-smn3x4-2",
-                "label": "AI Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 11:00:00 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789395391469-481isr",
-            "title": "Readers Are Using Chatbots to Write Their Own Custom Fiction",
-            "tldr": "Wired reports on a growing community of readers using AI chatbots to generate personalized fiction, bypassing traditional publishing entirely. This signals a shift in content consumption from passive reading to active co-creation.",
-            "whyItMatters": [
-              "Consumer demand for personalized, interactive content is growing — a potential product category for AI founders",
-              "Traditional publishing's anxiety over AI misses the bigger story: readers want to create, not just consume",
-              "Demonstrates real-world product-market fit for AI creative tools outside of professional workflows"
-            ],
-            "whatToTry": {
-              "description": "Explore building or prototyping a consumer-facing AI fiction tool that lets users co-create stories with a chatbot. Focus on personalization, character consistency, and ease of use rather than raw model capability.",
-              "note": "The niche communities (like the one in the article) are early adopters — study their workflows to identify unmet needs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789395391469-481isr",
-                "title": "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
-                "url": "https://www.wired.com/story/chatbot-generated-fiction-i-like-my-big-rat-wife/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789395391469-481isr-0",
-                "label": "Consumer AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789395391469-481isr-1",
-                "label": "Creative Tools",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789395391469-481isr-2",
-                "label": "Industry Trends",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 09:00:00 +0000"
-          },
-          {
-            "id": "hn-49690260",
-            "title": "Open-Source AI Reading List Sparks Debate on HackerNews",
-            "tldr": "A curated reading list on open-source AI and open models gained traction on HackerNews with 137 points and 24 comments, highlighting ongoing interest in open model ecosystems.",
-            "whyItMatters": [
-              "Provides a consolidated resource for founders to understand the open-source AI landscape, licensing, and community dynamics.",
-              "Signals sustained community engagement with open models, which can inform build-vs-buy decisions and partnership strategies."
-            ],
-            "whatToTry": {
-              "description": "Skim the reading list to identify key papers and blog posts about open-source AI, then pick one or two to read deeply. Share the most relevant insights with your team to spark discussion on how open models could fit into your product roadmap.",
-              "note": "The list may be lengthy; prioritize sections on licensing and model performance comparisons."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49690260",
-                "title": "Open-source AI and open models reading list",
-                "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
-                "domain": "interconnects.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49690260-0",
-                "label": "Open Source",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49690260-1",
-                "label": "AI Models",
-                "type": "model"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-14T00:22:51Z"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-09-14-evening",
-        "period": "evening",
-        "date": "2026-09-14",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: OpenAI Acquires Glass Imaging for $300M in Hardware Push, Migrating 35KB Prompts from Opus to Self-Hosted Ollama: Gotchas, Huang to Trump: Nvidia Won't Let AI Slowdown Happen.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1789427875836-51tlqf",
-            "title": "OpenAI Acquires Glass Imaging for $300M in Hardware Push",
-            "tldr": "OpenAI has reportedly acquired Glass Imaging, a startup founded by ex-Apple engineers behind Portrait Mode, for $300 million. The deal signals OpenAI's intent to bring advanced computational photography and potentially multimodal AI capabilities into hardware products.",
-            "whyItMatters": [
-              "OpenAI is vertically integrating into hardware, which could create new platforms and distribution channels for AI products.",
-              "Glass Imaging's expertise in real-time image processing and computational photography could enhance OpenAI's multimodal models and enable new camera-centric AI applications."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products that rely on image or video input, start experimenting with OpenAI's existing vision APIs and consider how improved camera technology might unlock new use cases. Also, monitor OpenAI's hardware announcements for potential platform shifts.",
-              "note": "The acquisition is not yet confirmed by OpenAI; treat as a signal of strategic direction rather than a product roadmap."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-51tlqf",
-                "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
-                "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-51tlqf-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-51tlqf-1",
-                "label": "acquisition",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-51tlqf-2",
-                "label": "hardware",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-51tlqf-3",
-                "label": "computer vision",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 20:44:14 +0000"
-          },
-          {
-            "id": "hn-49697014",
-            "title": "Migrating 35KB Prompts from Opus to Self-Hosted Ollama: Gotchas",
-            "tldr": "A HackerNews discussion highlights practical challenges when moving large prompts from Anthropic's Opus to self-hosted Ollama, with 58 comments and 106 points. It offers real-world insights for teams considering self-hosting to cut costs or improve privacy.",
-            "whyItMatters": [
-              "Cost savings and data privacy from self-hosting can be significant, but migration complexity is often underestimated.",
-              "Large prompts may behave differently across models, requiring prompt engineering adjustments and thorough testing."
-            ],
-            "whatToTry": {
-              "description": "If you're considering self-hosting LLMs, start with a small pilot: take a representative prompt, run it on both your current API and a self-hosted model like Ollama, and compare outputs for consistency, latency, and cost. Document any prompt modifications needed.",
-              "note": "Pay attention to context window limits and tokenization differences that can cause silent failures."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49697014",
-                "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
-                "url": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
-                "domain": "patrickmccanna.net",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49697014-0",
-                "label": "Ollama",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-49697014-1",
-                "label": "Prompt Engineering",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49697014-2",
-                "label": "Self-Hosting",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-14T13:59:09Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789427875836-d0o0ig",
-            "title": "Huang to Trump: Nvidia Won't Let AI Slowdown Happen",
-            "tldr": "Nvidia CEO Jensen Huang told President Trump that the AI industry will not allow a slowdown in development, pushing back against calls for caution from Elon Musk, Sam Altman, and Dario Amodei. The stance signals continued aggressive AI infrastructure investment and regulatory resistance.",
-            "whyItMatters": [
-              "Signals that Nvidia and its allies will lobby hard against AI regulation or pauses, likely keeping GPU demand and AI investment high.",
-              "Creates a public split among AI leaders on safety vs. speed, which could influence policy and public perception."
-            ],
-            "whatToTry": {
-              "description": "Monitor Nvidia's policy statements and any resulting regulatory shifts; consider how a no-slowdown stance might affect your AI product's compute costs and competitive landscape.",
-              "note": "This is a political signal, not a technical release—focus on strategic planning rather than immediate implementation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-d0o0ig",
-                "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
-                "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-d0o0ig-0",
-                "label": "Nvidia",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-d0o0ig-1",
-                "label": "AI policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-d0o0ig-2",
-                "label": "industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 21:51:02 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789427875802-fel2ow",
-            "title": "NY Seizes 12 Deepfake Sites in Landmark Legal Action",
-            "tldr": "The Manhattan DA's Office has seized 12 deepfake websites targeting ~1,200 victims, marking the largest legal action against harmful deepfakes to date. This signals increasing legal scrutiny for AI-generated content.",
-            "whyItMatters": [
-              "Legal precedent: AI product builders must prioritize consent and compliance, especially for face/voice generation.",
-              "Platform risk: Hosting or enabling deepfake creation without safeguards could lead to seizure or liability."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for potential misuse: ensure clear consent flows for biometric data, implement content moderation for generated media, and add watermarking or provenance metadata to outputs.",
-              "note": "Even if your product is benign, demonstrating proactive safeguards can mitigate legal risk and build user trust."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789427875802-fel2ow",
-                "title": "New York Seizes a Dozen Celebrity Deepfake Websites",
-                "url": "https://www.wired.com/story/new-york-seizes-a-dozen-celebrity-deepfake-websites/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789427875802-fel2ow-0",
-                "label": "Deepfakes",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789427875802-fel2ow-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789427875802-fel2ow-2",
-                "label": "AI Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 16:50:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789427875836-197920",
-            "title": "Microsoft's AI Code of Conduct: No Hacking, No Tricking Humans",
-            "tldr": "Microsoft published a formal code of conduct for its AI models, outlining principles like supporting rather than replacing humans and specific safety constraints against hacking systems or deceiving users. It signals a shift toward self-imposed governance as AI regulation debates intensify.",
-            "whyItMatters": [
-              "Sets a precedent for how major AI vendors may self-regulate, potentially influencing industry norms and future compliance expectations for startups.",
-              "Founders building on Microsoft AI services may need to align their products with these principles, especially in safety-critical or user-facing applications."
-            ],
-            "whatToTry": {
-              "description": "Review Microsoft's code of conduct and map its principles against your own AI product's behavior policies. Identify any gaps, particularly around user deception or system access, and update your internal guidelines or system prompts accordingly.",
-              "note": "Even if you don't use Microsoft models, this can serve as a template for your own responsible AI documentation."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-197920",
-                "title": "Microsoft’s new AI ‘code of conduct’ tells models not to hack systems or trick humans",
-                "url": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-197920-0",
-                "label": "AI Ethics",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-197920-1",
-                "label": "Microsoft",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-197920-2",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 16:27:53 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789427875836-w2qhr8",
-            "title": "Superhuman Acquires Fathom as Productivity Apps Race Toward Agentic Work",
-            "tldr": "Superhuman has acquired YC-backed AI notetaker Fathom, which has 400K+ monthly active users and 1M+ people who have recorded meetings. The deal signals consolidation in the productivity space as platforms race to build agentic workflows.",
-            "whyItMatters": [
-              "Consolidation in AI productivity tools is accelerating — standalone notetakers may struggle to survive as platforms bundle meeting intelligence into broader agentic workflows.",
-              "Fathom's generous free tier drove massive adoption, showing that freemium distribution remains a powerful wedge for AI meeting tools before monetization or acquisition.",
-              "Superhuman gains a large user base and meeting data pipeline, positioning it to compete with Notion, Google, and Microsoft in the race to own workplace context for AI agents."
-            ],
-            "whatToTry": {
-              "description": "If you're building a meeting or productivity AI tool, audit your differentiation against bundled platform features. Consider whether your moat is data, workflow depth, or distribution — and whether a partnership or acquisition path is more realistic than standalone growth.",
-              "note": "Watch for Fathom's free plan changes post-acquisition; users may need to migrate or pay more, creating an opening for competitors."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-w2qhr8",
-                "title": "Superhuman acquires YC-backed notetaker Fathom as productivity platforms push for agentic work",
-                "url": "https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-w2qhr8-0",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-w2qhr8-1",
-                "label": "Acquisition",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-w2qhr8-2",
-                "label": "Productivity",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 14:45:44 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789427875836-nvjj6o",
-            "title": "Apple's iOS 27 Siri Overhaul: Finally Useful Again",
-            "tldr": "Apple's long-delayed Siri overhaul ships with iOS 27, making the assistant noticeably more useful for daily tasks. It signals Apple is finally competing seriously in the AI assistant race.",
-            "whyItMatters": [
-              "Apple's on-device AI improvements could shift user expectations for assistant latency and privacy, pressuring cloud-based competitors.",
-              "A more capable Siri expands the surface area for third-party app integrations and voice-first workflows, opening new distribution channels for AI products."
-            ],
-            "whatToTry": {
-              "description": "If you build a consumer AI product, test how your core use case performs as a Siri/App Intents integration on iOS 27. Prototype a voice-first flow and compare retention against your existing app-based onboarding.",
-              "note": "The article is a hands-on impression, not a technical breakdown - verify actual API and App Intents capabilities in Apple's developer docs before committing roadmap."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-nvjj6o",
-                "title": "With iOS 27, I’m actually using Siri again",
-                "url": "https://techcrunch.com/2026/09/14/with-ios-27-im-actually-using-siri-again/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-nvjj6o-0",
-                "label": "Apple",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-nvjj6o-1",
-                "label": "Siri",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-nvjj6o-2",
-                "label": "Voice AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 17:10:30 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789427875836-aev1p3",
-            "title": "Daydream taps Apple Intelligence to turn outfit photos into shopping results",
-            "tldr": "Fashion discovery app Daydream now uses Apple Intelligence and iOS 27 features to convert saved outfit photos into shoppable product matches, and lets users search via Siri without opening the app.",
-            "whyItMatters": [
-              "Shows how on-device AI assistants like Siri can become a new distribution channel for consumer apps, reducing friction and potentially boosting engagement.",
-              "Demonstrates a practical use case for multimodal AI (image-to-product matching) that could be replicated in other verticals like home decor or electronics."
-            ],
-            "whatToTry": {
-              "description": "If you're building a consumer app, explore integrating with Apple Intelligence or Siri Shortcuts to enable voice or camera-based interactions that bypass opening your app. Start by identifying one high-friction user journey that could be simplified with on-device AI.",
-              "note": "Requires iOS 27 and may have limited device support; test with a small user group first."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789427875836-aev1p3",
-                "title": "Fashion app Daydream uses Apple Intelligence to help you shop the outfits in your camera roll",
-                "url": "https://techcrunch.com/2026/09/14/fashion-discovery-app-daydream-uses-apple-intelligence-to-help-you-shop-the-outfits-saved-in-your-camera-roll/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-aev1p3-0",
-                "label": "Apple Intelligence",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-aev1p3-1",
-                "label": "Multimodal AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789427875836-aev1p3-2",
-                "label": "Consumer Apps",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Mon, 14 Sep 2026 17:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 17,
         "isAvailable": true,
         "isRead": false
       }
