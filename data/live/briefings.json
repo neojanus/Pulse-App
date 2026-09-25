@@ -1,7 +1,427 @@
 [
   {
-    "date": "2026-09-24",
+    "date": "2026-09-25",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-09-25-afternoon",
+        "period": "afternoon",
+        "date": "2026-09-25",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Lightspeed Eyes $250M India Fund, Doubling Down on Early-Stage AI, Frozen Router Beats Agentic Systems on GIFT-Eval Time-Series Benchmark, PAWS Dataset Simulates How Policy Shocks Ripple Through Markets.",
+        "items": [
+          {
+            "id": "rss-techcrunch-ai-1790340640707-a3wh9l",
+            "title": "Lightspeed Eyes $250M India Fund, Doubling Down on Early-Stage AI",
+            "tldr": "Lightspeed is raising a $250M India-focused fund dedicated to early-stage AI startups, aligning its India cycle with global funds for the first time and shortening its investment period. It signals rising LP appetite for India's AI ecosystem and more capital for founders at the earliest stages.",
+            "whyItMatters": [
+              "More early-stage capital is flowing into India's AI ecosystem, increasing competition for deals and valuations at seed/pre-seed.",
+              "Shorter investment periods mean Lightspeed will likely deploy faster and push portfolio companies toward quicker milestones and exits.",
+              "Aligning India with global funds suggests India is now a core strategic market, not a satellite bet—useful signal for founders deciding where to base or expand."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI product with an India angle or target market, start mapping Lightspeed's India portfolio and partners now, and prepare a tight seed-stage narrative that emphasizes fast execution and clear milestones—since shorter fund cycles favor speed over long R&D timelines.",
+              "note": "Fund is still being raised, so deployment may not begin immediately; treat this as a 6-12 month pipeline signal rather than an instant check-writing event."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1790340640707-a3wh9l",
+                "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
+                "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1790340640707-a3wh9l-0",
+                "label": "Funding",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790340640707-a3wh9l-1",
+                "label": "India",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1790340640707-a3wh9l-2",
+                "label": "Early-Stage AI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 05:00:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-b3hue9",
+            "title": "Frozen Router Beats Agentic Systems on GIFT-Eval Time-Series Benchmark",
+            "tldr": "TW3Cast, a system that uses no agents or LLMs, ranks 3rd of 130 entries on the GIFT-Eval time-series forecasting benchmark by combining lightly fine-tuned foundation models (Chronos-2, TiRex, Toto) via a selection table computed once on the training split and then frozen. The two entries above it are agentic systems, suggesting that careful model selection and fine-tuning can outperform more complex agentic approaches.",
+            "whyItMatters": [
+              "Demonstrates that a simple, frozen selection of fine-tuned foundation models can outperform complex agentic systems on a major time-series benchmark, potentially saving significant compute and engineering effort.",
+              "Provides a blueprint for building robust forecasting systems by using a training-split backtest to select among specialists, blends, and tournaments, with guarded mechanisms to avoid overfitting.",
+              "Highlights the effectiveness of lightweight fine-tuning (LoRA) on public foundation models for domain-specific tasks, making advanced forecasting accessible without massive resources."
+            ],
+            "whatToTry": {
+              "description": "If you're building time-series forecasting features, consider evaluating a similar approach: fine-tune a few open foundation models (like Chronos, TiRex, or Toto) on your data, then use a held-out portion of your training data to select the best model or blend per configuration. Avoid jumping straight to agentic or LLM-based solutions unless simpler methods plateau.",
+              "note": "Ensure your selection process is strictly isolated from test data to avoid overfitting; use a meta-backtest to validate your selection rules."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-b3hue9",
+                "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+                "url": "https://arxiv.org/abs/2609.28506",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-b3hue9-0",
+                "label": "Time-Series",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-b3hue9-1",
+                "label": "Foundation Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-b3hue9-2",
+                "label": "Fine-Tuning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-b3hue9-3",
+                "label": "Benchmark",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-xtwyfv",
+            "title": "PAWS Dataset Simulates How Policy Shocks Ripple Through Markets",
+            "tldr": "Researchers released PAWS, a dataset of 36 US policy episodes with 12,727 news records and 65,291 stakeholder actions, enabling multi-agent simulation of policy-driven market dynamics. It exposes a key failure mode: high accuracy can hide missed rare events, making action timing and calibration the real challenge for agentic systems.",
+            "whyItMatters": [
+              "Provides a ready-made, auditable benchmark for building and evaluating financial multi-agent simulations, reducing the cost of testing policy-response strategies.",
+              "Highlights that standard accuracy metrics can mask failure to detect rare, high-impact stakeholder actions—critical for risk-sensitive AI products.",
+              "Offers temporally aligned, source-grounded data that can improve agent calibration and event detection in domains beyond finance."
+            ],
+            "whatToTry": {
+              "description": "Download the PAWS dataset and run a small experiment: train a simple agent to predict stakeholder actions from news, then evaluate not just accuracy but recall on rare action types. Use the provided event frames to test whether your model catches low-frequency, high-impact events.",
+              "note": "The dataset is research-grade; check licensing and preprocessing steps before integrating into production pipelines."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-xtwyfv",
+                "title": "PAWS: Policy-driven Agentic World Simulation",
+                "url": "https://arxiv.org/abs/2609.28547",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-xtwyfv-0",
+                "label": "Multi-Agent Simulation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-xtwyfv-1",
+                "label": "Financial AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-xtwyfv-2",
+                "label": "Dataset",
+                "type": "tool"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-f1cp9y",
+            "title": "Pistis: New Multimodal LLMs with Interleaved Distillation and RL",
+            "tldr": "Pistis introduces 27B and 9B multimodal LLMs using a novel post-training framework that alternates between on-policy distillation and reinforcement learning (IDRL), yielding specialized Thinking and Agentic variants that outperform base models, especially in multimodal search.",
+            "whyItMatters": [
+              "Offers a new post-training paradigm (IDRL) that could improve agentic and multimodal capabilities in your own models.",
+              "Provides open models (27B/9B) that can be fine-tuned or deployed for multimodal reasoning and tool use, potentially reducing reliance on proprietary APIs.",
+              "Demonstrates a scalable framework for building specialized variants (Thinking vs Agentic) from a single base, useful for product differentiation."
+            ],
+            "whatToTry": {
+              "description": "Evaluate the Pistis models on your multimodal agent tasks, especially those requiring long-horizon planning and tool use. Compare against your current models and consider adopting IDRL for your own post-training pipeline.",
+              "note": "Check model availability and licensing on arXiv or associated repositories; the 27B model may require significant compute for inference."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-f1cp9y",
+                "title": "Pistis Technical Report",
+                "url": "https://arxiv.org/abs/2609.28554",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-f1cp9y-0",
+                "label": "Multimodal LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-f1cp9y-1",
+                "label": "Post-training",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-f1cp9y-2",
+                "label": "Agentic AI",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-iv1v7m",
+            "title": "BaseCamp: Agentic AI Automates the Decision Layer of DNA Pipelines",
+            "tldr": "A new arXiv paper introduces BaseCamp, an agentic framework that uses a consortium of fine-tuned LLMs to automate the judgment-heavy decision layer of DNA sequencing pipelines—thresholds, borderline variant calls, anomaly diagnosis—while leaving execution to established bioinformatics tools. It's a strong blueprint for applying agents to any expert workflow where the bottleneck is decisions, not computation.",
+            "whyItMatters": [
+              "Business impact: Opens a path to sell AI into genomics and other regulated expert domains by targeting the costly, inconsistent human decision layer rather than replacing validated tools—lower regulatory friction and faster adoption.",
+              "Technical impact: Demonstrates a practical multi-agent architecture—specialized fine-tuned models coordinated by a central reasoning LLM, running locally—that keeps LLM reasoning confined to where it's reliable and preserves reproducibility."
+            ],
+            "whatToTry": {
+              "description": "Map your own product's workflow and separate the execution layer (deterministic tools, APIs, models) from the decision layer (thresholds, edge cases, escalation). Prototype a small multi-agent system where specialized agents only configure and interpret tool outputs, with a central coordinator LLM making routing decisions—and run it locally to test data-privacy constraints.",
+              "note": "The paper's key insight is confining LLM reasoning to the judgment layer; resist the temptation to let agents perform the core computation, which breaks reproducibility and trust."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-iv1v7m",
+                "title": "BaseCamp --- An Agentic AI Framework for Automating DNA Sequencing Data Pipelines",
+                "url": "https://arxiv.org/abs/2609.28557",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-iv1v7m-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-iv1v7m-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-iv1v7m-2",
+                "label": "Bioinformatics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-iv1v7m-3",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-ai6lbx",
+            "title": "DEEPO: Dual-Entropy RL Method Cuts Hallucinations in Multimodal LLMs",
+            "tldr": "Researchers propose DEEPO, a dual-stage reinforcement learning enhancement that targets two failure points in correcting hallucinations in multimodal LLMs: collapsed advantage on high-uncertainty queries and gradient-invisible confident errors. It outperforms GRPO, with statistically significant gains on VideoMMMU.",
+            "whyItMatters": [
+              "Hallucination reduction is critical for deploying multimodal AI in production, especially in high-stakes domains like healthcare and autonomous systems.",
+              "The method addresses fundamental limitations in RL fine-tuning that many teams face when trying to improve model reliability."
+            ],
+            "whatToTry": {
+              "description": "If you're fine-tuning multimodal models with RL, experiment with entropy-based triggers to identify high-uncertainty samples and inject expert demonstrations or grounded continuations for those cases. Also consider gradient preconditioning techniques to ensure confident errors receive stronger updates.",
+              "note": "The paper is theoretical; implementation may require significant engineering effort. Start with a small-scale experiment on a specific task like video QA."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-ai6lbx",
+                "title": "DEEPO: Dual-Entropy Enhanced Policy Optimization for Hallucination in MLLMs",
+                "url": "https://arxiv.org/abs/2609.28570",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-ai6lbx-0",
+                "label": "Multimodal LLMs",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-ai6lbx-1",
+                "label": "Reinforcement Learning",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-ai6lbx-2",
+                "label": "Hallucination",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-qe8j2x",
+            "title": "TWIST Benchmark Exposes Memory System Trade-offs",
+            "tldr": "A new arXiv paper proposes TWIST, a benchmark for evaluating how well conversational memory systems handle belief changes, revealing that current systems either over-flag safe content or miss true contradictions.",
+            "whyItMatters": [
+              "Founders building AI assistants with long-term memory can use TWIST to identify and fix critical intervention failures before users notice.",
+              "The benchmark's human-validated design sets a new standard for evaluating memory systems, potentially influencing future product requirements and investor expectations."
+            ],
+            "whatToTry": {
+              "description": "Review your memory system's contradiction detection and false-positive rates using the TWIST methodology. Consider implementing a vetting layer that balances recall and specificity, and test with surface-matched hard negatives to avoid over-flagging.",
+              "note": "The benchmark extends LoCoMo's corpora and harness, so you can start by replicating its tracks with your own data."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-qe8j2x",
+                "title": "TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment",
+                "url": "https://arxiv.org/abs/2609.28575",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-qe8j2x-0",
+                "label": "Benchmark",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-qe8j2x-1",
+                "label": "Memory",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-qe8j2x-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1790340640807-cvkuvy",
+            "title": "More Reasoning Isn't Always Better: Reliability Routing for Forecasting Agents",
+            "tldr": "A new arXiv paper introduces ReliabilityRoute, a structural intervention that routes forecasting agents to the most reliable evidence source (retrieval, reasoning, market prior, or historical analog) based on reliability features. It shows that mechanism choice is source-dependent and that more reasoning is not always better, with a walk-forward self-adjusting rule achieving the best mean Brier score across 16 LLM vintages.",
+            "whyItMatters": [
+              "Business impact: Teams building forecasting or decision-support agents can improve accuracy by dynamically routing to the best evidence source instead of always relying on LLM reasoning, potentially reducing costs and errors.",
+              "Technical impact: Provides a concrete method (ReliabilityRoute) and reliability features (coverage, prior sharpness, evidence strength/disagreement, horizon) that can be integrated into agent architectures to make behavior selection explicit and testable."
+            ],
+            "whatToTry": {
+              "description": "Audit your forecasting agent's decision process: log which evidence source (retrieval, reasoning, market prior, historical analog) is used for each prediction. Then implement a simple routing rule based on reliability features like historical coverage and evidence disagreement, and A/B test it against your current always-reason baseline.",
+              "note": "Start with a fixed rule fitted on historical data before moving to a self-adjusting walk-forward approach; gains may be modest, so measure carefully."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1790340640807-cvkuvy",
+                "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
+                "url": "https://arxiv.org/abs/2609.28475",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-cvkuvy-0",
+                "label": "Forecasting Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-cvkuvy-1",
+                "label": "Reliability Routing",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1790340640807-cvkuvy-2",
+                "label": "LLM Reasoning",
+                "type": "model"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 25 Sep 2026 00:00:00 -0400"
+          },
+          {
+            "id": "hn-49837006",
+            "title": "Developer with ADHD Uses AI to Build Koi Pond App Without Coding",
+            "tldr": "An unemployed developer with ADHD used AI to build a virtual koi pond (koi.rest) despite not knowing JavaScript, demonstrating how AI lowers barriers to creation. The project is a case study in using AI to turn ideas into reality quickly.",
+            "whyItMatters": [
+              "Shows AI can empower non-coders to build and ship products, expanding the pool of creators.",
+              "Highlights a practical use case for AI in overcoming skill gaps and executive dysfunction.",
+              "Demonstrates the value of 'good enough' over perfection, a mindset shift AI enables."
+            ],
+            "whatToTry": {
+              "description": "Identify a small project idea you've been postponing due to lack of technical skills. Use an AI coding assistant (like ChatGPT, Claude, or GitHub Copilot) to generate a minimal viable version. Focus on getting something working rather than perfect, and share it publicly for feedback.",
+              "note": "Start with a simple, self-contained project to build confidence. Leverage AI for boilerplate and debugging, but be prepared to iterate."
+            },
+            "sources": [
+              {
+                "id": "src-hn-49837006",
+                "title": "Show HN: Koi.rest – watch some fish and regain your balance",
+                "url": "https://koi.rest",
+                "domain": "koi.rest",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-hn-49837006-0",
+                "label": "AI-assisted development",
+                "type": "topic"
+              },
+              {
+                "id": "tag-hn-49837006-1",
+                "label": "no-code",
+                "type": "tool"
+              },
+              {
+                "id": "tag-hn-49837006-2",
+                "label": "indie hacking",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "2026-09-24T21:33:03Z"
+          }
+        ],
+        "totalReadTimeMinutes": 25,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-09-24-afternoon",
@@ -513,7 +933,7 @@
   },
   {
     "date": "2026-09-23",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Sep 23",
     "briefings": [
       {
         "id": "briefing-2026-09-23-afternoon",
@@ -4537,811 +4957,6 @@
           }
         ],
         "totalReadTimeMinutes": 19,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-09-18",
-    "displayDate": "Friday, Sep 18",
-    "briefings": [
-      {
-        "id": "briefing-2026-09-18-afternoon",
-        "period": "afternoon",
-        "date": "2026-09-18",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Claude Used to Breach OpenAI's Internal Systems in Security Test, ZCode Coding Agent Secretly Uploads Your Git History, Manus Eyes $4B Valuation in $500M Raise After Meta Split.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1789751269319-34i1i4",
-            "title": "Claude Used to Breach OpenAI's Internal Systems in Security Test",
-            "tldr": "Security researchers leveraged Anthropic's Claude to exploit vulnerabilities in OpenAI's infrastructure, hijacking employee accounts and accessing an internal code repository before responsibly disclosing the flaws.",
-            "whyItMatters": [
-              "AI models are now capable of autonomously discovering and exploiting real-world security vulnerabilities, raising the stakes for every company's security posture.",
-              "This cross-lab incident highlights that even leading AI companies are not immune to AI-assisted attacks, making AI-driven security testing a critical priority."
-            ],
-            "whatToTry": {
-              "description": "Run an AI-assisted security audit on your own product. Use a capable LLM to probe for common vulnerabilities like authentication bypasses, insecure API endpoints, and misconfigured access controls. Treat the model as a red-team assistant, then manually verify and patch any findings.",
-              "note": "Always get explicit permission before testing systems you don't own, and consider a bug bounty or formal pentest for critical infrastructure."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789751269319-34i1i4",
-                "title": "Researchers used Anthropic’s Claude to hack into OpenAI",
-                "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-1",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-34i1i4-2",
-                "label": "OpenAI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 14:00:14 +0000"
-          },
-          {
-            "id": "hn-49752422",
-            "title": "ZCode Coding Agent Secretly Uploads Your Git History",
-            "tldr": "A HackerNews post reveals that ZCode, the GLM coding agent, silently uploads your entire Git history to its servers. This privacy breach is critical for any team using AI coding assistants.",
-            "whyItMatters": [
-              "Business impact: Exposes proprietary code and sensitive commit history, risking IP theft and compliance violations.",
-              "Technical impact: Highlights the need to audit AI coding tools for data exfiltration and implement network monitoring."
-            ],
-            "whatToTry": {
-              "description": "Immediately audit your AI coding tools: check network traffic for unexpected uploads, review privacy policies, and consider self-hosted alternatives or sandboxed environments for sensitive repositories.",
-              "note": "Use tools like Little Snitch or Wireshark to monitor outbound connections from your IDE or CLI agents."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49752422",
-                "title": "ZCode, the GLM coding agent, silently uploads your Git history",
-                "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload",
-                "domain": "tokenstead.ai",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49752422-0",
-                "label": "Security",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49752422-1",
-                "label": "Privacy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49752422-2",
-                "label": "AI Coding Agent",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-09-18T10:35:28Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789751269319-aofthg",
-            "title": "Manus Eyes $4B Valuation in $500M Raise After Meta Split",
-            "tldr": "Manus, which had to abandon a merger with Meta earlier this year, is now in talks to raise $500M at a $4B valuation as it resumes independent operations.",
-            "whyItMatters": [
-              "Signals strong investor appetite for independent AI agent companies even after failed big-tech acquisitions",
-              "A $4B valuation sets a new benchmark for AI agent startups, potentially raising expectations for similar companies",
-              "Manus resuming independent ops means it will compete directly with Meta and other incumbents, intensifying the AI agent market"
-            ],
-            "whatToTry": {
-              "description": "If you're building in the AI agent space, study Manus's product and positioning to understand what investors value at a $4B valuation. Consider how your own roadmap or fundraising narrative could align with the market's appetite for independent agent platforms.",
-              "note": "The deal is still in discussion and could fall through; treat the valuation as a signal, not a guarantee."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789751269319-aofthg",
-                "title": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
-                "url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-0",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-aofthg-2",
-                "label": "Manus",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 16:35:49 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789751269319-o5znvm",
-            "title": "Anthropic CEO Proposes Self-Policing AI Safety Plan, Nvidia Pushes Back",
-            "tldr": "Anthropic CEO Dario Amodei outlines a plan for AI labs to self-regulate via independent safety evaluators and coordination among democratic countries, drawing both support and criticism from Nvidia's Jensen Huang. The debate highlights growing tensions over AI safety and governance.",
-            "whyItMatters": [
-              "Potential regulatory shifts could impact AI development timelines and compliance requirements for startups.",
-              "Industry leaders are divided on self-regulation, signaling possible fragmentation in safety standards and competitive dynamics."
-            ],
-            "whatToTry": {
-              "description": "Monitor the evolving AI safety landscape by following announcements from Anthropic, Nvidia, and regulatory bodies. Consider how proposed safety evaluations might affect your product's development and deployment, and engage in industry discussions to stay ahead.",
-              "note": "Self-regulation proposals may not become mandatory, but early awareness can help you adapt to potential future standards."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789751269319-o5znvm",
-                "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
-                "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-1",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-o5znvm-2",
-                "label": "Anthropic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 17:06:32 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789751269319-yldcen",
-            "title": "Meta's Muse Lands on Mac, Bringing AI Agents to Your Desktop",
-            "tldr": "Meta's Muse AI assistant is now available on Mac, where it can work with your files and apps to take actions on your behalf. This marks a significant step toward mainstream desktop AI agents.",
-            "whyItMatters": [
-              "Signals Big Tech's push into agentic desktop AI, intensifying competition for AI-powered productivity tools",
-              "Opens new integration opportunities for developers building on or alongside Meta's AI ecosystem"
-            ],
-            "whatToTry": {
-              "description": "Install Muse on your Mac and test its file and app automation capabilities against your current workflow. Note where it succeeds and fails to identify gaps your product could fill.",
-              "note": "Be cautious about granting broad file system permissions to early-stage AI agents."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789751269319-yldcen",
-                "title": "Meta’s Muse hits Mac, letting the AI take actions on your computer",
-                "url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-0",
-                "label": "Meta",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789751269319-yldcen-2",
-                "label": "Muse",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:22:48 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789751269347-765bf9",
-            "title": "AI PACs Spend $1M in Obscure Senate Race",
-            "tldr": "AI-focused political action committees have poured nearly $1 million into South Dakota's Senate race, outspending actual residents, signaling a new era of AI industry political influence.",
-            "whyItMatters": [
-              "AI companies are increasingly using political spending to shape regulation and policy favorable to their interests.",
-              "This could lead to more AI-friendly legislation, impacting compliance and market dynamics for AI startups."
-            ],
-            "whatToTry": {
-              "description": "Monitor AI-related political action committees and their spending patterns to anticipate regulatory changes that could affect your business. Set up Google Alerts for 'AI PAC' and 'AI lobbying' to stay informed.",
-              "note": "Consider engaging with industry associations to have a voice in policy discussions."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789751269347-765bf9",
-                "title": "AI PACs Have Dumped Nearly $1 Million Into an Obscure Senate Race",
-                "url": "https://www.wired.com/story/ai-pacs-have-dumped-nearly-1-million-into-an-obscure-senate-race/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789751269347-765bf9-0",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789751269347-765bf9-1",
-                "label": "AI Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:00:08 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789751269347-06k9kv",
-            "title": "Anthropic CEO Warns AI Safety Hinges on Understanding How Models Think",
-            "tldr": "Wired reports that Anthropic's CEO argues AI safety depends on understanding model internals, and current evidence is disturbing. The piece suggests the industry might have paused if it followed its own research.",
-            "whyItMatters": [
-              "Signals growing internal tension at top AI labs between safety research and competitive release cycles",
-              "Founders building on frontier models should anticipate more scrutiny, potential regulatory pressure, and shifting API terms",
-              "Interpretability research is becoming a differentiator and a risk factor for product roadmaps"
-            ],
-            "whatToTry": {
-              "description": "Audit your product's reliance on frontier model behavior. Identify any high-stakes decisions your AI makes and add fallback or human-in-the-loop safeguards. Follow interpretability research from Anthropic and others to anticipate model behavior changes.",
-              "note": "This is an opinion/analysis piece, not a new release. Treat it as a signal to stress-test your assumptions, not as breaking news."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789751269347-06k9kv",
-                "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
-                "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789751269347-06k9kv-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789751269347-06k9kv-1",
-                "label": "Interpretability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789751269347-06k9kv-2",
-                "label": "Anthropic",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:00:00 +0000"
-          },
-          {
-            "id": "hn-49752056",
-            "title": "Microsoft Exec's 'Largest Theft of Labor' Remark Surfaces in Unredacted Filings",
-            "tldr": "Newly unredacted court filings reveal a Microsoft executive internally described AI web scraping as 'the largest theft of labor in human history,' sparking a 600+ comment debate on HackerNews about data provenance and fair use.",
-            "whyItMatters": [
-              "Legal exposure: Internal admissions like this could be used as evidence in copyright lawsuits against AI companies, raising compliance risk for anyone training on scraped data.",
-              "Data strategy: Founders relying on scraped datasets may need to reassess provenance, licensing, and potential retroactive liability as scrutiny intensifies.",
-              "Reputation and trust: Public backlash against scraping practices could influence enterprise buyer sentiment and partnership decisions."
-            ],
-            "whatToTry": {
-              "description": "Audit your training data pipeline this week: document the source, license, and consent status of every dataset you use. For any scraped data, check whether it falls under active litigation or opt-out signals (robots.txt, ToS). Where risk is high, start evaluating licensed or synthetic alternatives.",
-              "note": "This is not legal advice; consult counsel if you operate at scale or in regulated domains."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49752056",
-                "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
-                "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49752056-0",
-                "label": "Data Scraping",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49752056-1",
-                "label": "Copyright",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49752056-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-18T09:45:07Z"
-          }
-        ],
-        "totalReadTimeMinutes": 19,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-09-18-evening",
-        "period": "evening",
-        "date": "2026-09-18",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: ChatGPT Inventor's New AI Model 'Jev' Promises Cheaper, Faster Software Intelligence, Google's CC AI Agent Now Runs Your Household, US Military's AI Hallucination Nearly Triggered a Real Crisis.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1789771421073-683ksw",
-            "title": "ChatGPT Inventor's New AI Model 'Jev' Promises Cheaper, Faster Software Intelligence",
-            "tldr": "A new AI model called Jev, created by a ChatGPT inventor, is generating excitement among developers for offering a cheaper and faster path to software intelligence. This could signal a shift toward more efficient AI architectures that reduce cost and latency for production applications.",
-            "whyItMatters": [
-              "Business impact: Lower inference costs and faster performance could make AI features more affordable and scalable for startups, improving unit economics.",
-              "Technical impact: A new model architecture may challenge current dominant approaches, offering developers an alternative that prioritizes efficiency over raw scale."
-            ],
-            "whatToTry": {
-              "description": "Keep an eye on Jev's official release and benchmarks. Once available, test it on a small, non-critical feature in your product to compare cost, latency, and output quality against your current model.",
-              "note": "Early excitement doesn't always translate to production readiness—wait for independent benchmarks and community feedback before committing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-683ksw",
-                "title": "A new kind of AI model from a ChatGPT inventor is thrilling developers",
-                "url": "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-683ksw-0",
-                "label": "AI Models",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-683ksw-1",
-                "label": "Developer Tools",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-683ksw-2",
-                "label": "Industry News",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 18:49:30 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-jygp1g",
-            "title": "Google's CC AI Agent Now Runs Your Household",
-            "tldr": "Google is refocusing its CC AI agent on household coordination, letting families share emails, schedules, and tasks so the AI can manage calendars, fill out forms, make shopping lists, and plan meals.",
-            "whyItMatters": [
-              "Validates multi-user, shared-context AI agents as a product category beyond single-user assistants",
-              "Signals Google's push into proactive, cross-app task execution, raising the bar for consumer AI integrations"
-            ],
-            "whatToTry": {
-              "description": "Audit your product for multi-user context sharing. If you're building an AI assistant, consider how it could support shared accounts, permissions, and household or team coordination rather than just individual use.",
-              "note": "Google's move suggests consumer AI is shifting from single-player to multiplayer; early movers can differentiate."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-jygp1g",
-                "title": "Google’s new ‘CC’ is an AI agent that helps families run their households",
-                "url": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-jygp1g-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-jygp1g-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-jygp1g-2",
-                "label": "Consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 17:33:50 +0000"
-          },
-          {
-            "id": "hn-49757520",
-            "title": "US Military's AI Hallucination Nearly Triggered a Real Crisis",
-            "tldr": "A CNN report reveals the US military acted on an AI-generated, hallucinated intelligence report about a Chinese ship, leading to a close call. The story is trending on HackerNews with 267 comments, highlighting urgent concerns about AI reliability in high-stakes decisions.",
-            "whyItMatters": [
-              "Demonstrates catastrophic real-world consequences of LLM hallucinations in critical systems, reinforcing the need for human-in-the-loop and verification layers.",
-              "Signals growing regulatory and reputational risk for AI products deployed in defense, intelligence, or any safety-critical domain."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product for hallucination risks in high-stakes workflows. Implement a mandatory human review step for any output that could trigger irreversible actions, and add confidence scoring or source attribution to model responses.",
-              "note": "Even low-probability hallucinations can have outsized impact; design for graceful failure and escalation."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49757520",
-                "title": "US Military had close call after using AI for hallucinated intelligence report",
-                "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
-                "domain": "cnn.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49757520-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49757520-1",
-                "label": "Hallucination",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49757520-2",
-                "label": "Defense",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "2026-09-18T17:28:01Z"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-joibd0",
-            "title": "Amodei's 'Pace the Frontier' Plan Sparks Debate on AI Safety",
-            "tldr": "Dario Amodei proposes independent safety evaluators and coordination among democratic AI labs to pace frontier AI development, drawing support and pushback from Nvidia's Jensen Huang. The debate highlights growing tensions over AI safety and regulation.",
-            "whyItMatters": [
-              "Potential new compliance requirements and safety standards could affect AI product development and deployment.",
-              "Industry leaders are divided on the approach, which may influence future regulations and competitive dynamics."
-            ],
-            "whatToTry": {
-              "description": "Monitor the development of this proposal and consider how independent safety evaluations could be integrated into your AI development lifecycle. Engage with industry groups to stay informed and provide input.",
-              "note": "Keep an eye on responses from other major AI labs and regulators to anticipate shifts in best practices."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-joibd0-0",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              },
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-joibd0-1",
-                "title": "TechCrunch AI",
-                "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-joibd0-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-joibd0-1",
-                "label": "Regulation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-joibd0-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 17:09:56 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-mykqgp",
-            "title": "Manus Eyes $4B Valuation in $500M Raise After Meta Split",
-            "tldr": "Manus, which had to break off a merger with Meta earlier this year, is now in talks to raise $500M at a $4B valuation as it resumes independent operations. The move signals strong investor appetite for AI agent startups despite big-tech consolidation pressure.",
-            "whyItMatters": [
-              "Validates that AI agent companies can command premium valuations independently, even after failed acquisitions by major players.",
-              "Signals a potential shift in M&A dynamics: startups may prefer independence and larger raises over being absorbed by big tech."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI agent product, use this as a benchmark for your own fundraising narrative. Highlight independence and platform potential rather than acquisition appeal. Research Manus's product positioning to identify gaps you can exploit.",
-              "note": "Valuations at this stage can be inflated; focus on revenue and retention metrics that justify long-term value."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-mykqgp",
-                "title": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
-                "url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-mykqgp-0",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-mykqgp-1",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-mykqgp-2",
-                "label": "industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 16:35:49 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-87dmox",
-            "title": "Accenture Becomes Anthropic's First Embedded AI Evaluator",
-            "tldr": "Accenture is reportedly becoming Anthropic's first embedded evaluator, a high-risk consulting engagement that signals a new model for enterprise AI quality assurance and third-party validation.",
-            "whyItMatters": [
-              "Enterprise AI adoption increasingly hinges on independent evaluation and trust, creating a new market for embedded evaluator services.",
-              "Consulting firms like Accenture are moving from implementation to ongoing AI quality assurance, potentially reshaping how AI vendors prove reliability to large customers."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products for enterprises, consider how you'll provide independent evaluation or certification. Explore partnerships with consulting firms or build evaluation APIs that customers can audit.",
-              "note": "Embedded evaluators may become a standard requirement in enterprise AI procurement, so early differentiation could be valuable."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-87dmox",
-                "title": "Anthropic’s first embedded evaluator is … Accenture?",
-                "url": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-87dmox-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-87dmox-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-87dmox-2",
-                "label": "Evaluation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 21:44:33 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-ku0ru2",
-            "title": "Disney Hires Character.AI Ex-CEO as First CTO After Cease-and-Desist",
-            "tldr": "Disney appointed the former CEO of Character.AI — a company it once accused of copying its characters — as its first-ever CTO, signaling a major shift in how legacy IP holders are approaching AI.",
-            "whyItMatters": [
-              "Legacy IP holders are moving from litigation to acquisition of AI talent, opening partnership and licensing opportunities for AI startups.",
-              "Hiring a consumer AI platform veteran suggests Disney is prioritizing interactive, character-driven AI experiences over internal tooling.",
-              "The legal-to-leadership pipeline shows that AI expertise can outweigh past IP conflicts — useful context when negotiating with rights holders."
-            ],
-            "whatToTry": {
-              "description": "If your AI product touches licensed characters or branded IP, map out which rights holders have recently hired AI talent or launched AI initiatives. These are the most likely candidates for partnership or licensing deals, and they may be more receptive than their public legal posture suggests.",
-              "note": "Watch for follow-up announcements about Disney's AI product roadmap — that will reveal whether this is a defensive talent grab or a genuine product bet."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-ku0ru2",
-                "title": "Disney’s first CTO led an AI startup it once accused of copying its characters",
-                "url": "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-ku0ru2-0",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-ku0ru2-1",
-                "label": "IP & Licensing",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-ku0ru2-2",
-                "label": "Character.AI",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 17:59:53 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1789771421073-b8xm35",
-            "title": "Meta's Muse Lands on Mac, Bringing AI Computer Control to Desktop",
-            "tldr": "Meta's Muse AI agent is now available on Mac, where it can work with your files and apps to take actions on your behalf. This marks a significant expansion of agentic AI from browsers and chat windows into native desktop environments.",
-            "whyItMatters": [
-              "Desktop AI agents open a new surface for automation products, but also raise serious privacy and permission concerns for users and enterprises.",
-              "Meta entering the desktop agent space intensifies competition with Apple, Microsoft, and startups building computer-use agents."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI product, evaluate whether a desktop agent integration could be a distribution channel or a competitive threat. Test Muse on Mac to understand its action-taking capabilities and permission model, then map how your product's workflow could be augmented or disrupted.",
-              "note": "Desktop agents require deep OS permissions; watch for enterprise adoption barriers around data access and compliance."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1789771421073-b8xm35",
-                "title": "Meta’s Muse hits Mac, letting the AI take actions on your computer",
-                "url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-b8xm35-0",
-                "label": "Meta",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-b8xm35-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1789771421073-b8xm35-2",
-                "label": "Desktop Automation",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:22:48 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789771421134-q048ln",
-            "title": "AI PACs Spend $1M on Obscure South Dakota Senate Race",
-            "tldr": "AI industry PACs have funneled nearly $1 million into South Dakota's Republican Senate primary, outspending actual residents, signaling a strategic push to influence AI policy through Congress.",
-            "whyItMatters": [
-              "AI companies are ramping up political spending to shape future AI regulation and legislation.",
-              "Even safe seats are being targeted, indicating a long-term strategy to build congressional allies for AI-friendly policies."
-            ],
-            "whatToTry": {
-              "description": "Monitor FEC filings for AI-related PAC contributions to understand which candidates and committees are receiving support, and consider how this might affect upcoming AI legislation.",
-              "note": "Use OpenSecrets or the FEC website to track donations; this can inform your advocacy or government affairs strategy."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789771421134-q048ln",
-                "title": "AI PACs Have Dumped Nearly $1 Million Into an Obscure Senate Race",
-                "url": "https://www.wired.com/story/ai-pacs-have-dumped-nearly-1-million-into-an-obscure-senate-race/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789771421134-q048ln-0",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789771421134-q048ln-1",
-                "label": "AI Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:00:08 +0000"
-          },
-          {
-            "id": "rss-wired-ai-1789771421134-7779xi",
-            "title": "Anthropic CEO's Safety Warning: AI Industry Ignores Its Own Research",
-            "tldr": "Wired reports that Anthropic's CEO argues AI safety depends on understanding how models 'think,' but current evidence is disturbing—suggesting the industry may be ignoring its own safety research. This highlights a growing tension between rapid AI deployment and unresolved interpretability risks.",
-            "whyItMatters": [
-              "Business impact: Rising safety concerns could trigger stricter regulation, forcing AI product teams to invest in interpretability and compliance earlier than planned.",
-              "Technical impact: Interpretability research is becoming a competitive differentiator; ignoring it may lead to unpredictable model behavior and reputational damage."
-            ],
-            "whatToTry": {
-              "description": "Audit your AI product's riskiest use cases and document where model decisions are opaque. Allocate a small team to experiment with interpretability tools (e.g., attention visualization, probing classifiers) to better understand failure modes.",
-              "note": "Start with a single high-impact feature to avoid overcommitting resources."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1789771421134-7779xi",
-                "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
-                "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1789771421134-7779xi-0",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789771421134-7779xi-1",
-                "label": "Interpretability",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-wired-ai-1789771421134-7779xi-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 18 Sep 2026 15:00:00 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 22,
         "isAvailable": true,
         "isRead": false
       }
