@@ -1,7 +1,329 @@
 [
   {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-10-15-afternoon",
+        "period": "afternoon",
+        "date": "2026-10-15",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: AI Data Science Agents Fail Silently on Methodological Errors, ClawLoop: Self-Improving Agents Without a Teacher Model, New Correction Step Boosts Diffusion Model Quality Without CFG.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1792068247507-9lstnb",
+            "title": "AI Data Science Agents Fail Silently on Methodological Errors",
+            "tldr": "A new arXiv paper evaluates agentic data science systems beyond accuracy, finding that most solutions contain methodological failures like data leakage and inappropriate validation across 220 tasks. This reveals a critical gap in current evaluation practices that could undermine the reliability of automated data science.",
+            "whyItMatters": [
+              "Business impact: Companies relying on AI agents for data science may unknowingly deploy flawed models, leading to poor business decisions and potential compliance risks.",
+              "Technical impact: Developers need to incorporate methodological checks into agentic pipelines and evaluation benchmarks to ensure robust and trustworthy automation."
+            ],
+            "whatToTry": {
+              "description": "Audit your agentic data science pipelines for methodological failures by implementing checks for data leakage, proper cross-validation, and domain-specific validation. Use the paper's test suite as a starting point to stress-test your agents.",
+              "note": "Focus on high-stakes use cases first, as failures may have severe consequences."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792068247507-9lstnb",
+                "title": "The Silent Failures in Agentic Data Science",
+                "url": "https://arxiv.org/abs/2610.14115",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-9lstnb-0",
+                "label": "Agentic AI",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-9lstnb-1",
+                "label": "Data Science",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-9lstnb-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792068247507-mbwkzg",
+            "title": "ClawLoop: Self-Improving Agents Without a Teacher Model",
+            "tldr": "New arXiv paper introduces ClawLoop, a framework that lets LLM agents improve themselves in harness environments via a self-sustaining loop of task synthesis, training, and diagnosis—no external teacher model required. It could cut the cost and dependency of building capable tool-using agents.",
+            "whyItMatters": [
+              "Reduces reliance on expensive, stronger teacher models for agent post-training, potentially lowering costs and enabling continuous improvement.",
+              "Provides a blueprint for self-improving agents that could be integrated into existing RL/SFT pipelines, accelerating iteration cycles.",
+              "Opens the door to agents that adapt to new tools and environments without human-curated task sets."
+            ],
+            "whatToTry": {
+              "description": "Read the paper and assess if ClawLoop's three-phase loop (task synthesis, training, diagnosis) can be adapted to your agent's harness. Prototype a minimal version using an open-source LLM like Qwen and your own sandbox environment to test self-improvement on a narrow task.",
+              "note": "The paper uses Qwen3.6-27B; results may vary with smaller models. Start with a simple, well-defined task to validate the loop before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792068247507-mbwkzg",
+                "title": "ClawLoop: Self-Improving Agents via Harness-Native Training Loop",
+                "url": "https://arxiv.org/abs/2610.14118",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-mbwkzg-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-mbwkzg-1",
+                "label": "Self-Improvement",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-mbwkzg-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792068247507-i4teie",
+            "title": "New Correction Step Boosts Diffusion Model Quality Without CFG",
+            "tldr": "Researchers introduce a correction training framework that reduces exposure bias in diffusion models, substantially improving FID scores for unguided and unconditional generation across DiT, SiT, and JiT architectures.",
+            "whyItMatters": [
+              "Could enable high-quality image generation without classifier-free guidance, reducing inference cost and complexity",
+              "Addresses a fundamental training-inference gap that affects all diffusion models, potentially improving any generative pipeline",
+              "May lead to more diverse outputs since CFG often reduces diversity"
+            ],
+            "whatToTry": {
+              "description": "If you're building with diffusion models, experiment with adding a lightweight corrector network on top of your existing denoiser. Train it on your base model's own predictions to refine intermediate steps, and test whether it improves sample quality or allows you to reduce CFG scale.",
+              "note": "The corrector can be applied iteratively at inference, but start with a single correction step to measure impact."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792068247507-i4teie",
+                "title": "Correction Training for Diffusion Models",
+                "url": "https://arxiv.org/abs/2610.14136",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-i4teie-0",
+                "label": "Diffusion Models",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-i4teie-1",
+                "label": "Research",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-i4teie-2",
+                "label": "Image Generation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792068247507-kklknx",
+            "title": "New Benchmark Exposes Gap in Agent Evaluation",
+            "tldr": "LHTB 2.0 introduces dense progress rewards and 3-hour horizons to measure sustained agent progress, revealing that binary outcome checks miss 43% of partial success. GPT-6-astra leads with 0.69 mean reward.",
+            "whyItMatters": [
+              "Outcome-only benchmarks underestimate agent capabilities, which could misguide product decisions and investment in agentic workflows.",
+              "Dense progress signals enable better reward shaping and early stopping, improving training efficiency for long-horizon tasks."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your agent on LHTB 2.0 or implement dense progress checkpoints in your own long-horizon tasks to capture partial credit and debug where agents stall.",
+              "note": "The benchmark is not yet publicly released, but the methodology can be replicated with your own task suites."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792068247507-kklknx",
+                "title": "Long-Horizon-Terminal-Bench 2.0: Automating Diverse Task Construction and Measuring Sustained Agent Progress",
+                "url": "https://arxiv.org/abs/2610.14146",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-kklknx-0",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-kklknx-1",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247507-kklknx-2",
+                "label": "Evaluation",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-techcrunch-ai-1792068247372-4mn855",
+            "title": "Amazon's Bee Debuts $75 AI Wearable and Card-Sized Recorder",
+            "tldr": "Amazon-owned Bee launched two new personal AI devices: an updated wearable and a credit-card-sized recorder that attaches to smartphones, both capable of summarizing conversations, creating to-do lists, and integrating with Alexa and Amazon shopping. This marks Bee's first hardware release since Amazon acquired the company, signaling a push into ambient AI hardware.",
+            "whyItMatters": [
+              "Amazon is entering the affordable AI hardware space, potentially expanding the market for always-on personal assistants and creating new integration opportunities for third-party services.",
+              "The devices' focus on conversation summarization and task automation highlights a growing trend toward ambient computing, where AI passively captures and processes daily interactions."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI products, consider how your service could integrate with or complement these devices. For example, explore APIs for Alexa or Amazon shopping to enable seamless task creation or order placement from voice notes. Alternatively, evaluate if your product could offer a differentiated privacy-first alternative to always-on recorders.",
+              "note": "Privacy concerns around always-on recording may drive demand for on-device processing or transparent data policies—differentiate by addressing these directly."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1792068247372-4mn855",
+                "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+                "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-4mn855-0",
+                "label": "Amazon",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-4mn855-1",
+                "label": "AI hardware",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-4mn855-2",
+                "label": "Bee",
+                "type": "tool"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 12:00:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1792068247372-10sjfz",
+            "title": "Figma Opens Platform to AI Agents, Ships Code Layers Beta",
+            "tldr": "Figma announced new features defining how AI agents operate on its platform, alongside the open beta release of its code layers feature. This signals design tools becoming agent-native surfaces, opening new integration opportunities for AI product builders.",
+            "whyItMatters": [
+              "Design-to-code workflows are a major AI use case; Figma formalizing agent behavior creates a new integration surface for AI products",
+              "Code layers in open beta means design assets can map more directly to production code, reducing friction for AI-assisted development tools"
+            ],
+            "whatToTry": {
+              "description": "If you're building design-to-code or UI generation tools, sign up for Figma's code layers beta and explore the new agent APIs to see where your product can plug in. Prototype a small integration to test how agent-defined workflows behave on the platform.",
+              "note": "Agent platform features may still be early — validate stability before committing to production dependencies."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1792068247372-10sjfz",
+                "title": "Figma announces new features to define how agents work on its platform",
+                "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-10sjfz-0",
+                "label": "Figma",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-10sjfz-1",
+                "label": "AI Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792068247372-10sjfz-2",
+                "label": "Design Tools",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 04:30:00 +0000"
+          },
+          {
+            "id": "rss-arxiv-ai-1792068247506-mslxdh",
+            "title": "New LLM-Based C-test Aims to Evaluate Superintelligent AI",
+            "tldr": "Researchers propose a novel benchmark using Levin's Kt complexity and LLMs to generate test items that can outpace human and current AI capabilities, addressing the circularity of traditional benchmarks.",
+            "whyItMatters": [
+              "Provides a scalable method to evaluate future AI systems beyond human-level performance, crucial for tracking progress toward AGI.",
+              "Could influence how AI labs and regulators measure model capabilities, especially for safety and alignment.",
+              "Offers a theoretical framework that might inspire new evaluation tools for LLM-based products."
+            ],
+            "whatToTry": {
+              "description": "Read the paper to understand the theoretical underpinnings and consider how inverse problems could be used to create dynamic, difficulty-scalable benchmarks for your own AI models.",
+              "note": "The approach is theoretical; practical implementations may require significant adaptation."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792068247506-mslxdh",
+                "title": "Artificiality's First Exam: An LLM-Referenced C-test for Supraintelligence",
+                "url": "https://arxiv.org/abs/2610.14005",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792068247506-mslxdh-0",
+                "label": "Benchmarking",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247506-mslxdh-1",
+                "label": "LLM",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792068247506-mslxdh-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Thu, 15 Oct 2026 00:00:00 -0400"
+          }
+        ],
+        "totalReadTimeMinutes": 19,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-10-14-afternoon",
@@ -29,7 +351,7 @@
   },
   {
     "date": "2026-10-13",
-    "displayDate": "Yesterday",
+    "displayDate": "Tuesday, Oct 13",
     "briefings": [
       {
         "id": "briefing-2026-10-13-morning",
@@ -478,613 +800,6 @@
         "executiveSummary": "No significant AI news this period.",
         "items": [],
         "totalReadTimeMinutes": 0,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-10-08",
-    "displayDate": "Thursday, Oct 8",
-    "briefings": [
-      {
-        "id": "briefing-2026-10-08-morning",
-        "period": "morning",
-        "date": "2026-10-08",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Nous Research Hits $1.5B Valuation, Launches Business AI Agents, Microsoft's Nvidia-Powered AI PCs: New Surface Laptop Ultra, Meta and Microsoft Curb Employee Use of Claude AI.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1791418708868-j98v5p",
-            "title": "Nous Research Hits $1.5B Valuation, Launches Business AI Agents",
-            "tldr": "Nous Research, developer of Hermes Agent, confirmed a $1.5B valuation after raising a $90M Series B, and launched AI agents aimed at business users. The move signals growing investor and enterprise appetite for agentic AI beyond consumer chatbots.",
-            "whyItMatters": [
-              "Validates the enterprise agent market with a major funding round, signaling more competition and potential partnership opportunities for AI founders.",
-              "Hermes Agent's business focus could accelerate adoption of autonomous agents in workflows, creating new integration and tooling needs."
-            ],
-            "whatToTry": {
-              "description": "Evaluate Hermes Agent for your own internal workflows or as a potential integration for your product. Sign up for access if available and benchmark it against your current agent stack.",
-              "note": "Check if the business tier offers APIs or SDKs that fit your stack before committing."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791418708868-j98v5p",
-                "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
-                "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-j98v5p-0",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-j98v5p-1",
-                "label": "Funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-j98v5p-2",
-                "label": "Hermes Agent",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 07 Oct 2026 20:48:45 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791418708868-7qw560",
-            "title": "Microsoft's Nvidia-Powered AI PCs: New Surface Laptop Ultra",
-            "tldr": "Microsoft unveiled the Surface Laptop Ultra, a new line of AI PCs running on Nvidia chips and a revamped Windows 11, designed to run AI models and agents locally.",
-            "whyItMatters": [
-              "Local AI inference on consumer hardware could reduce cloud costs and latency for AI-powered apps, opening new product possibilities.",
-              "A new Nvidia-powered Windows platform may create a fresh target environment for AI developers, similar to how Apple Silicon reshaped Mac app development."
-            ],
-            "whatToTry": {
-              "description": "Monitor the Surface Laptop Ultra's NPU/GPU specs and Windows 11 AI APIs (e.g., Copilot Runtime) to evaluate whether local model inference is viable for your product. If you build latency-sensitive or privacy-focused AI features, start prototyping an on-device fallback path.",
-              "note": "Pricing and real-world performance benchmarks aren't available yet—wait for independent reviews before committing to a local-first architecture."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791418708868-7qw560",
-                "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
-                "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-7qw560-0",
-                "label": "Microsoft",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-7qw560-1",
-                "label": "Nvidia",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-7qw560-2",
-                "label": "On-device AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 07 Oct 2026 20:22:37 +0000"
-          },
-          {
-            "id": "hn-49997161",
-            "title": "Meta and Microsoft Curb Employee Use of Claude AI",
-            "tldr": "Meta and Microsoft are reportedly limiting employee usage of Anthropic's Claude AI, signaling internal policy shifts that could affect enterprise adoption and competitive dynamics.",
-            "whyItMatters": [
-              "Enterprise AI adoption is highly sensitive to internal policies; restrictions by major tech firms may slow Claude's enterprise growth and create openings for competitors.",
-              "For founders building on Claude, this highlights the risk of platform dependency and the need to diversify AI providers or build abstraction layers."
-            ],
-            "whatToTry": {
-              "description": "If you rely on Claude for your product, assess your exposure to enterprise policy changes by reviewing your API usage and considering adding a fallback to another LLM provider like GPT-4 or Gemini.",
-              "note": "Monitor official announcements from Meta and Microsoft for confirmation and details on the scope of restrictions."
-            },
-            "sources": [
-              {
-                "id": "src-hn-49997161",
-                "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-                "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
-                "domain": "rswebsols.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-49997161-0",
-                "label": "Anthropic",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49997161-1",
-                "label": "Enterprise AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-49997161-2",
-                "label": "Policy",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-10-07T18:49:40Z"
-          },
-          {
-            "id": "rss-wired-ai-1791418708914-0b0r7z",
-            "title": "AI Models Take the Wheel: GPT, Claude, Grok Drive Real Car",
-            "tldr": "Three engineers let GPT, Claude, and Grok control a real Toyota Corolla to navigate to In-N-Out; only one succeeded. This hands-on test reveals current AI capabilities and limitations in physical-world tasks.",
-            "whyItMatters": [
-              "Demonstrates the gap between AI hype and real-world reliability, crucial for founders building autonomous or robotics products.",
-              "Provides a benchmark for how LLMs handle complex, safety-critical decision-making with real-time constraints."
-            ],
-            "whatToTry": {
-              "description": "Review the engineers' methodology and failure modes to anticipate edge cases in your own AI projects that interact with the physical world. Consider running similar controlled experiments to stress-test your models.",
-              "note": "Focus on safety and fail-safes; don't attempt without professional supervision."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1791418708914-0b0r7z",
-                "title": "These Researchers Made AI Drive a Toyota Corolla to Get In-N-Out",
-                "url": "https://www.wired.com/story/ai-is-driving-cars-now-oh-boy/",
-                "domain": "wired.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-wired-ai-1791418708914-0b0r7z-0",
-                "label": "GPT",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1791418708914-0b0r7z-1",
-                "label": "Claude",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1791418708914-0b0r7z-2",
-                "label": "Grok",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-wired-ai-1791418708914-0b0r7z-3",
-                "label": "Autonomous Driving",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Wed, 07 Oct 2026 18:45:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791418708868-l0rl0p",
-            "title": "Meta's Muse AI Agent Expands to iPad a Month After Mobile Launch",
-            "tldr": "Meta's AI agent Muse is now available on iPad, just one month after its mobile debut, signaling rapid expansion of the assistant's reach and integrations.",
-            "whyItMatters": [
-              "Meta is aggressively scaling its AI assistant across devices, intensifying competition in the consumer AI agent space.",
-              "Faster platform expansion could pressure other AI product teams to prioritize multi-device support and integrations."
-            ],
-            "whatToTry": {
-              "description": "If you're building a consumer AI product, test Muse on iPad to study its onboarding, cross-device continuity, and integration patterns, then compare with your own multi-platform roadmap.",
-              "note": "Focus on how Meta handles context and session handoff between phone and tablet, as that's often a weak point in early multi-device AI products."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791418708868-l0rl0p",
-                "title": "Meta’s Muse launches on iPad just a month after its mobile debut",
-                "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-l0rl0p-0",
-                "label": "Meta",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-l0rl0p-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791418708868-l0rl0p-2",
-                "label": "Consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Wed, 07 Oct 2026 18:30:57 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 11,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-10-08-afternoon",
-        "period": "afternoon",
-        "date": "2026-10-08",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Google's AI Edge Foresight Takes On Granola With Offline Meeting Notes, China's Manus Raises $500M+ After Meta Split, Cal AI's Teen Founder Raises $10M for Personal AI Agent Startup.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1791470574487-n4enjo",
-            "title": "Google's AI Edge Foresight Takes On Granola With Offline Meeting Notes",
-            "tldr": "Google released AI Edge Foresight, an on-device meeting note-taker that transcribes, summarizes, and answers questions offline, directly challenging Granola and other cloud-based meeting AI tools.",
-            "whyItMatters": [
-              "Privacy-first, offline meeting AI is becoming a competitive category, threatening cloud-dependent note-takers like Granola, Otter, and Fireflies.",
-              "On-device inference removes latency, API costs, and data compliance friction, making it viable for enterprise and regulated industries."
-            ],
-            "whatToTry": {
-              "description": "Test Google's AI Edge Foresight on a real meeting and compare transcription accuracy, summary quality, and latency against your current meeting AI tool. If you're building in this space, evaluate whether on-device models can replace or augment your cloud pipeline for privacy-sensitive customers.",
-              "note": "Check device compatibility and model size constraints before assuming it works across your team's hardware."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791470574487-n4enjo",
-                "title": "Google releases a new local-first Granola competitor",
-                "url": "https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-n4enjo-0",
-                "label": "Google",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-n4enjo-1",
-                "label": "On-device AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-n4enjo-2",
-                "label": "Meeting AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 13:28:39 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791470574487-vxgqco",
-            "title": "China's Manus Raises $500M+ After Meta Split",
-            "tldr": "Manus, the Chinese AI agent startup, raised over $500M in its first funding round since splitting with Meta, led by Boyu Capital and IDG Capital with Tencent and HSG participating.",
-            "whyItMatters": [
-              "Signals massive investor confidence in autonomous AI agents and China's independent AI ecosystem post-Meta",
-              "A well-funded competitor could accelerate agent capabilities and pricing pressure globally"
-            ],
-            "whatToTry": {
-              "description": "Monitor Manus's product releases and pricing closely, and benchmark your agent workflows against theirs to identify gaps or differentiation opportunities.",
-              "note": "Funding announcements often precede aggressive product launches and free tiers—prepare for potential market disruption."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791470574487-vxgqco",
-                "title": "China’s Manus raises over $500M in first funding round since split with Meta",
-                "url": "https://techcrunch.com/2026/10/08/chinas-manus-raises-over-500m-in-first-funding-round-since-split-with-meta/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-vxgqco-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-vxgqco-1",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-vxgqco-2",
-                "label": "Manus",
-                "type": "tool"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 13:20:32 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791470574487-zbucib",
-            "title": "Cal AI's Teen Founder Raises $10M for Personal AI Agent Startup",
-            "tldr": "Zach Yadegari, the 19-year-old co-founder of Cal AI, has raised $10M for a new startup building a personal AI agent that competes with Instinct, Muse, and Bee.",
-            "whyItMatters": [
-              "Validates the personal AI agent space as a hot investment category, with a very young founder attracting significant capital.",
-              "Signals growing competition in consumer AI agents, which could pressure founders to differentiate on UX, privacy, or integrations."
-            ],
-            "whatToTry": {
-              "description": "If you're building in the personal AI agent space, study the positioning of Cal AI's new startup alongside Instinct, Muse, and Bee to identify gaps in features, target users, or go-to-market. Consider how a 19-year-old founder's success with Cal AI might inform your own distribution strategy, especially on mobile and social channels.",
-              "note": "The startup is early-stage, so details on product and traction are limited; treat this as a signal of investor interest rather than proven product-market fit."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791470574487-zbucib",
-                "title": "Cal AI’s 19-year-old founder just raised $10M for his new AI startup",
-                "url": "https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-zbucib-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-zbucib-1",
-                "label": "funding",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791470574487-zbucib-2",
-                "label": "consumer AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 14:00:00 +0000"
-          },
-          {
-            "id": "hn-50003107",
-            "title": "OpenAI Withdraws 3 Math Papers, Sparking Community Debate",
-            "tldr": "OpenAI has retracted three mathematics papers, prompting a 186-comment HackerNews discussion about the reasons and implications for AI research transparency.",
-            "whyItMatters": [
-              "Research integrity and transparency are critical for trust in AI, especially for foundational work that others may build upon.",
-              "Withdrawals can signal potential errors or ethical concerns, which could affect how startups approach partnerships or dependencies on OpenAI's research."
-            ],
-            "whatToTry": {
-              "description": "Review the HackerNews discussion to understand the community's concerns and check if any of your work relies on the withdrawn papers. Consider implementing a process to monitor retractions in your field.",
-              "note": "The reasons for withdrawal are not yet clear; avoid jumping to conclusions until official statements are available."
-            },
-            "sources": [
-              {
-                "id": "src-hn-50003107",
-                "title": "OpenAI Withdraws 3 Math Papers",
-                "url": "https://github.com/openai/math/blob/main/history.md",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-50003107-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-50003107-1",
-                "label": "Research",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-50003107-2",
-                "label": "Ethics",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-10-08T08:08:37Z"
-          }
-        ],
-        "totalReadTimeMinutes": 8,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-10-08-evening",
-        "period": "evening",
-        "date": "2026-10-08",
-        "scheduledTime": "20:30",
-        "executiveSummary": "Today's highlights: LMArena Raises $200M at $3.1B to Measure AI Alignment, Google Turns Gemini Into an Autonomous Workplace Agent, OpenAI's Revenue Reportedly $20B Below Projections.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1791487214874-l9tj5i",
-            "title": "LMArena Raises $200M at $3.1B to Measure AI Alignment",
-            "tldr": "LMArena, the company behind the popular AI model leaderboard, raised $200M led by Lightspeed and Khosla, nearly doubling its valuation to $3.1B in 10 months. It is expanding beyond performance rankings to measure alignment issues like lying.",
-            "whyItMatters": [
-              "Validates third-party model evaluation as a venture-scale business, creating new opportunities for benchmarking and eval startups.",
-              "Signals that alignment and honesty metrics are becoming key competitive factors for AI models, not just raw capability."
-            ],
-            "whatToTry": {
-              "description": "Check LMArena's new alignment-focused leaderboards and use them to benchmark your own model or product against competitors. If you're building an AI product, consider how your model's honesty and alignment scores might affect user trust and adoption.",
-              "note": "Alignment metrics are still evolving; use them as directional signals rather than absolute truth."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791487214874-l9tj5i",
-                "title": "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
-                "url": "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-l9tj5i-0",
-                "label": "LMArena",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-l9tj5i-1",
-                "label": "AI Alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-l9tj5i-2",
-                "label": "Funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:19:45 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791487214874-nqa704",
-            "title": "Google Turns Gemini Into an Autonomous Workplace Agent",
-            "tldr": "Google is launching agentic capabilities in Gemini for businesses, enabling it to plan and execute tasks across apps, delegate to subagents, and operate with its own workplace identity including an email address.",
-            "whyItMatters": [
-              "Enterprise AI shifts from copilot to autonomous agent, opening new integration and automation opportunities for B2B AI products.",
-              "Gemini's multi-model orchestration and subagent delegation set a new baseline for agentic architectures that founders may need to match or interoperate with."
-            ],
-            "whatToTry": {
-              "description": "Prototype a workflow where your product delegates a multi-step business task (e.g., scheduling, data lookup, report generation) to Gemini's agentic API, and test how it handles subagent handoffs and identity-based permissions.",
-              "note": "Check Google's enterprise terms for agent identity and data access before building production integrations."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791487214874-nqa704",
-                "title": "Google brings agentic AI to Gemini, starting with businesses",
-                "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-nqa704-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-nqa704-1",
-                "label": "AI Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-nqa704-2",
-                "label": "Enterprise AI",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:18:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791487214874-dql3zr",
-            "title": "OpenAI's Revenue Reportedly $20B Below Projections",
-            "tldr": "A new report claims OpenAI's annualized revenue is roughly $50B, not the $70B previously reported — a $20B gap that could reshape how the industry values AI labs and their growth narratives.",
-            "whyItMatters": [
-              "Valuation and funding benchmarks across the AI sector may be recalibrated if the market leader's revenue is materially lower than assumed.",
-              "Enterprise buyers and investors may become more skeptical of aggressive AI revenue projections from other vendors, tightening scrutiny on ARR claims.",
-              "A slower-than-expected revenue curve could push OpenAI toward more aggressive monetization, potentially changing API pricing or product bundling."
-            ],
-            "whatToTry": {
-              "description": "Re-examine your own AI revenue assumptions and any vendor contracts or partnerships that were justified by OpenAI's perceived growth trajectory. If you're building on OpenAI's API, model a scenario where pricing or terms shift as they push harder for monetization.",
-              "note": "Treat this as a single unconfirmed report — wait for corroboration before making major strategic changes, but use it as a prompt to stress-test your financial models."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791487214874-dql3zr",
-                "title": "OpenAI’s revenue is reportedly $20 billion less than previously projected",
-                "url": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-dql3zr-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-dql3zr-1",
-                "label": "Industry",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-dql3zr-2",
-                "label": "Revenue",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:19:42 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791487214874-1mbteu",
-            "title": "Anthropic Tightens Usage Policy: Bans Abuse, Election Interference",
-            "tldr": "Anthropic updated its usage policy to explicitly prohibit repeated extreme abuse of Claude, election interference, deceptive campaigns, weapons software, and surveillance. Ordinary frustration and criticism remain allowed.",
-            "whyItMatters": [
-              "Business impact: Founders building on Claude must ensure their applications comply with stricter rules, especially around political content and surveillance, to avoid account termination.",
-              "Technical impact: The policy clarifies acceptable use, helping developers design guardrails and avoid inadvertently triggering abuse flags."
-            ],
-            "whatToTry": {
-              "description": "Review Anthropic's updated usage policy and audit your product's prompts, outputs, and user interactions to ensure compliance, particularly if you operate in political, security, or surveillance-adjacent domains.",
-              "note": "Pay attention to the distinction between ordinary user frustration and repeated extreme abuse—implement logging and rate limits to prevent the latter."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791487214874-1mbteu",
-                "title": "Anthropic changes usage policy to ban model abuse and election interference",
-                "url": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-1mbteu-0",
-                "label": "Anthropic",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-1mbteu-1",
-                "label": "Policy",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791487214874-1mbteu-2",
-                "label": "Compliance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:16:24 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 8,
         "isAvailable": true,
         "isRead": false
       }
