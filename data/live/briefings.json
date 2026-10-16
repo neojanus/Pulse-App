@@ -8,226 +8,141 @@
         "period": "afternoon",
         "date": "2026-10-16",
         "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Real-Time AI Agents: New Benchmark Exposes Latency Gap, AlphaDiana: Agent Harnesses Don't Always Improve Accuracy, Correctness Feedback Erases Evidence in AI Code Auditing.",
+        "executiveSummary": "Today's highlights: Nvidia Vet: Physical AI Still in 'Lego Era,' Not Robot Takeover, Elorian's Glimpse AI Claims Edge in Visual Reasoning Over GPT-6 Astra, Jev Becomes Vercel's Fastest-Adopted AI Model Ever.",
         "items": [
           {
-            "id": "rss-arxiv-ai-1792154081574-bk4r6z",
-            "title": "Real-Time AI Agents: New Benchmark Exposes Latency Gap",
-            "tldr": "ArXiv paper introduces RealtimeBench, a benchmark showing that slower, more capable LLM agents underperform faster ones when environments run in real time. The proposed TORSI method uses a slow teacher to train a fast student, boosting performance across six game types.",
+            "id": "rss-techcrunch-ai-1792172022740-dug008",
+            "title": "Nvidia Vet: Physical AI Still in 'Lego Era,' Not Robot Takeover",
+            "tldr": "Amulya Vishwanath, former Nvidia robotics product marketing lead now investing in the space, argues robotics is still assembling basic building blocks—actuators, hands, software, safety standards—and that 'physical AI' extends far beyond humanoid robots. This challenges the narrative that foundation models will soon trigger a robotics explosion.",
             "whyItMatters": [
-              "Business impact: Real-time agent performance is critical for customer-facing applications like live chat, trading, and gaming; latency can make or break user experience.",
-              "Technical impact: TORSI offers a practical framework for decoupling deliberation from action, enabling powerful models to operate under strict time constraints without sacrificing accuracy."
+              "Founders building robotics or physical AI should focus on infrastructure and enabling components rather than betting on imminent general-purpose robot breakthroughs.",
+              "Investors and product leaders may need to recalibrate timelines—the 'Lego era' implies a longer runway before mass adoption, creating opportunities in tooling and standards."
             ],
             "whatToTry": {
-              "description": "Evaluate your own agent's performance under real-time constraints by introducing artificial delays or using a live clock. Consider implementing a two-timescale approach: use a slower model for offline learning and a faster model for online execution.",
-              "note": "Start with a small set of tasks to measure the impact of latency before scaling."
+              "description": "Map your product or roadmap against the 'Lego blocks' Vishwanath identifies—actuators, robotic hands, software, safety standards. Identify which block you're solving and whether it's a bottleneck or a commodity. If you're building in physical AI, consider pivoting to a missing block rather than competing on full-stack robots.",
+              "note": "This is a contrarian view; validate with your own customer discovery before making major pivots."
             },
             "sources": [
               {
-                "id": "src-rss-arxiv-ai-1792154081574-bk4r6z",
-                "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
-                "url": "https://arxiv.org/abs/2610.20665",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-0",
-                "label": "Agents",
-                "type": "topic"
+                "id": "src-rss-techcrunch-ai-1792172022740-dug008-0",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+                "domain": "techcrunch.com",
+                "type": "article"
               },
               {
-                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-1",
-                "label": "Benchmark",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-2",
-                "label": "Real-time",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1792154081574-ntvmsg",
-            "title": "AlphaDiana: Agent Harnesses Don't Always Improve Accuracy",
-            "tldr": "New measurement system AlphaDiana reveals that agent harnesses (tools, skills, memory) often hurt accuracy on questions models already solve, and gains on hard questions don't always outweigh losses. It provides a framework to diagnose agent performance by linking correctness to execution traces and resource use.",
-            "whyItMatters": [
-              "Founders can't assume adding tools or memory improves agent performance—it may degrade accuracy on tasks the base model handles well.",
-              "Provides a systematic way to evaluate agent components under matched conditions, enabling data-driven decisions on harness design.",
-              "Highlights that token efficiency metrics can be misleading without correctness context, affecting cost and performance trade-offs."
-            ],
-            "whatToTry": {
-              "description": "Before adding tools, skills, or memory to your agent, run an A/B test on a benchmark where the base model already performs well. Measure accuracy delta and token usage per correct answer to see if the harness actually helps.",
-              "note": "Focus on questions the model solves without tools—harnesses often introduce regressions there."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1792154081574-ntvmsg",
-                "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
-                "url": "https://arxiv.org/abs/2610.20675",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-0",
-                "label": "Agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-1",
-                "label": "Evaluation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-2",
-                "label": "Research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1792154081574-9bragc",
-            "title": "Correctness Feedback Erases Evidence in AI Code Auditing",
-            "tldr": "A new arXiv paper shows that giving AI models correctness feedback during code auditing suppresses the discovery of specification violations, more than doubling certified-witness yield without feedback. This challenges the common practice of iterative correction loops in AI code generation and verification.",
-            "whyItMatters": [
-              "Business impact: AI coding tools that rely on corrective feedback loops may miss critical specification violations, leading to insecure or non-compliant code in production.",
-              "Technical impact: Founders building AI code assistants should consider phase-separated auditing—preserving failure evidence before attempting repairs—to improve specification completeness and overall code quality."
-            ],
-            "whatToTry": {
-              "description": "If you're building an AI code assistant or verification tool, experiment with a two-phase approach: first, run the model without any correctness feedback to collect potential specification violations, then use that evidence to guide repairs. Compare the number of valid violations found against a standard corrective-feedback loop.",
-              "note": "This finding is specific to Verus/Rust workflows; test on your own stack to see if it generalizes."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1792154081574-9bragc",
-                "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
-                "url": "https://arxiv.org/abs/2610.20676",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-0",
-                "label": "AI code generation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-1",
-                "label": "formal verification",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-2",
-                "label": "research",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-arxiv-ai-1792154081574-qucuqz",
-            "title": "VISTA: Smarter Schedule Trimming Cuts SMC Guidance Costs",
-            "tldr": "VISTA is a training-free method that automatically selects which denoising steps to guide in discrete diffusion, reducing compute while matching or beating hand-designed sparse schedules across text, bio, and image tasks.",
-            "whyItMatters": [
-              "Lowers inference cost for reward-guided discrete diffusion, making test-time alignment more practical for production.",
-              "Provides a principled, task-adaptive alternative to fixed guidance schedules, potentially improving output quality without extra training."
-            ],
-            "whatToTry": {
-              "description": "If you use discrete diffusion models with reward guidance, test VISTA's dynamic programming schedule selection on your task. It requires only a small number of full-guidance warmup generations and then matches the per-generation cost of other sparse schedules.",
-              "note": "Check if your framework supports custom guidance schedules; the method is training-free but needs value statistics from warmup runs."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1792154081574-qucuqz",
-                "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
-                "url": "https://arxiv.org/abs/2610.20669",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-0",
-                "label": "Diffusion",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-1",
-                "label": "Inference Optimization",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-2",
-                "label": "SMC Guidance",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 3,
-            "isRead": false,
-            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
-          },
-          {
-            "id": "rss-wired-ai-1792154081292-jow3n3",
-            "title": "AI Models Steal Comedians' Jokes to Promote Adult Content",
-            "tldr": "A network of AI-generated models is using comedians' material without permission to funnel views to their OnlyFans and Fanvue accounts, with little legal recourse for the comedians.",
-            "whyItMatters": [
-              "Highlights the growing issue of AI-generated content infringing on intellectual property, which could lead to stricter regulations and platform policies affecting all AI creators.",
-              "Demonstrates a novel monetization strategy using AI personas, raising ethical and legal questions for founders building AI-generated characters or content."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI-generated personas or content, audit your training data and outputs for potential copyright infringement. Consider implementing filters to avoid reproducing copyrighted material and establish clear ethical guidelines for your AI's behavior.",
-              "note": "Proactively addressing IP concerns can protect your product from legal risks and reputational damage."
-            },
-            "sources": [
-              {
-                "id": "src-rss-wired-ai-1792154081292-jow3n3",
-                "title": "AI-Generated Hot Girls Are Ripping Off Comedians to Boost Their Horny Content",
-                "url": "https://www.wired.com/story/ai-generated-hot-girls-are-ripping-off-comedians-to-boost-their-horny-content/",
-                "domain": "wired.com",
+                "id": "src-rss-techcrunch-ai-1792172022740-dug008-1",
+                "title": "TechCrunch AI",
+                "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+                "domain": "techcrunch.com",
                 "type": "article"
               }
             ],
             "tags": [
               {
-                "id": "tag-rss-wired-ai-1792154081292-jow3n3-0",
-                "label": "AI ethics",
+                "id": "tag-rss-techcrunch-ai-1792172022740-dug008-0",
+                "label": "Robotics",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1792154081292-jow3n3-1",
-                "label": "copyright",
+                "id": "tag-rss-techcrunch-ai-1792172022740-dug008-1",
+                "label": "Physical AI",
                 "type": "topic"
               },
               {
-                "id": "tag-rss-wired-ai-1792154081292-jow3n3-2",
-                "label": "generative AI",
+                "id": "tag-rss-techcrunch-ai-1792172022740-dug008-2",
+                "label": "Industry Analysis",
                 "type": "topic"
               }
             ],
             "category": "industry",
             "readTimeMinutes": 2,
             "isRead": false,
-            "publishedAt": "Fri, 16 Oct 2026 11:00:00 +0000"
+            "publishedAt": "Fri, 16 Oct 2026 16:30:00 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1792172022740-l76h4v",
+            "title": "Elorian's Glimpse AI Claims Edge in Visual Reasoning Over GPT-6 Astra",
+            "tldr": "Elorian launched its first AI model, Glimpse, which reportedly outperforms GPT-6 Astra on scientific chart reasoning and short-form video captioning, according to Elorian's own evaluations.",
+            "whyItMatters": [
+              "A new competitor enters the visual reasoning space, potentially offering better performance for chart and video understanding tasks.",
+              "If the claims hold up, it could reduce reliance on OpenAI's models for specialized visual tasks, giving founders more options."
+            ],
+            "whatToTry": {
+              "description": "Keep an eye on Elorian's Glimpse model and consider testing it on your own visual reasoning tasks once it's available. Compare its performance against your current model to see if it offers improvements.",
+              "note": "The benchmarks are self-reported by Elorian, so independent verification is needed before making any decisions."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1792172022740-l76h4v",
+                "title": "Elorian’s first AI model wants to reason with images, not just about them",
+                "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1792172022740-l76h4v-0",
+                "label": "Model",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792172022740-l76h4v-1",
+                "label": "Visual Reasoning",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 16:01:37 +0000"
+          },
+          {
+            "id": "rss-techcrunch-ai-1792172022740-vzaok2",
+            "title": "Jev Becomes Vercel's Fastest-Adopted AI Model Ever",
+            "tldr": "Vercel's AI gateway data shows Jev is the fastest-adopted AI model on its platform, signaling rapid developer uptake. This matters because it highlights shifting model preferences and integration trends for AI product builders.",
+            "whyItMatters": [
+              "Business impact: Rapid adoption of Jev could indicate a new competitive model, influencing vendor choices and partnership strategies.",
+              "Technical impact: Developers may need to evaluate Jev for performance and cost benefits, potentially rearchitecting AI pipelines."
+            ],
+            "whatToTry": {
+              "description": "Test Jev via Vercel's AI gateway or similar API services to benchmark its performance against your current models, focusing on latency and cost for your specific use case.",
+              "note": "Adoption speed doesn't guarantee superiority; validate with your own metrics before switching."
+            },
+            "sources": [
+              {
+                "id": "src-rss-techcrunch-ai-1792172022740-vzaok2",
+                "title": "Jev is Vercel’s fastest-adopted AI model ever",
+                "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+                "domain": "techcrunch.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-techcrunch-ai-1792172022740-vzaok2-0",
+                "label": "Jev",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792172022740-vzaok2-1",
+                "label": "Vercel",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-techcrunch-ai-1792172022740-vzaok2-2",
+                "label": "AI Gateway",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 15:33:49 +0000"
           }
         ],
-        "totalReadTimeMinutes": 14,
+        "totalReadTimeMinutes": 6,
         "isAvailable": true,
         "isRead": false
       }
