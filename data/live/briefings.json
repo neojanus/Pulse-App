@@ -1,7 +1,241 @@
 [
   {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "displayDate": "Today",
+    "briefings": [
+      {
+        "id": "briefing-2026-10-16-afternoon",
+        "period": "afternoon",
+        "date": "2026-10-16",
+        "scheduledTime": "13:30",
+        "executiveSummary": "Today's highlights: Real-Time AI Agents: New Benchmark Exposes Latency Gap, AlphaDiana: Agent Harnesses Don't Always Improve Accuracy, Correctness Feedback Erases Evidence in AI Code Auditing.",
+        "items": [
+          {
+            "id": "rss-arxiv-ai-1792154081574-bk4r6z",
+            "title": "Real-Time AI Agents: New Benchmark Exposes Latency Gap",
+            "tldr": "ArXiv paper introduces RealtimeBench, a benchmark showing that slower, more capable LLM agents underperform faster ones when environments run in real time. The proposed TORSI method uses a slow teacher to train a fast student, boosting performance across six game types.",
+            "whyItMatters": [
+              "Business impact: Real-time agent performance is critical for customer-facing applications like live chat, trading, and gaming; latency can make or break user experience.",
+              "Technical impact: TORSI offers a practical framework for decoupling deliberation from action, enabling powerful models to operate under strict time constraints without sacrificing accuracy."
+            ],
+            "whatToTry": {
+              "description": "Evaluate your own agent's performance under real-time constraints by introducing artificial delays or using a live clock. Consider implementing a two-timescale approach: use a slower model for offline learning and a faster model for online execution.",
+              "note": "Start with a small set of tasks to measure the impact of latency before scaling."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792154081574-bk4r6z",
+                "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+                "url": "https://arxiv.org/abs/2610.20665",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-1",
+                "label": "Benchmark",
+                "type": "tool"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-bk4r6z-2",
+                "label": "Real-time",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792154081574-ntvmsg",
+            "title": "AlphaDiana: Agent Harnesses Don't Always Improve Accuracy",
+            "tldr": "New measurement system AlphaDiana reveals that agent harnesses (tools, skills, memory) often hurt accuracy on questions models already solve, and gains on hard questions don't always outweigh losses. It provides a framework to diagnose agent performance by linking correctness to execution traces and resource use.",
+            "whyItMatters": [
+              "Founders can't assume adding tools or memory improves agent performance—it may degrade accuracy on tasks the base model handles well.",
+              "Provides a systematic way to evaluate agent components under matched conditions, enabling data-driven decisions on harness design.",
+              "Highlights that token efficiency metrics can be misleading without correctness context, affecting cost and performance trade-offs."
+            ],
+            "whatToTry": {
+              "description": "Before adding tools, skills, or memory to your agent, run an A/B test on a benchmark where the base model already performs well. Measure accuracy delta and token usage per correct answer to see if the harness actually helps.",
+              "note": "Focus on questions the model solves without tools—harnesses often introduce regressions there."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792154081574-ntvmsg",
+                "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+                "url": "https://arxiv.org/abs/2610.20675",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-0",
+                "label": "Agents",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-1",
+                "label": "Evaluation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-ntvmsg-2",
+                "label": "Research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792154081574-9bragc",
+            "title": "Correctness Feedback Erases Evidence in AI Code Auditing",
+            "tldr": "A new arXiv paper shows that giving AI models correctness feedback during code auditing suppresses the discovery of specification violations, more than doubling certified-witness yield without feedback. This challenges the common practice of iterative correction loops in AI code generation and verification.",
+            "whyItMatters": [
+              "Business impact: AI coding tools that rely on corrective feedback loops may miss critical specification violations, leading to insecure or non-compliant code in production.",
+              "Technical impact: Founders building AI code assistants should consider phase-separated auditing—preserving failure evidence before attempting repairs—to improve specification completeness and overall code quality."
+            ],
+            "whatToTry": {
+              "description": "If you're building an AI code assistant or verification tool, experiment with a two-phase approach: first, run the model without any correctness feedback to collect potential specification violations, then use that evidence to guide repairs. Compare the number of valid violations found against a standard corrective-feedback loop.",
+              "note": "This finding is specific to Verus/Rust workflows; test on your own stack to see if it generalizes."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792154081574-9bragc",
+                "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+                "url": "https://arxiv.org/abs/2610.20676",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-0",
+                "label": "AI code generation",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-1",
+                "label": "formal verification",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-9bragc-2",
+                "label": "research",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-arxiv-ai-1792154081574-qucuqz",
+            "title": "VISTA: Smarter Schedule Trimming Cuts SMC Guidance Costs",
+            "tldr": "VISTA is a training-free method that automatically selects which denoising steps to guide in discrete diffusion, reducing compute while matching or beating hand-designed sparse schedules across text, bio, and image tasks.",
+            "whyItMatters": [
+              "Lowers inference cost for reward-guided discrete diffusion, making test-time alignment more practical for production.",
+              "Provides a principled, task-adaptive alternative to fixed guidance schedules, potentially improving output quality without extra training."
+            ],
+            "whatToTry": {
+              "description": "If you use discrete diffusion models with reward guidance, test VISTA's dynamic programming schedule selection on your task. It requires only a small number of full-guidance warmup generations and then matches the per-generation cost of other sparse schedules.",
+              "note": "Check if your framework supports custom guidance schedules; the method is training-free but needs value statistics from warmup runs."
+            },
+            "sources": [
+              {
+                "id": "src-rss-arxiv-ai-1792154081574-qucuqz",
+                "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+                "url": "https://arxiv.org/abs/2610.20669",
+                "domain": "arxiv.org",
+                "type": "paper"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-0",
+                "label": "Diffusion",
+                "type": "model"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-1",
+                "label": "Inference Optimization",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-arxiv-ai-1792154081574-qucuqz-2",
+                "label": "SMC Guidance",
+                "type": "topic"
+              }
+            ],
+            "category": "research",
+            "readTimeMinutes": 3,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 00:00:00 -0400"
+          },
+          {
+            "id": "rss-wired-ai-1792154081292-jow3n3",
+            "title": "AI Models Steal Comedians' Jokes to Promote Adult Content",
+            "tldr": "A network of AI-generated models is using comedians' material without permission to funnel views to their OnlyFans and Fanvue accounts, with little legal recourse for the comedians.",
+            "whyItMatters": [
+              "Highlights the growing issue of AI-generated content infringing on intellectual property, which could lead to stricter regulations and platform policies affecting all AI creators.",
+              "Demonstrates a novel monetization strategy using AI personas, raising ethical and legal questions for founders building AI-generated characters or content."
+            ],
+            "whatToTry": {
+              "description": "If you're building AI-generated personas or content, audit your training data and outputs for potential copyright infringement. Consider implementing filters to avoid reproducing copyrighted material and establish clear ethical guidelines for your AI's behavior.",
+              "note": "Proactively addressing IP concerns can protect your product from legal risks and reputational damage."
+            },
+            "sources": [
+              {
+                "id": "src-rss-wired-ai-1792154081292-jow3n3",
+                "title": "AI-Generated Hot Girls Are Ripping Off Comedians to Boost Their Horny Content",
+                "url": "https://www.wired.com/story/ai-generated-hot-girls-are-ripping-off-comedians-to-boost-their-horny-content/",
+                "domain": "wired.com",
+                "type": "article"
+              }
+            ],
+            "tags": [
+              {
+                "id": "tag-rss-wired-ai-1792154081292-jow3n3-0",
+                "label": "AI ethics",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1792154081292-jow3n3-1",
+                "label": "copyright",
+                "type": "topic"
+              },
+              {
+                "id": "tag-rss-wired-ai-1792154081292-jow3n3-2",
+                "label": "generative AI",
+                "type": "topic"
+              }
+            ],
+            "category": "industry",
+            "readTimeMinutes": 2,
+            "isRead": false,
+            "publishedAt": "Fri, 16 Oct 2026 11:00:00 +0000"
+          }
+        ],
+        "totalReadTimeMinutes": 14,
+        "isAvailable": true,
+        "isRead": false
+      }
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "displayDate": "Yesterday",
     "briefings": [
       {
         "id": "briefing-2026-10-15-afternoon",
@@ -383,7 +617,7 @@
   },
   {
     "date": "2026-10-14",
-    "displayDate": "Yesterday",
+    "displayDate": "Wednesday, Oct 14",
     "briefings": [
       {
         "id": "briefing-2026-10-14-afternoon",
@@ -512,350 +746,6 @@
         "id": "briefing-2026-10-10-evening",
         "period": "evening",
         "date": "2026-10-10",
-        "scheduledTime": "20:30",
-        "executiveSummary": "No significant AI news this period.",
-        "items": [],
-        "totalReadTimeMinutes": 0,
-        "isAvailable": true,
-        "isRead": false
-      }
-    ]
-  },
-  {
-    "date": "2026-10-09",
-    "displayDate": "Friday, Oct 9",
-    "briefings": [
-      {
-        "id": "briefing-2026-10-09-morning",
-        "period": "morning",
-        "date": "2026-10-09",
-        "scheduledTime": "07:30",
-        "executiveSummary": "Today's highlights: Google Turns Gemini Into an Agentic AI for Business, LMArena Raises $200M at $3.1B to Measure AI Alignment, OpenAI's Revenue Reportedly $20B Below Projections.",
-        "items": [
-          {
-            "id": "rss-techcrunch-ai-1791505958770-8b1eh7",
-            "title": "Google Turns Gemini Into an Agentic AI for Business",
-            "tldr": "Google is upgrading Gemini into an AI agent that can plan, execute tasks, and work across business apps and systems, with the ability to delegate to subagents and even get its own workplace identity including an email address.",
-            "whyItMatters": [
-              "Business impact: Companies can automate complex workflows across multiple apps, reducing manual coordination and enabling end-to-end task execution.",
-              "Technical impact: The agent can orchestrate subagents and multiple AI models, signaling a shift toward multi-agent architectures in enterprise AI."
-            ],
-            "whatToTry": {
-              "description": "If you're building AI products, start experimenting with agentic patterns like task delegation and multi-model orchestration. Consider how your product could integrate with or compete against Gemini's agentic capabilities, especially for business workflows.",
-              "note": "Focus on interoperability and clear value props for specific verticals where Gemini may be too generic."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791505958770-8b1eh7",
-                "title": "Google brings agentic AI to Gemini, starting with businesses",
-                "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-8b1eh7-0",
-                "label": "Gemini",
-                "type": "model"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-8b1eh7-1",
-                "label": "Agentic AI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-8b1eh7-2",
-                "label": "Enterprise",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:18:00 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791505958770-c3od28",
-            "title": "LMArena Raises $200M at $3.1B to Measure AI Alignment",
-            "tldr": "LMArena, the company behind the popular AI model leaderboard, raised $200M led by Lightspeed and Khosla, nearly doubling its valuation to $3.1B in 10 months. It's expanding from head-to-head model comparisons to measuring alignment issues like lying.",
-            "whyItMatters": [
-              "Benchmarking is becoming a venture-scale business, signaling that model evaluation is a critical layer in the AI stack",
-              "Alignment-focused metrics (e.g., lying) could become a de facto standard for enterprise procurement and model selection",
-              "Founders may soon have a new, more trustworthy signal for choosing models beyond raw capability scores"
-            ],
-            "whatToTry": {
-              "description": "Check LMArena's latest leaderboard and alignment metrics to inform your model selection. If you're building on top of models, consider integrating their evaluation data into your internal model routing or fallback logic.",
-              "note": "Alignment scores are still evolving; don't over-index on a single metric. Combine with your own task-specific evals."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791505958770-c3od28",
-                "title": "Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months",
-                "url": "https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-c3od28-0",
-                "label": "LMArena",
-                "type": "tool"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-c3od28-1",
-                "label": "AI benchmarks",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-c3od28-2",
-                "label": "alignment",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-c3od28-3",
-                "label": "funding",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:19:45 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791505958770-qww1zz",
-            "title": "OpenAI's Revenue Reportedly $20B Below Projections",
-            "tldr": "A new report claims OpenAI's annualized revenue is roughly $50 billion, not the $70 billion previously reported, raising questions about the economics of frontier AI labs.",
-            "whyItMatters": [
-              "A $20B revenue gap could signal slower enterprise adoption or pricing pressure across the AI market, affecting how investors value AI startups.",
-              "If even OpenAI's monetization is weaker than expected, founders should scrutinize their own revenue assumptions and unit economics rather than relying on market hype."
-            ],
-            "whatToTry": {
-              "description": "Revisit your revenue projections and pricing strategy with more conservative assumptions. Stress-test your model against scenarios where AI adoption and willingness-to-pay grow slower than the market narrative suggests.",
-              "note": "Treat the $50B figure as unverified reporting, not confirmed financials."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791505958770-qww1zz",
-                "title": "OpenAI’s revenue is reportedly $20 billion less than previously projected",
-                "url": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-qww1zz-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-qww1zz-1",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 18:19:42 +0000"
-          },
-          {
-            "id": "rss-techcrunch-ai-1791505958770-41595d",
-            "title": "Fired OpenAI Safety Researchers Warn of Chilling Effect on AI Safety Culture",
-            "tldr": "Three fired OpenAI safety researchers dispute misconduct claims and warn their dismissals are chilling the company's AI safety culture, raising concerns about internal dissent and governance at leading AI labs.",
-            "whyItMatters": [
-              "Signals potential governance and safety culture risks at OpenAI, which could affect trust, partnerships, and regulatory scrutiny for AI products built on its models.",
-              "Highlights growing tension between commercial pressures and safety advocacy, a dynamic that may shape talent flows and compliance expectations across the AI industry."
-            ],
-            "whatToTry": {
-              "description": "Review your own AI safety escalation and dissent policies to ensure employees can raise concerns without fear of retaliation, and document a clear, independent review process for safety-related disputes.",
-              "note": "This is a reputational and regulatory risk area; proactive governance can be a differentiator with enterprise customers."
-            },
-            "sources": [
-              {
-                "id": "src-rss-techcrunch-ai-1791505958770-41595d",
-                "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-                "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-41595d-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-41595d-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-techcrunch-ai-1791505958770-41595d-2",
-                "label": "Governance",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Thu, 08 Oct 2026 20:04:26 +0000"
-          }
-        ],
-        "totalReadTimeMinutes": 8,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-10-09-afternoon",
-        "period": "afternoon",
-        "date": "2026-10-09",
-        "scheduledTime": "13:30",
-        "executiveSummary": "Today's highlights: Frozen Aerial VLN Agents Get 3x Success with Instruction Translator, OpenAI Fires 3 Safety Researchers, Sparking Chilling Effect Fears, Let AI Agents Draw Arrows and Boxes on Your Screen.",
-        "items": [
-          {
-            "id": "rss-arxiv-ai-1791556033292-54hs1v",
-            "title": "Frozen Aerial VLN Agents Get 3x Success with Instruction Translator",
-            "tldr": "Researchers introduce TGIT, a front-end translator that adapts short, intent-driven human instructions to the detailed commands expected by frozen aerial navigation agents, boosting success rates from 11% to 33% without retraining the navigator.",
-            "whyItMatters": [
-              "Enables deployment of existing navigation models with natural user commands, reducing need for costly retraining or fine-tuning.",
-              "Demonstrates a general approach to bridging the instruction gap between human intent and model expectations, applicable to other robotics and AI agents."
-            ],
-            "whatToTry": {
-              "description": "If you're building a product that uses a pre-trained model with specific input requirements, consider adding a lightweight translation layer that maps user inputs to the model's expected format. You can train it using the model's own outputs as feedback, similar to TGIT.",
-              "note": "This works best when the base model is frozen and you have access to its performance signals (e.g., success/failure) to guide the translator."
-            },
-            "sources": [
-              {
-                "id": "src-rss-arxiv-ai-1791556033292-54hs1v",
-                "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
-                "url": "https://arxiv.org/abs/2610.10635",
-                "domain": "arxiv.org",
-                "type": "paper"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-rss-arxiv-ai-1791556033292-54hs1v-0",
-                "label": "VLN",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1791556033292-54hs1v-1",
-                "label": "instruction translation",
-                "type": "topic"
-              },
-              {
-                "id": "tag-rss-arxiv-ai-1791556033292-54hs1v-2",
-                "label": "frozen models",
-                "type": "topic"
-              }
-            ],
-            "category": "research",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "Fri, 09 Oct 2026 00:00:00 -0400"
-          },
-          {
-            "id": "hn-50018350",
-            "title": "OpenAI Fires 3 Safety Researchers, Sparking Chilling Effect Fears",
-            "tldr": "OpenAI terminated three safety researchers for allegedly mishandling research information, but the researchers dispute the misconduct claims and warn of a chilling effect on internal safety work. The story is trending on Hacker News with 111 points and 61 comments.",
-            "whyItMatters": [
-              "Signals potential internal tension between safety research and commercial priorities at a leading AI lab, which could influence how much safety scrutiny other labs tolerate.",
-              "Founders building on OpenAI APIs should consider the risk of shifting safety policies, model deprecations, or compliance changes that may follow internal restructuring.",
-              "A chilling effect on safety researchers could slow external safety research and transparency, affecting the broader AI ecosystem's trust and regulatory landscape."
-            ],
-            "whatToTry": {
-              "description": "Review your product's dependency on OpenAI models and identify any safety-critical features that could be affected by policy or personnel changes. Consider adding a fallback model provider or an abstraction layer to reduce vendor lock-in.",
-              "note": "This is an early report; details are disputed, so avoid making major strategic decisions until more facts emerge."
-            },
-            "sources": [
-              {
-                "id": "src-hn-50018350",
-                "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
-                "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-                "domain": "techcrunch.com",
-                "type": "article"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-50018350-0",
-                "label": "OpenAI",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-50018350-1",
-                "label": "AI Safety",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-50018350-2",
-                "label": "Industry",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-10-09T10:00:26Z"
-          },
-          {
-            "id": "hn-50018817",
-            "title": "Let AI Agents Draw Arrows and Boxes on Your Screen",
-            "tldr": "A new open-source tool lets AI agents visually annotate your screen with arrows, boxes, and text, sparking a Hacker News discussion with 74 comments and 184 points.",
-            "whyItMatters": [
-              "Enables AI agents to provide visual explanations, improving human-AI collaboration and debugging.",
-              "Could be integrated into developer tools, educational software, or remote assistance platforms."
-            ],
-            "whatToTry": {
-              "description": "Check out the GitHub repository to see how it works and consider integrating similar visual annotation capabilities into your AI product to enhance user interaction.",
-              "note": "The tool is early-stage; evaluate if it fits your use case before investing heavily."
-            },
-            "sources": [
-              {
-                "id": "src-hn-50018817",
-                "title": "Let your AI agents paint big arrows, boxes and text on your screen",
-                "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
-                "domain": "github.com",
-                "type": "repository"
-              }
-            ],
-            "tags": [
-              {
-                "id": "tag-hn-50018817-0",
-                "label": "AI agents",
-                "type": "topic"
-              },
-              {
-                "id": "tag-hn-50018817-1",
-                "label": "visualization",
-                "type": "tool"
-              },
-              {
-                "id": "tag-hn-50018817-2",
-                "label": "open source",
-                "type": "topic"
-              }
-            ],
-            "category": "industry",
-            "readTimeMinutes": 2,
-            "isRead": false,
-            "publishedAt": "2026-10-09T11:03:48Z"
-          }
-        ],
-        "totalReadTimeMinutes": 6,
-        "isAvailable": true,
-        "isRead": false
-      },
-      {
-        "id": "briefing-2026-10-09-evening",
-        "period": "evening",
-        "date": "2026-10-09",
         "scheduledTime": "20:30",
         "executiveSummary": "No significant AI news this period.",
         "items": [],
